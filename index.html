@@ -933,6 +933,7 @@
 .percentile-card .percentile-value{font-size:clamp(42px,10vw,68px);letter-spacing:-.045em;line-height:1.15;margin:14px 0 12px;font-variant-numeric:tabular-nums;color:#094f45}
 .percentile-challenge{font-size:14px;font-weight:650;margin:20px 0 12px;color:#244e44}
 .percentile-share{min-height:44px;background:#0b6b62;color:white;border-radius:12px}
+.x-share-btn{margin-top:10px;background:#111827}
 .percentile-card details{border-top:1px solid #cce1d8;padding-top:12px}
 @media(max-width:480px){.percentile-card{padding:22px 18px}.percentile-share{width:100%}.percentile-challenge{font-size:13px}}
 
@@ -1300,6 +1301,7 @@
       <p class="percentile-caption" id="r-percentile-caption"></p>
       <p class="percentile-challenge">友達は何％？ 同じモードで比べてみよう。</p>
       <button class="btn percentile-share" id="r-percentile-share" type="button">結果をシェアする ↗</button>
+      <button class="btn percentile-share x-share-btn" id="r-x-share" type="button">Xでポストする</button>
       <p class="percentile-caption" id="r-percentile-status" role="status"></p>
       <details><summary>比較対象と算出方法</summary><p>日本のTOEIC L&amp;R公開テストについて、IIBC公式掲載の20,269人の分布と比較しています（2026年9月26日参照）。全年度・全受験者・大学受験生に限定した順位ではありません。</p><p>予想スコアが属する公式スコア区分の下限以上の割合を使用します。区分内の細かな順位は推定しません。診断スコア自体も非公式の目安であり、本番での順位を保証しません。</p><a href="https://www.iibc-global.org/toeic/official_data.html" target="_blank" rel="noopener noreferrer">出典：IIBC 平均スコア・スコア分布</a></details>
     </section>
@@ -1388,6 +1390,7 @@
       <p class="percentile-caption" id="audio-percentile-caption"></p>
       <p class="percentile-challenge">友達は何％？ 同じモードで比べてみよう。</p>
       <button class="btn percentile-share" id="audio-percentile-share" type="button">結果をシェアする ↗</button>
+      <button class="btn percentile-share x-share-btn" id="audio-x-share" type="button">Xでポストする</button>
       <p class="percentile-caption" id="audio-percentile-status" role="status"></p>
       <details><summary>比較対象と算出方法</summary><p>日本のTOEIC L&amp;R公開テストについて、IIBC公式掲載の20,269人の分布と比較しています（2026年9月26日参照）。全年度・全受験者・大学受験生に限定した順位ではありません。</p><p>予想スコアが属する公式スコア区分の下限以上の割合を使用します。区分内の細かな順位は推定しません。診断スコア自体も非公式の目安であり、本番での順位を保証しません。</p><a href="https://www.iibc-global.org/toeic/official_data.html" target="_blank" rel="noopener noreferrer">出典：IIBC 平均スコア・スコア分布</a></details>
     </section>
@@ -2143,32 +2146,17 @@ const QUESTION_TRANSLATIONS = {
   },
   "p5-03": {
     text: "出張費の請求は、従業員が出張から戻って30日＿＿＿＿提出しなければならない。",
-    choices: [
-      "〜以内に",
-      "〜までずっと",
-      "〜以来",
-      "〜の中で"
-    ],
+    choices: [ "以内に", "までずっと", "以来", "の中で" ],
     explanation: ''
   },
   "p5-04": {
-    text: "＿＿＿＿昨年その会社の利益は増加した。株価は12パーセント近く下落した。",
-    choices: [
-      "〜にもかかわらず",
-      "しかしながら",
-      "〜だけれども",
-      "〜のために"
-    ],
+    text: "昨年、その会社の利益は増加した＿＿＿＿、株価は12パーセント近く下落した。",
+    choices: [ "にもかかわらず（後ろは名詞句）", "しかしながら", "にもかかわらず（後ろは文）", "ことが原因で" ],
     explanation: ''
   },
   "p5-05": {
     text: "＿＿＿＿履歴書が締め切り後に届いた応募者は、その職の選考対象とならない。",
-    choices: [
-      "誰が／〜する人",
-      "誰の／〜の",
-      "どれ／〜するもの",
-      "誰を／〜する人"
-    ],
+    choices: [ "（人・主格）", "（人・所有格）", "（物）", "（人・目的格）" ],
     explanation: ''
   },
   "p5-06": {
@@ -2202,13 +2190,8 @@ const QUESTION_TRANSLATIONS = {
     explanation: ''
   },
   "p5-09": {
-    text: "二つの部署の予算見積もりが＿＿＿＿だったため、財務部長は全面的な照合を要請した。",
-    choices: [
-      "一致していない",
-      "能力がない",
-      "無関心な",
-      "不便な"
-    ],
+    text: "二つの部署の予算見積もりに＿＿＿＿があったため、財務部長は全面的な照合を要請した。",
+    choices: [ "食い違い", "能力不足", "無関心", "不便" ],
     explanation: ''
   },
   "p5-10": {
@@ -2348,33 +2331,18 @@ const QUESTION_TRANSLATIONS = {
     explanation: ''
   },
   "p5-23": {
-    text: "その会議室は木曜日の午後2時＿＿＿＿午後5時に利用できる。",
-    choices: [
-      "〜と〜の間に",
-      "〜の期間中に",
-      "〜を通してずっと",
-      "〜に沿って"
-    ],
+    text: "その会議室は木曜日の午後2時と5時＿＿＿＿利用できる。",
+    choices: [ "の間に", "の間中", "を通して", "に沿って" ],
     explanation: ''
   },
   "p5-24": {
     text: "最終検査が正午までに完了＿＿＿＿、その荷物は本日出荷される。",
-    choices: [
-      "〜でない限り",
-      "〜という条件であれば",
-      "〜にもかかわらず",
-      "〜である一方で"
-    ],
+    choices: [ "しない限り", "すれば", "にもかかわらず", "である一方で" ],
     explanation: ''
   },
   "p5-25": {
     text: "私たちが拡大計画について話し合った＿＿＿＿コンサルタントは、来週戻ってくる。",
-    choices: [
-      "誰が／〜する人",
-      "誰の／〜の",
-      "誰を／〜する人",
-      "どれ／〜するもの"
-    ],
+    choices: [ "（人・主格）", "（人・所有格）", "（人・目的格）", "（物）" ],
     explanation: ''
   },
   "p5-26": {
@@ -2398,33 +2366,18 @@ const QUESTION_TRANSLATIONS = {
     explanation: ''
   },
   "p5-28": {
-    text: "安全検査の後になって初めて、＿＿＿＿工場の再開許可を受けた。",
-    choices: [
-      "その責任者は受け取った",
-      "その責任者は受け取った",
-      "その責任者は確かに受け取った",
-      "その責任者を受け取った"
-    ],
+    text: "安全検査の後になって初めて、マネージャーは工場の再開許可を＿＿＿＿。",
+    choices: [ "受け取った（通常の語順）", "受け取った（倒置した語順）", "確かに受け取った", "受け取られた" ],
     explanation: ''
   },
   "p5-29": {
     text: "各部署は、金曜日までに＿＿＿＿連絡先リストを更新する責任がある。",
-    choices: [
-      "それ自身の",
-      "彼らの",
-      "彼の",
-      "私たちの"
-    ],
+    choices: [ "自部署の", "彼らの", "彼の", "私たちの" ],
     explanation: ''
   },
   "p5-30": {
-    text: "職場の安全に関する一連の研修が、来月に予定されて＿＿＿＿。",
-    choices: [
-      "〜である",
-      "〜であった",
-      "〜である",
-      "（完了形をつくる）持つ"
-    ],
+    text: "職場の安全に関する一連の研修が、来月に＿＿＿＿。",
+    choices: [ "予定されている（複数扱い）", "予定されていた", "予定されている（単数扱い）", "予定を持っている" ],
     explanation: ''
   },
   "p5-31": {
@@ -2448,33 +2401,18 @@ const QUESTION_TRANSLATIONS = {
     explanation: ''
   },
   "p5-33": {
-    text: "応募者は全員、記入済みの応募用紙に＿＿＿＿、推薦状を2通提出しなければならない。",
-    choices: [
-      "〜で",
-      "〜に加えて",
-      "〜の上に",
-      "〜のために"
-    ],
+    text: "応募者は全員、記入済みの応募用紙＿＿＿＿、推薦状を2通提出しなければならない。",
+    choices: [ "だけで", "に加えて", "の上で", "のために" ],
     explanation: ''
   },
   "p5-34": {
-    text: "アップデートのインストールで問題が発生し＿＿＿＿、ヘルプデスクにご連絡ください。",
-    choices: [
-      "もし〜なら",
-      "〜にもかかわらず",
-      "〜までずっと",
-      "〜である一方で"
-    ],
+    text: "アップデートのインストールで問題が発生＿＿＿＿、ヘルプデスクにご連絡ください。",
+    choices: [ "した場合は", "したにもかかわらず", "するまで", "する一方で" ],
     explanation: ''
   },
   "p5-35": {
     text: "その研究施設は、いくつかの部屋が昨年改装された＿＿＿＿だが、代表団を迎える予定だ。",
-    choices: [
-      "〜という（もの）",
-      "〜するもの",
-      "〜すること",
-      "誰を／〜する人"
-    ],
+    choices: [ "というもの（that）", "というもの（which）", "すること（what）", "誰か（whom）" ],
     explanation: ''
   },
   "p5-36": {
@@ -2498,43 +2436,23 @@ const QUESTION_TRANSLATIONS = {
     explanation: ''
   },
   "p5-38": {
-    text: "保守作業班は、その日の終わりまでに修理を＿＿＿＿と見込んでいる。",
-    choices: [
-      "完了する",
-      "完了すること",
-      "完了すること",
-      "完了された"
-    ],
+    text: "保守作業班は、その日の終わりまでに修理を完了＿＿＿＿見込みだ。",
+    choices: [ "する", "しながら", "できる", "された" ],
     explanation: ''
   },
   "p5-39": {
     text: "金曜日の発表会には残席が＿＿＿＿しかないため、早めの登録をお勧めします。",
-    choices: [
-      "ほとんどない",
-      "少しはある",
-      "ほとんどない",
-      "少しはある"
-    ],
+    choices: [ "ほとんど", "わずか", "ほとんど（数えられない名詞用）", "わずか（数えられない名詞用）" ],
     explanation: ''
   },
   "p5-40": {
-    text: "地域統括責任者も営業担当者たちも、昨日はコメントを出せる状態で＿＿＿＿。",
-    choices: [
-      "〜だった",
-      "〜だった",
-      "〜であり続けている",
-      "〜である"
-    ],
+    text: "地域統括責任者も営業担当者たちも、昨日はコメントを出せる状態＿＿＿＿。",
+    choices: [ "だった（単数扱い）", "だった（複数扱い）", "であり続けている", "である" ],
     explanation: ''
   },
   "p5-41": {
-    text: "そのホテルのロビーは、利便性を高めるために＿＿＿＿改装された。",
-    choices: [
-      "完全な",
-      "完了",
-      "完全に",
-      "completedly"
-    ],
+    text: "ホテルのロビーは、利用しやすさを高めるために＿＿＿＿改装された。",
+    choices: [ "完全な", "完了", "完全に", "completedly" ],
     explanation: ''
   },
   "p5-42": {
@@ -2549,32 +2467,17 @@ const QUESTION_TRANSLATIONS = {
   },
   "p5-43": {
     text: "改訂された方針は、追って通知がある＿＿＿＿有効である。",
-    choices: [
-      "〜までに",
-      "〜までずっと",
-      "〜以来",
-      "〜の期間中"
-    ],
+    choices: [ "までに", "まで", "以来", "の期間中" ],
     explanation: ''
   },
   "p5-44": {
-    text: "天候が回復し＿＿＿＿、屋外での製品実演は屋内に移される。",
-    choices: [
-      "〜でない限り",
-      "〜が原因で",
-      "〜する間に",
-      "〜にもかかわらず"
-    ],
+    text: "天候が回復＿＿＿＿、屋外での製品実演は屋内に移される。",
+    choices: [ "しない限り", "が原因で", "する間に", "にもかかわらず" ],
     explanation: ''
   },
   "p5-45": {
     text: "入賞したデザインを提出した＿＿＿＿従業員は、特別賞を受け取る。",
-    choices: [
-      "どれ／〜するもの",
-      "誰の／〜の",
-      "誰が／〜する人",
-      "誰を／〜する人"
-    ],
+    choices: [ "（物）", "（人・所有格）", "（人・主格）", "（人・目的格）" ],
     explanation: ''
   },
   "p5-46": {
@@ -2589,12 +2492,7 @@ const QUESTION_TRANSLATIONS = {
   },
   "p5-47": {
     text: "購入する前に、顧客は保証の条件を注意深く＿＿＿＿べきである。",
-    choices: [
-      "よく確認する",
-      "見る",
-      "見る",
-      "inspect on"
-    ],
+    choices: [ "確認する", "見る", "見る", "inspect on" ],
     explanation: ''
   },
   "p5-48": {
@@ -2629,32 +2527,17 @@ const QUESTION_TRANSLATIONS = {
   },
   "p5-51": {
     text: "年次報告書は会社のウェブサイト＿＿＿＿入手できる。",
-    choices: [
-      "〜の上で",
-      "〜のところで",
-      "〜へ",
-      "〜とともに"
-    ],
+    choices: [ "上で", "のところで", "へ", "とともに" ],
     explanation: ''
   },
   "p5-52": {
     text: "Patelさんが発表を担当し、＿＿＿＿Gomezさんが聴衆からの質問に答える。",
-    choices: [
-      "〜である一方で",
-      "〜が原因で",
-      "〜にもかかわらず",
-      "〜でない限り"
-    ],
+    choices: [ "一方で", "が原因で", "にもかかわらず", "でない限り" ],
     explanation: ''
   },
   "p5-53": {
     text: "交換部品が保管されている＿＿＿＿倉庫は、空港の近くにある。",
-    choices: [
-      "誰が／〜する人",
-      "そこで／〜する場所",
-      "誰の／〜の",
-      "誰を／〜する人"
-    ],
+    choices: [ "（人・主格）", "（場所）", "（人・所有格）", "（人・目的格）" ],
     explanation: ''
   },
   "p5-54": {
@@ -2709,22 +2592,12 @@ const QUESTION_TRANSLATIONS = {
   },
   "p5-59": {
     text: "その割引は、9月30日より前に行われた注文＿＿＿＿のみ適用される。",
-    choices: [
-      "〜のために",
-      "〜に対して",
-      "〜とともに",
-      "〜から"
-    ],
+    choices: [ "のために", "に対して", "とともに", "から" ],
     explanation: ''
   },
   "p5-60": {
     text: "別の階で改装工事が行われている＿＿＿＿、そのオフィスは開いたままとなる。",
-    choices: [
-      "〜する間",
-      "〜でない限り",
-      "〜が原因で",
-      "〜にもかかわらず"
-    ],
+    choices: [ "間も", "でない限り", "が原因で", "にもかかわらず" ],
     explanation: ''
   },
   "p5-61": {
@@ -2748,13 +2621,8 @@ const QUESTION_TRANSLATIONS = {
     explanation: ''
   },
   "p5-63": {
-    text: "契約が結ばれて初めて、＿＿＿＿現場での作業を始めることができた。",
-    choices: [
-      "〜できた",
-      "そのチームは〜できた",
-      "そのチームは〜できた",
-      "そのチームは〜できる"
-    ],
+    text: "契約が結ばれて初めて、建設チームは現場での作業を＿＿＿＿。",
+    choices: [ "始める（助動詞なし）", "始めることができた（通常の語順）", "始めることができた（倒置した語順）", "始めることができる" ],
     explanation: ''
   },
   "p5-64": {
@@ -7857,6 +7725,15 @@ $('btn-career-change').addEventListener('click', showIndustryPicker);
 $('btn-materials').addEventListener('click', () => openMaterials('results'));
 $('btn-audio-materials').addEventListener('click', () => openMaterials('audio-results'));
 $('r-percentile-share').addEventListener('click', () => shareScoreResult('r-percentile-status', 'r-percentile-share'));
+function shareOnX() {
+  const result = state.shareResult;
+  if (!result) return;
+  const text = 'LexSophiaで予想TOEICスコア ' + result.score + '/' + result.maxScore + '\n' + shareTopLabel(result) + '\n' + result.title + '｜同じモードで比べてみよう！\n#LexSophia #TOEIC';
+  const url = 'https://mylexsophia.com/toeic-score-predictor/';
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank', 'noopener,width=600,height=540');
+}
+$('r-x-share').addEventListener('click', shareOnX);
+$('audio-x-share').addEventListener('click', shareOnX);
 $('btn-share-score').addEventListener('click', () => shareScoreResult('score-share-status', 'btn-share-score'));
 $('audio-percentile-share').addEventListener('click', () => shareScoreResult('audio-percentile-status', 'audio-percentile-share'));
 $('btn-audio-share-score').addEventListener('click', () => shareScoreResult('audio-score-share-status', 'btn-audio-share-score'));
