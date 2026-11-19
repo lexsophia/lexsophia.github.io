@@ -747,6 +747,14 @@
   .history-stat { min-width: 0; padding: 16px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--paper); }
   .history-stat .k { color: var(--ink-3); font-size: 12px; font-weight: 600; }
   .history-stat .v { margin-top: 5px; font-size: clamp(18px, 5vw, 24px); font-weight: 800; font-variant-numeric: tabular-nums; }
+  .account-card { margin-top: 28px; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--paper); }
+  .account-card h2 { font-size: 16px; }
+  .account-card .note { margin-top: 6px; color: var(--ink-2); font-size: 13.5px; line-height: 1.6; }
+  .account-form { margin-top: 12px; display: grid; gap: 8px; }
+  .account-form input { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); font-size: 15px; background: var(--paper); color: var(--ink); }
+  .account-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .account-actions .btn { width: auto; min-height: 44px; padding: 0 18px; font-size: 15px; }
+  .account-status { margin-top: 10px; font-size: 13.5px; color: var(--ink-2); line-height: 1.6; }
   .history-section { margin-top: 36px; }
   .history-section h2 { font-size: 18px; }
   .history-list { margin-top: 14px; display: grid; gap: 10px; }
@@ -1586,6 +1594,21 @@
     <h1 class="sub-title" id="history-title">学習履歴</h1>
     <p class="sub-lede">この端末で受けた診断結果を記録しています。</p>
 
+    <div class="account-card" id="account-card">
+      <h2>アカウント</h2>
+      <p class="note" id="account-note">ログインすると、診断結果がクラウドにも保存され、別の端末でも履歴を見られるようになります。ログインしなくても今まで通り使えます。</p>
+      <div class="account-form" id="account-form">
+        <input type="email" id="account-email" placeholder="メールアドレス" autocomplete="email">
+        <input type="password" id="account-password" placeholder="パスワード（6文字以上）" autocomplete="current-password">
+        <div class="account-actions">
+          <button class="btn" id="btn-login" type="button">ログイン</button>
+          <button class="btn btn--ghost" id="btn-signup" type="button">新規登録</button>
+          <button class="btn btn--ghost" id="btn-logout" type="button" hidden>ログアウト</button>
+        </div>
+      </div>
+      <p class="account-status" id="account-status"></p>
+    </div>
+
     <div class="history-summary">
       <div class="history-stat"><p class="k">診断回数</p><p class="v" id="h-count">0回</p></div>
       <div class="history-stat"><p class="k">最新スコア</p><p class="v" id="h-latest">—</p></div>
@@ -1639,6 +1662,7 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* =====================================================================
    LABEL MAPS (Japanese UI labels for skills and Part subtitles)
@@ -5256,11 +5280,182 @@ function updateWeakRecords(questions, responses) {
 function saveHistoryItem(item) {
   item = Object.assign({}, item, { qualificationProfile: diagnosticQualificationProfile ? JSON.parse(JSON.stringify(diagnosticQualificationProfile)) : null });
   const history = getHistory();
-  history.unshift(Object.assign({
+  const entry = Object.assign({
     id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
     takenAt: new Date().toISOString()
-  }, item));
+  }, item);
+  history.unshift(entry);
   writeStored(STORAGE_KEYS.history, history.slice(0, 30));
+  cloudSaveHistoryItem(entry);
+}
+
+/* ---------- Cloud sync (Supabase) ---------- */
+
+const SUPABASE_URL = 'https://jbkezofgisyspgfsgtpi.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impia2V6b2ZnaXN5c3BnZnNndHBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ1Mzg5NjgsImV4cCI6MjExMDExNDk2OH0.IWBm7tBOIwKNBnlzcdipAzqNhCAw8kafXjQ-i4Cd7dI';
+let sbClient = null;
+let cloudUser = null;
+try {
+  if (window.supabase) sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+} catch (e) { sbClient = null; }
+
+function setAccountStatus(text) {
+  const el = $('account-status');
+  if (el) el.textContent = text || '';
+}
+
+function updateAccountUI() {
+  if (!$('account-form')) return;
+  const loggedIn = !!cloudUser;
+  $('account-email').hidden = loggedIn;
+  $('account-password').hidden = loggedIn;
+  $('btn-login').hidden = loggedIn;
+  $('btn-signup').hidden = loggedIn;
+  $('btn-logout').hidden = !loggedIn;
+  $('account-note').textContent = loggedIn
+    ? `${cloudUser.email} でログイン中です。診断結果はこの端末とクラウドの両方に保存されます。`
+    : 'ログインすると、診断結果がクラウドにも保存され、別の端末でも履歴を見られるようになります。ログインしなくても今まで通り使えます。';
+}
+
+function cloudRowFromItem(item) {
+  return {
+    user_id: cloudUser.id,
+    mode: item.mode,
+    quick: !!item.quick,
+    score: item.score != null ? item.score : null,
+    max_score: item.maxScore != null ? item.maxScore : null,
+    listening_score: item.listeningScore != null ? item.listeningScore : null,
+    reading_score: item.readingScore != null ? item.readingScore : null,
+    correct: item.correct,
+    total: item.total,
+    seconds: item.seconds != null ? Math.round(item.seconds) : null,
+    parts: item.parts || {},
+    skills: item.skills || {},
+    wrong_ids: item.wrongIds || [],
+    created_at: item.takenAt
+  };
+}
+
+async function cloudSaveHistoryItem(item) {
+  if (!sbClient || !cloudUser) return;
+  try {
+    await sbClient.from('diagnostic_results').insert(cloudRowFromItem(item));
+  } catch (e) { /* クラウド保存に失敗してもローカル保存で継続 */ }
+}
+
+function localItemFromCloudRow(row) {
+  return {
+    id: `cloud-${row.id}`,
+    takenAt: row.created_at,
+    mode: row.mode,
+    quick: row.quick,
+    score: row.score,
+    maxScore: row.max_score,
+    listeningScore: row.listening_score,
+    readingScore: row.reading_score,
+    correct: row.correct,
+    total: row.total,
+    seconds: row.seconds,
+    parts: row.parts || {},
+    skills: row.skills || {},
+    wrongIds: row.wrong_ids || []
+  };
+}
+
+async function mergeCloudHistory() {
+  if (!sbClient || !cloudUser) return;
+  try {
+    const { data, error } = await sbClient
+      .from('diagnostic_results')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .limit(30);
+    if (error || !data) return;
+    const local = getHistory();
+    const known = new Set(local.map(i => new Date(i.takenAt).getTime()));
+    const fresh = data.map(localItemFromCloudRow)
+      .filter(i => !known.has(new Date(i.takenAt).getTime()));
+    if (!fresh.length) return;
+    const merged = [...local, ...fresh]
+      .sort((a, b) => new Date(b.takenAt) - new Date(a.takenAt))
+      .slice(0, 30);
+    writeStored(STORAGE_KEYS.history, merged);
+    refreshHomeLearning();
+    renderHistory();
+  } catch (e) { /* クラウド取得に失敗してもローカル履歴で継続 */ }
+}
+
+function authErrorMessage(error) {
+  if (!error) return '';
+  const msg = String(error.message || '');
+  if (msg.includes('Invalid login credentials')) return 'メールアドレスかパスワードが違います。';
+  if (msg.includes('User already registered')) return 'このメールアドレスは登録済みです。ログインしてください。';
+  if (msg.includes('Password should be at least')) return 'パスワードは6文字以上にしてください。';
+  if (msg.includes('Unable to validate email address')) return 'メールアドレスの形式が正しくありません。';
+  return '通信に失敗しました。時間をおいてもう一度お試しください。';
+}
+
+async function handleLogin() {
+  if (!sbClient) { setAccountStatus('クラウドに接続できませんでした。'); return; }
+  const email = $('account-email').value.trim();
+  const password = $('account-password').value;
+  if (!email || !password) { setAccountStatus('メールアドレスとパスワードを入力してください。'); return; }
+  setAccountStatus('ログインしています…');
+  const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
+  if (error) { setAccountStatus(authErrorMessage(error)); return; }
+  cloudUser = data.user;
+  updateAccountUI();
+  await mergeCloudHistory();
+  setAccountStatus('ログインしました。');
+}
+
+async function handleSignup() {
+  if (!sbClient) { setAccountStatus('クラウドに接続できませんでした。'); return; }
+  const email = $('account-email').value.trim();
+  const password = $('account-password').value;
+  if (!email || !password) { setAccountStatus('メールアドレスとパスワードを入力してください。'); return; }
+  setAccountStatus('登録しています…');
+  const { data, error } = await sbClient.auth.signUp({
+    email, password,
+    options: { emailRedirectTo: 'https://mylexsophia.com/' }
+  });
+  if (error) { setAccountStatus(authErrorMessage(error)); return; }
+  if (data.session && data.user) {
+    cloudUser = data.user;
+    updateAccountUI();
+    setAccountStatus('登録してログインしました。');
+  } else {
+    setAccountStatus('確認メールを送りました。メール内のリンクを開いてから、ログインしてください。');
+  }
+}
+
+async function handleLogout() {
+  if (!sbClient) return;
+  try { await sbClient.auth.signOut(); } catch (e) { /* そのままUIだけ戻す */ }
+  cloudUser = null;
+  updateAccountUI();
+  setAccountStatus('ログアウトしました。');
+}
+
+async function initCloud() {
+  updateAccountUI();
+  if (!sbClient) return;
+  if ($('btn-login')) {
+    $('btn-login').addEventListener('click', handleLogin);
+    $('btn-signup').addEventListener('click', handleSignup);
+    $('btn-logout').addEventListener('click', handleLogout);
+  }
+  try {
+    const { data } = await sbClient.auth.getSession();
+    cloudUser = data && data.session ? data.session.user : null;
+  } catch (e) { cloudUser = null; }
+  updateAccountUI();
+  if (cloudUser) mergeCloudHistory();
+  sbClient.auth.onAuthStateChange((event, session) => {
+    cloudUser = session ? session.user : null;
+    updateAccountUI();
+    if (event === 'SIGNED_IN') mergeCloudHistory();
+  });
 }
 
 function saveDiagnosticHistory(result, analysis, totalSeconds) {
@@ -7778,6 +7973,7 @@ document.addEventListener('keydown', e => {
 window.addEventListener('popstate', routeFromHash);
 refreshHomeLearning();
 routeFromHash();
+initCloud();
 </script>
 
 <!-- Listening pool v19: 60 questions, random 20-question form -->
