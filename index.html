@@ -30,6 +30,10 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="LexSophia">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -2597,6 +2601,32 @@
           <p id="home-learning-note">診断すると、苦手問題と成長記録がここに蓄積されます。</p>
         </div>
       </div>
+
+      <div class="home-growth-card" id="home-growth-card">
+        <div class="home-growth-top">
+          <span class="streak-pill" id="home-streak-pill">
+            <span id="home-streak-text">🔥 今日から連続学習スタート</span>
+            <span class="streak-pill__done" id="home-streak-done" hidden>今日達成 ✓</span>
+          </span>
+          <button type="button" class="goal-toggle-btn" id="btn-home-goal-toggle" aria-expanded="false">目標スコアを設定</button>
+        </div>
+        <div class="goal-chips" id="home-goal-chips" role="group" aria-label="目標TOEICスコアを選択" hidden>
+          <button type="button" class="goal-chip" data-goal-score="500">500点</button>
+          <button type="button" class="goal-chip" data-goal-score="600">600点</button>
+          <button type="button" class="goal-chip" data-goal-score="730">730点</button>
+          <button type="button" class="goal-chip" data-goal-score="800">800点</button>
+          <button type="button" class="goal-chip" data-goal-score="860">860点</button>
+          <button type="button" class="goal-chip" data-goal-score="900">900点</button>
+        </div>
+        <div class="goal-progress" id="home-goal-progress">
+          <div class="goal-progress-row">
+            <span id="home-goal-caption">目標スコアを設定すると、達成度が一目でわかります</span>
+            <b id="home-goal-value">—</b>
+          </div>
+          <div class="goal-bar" aria-hidden="true"><i id="home-goal-bar-fill"></i></div>
+        </div>
+      </div>
+
       <div class="learning-grid">
         <button class="learning-card" id="btn-weak-home" disabled>
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M4.2 7.5l5.2 3M14.6 13.5l5.2 3M19.8 7.5l-5.2 3M9.4 13.5l-5.2 3"/></svg></span>
@@ -2884,6 +2914,12 @@
         </div>
         <button class="btn" id="btn-res-auth" type="button">保存する</button>
       </div>
+      <div class="weak-part-card" id="res-weak-part-card">
+        <span class="weak-part-kicker" id="res-weak-part-kicker">最優先の弱点パート</span>
+        <p class="weak-part-title" id="res-weak-part-title">Part 5（短文穴埋め）を集中演習</p>
+        <p class="weak-part-sub" id="res-weak-part-sub">解説・和訳つきで今すぐ対策できます。</p>
+        <button class="btn weak-part-btn" id="btn-res-weak-part" type="button">弱点の Part 5 を今すぐ練習する →</button>
+      </div>
       <p class="next-lede">スコアと弱点をもとに、今のあなたに合う教材を選定します。</p>
       <button class="btn" id="btn-materials">あなたに合う教材を見る</button>
       <div class="act-grid">
@@ -2977,6 +3013,12 @@
           <p class="res-cloud-banner__sub" id="audio-cloud-sub">Google連携またはメール登録で、スマホ・PC間でも学習履歴を引き継げます。</p>
         </div>
         <button class="btn" id="btn-audio-auth" type="button">保存する</button>
+      </div>
+      <div class="weak-part-card" id="audio-weak-part-card">
+        <span class="weak-part-kicker" id="audio-weak-part-kicker">最優先の弱点パート</span>
+        <p class="weak-part-title" id="audio-weak-part-title">Part 2（応答問題）を集中演習</p>
+        <p class="weak-part-sub" id="audio-weak-part-sub">解説・和訳つきで今すぐ対策できます。</p>
+        <button class="btn weak-part-btn" id="btn-audio-weak-part" type="button">弱点の Part 2 を今すぐ練習する →</button>
       </div>
       <p class="next-lede">スコアと弱点をもとに、今のあなたに合う教材を選定します。</p>
       <button class="btn" id="btn-audio-materials">あなたに合う教材を見る</button>
@@ -3183,9 +3225,44 @@
     </div>
 
     <div class="history-summary">
-      <div class="history-stat"><p class="k">診断回数</p><p class="v" id="h-count">0回</p></div>
-      <div class="history-stat"><p class="k">最新スコア</p><p class="v" id="h-latest">—</p></div>
-      <div class="history-stat"><p class="k">最新モード</p><p class="v" id="h-best">—</p></div>
+      <div class="history-stat"><p class="k">連続学習</p><p class="v" id="h-streak">0日</p><p class="s" id="h-streak-sub">累計 0日</p></div>
+      <div class="history-stat"><p class="k">最新スコア</p><p class="v" id="h-latest">—</p><p class="s" id="h-latest-mode">—</p></div>
+      <div class="history-stat"><p class="k">自己ベスト</p><p class="v" id="h-best">—</p><p class="s" id="h-best-sub">—</p></div>
+      <div class="history-stat"><p class="k">診断回数</p><p class="v" id="h-count">0回</p><p class="s" id="h-weak-sub">復習 0問</p></div>
+    </div>
+
+    <div class="goal-card" id="history-goal-card">
+      <div class="dash-card-head">
+        <h2>目標スコア・達成度</h2>
+        <span class="account-badge" id="h-goal-badge">目標 730点</span>
+      </div>
+      <div class="goal-chips" id="history-goal-chips" role="group" aria-label="目標TOEICスコアを選択">
+        <button type="button" class="goal-chip" data-goal-score="500">500点</button>
+        <button type="button" class="goal-chip" data-goal-score="600">600点</button>
+        <button type="button" class="goal-chip" data-goal-score="730">730点</button>
+        <button type="button" class="goal-chip" data-goal-score="800">800点</button>
+        <button type="button" class="goal-chip" data-goal-score="860">860点</button>
+        <button type="button" class="goal-chip" data-goal-score="900">900点</button>
+      </div>
+      <div class="goal-progress">
+        <div class="goal-progress-row">
+          <span id="h-goal-caption">総合診断を受けると目標までの残り点数が表示されます</span>
+          <b id="h-goal-value">—</b>
+        </div>
+        <div class="goal-bar" aria-hidden="true"><i id="h-goal-bar-fill"></i></div>
+      </div>
+    </div>
+
+    <div class="trend-card" id="history-trend-card">
+      <div class="dash-card-head">
+        <h2>スコア推移グラフ</h2>
+        <div class="trend-tabs" role="tablist" aria-label="グラフ表示切替">
+          <button type="button" class="trend-tab is-active" id="trend-tab-total" data-trend-scale="total" role="tab" aria-selected="true">総合 990</button>
+          <button type="button" class="trend-tab" id="trend-tab-lr" data-trend-scale="lr" role="tab" aria-selected="false">L / R 495</button>
+        </div>
+      </div>
+      <div class="trend-svg-box" id="trend-svg-box"></div>
+      <div class="trend-legend" id="trend-legend"></div>
     </div>
 
     <div class="history-section">
@@ -6873,6 +6950,8 @@ const STORAGE_KEYS = {
   history: 'lexsophia.history.v1',
   weak: 'lexsophia.weak.v1',
   career: 'lexsophia.career.v1',
+  goal: 'lexsophia.goal.v1',
+  streak: 'lexsophia.streak.v1',
   owner: 'lexsophia.owner.v1'
 };
 
@@ -6901,7 +6980,74 @@ function getHistory() {
 
 function getWeakRecords() {
   const value = readStored(STORAGE_KEYS.weak, {});
-  return value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+  if ('_meta' in value) {
+    const clean = Object.assign({}, value);
+    delete clean._meta;
+    return clean;
+  }
+  return value;
+}
+
+/* ---------- Streak & Target Score ---------- */
+
+function localDateKey(dateInput = new Date()) {
+  const d = dateInput instanceof Date ? dateInput : new Date(dateInput);
+  if (Number.isNaN(d.getTime())) return null;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function getStoredStreakDays() {
+  const raw = readStored(STORAGE_KEYS.streak, []);
+  return Array.isArray(raw) ? raw.filter(s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s)) : [];
+}
+
+function getAllStudyDaySet() {
+  const set = new Set(getStoredStreakDays());
+  getHistory().forEach(item => {
+    const k = item && item.takenAt ? localDateKey(item.takenAt) : null;
+    if (k) set.add(k);
+  });
+  return set;
+}
+
+function recordStudyActivity() {
+  const today = localDateKey(new Date());
+  if (!today) return;
+  const days = Array.from(new Set([...getStoredStreakDays(), today])).sort().slice(-120);
+  writeStored(STORAGE_KEYS.streak, days);
+  cloudSaveLearningState();
+}
+
+function getStreakStats() {
+  const daySet = getAllStudyDaySet();
+  const now = new Date();
+  const todayDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const yestDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+  const today = localDateKey(todayDate);
+  const yesterday = localDateKey(yestDate);
+  const studiedToday = daySet.has(today);
+  let cursor = studiedToday ? todayDate : (daySet.has(yesterday) ? yestDate : null);
+  let streak = 0;
+  while (cursor && daySet.has(localDateKey(cursor))) {
+    streak += 1;
+    cursor = new Date(cursor.getFullYear(), cursor.getMonth(), cursor.getDate() - 1);
+  }
+  return { streak, studiedToday, totalDays: daySet.size };
+}
+
+function getTargetScore() {
+  const v = Number(readStored(STORAGE_KEYS.goal, 0));
+  return (Number.isFinite(v) && v >= 300 && v <= 990) ? v : null;
+}
+
+function setTargetScore(score) {
+  const n = Number(score);
+  if (!Number.isFinite(n) || n < 300 || n > 990) return;
+  writeStored(STORAGE_KEYS.goal, n);
+  cloudSaveLearningState();
+  refreshHomeLearning();
+  renderHistory();
 }
 
 function activeWeakRecords() {
@@ -7166,6 +7312,8 @@ function ensureLocalOwnerMatchesUser(user) {
     localStorage.removeItem(STORAGE_KEYS.history);
     localStorage.removeItem(STORAGE_KEYS.weak);
     localStorage.removeItem(STORAGE_KEYS.career);
+    localStorage.removeItem(STORAGE_KEYS.goal);
+    localStorage.removeItem(STORAGE_KEYS.streak);
   }
   writeStored(STORAGE_KEYS.owner, user.id);
 }
@@ -7246,12 +7394,24 @@ function mergeWeakMaps(localMap, cloudMap) {
   return merged;
 }
 
+function buildCloudWeakPayload(weakObj, goalScore, streakDays) {
+  const payload = Object.assign({}, weakObj || {});
+  delete payload._meta;
+  if (goalScore || (streakDays && streakDays.length > 0)) {
+    payload._meta = {
+      targetScore: goalScore || null,
+      studyDays: streakDays || []
+    };
+  }
+  return payload;
+}
+
 async function cloudSaveLearningState() {
   if (!sbClient || !cloudUser) return;
   try {
     await sbClient.from('user_learning_state').upsert({
       user_id: cloudUser.id,
-      weak_records: getWeakRecords(),
+      weak_records: buildCloudWeakPayload(getWeakRecords(), getTargetScore(), getStoredStreakDays()),
       career_key: readStored(STORAGE_KEYS.career, null),
       updated_at: new Date().toISOString()
     }, { onConflict: 'user_id' });
@@ -7320,7 +7480,11 @@ async function syncCloudLearningState(cloudHistoryRows) {
     if (error) return;
 
     const localWeak = getWeakRecords();
-    const cloudWeak = (data && data.weak_records && typeof data.weak_records === 'object') ? data.weak_records : {};
+    const rawCloudWeak = (data && data.weak_records && typeof data.weak_records === 'object') ? data.weak_records : {};
+    const cloudMeta = (rawCloudWeak._meta && typeof rawCloudWeak._meta === 'object') ? rawCloudWeak._meta : null;
+    const cloudWeak = Object.assign({}, rawCloudWeak);
+    delete cloudWeak._meta;
+
     let mergedWeak = mergeWeakMaps(localWeak, cloudWeak);
 
     // If neither cloud nor local has weak_records yet, seed from past cloud diagnostic wrong_ids
@@ -7344,16 +7508,27 @@ async function syncCloudLearningState(cloudHistoryRows) {
     const cloudCareer = data && data.career_key ? data.career_key : null;
     const mergedCareer = localCareer || cloudCareer || null;
 
+    const cloudGoal = cloudMeta && Number.isFinite(Number(cloudMeta.targetScore)) && Number(cloudMeta.targetScore) >= 300
+      ? Number(cloudMeta.targetScore) : null;
+    const mergedGoal = getTargetScore() || cloudGoal || null;
+
+    const cloudDays = (cloudMeta && Array.isArray(cloudMeta.studyDays))
+      ? cloudMeta.studyDays.filter(s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s)) : [];
+    const mergedDays = Array.from(new Set([...getStoredStreakDays(), ...cloudDays])).sort().slice(-120);
+
     writeStored(STORAGE_KEYS.weak, mergedWeak);
     if (mergedCareer) writeStored(STORAGE_KEYS.career, mergedCareer);
+    if (mergedGoal) writeStored(STORAGE_KEYS.goal, mergedGoal);
+    if (mergedDays.length > 0) writeStored(STORAGE_KEYS.streak, mergedDays);
 
+    const nextWeakPayload = buildCloudWeakPayload(mergedWeak, mergedGoal, mergedDays);
     const hasDiff = !data
-      || JSON.stringify(mergedWeak) !== JSON.stringify(cloudWeak)
+      || JSON.stringify(nextWeakPayload) !== JSON.stringify(rawCloudWeak)
       || mergedCareer !== cloudCareer;
-    if (hasDiff && (Object.keys(mergedWeak).length > 0 || mergedCareer)) {
+    if (hasDiff && (Object.keys(nextWeakPayload).length > 0 || mergedCareer)) {
       await sbClient.from('user_learning_state').upsert({
         user_id: cloudUser.id,
-        weak_records: mergedWeak,
+        weak_records: nextWeakPayload,
         career_key: mergedCareer,
         updated_at: new Date().toISOString()
       }, { onConflict: 'user_id' });
@@ -7559,6 +7734,8 @@ async function handleLogout() {
   recoveryPending = false;
   localStorage.removeItem(STORAGE_KEYS.history);
   localStorage.removeItem(STORAGE_KEYS.weak);
+  localStorage.removeItem(STORAGE_KEYS.goal);
+  localStorage.removeItem(STORAGE_KEYS.streak);
   localStorage.removeItem(STORAGE_KEYS.owner);
   setAuthBusy(false);
   refreshHomeLearning();
@@ -7705,9 +7882,76 @@ function formatHistoryDate(iso) {
   return d.toLocaleString('ja-JP', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 }
 
+let trendScaleSelected = null; // 'total' | 'lr' (auto-picks best available until user clicks)
+
+function computeGoalProgress(history, targetScore) {
+  const combinedList = (history || []).filter(i => i && (i.maxScore === 990 || i.mode === 'combined'));
+  const bestCombined = combinedList.length ? Math.max(...combinedList.map(i => Number(i.score) || 0)) : null;
+
+  if (!targetScore) {
+    return {
+      hasGoal: false,
+      badge: '目標 未設定',
+      caption: '目標スコアを設定すると、達成度と残り点数が表示されます',
+      value: '未設定',
+      fillPct: 0
+    };
+  }
+  if (bestCombined != null) {
+    const gap = targetScore - bestCombined;
+    const fillPct = clamp(Math.round((bestCombined / targetScore) * 100), 6, 100);
+    if (gap <= 0) {
+      return {
+        hasGoal: true,
+        badge: `目標 ${targetScore}点 · 達成`,
+        caption: `🎉 目標 ${targetScore}点クリア！（総合ベスト ${bestCombined}点）`,
+        value: '達成 ✓',
+        fillPct: 100
+      };
+    }
+    return {
+      hasGoal: true,
+      badge: `目標 ${targetScore}点`,
+      caption: `総合自己ベスト ${bestCombined}点 → 目標 ${targetScore}点`,
+      value: `あと ${gap}点`,
+      fillPct
+    };
+  }
+  if (history && history.length > 0) {
+    const latest = history[0];
+    const approxPct = clamp(Math.round(((Number(latest.score) || 0) * 2 / targetScore) * 100), 8, 92);
+    return {
+      hasGoal: true,
+      badge: `目標 ${targetScore}点`,
+      caption: `最新 ${assessmentModeLabel(latest.mode, latest.quick)} ${latest.score}/495 · 総合20問診断で残り点数を計測`,
+      value: `目標 ${targetScore}点`,
+      fillPct: approxPct
+    };
+  }
+  return {
+    hasGoal: true,
+    badge: `目標 ${targetScore}点`,
+    caption: `クイック20問診断を受けると、目標${targetScore}点までの距離がわかります`,
+    value: `目標 ${targetScore}点`,
+    fillPct: 0
+  };
+}
+
+function syncGoalChipActiveStates(targetScore) {
+  document.querySelectorAll('.goal-chip[data-goal-score]').forEach(btn => {
+    const active = Number(btn.dataset.goalScore) === targetScore;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+}
+
 function refreshHomeLearning() {
   const history = getHistory();
   const weak = activeWeakRecords();
+  const streak = getStreakStats();
+  const target = getTargetScore();
+  const goalInfo = computeGoalProgress(history, target);
+
   const weakBtn = $('btn-weak-home');
   weakBtn.disabled = weak.length === 0;
   $('home-weak-count').textContent = weak.length
@@ -7719,13 +7963,225 @@ function refreshHomeLearning() {
   $('home-learning-note').textContent = history.length
     ? '前回までの結果を使って、次に必要な学習へ進めます。'
     : '診断すると、苦手問題と成長記録がここに蓄積されます。';
+
+  // Home Streak & Goal Strip
+  if ($('home-streak-pill')) {
+    $('home-streak-pill').classList.toggle('is-active', streak.streak > 0);
+  }
+  if ($('home-streak-text')) {
+    $('home-streak-text').textContent = streak.streak > 0
+      ? `🔥 ${streak.streak}日連続学習中`
+      : (streak.totalDays > 0 ? `🔥 累計${streak.totalDays}日学習 · 今日から再開` : '🔥 今日から連続学習スタート');
+  }
+  if ($('home-streak-done')) {
+    $('home-streak-done').hidden = !streak.studiedToday;
+  }
+  if ($('btn-home-goal-toggle')) {
+    $('btn-home-goal-toggle').textContent = target ? `目標 ${target}点 ✎` : '目標スコアを設定';
+  }
+  if ($('home-goal-caption')) $('home-goal-caption').textContent = goalInfo.caption;
+  if ($('home-goal-value')) $('home-goal-value').textContent = goalInfo.value;
+  if ($('home-goal-bar-fill')) $('home-goal-bar-fill').style.width = `${goalInfo.fillPct}%`;
+  syncGoalChipActiveStates(target);
+}
+
+function formatShortChartDate(iso) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  return `${d.getMonth() + 1}/${d.getDate()}`;
+}
+
+function renderTrendChart(history) {
+  const box = $('trend-svg-box');
+  const legend = $('trend-legend');
+  if (!box || !legend) return;
+
+  const combinedPts = [...(history || [])]
+    .filter(i => i && (i.maxScore === 990 || i.mode === 'combined') && Number.isFinite(Number(i.score)))
+    .reverse()
+    .slice(-10);
+
+  const lrSource = [...(history || [])].reverse().slice(-12);
+  const listenPts = [];
+  const readPts = [];
+  lrSource.forEach(item => {
+    if (!item) return;
+    if (item.mode === 'listening' && Number.isFinite(Number(item.score))) {
+      listenPts.push({ takenAt: item.takenAt, score: Number(item.score) });
+    } else if (item.listeningScore != null && Number.isFinite(Number(item.listeningScore))) {
+      listenPts.push({ takenAt: item.takenAt, score: Number(item.listeningScore) });
+    }
+    if (item.mode === 'reading' && Number.isFinite(Number(item.score))) {
+      readPts.push({ takenAt: item.takenAt, score: Number(item.score) });
+    } else if (item.readingScore != null && Number.isFinite(Number(item.readingScore))) {
+      readPts.push({ takenAt: item.takenAt, score: Number(item.readingScore) });
+    }
+  });
+
+  const effectiveScale = trendScaleSelected
+    || (combinedPts.length > 0 ? 'total' : ((listenPts.length > 0 || readPts.length > 0) ? 'lr' : 'total'));
+
+  if ($('trend-tab-total')) {
+    $('trend-tab-total').classList.toggle('is-active', effectiveScale === 'total');
+    $('trend-tab-total').setAttribute('aria-selected', String(effectiveScale === 'total'));
+  }
+  if ($('trend-tab-lr')) {
+    $('trend-tab-lr').classList.toggle('is-active', effectiveScale === 'lr');
+    $('trend-tab-lr').setAttribute('aria-selected', String(effectiveScale === 'lr'));
+  }
+
+  const W = 480, H = 192, padL = 38, padR = 18, padT = 22, padB = 28;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+
+  if (effectiveScale === 'total') {
+    if (combinedPts.length === 0) {
+      box.innerHTML = `<div class="trend-empty">総合診断（クイック20問または総合40問）を受けると、ここに990点満点のスコア推移グラフが表示されます。</div>`;
+      legend.innerHTML = '';
+      return;
+    }
+    const target = getTargetScore();
+    const yMin = 100, yMax = 990;
+    const xAt = (idx, len) => len === 1 ? padL + plotW / 2 : padL + (idx / (len - 1)) * plotW;
+    const yAt = val => padT + plotH - clamp((val - yMin) / (yMax - yMin), 0, 1) * plotH;
+
+    const gridTicks = [300, 500, 700, 990];
+    const gridSvg = gridTicks.map(v => {
+      const y = yAt(v).toFixed(1);
+      return `<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="#eaeef2" stroke-width="1"/>` +
+             `<text x="${padL - 8}" y="${Number(y) + 4}" text-anchor="end" fill="#8c959f" font-size="10.5" font-weight="600">${v}</text>`;
+    }).join('');
+
+    const targetSvg = target
+      ? (() => {
+          const ty = yAt(target).toFixed(1);
+          return `<line x1="${padL}" y1="${ty}" x2="${W - padR}" y2="${ty}" stroke="#7d3bff" stroke-width="1.5" stroke-dasharray="5 4"/>` +
+                 `<text x="${W - padR}" y="${Math.max(12, Number(ty) - 5)}" text-anchor="end" fill="#5f22d9" font-size="10.5" font-weight="700">目標 ${target}</text>`;
+        })()
+      : '';
+
+    const coords = combinedPts.map((p, i) => ({ x: xAt(i, combinedPts.length), y: yAt(p.score), score: p.score, date: formatShortChartDate(p.takenAt) }));
+    const poly = coords.map(c => `${c.x.toFixed(1)},${c.y.toFixed(1)}`).join(' ');
+    const area = coords.length > 1
+      ? `<polygon points="${coords[0].x.toFixed(1)},${padT + plotH} ${poly} ${coords[coords.length - 1].x.toFixed(1)},${padT + plotH}" fill="url(#trendGradBlue)"/>`
+      : '';
+    const line = coords.length > 1
+      ? `<polyline points="${poly}" fill="none" stroke="#0176f0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`
+      : '';
+    const dots = coords.map(c =>
+      `<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="4.5" fill="#0176f0" stroke="#ffffff" stroke-width="2"/>` +
+      `<text x="${c.x.toFixed(1)}" y="${Math.max(12, c.y - 9).toFixed(1)}" text-anchor="middle" fill="#24292f" font-size="11" font-weight="700">${c.score}</text>` +
+      `<text x="${c.x.toFixed(1)}" y="${H - 6}" text-anchor="middle" fill="#8c959f" font-size="10.5" font-weight="600">${escapeHtml(c.date)}</text>`
+    ).join('');
+
+    box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="総合スコア推移グラフ">` +
+      `<defs><linearGradient id="trendGradBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0176f0" stop-opacity="0.22"/><stop offset="100%" stop-color="#0176f0" stop-opacity="0.0"/></linearGradient></defs>` +
+      gridSvg + targetSvg + area + line + dots + `</svg>`;
+
+    legend.innerHTML = `<span><i class="trend-dot" style="background:#0176f0"></i>総合スコア</span>` +
+      (target ? `<span><i class="trend-dash"></i>目標 ${target}点</span>` : '') +
+      (combinedPts.length === 1 ? `<span>※次回診断で折れ線がつながります</span>` : '');
+    return;
+  }
+
+  // L / R (495 scale)
+  const lSlice = listenPts.slice(-10);
+  const rSlice = readPts.slice(-10);
+  if (lSlice.length === 0 && rSlice.length === 0) {
+    box.innerHTML = `<div class="trend-empty">診断を受けると、Listening・Reading（各495点満点）の推移グラフが表示されます。</div>`;
+    legend.innerHTML = '';
+    return;
+  }
+  const yMin = 50, yMax = 495;
+  const yAt = val => padT + plotH - clamp((val - yMin) / (yMax - yMin), 0, 1) * plotH;
+  const gridSvg = [150, 250, 350, 495].map(v => {
+    const y = yAt(v).toFixed(1);
+    return `<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="#eaeef2" stroke-width="1"/>` +
+           `<text x="${padL - 8}" y="${Number(y) + 4}" text-anchor="end" fill="#8c959f" font-size="10.5" font-weight="600">${v}</text>`;
+  }).join('');
+
+  const drawSeries = (pts, color, labelOffset) => {
+    if (!pts.length) return '';
+    const xAt = (idx, len) => len === 1 ? padL + plotW / 2 : padL + (idx / (len - 1)) * plotW;
+    const cs = pts.map((p, i) => ({ x: xAt(i, pts.length), y: yAt(p.score), score: p.score, date: formatShortChartDate(p.takenAt) }));
+    const poly = cs.map(c => `${c.x.toFixed(1)},${c.y.toFixed(1)}`).join(' ');
+    const line = cs.length > 1 ? `<polyline points="${poly}" fill="none" stroke="${color}" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>` : '';
+    const dots = cs.map(c =>
+      `<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="4" fill="${color}" stroke="#ffffff" stroke-width="2"/>` +
+      `<text x="${c.x.toFixed(1)}" y="${clamp(c.y + labelOffset, 12, padT + plotH - 4).toFixed(1)}" text-anchor="middle" fill="${color}" font-size="10.5" font-weight="700">${c.score}</text>`
+    ).join('');
+    return line + dots;
+  };
+
+  const baseForDates = lSlice.length >= rSlice.length ? lSlice : rSlice;
+  const dateLabels = baseForDates.map((p, i) => {
+    const x = baseForDates.length === 1 ? padL + plotW / 2 : padL + (i / (baseForDates.length - 1)) * plotW;
+    return `<text x="${x.toFixed(1)}" y="${H - 6}" text-anchor="middle" fill="#8c959f" font-size="10.5" font-weight="600">${escapeHtml(formatShortChartDate(p.takenAt))}</text>`;
+  }).join('');
+
+  box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Listening・Reading推移グラフ">` +
+    gridSvg + drawSeries(lSlice, '#0176f0', -9) + drawSeries(rSlice, '#00a87e', 15) + dateLabels + `</svg>`;
+  legend.innerHTML =
+    (lSlice.length ? `<span><i class="trend-dot" style="background:#0176f0"></i>Listening (${lSlice[lSlice.length - 1].score}/495)</span>` : '') +
+    (rSlice.length ? `<span><i class="trend-dot" style="background:#00a87e"></i>Reading (${rSlice[rSlice.length - 1].score}/495)</span>` : '');
 }
 
 function renderHistory() {
   const history = getHistory();
-  $('h-count').textContent = `${history.length}回`;
-  $('h-latest').textContent = history.length ? `${history[0].score}/${history[0].maxScore || 495}` : '—';
-  $('h-best').textContent = history.length ? assessmentModeLabel(history[0].mode, history[0].quick) : '—';
+  const weak = activeWeakRecords();
+  const streak = getStreakStats();
+  const target = getTargetScore();
+  const goalInfo = computeGoalProgress(history, target);
+
+  // 1. 4-Card Summary
+  if ($('h-streak')) $('h-streak').textContent = `🔥 ${streak.streak}日`;
+  if ($('h-streak-sub')) $('h-streak-sub').textContent = streak.studiedToday ? `今日達成 ✓ · 累計${streak.totalDays}日` : `累計 ${streak.totalDays}日`;
+
+  if ($('h-count')) $('h-count').textContent = `${history.length}回`;
+  if ($('h-weak-sub')) $('h-weak-sub').textContent = `要復習 ${weak.length}問`;
+
+  if (history.length > 0) {
+    const latest = history[0];
+    const latestScale = latest.maxScore || 495;
+    const prevSameScale = history.slice(1).find(h => (h.maxScore || 495) === latestScale);
+    let deltaHtml = '';
+    if (prevSameScale && Number.isFinite(Number(prevSameScale.score))) {
+      const diff = Number(latest.score) - Number(prevSameScale.score);
+      const sign = diff > 0 ? `+${diff}` : `${diff}`;
+      const cls = diff > 0 ? 'is-up' : (diff < 0 ? 'is-down' : '');
+      deltaHtml = `<span class="delta-tag ${cls}">${sign}</span>`;
+    }
+    if ($('h-latest')) $('h-latest').innerHTML = `${escapeHtml(String(latest.score))}<small style="font-size:12px;color:var(--ink-muted)">/${latestScale}</small> ${deltaHtml}`;
+    if ($('h-latest-mode')) $('h-latest-mode').textContent = assessmentModeLabel(latest.mode, latest.quick);
+
+    const combinedItems = history.filter(i => (i.maxScore === 990 || i.mode === 'combined'));
+    if (combinedItems.length > 0) {
+      const bestC = combinedItems.reduce((a, b) => (b.score > a.score ? b : a), combinedItems[0]);
+      if ($('h-best')) $('h-best').innerHTML = `${escapeHtml(String(bestC.score))}<small style="font-size:12px;color:var(--ink-muted)">/990</small>`;
+      if ($('h-best-sub')) $('h-best-sub').textContent = assessmentModeLabel(bestC.mode, bestC.quick);
+    } else {
+      const bestSolo = history.reduce((a, b) => (b.score > a.score ? b : a), history[0]);
+      if ($('h-best')) $('h-best').innerHTML = `${escapeHtml(String(bestSolo.score))}<small style="font-size:12px;color:var(--ink-muted)">/495</small>`;
+      if ($('h-best-sub')) $('h-best-sub').textContent = assessmentModeLabel(bestSolo.mode, bestSolo.quick);
+    }
+  } else {
+    if ($('h-latest')) $('h-latest').textContent = '—';
+    if ($('h-latest-mode')) $('h-latest-mode').textContent = '未受験';
+    if ($('h-best')) $('h-best').textContent = '—';
+    if ($('h-best-sub')) $('h-best-sub').textContent = '—';
+  }
+
+  // 2. Goal Card
+  if ($('h-goal-badge')) $('h-goal-badge').textContent = goalInfo.badge;
+  if ($('h-goal-caption')) $('h-goal-caption').textContent = goalInfo.caption;
+  if ($('h-goal-value')) $('h-goal-value').textContent = goalInfo.value;
+  if ($('h-goal-bar-fill')) $('h-goal-bar-fill').style.width = `${goalInfo.fillPct}%`;
+  syncGoalChipActiveStates(target);
+
+  // 3. SVG Trend Chart
+  renderTrendChart(history);
+
+  // 4. History List
   $('history-empty').hidden = history.length > 0;
   $('history-list').innerHTML = history.map(item => {
     const partText = [1, 2, 3, 4, 5, 6, 7].map(part => {
@@ -7737,6 +8193,51 @@ function renderHistory() {
       `<p class="score">${item.score} <small>/ ${item.maxScore || 495}</small></p></div>` +
       `<p class="meta">${item.correct}/${item.total}問正解 · ${escapeHtml(fmtDuration(item.seconds))}<br>${escapeHtml(partText)}</p></article>`;
   }).join('');
+}
+
+function pickWeakestPart(partsList) {
+  const valid = (partsList || []).filter(p => p && p.total > 0);
+  if (!valid.length) return null;
+  return [...valid].sort((a, b) => {
+    const accDiff = (a.correct / a.total) - (b.correct / b.total);
+    if (Math.abs(accDiff) > 1e-6) return accDiff;
+    return (b.total - b.correct) - (a.total - a.correct);
+  })[0];
+}
+
+function updateWeakPartCard(prefix, partsList) {
+  const card = $(`${prefix}-weak-part-card`);
+  const kicker = $(`${prefix}-weak-part-kicker`);
+  const title = $(`${prefix}-weak-part-title`);
+  const sub = $(`${prefix}-weak-part-sub`);
+  const btn = $(`btn-${prefix}-weak-part`);
+  if (!card || !btn) return;
+  const weakest = pickWeakestPart(partsList);
+  if (!weakest) {
+    card.hidden = true;
+    return;
+  }
+  card.hidden = false;
+  const pNo = weakest.part;
+  const pName = PART_NAMES[pNo] || '';
+  const acc = pct(weakest.correct, weakest.total);
+  const unit = pNo === 1 ? '6問' : (pNo === 2 || pNo === 5) ? '10問' : '2セット';
+  const isPerfect = weakest.correct === weakest.total;
+  btn.dataset.part = String(pNo);
+  if (kicker) kicker.textContent = isPerfect ? 'さらなる定着演習' : '最優先の弱点パート';
+  if (title) title.textContent = isPerfect ? `Part ${pNo}（${pName}）をさらに伸ばす` : `弱点の Part ${pNo}（${pName}）を集中対策`;
+  if (sub) sub.textContent = `今回の正答率 ${acc}%（${weakest.correct}/${weakest.total}問） · ${unit}の日本語解説つき演習へ直行`;
+  btn.textContent = isPerfect ? `Part ${pNo} をもう1セット練習する →` : `弱点の Part ${pNo} を今すぐ練習する →`;
+}
+
+function launchWeakPartFromResults(partNum) {
+  const p = Number(partNum);
+  if (!Number.isFinite(p) || p < 1 || p > 7) return;
+  cancelAnimationFrame(state.revealRaf);
+  state.revealTimers.forEach(clearTimeout);
+  state.revealTimers = [];
+  stopSpeech();
+  startListeningPractice(p);
 }
 
 function openHistory(returnScreen) {
@@ -8380,7 +8881,10 @@ function finishTest() {
   stopSpeech();
   state.responseLog = buildResponseLog();
   const totalSeconds = (Date.now() - state.startedAt) / 1000;
-  if (!state.developerSkipped) updateWeakRecords(state.questions, state.responses);
+  if (!state.developerSkipped) {
+    updateWeakRecords(state.questions, state.responses);
+    recordStudyActivity();
+  }
 
   if (state.mode === 'weak') {
     const result = estimateScore(state.questions, state.responses, totalSeconds);
@@ -8511,6 +9015,7 @@ function renderAudioResults(listeningResult, listeningAnalysis, readingResult, r
     const accuracy = pct(p.correct, p.total);
     return `<div class="part-result"><p class="k">Part ${p.part} · ${PART_NAMES[p.part]}</p><p class="v">${p.correct}/${p.total} · ${accuracy}%</p></div>`;
   }).join('');
+  updateWeakPartCard('audio', parts);
 
   const strong = listeningAnalysis.strongest;
   const weak = listeningAnalysis.weakest;
@@ -8960,6 +9465,7 @@ function renderResults(result, analysis, totalSeconds) {
 
   $('r-priority').textContent = analysis.priority.title;
   $('r-priority-d').textContent = analysis.priority.detail;
+  updateWeakPartCard('res', analysis.parts);
 }
 
 /* =====================================================================
@@ -10068,6 +10574,7 @@ function advanceListeningPractice() {
   if (state.index < state.questions.length) {renderQuestion();showScreen('test');return;}
   clearInterval(state.timerId);
   stopSpeech();
+  recordStudyActivity();
   const correct=state.questions.filter((q,i)=>q.answer===state.responses[i].choice).length;
   $('lp-score').textContent=`${correct} / ${state.questions.length}問正解 · ${Math.round(correct/state.questions.length*100)}%`;
   $('lp-retry-wrong').hidden=correct===state.questions.length;
@@ -10085,7 +10592,7 @@ $('lp-retry-wrong').addEventListener('click',()=>{
   const retry=listeningPracticePart>=6 ? state.questions.filter(q=>passageIds.has(q.passageId)) : [3,4].includes(listeningPracticePart) ? state.questions.filter(q=>audioIds.has(q.audioId)) : wrong;
   if(retry.length)startListeningPractice(listeningPracticePart,retry);
 });
-document.querySelectorAll('.lp-home').forEach(button=>button.addEventListener('click',()=>{stopSpeech();clearInterval(state.timerId);listeningPracticeChecked=false;showScreen('home');document.getElementById('practice-title').scrollIntoView({block:'start'});}));
+document.querySelectorAll('.lp-home').forEach(button=>button.addEventListener('click',()=>{stopSpeech();clearInterval(state.timerId);listeningPracticeChecked=false;refreshHomeLearning();showScreen('home');document.getElementById('practice-title').scrollIntoView({block:'start'});}));
 
 /* ---------- Wiring ---------- */
 
@@ -10252,6 +10759,40 @@ document.addEventListener('keydown', e => {
   if (i > -1 && i < 4) { selectChoice(i); }
   else if (e.key === 'Enter' && state.selected !== null) { nextQuestion(); }
 });
+
+// Growth Dashboard & Weak-Part CTA & PWA wiring
+if ($('btn-home-goal-toggle')) {
+  $('btn-home-goal-toggle').addEventListener('click', () => {
+    const chips = $('home-goal-chips');
+    if (!chips) return;
+    chips.hidden = !chips.hidden;
+    $('btn-home-goal-toggle').setAttribute('aria-expanded', String(!chips.hidden));
+  });
+}
+document.querySelectorAll('.goal-chip[data-goal-score]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    setTargetScore(Number(btn.dataset.goalScore));
+    if ($('home-goal-chips')) $('home-goal-chips').hidden = true;
+    if ($('btn-home-goal-toggle')) $('btn-home-goal-toggle').setAttribute('aria-expanded', 'false');
+  });
+});
+document.querySelectorAll('.trend-tab[data-trend-scale]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    trendScaleSelected = btn.dataset.trendScale;
+    renderTrendChart(getHistory());
+  });
+});
+if ($('btn-res-weak-part')) {
+  $('btn-res-weak-part').addEventListener('click', () => launchWeakPartFromResults($('btn-res-weak-part').dataset.part));
+}
+if ($('btn-audio-weak-part')) {
+  $('btn-audio-weak-part').addEventListener('click', () => launchWeakPartFromResults($('btn-audio-weak-part').dataset.part));
+}
+if ('serviceWorker' in navigator && /^https?:/.test(location.protocol)) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
 
 window.addEventListener('popstate', routeFromHash);
 refreshHomeLearning();
