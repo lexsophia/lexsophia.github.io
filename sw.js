@@ -1,6 +1,18 @@
 /* LexSophia PWA Service Worker — Network-First (never serves stale HTML when online) */
-const CACHE_NAME = 'lexsophia-shell-v1';
-const CORE_ASSETS = ['/', '/favicon.png', '/icon-512.png', '/apple-touch-icon.png', '/manifest.json'];
+const CACHE_NAME = 'lexsophia-shell-v3';
+const CORE_ASSETS = [
+  '/',
+  '/assets/lexsophia-data.js',
+  '/favicon.svg',
+  '/favicon.png',
+  '/icon-512.png',
+  '/apple-touch-icon.png',
+  '/manifest.json',
+  '/img/owl-amber.png',
+  '/img/owl-pink.png',
+  '/img/owl-blue.png',
+  '/img/owl-violet.png'
+];
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -29,7 +41,7 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     fetch(req)
       .then(res => {
-        if (res && res.ok && (req.mode === 'navigate' || url.pathname.startsWith('/img/') || CORE_ASSETS.includes(url.pathname))) {
+        if (res && res.ok && (req.mode === 'navigate' || url.pathname.startsWith('/img/') || url.pathname.startsWith('/assets/') || url.pathname.startsWith('/seo-assets/') || CORE_ASSETS.includes(url.pathname))) {
           const clone = res.clone();
           caches.open(CACHE_NAME).then(cache => cache.put(req, clone)).catch(() => {});
         }
