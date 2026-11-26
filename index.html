@@ -2203,15 +2203,61 @@
   .percentile-card a { color: var(--ink-inverse); text-decoration: underline; }
   @media (max-width: 480px) { .percentile-card { padding: 28px 22px; } .percentile-share { width: 100%; } .percentile-challenge { font-size: 13px; } }
 
-  /* Practice entry: Yoom Bento Groups + Capsule Node Pills */
+  /* Practice entry: Home Gateway Card + Dedicated #practice-select Screen */
   .practice-home { margin-top: clamp(56px, 7vw, 88px); padding-top: 0; border-top: 0; }
-  .practice-home .practice-eyebrow {
+  .practice-gateway {
+    position: relative; overflow: hidden;
+    padding: clamp(28px, 4vw, 40px) clamp(24px, 4vw, 44px);
+    border-radius: var(--radius-bento);
+    background: var(--surface-canvas);
+    box-shadow: var(--shadow-card);
+    display: flex; align-items: center; justify-content: space-between; gap: 28px;
+  }
+  .practice-gateway__copy { flex: 1; min-width: 0; max-width: 640px; }
+  .practice-gateway__pills {
+    margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .practice-gateway__pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 13px; border-radius: var(--radius-pill);
+    background: var(--surface-subtle); color: var(--ink-secondary);
+    font-family: var(--font-num); font-size: 12.5px; font-weight: 700;
+    box-shadow: var(--shadow-ring-subtle);
+  }
+  .practice-gateway__cta {
+    margin-top: 24px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 52px; padding: 0 28px; border: 0; border-radius: var(--radius-pill);
+    background: var(--ink-primary); color: var(--ink-inverse);
+    font-size: 15px; font-weight: 700; box-shadow: var(--shadow-btn);
+    transition: transform 0.2s var(--ease-ui), background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .practice-gateway__cta:hover {
+    background: var(--ink-primary-hover); transform: translateY(-2px); box-shadow: var(--shadow-btn-hover);
+  }
+  .practice-gateway__owl {
+    flex: 0 0 auto; width: auto; height: clamp(104px, 14vw, 138px);
+    object-fit: contain; pointer-events: none; user-select: none;
+    filter: drop-shadow(0 12px 22px rgba(36, 41, 47, 0.11));
+  }
+  @media (max-width: 680px) {
+    .practice-gateway { flex-direction: column; align-items: flex-start; gap: 20px; border-radius: 30px; padding: 28px 22px; }
+    .practice-gateway__owl { display: none; }
+    .practice-gateway__cta { width: 100%; }
+  }
+  #practice-select .wrap { max-width: 1040px; padding-top: 28px; padding-bottom: 88px; }
+  @media (min-width: 860px) {
+    #practice-select .wrap { padding-top: 40px; padding-bottom: 108px; }
+  }
+  .practice-select-head { margin: 22px 0 30px; }
+  .practice-select-head h1 { font-size: clamp(26px, 5vw, 38px); line-height: 1.28; letter-spacing: -0.04em; }
+  .practice-select-head p { margin-top: 10px; color: var(--ink-secondary); font-size: 15px; line-height: 1.75; max-width: 680px; }
+  .practice-eyebrow {
     display: inline-block; padding: 4px 12px; border-radius: var(--radius-pill);
     background: var(--tint-mint-bg); color: var(--ink-mint);
     font-family: var(--font-num); font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; margin: 0 0 12px;
   }
-  .practice-home h2 { font-size: clamp(24px, 4vw, 34px); margin: 0; letter-spacing: -0.04em; }
-  .practice-home .practice-intro { color: var(--ink-secondary); margin: 12px 0 30px; font-size: 15px; line-height: 1.8; max-width: 720px; }
+  .practice-home h2 { font-size: clamp(24px, 4vw, 32px); margin: 0; letter-spacing: -0.04em; }
+  .practice-home .practice-intro { color: var(--ink-secondary); margin: 12px 0 0; font-size: 15px; line-height: 1.8; }
   .practice-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
   .practice-group {
     min-width: 0; background: var(--surface-hero); border: 0; border-radius: var(--radius-card-lg);
@@ -2642,7 +2688,8 @@
   .trainer-duo-grid {
     margin-top: 24px; display: grid; gap: 24px;
   }
-  @media (min-width: 920px) {
+  .trainer-duo-grid .daily-card { margin-top: 0; }
+  @media (min-width: 960px) {
     .trainer-duo-grid { grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
   }
   .vocab-card {
@@ -3184,7 +3231,7 @@
     <header class="brandbar">
       <p class="wordmark">Lex<span>Sophia</span></p>
       <nav class="brand-nav" aria-label="ホームナビゲーション">
-        <a href="#practice-title">Part別練習</a>
+        <a href="#practice">Part別練習</a>
         <a href="#learning-title">学習メニュー</a>
         <a href="#about-title">特徴</a>
         <button type="button" class="brand-auth" id="btn-auth-nav" aria-haspopup="dialog">
@@ -3434,60 +3481,21 @@
 
   <div class="wrap">
     <section class="practice-home" aria-labelledby="practice-title">
-      <p class="practice-eyebrow">PRACTICE</p>
-      <h2 id="practice-title">Part別に練習する</h2>
-      <p class="practice-intro">伸ばしたいパートを、自分のペースで。Listening・Readingの全Partを練習できます。回答後に解説と和訳を確認しましょう。</p>
-      <div class="practice-groups">
-        <div class="practice-group"><h3>Listening <small>Part 1–4</small></h3><div class="practice-list">
-          <button type="button" class="practice-card" data-listening-practice="1"><span class="practice-part">Part 1</span><span class="practice-name">写真描写問題</span><span class="practice-soon">6問 →</span></button>
-          <button type="button" class="practice-card" data-listening-practice="2"><span class="practice-part">Part 2</span><span class="practice-name">応答問題</span><span class="practice-soon">10問 →</span></button>
-          <button type="button" class="practice-card" data-listening-practice="3"><span class="practice-part">Part 3</span><span class="practice-name">会話問題</span><span class="practice-soon">6問 →</span></button>
-          <button type="button" class="practice-card" data-listening-practice="4"><span class="practice-part">Part 4</span><span class="practice-name">説明文問題</span><span class="practice-soon">6問 →</span></button>
-        </div></div>
-        <div class="practice-group"><h3>Reading <small>Part 5–7</small></h3><div class="practice-list">
-          <button type="button" class="practice-card" data-listening-practice="5"><span class="practice-part">Part 5</span><span class="practice-name">短文穴埋め問題</span><span class="practice-soon">10問 →</span></button>
-          <button type="button" class="practice-card" data-listening-practice="6"><span class="practice-part">Part 6</span><span class="practice-name">長文穴埋め問題</span><span class="practice-soon">2セット →</span></button>
-          <button type="button" class="practice-card" data-listening-practice="7"><span class="practice-part">Part 7</span><span class="practice-name">読解問題</span><span class="practice-soon">2セット →</span></button>
-        </div></div>
-      </div>
-
-      <div class="special-drills">
-        <div class="promo-pair-grid">
-          <div class="sprint-promo">
-            <div>
-              <span class="sprint-promo__kicker">⚡ SPEED TIME ATTACK · 全10問</span>
-              <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック</p>
-              <p class="sprint-promo__sub">本番でPart 7に55分残すためのスピード特訓。正答率×解答速度でS〜Cランク判定！</p>
-            </div>
-            <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
+      <div class="practice-gateway">
+        <div class="practice-gateway__copy">
+          <p class="practice-eyebrow">PRACTICE · PART 1–7 &amp; DRILLS</p>
+          <h2 id="practice-title">Part別に練習する</h2>
+          <p class="practice-intro">伸ばしたいパートや弱点テーマを選んで、自分のペースで演習できます。全問に日本語訳とポイント解説つき。</p>
+          <div class="practice-gateway__pills" aria-hidden="true">
+            <span class="practice-gateway__pill">🎧 Part 1–4 音声つき</span>
+            <span class="practice-gateway__pill">📖 Part 5–7 長文・文法</span>
+            <span class="practice-gateway__pill">⚡ 20秒タイムアタック</span>
+            <span class="practice-gateway__pill">🎯 弱点テーマ特訓</span>
           </div>
-
-          <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
-            <div>
-              <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">🎧 CLOZE DICTATION GYM · 全10問</span>
-              <p class="sprint-promo__title">Listening「穴埋めディクテーション」</p>
-              <p class="sprint-promo__sub">音の連結・弱形・語尾の -ed を聞き取る耳トレ。タップ選択＆タイピング両対応！</p>
-            </div>
-            <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
-          </div>
+          <button type="button" class="practice-gateway__cta" id="btn-open-practice-select">パートを選んで練習する →</button>
         </div>
-
-        <div class="pinpoint-box">
-          <div class="pinpoint-box__head">
-            <span class="pinpoint-box__title">🎯 弱点テーマ別ピンポイント特訓</span>
-            <span class="pinpoint-box__sub">苦手な出題パターンだけを連続演習</span>
-          </div>
-          <div class="pinpoint-chips" role="group" aria-label="テーマ別ピンポイント特訓">
-            <button type="button" class="pinpoint-chip" data-pinpoint="pos">品詞問題 10問</button>
-            <button type="button" class="pinpoint-chip" data-pinpoint="tense">動詞・時制・態 10問</button>
-            <button type="button" class="pinpoint-chip" data-pinpoint="connectors">接続詞・前置詞・構造 10問</button>
-            <button type="button" class="pinpoint-chip" data-pinpoint="vocab">語彙・語法 10問</button>
-            <button type="button" class="pinpoint-chip" data-pinpoint="p2indirect">Part 2 間接・変化球応答</button>
-            <button type="button" class="pinpoint-chip" data-pinpoint="p7multi">Part 7 複数文書照合</button>
-          </div>
-        </div>
+        <img class="practice-gateway__owl" src="img/owl-blue.png" alt="" width="229" height="320" loading="lazy" decoding="async">
       </div>
-
       <nav class="seo-entry-links" aria-label="診断ガイドと練習問題"><a href="/toeic-score-predictor/">スコア予測の仕組み →</a><a href="/toeic-free-test/">無料診断の受け方 →</a><a href="/toeic-part5/">Part 5 練習問題 →</a></nav>
     </section>
 
@@ -3625,33 +3633,33 @@
       <div class="learning-head">
         <div>
           <h2 id="micro-title">スキマ1分トレーニング</h2>
-          <p>通学・休憩中の30秒〜1分で、今日の1問・頻出単語・言い換え表現をサクッと鍛えられます。</p>
-        </div>
-      </div>
-
-      <!-- Daily 30-Second Part 5 Challenge -->
-      <div class="daily-card" id="daily-quiz-card" aria-labelledby="daily-quiz-label">
-        <div class="daily-head">
-          <div class="daily-badges">
-            <span class="daily-kicker" id="daily-quiz-label">✦ 今日の1問 · 30秒チャレンジ</span>
-            <span class="daily-focus" id="daily-quiz-focus">Part 5</span>
-            <span class="daily-done-pill" id="daily-quiz-done" hidden>今日クリア ✓</span>
-          </div>
-          <img class="daily-owl" id="daily-quiz-owl" src="img/owl-pink.png" alt="" width="236" height="320" loading="lazy" decoding="async">
-        </div>
-        <p class="daily-stem" id="daily-quiz-stem"></p>
-        <div class="daily-choices" id="daily-quiz-choices" role="group" aria-label="今日の1問の選択肢"></div>
-        <div class="daily-feedback" id="daily-quiz-feedback" hidden>
-          <div class="daily-fb-head">
-            <span class="daily-fb-status" id="daily-fb-status"></span>
-            <button type="button" class="daily-next-btn" id="btn-daily-another">もう1問解く ↻</button>
-          </div>
-          <p class="daily-fb-reason" id="daily-fb-reason"></p>
-          <p class="daily-fb-tr" id="daily-fb-tr"></p>
+          <p>通学・休憩中の30秒〜1分で、今日の1問と頻出英単語をサクッと鍛えられます。</p>
         </div>
       </div>
 
       <div class="trainer-duo-grid">
+        <!-- Daily 30-Second Part 5 Challenge -->
+        <div class="daily-card" id="daily-quiz-card" aria-labelledby="daily-quiz-label">
+          <div class="daily-head">
+            <div class="daily-badges">
+              <span class="daily-kicker" id="daily-quiz-label">✦ 今日の1問 · 30秒チャレンジ</span>
+              <span class="daily-focus" id="daily-quiz-focus">Part 5</span>
+              <span class="daily-done-pill" id="daily-quiz-done" hidden>今日クリア ✓</span>
+            </div>
+            <img class="daily-owl" id="daily-quiz-owl" src="img/owl-pink.png" alt="" width="236" height="320" loading="lazy" decoding="async">
+          </div>
+          <p class="daily-stem" id="daily-quiz-stem"></p>
+          <div class="daily-choices" id="daily-quiz-choices" role="group" aria-label="今日の1問の選択肢"></div>
+          <div class="daily-feedback" id="daily-quiz-feedback" hidden>
+            <div class="daily-fb-head">
+              <span class="daily-fb-status" id="daily-fb-status"></span>
+              <button type="button" class="daily-next-btn" id="btn-daily-another">もう1問解く ↻</button>
+            </div>
+            <p class="daily-fb-reason" id="daily-fb-reason"></p>
+            <p class="daily-fb-tr" id="daily-fb-tr"></p>
+          </div>
+        </div>
+
         <!-- Lexicon 100 TOEIC Vocabulary Speed Flashcards -->
         <div class="vocab-card" id="vocab-card" aria-labelledby="vocab-card-label">
           <div class="vocab-head">
@@ -3689,30 +3697,6 @@
           <div class="vocab-foot">
             <span class="small" style="margin:0">フレーズ単位でPart 5・7の速度アップ</span>
             <a href="/toeic-vocab/">全100語・赤シートへ →</a>
-          </div>
-        </div>
-
-        <!-- Paraphrase 50 Instant 4-Choice Drill -->
-        <div class="pp-card" id="paraphrase-card" aria-labelledby="pp-card-label">
-          <div class="vocab-head">
-            <span class="pp-kicker" id="pp-card-label">🔄 言い換え（パラフレーズ）瞬発ドリル · 50組</span>
-            <span class="vocab-stat" id="pp-stat-text">クリア 0 / 50組</span>
-          </div>
-          <div class="pp-prompt">
-            <div>
-              <span class="pp-cat-tag" id="pp-cat">料金・無料</span>
-              <p class="pp-src" id="pp-src">complimentary</p>
-            </div>
-            <span class="small" style="margin:0">同じ意味の英語表現はどれ？</span>
-          </div>
-          <div class="pp-choices" id="pp-choices" role="group" aria-label="言い換え選択肢"></div>
-          <div class="pp-fb" id="pp-fb" hidden>
-            <span id="pp-fb-text"></span>
-            <button type="button" class="daily-next-btn" id="btn-pp-next">次のペアへ →</button>
-          </div>
-          <div class="vocab-foot">
-            <span class="small" style="margin:0">Part 3・4・7の正解選択肢を見抜くスキル</span>
-            <a href="/toeic-paraphrase/">全50組・赤シートへ →</a>
           </div>
         </div>
       </div>
@@ -3852,6 +3836,74 @@
 </section>
 
 <!-- ============================================================ -->
+<!-- PRACTICE SELECT                                               -->
+<!-- ============================================================ -->
+<section id="practice-select" class="screen" aria-labelledby="practice-select-title">
+  <div class="wrap">
+    <button class="sub-back" id="btn-practice-select-back" type="button">← ホームに戻る</button>
+    <div class="mascot-page-head practice-select-head">
+      <div class="mascot-page-head__copy">
+        <p class="practice-eyebrow">PART PRACTICE &amp; SPECIAL DRILLS</p>
+        <h1 id="practice-select-title" tabindex="-1">どのパートを練習しますか？</h1>
+        <p>伸ばしたいパートや特訓モードを選んで、自分のペースで演習できます。回答後に全問の日本語訳と解説を確認しましょう。</p>
+      </div>
+      <img class="mascot-page-head__img" src="img/owl-amber.png" alt="" width="284" height="320" decoding="async">
+    </div>
+
+    <div class="practice-groups">
+      <div class="practice-group"><h3>Listening <small>Part 1–4</small></h3><div class="practice-list">
+        <button type="button" class="practice-card" data-listening-practice="1"><span class="practice-part">Part 1</span><span class="practice-name">写真描写問題</span><span class="practice-soon">6問 →</span></button>
+        <button type="button" class="practice-card" data-listening-practice="2"><span class="practice-part">Part 2</span><span class="practice-name">応答問題</span><span class="practice-soon">10問 →</span></button>
+        <button type="button" class="practice-card" data-listening-practice="3"><span class="practice-part">Part 3</span><span class="practice-name">会話問題</span><span class="practice-soon">6問 →</span></button>
+        <button type="button" class="practice-card" data-listening-practice="4"><span class="practice-part">Part 4</span><span class="practice-name">説明文問題</span><span class="practice-soon">6問 →</span></button>
+      </div></div>
+      <div class="practice-group"><h3>Reading <small>Part 5–7</small></h3><div class="practice-list">
+        <button type="button" class="practice-card" data-listening-practice="5"><span class="practice-part">Part 5</span><span class="practice-name">短文穴埋め問題</span><span class="practice-soon">10問 →</span></button>
+        <button type="button" class="practice-card" data-listening-practice="6"><span class="practice-part">Part 6</span><span class="practice-name">長文穴埋め問題</span><span class="practice-soon">2セット →</span></button>
+        <button type="button" class="practice-card" data-listening-practice="7"><span class="practice-part">Part 7</span><span class="practice-name">読解問題</span><span class="practice-soon">2セット →</span></button>
+      </div></div>
+    </div>
+
+    <div class="special-drills">
+      <div class="promo-pair-grid">
+        <div class="sprint-promo">
+          <div>
+            <span class="sprint-promo__kicker">⚡ SPEED TIME ATTACK · 全10問</span>
+            <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック</p>
+            <p class="sprint-promo__sub">本番でPart 7に55分残すためのスピード特訓。正答率×解答速度でS〜Cランク判定！</p>
+          </div>
+          <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
+        </div>
+
+        <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
+          <div>
+            <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">🎧 CLOZE DICTATION GYM · 全10問</span>
+            <p class="sprint-promo__title">Listening「穴埋めディクテーション」</p>
+            <p class="sprint-promo__sub">音の連結・弱形・語尾の -ed を聞き取る耳トレ。タップ選択＆タイピング両対応！</p>
+          </div>
+          <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
+        </div>
+      </div>
+
+      <div class="pinpoint-box">
+        <div class="pinpoint-box__head">
+          <span class="pinpoint-box__title">🎯 弱点テーマ別ピンポイント特訓</span>
+          <span class="pinpoint-box__sub">苦手な出題パターンだけを連続演習</span>
+        </div>
+        <div class="pinpoint-chips" role="group" aria-label="テーマ別ピンポイント特訓">
+          <button type="button" class="pinpoint-chip" data-pinpoint="pos">品詞問題 10問</button>
+          <button type="button" class="pinpoint-chip" data-pinpoint="tense">動詞・時制・態 10問</button>
+          <button type="button" class="pinpoint-chip" data-pinpoint="connectors">接続詞・前置詞・構造 10問</button>
+          <button type="button" class="pinpoint-chip" data-pinpoint="vocab">語彙・語法 10問</button>
+          <button type="button" class="pinpoint-chip" data-pinpoint="p2indirect">Part 2 間接・変化球応答</button>
+          <button type="button" class="pinpoint-chip" data-pinpoint="p7multi">Part 7 複数文書照合</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
 <!-- TEST                                                          -->
 <!-- ============================================================ -->
 <section id="qualification-entry" class="screen" aria-labelledby="qualification-title">
@@ -3881,7 +3933,7 @@
   </div>
   <img class="mascot-page-head__img" src="img/owl-amber.png" alt="" width="284" height="320" decoding="async">
 </div>
-<div class="lp-actions"><button class="btn" id="lp-retry-wrong" type="button">間違えた問題を解き直す</button><button class="qual-secondary" id="lp-new" type="button">同じPartをもう一度練習する</button><button class="qual-secondary lp-home" type="button">ホームへ戻る</button></div><h2>今回の問題を復習</h2><div id="lp-all-review"></div></div></section>
+<div class="lp-actions"><button class="btn" id="lp-retry-wrong" type="button">間違えた問題を解き直す</button><button class="qual-secondary" id="lp-new" type="button">同じPartをもう一度練習する</button><button class="qual-secondary lp-to-select" type="button">別のパートを選ぶ</button><button class="qual-secondary lp-home" type="button">ホームへ戻る</button></div><h2>今回の問題を復習</h2><div id="lp-all-review"></div></div></section>
 
 <section id="sprint-results" class="screen" aria-labelledby="sprint-res-title"><div class="wrap lp-wrap">
 <div class="mascot-page-head">
@@ -3907,6 +3959,7 @@
   <button class="challenge-btn" id="btn-sprint-challenge" type="button" style="margin-top:0">⚔️ 同じ10問で友達と勝負（対戦URLを発行）</button>
   <p class="share-status" id="sprint-challenge-status" role="status"></p>
   <button class="qual-secondary" id="btn-sprint-x" type="button">結果をXでシェア</button>
+  <button class="qual-secondary lp-to-select" type="button">別のパート・特訓を選ぶ</button>
   <button class="qual-secondary lp-home" type="button">ホームへ戻る</button>
 </div>
 <h2 style="margin-top:28px">全10問のスピード＆解説確認</h2>
@@ -3916,7 +3969,7 @@
 <section id="dictation" class="screen" aria-labelledby="dict-title">
   <div class="wrap lp-wrap">
     <div class="test-meta" style="margin-bottom:14px">
-      <button class="test-home lp-home" type="button">← ホーム</button>
+      <button class="test-home lp-to-select" type="button">← パート選択へ</button>
       <span class="count" id="dict-count">1 / 10問</span>
     </div>
     <div class="mascot-page-head">
@@ -3958,6 +4011,7 @@
       <p style="margin-top:8px;font-size:14px;color:var(--ink-secondary)">音の連結や弱形を意識すると、Part 2・3・4の聞き取り精度が一段上がります。</p>
       <div class="lp-actions" style="margin-top:18px">
         <button type="button" class="btn" id="btn-dict-retry">もう1セット練習する 🎧</button>
+        <button type="button" class="qual-secondary lp-to-select">別のパート・特訓を選ぶ</button>
         <button type="button" class="qual-secondary lp-home">ホームへ戻る</button>
       </div>
     </div>
@@ -5519,9 +5573,17 @@ async function shareScoreResult(statusId, buttonId) {
   }
 }
 
+function openPracticeSelect(updateRoute = true) {
+  if (updateRoute) setRoute('#practice');
+  document.title = DEFAULT_PAGE_TITLE;
+  showScreen('practice-select');
+  window.scrollTo(0, 0);
+}
+
 function routeFromHash() {
   const hash = location.hash.replace(/^#/, '');
   if (hash === 'diagnosis') { document.title = DEFAULT_PAGE_TITLE; showScreen('mode-select'); return; }
+  if (hash === 'practice') { openPracticeSelect(false); return; }
   if (hash === 'books') { openBookGuide('home', false); return; }
   if (hash === 'articles') { openArticles(false); return; }
   if (hash.startsWith('article/')) { openArticle(hash.slice(8), false); return; }
@@ -8933,6 +8995,7 @@ function saveAndExitToHome() {
 function confirmAbortToHome() {
   closeExitDialog();
   clearActiveSession();
+  clearContentRoute();
   clearInterval(state.timerId);
   if (typeof clearSprintTimer === 'function') clearSprintTimer();
   stopSpeech();
@@ -9309,7 +9372,10 @@ $('lp-retry-wrong').addEventListener('click',()=>{
   const retry=listeningPracticePart>=6 ? state.questions.filter(q=>passageIds.has(q.passageId)) : [3,4].includes(listeningPracticePart) ? state.questions.filter(q=>audioIds.has(q.audioId)) : wrong;
   if(retry.length)startListeningPractice(listeningPracticePart,retry);
 });
-document.querySelectorAll('.lp-home').forEach(button=>button.addEventListener('click',()=>{stopSpeech();clearInterval(state.timerId);if(typeof clearSprintTimer==='function')clearSprintTimer();listeningPracticeChecked=false;refreshHomeLearning();showScreen('home');document.getElementById('practice-title').scrollIntoView({block:'start'});}));
+document.querySelectorAll('.lp-home').forEach(button=>button.addEventListener('click',()=>{stopSpeech();clearInterval(state.timerId);if(typeof clearSprintTimer==='function')clearSprintTimer();listeningPracticeChecked=false;clearContentRoute();refreshHomeLearning();showScreen('home');window.scrollTo(0,0);}));
+document.querySelectorAll('.lp-to-select').forEach(button=>button.addEventListener('click',()=>{stopSpeech();clearInterval(state.timerId);if(typeof clearSprintTimer==='function')clearSprintTimer();listeningPracticeChecked=false;refreshHomeLearning();openPracticeSelect();}));
+if ($('btn-open-practice-select')) $('btn-open-practice-select').addEventListener('click', () => openPracticeSelect());
+if ($('btn-practice-select-back')) $('btn-practice-select-back').addEventListener('click', () => { clearContentRoute(); showScreen('home'); });
 
 /* ---------- Wiring ---------- */
 
@@ -9998,11 +10064,14 @@ function handleInitialDeepLink() {
   if (mode === 'reading') { openQualificationEntry(startReadingDiagnostic); return true; }
   if (mode === 'listening') { openQualificationEntry(startListeningDiagnostic); return true; }
   if (mode === 'combined') { openQualificationEntry(startCombinedDiagnostic); return true; }
-  if (view === 'vocab' || view === 'paraphrase') {
+  if (view === 'paraphrase') {
+    window.location.href = '/toeic-paraphrase/#pp-drill';
+    return true;
+  }
+  if (view === 'vocab') {
     showScreen('home');
-    const targetId = view === 'paraphrase' ? 'paraphrase-card' : 'vocab-card';
     setTimeout(() => {
-      const el = $(targetId);
+      const el = $('vocab-card');
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 80);
     return true;
@@ -10978,81 +11047,11 @@ if ($('btn-sprint-challenge')) $('btn-sprint-challenge').addEventListener('click
 if ($('btn-r-challenge')) $('btn-r-challenge').addEventListener('click', () => shareFriendChallenge('r'));
 if ($('btn-audio-challenge')) $('btn-audio-challenge').addEventListener('click', () => shareFriendChallenge('audio'));
 
-/* ---------- 14. Paraphrase 50 Instant 4-Choice Drill ---------- */
+/* ---------- 14. Paraphrase Progress Reader (Drill hosted on /toeic-paraphrase/) ---------- */
 
 function getClearedParaphraseIds() {
   const raw = readStored(STORAGE_KEYS.paraphrase, []);
   return Array.isArray(raw) ? raw : [];
-}
-
-function initParaphraseTrainer() {
-  if (!$('paraphrase-card') || typeof LEXSOPHIA_PARAPHRASES === 'undefined' || !Array.isArray(LEXSOPHIA_PARAPHRASES) || !LEXSOPHIA_PARAPHRASES.length) return;
-
-  let order = shuffle(LEXSOPHIA_PARAPHRASES.slice());
-  let cursor = 0;
-  let answered = false;
-
-  const clearedSet = new Set(getClearedParaphraseIds());
-  const firstUncleared = order.findIndex(item => !clearedSet.has(item.id));
-  if (firstUncleared > 0) cursor = firstUncleared;
-
-  function updateStat() {
-    const done = new Set(getClearedParaphraseIds());
-    const cnt = LEXSOPHIA_PARAPHRASES.filter(x => done.has(x.id)).length;
-    if ($('pp-stat-text')) $('pp-stat-text').textContent = `クリア ${cnt} / ${LEXSOPHIA_PARAPHRASES.length}組`;
-  }
-
-  function renderPair() {
-    answered = false;
-    const item = order[cursor % order.length];
-    $('pp-cat').textContent = item.cat;
-    $('pp-src').textContent = item.src;
-    $('pp-fb').hidden = true;
-
-    const others = shuffle(LEXSOPHIA_PARAPHRASES.filter(x => x.id !== item.id && x.dst !== item.dst)).slice(0, 3);
-    const options = shuffle([item, ...others]);
-    const box = $('pp-choices');
-    box.innerHTML = '';
-
-    options.forEach(opt => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'pp-choice';
-      btn.textContent = opt.dst;
-      btn.addEventListener('click', () => {
-        if (answered) return;
-        answered = true;
-        const ok = opt.id === item.id;
-        box.querySelectorAll('.pp-choice').forEach((b, idx) => {
-          b.disabled = true;
-          if (options[idx].id === item.id) b.classList.add('is-correct');
-          else if (b === btn && !ok) b.classList.add('is-wrong');
-        });
-        if (ok) {
-          const nextDone = Array.from(new Set([...getClearedParaphraseIds(), item.id]));
-          writeStored(STORAGE_KEYS.paraphrase, nextDone);
-        }
-        $('pp-fb-text').innerHTML = ok
-          ? `<strong style="color:var(--ink-mint)">✓ 正解！</strong> ${escapeHtml(item.src)} ＝ <strong>${escapeHtml(item.dst)}</strong>（${escapeHtml(item.ja)}）`
-          : `<strong style="color:#b42318">惜しい！</strong> 正解は <strong>${escapeHtml(item.dst)}</strong>（${escapeHtml(item.ja)}）`;
-        $('pp-fb').hidden = false;
-        updateStat();
-        recordStudyActivity();
-        refreshHomeLearning();
-      });
-      box.appendChild(btn);
-    });
-    updateStat();
-  }
-
-  if ($('btn-pp-next')) {
-    $('btn-pp-next').addEventListener('click', () => {
-      cursor = (cursor + 1) % order.length;
-      renderPair();
-    });
-  }
-
-  renderPair();
 }
 
 /* ---------- 15. Listening Cloze Dictation Gym (10Q Studio MP3) ---------- */
@@ -11302,7 +11301,7 @@ function renderAchievementBadges() {
     { id: 'streak_7', owl: 'img/owl-amber.png', name: '7日継続の知恵', cond: '7日連続または累計7日学習', unlocked: streak.streak >= 7 || streak.totalDays >= 7 },
     { id: 'vocab_30', owl: 'img/owl-blue.png', name: '語彙ハンター30', cond: '単語帳30語を習得', unlocked: vocabMastered >= 30 },
     { id: 'vocab_100', owl: 'img/owl-violet.png', name: 'Lexicon制覇', cond: '単語帳100語すべて習得', unlocked: vocabMastered >= 100 },
-    { id: 'pp_20', owl: 'img/owl-pink.png', name: '言い換え名人', cond: 'パラフレーズ20組クリア', unlocked: ppDone >= 20 },
+    { id: 'pp_20', owl: 'img/owl-pink.png', name: '継続チャレンジャー', cond: '診断3回または対戦リンク発行', unlocked: history.length >= 3 || Boolean(bp.challengeShared) || ppDone >= 20 },
     { id: 'sprint_play', owl: 'img/owl-blue.png', name: '20秒スプリンター', cond: 'Part 5タイムアタック完走', unlocked: Boolean(bp.sprintCompleted) },
     { id: 'sprint_sa', owl: 'img/owl-amber.png', name: '電光石火 A/S', cond: 'タイムアタックA・S獲得', unlocked: bp.sprintBestRank === 'A' || bp.sprintBestRank === 'S' },
     { id: 'dict_clear', owl: 'img/owl-blue.png', name: '音の解明者', cond: 'ディクテーション10問完走', unlocked: Boolean(bp.dictationCompleted) },
@@ -11326,7 +11325,6 @@ function renderAchievementBadges() {
 window.addEventListener('popstate', routeFromHash);
 initDailyQuiz();
 initVocabTrainer();
-initParaphraseTrainer();
 initDictationGym();
 initExamCountdown();
 initPwaInstallCard();
