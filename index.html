@@ -2566,6 +2566,173 @@
     .home-seo-lib { padding: 22px 20px; border-radius: 24px; }
     .home-seo-lib__cols { grid-template-columns: 1fr; gap: 16px; }
   }
+
+  /* ---------- 1. Auto-Save Resume Banner ---------- */
+  .resume-banner {
+    margin-top: 14px; padding: 18px 22px;
+    border-radius: var(--radius-card-lg);
+    background: linear-gradient(135deg, #e8f3ff 0%, #f1eaff 100%);
+    box-shadow: var(--shadow-card);
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .resume-banner__left { display: flex; align-items: center; gap: 14px; min-width: 0; flex: 1; }
+  .resume-banner__owl { width: auto; height: 52px; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 6px 12px rgba(36,41,47,0.12)); }
+  .resume-banner__kicker {
+    display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    color: var(--ink-blue); background: var(--surface-canvas); padding: 3px 10px; border-radius: var(--radius-pill);
+  }
+  .resume-banner__title { margin-top: 4px; font-size: 15.5px; font-weight: 700; color: var(--ink-primary); }
+  .resume-banner__sub { margin-top: 2px; font-size: 12.5px; color: var(--ink-secondary); }
+  .resume-banner__actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .resume-banner__btn {
+    padding: 10px 20px; border: 0; border-radius: var(--radius-pill);
+    background: var(--pop-blue); color: #ffffff; font-size: 13.5px; font-weight: 700;
+    box-shadow: var(--shadow-btn); transition: transform 0.15s var(--ease-ui), opacity 0.15s ease;
+  }
+  .resume-banner__btn:hover { transform: translateY(-1px); opacity: 0.94; }
+  .resume-banner__discard {
+    padding: 8px 13px; border: 0; border-radius: var(--radius-pill);
+    background: rgba(255,255,255,0.75); color: var(--ink-secondary); font-size: 12px; font-weight: 700;
+  }
+  .resume-banner__discard:hover { background: #ffffff; color: var(--ink-primary); }
+
+  /* ---------- 2. Audio Replay & Speed Chips ---------- */
+  .rv-audio-bar {
+    margin-top: 14px; padding: 12px 16px; border-radius: 18px;
+    background: var(--tint-blue-bg); box-shadow: var(--shadow-ring-subtle);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  .rv-audio-play {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 18px; border: 0; border-radius: var(--radius-pill);
+    background: var(--pop-blue); color: #ffffff; font-size: 13.5px; font-weight: 700;
+    box-shadow: var(--shadow-btn); transition: transform 0.15s var(--ease-ui), background-color 0.15s ease;
+  }
+  .rv-audio-play:hover { transform: translateY(-1px); }
+  .rv-audio-play.is-playing { background: var(--ink-primary); }
+  .speed-chips {
+    display: inline-flex; align-items: center; gap: 5px; flex-wrap: wrap;
+  }
+  .speed-chips__label { font-size: 11.5px; font-weight: 700; color: var(--ink-secondary); margin-right: 2px; }
+  .speed-chip {
+    padding: 5px 11px; border: 0; border-radius: var(--radius-pill);
+    background: var(--surface-canvas); color: var(--ink-secondary);
+    font-family: var(--font-num); font-size: 12px; font-weight: 700;
+    box-shadow: var(--shadow-ring-subtle); transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .speed-chip.is-active { background: var(--ink-primary); color: #ffffff; }
+  .test-speed-row { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(1, 118, 240, 0.14); display: flex; align-items: center; justify-content: flex-end; }
+
+  /* ---------- 3. Lexicon 100 Speed Flashcard Trainer ---------- */
+  .vocab-card {
+    margin-top: 14px; padding: 22px 24px;
+    border-radius: var(--radius-card-lg);
+    background: var(--surface-canvas);
+    box-shadow: var(--shadow-card);
+  }
+  .vocab-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  }
+  .vocab-kicker {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 11px; border-radius: var(--radius-pill);
+    background: var(--tint-amber-bg); color: var(--ink-amber);
+    font-size: 11.5px; font-weight: 700;
+  }
+  .vocab-stat { font-size: 12.5px; font-weight: 700; color: var(--ink-secondary); }
+  .vocab-bands {
+    margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;
+  }
+  .vocab-band-btn {
+    padding: 5px 12px; border: 0; border-radius: var(--radius-pill);
+    background: var(--surface-subtle); color: var(--ink-secondary);
+    font-size: 12px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+  }
+  .vocab-band-btn.is-active { background: var(--ink-primary); color: #ffffff; }
+  .vocab-stage {
+    margin-top: 14px; padding: 20px 20px 18px; border-radius: 22px;
+    background: var(--surface-subtle); box-shadow: var(--shadow-ring-subtle);
+    cursor: pointer; text-align: center; position: relative; min-height: 138px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: background-color 0.15s ease, transform 0.15s var(--ease-ui);
+  }
+  .vocab-stage:hover { transform: translateY(-1px); }
+  .vocab-stage.is-flipped { background: var(--tint-mint-bg); }
+  .vocab-stage__top {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 8px; font-size: 11.5px; font-weight: 700; color: var(--ink-muted);
+  }
+  .vocab-audio-mini {
+    padding: 4px 10px; border: 0; border-radius: var(--radius-pill);
+    background: var(--surface-canvas); color: var(--ink-blue); font-size: 11.5px; font-weight: 700;
+    box-shadow: var(--shadow-ring-subtle);
+  }
+  .vocab-word {
+    font-family: var(--font-num); font-size: 26px; font-weight: 700; color: var(--ink-primary);
+    letter-spacing: -0.02em; line-height: 1.25;
+  }
+  .vocab-pos { font-size: 12.5px; font-weight: 600; color: var(--ink-muted); margin-left: 6px; }
+  .vocab-phrase { margin-top: 6px; font-size: 14px; font-weight: 600; color: var(--ink-secondary); }
+  .vocab-meaning {
+    margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(36,41,47,0.15);
+    width: 100%; font-size: 16px; font-weight: 700; color: var(--ink-mint);
+  }
+  .vocab-meaning small { display: block; margin-top: 3px; font-size: 12.5px; font-weight: 500; color: var(--ink-secondary); }
+  .vocab-hint { margin-top: 8px; font-size: 11.5px; color: var(--ink-muted); font-weight: 600; }
+  .vocab-actions {
+    margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  }
+  .vocab-act {
+    padding: 11px 14px; border: 0; border-radius: var(--radius-pill);
+    font-size: 13.5px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+    transition: transform 0.15s var(--ease-ui);
+  }
+  .vocab-act:hover { transform: translateY(-1px); }
+  .vocab-act--review { background: var(--tint-amber-bg); color: var(--ink-amber); }
+  .vocab-act--ok { background: var(--tint-mint-bg); color: var(--ink-mint); }
+  .vocab-foot {
+    margin-top: 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    font-size: 12.5px;
+  }
+  .vocab-foot a { font-weight: 700; color: var(--pop-blue); text-decoration: none; }
+  .vocab-foot a:hover { text-decoration: underline; }
+
+  /* ---------- 4. Score Delta Badge & Skill Radar SVG ---------- */
+  .score-delta {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin: 12px auto 0; padding: 5px 14px; border-radius: var(--radius-pill);
+    background: var(--surface-subtle); color: var(--ink-secondary);
+    font-size: 12.5px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+  }
+  .score-delta.is-up { background: var(--tint-mint-bg); color: var(--ink-mint); }
+  .score-delta.is-best { background: var(--tint-amber-bg); color: var(--ink-amber); }
+  .radar-box {
+    margin: 12px auto 16px; max-width: 320px; padding: 14px;
+    border-radius: 24px; background: var(--surface-canvas); box-shadow: var(--shadow-card);
+    text-align: center;
+  }
+  .radar-box svg { display: block; width: 100%; height: auto; }
+  .radar-caption { margin-top: 4px; font-size: 11.5px; font-weight: 600; color: var(--ink-muted); }
+
+  /* ---------- 6. Smart PWA Install Banner ---------- */
+  .pwa-card {
+    margin-top: 14px; padding: 16px 20px; border-radius: 22px;
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  .pwa-card__left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 200px; }
+  .pwa-card__icon { width: 40px; height: 40px; border-radius: 11px; flex-shrink: 0; box-shadow: var(--shadow-ring-subtle); }
+  .pwa-card__title { font-size: 14px; font-weight: 700; color: var(--ink-primary); }
+  .pwa-card__sub { font-size: 12px; color: var(--ink-secondary); margin-top: 2px; line-height: 1.5; }
+  .pwa-card__right { display: flex; align-items: center; gap: 8px; }
+  .pwa-card__btn {
+    padding: 8px 16px; border: 0; border-radius: var(--radius-pill);
+    background: var(--ink-primary); color: #ffffff; font-size: 12.5px; font-weight: 700;
+  }
+  .pwa-card__close {
+    width: 30px; height: 30px; border: 0; border-radius: 50%;
+    background: var(--surface-subtle); color: var(--ink-muted); font-size: 16px; line-height: 1;
+  }
 </style>
 </head>
 <body>
@@ -2856,6 +3023,22 @@
         </div>
       </div>
 
+      <!-- Auto-Saved Active Diagnosis Resume Banner -->
+      <div class="resume-banner" id="resume-banner" hidden>
+        <div class="resume-banner__left">
+          <img class="resume-banner__owl" src="img/owl-blue.png" alt="" width="229" height="320" loading="lazy" decoding="async">
+          <div>
+            <span class="resume-banner__kicker">AUTO-SAVED · 途中保存あり</span>
+            <p class="resume-banner__title" id="resume-banner-title">中断中の診断があります</p>
+            <p class="resume-banner__sub" id="resume-banner-sub">前回の続きからすぐに再開できます</p>
+          </div>
+        </div>
+        <div class="resume-banner__actions">
+          <button type="button" class="resume-banner__btn" id="btn-resume-test">続きから再開する →</button>
+          <button type="button" class="resume-banner__discard" id="btn-discard-resume">破棄</button>
+        </div>
+      </div>
+
       <div class="home-growth-card" id="home-growth-card">
         <div class="home-growth-top">
           <span class="streak-pill" id="home-streak-pill">
@@ -2903,6 +3086,46 @@
         </div>
       </div>
 
+      <!-- Lexicon 100 TOEIC Vocabulary Speed Flashcards -->
+      <div class="vocab-card" id="vocab-card" aria-labelledby="vocab-card-label">
+        <div class="vocab-head">
+          <span class="vocab-kicker" id="vocab-card-label">⚡ Lexicon スピード単語帳 · 頻出100語</span>
+          <span class="vocab-stat" id="vocab-stat-text">習得 0 / 100語</span>
+        </div>
+        <div class="vocab-bands" role="group" aria-label="単語レベルを選択">
+          <button type="button" class="vocab-band-btn is-active" data-vocab-band="all">すべて</button>
+          <button type="button" class="vocab-band-btn" data-vocab-band="500">500点</button>
+          <button type="button" class="vocab-band-btn" data-vocab-band="600">600点</button>
+          <button type="button" class="vocab-band-btn" data-vocab-band="730">730点</button>
+          <button type="button" class="vocab-band-btn" data-vocab-band="860">860点</button>
+          <button type="button" class="vocab-band-btn" data-vocab-band="review" id="vocab-band-review">要復習 ★</button>
+        </div>
+        <div class="vocab-stage" id="vocab-stage" role="button" tabindex="0" aria-label="タップして意味を表示">
+          <div class="vocab-stage__top">
+            <span id="vocab-card-meta">500点帯 · 1 / 100</span>
+            <button type="button" class="vocab-audio-mini" id="btn-vocab-speak">🔊 発音</button>
+          </div>
+          <div>
+            <span class="vocab-word" id="vocab-word">confirm</span>
+            <span class="vocab-pos" id="vocab-pos">（動）</span>
+          </div>
+          <p class="vocab-phrase" id="vocab-phrase">confirm a reservation</p>
+          <div class="vocab-meaning" id="vocab-meaning" hidden>
+            <span id="vocab-meaning-main">確認する・確定する</span>
+            <small id="vocab-phrase-ja">予約を確定する</small>
+          </div>
+          <p class="vocab-hint" id="vocab-flip-hint">タップして日本語訳を確認</p>
+        </div>
+        <div class="vocab-actions">
+          <button type="button" class="vocab-act vocab-act--review" id="btn-vocab-review">要復習に入れる ★</button>
+          <button type="button" class="vocab-act vocab-act--ok" id="btn-vocab-master">覚えた ✓</button>
+        </div>
+        <div class="vocab-foot">
+          <span class="small" style="margin:0">フレーズ単位で覚えるとPart 5・7の速度が上がります</span>
+          <a href="/toeic-vocab/">全100語の一覧・赤シートへ →</a>
+        </div>
+      </div>
+
       <div class="learning-grid">
         <button class="learning-card" id="btn-weak-home" disabled>
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M4.2 7.5l5.2 3M14.6 13.5l5.2 3M19.8 7.5l-5.2 3M9.4 13.5l-5.2 3"/></svg></span>
@@ -2924,6 +3147,21 @@
           <span><span class="k">TOEIC学習記事</span><span class="d">Part 1〜7と学習計画を10本の記事で学ぶ</span></span>
           <span class="arrow" aria-hidden="true">›</span>
         </button>
+      </div>
+
+      <!-- Smart PWA Add-to-Home-Screen Card -->
+      <div class="pwa-card" id="pwa-install-card" hidden>
+        <div class="pwa-card__left">
+          <img class="pwa-card__icon" src="/apple-touch-icon.png" alt="" width="80" height="80" loading="lazy">
+          <div>
+            <p class="pwa-card__title">ホーム画面にLexSophiaを追加</p>
+            <p class="pwa-card__sub" id="pwa-install-sub">アプリアイコンから1タップで毎日の1問・単語帳を起動できます。</p>
+          </div>
+        </div>
+        <div class="pwa-card__right">
+          <button type="button" class="pwa-card__btn" id="btn-pwa-install">追加する</button>
+          <button type="button" class="pwa-card__close" id="btn-pwa-dismiss" aria-label="閉じる">×</button>
+        </div>
       </div>
     </section>
 
@@ -2969,6 +3207,7 @@
           <h3>パート別 無料練習問題</h3>
           <ul class="home-seo-lib__list">
             <li><a href="/toeic-listening/">リスニング無料練習10問（Part 1〜4 音声付）</a></li>
+            <li><a href="/toeic-vocab/">TOEIC頻出英単語・熟語100選（赤シート付）</a></li>
             <li><a href="/toeic-part5/">Part 5 短文穴埋め練習（10問・解説付）</a></li>
             <li><a href="/toeic-part5-20/">Part 5 短文穴埋め練習（20問セット）</a></li>
             <li><a href="/toeic-part6-1/">Part 6 長文穴埋め練習（全7セット）</a></li>
@@ -3073,7 +3312,7 @@
   </div>
   <img class="mascot-page-head__img" id="lp-feedback-owl" src="img/owl-blue.png" alt="" width="229" height="320" decoding="async">
 </div>
-<div id="lp-feedback-body"></div><div class="lp-actions"><button class="btn" id="lp-continue" type="button">次の問題へ →</button><button class="qual-secondary" id="lp-relisten" type="button">同じ音声を聞き直す</button><button class="qual-secondary lp-home" type="button">練習を終了してホームへ</button></div></div></section>
+<div id="lp-feedback-body"></div><div class="rv-audio-bar" id="lp-speed-bar" hidden style="margin-bottom:12px"><span class="speed-chips__label">聞き直し速度:</span><div class="speed-chips" role="group" aria-label="再生速度"><button type="button" class="speed-chip" data-audio-rate="0.85">0.85×</button><button type="button" class="speed-chip is-active" data-audio-rate="1">1.0×</button><button type="button" class="speed-chip" data-audio-rate="1.2">1.2×</button></div></div><div class="lp-actions"><button class="btn" id="lp-continue" type="button">次の問題へ →</button><button class="qual-secondary" id="lp-relisten" type="button">同じ音声を聞き直す</button><button class="qual-secondary lp-home" type="button">練習を終了してホームへ</button></div></div></section>
 <section id="lp-results" class="screen" aria-labelledby="lp-results-title"><div class="wrap lp-wrap">
 <div class="mascot-page-head">
   <div class="mascot-page-head__copy">
@@ -3102,6 +3341,14 @@
         <div class="audio-copy">
           <p class="k" id="audio-title">音声を再生</p>
           <p class="d" id="audio-status">再生後に回答を選択できます</p>
+        </div>
+      </div>
+      <div class="test-speed-row" id="test-speed-row" hidden>
+        <div class="speed-chips" role="group" aria-label="練習用の再生速度">
+          <span class="speed-chips__label">速度:</span>
+          <button type="button" class="speed-chip" data-audio-rate="0.85">0.85×</button>
+          <button type="button" class="speed-chip is-active" data-audio-rate="1">1.0×</button>
+          <button type="button" class="speed-chip" data-audio-rate="1.2">1.2×</button>
         </div>
       </div>
       <button class="audio-skip" id="btn-audio-skip" type="button" hidden>この問題をスキップ <span>開発用</span></button>
@@ -3168,6 +3415,7 @@
           <p class="of">/ 495</p>
         </div>
       </div>
+      <p class="score-delta" id="r-score-delta" hidden></p>
       <ul class="steps" id="r-steps" aria-live="polite">
         <li class="step"><span class="dot"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5.3 4.1 7.4 8.2 3" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">正答率を分析中</span></li>
         <li class="step"><span class="dot"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5.3 4.1 7.4 8.2 3" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">問題難易度を分析中</span></li>
@@ -3204,6 +3452,7 @@
 
     <div class="section reveal">
       <h2>スキル別</h2>
+      <div class="radar-box" id="r-radar-box" hidden></div>
       <div class="skills" id="r-skills"></div>
     </div>
 
@@ -3298,6 +3547,7 @@
           <p class="of" id="audio-total-max">/ 495</p>
         </div>
       </div>
+      <p class="score-delta" id="audio-score-delta" hidden></p>
       <ul class="steps" id="audio-steps" aria-live="polite">
         <li class="step"><span class="dot"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5.3 4.1 7.4 8.2 3" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">正答率を分析中</span></li>
         <li class="step"><span class="dot"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5.3 4.1 7.4 8.2 3" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Part別成績を分析中</span></li>
@@ -3331,6 +3581,7 @@
 
     <div class="section reveal">
       <h2>Part別成績</h2>
+      <div class="radar-box" id="audio-radar-box" hidden></div>
       <div class="part-results" id="audio-part-results"></div>
     </div>
 
@@ -3536,6 +3787,16 @@
       <span class="part-tag" id="rv-part" style="margin-top:0"></span>
     </div>
 
+    <div class="rv-audio-bar" id="rv-audio-bar" hidden>
+      <button type="button" class="rv-audio-play" id="btn-rv-audio">▶ 問題の音声を聞き直す</button>
+      <div class="speed-chips" role="group" aria-label="復習音声の再生速度">
+        <span class="speed-chips__label">速度:</span>
+        <button type="button" class="speed-chip" data-audio-rate="0.85">0.85×</button>
+        <button type="button" class="speed-chip is-active" data-audio-rate="1">1.0×</button>
+        <button type="button" class="speed-chip" data-audio-rate="1.2">1.2×</button>
+      </div>
+    </div>
+
     <div class="passage" id="rv-passage" hidden></div>
     <p class="q-text" id="rv-text"></p>
     <div class="rv-choices" id="rv-choices"></div>
@@ -3551,7 +3812,7 @@
       <button class="btn btn--ghost" id="btn-rv-prev">前の問題</button>
       <button class="btn" id="btn-rv-next">次の問題</button>
     </div>
-    <p class="kbd-hint" aria-hidden="true"><kbd>←</kbd> / <kbd>→</kbd> 前後の問題 · <kbd>T</kbd> 日本語訳・解説</p>
+    <p class="kbd-hint" aria-hidden="true"><kbd>←</kbd> / <kbd>→</kbd> 前後の問題 · <kbd>T</kbd> 日本語訳・解説 · <kbd>R</kbd> 音声</p>
   </div>
 </section>
 
@@ -3658,9 +3919,10 @@
 <div class="exit-dialog" id="exit-dialog" role="dialog" aria-modal="true" aria-labelledby="exit-dialog-title" hidden>
   <div class="exit-dialog__card" id="exit-dialog-card" tabindex="-1">
     <h2 id="exit-dialog-title">診断を中断しますか？</h2>
-    <p>ここまでの回答は保存されません。ホームに戻ってもよろしいですか？</p>
+    <p id="exit-dialog-desc">途中まで回答済みの場合は、一時保存してあとから続きを再開することもできます。</p>
     <div class="exit-dialog__actions">
-      <button class="btn" id="btn-exit-confirm" type="button">ホームに戻る</button>
+      <button class="btn" id="btn-exit-save" type="button" hidden>途中まで保存してホームへ</button>
+      <button class="btn btn--ghost" id="btn-exit-confirm" type="button">破棄してホームへ戻る</button>
       <button class="btn btn--ghost" id="btn-exit-cancel" type="button">診断を続ける</button>
     </div>
   </div>
@@ -4629,6 +4891,9 @@ const STORAGE_KEYS = {
   goal: 'lexsophia.goal.v1',
   streak: 'lexsophia.streak.v1',
   daily: 'lexsophia.daily.v1',
+  session: 'lexsophia.session.v1',
+  vocab: 'lexsophia.vocab.v1',
+  pwaDismissed: 'lexsophia.pwa.dismissed.v1',
   owner: 'lexsophia.owner.v1'
 };
 
@@ -5831,6 +6096,7 @@ function refreshHomeLearning() {
   if ($('home-goal-value')) $('home-goal-value').textContent = goalInfo.value;
   if ($('home-goal-bar-fill')) $('home-goal-bar-fill').style.width = `${goalInfo.fillPct}%`;
   syncGoalChipActiveStates(target);
+  if (typeof refreshResumeBanner === 'function') refreshResumeBanner();
 }
 
 function formatShortChartDate(iso) {
@@ -6275,6 +6541,16 @@ function stopSpeech() {
   }
   if (speechSupported()) window.speechSynthesis.cancel();
   state.speaking = false;
+  const rvBtn = $('btn-rv-audio');
+  if (rvBtn) {
+    rvBtn.classList.remove('is-playing');
+    rvBtn.textContent = '▶ 問題の音声を聞き直す';
+  }
+}
+
+function effectiveAudioRate() {
+  if (state.mode === 'diagnostic' && $('test') && $('test').classList.contains('is-active')) return 1.0;
+  return state.audioRate || 1.0;
 }
 
 function developerSkipEnabled() {
@@ -6431,7 +6707,7 @@ function speakWithBrowser(q, run) {
       utterance.voice = voices[voiceIndex];
     }
     utterance.lang = 'en-US';
-    utterance.rate = segment.role === 'narrator' ? 0.9 : 0.94;
+    utterance.rate = (segment.role === 'narrator' ? 0.9 : 0.94) * effectiveAudioRate();
     utterance.pitch = segment.role === 'speakerB' ? 0.9 : 1.05;
     utterance.onend = () => { if (run === state.speechRun) setTimeout(playNext, 180); };
     utterance.onerror = () => {
@@ -6481,6 +6757,9 @@ function playStoredAudio(q, run, onUnavailable) {
       state.audioGapTimer = setTimeout(playNext, gap);
     };
     player.src = EMBEDDED_AUDIO[clip.src] || clip.src;
+    const rate = effectiveAudioRate();
+    player.defaultPlaybackRate = rate;
+    player.playbackRate = rate;
     const started = player.play();
     if (started && typeof started.catch === 'function') started.catch(fail);
   };
@@ -6571,6 +6850,7 @@ function renderDiagnosticQuestion() {
   $('part-tag').innerHTML = `Part ${q.part} <small>· ${PART_NAMES[q.part]}</small>`;
 
   $('audio-panel').hidden = !isListening;
+  if ($('test-speed-row')) $('test-speed-row').hidden = !isListening || state.mode === 'diagnostic';
   $('btn-audio-skip').hidden = !isListening || !developerSkipEnabled();
   $('btn-audio-skip').innerHTML = isSet
     ? 'この3問をスキップ <span>開発用</span>'
@@ -6669,9 +6949,11 @@ function nextQuestion() {
       const upcoming = state.questions[state.index];
       if (state.assessmentMode === 'combined' && questionSection(current) === 'listening' && questionSection(upcoming) === 'reading') {
         stopSpeech();
+        saveActiveSession('section-transition');
         showScreen('section-transition');
         return;
       }
+      saveActiveSession('test');
       renderQuestion();
       window.scrollTo(0, 0);
     } else {
@@ -6691,9 +6973,11 @@ function nextQuestion() {
     const upcoming = state.questions[state.index];
     if (state.assessmentMode === 'combined' && questionSection(current) === 'listening' && questionSection(upcoming) === 'reading') {
       stopSpeech();
+      saveActiveSession('section-transition');
       showScreen('section-transition');
       return;
     }
+    saveActiveSession('test');
     renderQuestion();
     window.scrollTo(0, 0);
   } else {
@@ -6727,6 +7011,7 @@ function buildResponseLog() {
 function finishTest() {
   clearInterval(state.timerId);
   stopSpeech();
+  clearActiveSession();
   state.responseLog = buildResponseLog();
   const totalSeconds = (Date.now() - state.startedAt) / 1000;
   if (!state.developerSkipped) {
@@ -6845,6 +7130,7 @@ function renderAudioResults(listeningResult, listeningAnalysis, readingResult, r
     : `${totalCorrect}/${state.questions.length}問正解 · 所要時間 ${fmtDuration(totalSeconds)}。回答結果から算出した予測値です。`;
   $('audio-total-label').textContent = combined ? '予想TOEIC® 総合スコア' : '予想TOEIC® Listeningスコア';
   setAudioGauge(totalScore, maxScore);
+  updateScoreDelta('audio-score-delta', totalScore, combined ? 'combined' : 'listening', maxScore);
   $('audio-total-max').textContent = combined ? '/ 990' : '/ 495';
   $('audio-gauge').setAttribute('aria-label', `${combined ? '予想総合' : '予想Listening'}スコア ${totalScore}`);
   $('audio-score-range').textContent = `${scoreLow}–${scoreHigh}`;
@@ -6863,6 +7149,11 @@ function renderAudioResults(listeningResult, listeningAnalysis, readingResult, r
     const accuracy = pct(p.correct, p.total);
     return `<div class="part-result"><p class="k">Part ${p.part} · ${PART_NAMES[p.part]}</p><p class="v">${p.correct}/${p.total} · ${accuracy}%</p></div>`;
   }).join('');
+  renderRadarBox(
+    'audio-radar-box',
+    parts.map(p => ({ label: `Part ${p.part}`, pct: pct(p.correct, p.total) })),
+    combined ? 'Part 1〜7 正答率バランス' : 'Listening Part 1〜4 バランス'
+  );
   updateWeakPartCard('audio', parts);
   goalCoachContexts.audio = {
     score: totalScore,
@@ -7262,6 +7553,7 @@ function renderResults(result, analysis, totalSeconds) {
   $('score-share-status').textContent = '';
 
   setGauge(result.score);
+  updateScoreDelta('r-score-delta', result.score, 'reading', 495);
   $('r-range').textContent = `${result.low}–${result.high}`;
   [5, 6, 7].forEach(n => {
     const p = analysis.parts.find(x => x.part === n);
@@ -7277,11 +7569,15 @@ function renderResults(result, analysis, totalSeconds) {
 
   // Skills (fixed display order)
   const order = ['grammar', 'vocabulary', 'structure', 'reading'];
-  $('r-skills').innerHTML = order
+  const orderedSkills = order
     .map(k => analysis.skills.find(s => s.key === k))
-    .filter(Boolean)
-    .map(skillCard)
-    .join('');
+    .filter(Boolean);
+  $('r-skills').innerHTML = orderedSkills.map(skillCard).join('');
+  renderRadarBox(
+    'r-radar-box',
+    orderedSkills.map(s => ({ label: s.name, pct: pct(s.correct, s.total) })),
+    'Reading 4スキルの正答率バランス'
+  );
 
   // Timing
   const t = analysis.timing;
@@ -7805,9 +8101,11 @@ function renderReviewItem() {
   const q = item.question;
   const chosen = item.response.choice;
 
+  stopSpeech();
   $('rv-count').textContent = `${state.reviewIndex + 1} / ${items.length}問`;
   $('rv-qno').textContent = `Q${item.position}`;
   $('rv-part').innerHTML = `Part ${q.part} <small>· ${PART_NAMES[q.part]}</small>`;
+  if ($('rv-audio-bar')) $('rv-audio-bar').hidden = questionSection(q) !== 'listening';
   $('btn-rv-back').textContent = state.mode === 'weak' ? '← 復習結果' : '← 診断結果';
 
   renderPassageInto($('rv-passage'), q);
@@ -7873,6 +8171,13 @@ let exitReturnFocus = null;
 
 function abortTestToHome() {
   exitReturnFocus = document.activeElement;
+  const canSave = state.mode === 'diagnostic' && state.index > 0;
+  if ($('btn-exit-save')) $('btn-exit-save').hidden = !canSave;
+  if ($('exit-dialog-desc')) {
+    $('exit-dialog-desc').textContent = canSave
+      ? `${state.index}問目まで回答済みです。一時保存してあとで続きから再開するか、破棄してホームへ戻れます。`
+      : 'ここまでの回答を破棄してホームに戻ってもよろしいですか？';
+  }
   $('exit-dialog').hidden = false;
   document.body.style.overflow = 'hidden';
   $('exit-dialog-card').focus();
@@ -7885,8 +8190,19 @@ function closeExitDialog() {
   exitReturnFocus = null;
 }
 
+function saveAndExitToHome() {
+  const scr = $('section-transition').classList.contains('is-active') ? 'section-transition' : 'test';
+  saveActiveSession(scr);
+  closeExitDialog();
+  clearInterval(state.timerId);
+  stopSpeech();
+  refreshHomeLearning();
+  showScreen('home');
+}
+
 function confirmAbortToHome() {
   closeExitDialog();
+  clearActiveSession();
   clearInterval(state.timerId);
   stopSpeech();
   state.questions = [];
@@ -8228,6 +8544,7 @@ function checkListeningPractice() {
     listeningPracticeSize=set.length;
   }
   $('lp-relisten').hidden = q.part > 4;
+  if ($('lp-speed-bar')) $('lp-speed-bar').hidden = q.part > 4;
   const fbOwl = $('lp-feedback-owl');
   if (fbOwl) fbOwl.src = q.part <= 4 ? 'img/owl-blue.png' : 'img/owl-pink.png';
   stopSpeech();
@@ -8332,6 +8649,7 @@ $('btn-mode-combined').addEventListener('click', () => openQualificationEntry(st
 $('btn-audio').addEventListener('click', speakCurrentAudio);
 $('btn-audio-skip').addEventListener('click', skipCurrentQuestionForDevelopment);
 $('btn-start-reading-section').addEventListener('click', () => {
+  saveActiveSession('test');
   showScreen('test');
   renderQuestion();
 });
@@ -8339,6 +8657,7 @@ $('btn-test-home').addEventListener('click', abortTestToHome);
 $('btn-section-home').addEventListener('click', abortTestToHome);
 $('btn-exit-cancel').addEventListener('click', closeExitDialog);
 $('btn-exit-confirm').addEventListener('click', confirmAbortToHome);
+if ($('btn-exit-save')) $('btn-exit-save').addEventListener('click', saveAndExitToHome);
 $('exit-dialog').addEventListener('click', e => {
   if (e.target === $('exit-dialog')) closeExitDialog();
 });
@@ -8416,6 +8735,12 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') { e.preventDefault(); moveReview(-1); }
   else if (e.key === 'ArrowRight') { e.preventDefault(); moveReview(1); }
   else if (e.key === 't' || e.key === 'T') { e.preventDefault(); toggleTranslation(); }
+  else if (e.key === 'r' || e.key === 'R') {
+    if ($('rv-audio-bar') && !$('rv-audio-bar').hidden) {
+      e.preventDefault();
+      playReviewAudio();
+    }
+  }
 });
 
 $('btn-m-retake').addEventListener('click', () => $('btn-retake').click());
@@ -8507,10 +8832,496 @@ if ('serviceWorker' in navigator && /^https?:/.test(location.protocol)) {
   });
 }
 
+/* ---------- 1. Active Diagnostic Session Auto-Save & Resume ---------- */
+
+const SESSION_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+
+function saveActiveSession(screenId = 'test') {
+  if (state.mode !== 'diagnostic' || !state.questions || !state.questions.length || state.index <= 0) return;
+  const payload = {
+    v: 1,
+    savedAt: Date.now(),
+    assessmentMode: state.assessmentMode,
+    isQuick: Boolean(state.isQuick),
+    screenId,
+    questionIds: state.questions.map(q => q.id),
+    responses: state.responses,
+    index: state.index,
+    elapsedSeconds: Math.max(0, Math.round((Date.now() - state.startedAt) / 1000)),
+    playedAudioIds: Array.from(state.playedAudioItems || []),
+    playedPassageIds: Array.from(state.playedListeningPassages || []),
+    qualificationProfile: diagnosticQualificationProfile || null
+  };
+  writeStored(STORAGE_KEYS.session, payload);
+}
+
+function clearActiveSession() {
+  try { localStorage.removeItem(STORAGE_KEYS.session); } catch (e) {}
+}
+
+function getValidSavedSession() {
+  const s = readStored(STORAGE_KEYS.session, null);
+  if (!s || s.v !== 1 || !Array.isArray(s.questionIds) || !Array.isArray(s.responses)) return null;
+  if (!Number.isFinite(s.savedAt) || (Date.now() - s.savedAt) > SESSION_MAX_AGE_MS) {
+    clearActiveSession();
+    return null;
+  }
+  if (!Number.isInteger(s.index) || s.index <= 0 || s.index >= s.questionIds.length) {
+    clearActiveSession();
+    return null;
+  }
+  const byId = new Map(ALL_QUESTION_BANK.map(q => [q.id, q]));
+  const questions = s.questionIds.map(id => byId.get(id)).filter(Boolean);
+  if (questions.length !== s.questionIds.length) {
+    clearActiveSession();
+    return null;
+  }
+  return { ...s, questions };
+}
+
+function refreshResumeBanner() {
+  const banner = $('resume-banner');
+  if (!banner) return;
+  const saved = getValidSavedSession();
+  if (!saved) {
+    banner.hidden = true;
+    return;
+  }
+  const label = assessmentModeLabel(saved.assessmentMode, saved.isQuick);
+  $('resume-banner-title').textContent = `中断中の「${label}診断」があります（${saved.index} / ${saved.questions.length}問 回答済み）`;
+  $('resume-banner-sub').textContent = `経過 ${fmtDuration(saved.elapsedSeconds || 0)} · 回答データを保持しています`;
+  banner.hidden = false;
+}
+
+function resumeSavedSession() {
+  const saved = getValidSavedSession();
+  if (!saved) {
+    refreshResumeBanner();
+    return;
+  }
+  stopSpeech();
+  state.questions = saved.questions;
+  state.mode = 'diagnostic';
+  state.assessmentMode = saved.assessmentMode || 'combined';
+  state.isQuick = Boolean(saved.isQuick);
+  state.responses = saved.responses.slice(0, saved.questions.length);
+  state.index = saved.index;
+  state.selected = null;
+  state.developerSkipped = false;
+  state.playedAudioItems = new Set(saved.playedAudioIds || []);
+  state.playedListeningPassages = new Set(saved.playedPassageIds || []);
+  diagnosticQualificationProfile = saved.qualificationProfile || null;
+  state.startedAt = Date.now() - ((saved.elapsedSeconds || 0) * 1000);
+  $('progress').setAttribute('aria-valuemax', state.questions.length);
+  clearInterval(state.timerId);
+  state.timerId = setInterval(updateTimer, 1000);
+  updateTimer();
+  if (saved.screenId === 'section-transition') {
+    showScreen('section-transition');
+  } else {
+    showScreen('test');
+    renderQuestion();
+  }
+}
+
+if ($('btn-resume-test')) $('btn-resume-test').addEventListener('click', resumeSavedSession);
+if ($('btn-discard-resume')) {
+  $('btn-discard-resume').addEventListener('click', () => {
+    clearActiveSession();
+    refreshResumeBanner();
+  });
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden' && state.mode === 'diagnostic' && state.index > 0) {
+    if ($('test').classList.contains('is-active')) saveActiveSession('test');
+    else if ($('section-transition').classList.contains('is-active')) saveActiveSession('section-transition');
+  }
+});
+
+/* ---------- 2. Review Audio Replay & Speed Control (0.85x / 1.0x / 1.2x) ---------- */
+
+state.audioRate = 1.0;
+
+function setAudioPlaybackRate(rate) {
+  const r = Number(rate);
+  if (![0.85, 1, 1.2].includes(r)) return;
+  state.audioRate = r;
+  document.querySelectorAll('.speed-chip[data-audio-rate]').forEach(btn => {
+    const active = Number(btn.dataset.audioRate) === r;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  if (state.activeAudio && !($('test') && $('test').classList.contains('is-active') && state.mode === 'diagnostic')) {
+    state.activeAudio.playbackRate = r;
+  }
+}
+
+document.querySelectorAll('.speed-chip[data-audio-rate]').forEach(btn => {
+  btn.addEventListener('click', () => setAudioPlaybackRate(btn.dataset.audioRate));
+});
+
+function playReviewAudio() {
+  const item = state.reviewItems && state.reviewItems[state.reviewIndex];
+  if (!item || questionSection(item.question) !== 'listening') return;
+  if (state.speaking) {
+    stopSpeech();
+    return;
+  }
+  const q = item.question;
+  stopSpeech();
+  state.speaking = true;
+  const run = state.speechRun;
+  const btn = $('btn-rv-audio');
+  if (btn) {
+    btn.classList.add('is-playing');
+    btn.textContent = '■ 停止する（再生中…）';
+  }
+
+  const hq = HQ_LISTENING_AUDIO[q.id];
+  const clips = hq ? [...(hq.passage || []), ...(hq.question || [])] : [];
+
+  const finishReviewPlay = () => {
+    if (run !== state.speechRun) return;
+    state.speaking = false;
+    state.activeAudio = null;
+    if (btn) {
+      btn.classList.remove('is-playing');
+      btn.textContent = '▶ 問題の音声を聞き直す';
+    }
+  };
+
+  const fallbackReviewSpeech = () => {
+    if (!speechSupported()) { finishReviewPlay(); return; }
+    const audioObj = LISTENING_AUDIO[q.audioId];
+    const segs = audioObj ? audioObj.segments.map(s => s.text) : [];
+    if ([3, 4].includes(q.part)) segs.push(`${q.text} ${q.choices.map((c, i) => `${LETTERS[i]}. ${c}`).join(' ')}`);
+    let idx = 0;
+    const speakNext = () => {
+      if (run !== state.speechRun) return;
+      if (idx >= segs.length) { finishReviewPlay(); return; }
+      const u = new SpeechSynthesisUtterance(segs[idx++]);
+      u.lang = 'en-US';
+      u.rate = 0.92 * (state.audioRate || 1.0);
+      u.onend = () => { if (run === state.speechRun) setTimeout(speakNext, 220); };
+      u.onerror = finishReviewPlay;
+      window.speechSynthesis.speak(u);
+    };
+    speakNext();
+  };
+
+  if (!clips.length) {
+    fallbackReviewSpeech();
+    return;
+  }
+
+  let clipIdx = 0;
+  const player = new Audio();
+  state.activeAudio = player;
+  const playNextClip = () => {
+    if (run !== state.speechRun) return;
+    if (clipIdx >= clips.length) { finishReviewPlay(); return; }
+    const src = clips[clipIdx++];
+    player.src = EMBEDDED_AUDIO[src] || src;
+    player.defaultPlaybackRate = state.audioRate || 1.0;
+    player.playbackRate = state.audioRate || 1.0;
+    player.onended = () => {
+      if (run !== state.speechRun) return;
+      state.audioGapTimer = setTimeout(playNextClip, 420);
+    };
+    player.onerror = fallbackReviewSpeech;
+    const p = player.play();
+    if (p && typeof p.catch === 'function') p.catch(fallbackReviewSpeech);
+  };
+  playNextClip();
+}
+
+if ($('btn-rv-audio')) $('btn-rv-audio').addEventListener('click', playReviewAudio);
+
+/* ---------- 3. Previous Score Delta Badge & SVG Skill Radar ---------- */
+
+function updateScoreDelta(elId, currentScore, modeKey, maxScore) {
+  const el = $(elId);
+  if (!el) return;
+  const all = getHistory();
+  const past = (state.developerSkipped ? all : all.slice(1))
+    .filter(item => item && item.mode === modeKey && (item.maxScore || 495) === maxScore && Number.isFinite(Number(item.score)));
+  if (!past.length) {
+    el.hidden = true;
+    return;
+  }
+  const prevScore = Number(past[0].score);
+  const prevBest = Math.max(...past.map(x => Number(x.score)));
+  const diff = currentScore - prevScore;
+  el.classList.remove('is-up', 'is-best');
+  if (currentScore > prevBest) {
+    el.classList.add('is-best');
+    el.textContent = `🏆 自己ベスト更新！（前回比 ${diff >= 0 ? '+' + diff : diff}点）`;
+  } else if (diff > 0) {
+    el.classList.add('is-up');
+    el.textContent = `↑ 前回より +${diff}点アップ（前回 ${prevScore}点）`;
+  } else if (diff === 0) {
+    el.textContent = `→ 前回と同スコア（${prevScore}点）`;
+  } else {
+    el.textContent = `前回 ${prevScore}点（今回 ${diff}点）· 弱点復習で伸ばそう`;
+  }
+  el.hidden = false;
+}
+
+function renderRadarBox(boxId, axes, caption) {
+  const box = $(boxId);
+  if (!box) return;
+  const valid = (axes || []).filter(a => a && Number.isFinite(a.pct));
+  if (valid.length < 3) {
+    box.hidden = true;
+    return;
+  }
+  const W = 290, H = 250, cx = 145, cy = 126, R = 76;
+  const N = valid.length;
+  const angleAt = i => (-Math.PI / 2) + (i * 2 * Math.PI / N);
+  const ptAt = (i, ratio) => {
+    const a = angleAt(i);
+    return [cx + R * ratio * Math.cos(a), cy + R * ratio * Math.sin(a)];
+  };
+
+  const rings = [0.25, 0.5, 0.75, 1.0].map(r => {
+    const pts = valid.map((_, i) => ptAt(i, r).map(v => v.toFixed(1)).join(',')).join(' ');
+    return `<polygon points="${pts}" fill="none" stroke="#e6ebf0" stroke-width="1"/>`;
+  }).join('');
+
+  const spokes = valid.map((_, i) => {
+    const [x, y] = ptAt(i, 1.0);
+    return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#e6ebf0" stroke-width="1"/>`;
+  }).join('');
+
+  const dataPts = valid.map((item, i) => ptAt(i, clamp(item.pct / 100, 0.08, 1.0)));
+  const polyStr = dataPts.map(p => p.map(v => v.toFixed(1)).join(',')).join(' ');
+  const dots = dataPts.map(([x, y]) =>
+    `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="#0176f0" stroke="#ffffff" stroke-width="1.8"/>`
+  ).join('');
+
+  const labels = valid.map((item, i) => {
+    const [lx, ly] = ptAt(i, 1.27);
+    const cos = Math.cos(angleAt(i));
+    const anchor = cos > 0.25 ? 'start' : cos < -0.25 ? 'end' : 'middle';
+    return `<text x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}" text-anchor="${anchor}" fill="#24292f" font-size="11" font-weight="700">${escapeHtml(item.label)} ${item.pct}%</text>`;
+  }).join('');
+
+  box.innerHTML =
+    `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${escapeHtml(caption)}">` +
+    rings + spokes +
+    `<polygon points="${polyStr}" fill="rgba(1, 118, 240, 0.18)" stroke="#0176f0" stroke-width="2.4" stroke-linejoin="round"/>` +
+    dots + labels +
+    `</svg>` +
+    `<p class="radar-caption">${escapeHtml(caption)}</p>`;
+  box.hidden = false;
+}
+
+/* ---------- 4. Lexicon 100 TOEIC Vocabulary Speed Flashcards ---------- */
+
+function initVocabTrainer() {
+  if (!$('vocab-card') || typeof LEXICON_VOCAB === 'undefined' || !Array.isArray(LEXICON_VOCAB) || !LEXICON_VOCAB.length) return;
+
+  let currentBand = 'all';
+  let cursor = 0;
+  let flipped = false;
+
+  function readVocabMap() {
+    const raw = readStored(STORAGE_KEYS.vocab, {});
+    return (raw && typeof raw === 'object' && !Array.isArray(raw)) ? raw : {};
+  }
+
+  function filteredPool() {
+    const map = readVocabMap();
+    if (currentBand === 'review') {
+      const rev = LEXICON_VOCAB.filter(v => map[v.id] === 'review');
+      return rev.length ? rev : LEXICON_VOCAB;
+    }
+    if (currentBand === 'all') return LEXICON_VOCAB;
+    return LEXICON_VOCAB.filter(v => String(v.band) === String(currentBand));
+  }
+
+  function updateStats() {
+    const map = readVocabMap();
+    const mastered = LEXICON_VOCAB.filter(v => map[v.id] === 'mastered').length;
+    const reviewCnt = LEXICON_VOCAB.filter(v => map[v.id] === 'review').length;
+    $('vocab-stat-text').textContent = `習得 ${mastered} / ${LEXICON_VOCAB.length}語` + (reviewCnt ? ` · 要復習 ${reviewCnt}` : '');
+    if ($('vocab-band-review')) {
+      $('vocab-band-review').textContent = reviewCnt ? `要復習 ★ (${reviewCnt})` : '要復習 ★';
+    }
+  }
+
+  function setFlipped(next) {
+    flipped = next;
+    $('vocab-stage').classList.toggle('is-flipped', flipped);
+    $('vocab-meaning').hidden = !flipped;
+    $('vocab-flip-hint').textContent = flipped ? 'もう一度タップで英語に戻す' : 'タップして日本語訳を確認';
+  }
+
+  function renderCard() {
+    const pool = filteredPool();
+    if (!pool.length) return;
+    cursor = ((cursor % pool.length) + pool.length) % pool.length;
+    const item = pool[cursor];
+    const map = readVocabMap();
+    const statusTag = map[item.id] === 'mastered' ? ' · 習得済 ✓' : map[item.id] === 'review' ? ' · 要復習 ★' : '';
+    $('vocab-card-meta').textContent = `${item.band}点帯 · ${cursor + 1} / ${pool.length}${statusTag}`;
+    $('vocab-word').textContent = item.word;
+    $('vocab-pos').textContent = `（${item.pos}）`;
+    $('vocab-phrase').textContent = item.phrase;
+    $('vocab-meaning-main').textContent = item.meaning;
+    $('vocab-phrase-ja').textContent = item.phraseJa;
+    setFlipped(false);
+    updateStats();
+  }
+
+  function markCurrent(status) {
+    const pool = filteredPool();
+    if (!pool.length) return;
+    const item = pool[cursor % pool.length];
+    const map = readVocabMap();
+    map[item.id] = status;
+    writeStored(STORAGE_KEYS.vocab, map);
+    recordStudyActivity();
+    refreshHomeLearning();
+    cursor = (cursor + 1) % filteredPool().length;
+    renderCard();
+  }
+
+  $('vocab-stage').addEventListener('click', () => setFlipped(!flipped));
+  $('vocab-stage').addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      setFlipped(!flipped);
+    }
+  });
+
+  $('btn-vocab-speak').addEventListener('click', e => {
+    e.stopPropagation();
+    const pool = filteredPool();
+    if (!pool.length || !speechSupported()) return;
+    const item = pool[cursor % pool.length];
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(`${item.word}. ${item.phrase}`);
+    u.lang = 'en-US';
+    u.rate = 0.94;
+    window.speechSynthesis.speak(u);
+  });
+
+  $('btn-vocab-review').addEventListener('click', () => markCurrent('review'));
+  $('btn-vocab-master').addEventListener('click', () => markCurrent('mastered'));
+
+  document.querySelectorAll('.vocab-band-btn[data-vocab-band]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentBand = btn.dataset.vocabBand;
+      cursor = 0;
+      document.querySelectorAll('.vocab-band-btn[data-vocab-band]').forEach(b => b.classList.toggle('is-active', b === btn));
+      renderCard();
+    });
+  });
+
+  // Start on first unmastered word so returning learners continue seamlessly
+  const initialMap = readVocabMap();
+  const firstUnmastered = LEXICON_VOCAB.findIndex(v => initialMap[v.id] !== 'mastered');
+  cursor = firstUnmastered >= 0 ? firstUnmastered : 0;
+  renderCard();
+}
+
+/* ---------- 5. Deep-Link Launch (?mode=quick, ?practice=5, ?view=vocab) ---------- */
+
+function handleInitialDeepLink() {
+  let params;
+  try { params = new URLSearchParams(window.location.search); } catch (e) { return false; }
+  const mode = params.get('mode');
+  const prac = params.get('practice');
+  const view = params.get('view');
+  if (!mode && !prac && !view) return false;
+
+  // Clean URL query params while preserving canonical URL
+  try {
+    const cleanParams = new URLSearchParams(window.location.search);
+    ['mode', 'practice', 'view'].forEach(k => cleanParams.delete(k));
+    const qs = cleanParams.toString();
+    history.replaceState(null, '', window.location.pathname + (qs ? `?${qs}` : '') + window.location.hash);
+  } catch (e) {}
+
+  if (prac && /^[1-7]$/.test(prac)) {
+    startListeningPractice(Number(prac));
+    return true;
+  }
+  if (mode === 'quick') { openQualificationEntry(startQuickCombinedDiagnostic); return true; }
+  if (mode === 'reading') { openQualificationEntry(startReadingDiagnostic); return true; }
+  if (mode === 'listening') { openQualificationEntry(startListeningDiagnostic); return true; }
+  if (mode === 'combined') { openQualificationEntry(startCombinedDiagnostic); return true; }
+  if (view === 'vocab') {
+    showScreen('home');
+    setTimeout(() => {
+      const el = $('vocab-card');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 80);
+    return true;
+  }
+  return false;
+}
+
+/* ---------- 6. Smart PWA Add-to-Home-Screen Card ---------- */
+
+function initPwaInstallCard() {
+  const card = $('pwa-install-card');
+  const installBtn = $('btn-pwa-install');
+  const dismissBtn = $('btn-pwa-dismiss');
+  const subEl = $('pwa-install-sub');
+  if (!card || !installBtn || !dismissBtn) return;
+
+  const isStandalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true;
+  if (isStandalone || readStored(STORAGE_KEYS.pwaDismissed, false)) return;
+
+  let deferredPrompt = null;
+  const isIosSafari = /iphone|ipad|ipod/i.test(navigator.userAgent) && /safari/i.test(navigator.userAgent) && !/crios|fxios|edgios/i.test(navigator.userAgent);
+
+  if (isIosSafari) {
+    installBtn.textContent = 'やり方を見る';
+    card.hidden = false;
+  }
+
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    if (readStored(STORAGE_KEYS.pwaDismissed, false)) return;
+    deferredPrompt = e;
+    installBtn.textContent = '追加する';
+    card.hidden = false;
+  });
+
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null;
+    card.hidden = true;
+  });
+
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      try { await deferredPrompt.userChoice; } catch (e) {}
+      deferredPrompt = null;
+      card.hidden = true;
+    } else if (isIosSafari && subEl) {
+      subEl.innerHTML = 'Safari下部の <strong>共有ボタン［↑］</strong> → <strong>「ホーム画面に追加」</strong> をタップするとアプリとして追加されます。';
+      installBtn.hidden = true;
+    }
+  });
+
+  dismissBtn.addEventListener('click', () => {
+    writeStored(STORAGE_KEYS.pwaDismissed, true);
+    card.hidden = true;
+  });
+}
+
 window.addEventListener('popstate', routeFromHash);
 initDailyQuiz();
+initVocabTrainer();
+initPwaInstallCard();
 refreshHomeLearning();
-routeFromHash();
+if (!handleInitialDeepLink()) {
+  routeFromHash();
+}
 initCloud();
 </script>
 

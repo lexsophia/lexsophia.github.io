@@ -897,3 +897,32 @@ footer a:hover {
   .section { padding-top: 28px; margin-top: 28px; }
   footer { margin: 16px 16px 32px; padding: 24px 20px; border-radius: 26px; }
 }
+
+/* ---------- Vocabulary Red-Sheet & Filter Page ---------- */
+.vocab-toolbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  margin: 18px 0; padding: 16px 20px; border-radius: 20px;
+  background: var(--surface-canvas); box-shadow: var(--shadow-card);
+}
+.vocab-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.vocab-redsheet-btn {
+  padding: 8px 16px; border: 2px solid var(--pop-pink); border-radius: var(--radius-pill);
+  background: var(--tint-pink-bg); color: #9c1c6b; font: inherit; font-size: 13px; font-weight: 700;
+  cursor: pointer; transition: transform 0.15s var(--ease-ui), background-color 0.15s ease;
+}
+.vocab-redsheet-btn[aria-pressed="true"] {
+  background: #d92b8a; border-color: #d92b8a; color: #ffffff;
+}
+.vocab-speak-btn {
+  padding: 4px 10px; border: 0; border-radius: var(--radius-pill);
+  background: var(--tint-blue-bg); color: var(--ink-blue);
+  font: inherit; font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.vocab-speak-btn:hover { background: var(--pop-blue); color: #ffffff; }
+body.is-redsheet .vocab-hideable {
+  background: #ffe0f0; color: transparent; border-radius: 6px; padding: 2px 6px;
+  user-select: none; cursor: pointer; transition: color 0.15s ease, background-color 0.15s ease;
+}
+body.is-redsheet .vocab-hideable.is-peek {
+  color: var(--ink-primary); background: var(--tint-amber-bg);
+}

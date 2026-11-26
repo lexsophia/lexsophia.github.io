@@ -2918,3 +2918,907 @@ const TOEIC_ARTICLES = [
    ===================================================================== */
 
 /** Map a Reading score (5-495) onto a band key. */
+
+/* LexSophia Curated 100 TOEIC Vocabulary */
+const LEXICON_VOCAB = [
+  {
+    "id": "v001",
+    "band": 500,
+    "word": "confirm",
+    "pos": "動",
+    "meaning": "確認する・確定する",
+    "phrase": "confirm a reservation",
+    "phraseJa": "予約を確定する"
+  },
+  {
+    "id": "v002",
+    "band": 500,
+    "word": "submit",
+    "pos": "動",
+    "meaning": "提出する",
+    "phrase": "submit an application form",
+    "phraseJa": "申込書を提出する"
+  },
+  {
+    "id": "v003",
+    "band": 500,
+    "word": "schedule",
+    "pos": "名/動",
+    "meaning": "予定・予定を組む",
+    "phrase": "ahead of schedule",
+    "phraseJa": "予定より早く"
+  },
+  {
+    "id": "v004",
+    "band": 500,
+    "word": "available",
+    "pos": "形",
+    "meaning": "利用できる・空いている",
+    "phrase": "tickets are still available",
+    "phraseJa": "チケットはまだ入手できる"
+  },
+  {
+    "id": "v005",
+    "band": 500,
+    "word": "attend",
+    "pos": "動",
+    "meaning": "出席する・参加する",
+    "phrase": "attend a training session",
+    "phraseJa": "研修に参加する"
+  },
+  {
+    "id": "v006",
+    "band": 500,
+    "word": "purchase",
+    "pos": "動/名",
+    "meaning": "購入する・購入品",
+    "phrase": "proof of purchase",
+    "phraseJa": "購入証明書（レシート）"
+  },
+  {
+    "id": "v007",
+    "band": 500,
+    "word": "deliver",
+    "pos": "動",
+    "meaning": "配達する・（講演を）行う",
+    "phrase": "deliver a keynote speech",
+    "phraseJa": "基調講演を行う"
+  },
+  {
+    "id": "v008",
+    "band": 500,
+    "word": "equipment",
+    "pos": "名",
+    "meaning": "機器・設備（不可算）",
+    "phrase": "install new office equipment",
+    "phraseJa": "新しい事務機器を設置する"
+  },
+  {
+    "id": "v009",
+    "band": 500,
+    "word": "department",
+    "pos": "名",
+    "meaning": "部門・部署",
+    "phrase": "the accounting department",
+    "phraseJa": "経理部"
+  },
+  {
+    "id": "v010",
+    "band": 500,
+    "word": "within",
+    "pos": "前",
+    "meaning": "〜以内に",
+    "phrase": "within five business days",
+    "phraseJa": "5営業日以内に"
+  },
+  {
+    "id": "v011",
+    "band": 500,
+    "word": "provide",
+    "pos": "動",
+    "meaning": "提供する・支給する",
+    "phrase": "provide protective gear",
+    "phraseJa": "保護具を支給する"
+  },
+  {
+    "id": "v012",
+    "band": 500,
+    "word": "increase",
+    "pos": "動/名",
+    "meaning": "増加する・引き上げ",
+    "phrase": "a sharp increase in sales",
+    "phraseJa": "売上の急増"
+  },
+  {
+    "id": "v013",
+    "band": 500,
+    "word": "require",
+    "pos": "動",
+    "meaning": "必要とする・義務づける",
+    "phrase": "require prior approval",
+    "phraseJa": "事前承認を必要とする"
+  },
+  {
+    "id": "v014",
+    "band": 500,
+    "word": "offer",
+    "pos": "動/名",
+    "meaning": "申し出る・特別割引",
+    "phrase": "a special promotional offer",
+    "phraseJa": "特別キャンペーン価格"
+  },
+  {
+    "id": "v015",
+    "band": 500,
+    "word": "repair",
+    "pos": "動/名",
+    "meaning": "修理する・修繕",
+    "phrase": "be under repair",
+    "phraseJa": "修理中である"
+  },
+  {
+    "id": "v016",
+    "band": 500,
+    "word": "customer",
+    "pos": "名",
+    "meaning": "顧客・買い物客",
+    "phrase": "customer satisfaction survey",
+    "phraseJa": "顧客満足度調査"
+  },
+  {
+    "id": "v017",
+    "band": 500,
+    "word": "accept",
+    "pos": "動",
+    "meaning": "受け入れる・承認する",
+    "phrase": "accept credit card payments",
+    "phraseJa": "カード払いを受け付ける"
+  },
+  {
+    "id": "v018",
+    "band": 500,
+    "word": "arrive",
+    "pos": "動",
+    "meaning": "到着する・届く",
+    "phrase": "arrive at the venue early",
+    "phraseJa": "会場に早く到着する"
+  },
+  {
+    "id": "v019",
+    "band": 500,
+    "word": "charge",
+    "pos": "名/動",
+    "meaning": "料金・請求する・責任",
+    "phrase": "free of charge",
+    "phraseJa": "無料で"
+  },
+  {
+    "id": "v020",
+    "band": 500,
+    "word": "contact",
+    "pos": "動/名",
+    "meaning": "連絡する・連絡先",
+    "phrase": "contact technical support",
+    "phraseJa": "技術サポートに連絡する"
+  },
+  {
+    "id": "v021",
+    "band": 500,
+    "word": "expand",
+    "pos": "動",
+    "meaning": "拡大する・進出する",
+    "phrase": "expand into overseas markets",
+    "phraseJa": "海外市場へ進出する"
+  },
+  {
+    "id": "v022",
+    "band": 500,
+    "word": "include",
+    "pos": "動",
+    "meaning": "含む・同封する",
+    "phrase": "tax is included in the price",
+    "phraseJa": "価格に税金が含まれている"
+  },
+  {
+    "id": "v023",
+    "band": 500,
+    "word": "prepare",
+    "pos": "動",
+    "meaning": "準備する・作成する",
+    "phrase": "prepare a cost estimate",
+    "phraseJa": "見積書を作成する"
+  },
+  {
+    "id": "v024",
+    "band": 500,
+    "word": "current",
+    "pos": "形",
+    "meaning": "現在の・現行の",
+    "phrase": "update your current address",
+    "phraseJa": "現住所を更新する"
+  },
+  {
+    "id": "v025",
+    "band": 500,
+    "word": "notice",
+    "pos": "名/動",
+    "meaning": "告知・通知・気づく",
+    "phrase": "until further notice",
+    "phraseJa": "追って通知があるまで"
+  },
+  {
+    "id": "v026",
+    "band": 600,
+    "word": "postpone",
+    "pos": "動",
+    "meaning": "延期する",
+    "phrase": "postpone the meeting until Friday",
+    "phraseJa": "会議を金曜まで延期する"
+  },
+  {
+    "id": "v027",
+    "band": 600,
+    "word": "invoice",
+    "pos": "名",
+    "meaning": "請求書",
+    "phrase": "issue an itemized invoice",
+    "phraseJa": "明細付きの請求書を発行する"
+  },
+  {
+    "id": "v028",
+    "band": 600,
+    "word": "complimentary",
+    "pos": "形",
+    "meaning": "無料の・優待の",
+    "phrase": "complimentary light refreshments",
+    "phraseJa": "無料の軽食・飲み物"
+  },
+  {
+    "id": "v029",
+    "band": 600,
+    "word": "warranty",
+    "pos": "名",
+    "meaning": "保証・保証書",
+    "phrase": "covered under a two-year warranty",
+    "phraseJa": "2年間保証の対象である"
+  },
+  {
+    "id": "v030",
+    "band": 600,
+    "word": "applicant",
+    "pos": "名",
+    "meaning": "応募者・申請者",
+    "phrase": "qualified job applicants",
+    "phraseJa": "適格な求人応募者"
+  },
+  {
+    "id": "v031",
+    "band": 600,
+    "word": "prior",
+    "pos": "形",
+    "meaning": "前の・事前の",
+    "phrase": "prior to departure",
+    "phraseJa": "出発前に"
+  },
+  {
+    "id": "v032",
+    "band": 600,
+    "word": "replace",
+    "pos": "動",
+    "meaning": "交換する・後任になる",
+    "phrase": "replace worn-out parts",
+    "phraseJa": "摩耗した部品を交換する"
+  },
+  {
+    "id": "v033",
+    "band": 600,
+    "word": "approximately",
+    "pos": "副",
+    "meaning": "おおよそ・約",
+    "phrase": "take approximately twenty minutes",
+    "phraseJa": "約20分かかる"
+  },
+  {
+    "id": "v034",
+    "band": 600,
+    "word": "inspect",
+    "pos": "動",
+    "meaning": "点検する・検査する",
+    "phrase": "inspect the facility regularly",
+    "phraseJa": "施設を定期点検する"
+  },
+  {
+    "id": "v035",
+    "band": 600,
+    "word": "inquiry",
+    "pos": "名",
+    "meaning": "問い合わせ・調査",
+    "phrase": "respond to customer inquiries",
+    "phraseJa": "顧客の問い合わせに回答する"
+  },
+  {
+    "id": "v036",
+    "band": 600,
+    "word": "annual",
+    "pos": "形",
+    "meaning": "年に一度の・年間の",
+    "phrase": "the annual shareholders meeting",
+    "phraseJa": "年次株主総会"
+  },
+  {
+    "id": "v037",
+    "band": 600,
+    "word": "budget",
+    "pos": "名/動",
+    "meaning": "予算・予算を組む",
+    "phrase": "stay within the allocated budget",
+    "phraseJa": "割り当て予算内に収める"
+  },
+  {
+    "id": "v038",
+    "band": 600,
+    "word": "despite",
+    "pos": "前",
+    "meaning": "〜にもかかわらず",
+    "phrase": "despite the inclement weather",
+    "phraseJa": "悪天候にもかかわらず"
+  },
+  {
+    "id": "v039",
+    "band": 600,
+    "word": "additional",
+    "pos": "形",
+    "meaning": "追加の",
+    "phrase": "at no additional cost",
+    "phraseJa": "追加費用なしで"
+  },
+  {
+    "id": "v040",
+    "band": 600,
+    "word": "register",
+    "pos": "動",
+    "meaning": "登録する・申し込む",
+    "phrase": "register for the workshop online",
+    "phraseJa": "講座にオンラインで申し込む"
+  },
+  {
+    "id": "v041",
+    "band": 600,
+    "word": "temporary",
+    "pos": "形",
+    "meaning": "一時的な・仮の",
+    "phrase": "a temporary parking permit",
+    "phraseJa": "臨時駐車許可証"
+  },
+  {
+    "id": "v042",
+    "band": 600,
+    "word": "approve",
+    "pos": "動",
+    "meaning": "承認する",
+    "phrase": "approve the revised proposal",
+    "phraseJa": "修正案を承認する"
+  },
+  {
+    "id": "v043",
+    "band": 600,
+    "word": "efficiently",
+    "pos": "副",
+    "meaning": "効率よく",
+    "phrase": "process orders more efficiently",
+    "phraseJa": "注文をより効率的に処理する"
+  },
+  {
+    "id": "v044",
+    "band": 600,
+    "word": "venue",
+    "pos": "名",
+    "meaning": "開催地・会場",
+    "phrase": "change the conference venue",
+    "phraseJa": "会議の会場を変更する"
+  },
+  {
+    "id": "v045",
+    "band": 600,
+    "word": "expire",
+    "pos": "動",
+    "meaning": "有効期限が切れる",
+    "phrase": "your membership will expire soon",
+    "phraseJa": "会員資格がまもなく失効する"
+  },
+  {
+    "id": "v046",
+    "band": 600,
+    "word": "refund",
+    "pos": "名/動",
+    "meaning": "返金・払い戻す",
+    "phrase": "obtain a full refund",
+    "phraseJa": "全額返金を受ける"
+  },
+  {
+    "id": "v047",
+    "band": 600,
+    "word": "encourage",
+    "pos": "動",
+    "meaning": "奨励する・促す",
+    "phrase": "employees are encouraged to carpool",
+    "phraseJa": "社員に相乗りが推奨されている"
+  },
+  {
+    "id": "v048",
+    "band": 600,
+    "word": "demonstrate",
+    "pos": "動",
+    "meaning": "実演する・実証する",
+    "phrase": "demonstrate the new software",
+    "phraseJa": "新ソフトを実演する"
+  },
+  {
+    "id": "v049",
+    "band": 600,
+    "word": "valid",
+    "pos": "形",
+    "meaning": "有効な・妥当な",
+    "phrase": "present a valid photo ID",
+    "phraseJa": "有効な顔写真付き身分証を提示する"
+  },
+  {
+    "id": "v050",
+    "band": 600,
+    "word": "notify",
+    "pos": "動",
+    "meaning": "（人に）通知する",
+    "phrase": "notify tenants of the maintenance",
+    "phraseJa": "入居者に点検作業を知らせる"
+  },
+  {
+    "id": "v051",
+    "band": 730,
+    "word": "reimburse",
+    "pos": "動",
+    "meaning": "払い戻す・精算する",
+    "phrase": "reimburse travel expenses",
+    "phraseJa": "出張経費を精算する"
+  },
+  {
+    "id": "v052",
+    "band": 730,
+    "word": "accommodate",
+    "pos": "動",
+    "meaning": "収容する・要望に応じる",
+    "phrase": "accommodate up to 200 guests",
+    "phraseJa": "最大200名を収容する"
+  },
+  {
+    "id": "v053",
+    "band": 730,
+    "word": "mandatory",
+    "pos": "形",
+    "meaning": "義務の・必須の",
+    "phrase": "attendance is mandatory for all staff",
+    "phraseJa": "全スタッフの出席が必須である"
+  },
+  {
+    "id": "v054",
+    "band": 730,
+    "word": "tentative",
+    "pos": "形",
+    "meaning": "仮の・暫定的な",
+    "phrase": "a tentative event itinerary",
+    "phraseJa": "イベントの仮日程表"
+  },
+  {
+    "id": "v055",
+    "band": 730,
+    "word": "comply",
+    "pos": "動",
+    "meaning": "遵守する・従う",
+    "phrase": "comply with safety regulations",
+    "phraseJa": "安全規則を遵守する"
+  },
+  {
+    "id": "v056",
+    "band": 730,
+    "word": "substantial",
+    "pos": "形",
+    "meaning": "かなりの・大幅な",
+    "phrase": "a substantial reduction in waste",
+    "phraseJa": "廃棄物の大幅な削減"
+  },
+  {
+    "id": "v057",
+    "band": 730,
+    "word": "eligible",
+    "pos": "形",
+    "meaning": "資格がある・対象となる",
+    "phrase": "be eligible for a promotion",
+    "phraseJa": "昇進の対象資格がある"
+  },
+  {
+    "id": "v058",
+    "band": 730,
+    "word": "renovate",
+    "pos": "動",
+    "meaning": "改装する・改修する",
+    "phrase": "the lobby is being renovated",
+    "phraseJa": "ロビーは現在改装中だ"
+  },
+  {
+    "id": "v059",
+    "band": 730,
+    "word": "itinerary",
+    "pos": "名",
+    "meaning": "旅程表・訪問予定",
+    "phrase": "distribute the updated itinerary",
+    "phraseJa": "更新された旅程表を配る"
+  },
+  {
+    "id": "v060",
+    "band": 730,
+    "word": "designate",
+    "pos": "動",
+    "meaning": "指定する・任命する",
+    "phrase": "park only in designated spaces",
+    "phraseJa": "指定された区画にのみ駐車する"
+  },
+  {
+    "id": "v061",
+    "band": 730,
+    "word": "adjacent",
+    "pos": "形",
+    "meaning": "隣接した",
+    "phrase": "adjacent to the main station",
+    "phraseJa": "主要駅に隣接して"
+  },
+  {
+    "id": "v062",
+    "band": 730,
+    "word": "implement",
+    "pos": "動",
+    "meaning": "導入する・実施する",
+    "phrase": "implement a new billing system",
+    "phraseJa": "新しい請求システムを導入する"
+  },
+  {
+    "id": "v063",
+    "band": 730,
+    "word": "thoroughly",
+    "pos": "副",
+    "meaning": "徹底的に・十分に",
+    "phrase": "review the contract thoroughly",
+    "phraseJa": "契約書を徹底的に確認する"
+  },
+  {
+    "id": "v064",
+    "band": 730,
+    "word": "merchandise",
+    "pos": "名",
+    "meaning": "商品・製品（不可算）",
+    "phrase": "display seasonal merchandise",
+    "phraseJa": "季節商品を陳列する"
+  },
+  {
+    "id": "v065",
+    "band": 730,
+    "word": "relocate",
+    "pos": "動",
+    "meaning": "移転する・配置転換する",
+    "phrase": "relocate headquarters downtown",
+    "phraseJa": "本社を中心街へ移転する"
+  },
+  {
+    "id": "v066",
+    "band": 730,
+    "word": "promptly",
+    "pos": "副",
+    "meaning": "迅速に・時刻通りに",
+    "phrase": "begin promptly at nine o'clock",
+    "phraseJa": "9時ちょうどに開始する"
+  },
+  {
+    "id": "v067",
+    "band": 730,
+    "word": "authorize",
+    "pos": "動",
+    "meaning": "権限を与える・認可する",
+    "phrase": "authorized personnel only",
+    "phraseJa": "関係者以外立入禁止"
+  },
+  {
+    "id": "v068",
+    "band": 730,
+    "word": "defective",
+    "pos": "形",
+    "meaning": "欠陥のある・不良の",
+    "phrase": "return a defective appliance",
+    "phraseJa": "不良家電を返品する"
+  },
+  {
+    "id": "v069",
+    "band": 730,
+    "word": "exceed",
+    "pos": "動",
+    "meaning": "超える・上回る",
+    "phrase": "exceed sales expectations",
+    "phraseJa": "売上予想を上回る"
+  },
+  {
+    "id": "v070",
+    "band": 730,
+    "word": "evaluate",
+    "pos": "動",
+    "meaning": "評価する・査定する",
+    "phrase": "evaluate employee performance",
+    "phraseJa": "社員の業績を評価する"
+  },
+  {
+    "id": "v071",
+    "band": 730,
+    "word": "confidential",
+    "pos": "形",
+    "meaning": "機密の・社外秘の",
+    "phrase": "keep client records confidential",
+    "phraseJa": "顧客記録を機密に保つ"
+  },
+  {
+    "id": "v072",
+    "band": 730,
+    "word": "negotiate",
+    "pos": "動",
+    "meaning": "交渉する",
+    "phrase": "negotiate favorable terms",
+    "phraseJa": "有利な契約条件を交渉する"
+  },
+  {
+    "id": "v073",
+    "band": 730,
+    "word": "consecutive",
+    "pos": "形",
+    "meaning": "連続した",
+    "phrase": "for three consecutive quarters",
+    "phraseJa": "3四半期連続で"
+  },
+  {
+    "id": "v074",
+    "band": 730,
+    "word": "distribute",
+    "pos": "動",
+    "meaning": "配布する・流通させる",
+    "phrase": "distribute handouts to attendees",
+    "phraseJa": "出席者に配布資料を配る"
+  },
+  {
+    "id": "v075",
+    "band": 730,
+    "word": "affordable",
+    "pos": "形",
+    "meaning": "手頃な価格の",
+    "phrase": "high quality at an affordable price",
+    "phraseJa": "手頃な価格で高品質"
+  },
+  {
+    "id": "v076",
+    "band": 860,
+    "word": "waive",
+    "pos": "動",
+    "meaning": "（料金・規則を）免除する",
+    "phrase": "waive the enrollment fee",
+    "phraseJa": "入会金を免除する"
+  },
+  {
+    "id": "v077",
+    "band": 860,
+    "word": "expedite",
+    "pos": "動",
+    "meaning": "迅速化する・早める",
+    "phrase": "expedite the shipping process",
+    "phraseJa": "発送手続きを迅速化する"
+  },
+  {
+    "id": "v078",
+    "band": 860,
+    "word": "discrepancy",
+    "pos": "名",
+    "meaning": "食い違い・不一致",
+    "phrase": "resolve a billing discrepancy",
+    "phraseJa": "請求金額の不一致を解消する"
+  },
+  {
+    "id": "v079",
+    "band": 860,
+    "word": "contingent",
+    "pos": "形",
+    "meaning": "〜次第である（on）",
+    "phrase": "contingent upon board approval",
+    "phraseJa": "取締役会の承認を条件として"
+  },
+  {
+    "id": "v080",
+    "band": 860,
+    "word": "overhaul",
+    "pos": "動/名",
+    "meaning": "抜本的に見直す・総点検",
+    "phrase": "overhaul the inventory system",
+    "phraseJa": "在庫システムを抜本改修する"
+  },
+  {
+    "id": "v081",
+    "band": 860,
+    "word": "stringent",
+    "pos": "形",
+    "meaning": "厳格な・厳しい",
+    "phrase": "meet stringent quality standards",
+    "phraseJa": "厳格な品質基準を満たす"
+  },
+  {
+    "id": "v082",
+    "band": 860,
+    "word": "unanimous",
+    "pos": "形",
+    "meaning": "満場一致の",
+    "phrase": "reach a unanimous decision",
+    "phraseJa": "満場一致の決定に至る"
+  },
+  {
+    "id": "v083",
+    "band": 860,
+    "word": "lucrative",
+    "pos": "形",
+    "meaning": "収益性の高い",
+    "phrase": "secure a lucrative contract",
+    "phraseJa": "高収益の契約を獲得する"
+  },
+  {
+    "id": "v084",
+    "band": 860,
+    "word": "obsolete",
+    "pos": "形",
+    "meaning": "時代遅れの・旧式の",
+    "phrase": "phase out obsolete machinery",
+    "phraseJa": "旧式の機械を段階的に廃止する"
+  },
+  {
+    "id": "v085",
+    "band": 860,
+    "word": "unprecedented",
+    "pos": "形",
+    "meaning": "前例のない・過去最高の",
+    "phrase": "unprecedented demand for the service",
+    "phraseJa": "そのサービスへの前例のない需要"
+  },
+  {
+    "id": "v086",
+    "band": 860,
+    "word": "premises",
+    "pos": "名",
+    "meaning": "敷地・構内（常に複数形）",
+    "phrase": "smoking is prohibited on the premises",
+    "phraseJa": "敷地内での喫煙は禁止されている"
+  },
+  {
+    "id": "v087",
+    "band": 860,
+    "word": "alleviate",
+    "pos": "動",
+    "meaning": "軽減する・緩和する",
+    "phrase": "alleviate traffic congestion",
+    "phraseJa": "交通渋滞を緩和する"
+  },
+  {
+    "id": "v088",
+    "band": 860,
+    "word": "commensurate",
+    "pos": "形",
+    "meaning": "見合った・比例した（with）",
+    "phrase": "salary commensurate with experience",
+    "phraseJa": "経験に見合った給与"
+  },
+  {
+    "id": "v089",
+    "band": 860,
+    "word": "scrutinize",
+    "pos": "動",
+    "meaning": "精査する・綿密に調べる",
+    "phrase": "scrutinize financial statements",
+    "phraseJa": "財務諸表を精査する"
+  },
+  {
+    "id": "v090",
+    "band": 860,
+    "word": "provisional",
+    "pos": "形",
+    "meaning": "暫定的な・仮の",
+    "phrase": "issue a provisional license",
+    "phraseJa": "仮免許を発行する"
+  },
+  {
+    "id": "v091",
+    "band": 860,
+    "word": "incur",
+    "pos": "動",
+    "meaning": "（費用・損失を）負う・招く",
+    "phrase": "incur a late cancellation fee",
+    "phraseJa": "直前キャンセル料が発生する"
+  },
+  {
+    "id": "v092",
+    "band": 860,
+    "word": "streamline",
+    "pos": "動",
+    "meaning": "合理化する・簡素化する",
+    "phrase": "streamline administrative procedures",
+    "phraseJa": "事務手続きを簡素化する"
+  },
+  {
+    "id": "v093",
+    "band": 860,
+    "word": "adhere",
+    "pos": "動",
+    "meaning": "厳守する（to）",
+    "phrase": "strictly adhere to the guidelines",
+    "phraseJa": "ガイドラインを厳守する"
+  },
+  {
+    "id": "v094",
+    "band": 860,
+    "word": "versatile",
+    "pos": "形",
+    "meaning": "多用途の・多才な",
+    "phrase": "a versatile conference space",
+    "phraseJa": "多目的に使える会議スペース"
+  },
+  {
+    "id": "v095",
+    "band": 860,
+    "word": "deteriorate",
+    "pos": "動",
+    "meaning": "悪化する・劣化する",
+    "phrase": "weather conditions may deteriorate",
+    "phraseJa": "天候が悪化する恐れがある"
+  },
+  {
+    "id": "v096",
+    "band": 860,
+    "word": "feasible",
+    "pos": "形",
+    "meaning": "実行可能な",
+    "phrase": "a financially feasible plan",
+    "phraseJa": "財政的に実行可能な計画"
+  },
+  {
+    "id": "v097",
+    "band": 860,
+    "word": "endorse",
+    "pos": "動",
+    "meaning": "推薦する・承認する",
+    "phrase": "publicly endorse a new product",
+    "phraseJa": "新製品を公に推薦する"
+  },
+  {
+    "id": "v098",
+    "band": 860,
+    "word": "reconcile",
+    "pos": "動",
+    "meaning": "照合する・一致させる",
+    "phrase": "reconcile bank statements",
+    "phraseJa": "銀行明細を帳簿と照合する"
+  },
+  {
+    "id": "v099",
+    "band": 860,
+    "word": "inclement",
+    "pos": "形",
+    "meaning": "（天候が）荒れ模様の",
+    "phrase": "rescheduled due to inclement weather",
+    "phraseJa": "悪天候のため日程変更された"
+  },
+  {
+    "id": "v100",
+    "band": 860,
+    "word": "culminate",
+    "pos": "動",
+    "meaning": "最高潮に達する・締めくくる",
+    "phrase": "culminate in an awards ceremony",
+    "phraseJa": "表彰式で締めくくられる"
+  }
+];
