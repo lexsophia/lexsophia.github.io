@@ -21,7 +21,27 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://mylexsophia.com/toeic-1week/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mylexsophia.com/toeic-beginner/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://mylexsophia.com/toeic-free-test/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mylexsophia.com/toeic-grammar/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mylexsophia.com/toeic-ip-test/</loc>
     <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
   </url>
@@ -72,6 +92,11 @@
   </url>
   <url>
     <loc>https://mylexsophia.com/toeic-800-guide/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mylexsophia.com/toeic-900-guide/</loc>
     <lastmod>2026-11-26</lastmod>
     <priority>0.8</priority>
   </url>

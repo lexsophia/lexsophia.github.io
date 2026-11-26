@@ -2733,6 +2733,203 @@
     width: 30px; height: 30px; border: 0; border-radius: 50%;
     background: var(--surface-subtle); color: var(--ink-muted); font-size: 16px; line-height: 1;
   }
+
+  /* ---------- Wave-3 Features: Exam Countdown, Pinpoint Drills, 20s Sprint, Shadowing Gym, Print PDF ---------- */
+  .exam-strip {
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line);
+  }
+  .exam-strip__row {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  }
+  .exam-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px; border-radius: var(--radius-pill);
+    background: var(--surface-subtle); color: var(--ink-primary);
+    font-size: 12.5px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+  }
+  .exam-badge.is-set { background: var(--tint-blue-bg); color: var(--ink-blue); }
+  .exam-badge.is-soon { background: var(--tint-amber-bg); color: var(--ink-amber); }
+  .exam-actions-inline { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .exam-mini-btn {
+    padding: 5px 12px; border: 0; border-radius: var(--radius-pill);
+    background: var(--surface-subtle); color: var(--ink-secondary);
+    font-size: 12px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+  }
+  .exam-mini-btn:hover { background: var(--surface-hero); color: var(--ink-primary); }
+  .exam-phase-note {
+    margin-top: 8px; font-size: 12.5px; line-height: 1.6; color: var(--ink-secondary);
+  }
+  .exam-picker {
+    margin-top: 10px; padding: 12px 14px; border-radius: 16px;
+    background: var(--surface-subtle); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .exam-date-input {
+    padding: 6px 10px; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--surface-canvas); font: inherit; font-size: 13px; color: var(--ink-primary);
+  }
+
+  /* Pinpoint Drills & 20s Sprint Launcher */
+  .special-drills {
+    margin-top: 20px; display: grid; gap: 14px;
+  }
+  .sprint-promo {
+    padding: 20px 22px; border-radius: var(--radius-card-lg);
+    background: linear-gradient(135deg, #24292f 0%, #1a2234 100%);
+    color: #ffffff; box-shadow: var(--shadow-card);
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .sprint-promo__kicker {
+    display: inline-block; padding: 3px 10px; border-radius: var(--radius-pill);
+    background: rgba(245, 199, 73, 0.2); color: var(--pop-amber);
+    font-family: var(--font-num); font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
+  }
+  .sprint-promo__title { margin-top: 5px; font-size: 17px; font-weight: 700; color: #ffffff; }
+  .sprint-promo__sub { margin-top: 3px; font-size: 12.5px; color: rgba(255,255,255,0.76); }
+  .sprint-promo__btn {
+    padding: 11px 22px; border: 0; border-radius: var(--radius-pill);
+    background: var(--pop-amber); color: #24292f; font-size: 13.5px; font-weight: 700;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.22); transition: transform 0.15s var(--ease-ui);
+  }
+  .sprint-promo__btn:hover { transform: translateY(-2px); }
+
+  .pinpoint-box {
+    padding: 18px 20px; border-radius: var(--radius-card);
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+  }
+  .pinpoint-box__head {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .pinpoint-box__title { font-size: 14.5px; font-weight: 700; color: var(--ink-primary); }
+  .pinpoint-box__sub { font-size: 12px; color: var(--ink-muted); font-weight: 600; }
+  .pinpoint-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pinpoint-chip {
+    padding: 8px 14px; border: 0; border-radius: var(--radius-pill);
+    background: var(--surface-subtle); color: var(--ink-primary);
+    font-size: 13px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+    transition: transform 0.15s var(--ease-ui), background-color 0.15s ease, color 0.15s ease;
+  }
+  .pinpoint-chip:hover {
+    transform: translateY(-1px); background: var(--tint-blue-bg); color: var(--ink-blue);
+  }
+  .inline-drill-btn {
+    margin-top: 8px; padding: 6px 14px; border: 0; border-radius: var(--radius-pill);
+    background: var(--tint-violet-bg); color: var(--ink-violet);
+    font-size: 12.5px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;
+  }
+  .inline-drill-btn:hover { opacity: 0.9; }
+
+  /* 20s Countdown Bar inside #test */
+  .sprint-bar-wrap {
+    margin-top: 10px; padding: 8px 12px; border-radius: 14px;
+    background: var(--surface-canvas); box-shadow: var(--shadow-ring-subtle);
+  }
+  .sprint-bar-top {
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: var(--font-num); font-size: 12px; font-weight: 700; color: var(--ink-secondary);
+    margin-bottom: 5px;
+  }
+  .sprint-bar-track {
+    height: 8px; border-radius: var(--radius-pill); background: var(--surface-hero); overflow: hidden;
+  }
+  .sprint-bar-fill {
+    display: block; height: 100%; width: 100%; border-radius: var(--radius-pill);
+    background: var(--pop-blue); transition: width 0.1s linear, background-color 0.2s ease;
+  }
+  .sprint-bar-fill.is-warn { background: var(--pop-amber); }
+  .sprint-bar-fill.is-danger { background: #ef4444; }
+
+  /* Sprint Result Card */
+  .sprint-res-card {
+    margin-top: 18px; padding: 28px 24px; border-radius: var(--radius-card-lg);
+    background: var(--surface-canvas); box-shadow: var(--shadow-card); text-align: center;
+  }
+  .sprint-rank-badge {
+    display: inline-grid; place-items: center; width: 76px; height: 76px; border-radius: 24px;
+    background: var(--tint-amber-bg); color: var(--ink-amber);
+    font-family: var(--font-num); font-size: 40px; font-weight: 700;
+    box-shadow: var(--shadow-ring-subtle);
+  }
+  .sprint-rank-badge.is-s { background: linear-gradient(135deg, #fef6dc, #ffeaf7); color: #9c1c6b; }
+  .sprint-stats-row {
+    margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  }
+  .sprint-stat-box {
+    padding: 12px 10px; border-radius: 16px; background: var(--surface-subtle);
+  }
+  .sprint-stat-box .k { font-size: 11.5px; color: var(--ink-muted); font-weight: 700; }
+  .sprint-stat-box .v { margin-top: 3px; font-family: var(--font-num); font-size: 20px; font-weight: 700; color: var(--ink-primary); }
+
+  /* Shadowing & 1-Sentence Repeat Gym */
+  .shadow-gym {
+    margin-top: 14px; padding: 16px 18px; border-radius: 20px;
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+  }
+  .shadow-gym__head {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .shadow-gym__title { font-size: 13.5px; font-weight: 700; color: var(--ink-primary); }
+  .shadow-masks { display: flex; gap: 5px; flex-wrap: wrap; }
+  .shadow-mask-btn {
+    padding: 4px 10px; border: 0; border-radius: var(--radius-pill);
+    background: var(--surface-subtle); color: var(--ink-secondary);
+    font-size: 11.5px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+  }
+  .shadow-mask-btn.is-active { background: var(--ink-primary); color: #ffffff; }
+  .shadow-lines { display: grid; gap: 8px; }
+  .shadow-line {
+    padding: 11px 13px; border-radius: 14px; background: var(--surface-subtle);
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 10px;
+  }
+  .shadow-line__text { flex: 1; min-width: 0; }
+  .shadow-line__en { font-size: 13.5px; font-weight: 600; color: var(--ink-primary); line-height: 1.55; }
+  .shadow-line__ja { margin-top: 3px; font-size: 12.5px; color: var(--ink-secondary); line-height: 1.5; }
+  .shadow-gym[data-mask="en"] .shadow-line__ja { display: none; }
+  .shadow-gym[data-mask="ja"] .shadow-line__en { filter: blur(5px); user-select: none; }
+  .shadow-gym[data-mask="blind"] .shadow-line__en,
+  .shadow-gym[data-mask="blind"] .shadow-line__ja { filter: blur(6px); user-select: none; }
+  .shadow-line__btns { display: flex; gap: 5px; flex-shrink: 0; }
+  .sg-btn {
+    padding: 5px 10px; border: 0; border-radius: var(--radius-pill);
+    background: var(--surface-canvas); color: var(--ink-blue);
+    font-size: 11.5px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+  }
+  .sg-btn.is-active { background: var(--pop-blue); color: #ffffff; }
+
+  /* Expandable History Detail */
+  .history-detail {
+    margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line);
+    font-size: 12.5px; color: var(--ink-secondary);
+  }
+  .history-detail summary {
+    cursor: pointer; font-weight: 700; color: var(--pop-blue); list-style: none;
+  }
+  .history-detail summary::-webkit-details-marker { display: none; }
+  .history-detail-body { margin-top: 8px; display: grid; gap: 6px; }
+  .history-wrong-btn {
+    justify-self: start; margin-top: 4px; padding: 6px 14px; border: 0; border-radius: var(--radius-pill);
+    background: var(--tint-blue-bg); color: var(--ink-blue); font-size: 12px; font-weight: 700;
+  }
+
+  /* Print / Save-as-PDF Study Sheet Styles */
+  @media print {
+    body { background: #ffffff !important; color: #000000 !important; }
+    .fb-fab, .fb-overlay, .auth-overlay, .exit-dialog, .res-cloud-banner,
+    .act-grid, .act-exit, .percentile-share, #btn-materials, #btn-audio-materials,
+    .weak-part-btn, .goal-coach-chips, .inline-drill-btn, .sub-back {
+      display: none !important;
+    }
+    .screen { display: none !important; }
+    .screen.is-active { display: block !important; padding: 0 !important; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .pv.is-pending .sk { display: none !important; }
+    .pv.is-pending .v, .pv.is-pending .k, .pv.is-pending .s { opacity: 1 !important; }
+    .steps { display: none !important; }
+    .score-card, .percentile-card, .section, .goal-coach-card, .radar-box {
+      box-shadow: none !important; border: 1px solid #d0d7de !important; break-inside: avoid;
+    }
+  }
 </style>
 </head>
 <body>
@@ -3012,6 +3209,32 @@
           <button type="button" class="practice-card" data-listening-practice="7"><span class="practice-part">Part 7</span><span class="practice-name">読解問題</span><span class="practice-soon">2セット →</span></button>
         </div></div>
       </div>
+
+      <div class="special-drills">
+        <div class="sprint-promo">
+          <div>
+            <span class="sprint-promo__kicker">⚡ SPEED TIME ATTACK</span>
+            <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック（10問）</p>
+            <p class="sprint-promo__sub">本番でPart 7に55分残すためのスピード特訓。正答率×解答速度でS〜Cランク判定！</p>
+          </div>
+          <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
+        </div>
+
+        <div class="pinpoint-box">
+          <div class="pinpoint-box__head">
+            <span class="pinpoint-box__title">🎯 弱点テーマ別ピンポイント特訓</span>
+            <span class="pinpoint-box__sub">苦手な出題パターンだけを連続演習</span>
+          </div>
+          <div class="pinpoint-chips" role="group" aria-label="テーマ別ピンポイント特訓">
+            <button type="button" class="pinpoint-chip" data-pinpoint="pos">品詞問題 10問</button>
+            <button type="button" class="pinpoint-chip" data-pinpoint="tense">動詞・時制・態 10問</button>
+            <button type="button" class="pinpoint-chip" data-pinpoint="connectors">接続詞・前置詞・構造 10問</button>
+            <button type="button" class="pinpoint-chip" data-pinpoint="vocab">語彙・語法 10問</button>
+            <button type="button" class="pinpoint-chip" data-pinpoint="p2indirect">Part 2 間接・変化球応答</button>
+            <button type="button" class="pinpoint-chip" data-pinpoint="p7multi">Part 7 複数文書照合</button>
+          </div>
+        </div>
+      </div>
     </section>
 
 <nav class="seo-entry-links" aria-label="診断ガイドと練習問題"><a href="/toeic-score-predictor/">スコア予測の仕組み →</a><a href="/toeic-free-test/">無料診断の受け方 →</a><a href="/toeic-part5/">Part 5 練習問題 →</a></nav>
@@ -3061,6 +3284,25 @@
             <b id="home-goal-value">—</b>
           </div>
           <div class="goal-bar" aria-hidden="true"><i id="home-goal-bar-fill"></i></div>
+        </div>
+
+        <!-- Exam Date Countdown & Reverse Study Phase Strip -->
+        <div class="exam-strip" id="home-exam-strip">
+          <div class="exam-strip__row">
+            <span class="exam-badge" id="home-exam-badge">📅 次の受験日：未設定</span>
+            <div class="exam-actions-inline">
+              <button type="button" class="exam-mini-btn" id="btn-exam-cal" hidden>📆 学習予定をカレンダー登録</button>
+              <button type="button" class="exam-mini-btn" id="btn-exam-toggle">受験日を設定</button>
+            </div>
+          </div>
+          <p class="exam-phase-note" id="home-exam-advice" hidden></p>
+          <div class="exam-picker" id="home-exam-picker" hidden>
+            <input type="date" class="exam-date-input" id="exam-date-input" aria-label="TOEIC受験予定日">
+            <button type="button" class="exam-mini-btn" data-exam-offset="30">30日後</button>
+            <button type="button" class="exam-mini-btn" data-exam-offset="60">60日後</button>
+            <button type="button" class="exam-mini-btn" data-exam-offset="90">90日後</button>
+            <button type="button" class="exam-mini-btn" id="btn-exam-clear">クリア</button>
+          </div>
         </div>
       </div>
 
@@ -3208,28 +3450,32 @@
           <ul class="home-seo-lib__list">
             <li><a href="/toeic-listening/">リスニング無料練習10問（Part 1〜4 音声付）</a></li>
             <li><a href="/toeic-vocab/">TOEIC頻出英単語・熟語100選（赤シート付）</a></li>
+            <li><a href="/toeic-grammar/">TOEIC頻出英文法ルール総まとめ</a></li>
             <li><a href="/toeic-part5/">Part 5 短文穴埋め練習（10問・解説付）</a></li>
-            <li><a href="/toeic-part5-20/">Part 5 短文穴埋め練習（20問セット）</a></li>
             <li><a href="/toeic-part6-1/">Part 6 長文穴埋め練習（全7セット）</a></li>
             <li><a href="/toeic-part7-1/">Part 7 長文読解練習（全18セット）</a></li>
             <li><a href="/practice/">無料練習問題集・総覧ページ</a></li>
           </ul>
         </div>
         <div class="home-seo-lib__col">
-          <h3>目標スコア別 勉強法</h3>
+          <h3>目標スコア別・直前勉強法</h3>
           <ul class="home-seo-lib__list">
+            <li><a href="/toeic-beginner/">TOEIC初心者・初受験完全ガイド</a></li>
             <li><a href="/toeic-400-guide/">TOEIC 400点台の勉強法ガイド</a></li>
             <li><a href="/toeic-500-guide/">TOEIC 500点台の勉強法（600点突破へ）</a></li>
             <li><a href="/toeic-600-guide/">TOEIC 600点台の勉強法（700点突破へ）</a></li>
             <li><a href="/toeic-700-guide/">TOEIC 700点台の勉強法ガイド</a></li>
             <li><a href="/toeic-800-guide/">TOEIC 800点・860点（Aランク）勉強法</a></li>
-            <li><a href="/toeic-time-management/">TOEIC 時間配分と解く順番（75分攻略）</a></li>
+            <li><a href="/toeic-900-guide/">TOEIC 900点突破の勉強法ガイド</a></li>
+            <li><a href="/toeic-1week/">TOEIC 直前1週間・前日の対策</a></li>
           </ul>
         </div>
         <div class="home-seo-lib__col">
-          <h3>就活目安・参考書・コラム</h3>
+          <h3>就活・IPテスト・参考書・コラム</h3>
           <ul class="home-seo-lib__list">
             <li><a href="/toeic-shukatsu/">就活のTOEICスコア目安・履歴書の書き方</a></li>
+            <li><a href="/toeic-ip-test/">TOEIC IPテスト（オンライン）の特徴と対策</a></li>
+            <li><a href="/toeic-time-management/">TOEIC 時間配分と解く順番（75分攻略）</a></li>
             <li><a href="/books/">TOEICおすすめ参考書・問題集10選</a></li>
             <li><a href="/articles/">パート別解き方・30日計画コラム（全10本）</a></li>
             <li><a href="/toeic-score-predictor/">TOEICスコア予測の仕組み</a></li>
@@ -3312,7 +3558,7 @@
   </div>
   <img class="mascot-page-head__img" id="lp-feedback-owl" src="img/owl-blue.png" alt="" width="229" height="320" decoding="async">
 </div>
-<div id="lp-feedback-body"></div><div class="rv-audio-bar" id="lp-speed-bar" hidden style="margin-bottom:12px"><span class="speed-chips__label">聞き直し速度:</span><div class="speed-chips" role="group" aria-label="再生速度"><button type="button" class="speed-chip" data-audio-rate="0.85">0.85×</button><button type="button" class="speed-chip is-active" data-audio-rate="1">1.0×</button><button type="button" class="speed-chip" data-audio-rate="1.2">1.2×</button></div></div><div class="lp-actions"><button class="btn" id="lp-continue" type="button">次の問題へ →</button><button class="qual-secondary" id="lp-relisten" type="button">同じ音声を聞き直す</button><button class="qual-secondary lp-home" type="button">練習を終了してホームへ</button></div></div></section>
+<div id="lp-feedback-body"></div><div id="lp-shadow-gym" hidden></div><div class="rv-audio-bar" id="lp-speed-bar" hidden style="margin-bottom:12px"><span class="speed-chips__label">聞き直し速度:</span><div class="speed-chips" role="group" aria-label="再生速度"><button type="button" class="speed-chip" data-audio-rate="0.85">0.85×</button><button type="button" class="speed-chip is-active" data-audio-rate="1">1.0×</button><button type="button" class="speed-chip" data-audio-rate="1.2">1.2×</button></div></div><div class="lp-actions"><button class="btn" id="lp-continue" type="button">次の問題へ →</button><button class="qual-secondary" id="lp-relisten" type="button">同じ音声を聞き直す</button><button class="qual-secondary lp-home" type="button">練習を終了してホームへ</button></div></div></section>
 <section id="lp-results" class="screen" aria-labelledby="lp-results-title"><div class="wrap lp-wrap">
 <div class="mascot-page-head">
   <div class="mascot-page-head__copy">
@@ -3321,6 +3567,33 @@
   <img class="mascot-page-head__img" src="img/owl-amber.png" alt="" width="284" height="320" decoding="async">
 </div>
 <div class="lp-actions"><button class="btn" id="lp-retry-wrong" type="button">間違えた問題を解き直す</button><button class="qual-secondary" id="lp-new" type="button">同じPartをもう一度練習する</button><button class="qual-secondary lp-home" type="button">ホームへ戻る</button></div><h2>今回の問題を復習</h2><div id="lp-all-review"></div></div></section>
+
+<section id="sprint-results" class="screen" aria-labelledby="sprint-res-title"><div class="wrap lp-wrap">
+<div class="mascot-page-head">
+  <div class="mascot-page-head__copy">
+    <p class="qual-kicker">⚡ PART 5 TIME ATTACK</p>
+    <h1 id="sprint-res-title" tabindex="-1">タイムアタック結果</h1>
+    <p class="qual-note" id="sprint-res-note">1問20秒のスピード特訓結果です。</p>
+  </div>
+  <img class="mascot-page-head__img" id="sprint-res-owl" src="img/owl-amber.png" alt="" width="284" height="320" decoding="async">
+</div>
+<div class="sprint-res-card">
+  <div class="sprint-rank-badge" id="sprint-rank-badge">A</div>
+  <p style="margin-top:10px;font-size:15px;font-weight:700;color:var(--ink-primary)" id="sprint-rank-comment">素晴らしいスピードと正確さです！</p>
+  <div class="sprint-stats-row">
+    <div class="sprint-stat-box"><p class="k">正答数</p><p class="v" id="sprint-stat-score">8 / 10</p></div>
+    <div class="sprint-stat-box"><p class="k">1問平均</p><p class="v" id="sprint-stat-avg">12.4秒</p></div>
+    <div class="sprint-stat-box"><p class="k">時間切れ</p><p class="v" id="sprint-stat-timeout">0問</p></div>
+  </div>
+</div>
+<div class="lp-actions" style="margin-top:18px">
+  <button class="btn" id="btn-sprint-again" type="button">もう1セット挑戦する ⚡</button>
+  <button class="qual-secondary" id="btn-sprint-x" type="button">結果をXでシェア</button>
+  <button class="qual-secondary lp-home" type="button">ホームへ戻る</button>
+</div>
+<h2 style="margin-top:28px">全10問のスピード＆解説確認</h2>
+<div id="sprint-all-review"></div>
+</div></section>
 
 <section id="test" class="screen" aria-labelledby="q-count">
   <div class="wrap">
@@ -3331,6 +3604,10 @@
         <span class="timer" id="timer" aria-label="経過時間">00:00</span>
       </div>
       <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" id="progress"><i></i></div>
+      <div class="sprint-bar-wrap" id="sprint-bar-wrap" hidden>
+        <div class="sprint-bar-top"><span>⚡ 残り時間（20秒制限）</span><span id="sprint-sec-left">20.0s</span></div>
+        <div class="sprint-bar-track"><i class="sprint-bar-fill" id="sprint-bar-fill"></i></div>
+      </div>
     </div>
 
     <div class="audio-panel" id="audio-panel" hidden>
@@ -3463,7 +3740,7 @@
       </div>
       <div class="meaning">
         <div class="row"><span class="mark mark--strong" aria-hidden="true"></span><div><p class="k">得意分野</p><p class="v" id="r-strong">—</p><p class="d" id="r-strong-d"></p></div></div>
-        <div class="row"><span class="mark mark--weak" aria-hidden="true"></span><div><p class="k">苦手分野</p><p class="v" id="r-weak">—</p><p class="d" id="r-weak-d"></p></div></div>
+        <div class="row"><span class="mark mark--weak" aria-hidden="true"></span><div><p class="k">苦手分野</p><p class="v" id="r-weak">—</p><p class="d" id="r-weak-d"></p><button type="button" class="inline-drill-btn" id="btn-r-weak-skill">🎯 この苦手テーマだけ10問特訓する →</button></div></div>
         <div class="row"><span class="mark mark--priority" aria-hidden="true"></span><div><p class="k">優先して対策すべき分野</p><p class="v" id="r-priority">—</p><p class="d" id="r-priority-d"></p></div></div>
       </div>
     </div>
@@ -3513,6 +3790,7 @@
         <button class="act-tile" id="btn-review" hidden><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M16 16l2 2 4-4"/></svg></span><span class="t">間違えた問題</span><span class="d" id="btn-review-d">復習する</span></button>
         <button class="act-tile" id="btn-share-score"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></span><span class="t">シェア</span><span class="d" id="btn-share-score-d">ストーリーズ用画像</span></button>
         <button class="act-tile" id="btn-history-results"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-6"/></svg></span><span class="t">学習履歴</span><span class="d" id="btn-history-results-d">前回と比べる</span></button>
+        <button class="act-tile" id="btn-r-print" type="button"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg></span><span class="t">PDFカルテ</span><span class="d">診断レポートを保存・印刷</span></button>
       </div>
       <p class="share-status" id="score-share-status" role="status"></p>
       <p class="perfect" id="r-perfect" hidden><img class="perfect__owl" src="img/owl-amber.png" alt="" width="284" height="320" loading="lazy"><span>全問正解です！</span></p>
@@ -3591,7 +3869,7 @@
         <h2>この結果からわかること</h2>
       </div>
       <div class="listen-insight"><p class="k">Listeningの得意分野</p><p class="v" id="listen-strong">—</p><p class="d" id="listen-strong-d"></p></div>
-      <div class="listen-insight"><p class="k">優先して対策</p><p class="v" id="listen-weak">—</p><p class="d" id="listen-weak-d"></p></div>
+      <div class="listen-insight"><p class="k">優先して対策</p><p class="v" id="listen-weak">—</p><p class="d" id="listen-weak-d"></p><button type="button" class="inline-drill-btn" id="btn-listen-weak-skill">🎯 この弱点スキルを集中練習する →</button></div>
     </div>
 
     <div class="audio-results-actions reveal">
@@ -3634,6 +3912,7 @@
         <button class="act-tile" id="btn-audio-review" hidden><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M16 16l2 2 4-4"/></svg></span><span class="t">間違えた問題</span><span class="d" id="btn-audio-review-d">復習する</span></button>
         <button class="act-tile" id="btn-audio-share-score"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></span><span class="t">シェア</span><span class="d" id="btn-audio-share-score-d">ストーリーズ用画像</span></button>
         <button class="act-tile" id="btn-history-audio"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-6"/></svg></span><span class="t">学習履歴</span><span class="d" id="btn-history-audio-d">前回と比べる</span></button>
+        <button class="act-tile" id="btn-audio-print" type="button"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg></span><span class="t">PDFカルテ</span><span class="d">診断レポートを保存・印刷</span></button>
       </div>
       <p class="share-status" id="audio-score-share-status" role="status"></p>
       <button class="act-exit" id="btn-audio-home">ホームに戻る</button>
@@ -3796,6 +4075,7 @@
         <button type="button" class="speed-chip" data-audio-rate="1.2">1.2×</button>
       </div>
     </div>
+    <div id="rv-shadow-gym" hidden></div>
 
     <div class="passage" id="rv-passage" hidden></div>
     <p class="q-text" id="rv-text"></p>
@@ -4893,6 +5173,7 @@ const STORAGE_KEYS = {
   daily: 'lexsophia.daily.v1',
   session: 'lexsophia.session.v1',
   vocab: 'lexsophia.vocab.v1',
+  examDate: 'lexsophia.examDate.v1',
   pwaDismissed: 'lexsophia.pwa.dismissed.v1',
   owner: 'lexsophia.owner.v1'
 };
@@ -6097,6 +6378,7 @@ function refreshHomeLearning() {
   if ($('home-goal-bar-fill')) $('home-goal-bar-fill').style.width = `${goalInfo.fillPct}%`;
   syncGoalChipActiveStates(target);
   if (typeof refreshResumeBanner === 'function') refreshResumeBanner();
+  if (typeof refreshExamCountdown === 'function') refreshExamCountdown();
 }
 
 function formatShortChartDate(iso) {
@@ -6295,18 +6577,38 @@ function renderHistory() {
   // 3. SVG Trend Chart
   renderTrendChart(history);
 
-  // 4. History List
+  // 4. History List (with expandable skill breakdown & direct wrong-question retry)
   $('history-empty').hidden = history.length > 0;
-  $('history-list').innerHTML = history.map(item => {
+  $('history-list').innerHTML = history.map((item, idx) => {
     const partText = [1, 2, 3, 4, 5, 6, 7].map(part => {
       const p = item.parts && item.parts[part];
       return p ? `Part ${part} ${p.correct}/${p.total}` : null;
     }).filter(Boolean).join(' · ');
+    const skillText = item.skills ? Object.entries(item.skills).map(([k, v]) => {
+      if (!v || !v.total) return null;
+      return `${SKILLS[k] || k} ${pct(v.correct, v.total)}% (${v.correct}/${v.total})`;
+    }).filter(Boolean).join(' ｜ ') : '';
+    const wrongCount = Array.isArray(item.wrongIds) ? item.wrongIds.length : 0;
+    const retryBtnHtml = wrongCount > 0
+      ? `<button type="button" class="history-wrong-btn" data-history-retry="${idx}">この回の誤答（${wrongCount}問）を復習演習する →</button>`
+      : '';
+    const detailHtml = (skillText || wrongCount > 0)
+      ? `<details class="history-detail"><summary>スキル別内訳・復習 ▾</summary><div class="history-detail-body">` +
+        (skillText ? `<p>${escapeHtml(skillText)}</p>` : '') +
+        retryBtnHtml +
+        `</div></details>`
+      : '';
     return `<article class="history-item"><div class="top">` +
       `<p class="date">${escapeHtml(formatHistoryDate(item.takenAt))} · ${assessmentModeLabel(item.mode, item.quick)}</p>` +
       `<p class="score">${item.score} <small>/ ${item.maxScore || 495}</small></p></div>` +
-      `<p class="meta">${item.correct}/${item.total}問正解 · ${escapeHtml(fmtDuration(item.seconds))}<br>${escapeHtml(partText)}</p></article>`;
+      `<p class="meta">${item.correct}/${item.total}問正解 · ${escapeHtml(fmtDuration(item.seconds))}<br>${escapeHtml(partText)}</p>${detailHtml}</article>`;
   }).join('');
+  document.querySelectorAll('[data-history-retry]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetItem = history[Number(btn.dataset.historyRetry)];
+      if (targetItem && Array.isArray(targetItem.wrongIds)) startHistoryWrongDrill(targetItem.wrongIds);
+    });
+  });
 }
 
 function pickWeakestPart(partsList) {
@@ -6400,6 +6702,8 @@ function startWeakPractice() {
 /* ---------- Test flow ---------- */
 
 function beginTest(questions, mode, assessmentMode = 'reading', options = {}) {
+  if (typeof clearSprintTimer === 'function') clearSprintTimer();
+  if ($('sprint-bar-wrap')) $('sprint-bar-wrap').hidden = (mode !== 'sprint');
   state.questions = questions;
   state.mode = mode;
   state.assessmentMode = assessmentMode;
@@ -6546,6 +6850,7 @@ function stopSpeech() {
     rvBtn.classList.remove('is-playing');
     rvBtn.textContent = '▶ 問題の音声を聞き直す';
   }
+  if (typeof resetShadowingLoopState === 'function') resetShadowingLoopState();
 }
 
 function effectiveAudioRate() {
@@ -6931,6 +7236,7 @@ function selectListeningSetChoice(questionIndex, choiceIndex) {
 }
 
 function nextQuestion() {
+  if (state.mode === 'sprint') { advanceSprintQuestion(false); return; }
   if (state.mode === "part-practice") { checkListeningPractice(); return; }
   const first = state.questions[state.index];
   if (isListeningSetQuestion(first)) {
@@ -7172,6 +7478,10 @@ function renderAudioResults(listeningResult, listeningAnalysis, readingResult, r
   $('listen-strong-d').textContent = `正答率${pct(strong.correct, strong.total)}%（${strong.total}問中${strong.correct}問）。この精度を保ちながら再生速度を少しずつ上げましょう。`;
   $('listen-weak').textContent = weak.name;
   $('listen-weak-d').textContent = `${LISTENING_ADVICE[weak.key] || '聞き取れなかった箇所の音と意味を結び直しましょう。'} 正答率${pct(weak.correct, weak.total)}%です。`;
+  if ($('btn-listen-weak-skill')) {
+    $('btn-listen-weak-skill').dataset.skillKey = weak.key;
+    $('btn-listen-weak-skill').textContent = `🎯「${weak.name}」を集中練習する →`;
+  }
   $('btn-audio-review').hidden = totalCorrect === state.questions.length;
   if (totalCorrect < state.questions.length) {
     $('btn-audio-review-d').textContent = `${state.questions.length - totalCorrect}問を復習する`;
@@ -7600,6 +7910,10 @@ function renderResults(result, analysis, totalSeconds) {
   $('r-strong-d').textContent = `正答率${pct(analysis.strongest.correct, analysis.strongest.total)}%（${analysis.strongest.total}問中${analysis.strongest.correct}問）。時間を計った演習で、この精度を保ちましょう。`;
   $('r-weak').textContent = analysis.weakest.name;
   $('r-weak-d').textContent = `正答率${pct(analysis.weakest.correct, analysis.weakest.total)}%（${analysis.weakest.total}問中${analysis.weakest.correct}問）。ここを伸ばすとスコアが最も上がりやすい分野です。`;
+  if ($('btn-r-weak-skill')) {
+    $('btn-r-weak-skill').dataset.skillKey = analysis.weakest.key;
+    $('btn-r-weak-skill').textContent = `🎯「${analysis.weakest.name}」だけ10問特訓する →`;
+  }
   // Recommendation: recomputed from this session's score and weakest skill.
   renderRecommendationCard(
     getStudyMaterial(result.score, analysis.weakest.key),
@@ -8106,6 +8420,7 @@ function renderReviewItem() {
   $('rv-qno').textContent = `Q${item.position}`;
   $('rv-part').innerHTML = `Part ${q.part} <small>· ${PART_NAMES[q.part]}</small>`;
   if ($('rv-audio-bar')) $('rv-audio-bar').hidden = questionSection(q) !== 'listening';
+  if (typeof renderShadowingGym === 'function') renderShadowingGym('rv-shadow-gym', q);
   $('btn-rv-back').textContent = state.mode === 'weak' ? '← 復習結果' : '← 診断結果';
 
   renderPassageInto($('rv-passage'), q);
@@ -8158,6 +8473,7 @@ function moveReview(step) {
 
 function returnHome() {
   clearInterval(state.timerId);
+  if (typeof clearSprintTimer === 'function') clearSprintTimer();
   stopSpeech();
   cancelAnimationFrame(state.revealRaf);
   state.revealTimers.forEach(clearTimeout);
@@ -8204,6 +8520,7 @@ function confirmAbortToHome() {
   closeExitDialog();
   clearActiveSession();
   clearInterval(state.timerId);
+  if (typeof clearSprintTimer === 'function') clearSprintTimer();
   stopSpeech();
   state.questions = [];
   state.responses = [];
@@ -8549,6 +8866,7 @@ function checkListeningPractice() {
   if (fbOwl) fbOwl.src = q.part <= 4 ? 'img/owl-blue.png' : 'img/owl-pink.png';
   stopSpeech();
   $('lp-feedback-body').innerHTML = set.map((item,offset)=>practiceReviewHtml(item,state.index+offset)).join('');
+  if (typeof renderShadowingGym === 'function') renderShadowingGym('lp-shadow-gym', q);
   $('lp-continue').textContent = state.index+listeningPracticeSize >= state.questions.length ? '練習結果を見る →' : '次の問題へ →';
   showScreen('lp-feedback');
   $('lp-feedback-title').focus();
@@ -8577,7 +8895,7 @@ $('lp-retry-wrong').addEventListener('click',()=>{
   const retry=listeningPracticePart>=6 ? state.questions.filter(q=>passageIds.has(q.passageId)) : [3,4].includes(listeningPracticePart) ? state.questions.filter(q=>audioIds.has(q.audioId)) : wrong;
   if(retry.length)startListeningPractice(listeningPracticePart,retry);
 });
-document.querySelectorAll('.lp-home').forEach(button=>button.addEventListener('click',()=>{stopSpeech();clearInterval(state.timerId);listeningPracticeChecked=false;refreshHomeLearning();showScreen('home');document.getElementById('practice-title').scrollIntoView({block:'start'});}));
+document.querySelectorAll('.lp-home').forEach(button=>button.addEventListener('click',()=>{stopSpeech();clearInterval(state.timerId);if(typeof clearSprintTimer==='function')clearSprintTimer();listeningPracticeChecked=false;refreshHomeLearning();showScreen('home');document.getElementById('practice-title').scrollIntoView({block:'start'});}));
 
 /* ---------- Wiring ---------- */
 
@@ -9226,28 +9544,33 @@ function initVocabTrainer() {
   renderCard();
 }
 
-/* ---------- 5. Deep-Link Launch (?mode=quick, ?practice=5, ?view=vocab) ---------- */
+/* ---------- 5. Deep-Link Launch (?mode=quick|sprint, ?practice=5, ?drill=pos, ?view=vocab) ---------- */
 
 function handleInitialDeepLink() {
   let params;
   try { params = new URLSearchParams(window.location.search); } catch (e) { return false; }
   const mode = params.get('mode');
   const prac = params.get('practice');
+  const drill = params.get('drill');
   const view = params.get('view');
-  if (!mode && !prac && !view) return false;
+  if (!mode && !prac && !drill && !view) return false;
 
-  // Clean URL query params while preserving canonical URL
   try {
     const cleanParams = new URLSearchParams(window.location.search);
-    ['mode', 'practice', 'view'].forEach(k => cleanParams.delete(k));
+    ['mode', 'practice', 'drill', 'view'].forEach(k => cleanParams.delete(k));
     const qs = cleanParams.toString();
     history.replaceState(null, '', window.location.pathname + (qs ? `?${qs}` : '') + window.location.hash);
   } catch (e) {}
 
+  if (drill && PINPOINT_TOPICS[drill]) {
+    startPinpointDrill(drill);
+    return true;
+  }
   if (prac && /^[1-7]$/.test(prac)) {
     startListeningPractice(Number(prac));
     return true;
   }
+  if (mode === 'sprint') { startPart5Sprint(); return true; }
   if (mode === 'quick') { openQualificationEntry(startQuickCombinedDiagnostic); return true; }
   if (mode === 'reading') { openQualificationEntry(startReadingDiagnostic); return true; }
   if (mode === 'listening') { openQualificationEntry(startListeningDiagnostic); return true; }
@@ -9314,9 +9637,588 @@ function initPwaInstallCard() {
   });
 }
 
+/* ---------- 7. Exam Countdown Coach & Study Calendar (.ics) Export ---------- */
+
+function getSavedExamDate() {
+  const raw = readStored(STORAGE_KEYS.examDate, '');
+  return (typeof raw === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw)) ? raw : '';
+}
+
+function daysUntilDateKey(dateKey) {
+  if (!dateKey) return null;
+  const [y, m, d] = dateKey.split('-').map(Number);
+  const target = new Date(y, m - 1, d);
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((target.getTime() - today.getTime()) / 86400000);
+}
+
+function refreshExamCountdown() {
+  const badge = $('home-exam-badge');
+  const advice = $('home-exam-advice');
+  const calBtn = $('btn-exam-cal');
+  const toggleBtn = $('btn-exam-toggle');
+  const input = $('exam-date-input');
+  if (!badge || !advice || !toggleBtn) return;
+
+  const dateKey = getSavedExamDate();
+  if (input) input.value = dateKey || '';
+  badge.classList.remove('is-set', 'is-soon');
+
+  if (!dateKey) {
+    badge.textContent = '📅 次の受験日：未設定';
+    toggleBtn.textContent = '受験日を設定';
+    advice.hidden = true;
+    if (calBtn) calBtn.hidden = true;
+    return;
+  }
+
+  const diff = daysUntilDateKey(dateKey);
+  toggleBtn.textContent = '日程変更';
+  if (calBtn) calBtn.hidden = diff < 0;
+
+  if (diff < 0) {
+    badge.textContent = `📅 受験日（${dateKey}）経過`;
+    advice.textContent = '受験おつかれさまでした！次の目標試験日を設定すると逆算プランが切り替わります。';
+    advice.hidden = false;
+  } else if (diff === 0) {
+    badge.classList.add('is-soon');
+    badge.textContent = '🔥 本日がTOEIC受験日です！';
+    advice.textContent = '新しいことは詰め込まず、Part 6終了＝残り55分の時計ルールだけ意識して力を出し切りましょう！';
+    advice.hidden = false;
+  } else if (diff <= 7) {
+    badge.classList.add('is-soon');
+    badge.textContent = `⚡ 試験日まで あと ${diff}日（${dateKey}）`;
+    advice.textContent = '直前仕上げ期：新規教材は増やさず「苦手問題の卒業」と「Part 5 20秒タイムアタック」で取りこぼしをゼロにしましょう。';
+    advice.hidden = false;
+  } else if (diff <= 30) {
+    badge.classList.add('is-set');
+    badge.textContent = `🎯 試験日まで あと ${diff}日（${dateKey}）`;
+    advice.textContent = '弱点集中期：診断で出た最弱点テーマの「ピンポイント10問特訓」を回し、週1回クイック診断で伸びを確認しましょう。';
+    advice.hidden = false;
+  } else {
+    badge.classList.add('is-set');
+    badge.textContent = `📅 試験日まで あと ${diff}日（${dateKey}）`;
+    advice.textContent = '基礎養成期：毎日の「今日の1問」＋「スピード単語帳10語」で連続学習ストリークを伸ばすのが最短ルートです。';
+    advice.hidden = false;
+  }
+}
+
+function downloadExamStudyIcs() {
+  const dateKey = getSavedExamDate();
+  if (!dateKey) return;
+  const compactExam = dateKey.replace(/-/g, '');
+  const now = new Date();
+  const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+  const startDateCompact = `${tomorrow.getFullYear()}${String(tomorrow.getMonth() + 1).padStart(2, '0')}${String(tomorrow.getDate()).padStart(2, '0')}`;
+  const goal = getTargetScore();
+  const goalLabel = goal ? `（目標 ${goal}点）` : '';
+
+  const icsLines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//LexSophia//TOEIC Study Planner//JA',
+    'BEGIN:VEVENT',
+    `DTSTART;VALUE=DATE:${compactExam}`,
+    `SUMMARY:TOEIC受験日${goalLabel} - LexSophia`,
+    'DESCRIPTION:受験票・証明写真・本人確認書類・HB鉛筆・アナログ腕時計を確認！ https://mylexsophia.com/',
+    'END:VEVENT',
+    'BEGIN:VEVENT',
+    `DTSTART:${startDateCompact}T200000`,
+    `DTEND:${startDateCompact}T201000`,
+    `RRULE:FREQ=DAILY;UNTIL=${compactExam}T235959`,
+    `SUMMARY:LexSophia 毎日10分TOEIC演習${goalLabel}`,
+    'DESCRIPTION:今日の1問＆スピード単語帳で連続学習をキープ！ https://mylexsophia.com/',
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  const blob = new Blob([icsLines], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `LexSophia_TOEIC_Plan_${compactExam}.ics`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function initExamCountdown() {
+  const toggleBtn = $('btn-exam-toggle');
+  const picker = $('home-exam-picker');
+  const input = $('exam-date-input');
+  const clearBtn = $('btn-exam-clear');
+  const calBtn = $('btn-exam-cal');
+  if (!toggleBtn || !picker || !input) return;
+
+  input.min = localDateKey(new Date()) || '';
+
+  toggleBtn.addEventListener('click', () => {
+    picker.hidden = !picker.hidden;
+  });
+
+  input.addEventListener('change', () => {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(input.value)) {
+      writeStored(STORAGE_KEYS.examDate, input.value);
+      picker.hidden = true;
+      refreshExamCountdown();
+    }
+  });
+
+  document.querySelectorAll('[data-exam-offset]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const days = Number(btn.dataset.examOffset) || 30;
+      const d = new Date();
+      d.setDate(d.getDate() + days);
+      const key = localDateKey(d);
+      if (key) {
+        writeStored(STORAGE_KEYS.examDate, key);
+        picker.hidden = true;
+        refreshExamCountdown();
+      }
+    });
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      try { localStorage.removeItem(STORAGE_KEYS.examDate); } catch (e) {}
+      picker.hidden = true;
+      refreshExamCountdown();
+    });
+  }
+
+  if (calBtn) calBtn.addEventListener('click', downloadExamStudyIcs);
+  refreshExamCountdown();
+}
+
+/* ---------- 8. Weak-Topic Pinpoint Drills & History Wrong-Item Retry ---------- */
+
+const PINPOINT_TOPICS = {
+  pos: {
+    part: 5,
+    label: '品詞問題',
+    filter: q => q.part === 5 && ['parts of speech', 'word forms', 'adverbs', 'adjective modifier', 'adverb modifier'].includes(q.focus)
+  },
+  tense: {
+    part: 5,
+    label: '動詞・時制・態',
+    filter: q => q.part === 5 && ['verb tense', 'subject-verb agreement', 'passive voice', 'transitive verbs', 'time clause tense', 'past counterfactual', 'verb form'].includes(q.focus)
+  },
+  connectors: {
+    part: 5,
+    label: '接続詞・前置詞・文構造',
+    filter: q => q.part === 5 && (q.skill === 'structure' || ['prepositions', 'conjunctions', 'relative pronouns', 'sentence structure', 'conjunction vs preposition', 'conditions', 'contrast', 'gerund after preposition', 'relative possessives', 'time conjunctions', 'inversion'].includes(q.focus))
+  },
+  vocab: {
+    part: 5,
+    label: '語彙・コロケーション',
+    filter: q => q.part === 5 && (q.skill === 'vocabulary' || ['vocabulary', 'collocations', 'word choice', 'business collocations'].includes(q.focus))
+  },
+  p2indirect: {
+    part: 2,
+    label: 'Part 2 間接・変化球応答',
+    filter: q => q.part === 2 && q.focus !== 'wh-question'
+  },
+  p7multi: {
+    part: 7,
+    label: 'Part 7 複数文書照合',
+    isPassageSet: true,
+    filter: q => q.part === 7 && PASSAGES[q.passageId] && Array.isArray(PASSAGES[q.passageId].sections)
+  }
+};
+const pinpointPrevIds = {};
+
+function startPinpointDrill(topicKey) {
+  const cfg = PINPOINT_TOPICS[topicKey];
+  if (!cfg) return;
+  cancelAnimationFrame(state.revealRaf);
+  state.revealTimers.forEach(clearTimeout);
+  state.revealTimers = [];
+  stopSpeech();
+
+  const sourceBank = cfg.part <= 4 ? LISTENING_BANK : QUESTION_BANK;
+  const pool = sourceBank.filter(cfg.filter);
+  const seen = new Set(pinpointPrevIds[topicKey] || []);
+  let qs = [];
+  if (cfg.isPassageSet) {
+    const groups = new Map();
+    pool.forEach(q => {
+      if (!groups.has(q.passageId)) groups.set(q.passageId, []);
+      groups.get(q.passageId).push(q);
+    });
+    qs = pickPassageSets([...groups.values()], 2, seen).flat();
+  } else {
+    qs = pickFreshQuestions(pool, Math.min(10, pool.length), seen);
+  }
+  if (!qs.length) return;
+  pinpointPrevIds[topicKey] = qs.map(q => q.id);
+  startListeningPractice(cfg.part, qs);
+}
+
+function launchSkillDrillFromResult(skillKey) {
+  const map = {
+    grammar: 'pos',
+    structure: 'connectors',
+    vocabulary: 'vocab',
+    reading: 'p7multi',
+    response: 'p2indirect'
+  };
+  if (map[skillKey]) {
+    startPinpointDrill(map[skillKey]);
+    return;
+  }
+  const partMap = { photo: 1, conversation: 3, talk: 4 };
+  if (partMap[skillKey]) {
+    launchWeakPartFromResults(partMap[skillKey]);
+  }
+}
+
+function startHistoryWrongDrill(wrongIds) {
+  if (!Array.isArray(wrongIds) || !wrongIds.length) return;
+  const byId = new Map(ALL_QUESTION_BANK.map(q => [q.id, q]));
+  const used = new Set();
+  const selected = [];
+  for (const id of wrongIds) {
+    const q = byId.get(id);
+    if (!q || used.has(q.id)) continue;
+    const group = q.part === 6
+      ? QUESTION_BANK.filter(x => x.part === 6 && x.passageId === q.passageId)
+      : ([3, 4].includes(q.part)
+        ? LISTENING_BANK.filter(x => x.part === q.part && x.audioId === q.audioId)
+        : [q]);
+    group.forEach(x => {
+      if (!used.has(x.id)) {
+        used.add(x.id);
+        selected.push(x);
+      }
+    });
+  }
+  if (!selected.length) return;
+  beginTest(selected, 'weak', 'weak');
+}
+
+document.querySelectorAll('[data-pinpoint]').forEach(btn => {
+  btn.addEventListener('click', () => startPinpointDrill(btn.dataset.pinpoint));
+});
+if ($('btn-r-weak-skill')) {
+  $('btn-r-weak-skill').addEventListener('click', () => launchSkillDrillFromResult($('btn-r-weak-skill').dataset.skillKey));
+}
+if ($('btn-listen-weak-skill')) {
+  $('btn-listen-weak-skill').addEventListener('click', () => launchSkillDrillFromResult($('btn-listen-weak-skill').dataset.skillKey));
+}
+
+/* ---------- 9. Part 5 "20-Second Sprint (Time Attack 10Q)" Mode ---------- */
+
+const SPRINT_LIMIT_SEC = 20;
+let sprintIntervalId = null;
+let sprintPrevIds = [];
+let lastSprintShareSummary = null;
+
+function clearSprintTimer() {
+  if (sprintIntervalId) {
+    clearInterval(sprintIntervalId);
+    sprintIntervalId = null;
+  }
+}
+
+function startSprintQuestionClock() {
+  clearSprintTimer();
+  const barWrap = $('sprint-bar-wrap');
+  const secEl = $('sprint-sec-left');
+  const fillEl = $('sprint-bar-fill');
+  if (!barWrap || !secEl || !fillEl) return;
+  barWrap.hidden = false;
+  fillEl.style.width = '100%';
+  fillEl.classList.remove('is-warn', 'is-danger');
+  secEl.textContent = '20.0s';
+
+  sprintIntervalId = setInterval(() => {
+    if (state.mode !== 'sprint' || !$('test').classList.contains('is-active')) {
+      clearSprintTimer();
+      return;
+    }
+    const elapsed = (Date.now() - state.questionShownAt) / 1000;
+    const rem = Math.max(0, SPRINT_LIMIT_SEC - elapsed);
+    secEl.textContent = `${rem.toFixed(1)}s`;
+    fillEl.style.width = `${(rem / SPRINT_LIMIT_SEC) * 100}%`;
+    fillEl.classList.toggle('is-warn', rem <= 8 && rem > 4);
+    fillEl.classList.toggle('is-danger', rem <= 4);
+    if (rem <= 0) {
+      advanceSprintQuestion(true);
+    }
+  }, 100);
+}
+
+function renderSprintCurrentQuestion() {
+  renderDiagnosticQuestion();
+  $('part-tag').innerHTML = '⚡ Part 5 タイムアタック <small>· 1問20秒制限</small>';
+  startSprintQuestionClock();
+}
+
+function startPart5Sprint() {
+  const pool = QUESTION_BANK.filter(q => q.part === 5);
+  const qs = pickFreshQuestions(pool, 10, new Set(sprintPrevIds));
+  sprintPrevIds = qs.map(q => q.id);
+  diagnosticQualificationProfile = null;
+  beginTest(qs, 'sprint', 'reading');
+  renderSprintCurrentQuestion();
+}
+
+function advanceSprintQuestion(timedOut = false) {
+  if (state.mode !== 'sprint') return;
+  if (!timedOut && state.selected === null) return;
+  clearSprintTimer();
+  const rawSec = (Date.now() - state.questionShownAt) / 1000;
+  const sec = timedOut && state.selected === null ? SPRINT_LIMIT_SEC : clamp(rawSec, 0.2, SPRINT_LIMIT_SEC);
+  const chosen = state.selected !== null ? state.selected : -1;
+  state.responses[state.index] = { choice: chosen, seconds: sec, timedOut: Boolean(timedOut && state.selected === null) };
+
+  if (state.index + 1 < state.questions.length) {
+    state.index += 1;
+    renderSprintCurrentQuestion();
+    window.scrollTo(0, 0);
+  } else {
+    finishSprint();
+  }
+}
+
+function finishSprint() {
+  clearSprintTimer();
+  clearInterval(state.timerId);
+  stopSpeech();
+  updateWeakRecords(state.questions, state.responses);
+  recordStudyActivity();
+  refreshHomeLearning();
+
+  const total = state.questions.length;
+  const correct = state.questions.filter((q, i) => state.responses[i].choice === q.answer).length;
+  const timeouts = state.responses.filter(r => r.timedOut).length;
+  const avgSec = state.responses.reduce((s, r) => s + (r.seconds || 0), 0) / Math.max(total, 1);
+
+  let rank = 'C';
+  let comment = 'まずは品詞・動詞の形を「全文和訳せず空欄前後で即決」する型を身につけましょう！';
+  let owl = 'img/owl-blue.png';
+  if (correct >= 9 && avgSec <= 14) {
+    rank = 'S';
+    comment = '圧巻のSランク！本番860点超ペースのスピード＆精度です！';
+    owl = 'img/owl-amber.png';
+  } else if (correct >= 8 && avgSec <= 18) {
+    rank = 'A';
+    comment = 'ナイスAランク！本番の「Part 5＝10分通過」が十分狙える実力です！';
+    owl = 'img/owl-amber.png';
+  } else if (correct >= 6) {
+    rank = 'B';
+    comment = 'Bランク！基礎は取れています。迷った問題の解説を確認してあと2問＆3秒短縮を狙いましょう。';
+    owl = 'img/owl-pink.png';
+  }
+
+  const badge = $('sprint-rank-badge');
+  badge.textContent = rank;
+  badge.classList.toggle('is-s', rank === 'S');
+  $('sprint-rank-comment').textContent = comment;
+  $('sprint-res-owl').src = owl;
+  $('sprint-stat-score').textContent = `${correct} / ${total}`;
+  $('sprint-stat-avg').textContent = `${avgSec.toFixed(1)}秒`;
+  $('sprint-stat-timeout').textContent = `${timeouts}問`;
+  lastSprintShareSummary = { rank, correct, total, avgSec: avgSec.toFixed(1) };
+
+  $('sprint-all-review').innerHTML = state.questions.map((q, i) => {
+    const r = state.responses[i];
+    const ok = r.choice === q.answer;
+    const statusLabel = r.timedOut ? '⏰ 時間切れ' : (ok ? '正解 ✓' : '不正解');
+    return `<details class="lp-review"><summary>${i + 1}問目 · ${statusLabel}（${r.seconds.toFixed(1)}秒）</summary>` +
+      practiceReviewHtml(q, i) + `</details>`;
+  }).join('');
+
+  showScreen('sprint-results');
+  $('sprint-res-title').focus();
+}
+
+function shareSprintOnX() {
+  if (!lastSprintShareSummary) return;
+  const s = lastSprintShareSummary;
+  const txt = `LexSophia「Part 5 1問20秒タイムアタック」で【${s.rank}ランク】獲得！⚡\n正解 ${s.correct}/${s.total}問 · 平均 ${s.avgSec}秒/問\n#LexSophia #TOEIC`;
+  const url = 'https://mylexsophia.com/?mode=sprint';
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(txt) + '&url=' + encodeURIComponent(url), '_blank', 'noopener,width=600,height=540');
+}
+
+if ($('btn-start-sprint')) $('btn-start-sprint').addEventListener('click', startPart5Sprint);
+if ($('btn-sprint-again')) $('btn-sprint-again').addEventListener('click', startPart5Sprint);
+if ($('btn-sprint-x')) $('btn-sprint-x').addEventListener('click', shareSprintOnX);
+
+/* ---------- 10. Listening Shadowing & 1-Sentence Loop Gym ---------- */
+
+let activeShadowKey = null;
+let shadowLoopActive = false;
+let shadowLoopTimer = null;
+
+function resetShadowingLoopState() {
+  shadowLoopActive = false;
+  activeShadowKey = null;
+  clearTimeout(shadowLoopTimer);
+  shadowLoopTimer = null;
+  document.querySelectorAll('.sg-btn.is-active').forEach(b => {
+    b.classList.remove('is-active');
+    if (b.dataset.sgKind === 'loop') b.textContent = '🔁 ループ';
+    else b.textContent = '▶ 再生';
+  });
+}
+
+function playShadowLine(clipSrc, fallbackText, shouldLoop, btnEl, lineKey) {
+  const togglingSame = activeShadowKey === lineKey && (state.speaking || shadowLoopActive);
+  stopSpeech();
+  if (togglingSame) return;
+
+  activeShadowKey = lineKey;
+  shadowLoopActive = shouldLoop;
+  state.speaking = true;
+  const run = state.speechRun;
+
+  if (btnEl) {
+    btnEl.classList.add('is-active');
+    btnEl.textContent = shouldLoop ? '■ ループ停止' : '■ 停止';
+  }
+
+  const triggerNextOrEnd = () => {
+    if (run !== state.speechRun) return;
+    if (shadowLoopActive) {
+      shadowLoopTimer = setTimeout(runOnce, 650);
+    } else {
+      state.speaking = false;
+      resetShadowingLoopState();
+    }
+  };
+
+  const speakFallback = () => {
+    if (!speechSupported() || !fallbackText) {
+      state.speaking = false;
+      resetShadowingLoopState();
+      return;
+    }
+    const u = new SpeechSynthesisUtterance(fallbackText);
+    u.lang = 'en-US';
+    u.rate = 0.92 * (state.audioRate || 1.0);
+    u.onend = triggerNextOrEnd;
+    u.onerror = () => { state.speaking = false; resetShadowingLoopState(); };
+    window.speechSynthesis.speak(u);
+  };
+
+  function runOnce() {
+    if (run !== state.speechRun) return;
+    if (clipSrc) {
+      const audio = new Audio(EMBEDDED_AUDIO[clipSrc] || clipSrc);
+      state.activeAudio = audio;
+      audio.defaultPlaybackRate = state.audioRate || 1.0;
+      audio.playbackRate = state.audioRate || 1.0;
+      audio.onended = triggerNextOrEnd;
+      audio.onerror = speakFallback;
+      const p = audio.play();
+      if (p && typeof p.catch === 'function') p.catch(speakFallback);
+    } else {
+      speakFallback();
+    }
+  }
+  runOnce();
+}
+
+function renderShadowingGym(containerId, q) {
+  const box = $(containerId);
+  if (!box) return;
+  if (!q || questionSection(q) !== 'listening') {
+    box.hidden = true;
+    box.innerHTML = '';
+    return;
+  }
+  const audioData = LISTENING_AUDIO[q.audioId];
+  const segments = (audioData && Array.isArray(audioData.segments) && audioData.segments.length)
+    ? audioData.segments.map(s => s.text)
+    : (q.part === 1
+      ? [`Look at the picture. ${q.choices.map((c, i) => `${LETTERS[i]}. ${c}`).join(' ')}`]
+      : []);
+  const jaSegs = (audioData && Array.isArray(audioData.jaSegments)) ? audioData.jaSegments : [];
+  if (!segments.length) {
+    box.hidden = true;
+    box.innerHTML = '';
+    return;
+  }
+
+  const hq = HQ_LISTENING_AUDIO[q.id] || {};
+  const passageClips = hq.passage || [];
+  const questionClips = hq.question || [];
+
+  const rowsHtml = segments.map((enText, idx) => {
+    let clipSrc = '';
+    if (passageClips.length === segments.length) {
+      clipSrc = passageClips[idx];
+    } else if (segments.length === 1 && questionClips.length === 1) {
+      clipSrc = questionClips[0];
+    } else if (q.part === 2 && idx === 0 && questionClips.length >= 1) {
+      clipSrc = questionClips[0];
+    }
+    const jaText = jaSegs[idx] || '';
+    return `<div class="shadow-line">` +
+      `<div class="shadow-line__text">` +
+      `<p class="shadow-line__en">${escapeHtml(enText)}</p>` +
+      (jaText ? `<p class="shadow-line__ja">${escapeHtml(jaText)}</p>` : '') +
+      `</div>` +
+      `<div class="shadow-line__btns">` +
+      `<button type="button" class="sg-btn" data-sg-kind="once" data-sg-idx="${idx}" data-sg-clip="${escapeHtml(clipSrc)}">▶ 再生</button>` +
+      `<button type="button" class="sg-btn" data-sg-kind="loop" data-sg-idx="${idx}" data-sg-clip="${escapeHtml(clipSrc)}">🔁 ループ</button>` +
+      `</div></div>`;
+  }).join('');
+
+  box.innerHTML =
+    `<div class="shadow-gym" data-mask="both">` +
+    `<div class="shadow-gym__head">` +
+    `<span class="shadow-gym__title">🎧 1文リピート・シャドーイング練習</span>` +
+    `<div class="shadow-masks" role="group" aria-label="字幕表示切替">` +
+    `<button type="button" class="shadow-mask-btn is-active" data-sg-mask="both">英文＋和訳</button>` +
+    `<button type="button" class="shadow-mask-btn" data-sg-mask="en">英文のみ</button>` +
+    `<button type="button" class="shadow-mask-btn" data-sg-mask="ja">和訳のみ</button>` +
+    `<button type="button" class="shadow-mask-btn" data-sg-mask="blind">字幕なし</button>` +
+    `</div></div>` +
+    `<div class="shadow-lines">${rowsHtml}</div>` +
+    `</div>`;
+  box.hidden = false;
+
+  const gymEl = box.querySelector('.shadow-gym');
+  box.querySelectorAll('[data-sg-mask]').forEach(mBtn => {
+    mBtn.addEventListener('click', () => {
+      gymEl.dataset.mask = mBtn.dataset.sgMask;
+      box.querySelectorAll('[data-sg-mask]').forEach(b => b.classList.toggle('is-active', b === mBtn));
+    });
+  });
+
+  box.querySelectorAll('.sg-btn').forEach(sBtn => {
+    sBtn.addEventListener('click', () => {
+      const idx = Number(sBtn.dataset.sgIdx);
+      const clip = sBtn.dataset.sgClip || '';
+      const loop = sBtn.dataset.sgKind === 'loop';
+      playShadowLine(clip, segments[idx], loop, sBtn, `${containerId}-${q.id}-${idx}-${sBtn.dataset.sgKind}`);
+    });
+  });
+}
+
+/* ---------- 11. Print / Save A4 PDF Study Report ---------- */
+
+function printCurrentDiagnosticReport() {
+  cancelAnimationFrame(state.revealRaf);
+  state.revealTimers.forEach(clearTimeout);
+  state.revealTimers = [];
+  document.querySelectorAll('.screen.is-active .reveal').forEach(el => el.classList.add('is-in'));
+  document.querySelectorAll('.screen.is-active .pv.is-pending').forEach(el => el.classList.remove('is-pending'));
+  document.querySelectorAll('.screen.is-active .steps').forEach(el => el.classList.add('is-collapsed'));
+  window.print();
+}
+
+if ($('btn-r-print')) $('btn-r-print').addEventListener('click', printCurrentDiagnosticReport);
+if ($('btn-audio-print')) $('btn-audio-print').addEventListener('click', printCurrentDiagnosticReport);
+
 window.addEventListener('popstate', routeFromHash);
 initDailyQuiz();
 initVocabTrainer();
+initExamCountdown();
 initPwaInstallCard();
 refreshHomeLearning();
 if (!handleInitialDeepLink()) {
