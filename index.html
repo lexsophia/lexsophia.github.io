@@ -213,8 +213,14 @@
     --warn: var(--ink-amber);
     --warn-tint: var(--tint-amber-bg);
     --radius: var(--radius-card);
-    --max: 540px;
+    --max: 580px;
     --font: var(--font-sans);
+  }
+  @media (min-width: 768px) {
+    :root { --max: 700px; }
+  }
+  @media (min-width: 1080px) {
+    :root { --max: 760px; }
   }
 
   * { box-sizing: border-box; }
@@ -225,7 +231,7 @@
     margin: 0;
     font-family: var(--font-sans);
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--ink-primary);
     background: var(--surface-subtle);
     -webkit-font-smoothing: antialiased;
@@ -238,7 +244,10 @@
 
   .screen { display: none; min-height: 100dvh; background: var(--surface-subtle); }
   .screen.is-active { display: block; }
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 24px 20px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 22px 64px; }
+  @media (min-width: 768px) {
+    .wrap { padding: 44px 40px 88px; }
+  }
 
   /* ---------- Buttons (Monotone Pill CTA) ---------- */
   .btn {
@@ -276,7 +285,7 @@
 
   /* ---------- Home (Yoom LP Pattern B Layout) ---------- */
   #home { position: relative; overflow-x: clip; background: var(--surface-subtle); }
-  #home .wrap { position: relative; max-width: 1120px; padding: 16px clamp(24px, 5vw, 48px) 84px; }
+  #home .wrap { position: relative; max-width: 1160px; padding: 28px clamp(22px, 5vw, 56px) 104px; }
 
   /* Full-bleed Yoom #eaeef2 Hero Stage */
   .hero-stage {
@@ -352,59 +361,59 @@
   .hero-yoom {
     position: relative; z-index: 2;
     max-width: 1400px; margin: 0 auto;
-    padding: clamp(48px, 6.5vw, 84px) clamp(24px, 4.5vw, 48px) clamp(44px, 5vw, 56px);
+    padding: clamp(54px, 7vw, 96px) clamp(22px, 5vw, 56px) clamp(68px, 7.5vw, 96px);
   }
   .hero-title {
     margin: 0 auto; text-align: center;
-    font-size: clamp(30px, 5vw, 64px); line-height: 1.22; font-weight: 700;
+    font-size: clamp(30px, 5vw, 64px); line-height: 1.26; font-weight: 700;
     letter-spacing: -0.045em; max-width: 1080px; text-wrap: balance;
     line-break: strict; overflow-wrap: normal; color: var(--ink-primary);
   }
   .hero-title .nb { white-space: nowrap; }
 
   .hero-arena {
-    position: relative; margin-top: clamp(32px, 4.5vw, 48px);
+    position: relative; margin-top: clamp(36px, 5vw, 54px);
     min-height: 270px;
   }
 
   /* Center Prompt Box (exact Yoom 713px proportion) */
   .hero-center {
     position: relative; z-index: 4;
-    width: 100%; max-width: 713px; margin: 0 auto;
+    width: 100%; max-width: 720px; margin: 0 auto;
   }
   .hero-prompt-label {
     font-size: 14.5px; font-weight: 700; color: var(--ink-primary);
-    letter-spacing: -0.01em; margin: 0 0 16px 4px; text-align: left;
+    letter-spacing: -0.01em; margin: 0 0 18px 6px; text-align: left;
   }
   .yoom-hero-box {
-    width: 100%; min-height: 226px; padding: 28px 30px 22px;
-    background: var(--surface-canvas); border-radius: 24px;
+    width: 100%; min-height: 236px; padding: 32px 36px 26px;
+    background: var(--surface-canvas); border-radius: 28px;
     box-shadow: var(--shadow-prompt);
-    display: flex; flex-direction: column; justify-content: space-between; gap: 22px;
+    display: flex; flex-direction: column; justify-content: space-between; gap: 26px;
     transition: box-shadow 0.2s ease;
   }
   .yoom-hero-box:hover {
     box-shadow: 0 20px 36px rgba(24, 24, 27, 0.11), 0 0 1px rgba(24, 24, 27, 0.3);
   }
   .hero-prompt-preview {
-    display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px;
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 16px;
     font-size: 16px; font-weight: 500; line-height: 1.6; color: var(--ink-muted);
     min-height: 32px;
   }
   .hero-prompt-preview strong {
-    font-size: 19px; color: var(--ink-primary); font-weight: 700; letter-spacing: -0.03em;
+    font-size: 20px; color: var(--ink-primary); font-weight: 700; letter-spacing: -0.03em;
   }
   .hero-prompt-preview span {
     font-family: var(--font-num); font-size: 15px; font-weight: 600;
     color: var(--ink-secondary); font-variant-numeric: tabular-nums;
   }
 
-  .hero-mode-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .hero-mode-chips { display: flex; flex-wrap: wrap; gap: 11px; }
   .hero-chip {
-    display: inline-flex; align-items: center; gap: 7px;
-    padding: 8px 16px; border: 1.5px solid transparent; border-radius: var(--radius-pill);
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px; border: 1.5px solid transparent; border-radius: var(--radius-pill);
     background: var(--surface-subtle); color: var(--ink-secondary);
-    font-size: 13px; font-weight: 700;
+    font-size: 13.5px; font-weight: 700;
     box-shadow: var(--shadow-ring-subtle);
     transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s var(--ease-ui);
   }
@@ -412,14 +421,14 @@
   .hero-chip.is-active {
     background: var(--tint-blue-bg); color: var(--ink-blue); border-color: var(--pop-blue);
   }
-  .hero-chip-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pop-blue); }
+  .hero-chip-dot { flex-shrink: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--pop-blue); }
   .hero-chip[data-hero-mode="reading"] .hero-chip-dot { background: var(--pop-violet); }
   .hero-chip[data-hero-mode="listening"] .hero-chip-dot { background: var(--pop-mint); }
   .hero-chip[data-hero-mode="combined"] .hero-chip-dot { background: var(--pop-pink); }
 
   .hero-box-foot {
-    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-    padding-top: 16px; border-top: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    padding-top: 18px; border-top: 1px solid var(--line);
   }
   .hero-box-meta { font-size: 12.5px; font-weight: 600; color: var(--ink-muted); }
   .hero-box-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
@@ -467,9 +476,9 @@
   /* 4-Owl Mascot Lineup directly beneath the White Command Box */
   .hero-owls {
     position: relative; z-index: 3;
-    width: min(100%, 670px);
-    margin: -22px auto 0;
-    padding: 0 8px;
+    width: min(100%, 640px);
+    margin: 22px auto 0;
+    padding: 0 12px;
     pointer-events: none;
     user-select: none;
   }
@@ -486,9 +495,9 @@
   /* 3-Step Flow: Vertical Right Wing on Wide Desktop (Yoom style), Horizontal Bar below Owls on Narrow Screens */
   .hero-flow {
     position: relative; z-index: 4;
-    width: 100%; max-width: 713px; margin: 20px auto 0;
+    width: 100%; max-width: 720px; margin: 28px auto 0;
     display: grid; grid-template-columns: 1fr auto 1fr auto 1fr;
-    align-items: center; gap: 10px;
+    align-items: center; gap: 12px;
   }
   .hero-flow-node {
     display: flex; align-items: center; gap: 10px;
@@ -543,18 +552,18 @@
 
   /* Overlapping White Rounded Deck: All-in-One Violet Banner + Score Preview */
   .home-deck {
-    position: relative; z-index: 5; margin-top: -32px;
+    position: relative; z-index: 5; margin-top: -24px;
     background: var(--surface-canvas);
     border-radius: 56px 56px 0 0;
     box-shadow: 0 -10px 32px rgba(24, 24, 27, 0.04), var(--shadow-ring-subtle);
-    padding: clamp(44px, 6vw, 72px) clamp(20px, 4.5vw, 48px) clamp(64px, 8vw, 96px);
+    padding: clamp(56px, 7vw, 96px) clamp(22px, 5vw, 56px) clamp(76px, 9vw, 116px);
   }
 
   /* Vivid Violet "All in One" Banner + Original LexSophia 4-Step TOEIC Matrix */
   .allinone-banner {
     position: relative; overflow: hidden;
-    max-width: 1120px; margin: 0 auto clamp(56px, 7vw, 88px);
-    padding: clamp(32px, 4.5vw, 54px) clamp(22px, 4.5vw, 54px);
+    max-width: 1120px; margin: 0 auto clamp(72px, 8.5vw, 112px);
+    padding: clamp(36px, 5vw, 60px) clamp(24px, 5vw, 60px);
     border-radius: var(--radius-bento);
     background-color: var(--pop-violet);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1120 560' fill='none'%3E%3Ccircle cx='780' cy='280' r='220' stroke='rgba(255,255,255,0.12)' stroke-width='54'/%3E%3Ccircle cx='780' cy='280' r='340' stroke='rgba(255,255,255,0.09)' stroke-width='58'/%3E%3Ccircle cx='780' cy='280' r='470' stroke='rgba(255,255,255,0.06)' stroke-width='52'/%3E%3C/svg%3E");
@@ -879,7 +888,7 @@
 
   /* Brand story: Yoom Signature Pop-Blue Bento Block with White Cards inside */
   .brand-story {
-    margin-top: clamp(64px, 7.5vw, 88px); padding: clamp(36px, 5vw, 56px) clamp(24px, 4.5vw, 52px);
+    margin-top: clamp(80px, 9.5vw, 120px); padding: clamp(40px, 5.5vw, 64px) clamp(24px, 5vw, 60px);
     border: 0; border-radius: var(--radius-bento);
     background-color: var(--pop-blue);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 700' fill='none'%3E%3Cpath d='M-90 610C180 390 420 350 670 465C890 565 1070 420 1290 180' stroke='rgba(255,255,255,0.12)' stroke-width='110' stroke-linecap='round'/%3E%3Cpath d='M80 -70C270 110 510 140 760 45C960 -30 1120 50 1260 170' stroke='rgba(255,255,255,0.09)' stroke-width='72' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -932,7 +941,7 @@
 
   /* Home Footer: Yoom Signature Dark Slate #24292f */
   .home-foot {
-    margin-top: clamp(56px, 6.5vw, 76px); padding: clamp(32px, 4.5vw, 48px) clamp(24px, 4.5vw, 48px);
+    margin-top: clamp(64px, 7.5vw, 96px); padding: clamp(36px, 5vw, 56px) clamp(26px, 5vw, 56px);
     border-radius: var(--radius-card-lg);
     background: var(--surface-dark); color: var(--ink-inverse);
     box-shadow: var(--shadow-card);
@@ -943,28 +952,29 @@
   .origin .motto { margin-top: 4px; font-family: var(--font-num); font-size: 13.5px; color: var(--ink-muted); font-weight: 500; }
   .home-foot .disclaimer { margin-top: 18px; color: rgba(255, 255, 255, 0.68); text-align: left; }
   .home-foot-links {
-    margin-top: 16px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
-    font-size: 12.5px; font-weight: 600;
+    margin-top: 18px; display: flex; flex-wrap: wrap; gap: 18px; align-items: center;
+    font-size: 13px; font-weight: 600;
   }
   .home-foot-links a, .home-foot-links button {
     padding: 0; border: 0; background: none;
     color: rgba(255, 255, 255, 0.78); text-decoration: underline; text-underline-offset: 4px;
-    font-size: 12.5px; font-weight: 600; cursor: pointer;
+    font-size: 13px; font-weight: 600; cursor: pointer;
   }
   .home-foot-links a:hover, .home-foot-links button:hover { color: #ffffff; }
-  .home-foot .copyright { margin-top: 14px; color: rgba(255, 255, 255, 0.54); text-align: left; font-family: var(--font-num); }
+  .home-foot .copyright { margin-top: 16px; color: rgba(255, 255, 255, 0.54); text-align: left; font-family: var(--font-num); }
   .institution-note {
-    margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.72); font-size: 12.5px; line-height: 1.75;
+    margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.72); font-size: 12.5px; line-height: 1.8;
   }
 
   /* Learning tools: Yoom Bento White Cards + Growth Strip */
-  .home-learning { margin-top: clamp(64px, 7.5vw, 88px); padding-top: 0; border-top: 0; }
+  .home-learning { margin-top: clamp(80px, 9.5vw, 120px); padding-top: 0; border-top: 0; }
+  .home-micro { margin-top: clamp(76px, 9vw, 112px); padding-top: 0; }
   .learning-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; }
-  .learning-head h2 { font-size: clamp(22px, 3.6vw, 30px); letter-spacing: -0.04em; }
-  .learning-head p { margin-top: 6px; color: var(--ink-secondary); font-size: 14.5px; }
+  .learning-head h2 { font-size: clamp(23px, 3.8vw, 32px); letter-spacing: -0.04em; }
+  .learning-head p { margin-top: 8px; color: var(--ink-secondary); font-size: 15px; line-height: 1.7; }
   .home-growth-card {
-    margin-top: 20px; padding: 20px 22px; border-radius: var(--radius-card);
+    margin-top: 26px; padding: clamp(24px, 3.5vw, 34px) clamp(22px, 3.5vw, 36px); border-radius: var(--radius-card-lg);
     background: var(--surface-canvas); box-shadow: var(--shadow-card);
   }
   .home-growth-top {
@@ -1019,12 +1029,12 @@
     background: linear-gradient(90deg, var(--pop-blue), var(--pop-mint));
     transition: width 0.45s var(--ease-ui);
   }
-  .learning-grid { display: grid; gap: 14px; margin-top: 16px; }
+  .learning-grid { display: grid; gap: 18px; margin-top: 24px; }
   .learning-card {
-    width: 100%; min-height: 108px; padding: 22px 24px; text-align: left;
+    width: 100%; min-height: 112px; padding: 24px 26px; text-align: left;
     border: 0; border-radius: var(--radius-card); background: var(--surface-canvas);
     box-shadow: var(--shadow-card);
-    display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 16px;
+    display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 18px;
     transition: box-shadow 0.2s ease, transform 0.2s var(--ease-ui), background-color 0.2s ease;
   }
   .learning-card:hover { box-shadow: var(--shadow-btn-hover); transform: translateY(-2px); }
@@ -1193,44 +1203,49 @@
   }
   @media (max-width: 760px) {
     .hero-owls__spark { display: none; }
-    .hero-owls { margin-top: -8px; }
+    .hero-owls { margin-top: 26px; width: min(96%, 560px); }
   }
   @media (max-width: 720px) {
     .hero-flow {
-      grid-template-columns: 1fr; gap: 6px; margin-top: 18px;
+      grid-template-columns: 1fr; gap: 8px; margin-top: 26px;
     }
-    .hero-flow-node { padding: 11px 16px 11px 12px; }
+    .hero-flow-node { padding: 13px 18px 13px 14px; }
     .hero-flow-line { margin: 0 auto; transform: rotate(90deg); }
   }
   @media (max-width: 680px) {
     .brand-nav { gap: 6px; }
     .brand-nav a { display: none; }
-    .brandbar { width: calc(100% - 24px); padding: 8px 10px 8px 16px; gap: 8px; }
+    .brandbar { width: calc(100% - 28px); padding: 9px 11px 9px 18px; gap: 8px; }
     .brand-auth { padding: 8px 13px; font-size: 12.5px; max-width: 118px; }
     .brand-cta { padding: 9px 14px; font-size: 12.5px; }
-    .yoom-hero-box { padding: 22px 20px 18px; min-height: 204px; }
+    .yoom-hero-box { padding: 26px 22px 22px; min-height: 0; gap: 22px; border-radius: 26px; }
     .hero-prompt-preview { font-size: 15px; }
+    .hero-mode-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hero-chip { justify-content: center; padding: 11px 10px; font-size: 12.5px; }
     .hero-box-meta { display: none; }
-    .hero-box-actions { width: 100%; justify-content: flex-end; }
-    .home-deck { border-radius: 36px 36px 0 0; }
+    .hero-box-actions { width: 100%; justify-content: stretch; }
+    .hero-send-btn { width: 100%; height: 50px; font-size: 14.5px; }
+    .home-deck { border-radius: 38px 38px 0 0; margin-top: -18px; }
   }
   @media (max-width: 400px) {
     .wordmark { font-size: 18px; }
     .wordmark::before { flex: 0 0 24px; width: 24px; height: 24px; margin-right: 7px; }
     .brand-auth { padding: 8px 11px; font-size: 12px; max-width: 102px; }
     .brand-cta { padding: 8px 12px; font-size: 12px; }
+    .hero-mode-chips { gap: 8px; }
+    .hero-chip { padding: 10px 8px; font-size: 12px; gap: 6px; }
   }
   @media (max-width: 520px) {
-    .brand-story { border-radius: 30px; }
+    .brand-story { border-radius: 32px; }
     .home-foot { border-radius: 28px; }
-    .book-card { grid-template-columns: 58px 1fr; gap: 14px; padding: 18px; }
+    .book-card { grid-template-columns: 58px 1fr; gap: 14px; padding: 20px; }
     .book-mark { width: 58px; min-height: 82px; }
   }
   @media (min-width: 860px) {
-    #home .wrap { padding: 16px 40px 88px; }
+    #home .wrap { padding: 36px 56px 128px; }
     .wordmark { font-size: 21px; }
-    .home-showcase { grid-template-columns: 0.92fr 1.08fr; gap: clamp(32px, 4.5vw, 56px); }
-    .learning-grid { grid-template-columns: 1fr 1fr; }
+    .home-showcase { grid-template-columns: 0.92fr 1.08fr; gap: clamp(40px, 5vw, 68px); }
+    .learning-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
   }
   @media (prefers-reduced-motion: reduce) {
     .rise { opacity: 1; animation: none; }
@@ -1238,13 +1253,13 @@
   }
 
   /* ---------- Test (Pattern A: Calm Web Tool) ---------- */
-  #test .wrap { padding-top: 12px; padding-bottom: 132px; }
+  #test .wrap { padding-top: 20px; padding-bottom: 156px; }
   .test-head {
-    position: sticky; top: 10px; z-index: 20;
-    background: rgba(255, 255, 255, 0.88);
+    position: sticky; top: 14px; z-index: 20;
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    padding: 14px 18px 14px; margin: 0;
+    padding: 16px 20px; margin: 0;
     border-radius: var(--radius-card);
     box-shadow: 0 6px 20px rgba(24, 24, 27, 0.06), var(--shadow-ring-subtle);
   }
@@ -1252,7 +1267,7 @@
   .test-meta .count { font-family: var(--font-num); font-weight: 700; color: var(--ink-primary); font-variant-numeric: tabular-nums; }
   .test-meta .timer { justify-self: end; font-family: var(--font-num); font-weight: 600; color: var(--ink-secondary); font-variant-numeric: tabular-nums; }
   .test-home {
-    justify-self: start; padding: 6px 12px; border: 0; border-radius: var(--radius-pill);
+    justify-self: start; padding: 7px 14px; border: 0; border-radius: var(--radius-pill);
     background: var(--surface-subtle); color: var(--ink-primary); font-size: 12.5px; font-weight: 700;
     box-shadow: var(--shadow-ring-subtle);
     transition: background-color 0.2s ease, transform 0.2s var(--ease-ui);
@@ -1275,45 +1290,45 @@
   .exit-dialog__card h2 { font-size: 21px; line-height: 1.35; letter-spacing: -0.03em; }
   .exit-dialog__card p { margin-top: 10px; color: var(--ink-secondary); font-size: 14.5px; line-height: 1.7; }
   .exit-dialog__actions { display: grid; gap: 10px; margin-top: 22px; }
-  .progress { height: 7px; border-radius: var(--radius-pill); background: var(--surface-hero); overflow: hidden; margin-top: 12px; }
+  .progress { height: 7px; border-radius: var(--radius-pill); background: var(--surface-hero); overflow: hidden; margin-top: 13px; }
   .progress > i { display: block; height: 100%; width: 0; background: var(--pop-blue); border-radius: var(--radius-pill); transition: width 0.3s var(--ease-ui); }
 
   .part-tag {
-    display: inline-flex; align-items: center; gap: 6px; margin-top: 22px;
-    padding: 5px 14px; border-radius: var(--radius-pill);
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 26px;
+    padding: 6px 15px; border-radius: var(--radius-pill);
     background: var(--tint-blue-bg); color: var(--ink-blue);
     font-size: 12.5px; font-weight: 700;
   }
   .part-tag small { font-weight: 600; color: var(--pop-blue); }
 
   .passage {
-    margin-top: 16px; padding: 22px;
+    margin-top: 20px; padding: 24px 22px;
     background: var(--surface-canvas); border-radius: var(--radius-card);
     box-shadow: var(--shadow-card);
-    font-size: 15px; line-height: 1.75; white-space: pre-line;
+    font-size: 15.5px; line-height: 1.85; white-space: pre-line;
   }
-  .passage .hdr { font-weight: 700; margin-bottom: 8px; color: var(--ink-primary); }
+  .passage .hdr { font-weight: 700; margin-bottom: 10px; color: var(--ink-primary); }
   .passage .blank { font-weight: 700; color: var(--pop-blue); }
   .passage .blank.is-current { background: var(--pop-blue); color: var(--ink-inverse); padding: 1px 8px; border-radius: var(--radius-pill); }
   .passage.is-graphic { padding: 0; overflow: hidden; background: var(--surface-canvas); border: 0; box-shadow: var(--shadow-card); }
-  .graphic-title { padding: 16px 18px 13px; font-size: 15px; font-weight: 700; border-bottom: 1px solid var(--line); }
-  .graphic-table { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.45; }
-  .graphic-table th, .graphic-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .graphic-title { padding: 18px 20px 14px; font-size: 15px; font-weight: 700; border-bottom: 1px solid var(--line); }
+  .graphic-table { width: 100%; border-collapse: collapse; font-size: 13.5px; line-height: 1.5; }
+  .graphic-table th, .graphic-table td { padding: 11px 16px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
   .graphic-table th { color: var(--ink-secondary); background: var(--surface-subtle); font-size: 12px; font-weight: 700; }
   .graphic-table tr:last-child td { border-bottom: 0; }
-  .graphic-note { padding: 10px 14px; color: var(--ink-muted); background: var(--surface-subtle); border-top: 1px solid var(--line); font-size: 12px; }
-  .listening-question-graphic { margin: 14px 0 18px; overflow: hidden; border: 0; border-radius: 20px; background: var(--surface-canvas); box-shadow: var(--shadow-card); }
+  .graphic-note { padding: 12px 16px; color: var(--ink-muted); background: var(--surface-subtle); border-top: 1px solid var(--line); font-size: 12px; }
+  .listening-question-graphic { margin: 16px 0 20px; overflow: hidden; border: 0; border-radius: 20px; background: var(--surface-canvas); box-shadow: var(--shadow-card); }
 
-  .q-text { margin-top: 18px; font-size: 18.5px; line-height: 1.55; font-weight: 600; color: var(--ink-primary); }
+  .q-text { margin-top: 22px; font-size: 18.5px; line-height: 1.65; font-weight: 600; color: var(--ink-primary); }
   .q-text .gap { display: inline-block; min-width: 3.2em; border-bottom: 2px solid var(--ink-primary); transform: translateY(-2px); }
 
-  .choices { margin-top: 18px; display: grid; gap: 10px; }
+  .choices { margin-top: 22px; display: grid; gap: 13px; }
   .choice {
     display: flex; align-items: flex-start; gap: 14px;
-    width: 100%; padding: 15px 18px; text-align: left;
+    width: 100%; padding: 16px 20px; text-align: left;
     background: var(--surface-canvas); border: 2px solid transparent; border-radius: var(--radius-input);
     box-shadow: var(--shadow-card);
-    font-size: 15.5px; line-height: 1.5; font-weight: 500; color: var(--ink-primary);
+    font-size: 15.5px; line-height: 1.55; font-weight: 500; color: var(--ink-primary);
     transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.2s var(--ease-ui), box-shadow 0.2s ease;
   }
   .choice:hover { transform: translateY(-1px); box-shadow: var(--shadow-btn-hover); }
@@ -1330,19 +1345,19 @@
 
   .test-foot {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 15;
-    background: linear-gradient(to top, rgba(246, 248, 250, 0.98) 72%, rgba(246, 248, 250, 0));
-    padding: 20px 20px calc(16px + env(safe-area-inset-bottom));
+    background: linear-gradient(to top, rgba(246, 248, 250, 0.98) 74%, rgba(246, 248, 250, 0));
+    padding: 22px 22px calc(18px + env(safe-area-inset-bottom));
   }
   .test-foot .inner { max-width: var(--max); margin: 0 auto; }
-  .test-foot .hint { text-align: center; font-size: 12.5px; font-weight: 600; color: var(--ink-muted); margin-bottom: 8px; min-height: 18px; }
+  .test-foot .hint { text-align: center; font-size: 12.5px; font-weight: 600; color: var(--ink-muted); margin-bottom: 9px; min-height: 18px; }
 
   /* ---------- Results ---------- */
-  #results .wrap { padding-bottom: 48px; }
-  .res-title { font-size: clamp(24px, 5vw, 30px); font-weight: 700; letter-spacing: -0.04em; }
-  .res-lede { color: var(--ink-secondary); margin-top: 6px; font-size: 14px; line-height: 1.7; }
+  #results .wrap { padding-bottom: 72px; }
+  .res-title { font-size: clamp(24px, 5vw, 32px); font-weight: 700; letter-spacing: -0.04em; }
+  .res-lede { color: var(--ink-secondary); margin-top: 8px; font-size: 14.5px; line-height: 1.75; }
 
   .score-card {
-    margin-top: 20px; padding: 28px 24px 26px;
+    margin-top: 24px; padding: 34px 26px 30px;
     border: 0; border-radius: var(--radius-card-lg);
     background: var(--surface-canvas); text-align: center;
     box-shadow: var(--shadow-card);
@@ -2140,30 +2155,30 @@
 
   /* Search landing content: Yoom White Bento Accordion Card */
   .seo-guide {
-    margin: clamp(64px, 7.5vw, 88px) 0 0; padding: clamp(28px, 4.5vw, 44px);
+    margin: clamp(76px, 9vw, 112px) 0 0; padding: clamp(32px, 5vw, 52px);
     border: 0; border-radius: var(--radius-card-lg);
     background: var(--surface-canvas); color: var(--ink-primary);
     box-shadow: var(--shadow-card);
   }
-  .seo-guide h2 { font-size: clamp(22px, 3.6vw, 28px); line-height: 1.35; margin: 0 0 16px; letter-spacing: -0.04em; }
+  .seo-guide h2 { font-size: clamp(22px, 3.6vw, 28px); line-height: 1.35; margin: 0 0 18px; letter-spacing: -0.04em; }
   .seo-guide h3 { font-size: 17px; line-height: 1.5; margin: 0 0 10px; }
   .seo-guide p, .seo-guide li { font-size: 14.5px; line-height: 1.85; color: var(--ink-secondary); }
-  .seo-guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0; }
-  .seo-guide-card { padding: 22px; background: var(--surface-subtle); border: 0; border-radius: var(--radius-card); min-width: 0; }
+  .seo-guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+  .seo-guide-card { padding: 24px; background: var(--surface-subtle); border: 0; border-radius: var(--radius-card); min-width: 0; }
   .seo-guide-card ul, .seo-guide ol { padding-left: 22px; }
-  .seo-guide details { border-top: 1px solid var(--line); padding: 18px 0; }
+  .seo-guide details { border-top: 1px solid var(--line); padding: 20px 0; }
   .seo-guide details:last-of-type { padding-bottom: 4px; }
   .seo-guide summary { cursor: pointer; font-size: 15.5px; font-weight: 700; line-height: 1.6; color: var(--ink-primary); }
   .seo-guide summary:focus-visible { outline: 2.5px solid var(--pop-blue); outline-offset: 4px; border-radius: 8px; }
-  .seo-guide details p { margin-top: 10px; }
+  .seo-guide details p { margin-top: 12px; }
   .seo-guide .seo-note { font-size: 13px; color: var(--ink-muted); }
-  @media (max-width: 640px) { .seo-guide-grid { grid-template-columns: 1fr; } .seo-guide { margin: 36px 0 0; } .seo-guide-card { padding: 18px; } }
+  @media (max-width: 640px) { .seo-guide-grid { grid-template-columns: 1fr; } .seo-guide { margin: 64px 0 0; padding: 28px 22px; } .seo-guide-card { padding: 20px; } }
 
   .hero-lede .hero-phrase { display: inline-block; }
 
   /* Percentile card: Yoom Signature Violet Accent Block with Curve Watermark */
   .percentile-card {
-    position: relative; overflow: hidden; margin: 18px 0; padding: 28px;
+    position: relative; overflow: hidden; margin: 26px 0; padding: 34px 32px;
     border: 0; border-radius: var(--radius-card-lg);
     background-color: var(--pop-violet);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 420' fill='none'%3E%3Cpath d='M-50 360C110 210 260 190 410 260C520 310 600 220 670 80' stroke='rgba(255,255,255,0.13)' stroke-width='80' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -2175,43 +2190,43 @@
   .percentile-card .percentile-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding-right: 48px; margin: 0 0 6px; color: rgba(255, 255, 255, 0.86); }
   .percentile-card .percentile-value { font-family: var(--font-num); font-size: clamp(42px, 10vw, 66px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.1; margin: 12px 0 10px; font-variant-numeric: tabular-nums; color: var(--ink-inverse); }
   .percentile-card .percentile-caption { font-size: 12.5px; line-height: 1.7; margin: 0; color: rgba(255, 255, 255, 0.88); }
-  .percentile-challenge { font-size: 14px; font-weight: 700; margin: 18px 0 12px; color: var(--ink-inverse); }
+  .percentile-challenge { font-size: 14px; font-weight: 700; margin: 20px 0 14px; color: var(--ink-inverse); }
   .percentile-share {
-    min-height: 46px; background: var(--surface-canvas); color: var(--ink-primary);
+    min-height: 48px; background: var(--surface-canvas); color: var(--ink-primary);
     border-radius: var(--radius-pill); box-shadow: var(--shadow-btn);
   }
   .percentile-share:hover { background: var(--surface-subtle); color: var(--ink-primary); }
-  .x-share-btn { margin-top: 10px; background: var(--ink-primary); color: var(--ink-inverse); }
+  .x-share-btn { margin-top: 12px; background: var(--ink-primary); color: var(--ink-inverse); }
   .x-share-btn:hover { background: var(--ink-primary-hover); color: var(--ink-inverse); }
-  .percentile-card details { font-size: 12px; line-height: 1.8; margin-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 12px; color: rgba(255, 255, 255, 0.88); }
+  .percentile-card details { font-size: 12px; line-height: 1.8; margin-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 14px; color: rgba(255, 255, 255, 0.88); }
   .percentile-card summary { cursor: pointer; font-weight: 700; color: var(--ink-inverse); }
   .percentile-card a { color: var(--ink-inverse); text-decoration: underline; }
-  @media (max-width: 480px) { .percentile-card { padding: 24px 20px; } .percentile-share { width: 100%; } .percentile-challenge { font-size: 13px; } }
+  @media (max-width: 480px) { .percentile-card { padding: 28px 22px; } .percentile-share { width: 100%; } .percentile-challenge { font-size: 13px; } }
 
   /* Practice entry: Yoom Bento Groups + Capsule Node Pills */
-  .practice-home { margin-top: clamp(56px, 6.5vw, 76px); padding-top: 0; border-top: 0; }
+  .practice-home { margin-top: clamp(56px, 7vw, 88px); padding-top: 0; border-top: 0; }
   .practice-home .practice-eyebrow {
     display: inline-block; padding: 4px 12px; border-radius: var(--radius-pill);
     background: var(--tint-mint-bg); color: var(--ink-mint);
     font-family: var(--font-num); font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; margin: 0 0 12px;
   }
   .practice-home h2 { font-size: clamp(24px, 4vw, 34px); margin: 0; letter-spacing: -0.04em; }
-  .practice-home .practice-intro { color: var(--ink-secondary); margin: 10px 0 24px; font-size: 15px; line-height: 1.75; }
-  .practice-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .practice-home .practice-intro { color: var(--ink-secondary); margin: 12px 0 30px; font-size: 15px; line-height: 1.8; max-width: 720px; }
+  .practice-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
   .practice-group {
     min-width: 0; background: var(--surface-hero); border: 0; border-radius: var(--radius-card-lg);
-    padding: 26px; box-shadow: var(--shadow-ring-subtle);
+    padding: 32px; box-shadow: var(--shadow-ring-subtle);
   }
-  .practice-group h3 { margin: 0 0 18px; display: flex; align-items: center; gap: 10px; font-family: var(--font-num); font-size: 20px; letter-spacing: -0.03em; }
+  .practice-group h3 { margin: 0 0 20px; display: flex; align-items: center; gap: 10px; font-family: var(--font-num); font-size: 20px; letter-spacing: -0.03em; }
   .practice-group h3 small {
     font-family: var(--font-num); font-size: 11.5px; font-weight: 700;
     padding: 3px 11px; border-radius: var(--radius-pill);
     background: var(--surface-canvas); color: var(--ink-secondary); box-shadow: var(--shadow-ring-subtle);
     font-variant-numeric: tabular-nums;
   }
-  .practice-list { display: grid; gap: 12px; }
+  .practice-list { display: grid; gap: 14px; }
   .practice-card {
-    width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px 18px; text-align: left;
+    width: 100%; display: flex; align-items: center; gap: 12px; padding: 16px 20px; text-align: left;
     background: var(--surface-canvas); border: 0; border-radius: var(--radius-pill);
     box-shadow: var(--shadow-card);
     font: inherit; color: var(--ink-primary); opacity: 1; cursor: pointer; -webkit-text-fill-color: currentColor;
@@ -2229,22 +2244,22 @@
   .practice-group:nth-child(2) .practice-list .practice-card:nth-child(1) .practice-part { background: var(--tint-violet-bg); color: var(--ink-violet); }
   .practice-group:nth-child(2) .practice-list .practice-card:nth-child(2) .practice-part { background: var(--tint-pink-bg); color: var(--ink-pink); }
   .practice-group:nth-child(2) .practice-list .practice-card:nth-child(3) .practice-part { background: var(--tint-blue-bg); color: var(--ink-blue); }
-  .practice-name { flex: 1; font-size: 14.5px; font-weight: 700; line-height: 1.45; color: var(--ink-primary); }
+  .practice-name { flex: 1; font-size: 15px; font-weight: 700; line-height: 1.45; color: var(--ink-primary); }
   .practice-soon {
     flex-shrink: 0; background: var(--surface-subtle); color: var(--ink-primary);
-    border-radius: var(--radius-pill); padding: 5px 12px;
+    border-radius: var(--radius-pill); padding: 6px 13px;
     font-family: var(--font-num); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums;
     transition: background-color 0.2s ease, color 0.2s ease;
   }
   .practice-card:hover .practice-soon { background: var(--ink-primary); color: var(--ink-inverse); }
   @media (max-width: 680px) {
-    .practice-home { margin-top: 44px; }
-    .practice-groups { grid-template-columns: 1fr; gap: 16px; }
-    .practice-group { padding: 20px 16px; border-radius: 26px; }
-    .practice-card { gap: 10px; padding: 13px 14px; border-radius: 20px; }
+    .practice-home { margin-top: 52px; }
+    .practice-groups { grid-template-columns: 1fr; gap: 22px; }
+    .practice-group { padding: 24px 20px; border-radius: 28px; }
+    .practice-card { gap: 11px; padding: 15px 16px; border-radius: 22px; }
   }
 
-  .seo-entry-links { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 0; font-size: 13.5px; }
+  .seo-entry-links { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0 0; font-size: 13.5px; }
   .seo-entry-links a {
     display: inline-flex; align-items: center; gap: 6px;
     padding: 9px 18px; border-radius: var(--radius-pill);
@@ -2394,18 +2409,18 @@
 
   /* ---------- Daily 1-Question Challenge (30s Part 5) ---------- */
   .daily-card {
-    margin-top: 14px; padding: 22px 24px;
+    margin-top: 24px; padding: clamp(24px, 3.5vw, 34px) clamp(22px, 3.5vw, 36px);
     border-radius: var(--radius-card-lg);
     background: var(--surface-canvas);
     box-shadow: var(--shadow-card);
   }
   .daily-head {
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
   }
   .daily-badges { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .daily-kicker {
     display: inline-flex; align-items: center; gap: 6px;
-    padding: 4px 11px; border-radius: var(--radius-pill);
+    padding: 4px 12px; border-radius: var(--radius-pill);
     background: var(--tint-violet-bg); color: var(--ink-violet);
     font-size: 11.5px; font-weight: 700; letter-spacing: 0.02em;
   }
@@ -2420,21 +2435,21 @@
     font-size: 11.5px; font-weight: 700;
   }
   .daily-owl {
-    flex: 0 0 auto; width: auto; height: 50px; object-fit: contain;
+    flex: 0 0 auto; width: auto; height: 52px; object-fit: contain;
     filter: drop-shadow(0 6px 12px rgba(36, 41, 47, 0.10));
   }
   .daily-stem {
-    margin-top: 12px; font-size: 15.5px; line-height: 1.65;
+    margin-top: 16px; font-size: 16.5px; line-height: 1.7;
     font-weight: 700; color: var(--ink-primary);
   }
   .daily-choices {
-    margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 9px;
+    margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
   }
   .daily-choice {
-    display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
-    padding: 11px 14px; border: 2px solid transparent; border-radius: 16px;
+    display: flex; align-items: center; gap: 11px; width: 100%; text-align: left;
+    padding: 13px 16px; border: 2px solid transparent; border-radius: 18px;
     background: var(--surface-subtle); color: var(--ink-primary);
-    font-size: 14px; font-weight: 600; box-shadow: var(--shadow-ring-subtle);
+    font-size: 14.5px; font-weight: 600; box-shadow: var(--shadow-ring-subtle);
     transition: transform 0.15s var(--ease-ui), background-color 0.15s ease, border-color 0.15s ease;
   }
   .daily-choice:hover:not(:disabled) {
@@ -2476,8 +2491,8 @@
   .daily-fb-reason { margin-top: 8px; font-size: 13.5px; line-height: 1.7; color: var(--ink-primary); }
   .daily-fb-tr { margin-top: 6px; font-size: 12.5px; line-height: 1.65; color: var(--ink-secondary); }
   @media (max-width: 560px) {
-    .daily-card { padding: 18px; }
-    .daily-choices { grid-template-columns: 1fr; }
+    .daily-card { padding: 24px 22px; }
+    .daily-choices { grid-template-columns: 1fr; gap: 10px; }
   }
 
   /* ---------- Goal Score Reverse-Calculation Coach (Results) ---------- */
@@ -2532,39 +2547,39 @@
   }
   /* ---------- Home Topic Cluster Library (Crawlable Internal Links) ---------- */
   .home-seo-lib {
-    margin-top: 32px; padding: 26px 28px;
+    margin-top: clamp(56px, 6.5vw, 84px); padding: clamp(30px, 4.5vw, 44px);
     border-radius: var(--radius-card-lg);
     background: var(--surface-canvas);
     box-shadow: var(--shadow-card);
   }
   .home-seo-lib__head {
-    display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-    margin-bottom: 18px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    margin-bottom: 24px;
   }
   .home-seo-lib__head h2 {
-    font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink-primary); margin: 0;
+    font-size: clamp(18px, 2.5vw, 22px); font-weight: 700; letter-spacing: -0.03em; color: var(--ink-primary); margin: 0;
   }
   .home-seo-lib__all {
-    font-size: 13px; font-weight: 700; color: var(--pop-blue); text-decoration: none;
+    font-size: 13.5px; font-weight: 700; color: var(--pop-blue); text-decoration: none;
   }
   .home-seo-lib__all:hover { text-decoration: underline; }
   .home-seo-lib__cols {
-    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;
   }
   .home-seo-lib__col h3 {
-    font-size: 11.5px; font-weight: 700; color: var(--ink-muted); letter-spacing: 0.04em; margin: 0 0 8px;
+    font-size: 12px; font-weight: 700; color: var(--ink-muted); letter-spacing: 0.04em; margin: 0 0 12px;
   }
   .home-seo-lib__list {
-    list-style: none; padding: 0; margin: 0; display: grid; gap: 6px;
+    list-style: none; padding: 0; margin: 0; display: grid; gap: 9px;
   }
   .home-seo-lib__list a {
-    font-size: 13.5px; font-weight: 600; color: var(--ink-secondary); text-decoration: none;
-    transition: color 0.15s ease;
+    font-size: 14px; font-weight: 600; color: var(--ink-secondary); text-decoration: none;
+    line-height: 1.55; transition: color 0.15s ease;
   }
   .home-seo-lib__list a:hover { color: var(--pop-blue); text-decoration: underline; }
   @media (max-width: 720px) {
-    .home-seo-lib { padding: 22px 20px; border-radius: 24px; }
-    .home-seo-lib__cols { grid-template-columns: 1fr; gap: 16px; }
+    .home-seo-lib { padding: 26px 22px; border-radius: 28px; }
+    .home-seo-lib__cols { grid-template-columns: 1fr; gap: 22px; }
   }
 
   /* ---------- 1. Auto-Save Resume Banner ---------- */
@@ -2624,8 +2639,14 @@
   .test-speed-row { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(1, 118, 240, 0.14); display: flex; align-items: center; justify-content: flex-end; }
 
   /* ---------- 3. Lexicon 100 Speed Flashcard Trainer ---------- */
+  .trainer-duo-grid {
+    margin-top: 24px; display: grid; gap: 24px;
+  }
+  @media (min-width: 920px) {
+    .trainer-duo-grid { grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+  }
   .vocab-card {
-    margin-top: 14px; padding: 22px 24px;
+    margin-top: 0; padding: clamp(24px, 3vw, 32px);
     border-radius: var(--radius-card-lg);
     background: var(--surface-canvas);
     box-shadow: var(--shadow-card);
@@ -2736,75 +2757,85 @@
 
   /* ---------- Wave-3 Features: Exam Countdown, Pinpoint Drills, 20s Sprint, Shadowing Gym, Print PDF ---------- */
   .exam-strip {
-    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line);
+    margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line);
   }
   .exam-strip__row {
-    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
   }
   .exam-badge {
     display: inline-flex; align-items: center; gap: 6px;
-    padding: 5px 12px; border-radius: var(--radius-pill);
+    padding: 6px 14px; border-radius: var(--radius-pill);
     background: var(--surface-subtle); color: var(--ink-primary);
     font-size: 12.5px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
   }
   .exam-badge.is-set { background: var(--tint-blue-bg); color: var(--ink-blue); }
   .exam-badge.is-soon { background: var(--tint-amber-bg); color: var(--ink-amber); }
-  .exam-actions-inline { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .exam-actions-inline { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .exam-mini-btn {
-    padding: 5px 12px; border: 0; border-radius: var(--radius-pill);
+    padding: 6px 13px; border: 0; border-radius: var(--radius-pill);
     background: var(--surface-subtle); color: var(--ink-secondary);
     font-size: 12px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
   }
   .exam-mini-btn:hover { background: var(--surface-hero); color: var(--ink-primary); }
   .exam-phase-note {
-    margin-top: 8px; font-size: 12.5px; line-height: 1.6; color: var(--ink-secondary);
+    margin-top: 10px; font-size: 13px; line-height: 1.7; color: var(--ink-secondary);
   }
   .exam-picker {
-    margin-top: 10px; padding: 12px 14px; border-radius: 16px;
-    background: var(--surface-subtle); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    margin-top: 12px; padding: 14px 16px; border-radius: 18px;
+    background: var(--surface-subtle); display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   }
   .exam-date-input {
-    padding: 6px 10px; border: 1px solid var(--line); border-radius: 10px;
-    background: var(--surface-canvas); font: inherit; font-size: 13px; color: var(--ink-primary);
+    padding: 7px 12px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface-canvas); font: inherit; font-size: 13.5px; color: var(--ink-primary);
   }
 
   /* Pinpoint Drills & 20s Sprint Launcher */
   .special-drills {
-    margin-top: 20px; display: grid; gap: 14px;
+    margin-top: 28px; display: grid; gap: 22px;
+  }
+  .promo-pair-grid {
+    display: grid; gap: 20px;
+  }
+  @media (min-width: 860px) {
+    .promo-pair-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
   }
   .sprint-promo {
-    padding: 20px 22px; border-radius: var(--radius-card-lg);
+    padding: clamp(26px, 3.2vw, 32px) clamp(24px, 3.2vw, 34px);
+    border-radius: var(--radius-card-lg);
     background: linear-gradient(135deg, #24292f 0%, #1a2234 100%);
     color: #ffffff; box-shadow: var(--shadow-card);
-    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 20px;
   }
   .sprint-promo__kicker {
-    display: inline-block; padding: 3px 10px; border-radius: var(--radius-pill);
+    display: inline-block; padding: 4px 12px; border-radius: var(--radius-pill);
     background: rgba(245, 199, 73, 0.2); color: var(--pop-amber);
     font-family: var(--font-num); font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
   }
-  .sprint-promo__title { margin-top: 5px; font-size: 17px; font-weight: 700; color: #ffffff; }
-  .sprint-promo__sub { margin-top: 3px; font-size: 12.5px; color: rgba(255,255,255,0.76); }
+  .sprint-promo__title { margin-top: 10px; font-size: clamp(17.5px, 2vw, 19.5px); line-height: 1.4; font-weight: 700; color: #ffffff; }
+  .sprint-promo__sub { margin-top: 8px; font-size: 13.5px; line-height: 1.7; color: rgba(255,255,255,0.8); }
   .sprint-promo__btn {
-    padding: 11px 22px; border: 0; border-radius: var(--radius-pill);
-    background: var(--pop-amber); color: #24292f; font-size: 13.5px; font-weight: 700;
+    padding: 12px 24px; border: 0; border-radius: var(--radius-pill);
+    background: var(--pop-amber); color: #24292f; font-size: 14px; font-weight: 700;
     box-shadow: 0 6px 16px rgba(0,0,0,0.22); transition: transform 0.15s var(--ease-ui);
   }
   .sprint-promo__btn:hover { transform: translateY(-2px); }
+  @media (max-width: 520px) {
+    .sprint-promo__btn { width: 100%; justify-content: center; text-align: center; }
+  }
 
   .pinpoint-box {
-    padding: 18px 20px; border-radius: var(--radius-card);
+    padding: clamp(24px, 3vw, 30px) clamp(22px, 3.2vw, 34px); border-radius: var(--radius-card-lg);
     background: var(--surface-canvas); box-shadow: var(--shadow-card);
   }
   .pinpoint-box__head {
-    display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap;
-    margin-bottom: 10px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 14px;
   }
-  .pinpoint-box__title { font-size: 14.5px; font-weight: 700; color: var(--ink-primary); }
-  .pinpoint-box__sub { font-size: 12px; color: var(--ink-muted); font-weight: 600; }
-  .pinpoint-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pinpoint-box__title { font-size: 15.5px; font-weight: 700; color: var(--ink-primary); }
+  .pinpoint-box__sub { font-size: 12.5px; color: var(--ink-muted); font-weight: 600; }
+  .pinpoint-chips { display: flex; gap: 10px; flex-wrap: wrap; }
   .pinpoint-chip {
-    padding: 8px 14px; border: 0; border-radius: var(--radius-pill);
+    padding: 10px 16px; border: 0; border-radius: var(--radius-pill);
     background: var(--surface-subtle); color: var(--ink-primary);
     font-size: 13px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
     transition: transform 0.15s var(--ease-ui), background-color 0.15s ease, color 0.15s ease;
@@ -2933,29 +2964,37 @@
 
   /* ---------- Wave-4: Friend VS Card, Bookmarks, Paraphrase Drill, Dictation, Heatmap & Badges ---------- */
   .vs-card {
-    margin: 16px 0; padding: 20px 22px; border-radius: var(--radius-card-lg);
+    margin: 20px 0; padding: 24px 24px; border-radius: var(--radius-card-lg);
     background: linear-gradient(135deg, #f1eaff 0%, #e8f3ff 100%);
-    box-shadow: var(--shadow-card); text-align: center;
+    box-shadow: var(--shadow-card); text-align: center; color: var(--ink-primary);
   }
-  .vs-kicker {
-    display: inline-block; padding: 3px 11px; border-radius: var(--radius-pill);
+  .vs-card__head {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  }
+  .vs-kicker, .vs-card__kicker {
+    display: inline-block; padding: 4px 12px; border-radius: var(--radius-pill);
     background: var(--surface-canvas); color: var(--ink-violet);
     font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
   }
+  .vs-card__res {
+    font-size: 14px; font-weight: 700; color: var(--ink-primary);
+  }
+  .vs-card__res.is-win { color: var(--ink-mint); }
+  .vs-card__res.is-lose { color: var(--ink-amber); }
   .vs-verdict { margin-top: 8px; font-size: 19px; font-weight: 700; color: var(--ink-primary); }
-  .vs-cols {
-    margin-top: 14px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px;
+  .vs-cols, .vs-grid {
+    margin-top: 16px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px;
   }
   .vs-side {
-    padding: 12px 10px; border-radius: 16px; background: rgba(255,255,255,0.85);
+    padding: 14px 12px; border-radius: 18px; background: rgba(255,255,255,0.9);
     box-shadow: var(--shadow-ring-subtle);
   }
   .vs-side .who { font-size: 11.5px; font-weight: 700; color: var(--ink-muted); }
-  .vs-side .val { margin-top: 3px; font-family: var(--font-num); font-size: 22px; font-weight: 700; color: var(--ink-primary); }
-  .vs-side .sub { font-size: 11.5px; color: var(--ink-secondary); }
-  .vs-mid { font-family: var(--font-num); font-size: 14px; font-weight: 700; color: var(--ink-violet); }
+  .vs-side .val { margin-top: 4px; font-family: var(--font-num); font-size: 22px; font-weight: 700; color: var(--ink-primary); }
+  .vs-side .sub { margin-top: 2px; font-size: 11.5px; color: var(--ink-secondary); }
+  .vs-mid, .vs-sep { font-family: var(--font-num); font-size: 14px; font-weight: 700; color: var(--ink-violet); }
   .challenge-btn {
-    width: 100%; margin-top: 12px; padding: 12px 18px; border: 0; border-radius: var(--radius-pill);
+    width: 100%; margin-top: 12px; padding: 13px 20px; border: 0; border-radius: var(--radius-pill);
     background: var(--pop-violet); color: #ffffff; font-size: 13.5px; font-weight: 700;
     box-shadow: var(--shadow-btn); transition: transform 0.15s var(--ease-ui), opacity 0.15s ease;
   }
@@ -2963,33 +3002,33 @@
 
   /* Question Flag / Bookmark Pill */
   .flag-row {
-    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
-    margin-top: 22px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    margin-top: 26px;
   }
   .flag-row .part-tag { margin-top: 0; }
   .flag-btn {
-    display: inline-flex; align-items: center; gap: 5px;
-    padding: 5px 13px; border: 0; border-radius: var(--radius-pill);
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border: 0; border-radius: var(--radius-pill);
     background: var(--surface-canvas); color: var(--ink-secondary);
-    font-size: 12px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+    font-size: 12.5px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
     transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s var(--ease-ui);
   }
   .flag-btn:hover { transform: translateY(-1px); color: var(--ink-primary); }
-  .flag-btn.is-flagged { background: var(--tint-amber-bg); color: var(--ink-amber); }
+  .flag-btn.is-flagged, .flag-btn[aria-pressed="true"] { background: var(--tint-amber-bg); color: var(--ink-amber); }
 
   /* 28-Day Study Heatmap */
   .heatmap-wrap {
-    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line);
+    margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line);
   }
   .heatmap-head {
-    display: flex; align-items: center; justify-content: space-between; gap: 8px;
-    font-size: 11.5px; font-weight: 700; color: var(--ink-muted); margin-bottom: 8px;
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    font-size: 12px; font-weight: 700; color: var(--ink-muted); margin-bottom: 10px;
   }
   .heatmap-grid {
-    display: grid; grid-template-columns: repeat(14, 1fr); gap: 5px;
+    display: grid; grid-template-columns: repeat(14, 1fr); gap: 6px;
   }
   .hm-cell {
-    aspect-ratio: 1; border-radius: 5px; background: var(--surface-hero);
+    aspect-ratio: 1; border-radius: 6px; background: var(--surface-hero);
     position: relative;
   }
   .hm-cell.is-studied { background: var(--pop-mint); }
@@ -2997,7 +3036,7 @@
 
   /* Paraphrase 4-Choice Instant Drill */
   .pp-card {
-    margin-top: 14px; padding: 22px 24px; border-radius: var(--radius-card-lg);
+    margin-top: 0; padding: clamp(24px, 3vw, 32px); border-radius: var(--radius-card-lg);
     background: var(--surface-canvas); box-shadow: var(--shadow-card);
   }
   .pp-kicker {
@@ -3007,81 +3046,131 @@
     font-size: 11.5px; font-weight: 700;
   }
   .pp-prompt {
-    margin-top: 12px; padding: 14px 16px; border-radius: 16px;
+    margin-top: 14px; padding: 16px 18px; border-radius: 18px;
     background: var(--surface-subtle); display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap;
   }
-  .pp-src { font-family: var(--font-num); font-size: 20px; font-weight: 700; color: var(--ink-primary); }
+  .pp-src { font-family: var(--font-num); font-size: 21px; font-weight: 700; color: var(--ink-primary); margin-top: 2px; }
   .pp-cat-tag { font-size: 11.5px; font-weight: 700; color: var(--ink-muted); }
   .pp-choices {
-    margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
   }
   .pp-choice {
-    padding: 10px 13px; border: 2px solid transparent; border-radius: 14px;
+    padding: 12px 15px; border: 2px solid transparent; border-radius: 16px;
     background: var(--surface-subtle); color: var(--ink-primary);
-    text-align: left; font-family: var(--font-num); font-size: 13.5px; font-weight: 600;
+    text-align: left; font-family: var(--font-num); font-size: 14px; font-weight: 600;
     box-shadow: var(--shadow-ring-subtle); transition: border-color 0.15s ease, background-color 0.15s ease;
   }
   .pp-choice:hover:not(:disabled) { border-color: var(--pop-blue); background: var(--surface-canvas); }
-  .pp-choice.is-ok { background: var(--tint-mint-bg); border-color: var(--pop-mint); font-weight: 700; }
-  .pp-choice.is-ng { background: var(--tint-amber-bg); border-color: var(--pop-amber); }
+  .pp-choice.is-ok, .pp-choice.is-correct { background: var(--tint-mint-bg); border-color: var(--pop-mint); font-weight: 700; }
+  .pp-choice.is-ng, .pp-choice.is-wrong { background: var(--tint-amber-bg); border-color: var(--pop-amber); }
   .pp-fb {
-    margin-top: 10px; padding: 11px 14px; border-radius: 14px;
-    background: var(--tint-mint-bg); font-size: 13px; color: var(--ink-primary);
+    margin-top: 14px; padding: 13px 16px; border-radius: 16px;
+    background: var(--tint-mint-bg); font-size: 13.5px; color: var(--ink-primary); line-height: 1.65;
     display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
   }
   @media (max-width: 560px) { .pp-choices { grid-template-columns: 1fr; } }
 
-  /* 12 Owl Achievement Badges */
+  /* 12 Owl Achievement Badges (Clean Collapsible Accordion) */
   .badges-card {
-    margin-top: 14px; padding: 22px 24px; border-radius: var(--radius-card-lg);
+    margin-top: 22px; padding: 20px 24px; border-radius: var(--radius-card-lg);
     background: var(--surface-canvas); box-shadow: var(--shadow-card);
   }
+  .badges-summary {
+    list-style: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  .badges-summary::-webkit-details-marker { display: none; }
+  .badges-summary__right {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12.5px; font-weight: 700; color: var(--ink-secondary);
+  }
+  .badges-summary__chev {
+    display: inline-block; font-size: 13px; color: var(--ink-muted);
+    transition: transform 0.2s var(--ease-ui);
+  }
+  .badges-card[open] .badges-summary__chev { transform: rotate(180deg); }
   .badges-grid {
-    margin-top: 12px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px;
+    margin-top: 18px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
   }
   .ach-badge {
-    padding: 11px 8px; border-radius: 16px; background: var(--surface-subtle);
-    text-align: center; opacity: 0.48; filter: grayscale(0.85);
+    padding: 14px 10px; border-radius: 18px; background: var(--surface-subtle);
+    text-align: center; opacity: 0.5; filter: grayscale(0.85);
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
     box-shadow: var(--shadow-ring-subtle); transition: transform 0.15s var(--ease-ui), opacity 0.2s ease;
   }
+  .ach-badge img { width: 44px; height: 48px; object-fit: contain; display: block; }
   .ach-badge.is-unlocked {
     opacity: 1; filter: none; background: linear-gradient(180deg, #ffffff 0%, #f6f8fa 100%);
     box-shadow: var(--shadow-card);
   }
-  .ach-badge__ic { font-size: 22px; line-height: 1.2; }
-  .ach-badge__name { margin-top: 4px; font-size: 11.5px; font-weight: 700; color: var(--ink-primary); line-height: 1.3; }
-  .ach-badge__cond { margin-top: 2px; font-size: 10px; color: var(--ink-muted); line-height: 1.3; }
-  @media (max-width: 640px) { .badges-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .ach-badge__name { margin-top: 2px; font-size: 12px; font-weight: 700; color: var(--ink-primary); line-height: 1.35; }
+  .ach-badge__cond { font-size: 10.5px; color: var(--ink-muted); line-height: 1.35; }
+  @media (max-width: 640px) { .badges-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; } }
 
   /* Dictation Gym Screen */
   .dict-card {
-    margin-top: 18px; padding: 24px; border-radius: var(--radius-card-lg);
+    margin-top: 22px; padding: clamp(24px, 3.5vw, 34px); border-radius: var(--radius-card-lg);
     background: var(--surface-canvas); box-shadow: var(--shadow-card);
   }
   .dict-sentence {
-    margin-top: 16px; font-size: 18px; font-weight: 700; line-height: 1.75; color: var(--ink-primary);
+    margin-top: 20px; font-size: clamp(18px, 2.4vw, 20px); font-weight: 700; line-height: 1.8; color: var(--ink-primary);
   }
   .dict-blank {
-    display: inline-block; min-width: 120px; padding: 2px 12px; margin: 0 4px;
+    display: inline-block; min-width: 124px; padding: 2px 14px; margin: 0 4px;
     border-radius: 10px; background: var(--tint-blue-bg); color: var(--ink-blue);
     border-bottom: 2px solid var(--pop-blue); text-align: center;
   }
+  .dict-blank.is-wrong { background: var(--tint-amber-bg); color: var(--ink-amber); border-bottom-color: var(--pop-amber); }
   .dict-chips {
-    margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 9px;
+    margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
   }
+  .dict-chip {
+    padding: 13px 16px; border: 2px solid transparent; border-radius: 16px;
+    background: var(--surface-subtle); color: var(--ink-primary);
+    font-family: var(--font-num); font-size: 14.5px; font-weight: 700; text-align: left;
+    box-shadow: var(--shadow-ring-subtle); transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s var(--ease-ui);
+  }
+  .dict-chip:hover:not(:disabled) { border-color: var(--pop-blue); background: var(--surface-canvas); transform: translateY(-1px); }
+  .dict-chip.is-correct { background: var(--tint-mint-bg); border-color: var(--pop-mint); }
+  .dict-chip.is-wrong { background: var(--tint-amber-bg); border-color: var(--pop-amber); }
   .dict-input-row {
-    margin-top: 12px; display: flex; gap: 8px;
+    margin-top: 14px; display: flex; gap: 10px;
   }
   .dict-input {
-    flex: 1; padding: 11px 14px; border: 1px solid var(--line); border-radius: 14px;
+    flex: 1; padding: 13px 16px; border: 1px solid var(--line); border-radius: 16px;
     background: var(--surface-subtle); font: inherit; font-size: 15px; color: var(--ink-primary);
   }
   .dict-fb {
-    margin-top: 16px; padding: 16px 18px; border-radius: 18px;
-    background: var(--tint-mint-bg); color: var(--ink-primary); font-size: 14px; line-height: 1.7;
+    margin-top: 20px; padding: 18px 20px; border-radius: 20px;
+    background: var(--tint-mint-bg); color: var(--ink-primary); font-size: 14px; line-height: 1.75;
   }
   .dict-fb.is-miss { background: var(--tint-amber-bg); }
   @media (max-width: 560px) { .dict-chips { grid-template-columns: 1fr; } }
+
+  /* ---------- Spacious Desktop Comfort Overrides (#test, #review, #results, #history) ---------- */
+  @media (min-width: 768px) {
+    #test .wrap, #review .wrap { padding-top: 34px; padding-bottom: 176px; }
+    .test-head, .rv-head { top: 18px; padding: 18px 26px; }
+    .audio-panel { margin-top: 26px; padding: 26px 30px; }
+    .flag-row { margin-top: 30px; }
+    .passage { margin-top: 24px; padding: 32px 36px; font-size: 16px; line-height: 1.9; }
+    .q-text { margin-top: 28px; font-size: 20.5px; line-height: 1.7; }
+    .choices, .rv-choices { margin-top: 26px; gap: 15px; }
+    .choice { padding: 18px 24px; font-size: 16px; line-height: 1.6; }
+    .choices.is-listening-group { gap: 22px; }
+    .listening-group-question { padding: 28px 30px; }
+    .tr-panel, .explain-box { padding: 26px 30px; }
+    #results .wrap, #audio-results .wrap, #audio-results.is-combined .wrap, #history .wrap {
+      max-width: 820px; padding-bottom: 96px;
+    }
+    .score-card { margin-top: 28px; padding: 40px 38px 36px; }
+    .percentile-card { margin: 30px 0; padding: 38px 40px; }
+    .section { margin-top: 44px; }
+    .section h2 { font-size: 20px; margin-bottom: 16px; }
+    .stat-grid, .section-score-grid, .skills, .act-grid { gap: 18px; }
+    .stat, .section-score, .skill, .listen-insight, .goal-coach-card { padding: 24px 26px; }
+    .res-actions, .audio-results-actions { margin-top: 36px; gap: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -3363,22 +3452,24 @@
       </div>
 
       <div class="special-drills">
-        <div class="sprint-promo">
-          <div>
-            <span class="sprint-promo__kicker">⚡ SPEED TIME ATTACK</span>
-            <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック（10問）</p>
-            <p class="sprint-promo__sub">本番でPart 7に55分残すためのスピード特訓。正答率×解答速度でS〜Cランク判定！</p>
+        <div class="promo-pair-grid">
+          <div class="sprint-promo">
+            <div>
+              <span class="sprint-promo__kicker">⚡ SPEED TIME ATTACK · 全10問</span>
+              <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック</p>
+              <p class="sprint-promo__sub">本番でPart 7に55分残すためのスピード特訓。正答率×解答速度でS〜Cランク判定！</p>
+            </div>
+            <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
           </div>
-          <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
-        </div>
 
-        <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
-          <div>
-            <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">🎧 CLOZE DICTATION GYM</span>
-            <p class="sprint-promo__title">Listening「穴埋めディクテーション」特訓（10問）</p>
-            <p class="sprint-promo__sub">音の連結・弱形・語尾の -ed を聞き取る耳トレ。タップ選択＆タイピング両対応！</p>
+          <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
+            <div>
+              <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">🎧 CLOZE DICTATION GYM · 全10問</span>
+              <p class="sprint-promo__title">Listening「穴埋めディクテーション」</p>
+              <p class="sprint-promo__sub">音の連結・弱形・語尾の -ed を聞き取る耳トレ。タップ選択＆タイピング両対応！</p>
+            </div>
+            <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
           </div>
-          <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
         </div>
 
         <div class="pinpoint-box">
@@ -3396,9 +3487,10 @@
           </div>
         </div>
       </div>
+
+      <nav class="seo-entry-links" aria-label="診断ガイドと練習問題"><a href="/toeic-score-predictor/">スコア予測の仕組み →</a><a href="/toeic-free-test/">無料診断の受け方 →</a><a href="/toeic-part5/">Part 5 練習問題 →</a></nav>
     </section>
 
-<nav class="seo-entry-links" aria-label="診断ガイドと練習問題"><a href="/toeic-score-predictor/">スコア予測の仕組み →</a><a href="/toeic-free-test/">無料診断の受け方 →</a><a href="/toeic-part5/">Part 5 練習問題 →</a></nav>
     <section class="home-learning" aria-labelledby="learning-title">
       <div class="learning-head">
         <div>
@@ -3476,101 +3568,6 @@
         </div>
       </div>
 
-      <!-- Daily 30-Second Part 5 Challenge -->
-      <div class="daily-card" id="daily-quiz-card" aria-labelledby="daily-quiz-label">
-        <div class="daily-head">
-          <div class="daily-badges">
-            <span class="daily-kicker" id="daily-quiz-label">✦ 今日の1問 · 30秒チャレンジ</span>
-            <span class="daily-focus" id="daily-quiz-focus">Part 5</span>
-            <span class="daily-done-pill" id="daily-quiz-done" hidden>今日クリア ✓</span>
-          </div>
-          <img class="daily-owl" id="daily-quiz-owl" src="img/owl-pink.png" alt="" width="236" height="320" loading="lazy" decoding="async">
-        </div>
-        <p class="daily-stem" id="daily-quiz-stem"></p>
-        <div class="daily-choices" id="daily-quiz-choices" role="group" aria-label="今日の1問の選択肢"></div>
-        <div class="daily-feedback" id="daily-quiz-feedback" hidden>
-          <div class="daily-fb-head">
-            <span class="daily-fb-status" id="daily-fb-status"></span>
-            <button type="button" class="daily-next-btn" id="btn-daily-another">もう1問解く ↻</button>
-          </div>
-          <p class="daily-fb-reason" id="daily-fb-reason"></p>
-          <p class="daily-fb-tr" id="daily-fb-tr"></p>
-        </div>
-      </div>
-
-      <!-- Lexicon 100 TOEIC Vocabulary Speed Flashcards -->
-      <div class="vocab-card" id="vocab-card" aria-labelledby="vocab-card-label">
-        <div class="vocab-head">
-          <span class="vocab-kicker" id="vocab-card-label">⚡ Lexicon スピード単語帳 · 頻出100語</span>
-          <span class="vocab-stat" id="vocab-stat-text">習得 0 / 100語</span>
-        </div>
-        <div class="vocab-bands" role="group" aria-label="単語レベルを選択">
-          <button type="button" class="vocab-band-btn is-active" data-vocab-band="all">すべて</button>
-          <button type="button" class="vocab-band-btn" data-vocab-band="500">500点</button>
-          <button type="button" class="vocab-band-btn" data-vocab-band="600">600点</button>
-          <button type="button" class="vocab-band-btn" data-vocab-band="730">730点</button>
-          <button type="button" class="vocab-band-btn" data-vocab-band="860">860点</button>
-          <button type="button" class="vocab-band-btn" data-vocab-band="review" id="vocab-band-review">要復習 ★</button>
-        </div>
-        <div class="vocab-stage" id="vocab-stage" role="button" tabindex="0" aria-label="タップして意味を表示">
-          <div class="vocab-stage__top">
-            <span id="vocab-card-meta">500点帯 · 1 / 100</span>
-            <button type="button" class="vocab-audio-mini" id="btn-vocab-speak">🔊 発音</button>
-          </div>
-          <div>
-            <span class="vocab-word" id="vocab-word">confirm</span>
-            <span class="vocab-pos" id="vocab-pos">（動）</span>
-          </div>
-          <p class="vocab-phrase" id="vocab-phrase">confirm a reservation</p>
-          <div class="vocab-meaning" id="vocab-meaning" hidden>
-            <span id="vocab-meaning-main">確認する・確定する</span>
-            <small id="vocab-phrase-ja">予約を確定する</small>
-          </div>
-          <p class="vocab-hint" id="vocab-flip-hint">タップして日本語訳を確認</p>
-        </div>
-        <div class="vocab-actions">
-          <button type="button" class="vocab-act vocab-act--review" id="btn-vocab-review">要復習に入れる ★</button>
-          <button type="button" class="vocab-act vocab-act--ok" id="btn-vocab-master">覚えた ✓</button>
-        </div>
-        <div class="vocab-foot">
-          <span class="small" style="margin:0">フレーズ単位で覚えるとPart 5・7の速度が上がります</span>
-          <a href="/toeic-vocab/">全100語の一覧・赤シートへ →</a>
-        </div>
-      </div>
-
-      <!-- Paraphrase 50 Instant 4-Choice Drill -->
-      <div class="pp-card" id="paraphrase-card" aria-labelledby="pp-card-label">
-        <div class="vocab-head">
-          <span class="pp-kicker" id="pp-card-label">🔄 言い換え（パラフレーズ）瞬発ドリル · 50組</span>
-          <span class="vocab-stat" id="pp-stat-text">クリア 0 / 50組</span>
-        </div>
-        <div class="pp-prompt">
-          <div>
-            <span class="pp-cat-tag" id="pp-cat">料金・無料</span>
-            <p class="pp-src" id="pp-src">complimentary</p>
-          </div>
-          <span class="small" style="margin:0">同じ意味の英語表現はどれ？</span>
-        </div>
-        <div class="pp-choices" id="pp-choices" role="group" aria-label="言い換え選択肢"></div>
-        <div class="pp-fb" id="pp-fb" hidden>
-          <span id="pp-fb-text"></span>
-          <button type="button" class="daily-next-btn" id="btn-pp-next">次のペアへ →</button>
-        </div>
-        <div class="vocab-foot">
-          <span class="small" style="margin:0">Part 3・4・7の正解選択肢を見抜く直結スキル</span>
-          <a href="/toeic-paraphrase/">全50組の一覧・赤シートへ →</a>
-        </div>
-      </div>
-
-      <!-- 12 Owl Achievement Badges -->
-      <div class="badges-card" id="achievements-card" aria-labelledby="ach-title">
-        <div class="vocab-head">
-          <span class="daily-kicker" id="ach-title">🦉 フクロウ称号コレクション</span>
-          <span class="vocab-stat" id="ach-count-text">0 / 12 獲得</span>
-        </div>
-        <div class="badges-grid" id="ach-badges-grid"></div>
-      </div>
-
       <div class="learning-grid">
         <button class="learning-card" id="btn-weak-home" disabled>
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M4.2 7.5l5.2 3M14.6 13.5l5.2 3M19.8 7.5l-5.2 3M9.4 13.5l-5.2 3"/></svg></span>
@@ -3599,6 +3596,15 @@
         </button>
       </div>
 
+      <!-- 12 Owl Achievement Badges (Clean Collapsible Accordion) -->
+      <details class="badges-card" id="achievements-card" aria-labelledby="ach-title">
+        <summary class="badges-summary">
+          <span class="daily-kicker" id="ach-title">🦉 フクロウ称号コレクション</span>
+          <span class="badges-summary__right"><span id="ach-count-text">0 / 12 獲得</span><span class="badges-summary__chev" aria-hidden="true">▾</span></span>
+        </summary>
+        <div class="badges-grid" id="ach-badges-grid"></div>
+      </details>
+
       <!-- Smart PWA Add-to-Home-Screen Card -->
       <div class="pwa-card" id="pwa-install-card" hidden>
         <div class="pwa-card__left">
@@ -3611,6 +3617,103 @@
         <div class="pwa-card__right">
           <button type="button" class="pwa-card__btn" id="btn-pwa-install">追加する</button>
           <button type="button" class="pwa-card__close" id="btn-pwa-dismiss" aria-label="閉じる">×</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-micro" aria-labelledby="micro-title">
+      <div class="learning-head">
+        <div>
+          <h2 id="micro-title">スキマ1分トレーニング</h2>
+          <p>通学・休憩中の30秒〜1分で、今日の1問・頻出単語・言い換え表現をサクッと鍛えられます。</p>
+        </div>
+      </div>
+
+      <!-- Daily 30-Second Part 5 Challenge -->
+      <div class="daily-card" id="daily-quiz-card" aria-labelledby="daily-quiz-label">
+        <div class="daily-head">
+          <div class="daily-badges">
+            <span class="daily-kicker" id="daily-quiz-label">✦ 今日の1問 · 30秒チャレンジ</span>
+            <span class="daily-focus" id="daily-quiz-focus">Part 5</span>
+            <span class="daily-done-pill" id="daily-quiz-done" hidden>今日クリア ✓</span>
+          </div>
+          <img class="daily-owl" id="daily-quiz-owl" src="img/owl-pink.png" alt="" width="236" height="320" loading="lazy" decoding="async">
+        </div>
+        <p class="daily-stem" id="daily-quiz-stem"></p>
+        <div class="daily-choices" id="daily-quiz-choices" role="group" aria-label="今日の1問の選択肢"></div>
+        <div class="daily-feedback" id="daily-quiz-feedback" hidden>
+          <div class="daily-fb-head">
+            <span class="daily-fb-status" id="daily-fb-status"></span>
+            <button type="button" class="daily-next-btn" id="btn-daily-another">もう1問解く ↻</button>
+          </div>
+          <p class="daily-fb-reason" id="daily-fb-reason"></p>
+          <p class="daily-fb-tr" id="daily-fb-tr"></p>
+        </div>
+      </div>
+
+      <div class="trainer-duo-grid">
+        <!-- Lexicon 100 TOEIC Vocabulary Speed Flashcards -->
+        <div class="vocab-card" id="vocab-card" aria-labelledby="vocab-card-label">
+          <div class="vocab-head">
+            <span class="vocab-kicker" id="vocab-card-label">⚡ Lexicon スピード単語帳 · 頻出100語</span>
+            <span class="vocab-stat" id="vocab-stat-text">習得 0 / 100語</span>
+          </div>
+          <div class="vocab-bands" role="group" aria-label="単語レベルを選択">
+            <button type="button" class="vocab-band-btn is-active" data-vocab-band="all">すべて</button>
+            <button type="button" class="vocab-band-btn" data-vocab-band="500">500点</button>
+            <button type="button" class="vocab-band-btn" data-vocab-band="600">600点</button>
+            <button type="button" class="vocab-band-btn" data-vocab-band="730">730点</button>
+            <button type="button" class="vocab-band-btn" data-vocab-band="860">860点</button>
+            <button type="button" class="vocab-band-btn" data-vocab-band="review" id="vocab-band-review">要復習 ★</button>
+          </div>
+          <div class="vocab-stage" id="vocab-stage" role="button" tabindex="0" aria-label="タップして意味を表示">
+            <div class="vocab-stage__top">
+              <span id="vocab-card-meta">500点帯 · 1 / 100</span>
+              <button type="button" class="vocab-audio-mini" id="btn-vocab-speak">🔊 発音</button>
+            </div>
+            <div>
+              <span class="vocab-word" id="vocab-word">confirm</span>
+              <span class="vocab-pos" id="vocab-pos">（動）</span>
+            </div>
+            <p class="vocab-phrase" id="vocab-phrase">confirm a reservation</p>
+            <div class="vocab-meaning" id="vocab-meaning" hidden>
+              <span id="vocab-meaning-main">確認する・確定する</span>
+              <small id="vocab-phrase-ja">予約を確定する</small>
+            </div>
+            <p class="vocab-hint" id="vocab-flip-hint">タップして日本語訳を確認</p>
+          </div>
+          <div class="vocab-actions">
+            <button type="button" class="vocab-act vocab-act--review" id="btn-vocab-review">要復習に入れる ★</button>
+            <button type="button" class="vocab-act vocab-act--ok" id="btn-vocab-master">覚えた ✓</button>
+          </div>
+          <div class="vocab-foot">
+            <span class="small" style="margin:0">フレーズ単位でPart 5・7の速度アップ</span>
+            <a href="/toeic-vocab/">全100語・赤シートへ →</a>
+          </div>
+        </div>
+
+        <!-- Paraphrase 50 Instant 4-Choice Drill -->
+        <div class="pp-card" id="paraphrase-card" aria-labelledby="pp-card-label">
+          <div class="vocab-head">
+            <span class="pp-kicker" id="pp-card-label">🔄 言い換え（パラフレーズ）瞬発ドリル · 50組</span>
+            <span class="vocab-stat" id="pp-stat-text">クリア 0 / 50組</span>
+          </div>
+          <div class="pp-prompt">
+            <div>
+              <span class="pp-cat-tag" id="pp-cat">料金・無料</span>
+              <p class="pp-src" id="pp-src">complimentary</p>
+            </div>
+            <span class="small" style="margin:0">同じ意味の英語表現はどれ？</span>
+          </div>
+          <div class="pp-choices" id="pp-choices" role="group" aria-label="言い換え選択肢"></div>
+          <div class="pp-fb" id="pp-fb" hidden>
+            <span id="pp-fb-text"></span>
+            <button type="button" class="daily-next-btn" id="btn-pp-next">次のペアへ →</button>
+          </div>
+          <div class="vocab-foot">
+            <span class="small" style="margin:0">Part 3・4・7の正解選択肢を見抜くスキル</span>
+            <a href="/toeic-paraphrase/">全50組・赤シートへ →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -3706,6 +3809,7 @@
       <div class="home-foot-links">
         <a href="/privacy/">プライバシーポリシー・利用規約</a>
         <button type="button" id="btn-foot-auth">アカウント・データ同期</button>
+        <button type="button" id="btn-foot-feedback" hidden>ご意見・フィードバック</button>
       </div>
       <p class="copyright">© 2026 LexSophia. All rights reserved.</p>
     </div>
@@ -11240,7 +11344,7 @@ initCloud();
 <!-- ============================================================ -->
 <style>
   .fb-fab {
-    position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 90;
+    position: fixed; right: 28px; bottom: calc(28px + env(safe-area-inset-bottom)); z-index: 90;
     display: inline-flex; align-items: center; gap: 8px;
     min-height: 44px; padding: 0 18px; border: 0; border-radius: var(--radius-pill, 9999px);
     background: rgba(255, 255, 255, 0.9);
@@ -11249,6 +11353,10 @@ initCloud();
     color: var(--ink-primary, #24292f); font-size: 13px; font-weight: 700;
     box-shadow: 0 8px 20px rgba(24, 24, 27, 0.08), 0 0 1px rgba(24, 24, 27, 0.24);
     transition: transform 0.2s var(--ease-ui, cubic-bezier(0.2, 0.8, 0.2, 1)), background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  /* スマホでは画面右下の固定ボタンがフクロウやカードに被らないようフッター内リンクに集約 */
+  @media (max-width: 768px) {
+    .fb-fab { display: none !important; }
   }
   .fb-fab:hover {
     background: #ffffff;
@@ -11559,6 +11667,11 @@ const FEEDBACK_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxiEHd4hZIC8G
 
     /* ---------- イベント ---------- */
     fab.addEventListener('click', openFeedback);
+    const footFb = el('btn-foot-feedback');
+    if (footFb) {
+      footFb.hidden = false;
+      footFb.addEventListener('click', openFeedback);
+    }
     el('fb-close').addEventListener('click', closeFeedback);
     el('fb-done-close').addEventListener('click', closeFeedback);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeFeedback(); });
