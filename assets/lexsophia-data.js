@@ -3822,3 +3822,539 @@ const LEXICON_VOCAB = [
     "phraseJa": "表彰式で締めくくられる"
   }
 ];
+
+/* LexSophia 50 Paraphrases & 12 Dictations */
+const LEXSOPHIA_PARAPHRASES = [
+  {
+    "id": "pp01",
+    "cat": "料金・無料",
+    "src": "complimentary",
+    "target": "free of charge / at no cost",
+    "ja": "無料の・優待の"
+  },
+  {
+    "id": "pp02",
+    "cat": "変更・延期",
+    "src": "postpone",
+    "target": "move to a later date / reschedule",
+    "ja": "延期する・日程を後ろへずらす"
+  },
+  {
+    "id": "pp03",
+    "cat": "時間・頻度",
+    "src": "annually",
+    "target": "once a year / every year",
+    "ja": "年に1回"
+  },
+  {
+    "id": "pp04",
+    "cat": "時間・頻度",
+    "src": "quarterly",
+    "target": "every three months / four times a year",
+    "ja": "四半期ごとに（3ヶ月ごとに）"
+  },
+  {
+    "id": "pp05",
+    "cat": "時間・頻度",
+    "src": "biweekly",
+    "target": "every two weeks",
+    "ja": "2週間ごとに（隔週で）"
+  },
+  {
+    "id": "pp06",
+    "cat": "時間・頻度",
+    "src": "for over a decade",
+    "target": "for more than ten years",
+    "ja": "10年以上にわたって"
+  },
+  {
+    "id": "pp07",
+    "cat": "時間・頻度",
+    "src": "prior to",
+    "target": "before / in advance of",
+    "ja": "〜より前に・事前に"
+  },
+  {
+    "id": "pp08",
+    "cat": "時間・頻度",
+    "src": "promptly",
+    "target": "right away / immediately / on time",
+    "ja": "迅速に・時刻通りに"
+  },
+  {
+    "id": "pp09",
+    "cat": "時間・頻度",
+    "src": "tentative",
+    "target": "not yet final / subject to change",
+    "ja": "仮の・変更の可能性がある"
+  },
+  {
+    "id": "pp10",
+    "cat": "料金・無料",
+    "src": "waive the fee",
+    "target": "remove the charge / not require payment",
+    "ja": "料金を免除する"
+  },
+  {
+    "id": "pp11",
+    "cat": "料金・無料",
+    "src": "reimburse",
+    "target": "pay back / refund expenses",
+    "ja": "（立替経費を）払い戻す"
+  },
+  {
+    "id": "pp12",
+    "cat": "料金・無料",
+    "src": "affordable",
+    "target": "reasonably priced / inexpensive",
+    "ja": "手頃な価格の"
+  },
+  {
+    "id": "pp13",
+    "cat": "料金・無料",
+    "src": "a 20 percent discount",
+    "target": "one-fifth off the regular price",
+    "ja": "通常価格から2割引"
+  },
+  {
+    "id": "pp14",
+    "cat": "料金・無料",
+    "src": "estimate",
+    "target": "approximate cost / price quote",
+    "ja": "見積もり・概算額"
+  },
+  {
+    "id": "pp15",
+    "cat": "料金・無料",
+    "src": "incur a fee",
+    "target": "be charged an extra amount",
+    "ja": "追加料金が発生する"
+  },
+  {
+    "id": "pp16",
+    "cat": "変更・延期",
+    "src": "call off",
+    "target": "cancel",
+    "ja": "中止する"
+  },
+  {
+    "id": "pp17",
+    "cat": "変更・延期",
+    "src": "relocate",
+    "target": "move to a new location",
+    "ja": "移転する"
+  },
+  {
+    "id": "pp18",
+    "cat": "変更・延期",
+    "src": "revise",
+    "target": "update / make changes to",
+    "ja": "改訂する・修正する"
+  },
+  {
+    "id": "pp19",
+    "cat": "変更・延期",
+    "src": "extend the deadline",
+    "target": "give more time to submit",
+    "ja": "提出期限を延ばす"
+  },
+  {
+    "id": "pp20",
+    "cat": "変更・延期",
+    "src": "switch shifts",
+    "target": "trade working hours",
+    "ja": "勤務シフトを交代する"
+  },
+  {
+    "id": "pp21",
+    "cat": "業務・手続き",
+    "src": "mandatory",
+    "target": "required for everyone",
+    "ja": "全員必須の・義務の"
+  },
+  {
+    "id": "pp22",
+    "cat": "業務・手続き",
+    "src": "optional",
+    "target": "not required / voluntary",
+    "ja": "任意の"
+  },
+  {
+    "id": "pp23",
+    "cat": "業務・手続き",
+    "src": "submit",
+    "target": "turn in / hand in / send",
+    "ja": "提出する"
+  },
+  {
+    "id": "pp24",
+    "cat": "業務・手続き",
+    "src": "notify",
+    "target": "let someone know / inform",
+    "ja": "知らせる・通知する"
+  },
+  {
+    "id": "pp25",
+    "cat": "業務・手続き",
+    "src": "inquire about",
+    "target": "ask for information on",
+    "ja": "〜について問い合わせる"
+  },
+  {
+    "id": "pp26",
+    "cat": "業務・手続き",
+    "src": "assist",
+    "target": "help / lend a hand",
+    "ja": "手伝う・支援する"
+  },
+  {
+    "id": "pp27",
+    "cat": "業務・手続き",
+    "src": "evaluate",
+    "target": "assess / review",
+    "ja": "評価する・査定する"
+  },
+  {
+    "id": "pp28",
+    "cat": "業務・手続き",
+    "src": "obtain",
+    "target": "get / acquire / pick up",
+    "ja": "入手する・取得する"
+  },
+  {
+    "id": "pp29",
+    "cat": "業務・手続き",
+    "src": "retain",
+    "target": "keep for one's records",
+    "ja": "保管する・維持する"
+  },
+  {
+    "id": "pp30",
+    "cat": "業務・手続き",
+    "src": "verify",
+    "target": "make sure / confirm accuracy",
+    "ja": "確認する・照合する"
+  },
+  {
+    "id": "pp31",
+    "cat": "業務・手続き",
+    "src": "recruit",
+    "target": "hire new staff / look for employees",
+    "ja": "採用する・募集する"
+  },
+  {
+    "id": "pp32",
+    "cat": "業務・手続き",
+    "src": "demonstrate",
+    "target": "show how something works",
+    "ja": "実演する・使い方を示す"
+  },
+  {
+    "id": "pp33",
+    "cat": "業務・手続き",
+    "src": "collaborate",
+    "target": "work together / team up",
+    "ja": "協力する・共同で行う"
+  },
+  {
+    "id": "pp34",
+    "cat": "業務・手続き",
+    "src": "resolve an issue",
+    "target": "fix a problem",
+    "ja": "問題を解決する"
+  },
+  {
+    "id": "pp35",
+    "cat": "業務・手続き",
+    "src": "comply with",
+    "target": "follow rules or guidelines",
+    "ja": "規則・基準に従う"
+  },
+  {
+    "id": "pp36",
+    "cat": "場所・設備",
+    "src": "out of order",
+    "target": "not working properly / broken",
+    "ja": "故障している"
+  },
+  {
+    "id": "pp37",
+    "cat": "場所・設備",
+    "src": "under renovation",
+    "target": "being remodeled / being refurbished",
+    "ja": "改装工事中である"
+  },
+  {
+    "id": "pp38",
+    "cat": "場所・設備",
+    "src": "adjacent to",
+    "target": "next to / right beside",
+    "ja": "〜に隣接した・すぐ隣の"
+  },
+  {
+    "id": "pp39",
+    "cat": "場所・設備",
+    "src": "venue",
+    "target": "event location / site",
+    "ja": "開催会場"
+  },
+  {
+    "id": "pp40",
+    "cat": "場所・設備",
+    "src": "premises",
+    "target": "building and grounds / property",
+    "ja": "敷地・構内"
+  },
+  {
+    "id": "pp41",
+    "cat": "場所・設備",
+    "src": "accommodate",
+    "target": "hold / have enough seats for",
+    "ja": "収容できる"
+  },
+  {
+    "id": "pp42",
+    "cat": "場所・設備",
+    "src": "out of stock",
+    "target": "currently unavailable / sold out",
+    "ja": "在庫切れである"
+  },
+  {
+    "id": "pp43",
+    "cat": "場所・設備",
+    "src": "merchandise",
+    "target": "goods / products / items for sale",
+    "ja": "商品・販売品"
+  },
+  {
+    "id": "pp44",
+    "cat": "場所・設備",
+    "src": "defective",
+    "target": "faulty / damaged / flawed",
+    "ja": "欠陥のある・不良品の"
+  },
+  {
+    "id": "pp45",
+    "cat": "場所・設備",
+    "src": "garment",
+    "target": "article of clothing / apparel",
+    "ja": "衣類・アパレル製品"
+  },
+  {
+    "id": "pp46",
+    "cat": "場所・設備",
+    "src": "beverage",
+    "target": "drink / refreshment",
+    "ja": "飲み物"
+  },
+  {
+    "id": "pp47",
+    "cat": "場所・設備",
+    "src": "itinerary",
+    "target": "travel schedule",
+    "ja": "旅程表"
+  },
+  {
+    "id": "pp48",
+    "cat": "業務・手続き",
+    "src": "eligible for",
+    "target": "qualified to receive",
+    "ja": "〜の対象資格がある"
+  },
+  {
+    "id": "pp49",
+    "cat": "業務・手続き",
+    "src": "substantial",
+    "target": "significant / considerable / large",
+    "ja": "大幅な・かなりの"
+  },
+  {
+    "id": "pp50",
+    "cat": "業務・手続き",
+    "src": "insufficient",
+    "target": "not enough / short of",
+    "ja": "不足している・不十分な"
+  }
+];
+const LEXSOPHIA_DICTATIONS = [
+  {
+    "id": "d01",
+    "part": 2,
+    "clip": "audio/p2-01-question.mp3",
+    "before": "When will the",
+    "answer": "revised schedule",
+    "after": "be sent?",
+    "distractors": [
+      "revise schedule",
+      "advised schedule",
+      "reserved seat"
+    ],
+    "ja": "改訂された予定表はいつ送られますか。",
+    "tip": "revised の語尾 -d は次の schedule の /s/ に吸収されて聞こえにくくなります。「改訂された＝過去分詞」と文法でも補いましょう。"
+  },
+  {
+    "id": "d02",
+    "part": 2,
+    "clip": "audio/p2-02-question.mp3",
+    "before": "Who",
+    "answer": "approved",
+    "after": "the new advertising budget?",
+    "distractors": [
+      "improved",
+      "approves",
+      "moved"
+    ],
+    "ja": "新しい広告予算を承認したのは誰ですか。",
+    "tip": "approve（承認する）と improve（改善する）はPart 2・3の超頻出聞き分けペアです。第1音節の母音 /ə/ と /ɪ/ に注目。"
+  },
+  {
+    "id": "d03",
+    "part": 2,
+    "clip": "audio/p2-03-question.mp3",
+    "before": "Could you",
+    "answer": "help me move",
+    "after": "these chairs?",
+    "distractors": [
+      "help me moving",
+      "helped me move",
+      "let me move"
+    ],
+    "ja": "この椅子を動かすのを手伝ってもらえますか。",
+    "tip": "help + 人 + 動詞の原形（help me move）。help の /p/ は破裂せず唇を閉じるだけで次の me につながります。"
+  },
+  {
+    "id": "d04",
+    "part": 2,
+    "clip": "audio/p2-04-question.mp3",
+    "before": "Why was the seminar",
+    "answer": "postponed",
+    "after": "?",
+    "distractors": [
+      "postpone",
+      "performed",
+      "proposed"
+    ],
+    "ja": "なぜセミナーは延期されたのですか。",
+    "tip": "postponed の /t/ はほぼ脱落し「ポスポーンド」のように響きます。was + 過去分詞の受動態とセットで捉えます。"
+  },
+  {
+    "id": "d05",
+    "part": 2,
+    "clip": "audio/p2-05-question.mp3",
+    "before": "Haven't you",
+    "answer": "submitted",
+    "after": "the expense report yet?",
+    "distractors": [
+      "submit",
+      "admitted",
+      "permitted"
+    ],
+    "ja": "まだ経費報告書を提出していないのですか。",
+    "tip": "Haven't you（ハヴンチュ）の否定疑問文＋現在完了 submitted。文末の yet も完了形の重要なサインです。"
+  },
+  {
+    "id": "d06",
+    "part": 2,
+    "clip": "audio/p2-06-question.mp3",
+    "before": "Which printer",
+    "answer": "should I use",
+    "after": "?",
+    "distractors": [
+      "should I used",
+      "could I chose",
+      "did I use"
+    ],
+    "ja": "どのプリンターを使えばよいですか。",
+    "tip": "should I は連結して「シュダイ」のように1語感覚で発音されます。"
+  },
+  {
+    "id": "d07",
+    "part": 3,
+    "clip": "audio/p3-set01-line01.mp3",
+    "before": "The clients will be here at two, but the projector in Conference Room B",
+    "answer": "isn't working",
+    "after": ".",
+    "distractors": [
+      "is working",
+      "wasn't walked",
+      "isn't walking"
+    ],
+    "ja": "顧客は2時に来ますが、会議室Bのプロジェクターが動きません。",
+    "tip": "working /wɜːrkɪŋ/ と walking /wɔːkɪŋ/ の母音差、そして否定 isn't の /n/ を聞き逃さないのがポイントです。"
+  },
+  {
+    "id": "d08",
+    "part": 3,
+    "clip": "audio/p3-set01-line02.mp3",
+    "before": "I can bring the",
+    "answer": "portable projector",
+    "after": "from the training room.",
+    "distractors": [
+      "possible projector",
+      "part of projector",
+      "personal computer"
+    ],
+    "ja": "研修室から携帯型プロジェクターを持って来られます。",
+    "tip": "portable（持ち運びできる）はアメリカ英語で /t/ がラ行に近い弾き音（フラップT）になります。"
+  },
+  {
+    "id": "d09",
+    "part": 3,
+    "clip": "audio/p3-set01-line03.mp3",
+    "before": "Great. Could you",
+    "answer": "set it up",
+    "after": "by one thirty? I'd like to test the slides before they arrive.",
+    "distractors": [
+      "send it out",
+      "sit it up",
+      "set them up"
+    ],
+    "ja": "助かります。1時30分までに設置してもらえますか。顧客が来る前にスライドを確認したいです。",
+    "tip": "句動詞 set it up は3語すべてが連結して「セリラップ」のように聞こえます。設問では set up some equipment に言い換えられます。"
+  },
+  {
+    "id": "d10",
+    "part": 3,
+    "clip": "audio/p3-set02-line01.mp3",
+    "before": "I'd like to",
+    "answer": "reserve a table",
+    "after": "for six this Friday at seven o'clock.",
+    "distractors": [
+      "preserve a table",
+      "receive a cable",
+      "deserve a table"
+    ],
+    "ja": "今週金曜日の7時に6人用のテーブルを予約したいのですが。",
+    "tip": "reserve a が連結して「リザーヴァ」と響きます。電話予約の冒頭定型フレーズです。"
+  },
+  {
+    "id": "d11",
+    "part": 4,
+    "clip": "audio/p4-set01-talk.mp3",
+    "before": "Attention passengers on Flight 286 to Vancouver. The",
+    "answer": "departure gate",
+    "after": "has changed from Gate 12 to Gate 18.",
+    "distractors": [
+      "departure date",
+      "arrival gate",
+      "boarding pass"
+    ],
+    "ja": "Vancouver行き286便をご利用のお客様にお知らせします。出発ゲートは12番から18番に変更されました。",
+    "tip": "gate と date は1音違い。直後の Gate 12 to Gate 18 から文脈でも確実に裏付けられます。"
+  },
+  {
+    "id": "d12",
+    "part": 4,
+    "clip": "audio/p4-set02-talk.mp3",
+    "before": "Hello, Ms. Patel. This is Aaron from Northline Office Supply. The chairs were expected this Thursday, but a warehouse computer problem has",
+    "answer": "delayed the shipment",
+    "after": "until Monday.",
+    "distractors": [
+      "delivered the shipment",
+      "deleted the payment",
+      "relayed the equipment"
+    ],
+    "ja": "木曜日に到着予定でしたが、倉庫のコンピューター障害により発送が月曜日まで遅れています。",
+    "tip": "has delayed the shipment（発送を遅らせた）。delay と deliver は冒頭音が似ているため要注意です。"
+  }
+];

@@ -2930,6 +2930,158 @@
       box-shadow: none !important; border: 1px solid #d0d7de !important; break-inside: avoid;
     }
   }
+
+  /* ---------- Wave-4: Friend VS Card, Bookmarks, Paraphrase Drill, Dictation, Heatmap & Badges ---------- */
+  .vs-card {
+    margin: 16px 0; padding: 20px 22px; border-radius: var(--radius-card-lg);
+    background: linear-gradient(135deg, #f1eaff 0%, #e8f3ff 100%);
+    box-shadow: var(--shadow-card); text-align: center;
+  }
+  .vs-kicker {
+    display: inline-block; padding: 3px 11px; border-radius: var(--radius-pill);
+    background: var(--surface-canvas); color: var(--ink-violet);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
+  }
+  .vs-verdict { margin-top: 8px; font-size: 19px; font-weight: 700; color: var(--ink-primary); }
+  .vs-cols {
+    margin-top: 14px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px;
+  }
+  .vs-side {
+    padding: 12px 10px; border-radius: 16px; background: rgba(255,255,255,0.85);
+    box-shadow: var(--shadow-ring-subtle);
+  }
+  .vs-side .who { font-size: 11.5px; font-weight: 700; color: var(--ink-muted); }
+  .vs-side .val { margin-top: 3px; font-family: var(--font-num); font-size: 22px; font-weight: 700; color: var(--ink-primary); }
+  .vs-side .sub { font-size: 11.5px; color: var(--ink-secondary); }
+  .vs-mid { font-family: var(--font-num); font-size: 14px; font-weight: 700; color: var(--ink-violet); }
+  .challenge-btn {
+    width: 100%; margin-top: 12px; padding: 12px 18px; border: 0; border-radius: var(--radius-pill);
+    background: var(--pop-violet); color: #ffffff; font-size: 13.5px; font-weight: 700;
+    box-shadow: var(--shadow-btn); transition: transform 0.15s var(--ease-ui), opacity 0.15s ease;
+  }
+  .challenge-btn:hover { transform: translateY(-1px); opacity: 0.94; }
+
+  /* Question Flag / Bookmark Pill */
+  .flag-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    margin-top: 22px;
+  }
+  .flag-row .part-tag { margin-top: 0; }
+  .flag-btn {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 5px 13px; border: 0; border-radius: var(--radius-pill);
+    background: var(--surface-canvas); color: var(--ink-secondary);
+    font-size: 12px; font-weight: 700; box-shadow: var(--shadow-ring-subtle);
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s var(--ease-ui);
+  }
+  .flag-btn:hover { transform: translateY(-1px); color: var(--ink-primary); }
+  .flag-btn.is-flagged { background: var(--tint-amber-bg); color: var(--ink-amber); }
+
+  /* 28-Day Study Heatmap */
+  .heatmap-wrap {
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line);
+  }
+  .heatmap-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    font-size: 11.5px; font-weight: 700; color: var(--ink-muted); margin-bottom: 8px;
+  }
+  .heatmap-grid {
+    display: grid; grid-template-columns: repeat(14, 1fr); gap: 5px;
+  }
+  .hm-cell {
+    aspect-ratio: 1; border-radius: 5px; background: var(--surface-hero);
+    position: relative;
+  }
+  .hm-cell.is-studied { background: var(--pop-mint); }
+  .hm-cell.is-today { outline: 2px solid var(--pop-blue); outline-offset: 1px; }
+
+  /* Paraphrase 4-Choice Instant Drill */
+  .pp-card {
+    margin-top: 14px; padding: 22px 24px; border-radius: var(--radius-card-lg);
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+  }
+  .pp-kicker {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 11px; border-radius: var(--radius-pill);
+    background: var(--tint-pink-bg); color: var(--ink-pink);
+    font-size: 11.5px; font-weight: 700;
+  }
+  .pp-prompt {
+    margin-top: 12px; padding: 14px 16px; border-radius: 16px;
+    background: var(--surface-subtle); display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  }
+  .pp-src { font-family: var(--font-num); font-size: 20px; font-weight: 700; color: var(--ink-primary); }
+  .pp-cat-tag { font-size: 11.5px; font-weight: 700; color: var(--ink-muted); }
+  .pp-choices {
+    margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+  }
+  .pp-choice {
+    padding: 10px 13px; border: 2px solid transparent; border-radius: 14px;
+    background: var(--surface-subtle); color: var(--ink-primary);
+    text-align: left; font-family: var(--font-num); font-size: 13.5px; font-weight: 600;
+    box-shadow: var(--shadow-ring-subtle); transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+  .pp-choice:hover:not(:disabled) { border-color: var(--pop-blue); background: var(--surface-canvas); }
+  .pp-choice.is-ok { background: var(--tint-mint-bg); border-color: var(--pop-mint); font-weight: 700; }
+  .pp-choice.is-ng { background: var(--tint-amber-bg); border-color: var(--pop-amber); }
+  .pp-fb {
+    margin-top: 10px; padding: 11px 14px; border-radius: 14px;
+    background: var(--tint-mint-bg); font-size: 13px; color: var(--ink-primary);
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  }
+  @media (max-width: 560px) { .pp-choices { grid-template-columns: 1fr; } }
+
+  /* 12 Owl Achievement Badges */
+  .badges-card {
+    margin-top: 14px; padding: 22px 24px; border-radius: var(--radius-card-lg);
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+  }
+  .badges-grid {
+    margin-top: 12px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px;
+  }
+  .ach-badge {
+    padding: 11px 8px; border-radius: 16px; background: var(--surface-subtle);
+    text-align: center; opacity: 0.48; filter: grayscale(0.85);
+    box-shadow: var(--shadow-ring-subtle); transition: transform 0.15s var(--ease-ui), opacity 0.2s ease;
+  }
+  .ach-badge.is-unlocked {
+    opacity: 1; filter: none; background: linear-gradient(180deg, #ffffff 0%, #f6f8fa 100%);
+    box-shadow: var(--shadow-card);
+  }
+  .ach-badge__ic { font-size: 22px; line-height: 1.2; }
+  .ach-badge__name { margin-top: 4px; font-size: 11.5px; font-weight: 700; color: var(--ink-primary); line-height: 1.3; }
+  .ach-badge__cond { margin-top: 2px; font-size: 10px; color: var(--ink-muted); line-height: 1.3; }
+  @media (max-width: 640px) { .badges-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+  /* Dictation Gym Screen */
+  .dict-card {
+    margin-top: 18px; padding: 24px; border-radius: var(--radius-card-lg);
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+  }
+  .dict-sentence {
+    margin-top: 16px; font-size: 18px; font-weight: 700; line-height: 1.75; color: var(--ink-primary);
+  }
+  .dict-blank {
+    display: inline-block; min-width: 120px; padding: 2px 12px; margin: 0 4px;
+    border-radius: 10px; background: var(--tint-blue-bg); color: var(--ink-blue);
+    border-bottom: 2px solid var(--pop-blue); text-align: center;
+  }
+  .dict-chips {
+    margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 9px;
+  }
+  .dict-input-row {
+    margin-top: 12px; display: flex; gap: 8px;
+  }
+  .dict-input {
+    flex: 1; padding: 11px 14px; border: 1px solid var(--line); border-radius: 14px;
+    background: var(--surface-subtle); font: inherit; font-size: 15px; color: var(--ink-primary);
+  }
+  .dict-fb {
+    margin-top: 16px; padding: 16px 18px; border-radius: 18px;
+    background: var(--tint-mint-bg); color: var(--ink-primary); font-size: 14px; line-height: 1.7;
+  }
+  .dict-fb.is-miss { background: var(--tint-amber-bg); }
+  @media (max-width: 560px) { .dict-chips { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -3220,6 +3372,15 @@
           <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
         </div>
 
+        <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
+          <div>
+            <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">🎧 CLOZE DICTATION GYM</span>
+            <p class="sprint-promo__title">Listening「穴埋めディクテーション」特訓（10問）</p>
+            <p class="sprint-promo__sub">音の連結・弱形・語尾の -ed を聞き取る耳トレ。タップ選択＆タイピング両対応！</p>
+          </div>
+          <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
+        </div>
+
         <div class="pinpoint-box">
           <div class="pinpoint-box__head">
             <span class="pinpoint-box__title">🎯 弱点テーマ別ピンポイント特訓</span>
@@ -3304,6 +3465,15 @@
             <button type="button" class="exam-mini-btn" id="btn-exam-clear">クリア</button>
           </div>
         </div>
+
+        <!-- 28-Day Study Activity Heatmap -->
+        <div class="heatmap-wrap" id="home-heatmap-wrap">
+          <div class="heatmap-head">
+            <span>直近28日間の学習カレンダー</span>
+            <span id="home-heatmap-count">0 / 28日 学習</span>
+          </div>
+          <div class="heatmap-grid" id="home-heatmap-grid" aria-label="直近28日間の学習記録"></div>
+        </div>
       </div>
 
       <!-- Daily 30-Second Part 5 Challenge -->
@@ -3368,10 +3538,48 @@
         </div>
       </div>
 
+      <!-- Paraphrase 50 Instant 4-Choice Drill -->
+      <div class="pp-card" id="paraphrase-card" aria-labelledby="pp-card-label">
+        <div class="vocab-head">
+          <span class="pp-kicker" id="pp-card-label">🔄 言い換え（パラフレーズ）瞬発ドリル · 50組</span>
+          <span class="vocab-stat" id="pp-stat-text">クリア 0 / 50組</span>
+        </div>
+        <div class="pp-prompt">
+          <div>
+            <span class="pp-cat-tag" id="pp-cat">料金・無料</span>
+            <p class="pp-src" id="pp-src">complimentary</p>
+          </div>
+          <span class="small" style="margin:0">同じ意味の英語表現はどれ？</span>
+        </div>
+        <div class="pp-choices" id="pp-choices" role="group" aria-label="言い換え選択肢"></div>
+        <div class="pp-fb" id="pp-fb" hidden>
+          <span id="pp-fb-text"></span>
+          <button type="button" class="daily-next-btn" id="btn-pp-next">次のペアへ →</button>
+        </div>
+        <div class="vocab-foot">
+          <span class="small" style="margin:0">Part 3・4・7の正解選択肢を見抜く直結スキル</span>
+          <a href="/toeic-paraphrase/">全50組の一覧・赤シートへ →</a>
+        </div>
+      </div>
+
+      <!-- 12 Owl Achievement Badges -->
+      <div class="badges-card" id="achievements-card" aria-labelledby="ach-title">
+        <div class="vocab-head">
+          <span class="daily-kicker" id="ach-title">🦉 フクロウ称号コレクション</span>
+          <span class="vocab-stat" id="ach-count-text">0 / 12 獲得</span>
+        </div>
+        <div class="badges-grid" id="ach-badges-grid"></div>
+      </div>
+
       <div class="learning-grid">
         <button class="learning-card" id="btn-weak-home" disabled>
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M4.2 7.5l5.2 3M14.6 13.5l5.2 3M19.8 7.5l-5.2 3M9.4 13.5l-5.2 3"/></svg></span>
           <span><span class="k">苦手問題を復習</span><span class="d" id="home-weak-count">診断後に利用できます</span></span>
+          <span class="arrow" aria-hidden="true">›</span>
+        </button>
+        <button class="learning-card" id="btn-bookmarks-home" disabled>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
+          <span><span class="k">保存した問題（🔖）</span><span class="d" id="home-bookmarks-count">テスト中の「迷った」を保存</span></span>
           <span class="arrow" aria-hidden="true">›</span>
         </button>
         <button class="learning-card" id="btn-history-home">
@@ -3450,6 +3658,7 @@
           <ul class="home-seo-lib__list">
             <li><a href="/toeic-listening/">リスニング無料練習10問（Part 1〜4 音声付）</a></li>
             <li><a href="/toeic-vocab/">TOEIC頻出英単語・熟語100選（赤シート付）</a></li>
+            <li><a href="/toeic-paraphrase/">TOEIC言い換え（パラフレーズ）頻出50選</a></li>
             <li><a href="/toeic-grammar/">TOEIC頻出英文法ルール総まとめ</a></li>
             <li><a href="/toeic-part5/">Part 5 短文穴埋め練習（10問・解説付）</a></li>
             <li><a href="/toeic-part6-1/">Part 6 長文穴埋め練習（全7セット）</a></li>
@@ -3473,6 +3682,8 @@
         <div class="home-seo-lib__col">
           <h3>就活・IPテスト・参考書・コラム</h3>
           <ul class="home-seo-lib__list">
+            <li><a href="/toeic-score-calculator/">TOEIC素点・正解数スコア換算シミュレーター</a></li>
+            <li><a href="/toeic-eiken-ielts/">TOEIC・英検・IELTS・CEFR比較換算表</a></li>
             <li><a href="/toeic-shukatsu/">就活のTOEICスコア目安・履歴書の書き方</a></li>
             <li><a href="/toeic-ip-test/">TOEIC IPテスト（オンライン）の特徴と対策</a></li>
             <li><a href="/toeic-time-management/">TOEIC 時間配分と解く順番（75分攻略）</a></li>
@@ -3586,14 +3797,68 @@
     <div class="sprint-stat-box"><p class="k">時間切れ</p><p class="v" id="sprint-stat-timeout">0問</p></div>
   </div>
 </div>
+<div class="vs-card" id="sprint-vs-card" hidden></div>
 <div class="lp-actions" style="margin-top:18px">
   <button class="btn" id="btn-sprint-again" type="button">もう1セット挑戦する ⚡</button>
+  <button class="challenge-btn" id="btn-sprint-challenge" type="button" style="margin-top:0">⚔️ 同じ10問で友達と勝負（対戦URLを発行）</button>
+  <p class="share-status" id="sprint-challenge-status" role="status"></p>
   <button class="qual-secondary" id="btn-sprint-x" type="button">結果をXでシェア</button>
   <button class="qual-secondary lp-home" type="button">ホームへ戻る</button>
 </div>
 <h2 style="margin-top:28px">全10問のスピード＆解説確認</h2>
 <div id="sprint-all-review"></div>
 </div></section>
+
+<section id="dictation" class="screen" aria-labelledby="dict-title">
+  <div class="wrap lp-wrap">
+    <div class="test-meta" style="margin-bottom:14px">
+      <button class="test-home lp-home" type="button">← ホーム</button>
+      <span class="count" id="dict-count">1 / 10問</span>
+    </div>
+    <div class="mascot-page-head">
+      <div class="mascot-page-head__copy">
+        <p class="qual-kicker">🎧 CLOZE DICTATION GYM</p>
+        <h1 id="dict-title" tabindex="-1">穴埋めディクテーション</h1>
+        <p class="qual-note">音声を聞いて、空欄に入る2〜3語をタップまたは入力してください。</p>
+      </div>
+      <img class="mascot-page-head__img" id="dict-owl" src="img/owl-blue.png" alt="" width="229" height="320" decoding="async">
+    </div>
+
+    <div class="dict-card" id="dict-play-stage">
+      <div class="rv-audio-bar" style="margin-top:0">
+        <button type="button" class="rv-audio-play" id="btn-dict-audio">▶ 音声を再生する</button>
+        <div class="speed-chips" role="group" aria-label="再生速度">
+          <span class="speed-chips__label">速度:</span>
+          <button type="button" class="speed-chip" data-audio-rate="0.85">0.85×</button>
+          <button type="button" class="speed-chip is-active" data-audio-rate="1">1.0×</button>
+          <button type="button" class="speed-chip" data-audio-rate="1.2">1.2×</button>
+        </div>
+      </div>
+      <p class="dict-sentence" id="dict-sentence"></p>
+      <div class="dict-chips" id="dict-chips" role="group" aria-label="語句を選択"></div>
+      <form class="dict-input-row" id="dict-form" novalidate>
+        <input type="text" class="dict-input" id="dict-input" placeholder="または直接英語をタイピング…" autocomplete="off" autocapitalize="none" spellcheck="false">
+        <button type="submit" class="btn" style="width:auto;padding:0 20px">判定</button>
+      </form>
+      <div class="dict-fb" id="dict-fb" hidden>
+        <p style="font-weight:700" id="dict-fb-head"></p>
+        <p style="margin-top:6px" id="dict-fb-ja"></p>
+        <p style="margin-top:6px;font-size:13px;color:var(--ink-secondary)" id="dict-fb-tip"></p>
+        <button type="button" class="btn" id="btn-dict-next" style="margin-top:12px">次の問題へ →</button>
+      </div>
+    </div>
+
+    <div class="sprint-res-card" id="dict-done-stage" hidden>
+      <p class="qual-kicker">DICTATION COMPLETE</p>
+      <h2 style="margin-top:8px;font-size:24px" id="dict-done-score">8 / 10問 クリア！</h2>
+      <p style="margin-top:8px;font-size:14px;color:var(--ink-secondary)">音の連結や弱形を意識すると、Part 2・3・4の聞き取り精度が一段上がります。</p>
+      <div class="lp-actions" style="margin-top:18px">
+        <button type="button" class="btn" id="btn-dict-retry">もう1セット練習する 🎧</button>
+        <button type="button" class="qual-secondary lp-home">ホームへ戻る</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="test" class="screen" aria-labelledby="q-count">
   <div class="wrap">
@@ -3632,7 +3897,10 @@
       <p class="audio-warning" id="audio-warning" hidden></p>
     </div>
 
-    <span class="part-tag" id="part-tag"></span>
+    <div class="flag-row">
+      <span class="part-tag" id="part-tag"></span>
+      <button type="button" class="flag-btn" id="btn-flag-q" aria-pressed="false">🔖 迷った・保存</button>
+    </div>
     <div class="passage" id="passage" hidden></div>
     <p class="q-text" id="q-text"></p>
     <div class="choices" id="choices" role="group" aria-label="選択肢"></div>
@@ -3642,7 +3910,7 @@
     <div class="inner">
       <p class="hint" id="hint">回答を選択してください</p>
       <button class="btn" id="btn-next" disabled>次へ</button>
-      <p class="kbd-hint" aria-hidden="true"><kbd>A</kbd>–<kbd>D</kbd> / <kbd>1</kbd>–<kbd>4</kbd> 選択 · <kbd>Enter</kbd> 次へ · <kbd>R</kbd> 音声</p>
+      <p class="kbd-hint" aria-hidden="true"><kbd>A</kbd>–<kbd>D</kbd> / <kbd>1</kbd>–<kbd>4</kbd> 選択 · <kbd>Enter</kbd> 次へ · <kbd>R</kbd> 音声 · <kbd>F</kbd> 保存</p>
     </div>
   </div>
 </section>
@@ -3714,7 +3982,9 @@
       <p class="percentile-value" id="r-percentile-value">—</p>
       <p class="percentile-caption" id="r-percentile-caption"></p>
       <p class="percentile-challenge">友達は何％？ 同じモードで比べてみよう。</p>
+      <div class="vs-card" id="res-vs-card" hidden></div>
       <button class="btn percentile-share" id="r-percentile-share" type="button">結果をシェアする ↗</button>
+      <button class="challenge-btn" id="btn-r-challenge" type="button">⚔️ 同じ20問で友達に挑戦状を送る（対戦リンク）</button>
       <button class="btn percentile-share x-share-btn" id="r-x-share" type="button">Xでポストする</button>
       <p class="percentile-caption" id="r-percentile-status" role="status"></p>
       <details><summary>比較対象と算出方法</summary><p>日本のTOEIC L&amp;R公開テストについて、IIBC公式掲載の20,269人の分布と比較しています（2026年9月26日参照）。全年度・全受験者・大学受験生に限定した順位ではありません。</p><p>予想スコアが属する公式スコア区分の下限以上の割合を使用します。区分内の細かな順位は推定しません。診断スコア自体も非公式の目安であり、本番での順位を保証しません。</p><a href="https://www.iibc-global.org/toeic/official_data.html" target="_blank" rel="noopener noreferrer">出典：IIBC 平均スコア・スコア分布</a></details>
@@ -3846,7 +4116,9 @@
       <p class="percentile-value" id="audio-percentile-value">—</p>
       <p class="percentile-caption" id="audio-percentile-caption"></p>
       <p class="percentile-challenge">友達は何％？ 同じモードで比べてみよう。</p>
+      <div class="vs-card" id="audio-vs-card" hidden></div>
       <button class="btn percentile-share" id="audio-percentile-share" type="button">結果をシェアする ↗</button>
+      <button class="challenge-btn" id="btn-audio-challenge" type="button">⚔️ 同じ問題セットで友達に挑戦状を送る（対戦リンク）</button>
       <button class="btn percentile-share x-share-btn" id="audio-x-share" type="button">Xでポストする</button>
       <p class="percentile-caption" id="audio-percentile-status" role="status"></p>
       <details><summary>比較対象と算出方法</summary><p>日本のTOEIC L&amp;R公開テストについて、IIBC公式掲載の20,269人の分布と比較しています（2026年9月26日参照）。全年度・全受験者・大学受験生に限定した順位ではありません。</p><p>予想スコアが属する公式スコア区分の下限以上の割合を使用します。区分内の細かな順位は推定しません。診断スコア自体も非公式の目安であり、本番での順位を保証しません。</p><a href="https://www.iibc-global.org/toeic/official_data.html" target="_blank" rel="noopener noreferrer">出典：IIBC 平均スコア・スコア分布</a></details>
@@ -4064,6 +4336,7 @@
     <div class="rv-qmeta">
       <span class="rv-qno" id="rv-qno"></span>
       <span class="part-tag" id="rv-part" style="margin-top:0"></span>
+      <button type="button" class="flag-btn" id="btn-rv-flag" aria-pressed="false" style="margin-left:auto">🔖 ブックマーク保存</button>
     </div>
 
     <div class="rv-audio-bar" id="rv-audio-bar" hidden>
@@ -4092,7 +4365,7 @@
       <button class="btn btn--ghost" id="btn-rv-prev">前の問題</button>
       <button class="btn" id="btn-rv-next">次の問題</button>
     </div>
-    <p class="kbd-hint" aria-hidden="true"><kbd>←</kbd> / <kbd>→</kbd> 前後の問題 · <kbd>T</kbd> 日本語訳・解説 · <kbd>R</kbd> 音声</p>
+    <p class="kbd-hint" aria-hidden="true"><kbd>←</kbd> / <kbd>→</kbd> 前後の問題 · <kbd>T</kbd> 日本語訳・解説 · <kbd>R</kbd> 音声 · <kbd>F</kbd> 保存</p>
   </div>
 </section>
 
@@ -5173,6 +5446,9 @@ const STORAGE_KEYS = {
   daily: 'lexsophia.daily.v1',
   session: 'lexsophia.session.v1',
   vocab: 'lexsophia.vocab.v1',
+  paraphrase: 'lexsophia.paraphrase.v1',
+  bookmarks: 'lexsophia.bookmarks.v1',
+  badges: 'lexsophia.badges.v1',
   examDate: 'lexsophia.examDate.v1',
   pwaDismissed: 'lexsophia.pwa.dismissed.v1',
   owner: 'lexsophia.owner.v1'
@@ -6379,6 +6655,9 @@ function refreshHomeLearning() {
   syncGoalChipActiveStates(target);
   if (typeof refreshResumeBanner === 'function') refreshResumeBanner();
   if (typeof refreshExamCountdown === 'function') refreshExamCountdown();
+  if (typeof refreshBookmarksCard === 'function') refreshBookmarksCard();
+  if (typeof renderStudyHeatmap === 'function') renderStudyHeatmap();
+  if (typeof renderAchievementBadges === 'function') renderAchievementBadges();
 }
 
 function formatShortChartDate(iso) {
@@ -6704,6 +6983,8 @@ function startWeakPractice() {
 function beginTest(questions, mode, assessmentMode = 'reading', options = {}) {
   if (typeof clearSprintTimer === 'function') clearSprintTimer();
   if ($('sprint-bar-wrap')) $('sprint-bar-wrap').hidden = (mode !== 'sprint');
+  state.activeChallenge = options.challenge || null;
+  state.flaggedInSession = new Set();
   state.questions = questions;
   state.mode = mode;
   state.assessmentMode = assessmentMode;
@@ -6849,6 +7130,11 @@ function stopSpeech() {
   if (rvBtn) {
     rvBtn.classList.remove('is-playing');
     rvBtn.textContent = '▶ 問題の音声を聞き直す';
+  }
+  const dictBtn = $('btn-dict-audio');
+  if (dictBtn) {
+    dictBtn.classList.remove('is-playing');
+    dictBtn.textContent = '▶ 音声を再生する';
   }
   if (typeof resetShadowingLoopState === 'function') resetShadowingLoopState();
 }
@@ -7153,6 +7439,7 @@ function renderDiagnosticQuestion() {
   bar.querySelector('i').style.width = `${(state.index / total) * 100}%`;
 
   $('part-tag').innerHTML = `Part ${q.part} <small>· ${PART_NAMES[q.part]}</small>`;
+  if (typeof syncTestFlagButton === 'function') syncTestFlagButton(q);
 
   $('audio-panel').hidden = !isListening;
   if ($('test-speed-row')) $('test-speed-row').hidden = !isListening || state.mode === 'diagnostic';
@@ -7482,9 +7769,16 @@ function renderAudioResults(listeningResult, listeningAnalysis, readingResult, r
     $('btn-listen-weak-skill').dataset.skillKey = weak.key;
     $('btn-listen-weak-skill').textContent = `🎯「${weak.name}」を集中練習する →`;
   }
-  $('btn-audio-review').hidden = totalCorrect === state.questions.length;
-  if (totalCorrect < state.questions.length) {
-    $('btn-audio-review-d').textContent = `${state.questions.length - totalCorrect}問を復習する`;
+  const reviewableCount = buildReviewItems().length;
+  $('btn-audio-review').hidden = reviewableCount === 0;
+  if (reviewableCount > 0) {
+    const wrongCnt = state.questions.length - totalCorrect;
+    $('btn-audio-review-d').textContent = wrongCnt < reviewableCount
+      ? `誤答${wrongCnt}問＋迷った${reviewableCount - wrongCnt}問を確認`
+      : `${reviewableCount}問を復習する`;
+  }
+  if (typeof renderDiagnosticChallengeVs === 'function') {
+    renderDiagnosticChallengeVs('audio-vs-card', totalScore, maxScore, totalSeconds);
   }
 
   // 総合診断では、495点換算で低いセクションを教材選定の優先対象にする。
@@ -7923,13 +8217,22 @@ function renderResults(result, analysis, totalSeconds) {
   state.materialReturnScreen = 'results';
   resetRecommendation();
 
-  // Review entry point: only offered when there is something to review.
+  // Review entry point: offered when there are wrong OR flagged questions.
   const wrong = result.correct < total;
-  $('btn-review').hidden = !wrong;
+  const reviewableCount = buildReviewItems().length;
+  $('btn-review').hidden = reviewableCount === 0;
   $('r-perfect').hidden = wrong;
-  if (wrong) $('btn-review-d').textContent = `${total - result.correct}問を復習する`;
-  $('btn-m-review').hidden = !wrong;
+  if (reviewableCount > 0) {
+    const wrongCnt = total - result.correct;
+    $('btn-review-d').textContent = wrongCnt < reviewableCount
+      ? `誤答${wrongCnt}問＋迷った${reviewableCount - wrongCnt}問を確認`
+      : `${reviewableCount}問を復習する`;
+  }
+  $('btn-m-review').hidden = reviewableCount === 0;
   $('m-perfect').hidden = wrong;
+  if (typeof renderDiagnosticChallengeVs === 'function') {
+    renderDiagnosticChallengeVs('res-vs-card', result.score, 495, totalSeconds);
+  }
 
   $('r-priority').textContent = analysis.priority.title;
   $('r-priority-d').textContent = analysis.priority.detail;
@@ -8305,8 +8608,13 @@ function resetRecommendation() {
 
 function buildReviewItems() {
   return state.questions
-    .map((q, i) => ({ question: q, position: i + 1, response: state.responses[i] }))
-    .filter(item => item.response.choice !== item.question.answer);
+    .map((q, i) => ({
+      question: q,
+      position: i + 1,
+      response: state.responses[i],
+      flagged: Boolean(state.flaggedInSession && state.flaggedInSession.has(q.id))
+    }))
+    .filter(item => item.response.choice !== item.question.answer || item.flagged);
 }
 
 function openReview() {
@@ -8418,7 +8726,9 @@ function renderReviewItem() {
   stopSpeech();
   $('rv-count').textContent = `${state.reviewIndex + 1} / ${items.length}問`;
   $('rv-qno').textContent = `Q${item.position}`;
-  $('rv-part').innerHTML = `Part ${q.part} <small>· ${PART_NAMES[q.part]}</small>`;
+  $('rv-part').innerHTML = `Part ${q.part} <small>· ${PART_NAMES[q.part]}</small>` +
+    (item.flagged && chosen === q.answer ? ' <small style="color:var(--ink-amber)">· 🔖 迷った正解</small>' : '');
+  if (typeof syncReviewFlagButton === 'function') syncReviewFlagButton(q);
   if ($('rv-audio-bar')) $('rv-audio-bar').hidden = questionSection(q) !== 'listening';
   if (typeof renderShadowingGym === 'function') renderShadowingGym('rv-shadow-gym', q);
   $('btn-rv-back').textContent = state.mode === 'weak' ? '← 復習結果' : '← 診断結果';
@@ -9058,6 +9368,8 @@ document.addEventListener('keydown', e => {
       e.preventDefault();
       playReviewAudio();
     }
+  } else if (e.key === 'f' || e.key === 'F') {
+    if ($('btn-rv-flag')) { e.preventDefault(); $('btn-rv-flag').click(); }
   }
 });
 
@@ -9113,6 +9425,8 @@ document.addEventListener('keydown', e => {
       e.preventDefault();
       audioBtn.click();
     }
+  } else if (upper === 'F') {
+    if ($('btn-flag-q')) { e.preventDefault(); $('btn-flag-q').click(); }
   }
 });
 
@@ -9544,7 +9858,7 @@ function initVocabTrainer() {
   renderCard();
 }
 
-/* ---------- 5. Deep-Link Launch (?mode=quick|sprint, ?practice=5, ?drill=pos, ?view=vocab) ---------- */
+/* ---------- 5. Deep-Link Launch (?mode=quick|sprint|dictation, ?practice=5, ?drill=pos, ?view=vocab|paraphrase, ?challenge=...) ---------- */
 
 function handleInitialDeepLink() {
   let params;
@@ -9553,15 +9867,19 @@ function handleInitialDeepLink() {
   const prac = params.get('practice');
   const drill = params.get('drill');
   const view = params.get('view');
-  if (!mode && !prac && !drill && !view) return false;
+  const challenge = params.get('challenge');
+  if (!mode && !prac && !drill && !view && !challenge) return false;
 
   try {
     const cleanParams = new URLSearchParams(window.location.search);
-    ['mode', 'practice', 'drill', 'view'].forEach(k => cleanParams.delete(k));
+    ['mode', 'practice', 'drill', 'view', 'challenge'].forEach(k => cleanParams.delete(k));
     const qs = cleanParams.toString();
     history.replaceState(null, '', window.location.pathname + (qs ? `?${qs}` : '') + window.location.hash);
   } catch (e) {}
 
+  if (challenge && typeof launchFriendChallenge === 'function' && launchFriendChallenge(challenge)) {
+    return true;
+  }
   if (drill && PINPOINT_TOPICS[drill]) {
     startPinpointDrill(drill);
     return true;
@@ -9570,15 +9888,17 @@ function handleInitialDeepLink() {
     startListeningPractice(Number(prac));
     return true;
   }
+  if (mode === 'dictation' && typeof startDictationGym === 'function') { startDictationGym(); return true; }
   if (mode === 'sprint') { startPart5Sprint(); return true; }
   if (mode === 'quick') { openQualificationEntry(startQuickCombinedDiagnostic); return true; }
   if (mode === 'reading') { openQualificationEntry(startReadingDiagnostic); return true; }
   if (mode === 'listening') { openQualificationEntry(startListeningDiagnostic); return true; }
   if (mode === 'combined') { openQualificationEntry(startCombinedDiagnostic); return true; }
-  if (view === 'vocab') {
+  if (view === 'vocab' || view === 'paraphrase') {
     showScreen('home');
+    const targetId = view === 'paraphrase' ? 'paraphrase-card' : 'vocab-card';
     setTimeout(() => {
-      const el = $('vocab-card');
+      const el = $(targetId);
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 80);
     return true;
@@ -9956,12 +10276,14 @@ function renderSprintCurrentQuestion() {
   startSprintQuestionClock();
 }
 
-function startPart5Sprint() {
+function startPart5Sprint(customQuestions = null, challengeInfo = null) {
   const pool = QUESTION_BANK.filter(q => q.part === 5);
-  const qs = pickFreshQuestions(pool, 10, new Set(sprintPrevIds));
+  const qs = Array.isArray(customQuestions) && customQuestions.length
+    ? customQuestions
+    : pickFreshQuestions(pool, 10, new Set(sprintPrevIds));
   sprintPrevIds = qs.map(q => q.id);
   diagnosticQualificationProfile = null;
-  beginTest(qs, 'sprint', 'reading');
+  beginTest(qs, 'sprint', 'reading', { challenge: challengeInfo || null });
   renderSprintCurrentQuestion();
 }
 
@@ -9989,12 +10311,12 @@ function finishSprint() {
   stopSpeech();
   updateWeakRecords(state.questions, state.responses);
   recordStudyActivity();
-  refreshHomeLearning();
 
   const total = state.questions.length;
   const correct = state.questions.filter((q, i) => state.responses[i].choice === q.answer).length;
   const timeouts = state.responses.filter(r => r.timedOut).length;
-  const avgSec = state.responses.reduce((s, r) => s + (r.seconds || 0), 0) / Math.max(total, 1);
+  const totalSec = state.responses.reduce((s, r) => s + (r.seconds || 0), 0);
+  const avgSec = totalSec / Math.max(total, 1);
 
   let rank = 'C';
   let comment = 'まずは品詞・動詞の形を「全文和訳せず空欄前後で即決」する型を身につけましょう！';
@@ -10013,6 +10335,11 @@ function finishSprint() {
     owl = 'img/owl-pink.png';
   }
 
+  if (typeof recordBadgeProgress === 'function') {
+    recordBadgeProgress({ sprintCompleted: true, sprintRank: rank });
+  }
+  refreshHomeLearning();
+
   const badge = $('sprint-rank-badge');
   badge.textContent = rank;
   badge.classList.toggle('is-s', rank === 'S');
@@ -10021,7 +10348,12 @@ function finishSprint() {
   $('sprint-stat-score').textContent = `${correct} / ${total}`;
   $('sprint-stat-avg').textContent = `${avgSec.toFixed(1)}秒`;
   $('sprint-stat-timeout').textContent = `${timeouts}問`;
-  lastSprintShareSummary = { rank, correct, total, avgSec: avgSec.toFixed(1) };
+  if ($('sprint-challenge-status')) $('sprint-challenge-status').textContent = '';
+  lastSprintShareSummary = { rank, correct, total, avgSec: avgSec.toFixed(1), totalSec: Math.round(totalSec) };
+
+  if (typeof renderSprintChallengeVs === 'function') {
+    renderSprintChallengeVs(correct, total, avgSec);
+  }
 
   $('sprint-all-review').innerHTML = state.questions.map((q, i) => {
     const r = state.responses[i];
@@ -10043,8 +10375,8 @@ function shareSprintOnX() {
   window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(txt) + '&url=' + encodeURIComponent(url), '_blank', 'noopener,width=600,height=540');
 }
 
-if ($('btn-start-sprint')) $('btn-start-sprint').addEventListener('click', startPart5Sprint);
-if ($('btn-sprint-again')) $('btn-sprint-again').addEventListener('click', startPart5Sprint);
+if ($('btn-start-sprint')) $('btn-start-sprint').addEventListener('click', () => startPart5Sprint());
+if ($('btn-sprint-again')) $('btn-sprint-again').addEventListener('click', () => startPart5Sprint());
 if ($('btn-sprint-x')) $('btn-sprint-x').addEventListener('click', shareSprintOnX);
 
 /* ---------- 10. Listening Shadowing & 1-Sentence Loop Gym ---------- */
@@ -10215,9 +10547,683 @@ function printCurrentDiagnosticReport() {
 if ($('btn-r-print')) $('btn-r-print').addEventListener('click', printCurrentDiagnosticReport);
 if ($('btn-audio-print')) $('btn-audio-print').addEventListener('click', printCurrentDiagnosticReport);
 
+/* ---------- 12. Question Flagging (🔖 迷った・保存) & Saved Bookmarks ---------- */
+
+const VALID_QUESTION_IDS = new Set(ALL_QUESTION_BANK.map(q => q.id));
+const ALL_Q_INDEX_BY_ID = new Map(ALL_QUESTION_BANK.map((q, idx) => [q.id, idx]));
+
+function getBookmarkIds() {
+  const raw = readStored(STORAGE_KEYS.bookmarks, []);
+  if (!Array.isArray(raw)) return [];
+  return Array.from(new Set(raw.filter(id => typeof id === 'string' && VALID_QUESTION_IDS.has(id))));
+}
+
+function saveBookmarkIds(ids) {
+  const clean = Array.from(new Set((ids || []).filter(id => typeof id === 'string' && VALID_QUESTION_IDS.has(id))));
+  writeStored(STORAGE_KEYS.bookmarks, clean);
+  return clean;
+}
+
+function currentTestFlagTargets(fallbackQ) {
+  const q = state.questions[state.index] || fallbackQ;
+  if (!q) return [];
+  if (state.mode === 'part-practice') return practiceCurrentSet(q);
+  if (isListeningSetQuestion(q)) return currentListeningSet(q);
+  return [q];
+}
+
+function syncTestFlagButton(q) {
+  const btn = $('btn-flag-q');
+  if (!btn) return;
+  const targets = currentTestFlagTargets(q);
+  const savedSet = new Set(getBookmarkIds());
+  const flagged = targets.some(item =>
+    (state.flaggedInSession && state.flaggedInSession.has(item.id)) || savedSet.has(item.id)
+  );
+  btn.setAttribute('aria-pressed', String(flagged));
+  btn.textContent = flagged ? '🔖 保存済み ✓' : '🔖 迷った・保存';
+}
+
+function toggleTestQuestionFlag() {
+  const targets = currentTestFlagTargets();
+  if (!targets.length) return;
+  if (!state.flaggedInSession) state.flaggedInSession = new Set();
+  const savedSet = new Set(getBookmarkIds());
+  const currentlySaved = targets.every(item => savedSet.has(item.id));
+  targets.forEach(item => {
+    if (currentlySaved) {
+      savedSet.delete(item.id);
+      state.flaggedInSession.delete(item.id);
+    } else {
+      savedSet.add(item.id);
+      state.flaggedInSession.add(item.id);
+    }
+  });
+  saveBookmarkIds([...savedSet]);
+  syncTestFlagButton(targets[0]);
+  refreshHomeLearning();
+}
+
+function syncReviewFlagButton(q) {
+  const btn = $('btn-rv-flag');
+  if (!btn || !q) return;
+  const saved = new Set(getBookmarkIds()).has(q.id);
+  btn.setAttribute('aria-pressed', String(saved));
+  btn.textContent = saved ? '🔖 保存済み ✓' : '🔖 保存する';
+}
+
+function toggleReviewQuestionFlag() {
+  const item = state.reviewItems && state.reviewItems[state.reviewIndex];
+  if (!item || !item.question) return;
+  const q = item.question;
+  const savedSet = new Set(getBookmarkIds());
+  if (savedSet.has(q.id)) savedSet.delete(q.id);
+  else savedSet.add(q.id);
+  saveBookmarkIds([...savedSet]);
+  syncReviewFlagButton(q);
+  refreshHomeLearning();
+}
+
+function refreshBookmarksCard() {
+  const btn = $('btn-bookmarks-home');
+  const note = $('home-bookmarks-count');
+  if (!btn || !note) return;
+  const ids = getBookmarkIds();
+  btn.disabled = ids.length === 0;
+  note.textContent = ids.length > 0
+    ? `${ids.length}問保存中 · タップして演習`
+    : 'テスト中の「迷った」を保存';
+}
+
+function startBookmarksPractice() {
+  const ids = getBookmarkIds();
+  if (!ids.length) return;
+  const byId = new Map(ALL_QUESTION_BANK.map(q => [q.id, q]));
+  const used = new Set();
+  const selected = [];
+  for (const id of ids) {
+    const q = byId.get(id);
+    if (!q || used.has(q.id)) continue;
+    const group = q.part === 6
+      ? QUESTION_BANK.filter(x => x.part === 6 && x.passageId === q.passageId)
+      : ([3, 4].includes(q.part)
+        ? LISTENING_BANK.filter(x => x.part === q.part && x.audioId === q.audioId)
+        : [q]);
+    if (selected.length && selected.length + group.length > 20) continue;
+    group.forEach(x => {
+      if (!used.has(x.id)) {
+        used.add(x.id);
+        selected.push(x);
+      }
+    });
+    if (selected.length >= 20) break;
+  }
+  if (!selected.length) return;
+  const order = new Map(ALL_QUESTION_BANK.map((q, i) => [q.id, i]));
+  selected.sort((a, b) => a.part - b.part || order.get(a.id) - order.get(b.id));
+  beginTest(selected, 'weak', 'weak');
+}
+
+if ($('btn-flag-q')) $('btn-flag-q').addEventListener('click', toggleTestQuestionFlag);
+if ($('btn-rv-flag')) $('btn-rv-flag').addEventListener('click', toggleReviewQuestionFlag);
+if ($('btn-bookmarks-home')) $('btn-bookmarks-home').addEventListener('click', startBookmarksPractice);
+
+/* ---------- 13. Stateless Friend Challenge Link (/?challenge=...) & VS Card ---------- */
+
+function encodeChallengeToken(payload) {
+  if (!payload || !Array.isArray(payload.qIds) || !payload.qIds.length) return '';
+  const indices = payload.qIds.map(id => ALL_Q_INDEX_BY_ID.get(id)).filter(n => Number.isInteger(n));
+  if (indices.length !== payload.qIds.length) return '';
+  const raw = [
+    'v1',
+    payload.kind,
+    indices.join(','),
+    Math.round(Number(payload.score) || 0),
+    Math.round(Number(payload.maxScore) || 0),
+    Math.max(1, Math.round(Number(payload.sec) || 1))
+  ].join('|');
+  try {
+    return btoa(raw).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+  } catch (e) {
+    return '';
+  }
+}
+
+function decodeChallengeToken(token) {
+  if (typeof token !== 'string' || token.length < 6 || token.length > 400) return null;
+  try {
+    const b64 = token.replace(/-/g, '+').replace(/_/g, '/');
+    const padded = b64 + '='.repeat((4 - (b64.length % 4)) % 4);
+    const raw = atob(padded);
+    const parts = raw.split('|');
+    if (parts.length !== 6 || parts[0] !== 'v1') return null;
+    const kind = parts[1];
+    if (!['sprint', 'reading', 'listening', 'combined', 'quick'].includes(kind)) return null;
+    const indices = parts[2].split(',').map(s => Number(s));
+    if (indices.length < 5 || indices.length > 45) return null;
+    const questions = [];
+    for (const idx of indices) {
+      if (!Number.isInteger(idx) || idx < 0 || idx >= ALL_QUESTION_BANK.length) return null;
+      questions.push(ALL_QUESTION_BANK[idx]);
+    }
+    const score = clamp(Math.round(Number(parts[3]) || 0), 0, 990);
+    const maxScore = clamp(Math.round(Number(parts[4]) || 10), 1, 990);
+    const sec = clamp(Math.round(Number(parts[5]) || 60), 1, 7200);
+    return { kind, questions, score, maxScore, sec };
+  } catch (e) {
+    return null;
+  }
+}
+
+async function copyTextSafe(text) {
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
+  } catch (e) {}
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    ta.remove();
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+async function shareFriendChallenge(source) {
+  let kind = 'quick';
+  let score = 0;
+  let maxScore = 990;
+  let sec = 60;
+  let statusId = 'r-percentile-status';
+  let label = 'TOEIC診断';
+
+  if (source === 'sprint') {
+    if (!lastSprintShareSummary || !state.questions.length) return;
+    kind = 'sprint';
+    score = lastSprintShareSummary.correct;
+    maxScore = lastSprintShareSummary.total;
+    sec = lastSprintShareSummary.totalSec || Math.round(Number(lastSprintShareSummary.avgSec) * maxScore);
+    statusId = 'sprint-challenge-status';
+    label = `Part 5 タイムアタック10問（記録: ${score}/${maxScore}問 · 平均${lastSprintShareSummary.avgSec}秒）`;
+  } else {
+    if (!state.shareResult || !state.questions.length) return;
+    kind = state.isQuick ? 'quick' : (state.assessmentMode || 'reading');
+    score = state.shareResult.score;
+    maxScore = state.shareResult.maxScore;
+    sec = Math.round(state.shareResult.seconds || 60);
+    statusId = source === 'audio' ? 'audio-percentile-status' : 'r-percentile-status';
+    label = `${state.shareResult.title}（記録: 予想${score}/${maxScore}点）`;
+  }
+
+  const token = encodeChallengeToken({
+    kind,
+    qIds: state.questions.map(q => q.id),
+    score,
+    maxScore,
+    sec
+  });
+  if (!token) return;
+
+  const url = `https://mylexsophia.com/?challenge=${token}`;
+  recordBadgeProgress({ challengeShared: true });
+  refreshHomeLearning();
+
+  const copied = await copyTextSafe(url);
+  const statusEl = $(statusId);
+  if (statusEl) {
+    statusEl.textContent = copied
+      ? '✓ 対戦URLをコピーしました！LINEやXで友達に送ると同じ問題セットで対決できます'
+      : `対戦URL: ${url}`;
+  }
+  if (navigator.share && window.matchMedia && window.matchMedia('(pointer: coarse)').matches) {
+    try {
+      await navigator.share({
+        title: 'LexSophia フレンド対戦状 ⚔️',
+        text: `まったく同じ問題セットで勝負しよう！ ${label}`,
+        url
+      });
+    } catch (e) {}
+  }
+}
+
+function renderSprintChallengeVs(myCorrect, total, myAvgSec) {
+  const card = $('sprint-vs-card');
+  if (!card) return;
+  const ch = state.activeChallenge;
+  if (!ch || ch.kind !== 'sprint') {
+    card.hidden = true;
+    card.innerHTML = '';
+    return;
+  }
+  const chAvg = ch.sec / Math.max(1, ch.questions.length);
+  let resClass = 'is-draw';
+  let resText = '🤝 DRAW · 完全同点！';
+  if (myCorrect > ch.score || (myCorrect === ch.score && myAvgSec < chAvg - 0.05)) {
+    resClass = 'is-win';
+    resText = '🏆 YOU WIN! · 挑戦者に勝利！';
+  } else if (myCorrect < ch.score || (myCorrect === ch.score && myAvgSec > chAvg + 0.05)) {
+    resClass = 'is-lose';
+    resText = '🔥 CHALLENGER WINS · あと一歩！';
+  }
+  card.innerHTML =
+    `<div class="vs-card__head">` +
+    `<span class="vs-card__kicker">⚔️ FRIEND CHALLENGE VS</span>` +
+    `<span class="vs-card__res ${resClass}">${resText}</span>` +
+    `</div>` +
+    `<div class="vs-grid">` +
+    `<div class="vs-side"><p class="who">あなた</p><p class="val">${myCorrect} / ${total}</p><p class="sub">平均 ${myAvgSec.toFixed(1)}秒/問</p></div>` +
+    `<span class="vs-sep">VS</span>` +
+    `<div class="vs-side"><p class="who">友達（挑戦者）</p><p class="val">${ch.score} / ${ch.maxScore}</p><p class="sub">平均 ${chAvg.toFixed(1)}秒/問</p></div>` +
+    `</div>`;
+  card.hidden = false;
+}
+
+function renderDiagnosticChallengeVs(cardId, myScore, maxScore, myTotalSec) {
+  const card = $(cardId);
+  if (!card) return;
+  const ch = state.activeChallenge;
+  if (!ch || ch.kind === 'sprint') {
+    card.hidden = true;
+    card.innerHTML = '';
+    return;
+  }
+  let resClass = 'is-draw';
+  let resText = '🤝 DRAW · 同スコア！';
+  if (myScore > ch.score || (myScore === ch.score && myTotalSec < ch.sec - 2)) {
+    resClass = 'is-win';
+    resText = '🏆 YOU WIN! · 挑戦者に勝利！';
+  } else if (myScore < ch.score || (myScore === ch.score && myTotalSec > ch.sec + 2)) {
+    resClass = 'is-lose';
+    resText = '🔥 CHALLENGER WINS · 再挑戦しよう！';
+  }
+  card.innerHTML =
+    `<div class="vs-card__head">` +
+    `<span class="vs-card__kicker">⚔️ FRIEND CHALLENGE VS</span>` +
+    `<span class="vs-card__res ${resClass}">${resText}</span>` +
+    `</div>` +
+    `<div class="vs-grid">` +
+    `<div class="vs-side"><p class="who">あなた</p><p class="val">${myScore}<small style="font-size:13px"> / ${maxScore}</small></p><p class="sub">${escapeHtml(fmtDuration(myTotalSec))}</p></div>` +
+    `<span class="vs-sep">VS</span>` +
+    `<div class="vs-side"><p class="who">友達（挑戦者）</p><p class="val">${ch.score}<small style="font-size:13px"> / ${ch.maxScore}</small></p><p class="sub">${escapeHtml(fmtDuration(ch.sec))}</p></div>` +
+    `</div>`;
+  card.hidden = false;
+}
+
+function launchFriendChallenge(token) {
+  const ch = decodeChallengeToken(token);
+  if (!ch) return false;
+  diagnosticQualificationProfile = null;
+  if (ch.kind === 'sprint') {
+    startPart5Sprint(ch.questions, ch);
+    return true;
+  }
+  const assessmentMode = ch.kind === 'quick' ? 'combined' : ch.kind;
+  beginTest(ch.questions, 'diagnostic', assessmentMode, { quick: ch.kind === 'quick', challenge: ch });
+  return true;
+}
+
+if ($('btn-sprint-challenge')) $('btn-sprint-challenge').addEventListener('click', () => shareFriendChallenge('sprint'));
+if ($('btn-r-challenge')) $('btn-r-challenge').addEventListener('click', () => shareFriendChallenge('r'));
+if ($('btn-audio-challenge')) $('btn-audio-challenge').addEventListener('click', () => shareFriendChallenge('audio'));
+
+/* ---------- 14. Paraphrase 50 Instant 4-Choice Drill ---------- */
+
+function getClearedParaphraseIds() {
+  const raw = readStored(STORAGE_KEYS.paraphrase, []);
+  return Array.isArray(raw) ? raw : [];
+}
+
+function initParaphraseTrainer() {
+  if (!$('paraphrase-card') || typeof LEXSOPHIA_PARAPHRASES === 'undefined' || !Array.isArray(LEXSOPHIA_PARAPHRASES) || !LEXSOPHIA_PARAPHRASES.length) return;
+
+  let order = shuffle(LEXSOPHIA_PARAPHRASES.slice());
+  let cursor = 0;
+  let answered = false;
+
+  const clearedSet = new Set(getClearedParaphraseIds());
+  const firstUncleared = order.findIndex(item => !clearedSet.has(item.id));
+  if (firstUncleared > 0) cursor = firstUncleared;
+
+  function updateStat() {
+    const done = new Set(getClearedParaphraseIds());
+    const cnt = LEXSOPHIA_PARAPHRASES.filter(x => done.has(x.id)).length;
+    if ($('pp-stat-text')) $('pp-stat-text').textContent = `クリア ${cnt} / ${LEXSOPHIA_PARAPHRASES.length}組`;
+  }
+
+  function renderPair() {
+    answered = false;
+    const item = order[cursor % order.length];
+    $('pp-cat').textContent = item.cat;
+    $('pp-src').textContent = item.src;
+    $('pp-fb').hidden = true;
+
+    const others = shuffle(LEXSOPHIA_PARAPHRASES.filter(x => x.id !== item.id && x.dst !== item.dst)).slice(0, 3);
+    const options = shuffle([item, ...others]);
+    const box = $('pp-choices');
+    box.innerHTML = '';
+
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'pp-choice';
+      btn.textContent = opt.dst;
+      btn.addEventListener('click', () => {
+        if (answered) return;
+        answered = true;
+        const ok = opt.id === item.id;
+        box.querySelectorAll('.pp-choice').forEach((b, idx) => {
+          b.disabled = true;
+          if (options[idx].id === item.id) b.classList.add('is-correct');
+          else if (b === btn && !ok) b.classList.add('is-wrong');
+        });
+        if (ok) {
+          const nextDone = Array.from(new Set([...getClearedParaphraseIds(), item.id]));
+          writeStored(STORAGE_KEYS.paraphrase, nextDone);
+        }
+        $('pp-fb-text').innerHTML = ok
+          ? `<strong style="color:var(--ink-mint)">✓ 正解！</strong> ${escapeHtml(item.src)} ＝ <strong>${escapeHtml(item.dst)}</strong>（${escapeHtml(item.ja)}）`
+          : `<strong style="color:#b42318">惜しい！</strong> 正解は <strong>${escapeHtml(item.dst)}</strong>（${escapeHtml(item.ja)}）`;
+        $('pp-fb').hidden = false;
+        updateStat();
+        recordStudyActivity();
+        refreshHomeLearning();
+      });
+      box.appendChild(btn);
+    });
+    updateStat();
+  }
+
+  if ($('btn-pp-next')) {
+    $('btn-pp-next').addEventListener('click', () => {
+      cursor = (cursor + 1) % order.length;
+      renderPair();
+    });
+  }
+
+  renderPair();
+}
+
+/* ---------- 15. Listening Cloze Dictation Gym (10Q Studio MP3) ---------- */
+
+let dictSet = [];
+let dictIndex = 0;
+let dictCorrect = 0;
+let dictAnswered = false;
+
+function normalizeDictText(str) {
+  return String(str || '')
+    .toLowerCase()
+    .replace(/[.,!?;:'"’]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function playDictationAudio() {
+  const item = dictSet[dictIndex];
+  if (!item) return;
+  const btn = $('btn-dict-audio');
+  if (state.speaking) {
+    stopSpeech();
+    return;
+  }
+  stopSpeech();
+  state.speaking = true;
+  const run = state.speechRun;
+  if (btn) {
+    btn.classList.add('is-playing');
+    btn.textContent = '■ 停止する（再生中…）';
+  }
+
+  const finishPlay = () => {
+    if (run !== state.speechRun) return;
+    state.speaking = false;
+    state.activeAudio = null;
+    if (btn) {
+      btn.classList.remove('is-playing');
+      btn.textContent = '▶ もう一度音声を聞く';
+    }
+  };
+
+  const fullSentence = `${item.before ? item.before + ' ' : ''}${item.answer}${item.after ? ' ' + item.after : ''}`;
+  const speakFallback = () => {
+    if (!speechSupported()) { finishPlay(); return; }
+    const u = new SpeechSynthesisUtterance(fullSentence);
+    u.lang = 'en-US';
+    u.rate = 0.92 * (state.audioRate || 1.0);
+    u.onend = finishPlay;
+    u.onerror = finishPlay;
+    window.speechSynthesis.speak(u);
+  };
+
+  if (item.clip) {
+    const player = new Audio(EMBEDDED_AUDIO[item.clip] || item.clip);
+    state.activeAudio = player;
+    player.defaultPlaybackRate = state.audioRate || 1.0;
+    player.playbackRate = state.audioRate || 1.0;
+    player.onended = finishPlay;
+    player.onerror = speakFallback;
+    const p = player.play();
+    if (p && typeof p.catch === 'function') p.catch(speakFallback);
+  } else {
+    speakFallback();
+  }
+}
+
+function renderDictationItem() {
+  const item = dictSet[dictIndex];
+  if (!item) return;
+  dictAnswered = false;
+  $('dict-count').textContent = `${dictIndex + 1} / ${dictSet.length}問`;
+  $('dict-play-stage').hidden = false;
+  $('dict-done-stage').hidden = true;
+  $('dict-fb').hidden = true;
+  $('dict-input').value = '';
+  $('dict-input').disabled = false;
+
+  const beforeHtml = item.before ? `${escapeHtml(item.before)} ` : '';
+  const afterHtml = item.after ? ` ${escapeHtml(item.after)}` : '';
+  $('dict-sentence').innerHTML = `${beforeHtml}<span class="dict-blank" id="dict-blank-slot">______</span>${afterHtml}`;
+
+  const chips = shuffle([item.answer, ...(item.distractors || [])]);
+  const chipBox = $('dict-chips');
+  chipBox.innerHTML = '';
+  chips.forEach(text => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'dict-chip';
+    b.textContent = text;
+    b.addEventListener('click', () => submitDictationAnswer(text, b));
+    chipBox.appendChild(b);
+  });
+
+  playDictationAudio();
+}
+
+function submitDictationAnswer(rawAnswer, clickedChip = null) {
+  if (dictAnswered) return;
+  const item = dictSet[dictIndex];
+  if (!item) return;
+  const cleaned = normalizeDictText(rawAnswer);
+  if (!cleaned) return;
+
+  dictAnswered = true;
+  const ok = cleaned === normalizeDictText(item.answer);
+  if (ok) dictCorrect += 1;
+
+  const slot = $('dict-blank-slot');
+  if (slot) {
+    slot.textContent = item.answer;
+    slot.classList.toggle('is-wrong', !ok);
+  }
+
+  $('dict-input').disabled = true;
+  document.querySelectorAll('#dict-chips .dict-chip').forEach(btn => {
+    btn.disabled = true;
+    if (normalizeDictText(btn.textContent) === normalizeDictText(item.answer)) {
+      btn.classList.add('is-correct');
+    } else if (btn === clickedChip && !ok) {
+      btn.classList.add('is-wrong');
+    }
+  });
+
+  $('dict-fb-head').innerHTML = ok
+    ? `<span style="color:var(--ink-mint)">✓ 正解！ 「${escapeHtml(item.answer)}」を正確に聞き取れました</span>`
+    : `<span style="color:#b42318">正解は「${escapeHtml(item.answer)}」</span>`;
+  $('dict-fb-ja').textContent = `和訳：${item.ja}`;
+  $('dict-fb-tip').textContent = `💡 聞き取りのコツ：${item.tip}`;
+  $('btn-dict-next').textContent = dictIndex + 1 >= dictSet.length ? '結果を見る →' : '次の問題へ →';
+  $('dict-fb').hidden = false;
+}
+
+function startDictationGym() {
+  if (typeof LEXSOPHIA_DICTATIONS === 'undefined' || !Array.isArray(LEXSOPHIA_DICTATIONS) || !LEXSOPHIA_DICTATIONS.length) return;
+  stopSpeech();
+  clearInterval(state.timerId);
+  if (typeof clearSprintTimer === 'function') clearSprintTimer();
+  dictSet = shuffle(LEXSOPHIA_DICTATIONS.slice()).slice(0, 10);
+  dictIndex = 0;
+  dictCorrect = 0;
+  showScreen('dictation');
+  renderDictationItem();
+  window.scrollTo(0, 0);
+}
+
+function initDictationGym() {
+  if ($('btn-start-dictation')) $('btn-start-dictation').addEventListener('click', startDictationGym);
+  if ($('btn-dict-retry')) $('btn-dict-retry').addEventListener('click', startDictationGym);
+  if ($('btn-dict-audio')) $('btn-dict-audio').addEventListener('click', playDictationAudio);
+  if ($('dict-form')) {
+    $('dict-form').addEventListener('submit', e => {
+      e.preventDefault();
+      submitDictationAnswer($('dict-input').value, null);
+    });
+  }
+  if ($('btn-dict-next')) {
+    $('btn-dict-next').addEventListener('click', () => {
+      stopSpeech();
+      if (dictIndex + 1 < dictSet.length) {
+        dictIndex += 1;
+        renderDictationItem();
+      } else {
+        $('dict-play-stage').hidden = true;
+        $('dict-done-stage').hidden = false;
+        $('dict-done-score').textContent = `${dictCorrect} / ${dictSet.length}問 クリア！`;
+        $('dict-owl').src = dictCorrect >= 8 ? 'img/owl-amber.png' : 'img/owl-blue.png';
+        recordBadgeProgress({ dictationCompleted: true });
+        recordStudyActivity();
+        refreshHomeLearning();
+      }
+    });
+  }
+}
+
+/* ---------- 16. 28-Day Study Heatmap & 12 Owl Achievement Badges ---------- */
+
+function getBadgeProgress() {
+  const raw = readStored(STORAGE_KEYS.badges, {});
+  return (raw && typeof raw === 'object' && !Array.isArray(raw)) ? raw : {};
+}
+
+function recordBadgeProgress(patch) {
+  const cur = getBadgeProgress();
+  const rankOrder = { C: 1, B: 2, A: 3, S: 4 };
+  const next = Object.assign({}, cur);
+  if (patch.sprintCompleted) next.sprintCompleted = true;
+  if (patch.sprintRank && (rankOrder[patch.sprintRank] || 0) > (rankOrder[cur.sprintBestRank] || 0)) {
+    next.sprintBestRank = patch.sprintRank;
+  }
+  if (patch.dictationCompleted) next.dictationCompleted = true;
+  if (patch.challengeShared) next.challengeShared = true;
+  writeStored(STORAGE_KEYS.badges, next);
+}
+
+function renderStudyHeatmap() {
+  const grid = $('home-heatmap-grid');
+  const countEl = $('home-heatmap-count');
+  if (!grid || !countEl) return;
+  const studiedSet = new Set(getStoredStreakDays());
+  const today = new Date();
+  const cells = [];
+  let studiedIn28 = 0;
+
+  for (let offset = 27; offset >= 0; offset--) {
+    const d = new Date(today.getFullYear(), today.getMonth(), today.getDate() - offset);
+    const key = localDateKey(d);
+    const isStudied = Boolean(key && studiedSet.has(key));
+    const isToday = offset === 0;
+    if (isStudied) studiedIn28 += 1;
+    const label = `${d.getMonth() + 1}/${d.getDate()}：${isStudied ? '学習済み ✓' : '未学習'}`;
+    cells.push(
+      `<span class="hm-cell${isStudied ? ' is-studied' : ''}${isToday ? ' is-today' : ''}" title="${escapeHtml(label)}" aria-label="${escapeHtml(label)}"></span>`
+    );
+  }
+  grid.innerHTML = cells.join('');
+  countEl.textContent = `${studiedIn28} / 28日 学習`;
+}
+
+function renderAchievementBadges() {
+  const grid = $('ach-badges-grid');
+  const countEl = $('ach-count-text');
+  if (!grid || !countEl) return;
+
+  const history = getHistory();
+  const streak = getStreakStats();
+  const vocabMap = readStored(STORAGE_KEYS.vocab, {}) || {};
+  const vocabMastered = (typeof LEXICON_VOCAB !== 'undefined' && Array.isArray(LEXICON_VOCAB))
+    ? LEXICON_VOCAB.filter(v => vocabMap[v.id] === 'mastered').length
+    : 0;
+  const ppDone = getClearedParaphraseIds().length;
+  const bookmarkCnt = getBookmarkIds().length;
+  const weakMap = getWeakRecords();
+  const graduatedCnt = Object.values(weakMap).filter(r => r && r.attempts > 0 && r.active === false).length;
+  const bp = getBadgeProgress();
+
+  const hasScoreAtLeast = (combinedTarget, singleTarget) => history.some(item => {
+    if (!item) return false;
+    const sc = Number(item.score) || 0;
+    return (item.maxScore === 990 || item.mode === 'combined') ? sc >= combinedTarget : sc >= singleTarget;
+  });
+
+  const BADGES = [
+    { id: 'first_diag', owl: 'img/owl-amber.png', name: '初陣のフクロウ', cond: '診断を1回クリア', unlocked: history.length >= 1 },
+    { id: 'streak_3', owl: 'img/owl-pink.png', name: '3日連続の灯火', cond: '3日連続または累計3日学習', unlocked: streak.streak >= 3 || streak.totalDays >= 3 },
+    { id: 'streak_7', owl: 'img/owl-amber.png', name: '7日継続の知恵', cond: '7日連続または累計7日学習', unlocked: streak.streak >= 7 || streak.totalDays >= 7 },
+    { id: 'vocab_30', owl: 'img/owl-blue.png', name: '語彙ハンター30', cond: '単語帳30語を習得', unlocked: vocabMastered >= 30 },
+    { id: 'vocab_100', owl: 'img/owl-violet.png', name: 'Lexicon制覇', cond: '単語帳100語すべて習得', unlocked: vocabMastered >= 100 },
+    { id: 'pp_20', owl: 'img/owl-pink.png', name: '言い換え名人', cond: 'パラフレーズ20組クリア', unlocked: ppDone >= 20 },
+    { id: 'sprint_play', owl: 'img/owl-blue.png', name: '20秒スプリンター', cond: 'Part 5タイムアタック完走', unlocked: Boolean(bp.sprintCompleted) },
+    { id: 'sprint_sa', owl: 'img/owl-amber.png', name: '電光石火 A/S', cond: 'タイムアタックA・S獲得', unlocked: bp.sprintBestRank === 'A' || bp.sprintBestRank === 'S' },
+    { id: 'dict_clear', owl: 'img/owl-blue.png', name: '音の解明者', cond: 'ディクテーション10問完走', unlocked: Boolean(bp.dictationCompleted) },
+    { id: 'bookmark_use', owl: 'img/owl-violet.png', name: '弱点コレクター', cond: '🔖保存または苦手を卒業', unlocked: bookmarkCnt >= 1 || graduatedCnt >= 1 },
+    { id: 'score_700', owl: 'img/owl-pink.png', name: '700点ブレイカー', cond: '総合700+ / 単科350+達成', unlocked: hasScoreAtLeast(700, 350) },
+    { id: 'score_860', owl: 'img/owl-violet.png', name: 'Sophia Aランク', cond: '総合860+ / 単科430+達成', unlocked: hasScoreAtLeast(860, 430) }
+  ];
+
+  const unlockedCount = BADGES.filter(b => b.unlocked).length;
+  countEl.textContent = `${unlockedCount} / ${BADGES.length} 獲得`;
+
+  grid.innerHTML = BADGES.map(b =>
+    `<div class="ach-badge${b.unlocked ? ' is-unlocked' : ''}">` +
+    `<img src="${b.owl}" alt="" width="72" height="72" loading="lazy" decoding="async">` +
+    `<span class="ach-badge__name">${escapeHtml(b.name)}</span>` +
+    `<span class="ach-badge__cond">${b.unlocked ? '✓ 獲得済み' : escapeHtml(b.cond)}</span>` +
+    `</div>`
+  ).join('');
+}
+
 window.addEventListener('popstate', routeFromHash);
 initDailyQuiz();
 initVocabTrainer();
+initParaphraseTrainer();
+initDictationGym();
 initExamCountdown();
 initPwaInstallCard();
 refreshHomeLearning();
@@ -10435,7 +11441,7 @@ const FEEDBACK_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxiEHd4hZIC8G
       return active ? active.id : '';
     }
     function syncFabVisibility() {
-      const busy = ['test', 'review', 'section-transition'].includes(currentScreenId());
+      const busy = ['test', 'review', 'section-transition', 'dictation'].includes(currentScreenId());
       document.body.classList.toggle('fb-hide-fab', busy);
     }
 

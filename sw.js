@@ -1,5 +1,5 @@
 /* LexSophia PWA Service Worker — Network-First (never serves stale HTML when online) */
-const CACHE_NAME = 'lexsophia-shell-v5';
+const CACHE_NAME = 'lexsophia-shell-v6';
 const CORE_ASSETS = [
   '/',
   '/assets/lexsophia-data.js',
