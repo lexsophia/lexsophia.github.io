@@ -226,6 +226,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mylexsophia.com/toeic-part7-timer/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mylexsophia.com/toeic-part7-1/</loc>
     <lastmod>2026-11-26</lastmod>
     <priority>0.8</priority>
@@ -312,6 +317,16 @@
   </url>
   <url>
     <loc>https://mylexsophia.com/toeic-part7-18/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mylexsophia.com/toeic-mock-tracker/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mylexsophia.com/toeic-study-hours/</loc>
     <lastmod>2026-11-26</lastmod>
     <priority>0.8</priority>
   </url>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOEIC Part 7 時間配分チェッカー｜リーディング75分タイムライン自動生成 | LexSophia</title>
+<meta name="description" content="目標スコアとPart 5・6の所要時間を入力するだけで、TOEICリーディング75分（Part 5・6・7シングル/マルチ）の理想タイムラインと終了時刻を自動計算。塗り絵を防ぐ時間配分ツール。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://mylexsophia.com/toeic-part7-timer/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/seo-assets/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LexSophia">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="TOEIC Part 7 時間配分チェッカー｜リーディング75分タイムライン自動生成 | LexSophia">
+<meta property="og:description" content="TOEICリーディング75分の理想タイムラインを自動生成。Part 5・6・7の目標通過時刻と1問あたりペースを可視化。">
+<meta property="og:url" content="https://mylexsophia.com/toeic-part7-timer/">
+<meta property="og:image" content="https://mylexsophia.com/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TOEIC Part 7 時間配分チェッカー | LexSophia">
+<meta name="twitter:description" content="リーディング75分の理想タイムラインを自動計算。Part 7の塗り絵を防ぐ時間配分ツール。">
+<meta name="twitter:image" content="https://mylexsophia.com/ogp.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mylexsophia.com/#organization","name":"LexSophia","alternateName":"レクソフィア","url":"https://mylexsophia.com/","logo":{"@type":"ImageObject","url":"https://mylexsophia.com/icon-512.png","width":512,"height":512},"description":"TOEIC形式の独自問題による無料スコア予測診断・弱点分析・パート別演習を提供する英語学習プラットフォーム。"},{"@type":"WebSite","@id":"https://mylexsophia.com/#website","url":"https://mylexsophia.com/","name":"LexSophia","alternateName":"レクソフィア","inLanguage":"ja","publisher":{"@id":"https://mylexsophia.com/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://mylexsophia.com/"},{"@type":"ListItem","position":2,"name":"TOEIC Part 7 時間配分チェッカー","item":"https://mylexsophia.com/toeic-part7-timer/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"TOEIC Part 7 に何分残すのが理想ですか？","acceptedAnswer":{"@type":"Answer","text":"全54問を最後まで解き切る（完走する）目安は、Part 5を10分以内・Part 6を8分以内で通過し、Part 7に55〜57分を残す配分です。Part 7全体で1問あたり約1分が目安になります。"}},{"@type":"Question","name":"Part 5が15分かかってしまう場合はどう調整すればいいですか？","acceptedAnswer":{"@type":"Answer","text":"Part 5で15分・Part 6で10分使うと、Part 7に残るのは50分になります。この場合、全問完走にこだわらずシングルパッセージ（29問）と得意なダブルパッセージの正答率を高める戦略に切り替えるとスコアが安定します。"}}]}]}</script>
+<style>
+.tm-card{background:#fff;border-radius:24px;padding:24px;box-shadow:0 8px 30px rgba(15,23,42,.06);margin:20px 0}
+.tm-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.tm-grid{grid-template-columns:repeat(3,1fr)}}
+.tm-field{display:grid;gap:6px}
+.tm-field label{font-size:13px;font-weight:700;color:#24292f}
+.tm-field select{width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid #d0d7de;background:#f8fafc;font-size:15px;font-weight:700;color:#0f172a}
+.tm-tl{margin-top:20px;display:grid;gap:10px}
+.tm-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 16px;border-radius:16px;background:#f4f7fb}
+.tm-row b{font-size:14.5px;color:#0f172a}
+.tm-row span{font-size:13px;color:#57606a;font-weight:600}
+.tm-badge{padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;background:#e0edff;color:#0176f0}
+.tm-badge.is-warn{background:#fef3c7;color:#b45309}
+.tm-summary{margin-top:16px;padding:16px 18px;border-radius:16px;background:#eef6ff;font-size:14px;line-height:1.7;color:#1e293b}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="site-header__inner"><a class="brand" href="/">Lex<span>Sophia</span></a><nav aria-label="サイトナビ"><a href="/#analytics">自己分析</a><a href="/practice/">練習問題</a><a href="/books/">参考書</a><a class="cta" href="/?mode=quick">無料診断</a></nav></div></header>
+<main class="container">
+<nav class="breadcrumb" aria-label="パンくずリスト"><a href="/">ホーム</a><span>›</span><span>TOEIC Part 7 時間配分チェッカー</span></nav>
+<h1>TOEIC Part 7 時間配分チェッカー</h1>
+<p class="lede">Part 5・Part 6の目標時間を選ぶだけで、リーディング75分間の理想タイムライン（通過目安・1問あたり秒数）を自動生成します。</p>
+
+<section class="tm-card" aria-label="リーディング75分タイムライン計算">
+  <div class="tm-grid">
+    <div class="tm-field">
+      <label for="tm-p5">Part 5（30問）の予定時間</label>
+      <select id="tm-p5">
+        <option value="8">8分（1問16秒・上級）</option>
+        <option value="10" selected>10分（1問20秒・理想）</option>
+        <option value="12">12分（1問24秒・標準）</option>
+        <option value="15">15分（1問30秒・じっくり）</option>
+        <option value="18">18分（1問36秒・初級）</option>
+      </select>
+    </div>
+    <div class="tm-field">
+      <label for="tm-p6">Part 6（16問）の予定時間</label>
+      <select id="tm-p6">
+        <option value="7">7分（1セット1分45秒）</option>
+        <option value="8" selected>8分（1セット2分・理想）</option>
+        <option value="10">10分（1セット2分30秒）</option>
+        <option value="12">12分（1セット3分）</option>
+      </select>
+    </div>
+    <div class="tm-field">
+      <label for="tm-start">リーディング開始時刻</label>
+      <select id="tm-start">
+        <option value="0" selected>0:00 基準（残り時間表示）</option>
+        <option value="645">午前回（10:45 開始）</option>
+        <option value="945">午後回（15:45 開始）</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="tm-tl" id="tm-tl"></div>
+  <div class="tm-summary" id="tm-summary"></div>
+</section>
+
+<section class="section">
+  <h2>Part 7 で塗り絵を防ぐ3つのチェックポイント</h2>
+  <ul>
+    <li><strong>Part 5を「1問20秒」で切る</strong>：品詞・動詞問題で悩まず即答し、10分で切り上げることでPart 7に55分以上を残せます。</li>
+    <li><strong>シングルパッセージ（No.147–175）は28〜30分が目安</strong>：前半の短いチャット・メール文書で貯金を作り、後半の4問記事に余裕を残します。</li>
+    <li><strong>マルチプルパッセージ（No.176–200）は1セット5分</strong>：5セット×5分＝25分。残り時間が15分を切ったら、解ける設問（目的・語彙言い換え）を優先回収しましょう。</li>
+  </ul>
+  <p>Part 5の解答スピードを鍛えたい場合は、<a href="/">LexSophiaのPart 5「1問20秒」タイムアタック</a>で現在の平均秒数を計測してみてください。</p>
+</section>
+
+<section class="section">
+  <h2>Part 7 対策と相性のよい定番教材</h2>
+  <article class="book-card" id="rec-book-alcPart7">
+    <h3>TOEIC L&amp;Rテスト 究極のゼミ Part7</h3>
+    <p class="book-card__meta">出版社：アルク</p>
+    <p>シングルパッセージからマルチプルパッセージまで、設問タイプ別の根拠探しと時間配分のコツを体系的に学べる対策書です。</p>
+    <a class="btn alt" href="https://link.amazon/B07fs8O3a" target="_blank" rel="noopener noreferrer sponsored">Amazonで詳細を見る ↗</a>
+  </article>
+  <p class="small">※本ページの一部リンクにはAmazonアソシエイト等のアフィリエイトリンクが含まれます</p>
+</section>
+
+<aside class="seo-owl-cta" aria-label="TOEIC無料スコア診断">
+  <div class="seo-owl-cta__copy">
+    <span class="seo-owl-cta__kicker">FREE SCORE PREDICTOR</span>
+    <h2 class="seo-owl-cta__title">今の解答スピードと予想スコアを7分で測定。</h2>
+    <p class="seo-owl-cta__desc">クイック20問で予想スコア・平均解答秒数・弱点パートを自動診断。自己分析カルテで目標との差も確認できます。</p>
+    <a class="seo-owl-cta__btn" href="/?mode=quick">無料でスコアを予測する →</a>
+  </div>
+  <img class="seo-owl-cta__owls" src="/img/lexsophia-owls-hero.png" alt="LexSophiaの4羽のフクロウマスコット" width="1080" height="426" loading="lazy" decoding="async">
+</aside>
+
+<nav class="seo-cluster" aria-label="TOEIC対策コンテンツ一覧">
+  <p class="seo-cluster__title">LexSophia TOEIC対策ライブラリ</p>
+  <div class="seo-cluster__groups">
+    <div class="seo-cluster__group"><h3>無料診断・パート別演習</h3><ul class="seo-cluster__links"><li><a href="/">TOEICスコア予測・無料診断トップ</a></li><li><a href="/practice/">練習問題集・対策ガイド総覧</a></li><li><a href="/toeic-part5/">Part 5 短文穴埋め練習</a></li><li><a href="/toeic-part6-1/">Part 6 長文穴埋め練習</a></li><li><a href="/toeic-part7-1/">Part 7 読解練習問題</a></li></ul></div>
+    <div class="seo-cluster__group"><h3>目標スコア別ガイド</h3><ul class="seo-cluster__links"><li><a href="/toeic-500-guide/">TOEIC 500点台の勉強法</a></li><li><a href="/toeic-600-guide/">TOEIC 600点台の勉強法</a></li><li><a href="/toeic-700-guide/">TOEIC 700点台の勉強法</a></li><li><a href="/toeic-800-guide/">TOEIC 800点・860点の勉強法</a></li><li><a href="/toeic-900-guide/">TOEIC 900点突破の勉強法</a></li></ul></div>
+    <div class="seo-cluster__group"><h3>ツール・教材</h3><ul class="seo-cluster__links"><li><a href="/toeic-score-calculator/">TOEIC素点・正解数スコア換算ツール</a></li><li><a href="/toeic-study-hours/">TOEIC 勉強時間シミュレーター</a></li><li><a href="/toeic-part7-timer/">TOEIC Part 7 時間配分チェッカー</a></li><li><a href="/toeic-mock-tracker/">TOEIC 模試スコア記録・弱点判定</a></li><li><a href="/books/">TOEICおすすめ参考書・問題集11選</a></li></ul></div>
+  </div>
+</nav>
+</main>
+<footer>
+  <p>制作・運営：LexSophia編集部 ｜ 更新日：2026年11月28日</p>
+  <p>TOEIC®はETSの登録商標です。本ページはLexSophiaが独自に制作した非公式の学習コンテンツであり、ETSおよびIIBCによる承認・公認を受けたものではありません。</p>
+  <a href="/">LexSophia ホームへ</a>
+</footer>
+<script>
+(function(){
+  const p5El = document.getElementById('tm-p5');
+  const p6El = document.getElementById('tm-p6');
+  const startEl = document.getElementById('tm-start');
+  function fmtClock(baseMin, elapsed){
+    if (!baseMin) return '経過 ' + elapsed + '分（残り ' + (75 - elapsed) + '分）';
+    const tot = baseMin + elapsed;
+    const h = Math.floor(tot / 60);
+    const m = String(tot % 60).padStart(2, '0');
+    return h + ':' + m + ' 通過（残り ' + (75 - elapsed) + '分）';
+  }
+  function update(){
+    const p5 = Number(p5El.value);
+    const p6 = Number(p6El.value);
+    const base = Number(startEl.value);
+    const p7 = Math.max(20, 75 - p5 - p6);
+    const p7Single = Math.round(p7 * 0.53);
+    const p7Multi = p7 - p7Single;
+    const secPerQ = Math.round((p7 * 60) / 54);
+    const rows = [
+      { name: 'Part 5（短文穴埋め · 30問）', dur: p5 + '分（1問' + Math.round(p5*60/30) + '秒）', at: fmtClock(base, p5), warn: p5 > 12 },
+      { name: 'Part 6（長文穴埋め · 16問）', dur: p6 + '分（1セット' + (p6/4).toFixed(1) + '分）', at: fmtClock(base, p5 + p6), warn: p6 > 10 },
+      { name: 'Part 7 シングル（No.147–175 · 29問）', dur: p7Single + '分', at: fmtClock(base, p5 + p6 + p7Single), warn: p7 < 50 },
+      { name: 'Part 7 マルチプル（No.176–200 · 25問）', dur: p7Multi + '分（1セット' + (p7Multi/5).toFixed(1) + '分）', at: fmtClock(base, 75), warn: p7Multi < 22 }
+    ];
+    document.getElementById('tm-tl').innerHTML = rows.map(r =>
+      '<div class="tm-row"><div><b>' + r.name + '</b><br><span>配分目安：' + r.dur + '</span></div>' +
+      '<span class="tm-badge' + (r.warn ? ' is-warn' : '') + '">' + r.at + '</span></div>'
+    ).join('');
+    document.getElementById('tm-summary').innerHTML =
+      '<strong>Part 7 に残る時間：' + p7 + '分（1問あたり約 ' + secPerQ + '秒）</strong><br>' +
+      (p7 >= 55
+        ? '完走を狙える理想的な配分です。このペースを維持できれば最後まで精読する余裕が生まれます。'
+        : (p7 >= 50
+          ? '標準的な配分です。Part 5をあと2分短縮できると、最後のトリプルパッセージの正答率が安定します。'
+          : 'Part 7の時間がタイトな配分です。まずはPart 5の品詞・文法問題を1問20秒以内で解く練習を優先しましょう。'));
+  }
+  p5El.addEventListener('change', update);
+  p6El.addEventListener('change', update);
+  startEl.addEventListener('change', update);
+  update();
+})();
+</script>
+</body>
+</html>

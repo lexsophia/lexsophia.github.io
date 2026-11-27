@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOEIC 勉強時間シミュレーター｜目標スコア別の必要時間・期間を自動計算 | LexSophia</title>
+<meta name="description" content="現在のTOEICスコア・目標スコア・1日の勉強時間から、目標達成までに必要な学習時間と期間（週数・ヶ月）を自動計算。スコア帯別の優先Partと学習計画の立て方も解説。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://mylexsophia.com/toeic-study-hours/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/seo-assets/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LexSophia">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="TOEIC 勉強時間シミュレーター｜目標スコア別の必要時間・期間を自動計算 | LexSophia">
+<meta property="og:description" content="現在スコア・目標スコア・1日の勉強時間を選ぶだけで、TOEIC目標達成までの必要学習時間と期間を即算出。">
+<meta property="og:url" content="https://mylexsophia.com/toeic-study-hours/">
+<meta property="og:image" content="https://mylexsophia.com/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TOEIC 勉強時間シミュレーター | LexSophia">
+<meta name="twitter:description" content="現在スコアと目標スコアから必要なTOEIC学習時間と期間を無料計算。">
+<meta name="twitter:image" content="https://mylexsophia.com/ogp.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mylexsophia.com/#organization","name":"LexSophia","alternateName":"レクソフィア","url":"https://mylexsophia.com/","logo":{"@type":"ImageObject","url":"https://mylexsophia.com/icon-512.png","width":512,"height":512},"description":"TOEIC形式の独自問題による無料スコア予測診断・弱点分析・パート別演習を提供する英語学習プラットフォーム。"},{"@type":"WebSite","@id":"https://mylexsophia.com/#website","url":"https://mylexsophia.com/","name":"LexSophia","alternateName":"レクソフィア","inLanguage":"ja","publisher":{"@id":"https://mylexsophia.com/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://mylexsophia.com/"},{"@type":"ListItem","position":2,"name":"TOEIC 勉強時間シミュレーター","item":"https://mylexsophia.com/toeic-study-hours/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"TOEICを100点上げるのに必要な勉強時間の目安は？","acceptedAnswer":{"@type":"Answer","text":"一般的には100点アップあたり約200〜250時間がひとつの目安とされています。ただし基礎英語力や学習の質（弱点パートへの集中度）によって個人差があり、800点以上の高スコア帯ほど100点あたりの必要時間は増える傾向があります。"}},{"@type":"Question","name":"1日30分の勉強でもTOEICスコアは伸びますか？","acceptedAnswer":{"@type":"Answer","text":"毎日30分（月約15時間）を継続すれば、約半年で90時間、1年で約180時間の学習量になります。通勤・通学のスキマ時間にPart 5文法や英単語、リスニング音声を回すことで着実に底上げできます。"}}]}]}</script>
+<style>
+.sim-card{background:#fff;border-radius:24px;padding:24px;box-shadow:0 8px 30px rgba(15,23,42,.06);margin:20px 0}
+.sim-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.sim-grid{grid-template-columns:repeat(3,1fr)}}
+.sim-field{display:grid;gap:8px}
+.sim-field label{font-size:13px;font-weight:700;color:#24292f}
+.sim-field select{width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid #d0d7de;background:#f8fafc;font-size:15px;font-weight:700;color:#0f172a}
+.sim-out{margin-top:20px;display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:560px){.sim-out{grid-template-columns:repeat(3,1fr)}}
+.sim-kpi{padding:16px;border-radius:16px;background:#f4f7fb;text-align:center}
+.sim-kpi .k{font-size:12px;font-weight:700;color:#57606a;margin:0}
+.sim-kpi .v{font-size:24px;font-weight:800;color:#0176f0;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.sim-kpi .s{font-size:12px;color:#57606a;margin:0}
+.sim-plan{margin-top:18px;padding:18px;border-radius:16px;background:#eef6ff;color:#1e293b;font-size:14px;line-height:1.7}
+.sim-plan strong{display:block;font-size:15px;margin-bottom:4px;color:#0f172a}
+.book-mini-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+@media(min-width:640px){.book-mini-grid{grid-template-columns:repeat(3,1fr)}}
+.book-mini{background:#fff;border-radius:18px;padding:18px;box-shadow:0 4px 16px rgba(15,23,42,.05);display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.book-mini h3{font-size:15px;line-height:1.45;margin:4px 0}
+.book-mini p{font-size:13px;color:#57606a;line-height:1.6;margin:0}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="site-header__inner"><a class="brand" href="/">Lex<span>Sophia</span></a><nav aria-label="サイトナビ"><a href="/#analytics">自己分析</a><a href="/practice/">練習問題</a><a href="/books/">参考書</a><a class="cta" href="/?mode=quick">無料診断</a></nav></div></header>
+<main class="container">
+<nav class="breadcrumb" aria-label="パンくずリスト"><a href="/">ホーム</a><span>›</span><span>TOEIC 勉強時間シミュレーター</span></nav>
+<h1>TOEIC 目標スコア別 勉強時間シミュレーター</h1>
+<p class="lede">現在のスコア・目標スコア・1日の勉強時間を選ぶだけで、目標達成までに必要な学習時間と期間の目安を自動計算します。</p>
+
+<section class="sim-card" aria-label="勉強時間シミュレーター">
+  <div class="sim-grid">
+    <div class="sim-field">
+      <label for="sim-cur">現在のスコア（目安）</label>
+      <select id="sim-cur">
+        <option value="300">300点</option>
+        <option value="350">350点</option>
+        <option value="400">400点</option>
+        <option value="450">450点</option>
+        <option value="500" selected>500点</option>
+        <option value="550">550点</option>
+        <option value="600">600点</option>
+        <option value="650">650点</option>
+        <option value="700">700点</option>
+        <option value="750">750点</option>
+        <option value="800">800点</option>
+        <option value="850">850点</option>
+      </select>
+    </div>
+    <div class="sim-field">
+      <label for="sim-goal">目標スコア</label>
+      <select id="sim-goal">
+        <option value="500">500点</option>
+        <option value="600">600点</option>
+        <option value="700">700点</option>
+        <option value="730" selected>730点</option>
+        <option value="800">800点</option>
+        <option value="860">860点</option>
+        <option value="900">900点</option>
+        <option value="950">950点</option>
+      </select>
+    </div>
+    <div class="sim-field">
+      <label for="sim-daily">1日の勉強時間</label>
+      <select id="sim-daily">
+        <option value="15">15分 / 日</option>
+        <option value="30">30分 / 日</option>
+        <option value="45">45分 / 日</option>
+        <option value="60" selected>60分（1時間） / 日</option>
+        <option value="90">90分（1.5時間） / 日</option>
+        <option value="120">120分（2時間） / 日</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="sim-out">
+    <div class="sim-kpi">
+      <p class="k">必要勉強時間の目安</p>
+      <p class="v" id="out-hours">—</p>
+      <p class="s" id="out-diff">スコア差 +230点</p>
+    </div>
+    <div class="sim-kpi">
+      <p class="k">達成までの目安期間</p>
+      <p class="v" id="out-period">—</p>
+      <p class="s" id="out-weeks">—</p>
+    </div>
+    <div class="sim-kpi">
+      <p class="k">達成目安の時期</p>
+      <p class="v" id="out-date">—</p>
+      <p class="s">毎日継続した場合の目安</p>
+    </div>
+  </div>
+
+  <div class="sim-plan" id="out-plan">
+    <strong>このスコア帯で最優先すべき学習配分</strong>
+    <span id="out-plan-text">計算中...</span>
+  </div>
+  <p class="small" style="margin-top:12px;">※算出される時間・期間は一般的な学習目安（+100点あたり約220〜300時間、高スコア帯ほど負荷増）に基づく参考値であり、公式スコアの到達を保証するものではありません。</p>
+</section>
+
+<section class="section">
+  <h2>スコア帯別・100点アップに必要な勉強時間の目安</h2>
+  <p>TOEICは現在のスコア帯によって、同じ「+100点」でも必要な学習量が変わります。基礎文法と頻出語彙が固まると500〜700点台は比較的伸びやすい一方、800点以上は処理速度と精読の精度が求められるため、学習時間が増える傾向があります。</p>
+  <ul>
+    <li><strong>400点 → 600点（+200点）</strong>：約400〜450時間（基礎文法・中学〜高校語彙・Part 1–2・Part 5中心）</li>
+    <li><strong>600点 → 730点（+130点）</strong>：約280〜330時間（Part 5の高速化・Part 3–4の先読み・Part 7シングルパッセージ）</li>
+    <li><strong>730点 → 860点（+130点）</strong>：約330〜400時間（言い換え表現の習得・Part 7マルチプルパッセージ完走）</li>
+    <li><strong>860点 → 900点超</strong>：約150〜250時間（難語彙・Part 2間接応答・Part 7の細部照合の取りこぼし削減）</li>
+  </ul>
+  <p>現在の実力が分からない場合は、まず <a href="/?mode=quick">LexSophiaの無料クイック診断（約7分）</a> で現在スコアと弱点パートを確認し、<a href="/#analytics">自己分析カルテ</a> で目標ラインとのギャップをチェックするのが近道です。</p>
+</section>
+
+<section class="section">
+  <h2>よくある質問</h2>
+  <details><summary>1日1時間しか取れない場合、何から手をつけるべきですか？</summary><p>「単語・言い換え15分 ＋ 自分の最弱点パートの演習30分 ＋ 音読・復習15分」の3分割が最も効率的です。全パートをまんべんなくやるより、失点が多いPart 1つに絞る方が短期でスコアが動きやすくなります。</p></details>
+  <details><summary>勉強時間を短縮するコツはありますか？</summary><p>すでに正解できるパートに時間をかけすぎないことが最大の時短になります。定期的なミニ診断で「目標ラインに届いていないPart」だけを特定し、間違えた問題を2回連続で正解できるまで復習してください。</p></details>
+</section>
+
+<section class="section">
+  <h2>学習計画と相性のよい定番教材</h2>
+  <div class="book-mini-grid">
+    <article class="book-mini">
+      <div>
+        <span class="badge">語彙</span>
+        <h3>TOEIC L &amp; R TEST 出る単特急 金のフレーズ</h3>
+        <p>スコア帯別（600・730・860・990点）に頻出語彙をフレーズで定着させる定番の1冊。</p>
+      </div>
+      <a class="btn alt" href="https://www.amazon.co.jp/dp/4023315680?tag=lexsophia-22" target="_blank" rel="noopener noreferrer sponsored">Amazonで詳細を見る ↗</a>
+    </article>
+    <article class="book-mini">
+      <div>
+        <span class="badge">Part 5 文法</span>
+        <h3>TOEIC L＆Rテスト 文法問題 でる1000問</h3>
+        <p>Part 5の品詞・動詞・接続詞を徹底反復し、1問20秒の解答スピードを養う文法問題集。</p>
+      </div>
+      <a class="btn alt" href="https://link.amazon/B0h3FGTIa" target="_blank" rel="noopener noreferrer sponsored">Amazonで詳細を見る ↗</a>
+    </article>
+    <article class="book-mini">
+      <div>
+        <span class="badge">公式模試</span>
+        <h3>公式TOEIC Listening &amp; Reading 問題集 12</h3>
+        <p>本番と同じ公式スピーカー音声と200問形式で、時間配分と実戦感覚を確認できる定番模試。</p>
+      </div>
+      <a class="btn alt" href="https://amzn.to/4y4bCFU" target="_blank" rel="noopener noreferrer sponsored">Amazonで詳細を見る ↗</a>
+    </article>
+  </div>
+  <p class="small" style="margin-top:12px;">※本ページの一部リンクにはAmazonアソシエイト等のアフィリエイトリンクが含まれます</p>
+</section>
+
+<aside class="seo-owl-cta" aria-label="TOEIC無料スコア診断">
+  <div class="seo-owl-cta__copy">
+    <span class="seo-owl-cta__kicker">FREE SCORE PREDICTOR</span>
+    <h2 class="seo-owl-cta__title">まずは今の実力と弱点パートを7分で診断。</h2>
+    <p class="seo-owl-cta__desc">クイック20問で予想スコアと5軸パラメータ・Part別の不足率を自動算出。登録不要・全問日本語解説つき。</p>
+    <a class="seo-owl-cta__btn" href="/?mode=quick">無料でスコアを予測する →</a>
+  </div>
+  <img class="seo-owl-cta__owls" src="/img/lexsophia-owls-hero.png" alt="LexSophiaの4羽のフクロウマスコット" width="1080" height="426" loading="lazy" decoding="async">
+</aside>
+
+<nav class="seo-cluster" aria-label="TOEIC対策コンテンツ一覧">
+  <p class="seo-cluster__title">LexSophia TOEIC対策ライブラリ</p>
+  <div class="seo-cluster__groups">
+    <div class="seo-cluster__group"><h3>無料診断・パート別演習</h3><ul class="seo-cluster__links"><li><a href="/">TOEICスコア予測・無料診断トップ</a></li><li><a href="/practice/">練習問題集・対策ガイド総覧</a></li><li><a href="/toeic-listening/">リスニング無料練習（Part 1〜4 音声付）</a></li><li><a href="/toeic-vocab/">TOEIC頻出英単語・熟語100選</a></li><li><a href="/toeic-paraphrase/">TOEIC言い換え（パラフレーズ）50選</a></li><li><a href="/toeic-grammar/">TOEIC頻出英文法ルール総まとめ</a></li><li><a href="/toeic-part5/">Part 5 短文穴埋め練習</a></li></ul></div>
+    <div class="seo-cluster__group"><h3>目標スコア別・直前勉強法</h3><ul class="seo-cluster__links"><li><a href="/toeic-beginner/">TOEIC初心者・初受験完全ガイド</a></li><li><a href="/toeic-400-guide/">TOEIC 400点台の勉強法</a></li><li><a href="/toeic-500-guide/">TOEIC 500点台の勉強法</a></li><li><a href="/toeic-600-guide/">TOEIC 600点台の勉強法</a></li><li><a href="/toeic-700-guide/">TOEIC 700点台の勉強法</a></li><li><a href="/toeic-800-guide/">TOEIC 800点・860点の勉強法</a></li><li><a href="/toeic-900-guide/">TOEIC 900点突破の勉強法</a></li></ul></div>
+    <div class="seo-cluster__group"><h3>換算ツール・就活・IP・教材</h3><ul class="seo-cluster__links"><li><a href="/toeic-score-calculator/">TOEIC素点・正解数スコア換算ツール</a></li><li><a href="/toeic-study-hours/">TOEIC 勉強時間シミュレーター</a></li><li><a href="/toeic-eiken-ielts/">TOEIC・英検・IELTS・CEFR換算比較</a></li><li><a href="/toeic-time-management/">TOEIC 時間配分と解く順番ガイド</a></li><li><a href="/books/">TOEICおすすめ参考書・問題集11選</a></li><li><a href="/articles/">パート別解法・学習計画コラム</a></li></ul></div>
+  </div>
+</nav>
+</main>
+<footer>
+  <p>制作・運営：LexSophia編集部 ｜ 更新日：2026年11月28日</p>
+  <p>TOEIC®はETSの登録商標です。本ページはLexSophiaが独自に制作した非公式の学習コンテンツであり、ETSおよびIIBCによる承認・公認を受けたものではありません。</p>
+  <a href="/">LexSophia ホームへ</a>
+</footer>
+<script>
+(function(){
+  const curEl = document.getElementById('sim-cur');
+  const goalEl = document.getElementById('sim-goal');
+  const dailyEl = document.getElementById('sim-daily');
+  function calcHours(from, to){
+    if (to <= from) return 0;
+    let h = 0;
+    for (let s = from; s < to; s += 10) {
+      if (s < 600) h += 21;
+      else if (s < 730) h += 24;
+      else if (s < 850) h += 28;
+      else h += 36;
+    }
+    return Math.round(h / 10) * 10;
+  }
+  function planText(goal){
+    if (goal <= 550) return '中学〜高校基礎文法と頻出単語（約60%）、Part 1・2の音声定着（約40%）に絞るのが最短です。まずはPart 5の品詞・時制とPart 2の疑問詞応答を固めましょう。';
+    if (goal <= 730) return 'Part 5文法・語彙の高速化（1問20秒以内）と、Part 3・4の先読みトレーニングを軸にしましょう。Part 7はシングルパッセージを確実に取る戦略が有効です。';
+    if (goal <= 860) return 'Listeningでの言い換え（パラフレーズ）の瞬時処理と、Part 7のマルチプルパッセージ完走が鍵です。時間配分を意識した模試演習と弱点パートの集中反復を組み合わせましょう。';
+    return '高難度語彙・語法（Part 5–6）、間接応答（Part 2）、複数文書間の細部照合（Part 7）での取りこぼしを徹底的に潰すフェーズです。誤答ログの2回連続正解クリアを習慣化しましょう。';
+  }
+  function update(){
+    const cur = Number(curEl.value);
+    const goal = Number(goalEl.value);
+    const dailyMin = Number(dailyEl.value);
+    const diff = goal - cur;
+    if (diff <= 0) {
+      document.getElementById('out-hours').textContent = '0時間';
+      document.getElementById('out-diff').textContent = '目標スコアを現在より高く設定してください';
+      document.getElementById('out-period').textContent = '達成済み';
+      document.getElementById('out-weeks').textContent = 'さらに上の目標に挑戦できます';
+      document.getElementById('out-date').textContent = '—';
+      document.getElementById('out-plan-text').textContent = planText(goal);
+      return;
+    }
+    const hours = calcHours(cur, goal);
+    const days = Math.ceil((hours * 60) / dailyMin);
+    const weeks = Math.max(1, Math.round(days / 7));
+    const months = (days / 30).toFixed(1);
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + days);
+    document.getElementById('out-hours').textContent = '約 ' + hours + '時間';
+    document.getElementById('out-diff').textContent = 'スコア差 +' + diff + '点（' + cur + ' → ' + goal + '）';
+    document.getElementById('out-period').textContent = '約 ' + months + 'ヶ月';
+    document.getElementById('out-weeks').textContent = '約 ' + weeks + '週間（' + days + '日）';
+    document.getElementById('out-date').textContent = targetDate.getFullYear() + '年' + (targetDate.getMonth() + 1) + '月頃';
+    document.getElementById('out-plan-text').textContent = planText(goal);
+  }
+  curEl.addEventListener('change', update);
+  goalEl.addEventListener('change', update);
+  dailyEl.addEventListener('change', update);
+  update();
+})();
+</script>
+</body>
+</html>

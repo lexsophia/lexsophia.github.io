@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOEIC 模試スコア記録・弱点パート判定ツール｜公式問題集200問対応 | LexSophia</title>
+<meta name="description" content="公式問題集や市販模試のPart 1〜7の正解数を入力するだけで、L/R予測スコア・合計スコア・最優先で伸ばすべき弱点パートを自動判定。ブラウザに履歴保存もできる無料ツール。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://mylexsophia.com/toeic-mock-tracker/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/seo-assets/style.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LexSophia">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="TOEIC 模試スコア記録・弱点パート判定ツール | LexSophia">
+<meta property="og:description" content="公式問題集200問のPart別正解数を入れるだけで、予想スコアと最優先の弱点パートを即判定・記録。">
+<meta property="og:url" content="https://mylexsophia.com/toeic-mock-tracker/">
+<meta property="og:image" content="https://mylexsophia.com/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TOEIC 模試スコア記録・弱点パート判定ツール | LexSophia">
+<meta name="twitter:description" content="公式問題集のPart 1–7正解数からスコア換算と弱点パートを自動判定。">
+<meta name="twitter:image" content="https://mylexsophia.com/ogp.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mylexsophia.com/#organization","name":"LexSophia","alternateName":"レクソフィア","url":"https://mylexsophia.com/","logo":{"@type":"ImageObject","url":"https://mylexsophia.com/icon-512.png","width":512,"height":512},"description":"TOEIC形式の独自問題による無料スコア予測診断・弱点分析・パート別演習を提供する英語学習プラットフォーム。"},{"@type":"WebSite","@id":"https://mylexsophia.com/#website","url":"https://mylexsophia.com/","name":"LexSophia","alternateName":"レクソフィア","inLanguage":"ja","publisher":{"@id":"https://mylexsophia.com/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://mylexsophia.com/"},{"@type":"ListItem","position":2,"name":"TOEIC 模試スコア記録・弱点判定","item":"https://mylexsophia.com/toeic-mock-tracker/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"公式問題集の正解数から正確なTOEICスコアは分かりますか？","acceptedAnswer":{"@type":"Answer","text":"本番TOEICは回ごとの難易度調整（統計的スコア算出）があるため完全一致はしませんが、L100問・R100問の正解数から±25〜35点程度の目安スコアと、どのPartで失点しているかを把握できます。"}}]}]}</script>
+<style>
+.mt-card{background:#fff;border-radius:24px;padding:24px;box-shadow:0 8px 30px rgba(15,23,42,.06);margin:20px 0}
+.mt-parts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:640px){.mt-parts{grid-template-columns:repeat(4,1fr)}}
+.mt-f{display:grid;gap:5px}
+.mt-f label{font-size:12.5px;font-weight:700;color:#24292f}
+.mt-f input{width:100%;padding:10px 12px;border-radius:12px;border:1.5px solid #d0d7de;background:#f8fafc;font-size:15px;font-weight:700;color:#0f172a;box-sizing:border-box}
+.mt-res{margin-top:20px;display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:560px){.mt-res{grid-template-columns:repeat(3,1fr)}}
+.mt-kpi{padding:16px;border-radius:16px;background:#f4f7fb;text-align:center}
+.mt-kpi .k{font-size:12px;font-weight:700;color:#57606a;margin:0}
+.mt-kpi .v{font-size:24px;font-weight:800;color:#0176f0;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.mt-kpi .s{font-size:12px;color:#57606a;margin:0}
+.mt-verdict{margin-top:16px;padding:16px 18px;border-radius:16px;background:#eef6ff;font-size:14px;line-height:1.7;color:#1e293b}
+.mt-actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.mt-log{margin-top:16px;display:grid;gap:8px}
+.mt-log-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;background:#f4f7fb;font-size:13px;font-weight:600;color:#24292f}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="site-header__inner"><a class="brand" href="/">Lex<span>Sophia</span></a><nav aria-label="サイトナビ"><a href="/#analytics">自己分析</a><a href="/practice/">練習問題</a><a href="/books/">参考書</a><a class="cta" href="/?mode=quick">無料診断</a></nav></div></header>
+<main class="container">
+<nav class="breadcrumb" aria-label="パンくずリスト"><a href="/">ホーム</a><span>›</span><span>TOEIC 模試スコア記録・弱点判定</span></nav>
+<h1>TOEIC 模試スコア記録・弱点パート判定ツール</h1>
+<p class="lede">公式問題集や市販模試（全200問）のPart 1〜7の正解数を入力すると、予想スコアと最優先で復習すべき弱点パートを即判定します。記録はこのブラウザに保存できます。</p>
+
+<section class="mt-card" aria-label="模試200問スコア換算">
+  <div class="mt-parts">
+    <div class="mt-f"><label for="mp1">Part 1（/6）</label><input id="mp1" type="number" min="0" max="6" value="5"></div>
+    <div class="mt-f"><label for="mp2">Part 2（/25）</label><input id="mp2" type="number" min="0" max="25" value="19"></div>
+    <div class="mt-f"><label for="mp3">Part 3（/39）</label><input id="mp3" type="number" min="0" max="39" value="28"></div>
+    <div class="mt-f"><label for="mp4">Part 4（/30）</label><input id="mp4" type="number" min="0" max="30" value="21"></div>
+    <div class="mt-f"><label for="mp5">Part 5（/30）</label><input id="mp5" type="number" min="0" max="30" value="22"></div>
+    <div class="mt-f"><label for="mp6">Part 6（/16）</label><input id="mp6" type="number" min="0" max="16" value="11"></div>
+    <div class="mt-f"><label for="mp7">Part 7（/54）</label><input id="mp7" type="number" min="0" max="54" value="36"></div>
+  </div>
+
+  <div class="mt-res">
+    <div class="mt-kpi"><p class="k">予想合計スコア</p><p class="v" id="mt-total">—</p><p class="s" id="mt-range">—</p></div>
+    <div class="mt-kpi"><p class="k">Listening 目安</p><p class="v" id="mt-l">—</p><p class="s" id="mt-l-raw">—</p></div>
+    <div class="mt-kpi"><p class="k">Reading 目安</p><p class="v" id="mt-r">—</p><p class="s" id="mt-r-raw">—</p></div>
+  </div>
+
+  <div class="mt-verdict" id="mt-verdict"></div>
+
+  <div class="mt-actions">
+    <button type="button" class="btn" id="btn-mt-save">この模試結果を記録する</button>
+    <a class="btn alt" href="/#practice">弱点パートをLexSophiaで練習する →</a>
+  </div>
+  <div class="mt-log" id="mt-log"></div>
+  <p class="small" style="margin-top:12px;">※換算スコアは一般的な正解数テーブルに基づく非公式の目安です。</p>
+</section>
+
+<section class="section">
+  <h2>模試を解いた直後にやるべき復習手順</h2>
+  <ol>
+    <li><strong>最弱点Partを1つだけ特定する</strong>：全200問を均等に復習するより、正答率が最も低いPart 1つに集中する方が次回模試の伸び幅が大きくなります。</li>
+    <li><strong>Listeningは「聞き取れなかった音」を確認</strong>：スクリプトを見ながらシャドーイングし、連結音や言い換え箇所をチェックします。</li>
+    <li><strong>Readingは「時間不足」か「知識不足」かを分ける</strong>：時間切れで解けなかった問題と、読んで間違えた問題を分けて復習しましょう。</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>模試演習に使う定番の公式問題集</h2>
+  <article class="book-card" id="rec-book-official12">
+    <h3>公式TOEIC Listening &amp; Reading 問題集 12</h3>
+    <p class="book-card__meta">出版社：国際ビジネスコミュニケーション協会（IIBC）</p>
+    <p>テスト2回分（400問）と公式スピーカーによる音声を収録。本番と同じ形式・難易度で現在地を測るための定番模試です。</p>
+    <a class="btn alt" href="https://amzn.to/4y4bCFU" target="_blank" rel="noopener noreferrer sponsored">Amazonで詳細を見る ↗</a>
+  </article>
+  <p class="small">※本ページの一部リンクにはAmazonアソシエイト等のアフィリエイトリンクが含まれます</p>
+</section>
+
+<aside class="seo-owl-cta" aria-label="TOEIC無料スコア診断">
+  <div class="seo-owl-cta__copy">
+    <span class="seo-owl-cta__kicker">FREE SCORE PREDICTOR</span>
+    <h2 class="seo-owl-cta__title">200問解く時間がない日は、7分のクイック診断。</h2>
+    <p class="seo-owl-cta__desc">スマホで20問解くだけで予想スコアと5軸パラメータ・失点パターンTOP3を自動分析します。</p>
+    <a class="seo-owl-cta__btn" href="/?mode=quick">無料でスコアを予測する →</a>
+  </div>
+  <img class="seo-owl-cta__owls" src="/img/lexsophia-owls-hero.png" alt="LexSophiaの4羽のフクロウマスコット" width="1080" height="426" loading="lazy" decoding="async">
+</aside>
+
+<nav class="seo-cluster" aria-label="TOEIC対策コンテンツ一覧">
+  <p class="seo-cluster__title">LexSophia TOEIC対策ライブラリ</p>
+  <div class="seo-cluster__groups">
+    <div class="seo-cluster__group"><h3>無料診断・パート別演習</h3><ul class="seo-cluster__links"><li><a href="/">TOEICスコア予測・無料診断トップ</a></li><li><a href="/practice/">練習問題集・対策ガイド総覧</a></li><li><a href="/toeic-listening/">リスニング無料練習</a></li><li><a href="/toeic-part5/">Part 5 短文穴埋め練習</a></li><li><a href="/toeic-part7-1/">Part 7 読解練習問題</a></li></ul></div>
+    <div class="seo-cluster__group"><h3>目標スコア別ガイド</h3><ul class="seo-cluster__links"><li><a href="/toeic-500-guide/">TOEIC 500点台の勉強法</a></li><li><a href="/toeic-600-guide/">TOEIC 600点台の勉強法</a></li><li><a href="/toeic-700-guide/">TOEIC 700点台の勉強法</a></li><li><a href="/toeic-800-guide/">TOEIC 800点・860点の勉強法</a></li><li><a href="/toeic-900-guide/">TOEIC 900点突破の勉強法</a></li></ul></div>
+    <div class="seo-cluster__group"><h3>ツール・教材</h3><ul class="seo-cluster__links"><li><a href="/toeic-score-calculator/">TOEIC素点・正解数スコア換算ツール</a></li><li><a href="/toeic-study-hours/">TOEIC 勉強時間シミュレーター</a></li><li><a href="/toeic-part7-timer/">TOEIC Part 7 時間配分チェッカー</a></li><li><a href="/toeic-mock-tracker/">TOEIC 模試スコア記録・弱点判定</a></li><li><a href="/books/">TOEICおすすめ参考書・問題集11選</a></li></ul></div>
+  </div>
+</nav>
+</main>
+<footer>
+  <p>制作・運営：LexSophia編集部 ｜ 更新日：2026年11月28日</p>
+  <p>TOEIC®はETSの登録商標です。本ページはLexSophiaが独自に制作した非公式の学習コンテンツであり、ETSおよびIIBCによる承認・公認を受けたものではありません。</p>
+  <a href="/">LexSophia ホームへ</a>
+</footer>
+<script>
+(function(){
+  const MAX = [6, 25, 39, 30, 30, 16, 54];
+  const NAMES = ['Part 1', 'Part 2', 'Part 3', 'Part 4', 'Part 5', 'Part 6', 'Part 7'];
+  const KEY = 'lexsophia.mocklog.v1';
+  const inputs = [1,2,3,4,5,6,7].map(i => document.getElementById('mp' + i));
+  function estL(raw){ return Math.max(5, Math.min(495, Math.round((raw * 5.05 + 15) / 5) * 5)); }
+  function estR(raw){ return Math.max(5, Math.min(495, Math.round((raw * 4.95 - 5) / 5) * 5)); }
+  function readVals(){
+    return inputs.map((el, i) => Math.max(0, Math.min(MAX[i], Number(el.value) || 0)));
+  }
+  function calc(){
+    const v = readVals();
+    const lRaw = v[0]+v[1]+v[2]+v[3];
+    const rRaw = v[4]+v[5]+v[6];
+    const lSc = estL(lRaw), rSc = estR(rRaw), tot = lSc + rSc;
+    const pcts = v.map((c, i) => ({ name: NAMES[i], c, max: MAX[i], pct: Math.round((c / MAX[i]) * 100) }));
+    const weak = [...pcts].sort((a, b) => a.pct - b.pct)[0];
+    document.getElementById('mt-total').textContent = tot + '点';
+    document.getElementById('mt-range').textContent = '目安レンジ ' + Math.max(10, tot - 30) + '〜' + Math.min(990, tot + 30) + '点';
+    document.getElementById('mt-l').textContent = lSc + '点';
+    document.getElementById('mt-l-raw').textContent = lRaw + ' / 100問正解';
+    document.getElementById('mt-r').textContent = rSc + '点';
+    document.getElementById('mt-r-raw').textContent = rRaw + ' / 100問正解';
+    document.getElementById('mt-verdict').innerHTML =
+      '<strong>最優先で伸ばすべき弱点：' + weak.name + '（正答率 ' + weak.pct + '% · ' + weak.c + '/' + weak.max + '問）</strong><br>' +
+      'L/R差は ' + (lSc >= rSc ? 'Listening +' + (lSc - rSc) + '点優位' : 'Reading +' + (rSc - lSc) + '点優位') +
+      ' です。まずは ' + weak.name + ' の失点原因（語彙・文法・時間配分）を重点復習しましょう。';
+    return { tot, lSc, rSc, weak: weak.name + ' ' + weak.pct + '%' };
+  }
+  function renderLog(){
+    let list = [];
+    try { list = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(e) {}
+    const box = document.getElementById('mt-log');
+    if (!list.length) { box.innerHTML = ''; return; }
+    box.innerHTML = list.slice(0, 8).map(it =>
+      '<div class="mt-log-item"><span>' + it.date + ' · 最弱点 ' + it.weak + '</span><span>' + it.tot + '点（L ' + it.lSc + ' / R ' + it.rSc + '）</span></div>'
+    ).join('');
+  }
+  inputs.forEach(el => el.addEventListener('input', calc));
+  document.getElementById('btn-mt-save').addEventListener('click', () => {
+    const res = calc();
+    const d = new Date();
+    const date = d.getFullYear() + '/' + (d.getMonth()+1) + '/' + d.getDate();
+    let list = [];
+    try { list = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch(e) {}
+    list.unshift({ date, tot: res.tot, lSc: res.lSc, rSc: res.rSc, weak: res.weak });
+    try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 20))); } catch(e) {}
+    renderLog();
+  });
+  calc();
+  renderLog();
+})();
+</script>
+</body>
+</html>

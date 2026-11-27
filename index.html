@@ -1217,6 +1217,10 @@
   @media (max-width: 680px) {
     .brand-nav { gap: 6px; }
     .brand-nav a { display: none; }
+    .brand-nav a.brand-nav__keep {
+      display: inline-flex; align-items: center; padding: 7px 11px; font-size: 12px;
+      background: var(--surface-subtle); color: var(--ink-primary);
+    }
     .brandbar { width: calc(100% - 32px); padding: 9px 11px 9px 18px; gap: 8px; }
     .brand-auth { padding: 8px 13px; font-size: 12.5px; max-width: 118px; }
     .brand-cta { padding: 9px 14px; font-size: 12.5px; }
@@ -1234,10 +1238,11 @@
     .home-deck { border-radius: 38px 38px 0 0; margin-top: -12px; }
   }
   @media (max-width: 400px) {
-    .wordmark { font-size: 18px; }
-    .wordmark::before { flex: 0 0 24px; width: 24px; height: 24px; margin-right: 7px; }
-    .brand-auth { padding: 8px 11px; font-size: 12px; max-width: 102px; }
-    .brand-cta { padding: 8px 12px; font-size: 12px; }
+    .wordmark { font-size: 17px; }
+    .wordmark::before { flex: 0 0 22px; width: 22px; height: 22px; margin-right: 6px; }
+    .brand-nav a.brand-nav__keep { padding: 6px 9px; font-size: 11.5px; }
+    .brand-auth { padding: 7px 10px; font-size: 11.5px; max-width: 96px; }
+    .brand-cta { padding: 7px 11px; font-size: 11.5px; }
     .hero-mode-chips { gap: 8px; }
     .hero-chip { padding: 10px 8px; font-size: 12px; gap: 6px; }
   }
@@ -1925,6 +1930,66 @@
     .sa-card { padding: 18px 16px; }
     .sa-rx-btn { width: 100%; justify-content: center; }
   }
+  .sa-part-row--btn {
+    width: 100%; text-align: left; border: 0; cursor: pointer; font: inherit;
+    transition: transform 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease;
+  }
+  .sa-part-row--btn:hover { transform: translateY(-1px); background: #eef3f9; box-shadow: var(--shadow-ring-subtle); }
+  .sa-part-go { font-size: 11.5px; font-weight: 700; color: var(--pop-blue); }
+  .sa-focus-item--btn {
+    width: 100%; text-align: left; border: 0; cursor: pointer; font: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .sa-focus-item--btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-ring-subtle); }
+
+  /* ---------- Daily 1-Question Challenge (#home) ---------- */
+  .daily-q-card {
+    margin-top: 22px; padding: 24px 26px; border: 0; border-radius: var(--radius-card);
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+    display: grid; gap: 14px;
+  }
+  .daily-q-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  }
+  .daily-q-kicker {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--pop-blue);
+  }
+  .daily-q-badge {
+    padding: 4px 10px; border-radius: var(--radius-pill);
+    font-size: 11.5px; font-weight: 700;
+    background: var(--surface-subtle); color: var(--ink-secondary);
+  }
+  .daily-q-badge.is-done { background: var(--tint-mint-bg); color: var(--ink-mint); }
+  .daily-q-stem {
+    font-size: 15.5px; line-height: 1.7; font-weight: 600; color: var(--ink-primary);
+  }
+  .daily-q-opts { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  @media (min-width: 560px) { .daily-q-opts { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+  .daily-q-opt {
+    display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
+    padding: 12px 14px; border: 1.5px solid var(--line-subtle); border-radius: 14px;
+    background: var(--surface-canvas); color: var(--ink-primary);
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+  }
+  .daily-q-opt:hover:not(:disabled) { border-color: var(--pop-blue); background: var(--tint-blue-bg); transform: translateY(-1px); }
+  .daily-q-opt:disabled { cursor: default; }
+  .daily-q-opt.is-correct { border-color: var(--pop-mint); background: var(--tint-mint-bg); color: var(--ink-mint); }
+  .daily-q-opt.is-wrong { border-color: #d97706; background: var(--tint-amber-bg); color: var(--ink-amber); }
+  .daily-q-letter {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+    background: var(--surface-subtle); font-family: var(--font-num); font-size: 12px; font-weight: 700;
+  }
+  .daily-q-fb {
+    padding: 14px 16px; border-radius: 14px; background: var(--surface-subtle);
+    display: grid; gap: 6px; font-size: 13px; line-height: 1.65; color: var(--ink-secondary);
+  }
+  .daily-q-fb[hidden] { display: none; }
+  .daily-q-fb b { color: var(--ink-primary); }
+  .daily-q-foot { display: flex; justify-content: flex-end; margin-top: 4px; }
+  @media (max-width: 520px) { .daily-q-card { padding: 20px 18px; } }
 
   .weak-part-card {
     margin: 0 0 18px; padding: 18px 20px; border-radius: var(--radius-card);
@@ -3389,7 +3454,7 @@
       <p class="wordmark">Lex<span>Sophia</span></p>
       <nav class="brand-nav" aria-label="ホームナビゲーション">
         <a href="#practice">Part別練習</a>
-        <a href="#analytics">自己分析</a>
+        <a href="#analytics" class="brand-nav__keep">自己分析</a>
         <a href="#learning-title">学習メニュー</a>
         <a href="#about-title">特徴</a>
         <button type="button" class="brand-auth" id="btn-auth-nav" aria-haspopup="dialog">
@@ -3751,6 +3816,24 @@
         </div>
       </div>
 
+      <!-- Daily 1-Question TOEIC Challenge -->
+      <div class="daily-q-card" id="daily-q-card" aria-labelledby="daily-q-title">
+        <div class="daily-q-head">
+          <span class="daily-q-kicker" id="daily-q-title">DAILY 1 QUESTION · 今日の1問</span>
+          <span class="daily-q-badge" id="daily-q-badge">Part 5 · 30秒</span>
+        </div>
+        <p class="daily-q-stem" id="daily-q-stem"></p>
+        <div class="daily-q-opts" id="daily-q-opts"></div>
+        <div class="daily-q-fb" id="daily-q-fb" hidden>
+          <p><b id="daily-q-verdict"></b></p>
+          <p id="daily-q-trans"></p>
+          <p id="daily-q-exp"></p>
+          <div class="daily-q-foot">
+            <button type="button" class="btn btn--ghost" id="btn-daily-q-more">Part 5 をもっと解く →</button>
+          </div>
+        </div>
+      </div>
+
       <div class="learning-grid">
         <button class="learning-card" id="btn-weak-home" disabled>
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M4.2 7.5l5.2 3M14.6 13.5l5.2 3M19.8 7.5l-5.2 3M9.4 13.5l-5.2 3"/></svg></span>
@@ -3943,6 +4026,9 @@
           <h3>就活・IPテスト・参考書・コラム</h3>
           <ul class="home-seo-lib__list">
             <li><a href="/toeic-score-calculator/">TOEIC素点・正解数スコア換算シミュレーター</a></li>
+            <li><a href="/toeic-study-hours/">TOEIC 勉強時間シミュレーター</a></li>
+            <li><a href="/toeic-part7-timer/">TOEIC Part 7 時間配分チェッカー</a></li>
+            <li><a href="/toeic-mock-tracker/">TOEIC 模試スコア記録・弱点判定</a></li>
             <li><a href="/toeic-eiken-ielts/">TOEIC・英検・IELTS・CEFR比較換算表</a></li>
             <li><a href="/toeic-shukatsu/">就活のTOEICスコア目安・履歴書の書き方</a></li>
             <li><a href="/toeic-ip-test/">TOEIC IPテスト（オンライン）の特徴と対策</a></li>
@@ -4729,6 +4815,10 @@
               <p class="sa-kpi-v" id="sa-pace-readout">—</p>
               <p class="sa-kpi-s" id="sa-pace-sub">—</p>
             </div>
+          </div>
+          <div style="margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+            <span class="sa-sub" id="sa-export-status">SNS共有や記録用にカルテを画像保存できます</span>
+            <button type="button" class="btn btn--ghost" id="btn-sa-export-card">カルテ画像を保存（PNG）</button>
           </div>
         </div>
 
@@ -7065,6 +7155,7 @@ function refreshHomeLearning() {
   if (typeof refreshBookmarksCard === 'function') refreshBookmarksCard();
   if (typeof renderStudyHeatmap === 'function') renderStudyHeatmap();
   if (typeof renderAchievementBadges === 'function') renderAchievementBadges();
+  if (typeof renderDailyOneQuestion === 'function') renderDailyOneQuestion();
 }
 
 function formatShortChartDate(iso) {
@@ -7455,41 +7546,47 @@ function renderSelfAnalysis(history, targetScore) {
     }
   }
 
-  // 2. Part 1-7 Gap Bars
+  // 2. Part 1-7 Gap Bars (clickable to launch that Part directly)
   if ($('sa-part-bench-label')) {
-    $('sa-part-bench-label').textContent = `目標 ${sa.benchScore}点 基準ライン：${sa.benchPct}%`;
+    $('sa-part-bench-label').textContent = `目標 ${sa.benchScore}点 基準ライン：${sa.benchPct}%（タップで練習）`;
   }
   if ($('sa-part-bars')) {
     $('sa-part-bars').innerHTML = sa.parts.map(p => {
       if (p.total === 0) {
-        return `<div class="sa-part-row">` +
+        return `<button type="button" class="sa-part-row sa-part-row--btn" data-sa-part="${p.part}">` +
           `<div class="sa-part-top"><span class="sa-part-name">Part ${p.part}<small>${escapeHtml(p.name)}</small></span>` +
-          `<span class="sa-part-meta"><span class="sa-gap-tag is-none">未受験</span></span></div>` +
+          `<span class="sa-part-meta"><span class="sa-gap-tag is-none">未受験</span><span class="sa-part-go">練習 →</span></span></div>` +
           `<div class="sa-part-track"><i class="sa-part-fill" style="width:0%"></i><span class="sa-part-bench" style="left:${sa.benchPct}%" title="基準 ${sa.benchPct}%"></span></div>` +
-          `</div>`;
+          `</button>`;
       }
       const isShort = p.gap < 0;
       const tagCls = isShort ? 'is-short' : 'is-ok';
       const tagText = isShort ? `あと ${p.gap}%` : '基準クリア';
       const fillCls = isShort ? 'is-short' : 'is-ok';
-      return `<div class="sa-part-row">` +
+      return `<button type="button" class="sa-part-row sa-part-row--btn" data-sa-part="${p.part}">` +
         `<div class="sa-part-top"><span class="sa-part-name">Part ${p.part}<small>${escapeHtml(p.name)}</small></span>` +
-        `<span class="sa-part-meta"><span>${p.acc}% (${p.correct}/${p.total})</span><span class="sa-gap-tag ${tagCls}">${tagText}</span></span></div>` +
+        `<span class="sa-part-meta"><span>${p.acc}% (${p.correct}/${p.total})</span><span class="sa-gap-tag ${tagCls}">${tagText}</span><span class="sa-part-go">練習 →</span></span></div>` +
         `<div class="sa-part-track"><i class="sa-part-fill ${fillCls}" style="width:${p.acc}%"></i><span class="sa-part-bench" style="left:${sa.benchPct}%" title="基準 ${sa.benchPct}%"></span></div>` +
-        `</div>`;
+        `</button>`;
     }).join('');
+    $('sa-part-bars').querySelectorAll('[data-sa-part]').forEach(btn => {
+      btn.addEventListener('click', () => startListeningPractice(Number(btn.dataset.saPart)));
+    });
   }
 
-  // 3. Loss Pattern TOP 3 + Difficulty + Recovery
+  // 3. Loss Pattern TOP 3 + Difficulty + Recovery (clickable to launch targeted drill)
   if ($('sa-diff-type')) $('sa-diff-type').textContent = sa.diffProfileLabel;
   if ($('sa-focus-top3')) {
     if (sa.topFocuses.length) {
       $('sa-focus-top3').innerHTML = sa.topFocuses.map((f, i) =>
-        `<div class="sa-focus-item">` +
+        `<button type="button" class="sa-focus-item sa-focus-item--btn" data-sa-focus="${escapeHtml(f.key)}">` +
         `<span class="sa-focus-left"><span class="sa-focus-rank">${i + 1}</span><span class="sa-focus-name">${escapeHtml(f.label)}</span></span>` +
-        `<span class="sa-focus-cnt">${f.count}回失点</span>` +
-        `</div>`
+        `<span class="sa-focus-cnt">${f.count}回失点 · 特訓 →</span>` +
+        `</button>`
       ).join('');
+      $('sa-focus-top3').querySelectorAll('[data-sa-focus]').forEach(btn => {
+        btn.addEventListener('click', () => launchFocusDrill(btn.dataset.saFocus));
+      });
     } else {
       $('sa-focus-top3').innerHTML = `<p class="sa-kpi-s">現在、目立つ失点パターンはありません。引き続き演習して精度を保ちましょう。</p>`;
     }
@@ -7548,6 +7645,295 @@ function renderSelfAnalysis(history, targetScore) {
       $('sa-rx-sub').textContent = `受験済みパートはすべて基準（${sa.benchPct}%）をクリア中。目標スコアを1段階上げるのもおすすめです。`;
       rxBtn.textContent = `Part ${bp.part} をもう1セット練習する →`;
     }
+  }
+}
+
+function exportSelfAnalysisCardPng() {
+  const history = getHistory();
+  if (!history.length) return;
+  const target = getTargetScore();
+  const streak = getStreakStats();
+  const sa = computeSelfAnalysis(history, getWeakRecords(), readStored(STORAGE_KEYS.vocab, {}) || {}, target);
+  const statusEl = $('sa-export-status');
+
+  const W = 1200, H = 630;
+  const canvas = document.createElement('canvas');
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  const rRect = (x, y, w, h, r) => {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  };
+
+  // Background
+  ctx.fillStyle = '#eaeef2';
+  ctx.fillRect(0, 0, W, H);
+  rRect(36, 32, W - 72, H - 64, 32);
+  ctx.fillStyle = '#ffffff';
+  ctx.fill();
+
+  // Header
+  const now = new Date();
+  const dateStr = `${now.getFullYear()}/${String(now.getMonth() + 1).padStart(2, '0')}/${String(now.getDate()).padStart(2, '0')}`;
+  ctx.fillStyle = '#0176f0';
+  ctx.font = '700 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  ctx.fillText('LexSophia  ·  TOEIC 自己分析カルテ', 76, 86);
+  ctx.fillStyle = '#64748b';
+  ctx.font = '600 18px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  ctx.textAlign = 'right';
+  ctx.fillText(`${dateStr}  ·  連続学習 ${streak.streak}日  ·  診断 ${history.length}回`, W - 76, 86);
+  ctx.textAlign = 'left';
+
+  // Left panel: Score + Radar
+  const latest = history[0];
+  const scale = latest.maxScore || 495;
+  rRect(76, 114, 480, 110, 20);
+  ctx.fillStyle = '#f4f7fb';
+  ctx.fill();
+  ctx.fillStyle = '#64748b';
+  ctx.font = '700 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  ctx.fillText('最新予想スコア', 102, 148);
+  ctx.fillStyle = '#0f172a';
+  ctx.font = '800 44px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  ctx.fillText(`${latest.score}`, 102, 202);
+  const scoreW = ctx.measureText(`${latest.score}`).width;
+  ctx.fillStyle = '#64748b';
+  ctx.font = '700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  ctx.fillText(`/ ${scale}`, 110 + scoreW, 200);
+  ctx.textAlign = 'right';
+  ctx.fillStyle = '#0176f0';
+  ctx.font = '700 17px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  ctx.fillText(`目標 ${sa.benchScore}点（基準 ${sa.benchPct}%）`, 532, 178);
+  ctx.textAlign = 'left';
+
+  // 5-Axis Radar on Left Bottom
+  const cx = 316, cy = 396, R = 112;
+  const axes = sa.axes.map(a => ({ label: a.label, pct: a.pct != null ? a.pct : 0 }));
+  const N = axes.length;
+  const ptAt = (i, ratio) => {
+    const a = (-Math.PI / 2) + (i * 2 * Math.PI / N);
+    return [cx + R * ratio * Math.cos(a), cy + R * ratio * Math.sin(a)];
+  };
+  [0.25, 0.5, 0.75, 1.0].forEach(r => {
+    ctx.beginPath();
+    axes.forEach((_, i) => {
+      const [x, y] = ptAt(i, r);
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    });
+    ctx.closePath();
+    ctx.strokeStyle = '#e2e8f0';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  });
+  axes.forEach((_, i) => {
+    const [x, y] = ptAt(i, 1.0);
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(x, y);
+    ctx.strokeStyle = '#e2e8f0';
+    ctx.stroke();
+  });
+  ctx.beginPath();
+  axes.forEach((a, i) => {
+    const [x, y] = ptAt(i, clamp(a.pct / 100, 0.08, 1.0));
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(1, 118, 240, 0.20)';
+  ctx.fill();
+  ctx.strokeStyle = '#0176f0';
+  ctx.lineWidth = 3;
+  ctx.stroke();
+  axes.forEach((a, i) => {
+    const [x, y] = ptAt(i, clamp(a.pct / 100, 0.08, 1.0));
+    ctx.beginPath();
+    ctx.arc(x, y, 5, 0, Math.PI * 2);
+    ctx.fillStyle = '#0176f0';
+    ctx.fill();
+    const [lx, ly] = ptAt(i, 1.3);
+    ctx.fillStyle = '#1e293b';
+    ctx.font = '700 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(`${a.label} ${a.pct}`, lx, ly + 5);
+  });
+  ctx.textAlign = 'left';
+
+  // Right panel: 5-axis bars + bottleneck summary
+  const rx = 600, rw = 524;
+  ctx.fillStyle = '#0f172a';
+  ctx.font = '700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  ctx.fillText('5軸パラメータ ＆ 重点ポイント', rx, 140);
+
+  sa.axes.forEach((a, i) => {
+    const y = 166 + i * 54;
+    ctx.fillStyle = '#334155';
+    ctx.font = '700 16px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+    ctx.fillText(a.label, rx, y + 18);
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#0f172a';
+    ctx.fillText(a.pct != null ? `${a.pct} / 100` : '未計測', rx + rw, y + 18);
+    ctx.textAlign = 'left';
+    rRect(rx, y + 28, rw, 10, 5);
+    ctx.fillStyle = '#e2e8f0';
+    ctx.fill();
+    if (a.pct != null) {
+      rRect(rx, y + 28, Math.max(10, (rw * a.pct) / 100), 10, 5);
+      ctx.fillStyle = a.pct >= sa.benchPct ? '#00a87e' : '#0176f0';
+      ctx.fill();
+    }
+  });
+
+  // Summary box on right bottom
+  rRect(rx, 450, rw, 104, 18);
+  ctx.fillStyle = '#eef6ff';
+  ctx.fill();
+  ctx.fillStyle = '#0176f0';
+  ctx.font = '700 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  ctx.fillText('次の最優先アクション', rx + 20, 480);
+  ctx.fillStyle = '#0f172a';
+  ctx.font = '700 20px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  const focusMsg = sa.bottleneck
+    ? `Part ${sa.bottleneck.part}（${sa.bottleneck.name}）累計 ${sa.bottleneck.acc}%`
+    : '総合診断で全Partを計測しよう';
+  ctx.fillText(focusMsg, rx + 20, 514);
+  ctx.fillStyle = '#475569';
+  ctx.font = '600 15px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  const paceMsg = sa.avgSec != null ? `平均 ${sa.avgSec}秒/問` : 'ペース未計測';
+  const recMsg = sa.recoveryPct != null ? `弱点克服率 ${sa.recoveryPct}%` : '弱点克服率 100%';
+  ctx.fillText(`${paceMsg}  ·  ${recMsg}  ·  mylexsophia.com`, rx + 20, 540);
+
+  canvas.toBlob(async blob => {
+    if (!blob) return;
+    const fname = `lexsophia-karte-${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}.png`;
+    try {
+      const file = new File([blob], fname, { type: 'image/png' });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], title: 'LexSophia 自己分析カルテ', text: 'LexSophiaでTOEIC自己分析カルテを作成しました #LexSophia #TOEIC' });
+        if (statusEl) statusEl.textContent = 'カルテ画像を共有しました ✓';
+        return;
+      }
+    } catch (e) {
+      if (e && e.name === 'AbortError') return;
+    }
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fname;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+    if (statusEl) statusEl.textContent = `カルテ画像を保存しました（${fname}） ✓`;
+  }, 'image/png');
+}
+
+function launchFocusDrill(focusKey) {
+  const f = String(focusKey || '');
+  if (/pos|partOfSpeech|wordForm|adjective|adverb|noun|pronoun/i.test(f)) { startPinpointDrill('pos'); return; }
+  if (/tense|voice|verb|subjunctive|agreement|participle/i.test(f)) { startPinpointDrill('tense'); return; }
+  if (/conj|prep|connect|clause|relative|transition/i.test(f)) { startPinpointDrill('connectors'); return; }
+  if (/vocab|colloc|idiom|meaning|lexical/i.test(f)) { startPinpointDrill('vocab'); return; }
+  if (/indirect|response|wh|yesno|tag|part2/i.test(f)) { startPinpointDrill('p2indirect'); return; }
+  if (/infer|multi|detail|purpose|not_true|synonym|reading|part7/i.test(f)) { startPinpointDrill('p7multi'); return; }
+  const sample = ALL_QUESTION_BANK.find(q => q.focus === f || q.skill === f);
+  startListeningPractice(sample ? sample.part : 5);
+}
+
+function getDailyOneQuestion() {
+  const p5 = QUESTION_BANK.filter(q => q && q.part === 5 && Array.isArray(q.choices) && q.choices.length === 4);
+  if (!p5.length) return null;
+  const now = new Date();
+  const dateKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  let hash = 0;
+  for (let i = 0; i < dateKey.length; i++) hash = ((hash * 31) + dateKey.charCodeAt(i)) >>> 0;
+  return { dateKey, q: p5[hash % p5.length] };
+}
+
+function renderDailyOneQuestion() {
+  const card = $('daily-q-card');
+  const stemEl = $('daily-q-stem');
+  const optsEl = $('daily-q-opts');
+  const fbEl = $('daily-q-fb');
+  const badgeEl = $('daily-q-badge');
+  if (!card || !stemEl || !optsEl || !fbEl) return;
+
+  const picked = getDailyOneQuestion();
+  if (!picked) { card.hidden = true; return; }
+  card.hidden = false;
+
+  const { dateKey, q } = picked;
+  const saved = readStored('lexsophia.dailyq.v1', null);
+  const answeredIdx = (saved && saved.dateKey === dateKey && saved.qId === q.id && Number.isInteger(saved.choice))
+    ? saved.choice
+    : null;
+
+  stemEl.textContent = q.text || q.stem || '';
+  const letters = ['A', 'B', 'C', 'D'];
+
+  const applyAnswerView = (chosenIdx) => {
+    const isCorrect = chosenIdx === q.answer;
+    if (badgeEl) {
+      badgeEl.textContent = '本日クリア ✓';
+      badgeEl.classList.add('is-done');
+    }
+    optsEl.querySelectorAll('.daily-q-opt').forEach((btn, i) => {
+      btn.disabled = true;
+      btn.classList.toggle('is-correct', i === q.answer);
+      btn.classList.toggle('is-wrong', i === chosenIdx && i !== q.answer);
+    });
+    if ($('daily-q-verdict')) {
+      $('daily-q-verdict').textContent = isCorrect
+        ? `正解（${letters[q.answer]}）· 今日の学習カウントに記録されました`
+        : `不正解 — 正解は（${letters[q.answer]}）${q.choices[q.answer]}`;
+    }
+    const transObj = (typeof QUESTION_TRANSLATIONS !== 'undefined' && QUESTION_TRANSLATIONS[q.id]) ? QUESTION_TRANSLATIONS[q.id] : null;
+    const trans = transObj ? (typeof transObj === 'string' ? transObj : (transObj.text || '')) : '';
+    const exp = (typeof QUESTION_EXPLANATIONS !== 'undefined' && QUESTION_EXPLANATIONS[q.id])
+      ? QUESTION_EXPLANATIONS[q.id]
+      : `${FOCUS_LABELS[q.focus] || '文構造'}と文脈から判断します。`;
+    if ($('daily-q-trans')) {
+      $('daily-q-trans').textContent = trans ? `和訳：${trans}` : '';
+      $('daily-q-trans').hidden = !trans;
+    }
+    if ($('daily-q-exp')) $('daily-q-exp').textContent = `解説：${exp}`;
+    fbEl.hidden = false;
+  };
+
+  if (badgeEl) {
+    badgeEl.textContent = `${dateKey.slice(5).replace('-', '/')} · Part 5`;
+    badgeEl.classList.remove('is-done');
+  }
+  fbEl.hidden = true;
+
+  optsEl.innerHTML = q.choices.map((c, i) =>
+    `<button type="button" class="daily-q-opt" data-dq-idx="${i}"><span class="daily-q-letter">${letters[i]}</span><span>${escapeHtml(c)}</span></button>`
+  ).join('');
+
+  if (answeredIdx !== null) {
+    applyAnswerView(answeredIdx);
+  } else {
+    optsEl.querySelectorAll('.daily-q-opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = Number(btn.dataset.dqIdx);
+        writeStored('lexsophia.dailyq.v1', { dateKey, qId: q.id, choice: idx, correct: idx === q.answer });
+        recordStudyActivity();
+        applyAnswerView(idx);
+        // Update streak & heatmap smoothly without re-rendering opts
+        const streak = getStreakStats();
+        if ($('home-streak-pill')) $('home-streak-pill').classList.toggle('is-active', streak.streak > 0);
+        if ($('home-streak-text')) $('home-streak-text').textContent = `${streak.streak}日連続学習中`;
+        if ($('home-streak-done')) $('home-streak-done').hidden = false;
+        if (typeof renderStudyHeatmap === 'function') renderStudyHeatmap();
+      });
+    });
   }
 }
 
@@ -10077,6 +10463,12 @@ $('btn-history-back').addEventListener('click', () => {
 });
 if ($('btn-sa-start-diag')) {
   $('btn-sa-start-diag').addEventListener('click', () => startDiagnosticDirect(startQuickCombined));
+}
+if ($('btn-sa-export-card')) {
+  $('btn-sa-export-card').addEventListener('click', exportSelfAnalysisCardPng);
+}
+if ($('btn-daily-q-more')) {
+  $('btn-daily-q-more').addEventListener('click', () => startListeningPractice(5));
 }
 if ($('btn-sa-rx')) {
   $('btn-sa-rx').addEventListener('click', () => {
