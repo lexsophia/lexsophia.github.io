@@ -1782,6 +1782,150 @@
   .trend-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
   .trend-dash { width: 14px; height: 0; border-top: 2px dashed var(--pop-violet); display: inline-block; }
 
+  /* ---------- Self-Analysis Dashboard (#history / #analytics) ---------- */
+  .sa-section { margin-top: 20px; display: grid; gap: 16px; }
+  #sa-content:not([hidden]) { display: grid; gap: 16px; }
+  .sa-card {
+    padding: 22px; border: 0; border-radius: var(--radius-card);
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+  }
+  .sa-empty-card {
+    padding: 28px 22px; border: 0; border-radius: var(--radius-card);
+    background: var(--surface-canvas); box-shadow: var(--shadow-card);
+    text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  .sa-empty-card img { width: 72px; height: auto; display: block; }
+  .sa-empty-card h2 { font-size: 17px; letter-spacing: -0.02em; color: var(--ink-primary); }
+  .sa-empty-card p { font-size: 13.5px; color: var(--ink-secondary); line-height: 1.65; max-width: 440px; }
+  .sa-head {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
+  }
+  .sa-kicker {
+    display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--pop-blue); margin-bottom: 4px;
+  }
+  .sa-title { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink-primary); }
+  .sa-sub { font-size: 12px; color: var(--ink-muted); font-weight: 600; }
+  .sa-radar-grid { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: center; }
+  @media (min-width: 680px) {
+    .sa-radar-grid { grid-template-columns: minmax(240px, 290px) 1fr; }
+  }
+  .sa-radar-box { margin: 0; width: 100%; }
+  .sa-radar-box svg { width: 100%; max-width: 290px; height: auto; display: block; margin: 0 auto; overflow: visible; }
+  .sa-axis-list { display: grid; gap: 8px; }
+  .sa-axis-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 11px 14px; border-radius: 14px; background: var(--surface-subtle);
+  }
+  .sa-axis-label { font-size: 13px; font-weight: 700; color: var(--ink-primary); }
+  .sa-axis-right { display: inline-flex; align-items: center; gap: 8px; }
+  .sa-axis-note { font-size: 11.5px; color: var(--ink-muted); font-weight: 600; }
+  .sa-axis-val {
+    font-family: var(--font-num); font-size: 14px; font-weight: 700;
+    font-variant-numeric: tabular-nums; color: var(--ink-primary);
+  }
+  .sa-axis-val.is-weak { color: var(--ink-amber); }
+  .sa-axis-val.is-strong { color: var(--ink-mint); }
+  .sa-kpi-row {
+    margin-top: 16px; display: grid; grid-template-columns: 1fr; gap: 10px;
+  }
+  @media (min-width: 560px) { .sa-kpi-row { grid-template-columns: repeat(2, 1fr); } }
+  .sa-kpi-box {
+    padding: 14px 16px; border-radius: 16px; background: var(--surface-subtle);
+  }
+  .sa-kpi-k { font-size: 11.5px; font-weight: 700; color: var(--ink-muted); }
+  .sa-kpi-v { margin-top: 4px; font-size: 15px; font-weight: 700; color: var(--ink-primary); line-height: 1.45; }
+  .sa-kpi-s { margin-top: 4px; font-size: 12px; color: var(--ink-secondary); line-height: 1.55; }
+  .sa-part-list { display: grid; gap: 10px; }
+  .sa-part-row {
+    padding: 12px 14px; border-radius: 16px; background: var(--surface-subtle);
+    display: grid; gap: 8px;
+  }
+  .sa-part-top {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+  }
+  .sa-part-name { font-size: 13.5px; font-weight: 700; color: var(--ink-primary); }
+  .sa-part-name small { font-weight: 600; color: var(--ink-muted); margin-left: 4px; }
+  .sa-part-meta {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-num); font-size: 12.5px; font-weight: 700; color: var(--ink-secondary);
+  }
+  .sa-gap-tag {
+    display: inline-block; padding: 2px 9px; border-radius: var(--radius-pill);
+    font-size: 11.5px; font-weight: 700; font-family: var(--font-num);
+  }
+  .sa-gap-tag.is-short { background: var(--tint-amber-bg); color: var(--ink-amber); }
+  .sa-gap-tag.is-ok { background: var(--tint-mint-bg); color: var(--ink-mint); }
+  .sa-gap-tag.is-none { background: var(--surface-canvas); color: var(--ink-muted); }
+  .sa-part-track {
+    position: relative; height: 8px; border-radius: var(--radius-pill);
+    background: rgba(15, 23, 42, 0.08);
+  }
+  .sa-part-fill {
+    display: block; height: 100%; border-radius: var(--radius-pill);
+    background: var(--pop-blue); transition: width 0.35s ease;
+  }
+  .sa-part-fill.is-short { background: #d97706; }
+  .sa-part-fill.is-ok { background: var(--pop-mint); }
+  .sa-part-bench {
+    position: absolute; top: -3px; bottom: -3px; width: 2px;
+    border-radius: 2px; background: var(--pop-violet);
+  }
+  .sa-two-col { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 640px) { .sa-two-col { grid-template-columns: repeat(2, 1fr); } }
+  .sa-subbox {
+    padding: 16px; border-radius: 16px; background: var(--surface-subtle);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .sa-subbox h3 { font-size: 14px; font-weight: 700; color: var(--ink-primary); }
+  .sa-focus-list { display: grid; gap: 8px; }
+  .sa-focus-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 12px; border-radius: 12px; background: var(--surface-canvas);
+  }
+  .sa-focus-left { display: flex; align-items: center; gap: 10px; }
+  .sa-focus-rank {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--ink-primary); color: #fff;
+    font-family: var(--font-num); font-size: 11.5px; font-weight: 700; flex-shrink: 0;
+  }
+  .sa-focus-name { font-size: 13px; font-weight: 700; color: var(--ink-primary); }
+  .sa-focus-cnt {
+    font-family: var(--font-num); font-size: 12px; font-weight: 700;
+    color: var(--ink-amber); white-space: nowrap;
+  }
+  .sa-diff-rows { display: grid; gap: 7px; }
+  .sa-diff-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    font-size: 12.5px; color: var(--ink-secondary); font-weight: 600;
+  }
+  .sa-diff-row b { font-family: var(--font-num); color: var(--ink-primary); }
+  .sa-recovery-bar {
+    height: 8px; border-radius: var(--radius-pill); background: rgba(15, 23, 42, 0.08); overflow: hidden;
+  }
+  .sa-recovery-bar i {
+    display: block; height: 100%; border-radius: var(--radius-pill);
+    background: var(--pop-mint); transition: width 0.35s ease;
+  }
+  .sa-rx-box {
+    margin-top: 16px; padding: 18px 20px; border-radius: 18px;
+    background: var(--tint-blue-bg);
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  @media (min-width: 620px) {
+    .sa-rx-box { flex-direction: row; align-items: center; justify-content: space-between; }
+  }
+  .sa-rx-k { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: var(--pop-blue); }
+  .sa-rx-t { margin-top: 4px; font-size: 15.5px; font-weight: 700; color: var(--ink-primary); line-height: 1.4; }
+  .sa-rx-s { margin-top: 4px; font-size: 12.5px; color: var(--ink-secondary); line-height: 1.5; }
+  .sa-rx-btn { flex-shrink: 0; white-space: nowrap; }
+  @media (max-width: 520px) {
+    .sa-card { padding: 18px 16px; }
+    .sa-rx-btn { width: 100%; justify-content: center; }
+  }
+
   .weak-part-card {
     margin: 0 0 18px; padding: 18px 20px; border-radius: var(--radius-card);
     background: linear-gradient(135deg, #f0f7ff 0%, #f5f0ff 100%);
@@ -3245,6 +3389,7 @@
       <p class="wordmark">Lex<span>Sophia</span></p>
       <nav class="brand-nav" aria-label="ホームナビゲーション">
         <a href="#practice">Part別練習</a>
+        <a href="#analytics">自己分析</a>
         <a href="#learning-title">学習メニュー</a>
         <a href="#about-title">特徴</a>
         <button type="button" class="brand-auth" id="btn-auth-nav" aria-haspopup="dialog">
@@ -3619,7 +3764,7 @@
         </button>
         <button class="learning-card" id="btn-history-home">
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2"/></svg></span>
-          <span><span class="k">学習履歴を見る</span><span class="d" id="home-history-note">まだ診断履歴はありません</span></span>
+          <span><span class="k">自己分析・学習カルテ</span><span class="d" id="home-history-note">診断後に弱点と不足を自動分析</span></span>
           <span class="arrow" aria-hidden="true">›</span>
         </button>
         <button class="learning-card" id="btn-book-guide">
@@ -4224,7 +4369,7 @@
         <button class="act-tile" id="btn-career"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></span><span class="t">就活で見る</span><span class="d" id="btn-career-d">業界の水準と比べる</span></button>
         <button class="act-tile" id="btn-review" hidden><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M16 16l2 2 4-4"/></svg></span><span class="t">間違えた問題</span><span class="d" id="btn-review-d">復習する</span></button>
         <button class="act-tile" id="btn-share-score"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></span><span class="t">シェア</span><span class="d" id="btn-share-score-d">ストーリーズ用画像</span></button>
-        <button class="act-tile" id="btn-history-results"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-6"/></svg></span><span class="t">学習履歴</span><span class="d" id="btn-history-results-d">前回と比べる</span></button>
+        <button class="act-tile" id="btn-history-results"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-6"/></svg></span><span class="t">自己分析・履歴</span><span class="d" id="btn-history-results-d">弱点カルテを見る</span></button>
         <button class="act-tile" id="btn-r-print" type="button"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg></span><span class="t">PDFカルテ</span><span class="d">診断レポートを保存・印刷</span></button>
       </div>
       <p class="share-status" id="score-share-status" role="status"></p>
@@ -4348,7 +4493,7 @@
         <button class="act-tile" id="btn-audio-career"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></span><span class="t">就活で見る</span><span class="d" id="btn-audio-career-d">業界の水準と比べる</span></button>
         <button class="act-tile" id="btn-audio-review" hidden><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M16 16l2 2 4-4"/></svg></span><span class="t">間違えた問題</span><span class="d" id="btn-audio-review-d">復習する</span></button>
         <button class="act-tile" id="btn-audio-share-score"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></span><span class="t">シェア</span><span class="d" id="btn-audio-share-score-d">ストーリーズ用画像</span></button>
-        <button class="act-tile" id="btn-history-audio"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-6"/></svg></span><span class="t">学習履歴</span><span class="d" id="btn-history-audio-d">前回と比べる</span></button>
+        <button class="act-tile" id="btn-history-audio"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-6"/></svg></span><span class="t">自己分析・履歴</span><span class="d" id="btn-history-audio-d">弱点カルテを見る</span></button>
         <button class="act-tile" id="btn-audio-print" type="button"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg></span><span class="t">PDFカルテ</span><span class="d">診断レポートを保存・印刷</span></button>
       </div>
       <p class="share-status" id="audio-score-share-status" role="status"></p>
@@ -4540,31 +4685,101 @@
 <section id="history" class="screen" aria-labelledby="history-title">
   <div class="wrap">
     <button class="sub-back" id="btn-history-back">← ホームに戻る</button>
-    <h1 class="sub-title" id="history-title">学習履歴</h1>
-    <p class="sub-lede">この端末で受けた診断結果を記録しています。</p>
-
-    <div class="account-card" id="account-card">
-      <div class="account-card-head">
-        <h2>アカウント・クラウド同期</h2>
-        <span class="account-badge" id="account-badge" hidden>同期中</span>
-      </div>
-      <p class="note" id="account-note">ログインすると、診断結果と苦手問題がクラウドに保存され、スマホ・PCなど別の端末でも続きから学習できます。ログインしなくても今まで通り使えます。</p>
-      <div class="account-actions" id="account-actions-guest">
-        <button class="btn" id="btn-history-google" type="button">Googleで続ける</button>
-        <button class="btn btn--ghost" id="btn-history-email" type="button">メールでログイン・登録</button>
-      </div>
-      <div class="account-actions" id="account-actions-user" hidden>
-        <button class="btn btn--ghost" id="btn-history-sync" type="button">今すぐ同期</button>
-        <button class="btn btn--ghost" id="btn-logout" type="button">ログアウト</button>
-      </div>
-      <p class="account-status" id="account-status" role="status"></p>
-    </div>
+    <h1 class="sub-title" id="history-title">自己分析・学習カルテ</h1>
+    <p class="sub-lede">累計の診断データから、弱点と目標までの不足を客観的に可視化します。</p>
 
     <div class="history-summary">
       <div class="history-stat"><p class="k">連続学習</p><p class="v" id="h-streak">0日</p><p class="s" id="h-streak-sub">累計 0日</p></div>
       <div class="history-stat"><p class="k">最新スコア</p><p class="v" id="h-latest">—</p><p class="s" id="h-latest-mode">—</p></div>
       <div class="history-stat"><p class="k">自己ベスト</p><p class="v" id="h-best">—</p><p class="s" id="h-best-sub">—</p></div>
       <div class="history-stat"><p class="k">診断回数</p><p class="v" id="h-count">0回</p><p class="s" id="h-weak-sub">復習 0問</p></div>
+    </div>
+
+    <!-- Self-Analysis Dashboard -->
+    <div class="sa-section" id="self-analysis-wrap">
+      <div class="sa-empty-card" id="sa-empty-state">
+        <img src="img/owl-blue.png" alt="" width="229" height="320" loading="lazy">
+        <h2>まずは1回診断して、実力を可視化しよう</h2>
+        <p>クイック総合診断（20問）を受けると、5軸パラメータ・Part別不足率・失点パターンTOP3がここに自動で生成されます。</p>
+        <button type="button" class="btn" id="btn-sa-start-diag">クイック診断を始める →</button>
+      </div>
+
+      <div id="sa-content" hidden>
+        <!-- Card 1: 5-Axis Radar + L/R Balance & Speed -->
+        <div class="sa-card">
+          <div class="sa-head">
+            <div>
+              <span class="sa-kicker">5-AXIS STATUS</span>
+              <h2 class="sa-title">5軸パラメータ総合評価</h2>
+            </div>
+            <span class="sa-sub" id="sa-sample-meta">累計 0問</span>
+          </div>
+          <div class="sa-radar-grid">
+            <div class="radar-box sa-radar-box" id="sa-radar-box" hidden></div>
+            <div class="sa-axis-list" id="sa-axis-list"></div>
+          </div>
+          <div class="sa-kpi-row">
+            <div class="sa-kpi-box">
+              <p class="sa-kpi-k">Listening / Reading バランス</p>
+              <p class="sa-kpi-v" id="sa-lr-balance">—</p>
+              <p class="sa-kpi-s" id="sa-lr-sub">—</p>
+            </div>
+            <div class="sa-kpi-box">
+              <p class="sa-kpi-k">平均解答スピード</p>
+              <p class="sa-kpi-v" id="sa-pace-readout">—</p>
+              <p class="sa-kpi-s" id="sa-pace-sub">—</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Part 1-7 Cumulative Accuracy & Goal Gap -->
+        <div class="sa-card">
+          <div class="sa-head">
+            <div>
+              <span class="sa-kicker">PART GAP ANALYSIS</span>
+              <h2 class="sa-title">Part 1–7 累計正答率 ＆ 目標基準ギャップ</h2>
+            </div>
+            <span class="sa-sub" id="sa-part-bench-label">基準ライン：75%</span>
+          </div>
+          <div class="sa-part-list" id="sa-part-bars"></div>
+        </div>
+
+        <!-- Card 3: Loss Pattern TOP 3 & Recovery Rate + 1-Tap Prescription -->
+        <div class="sa-card">
+          <div class="sa-head">
+            <div>
+              <span class="sa-kicker">WEAKNESS DIAGNOSTICS</span>
+              <h2 class="sa-title">失点パターンTOP3 ＆ 弱点克服率</h2>
+            </div>
+            <span class="sa-sub" id="sa-diff-type">—</span>
+          </div>
+          <div class="sa-two-col">
+            <div class="sa-subbox">
+              <h3>繰り返し落としている論点 TOP3</h3>
+              <div class="sa-focus-list" id="sa-focus-top3"></div>
+            </div>
+            <div class="sa-subbox">
+              <h3>難易度別ミス傾向 ＆ 弱点リカバリー</h3>
+              <div class="sa-diff-rows" id="sa-diff-profile"></div>
+              <div class="sa-diff-row" style="margin-top:6px;">
+                <span>弱点克服率（2回連続正解で卒業）</span>
+                <b id="sa-recovery-rate">—</b>
+              </div>
+              <div class="sa-recovery-bar" aria-hidden="true"><i id="sa-recovery-fill" style="width:0%"></i></div>
+              <p class="sa-kpi-s" id="sa-recovery-sub" style="margin-top:0;">—</p>
+            </div>
+          </div>
+
+          <div class="sa-rx-box" id="sa-rx-box">
+            <div>
+              <p class="sa-rx-k" id="sa-rx-kicker">最優先の対策処方</p>
+              <p class="sa-rx-t" id="sa-rx-title">—</p>
+              <p class="sa-rx-s" id="sa-rx-sub">—</p>
+            </div>
+            <button type="button" class="btn sa-rx-btn" id="btn-sa-rx">今すぐ対策を始める →</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="goal-card" id="history-goal-card">
@@ -4605,6 +4820,23 @@
       <h2>診断結果</h2>
       <div class="empty-state" id="history-empty"><img class="empty-state__owl" src="img/owl-blue.png" alt="" width="229" height="320" loading="lazy"><b>まだ履歴がありません</b>最初の診断を受けると、ここに結果が表示されます。</div>
       <div class="history-list" id="history-list"></div>
+    </div>
+
+    <div class="account-card" id="account-card">
+      <div class="account-card-head">
+        <h2>アカウント・クラウド同期</h2>
+        <span class="account-badge" id="account-badge" hidden>同期中</span>
+      </div>
+      <p class="note" id="account-note">ログインすると、診断結果と苦手問題がクラウドに保存され、スマホ・PCなど別の端末でも続きから学習できます。ログインしなくても今まで通り使えます。</p>
+      <div class="account-actions" id="account-actions-guest">
+        <button class="btn" id="btn-history-google" type="button">Googleで続ける</button>
+        <button class="btn btn--ghost" id="btn-history-email" type="button">メールでログイン・登録</button>
+      </div>
+      <div class="account-actions" id="account-actions-user" hidden>
+        <button class="btn btn--ghost" id="btn-history-sync" type="button">今すぐ同期</button>
+        <button class="btn btn--ghost" id="btn-logout" type="button">ログアウト</button>
+      </div>
+      <p class="account-status" id="account-status" role="status"></p>
     </div>
   </div>
 </section>
@@ -5591,6 +5823,7 @@ function routeFromHash() {
   const hash = location.hash.replace(/^#/, '');
   if (hash === 'diagnosis') { document.title = DEFAULT_PAGE_TITLE; showScreen('mode-select'); return; }
   if (hash === 'practice') { openPracticeSelect(false); return; }
+  if (hash === 'analytics' || hash === 'history') { openHistory('home', false); return; }
   if (hash === 'books') { openBookGuide('home', false); return; }
   if (hash === 'articles') { openArticles(false); return; }
   if (hash.startsWith('article/')) { openArticle(hash.slice(8), false); return; }
@@ -6800,9 +7033,13 @@ function refreshHomeLearning() {
   $('home-weak-count').textContent = weak.length
     ? `${weak.length}問 · 2回連続正解で卒業`
     : (history.length ? '現在、復習が必要な問題はありません' : '診断後に利用できます');
-  $('home-history-note').textContent = history.length
-    ? `診断${history.length}回 · 最新 ${history[0].score}/${history[0].maxScore || 495}`
-    : 'まだ診断履歴はありません';
+  if (history.length) {
+    const saBrief = computeSelfAnalysis(history, getWeakRecords(), readStored(STORAGE_KEYS.vocab, {}) || {}, target);
+    const focusPart = saBrief.bottleneck ? `最優先：Part ${saBrief.bottleneck.part}` : `最新 ${history[0].score}/${history[0].maxScore || 495}`;
+    $('home-history-note').textContent = `${focusPart} · 診断${history.length}回`;
+  } else {
+    $('home-history-note').textContent = '診断後に弱点と不足を自動分析';
+  }
 
   // Home Streak & Goal Strip
   if ($('home-streak-pill')) {
@@ -6971,6 +7208,349 @@ function renderTrendChart(history) {
     (rSlice.length ? `<span><i class="trend-dot" style="background:#00a87e"></i>Reading (${rSlice[rSlice.length - 1].score}/495)</span>` : '');
 }
 
+function targetBenchmarkPct(targetScore) {
+  const t = Number(targetScore) || 730;
+  if (t <= 500) return 55;
+  if (t <= 600) return 65;
+  if (t <= 730) return 75;
+  if (t <= 800) return 82;
+  if (t <= 860) return 88;
+  return 92;
+}
+
+function computeSelfAnalysis(history, weakMap, vocabMap, targetScore) {
+  const runs = Array.isArray(history) ? history : [];
+  const benchScore = Number(targetScore) || 730;
+  const benchPct = targetBenchmarkPct(benchScore);
+
+  const partTotals = {};
+  for (let p = 1; p <= 7; p++) partTotals[p] = { part: p, correct: 0, total: 0 };
+  const skillTotals = {};
+  let totalQuestions = 0;
+  let totalCorrect = 0;
+  let totalSeconds = 0;
+  let timedQuestions = 0;
+  let lCorrect = 0, lTotal = 0, rCorrect = 0, rTotal = 0;
+
+  const historyWrongCounts = {};
+  runs.forEach(item => {
+    if (!item) return;
+    if (Number.isFinite(Number(item.total)) && Number(item.total) > 0) {
+      totalQuestions += Number(item.total);
+      totalCorrect += Number(item.correct) || 0;
+      if (Number.isFinite(Number(item.seconds)) && Number(item.seconds) > 0) {
+        totalSeconds += Number(item.seconds);
+        timedQuestions += Number(item.total);
+      }
+    }
+    if (item.parts) {
+      for (let p = 1; p <= 7; p++) {
+        const pr = item.parts[p] || item.parts[String(p)];
+        if (pr && Number(pr.total) > 0) {
+          const c = Number(pr.correct) || 0;
+          const t = Number(pr.total) || 0;
+          partTotals[p].correct += c;
+          partTotals[p].total += t;
+          if (p <= 4) { lCorrect += c; lTotal += t; }
+          else { rCorrect += c; rTotal += t; }
+        }
+      }
+    }
+    if (item.skills) {
+      Object.entries(item.skills).forEach(([k, v]) => {
+        if (!v || !Number(v.total)) return;
+        if (!skillTotals[k]) skillTotals[k] = { correct: 0, total: 0 };
+        skillTotals[k].correct += Number(v.correct) || 0;
+        skillTotals[k].total += Number(v.total) || 0;
+      });
+    }
+    if (Array.isArray(item.wrongIds)) {
+      item.wrongIds.forEach(id => {
+        historyWrongCounts[id] = (historyWrongCounts[id] || 0) + 1;
+      });
+    }
+  });
+
+  const parts = [];
+  for (let p = 1; p <= 7; p++) {
+    const pt = partTotals[p];
+    const acc = pt.total > 0 ? Math.round((pt.correct / pt.total) * 100) : null;
+    const gap = acc != null ? acc - benchPct : null;
+    parts.push({ part: p, name: PART_NAMES[p] || '', correct: pt.correct, total: pt.total, acc, gap });
+  }
+
+  const attemptedParts = parts.filter(p => p.total > 0);
+  const bottleneck = attemptedParts.length
+    ? [...attemptedParts].sort((a, b) => {
+        if (a.acc !== b.acc) return a.acc - b.acc;
+        return (b.total - b.correct) - (a.total - a.correct);
+      })[0]
+    : null;
+
+  const avgSec = timedQuestions > 0 ? Math.round((totalSeconds / timedQuestions) * 10) / 10 : null;
+  const speedPct = avgSec != null ? clamp(Math.round(135 - avgSec * 1.4), 15, 100) : null;
+
+  const sumSkills = keys => keys.reduce((acc, k) => {
+    const s = skillTotals[k];
+    if (s) { acc.correct += s.correct; acc.total += s.total; }
+    return acc;
+  }, { correct: 0, total: 0 });
+
+  const listeningSum = lTotal > 0 ? { correct: lCorrect, total: lTotal } : sumSkills(['photo', 'response', 'conversation', 'talk']);
+  const grammarSum = sumSkills(['grammar', 'structure']);
+  const vocabSum = sumSkills(['vocabulary']);
+  const readingSum = skillTotals.reading && skillTotals.reading.total > 0
+    ? skillTotals.reading
+    : { correct: partTotals[6].correct + partTotals[7].correct, total: partTotals[6].total + partTotals[7].total };
+
+  const vocabMastered = (typeof LEXICON_VOCAB !== 'undefined' && Array.isArray(LEXICON_VOCAB))
+    ? LEXICON_VOCAB.filter(v => vocabMap && vocabMap[v.id] === 'mastered').length
+    : 0;
+  const vocabTotalBank = (typeof LEXICON_VOCAB !== 'undefined' && Array.isArray(LEXICON_VOCAB)) ? LEXICON_VOCAB.length : 100;
+  const vocabPct = vocabSum.total > 0
+    ? Math.round((vocabSum.correct / vocabSum.total) * 100)
+    : (vocabMastered > 0 ? Math.round((vocabMastered / vocabTotalBank) * 100) : null);
+
+  const axes = [
+    { key: 'listening', label: 'リスニング', pct: listeningSum.total > 0 ? Math.round((listeningSum.correct / listeningSum.total) * 100) : null, note: listeningSum.total > 0 ? `${listeningSum.correct}/${listeningSum.total}問` : '未受験' },
+    { key: 'grammar', label: '文法・構造', pct: grammarSum.total > 0 ? Math.round((grammarSum.correct / grammarSum.total) * 100) : null, note: grammarSum.total > 0 ? `${grammarSum.correct}/${grammarSum.total}問` : '未受験' },
+    { key: 'vocabulary', label: '語彙', pct: vocabPct, note: vocabSum.total > 0 ? `${vocabSum.correct}/${vocabSum.total}問` : (vocabMastered > 0 ? `単語帳 ${vocabMastered}/${vocabTotalBank}` : '未受験') },
+    { key: 'reading', label: '長文読解', pct: readingSum.total > 0 ? Math.round((readingSum.correct / readingSum.total) * 100) : null, note: readingSum.total > 0 ? `${readingSum.correct}/${readingSum.total}問` : '未受験' },
+    { key: 'speed', label: '処理スピード', pct: speedPct, note: avgSec != null ? `平均 ${avgSec}秒/問` : '未計測' }
+  ];
+
+  // Loss Pattern TOP 3 (Focus x Difficulty)
+  const byId = new Map(ALL_QUESTION_BANK.map(q => [q.id, q]));
+  const combinedWrongCounts = { ...historyWrongCounts };
+  const weakList = Object.values(weakMap || {}).filter(r => r && r.attempts > 0);
+  weakList.forEach(r => {
+    const wc = Number(r.wrongCount) || 0;
+    if (wc > 0) {
+      combinedWrongCounts[r.questionId] = Math.max(combinedWrongCounts[r.questionId] || 0, wc);
+    }
+  });
+
+  const focusCounts = {};
+  const diffCounts = { easy: 0, medium: 0, hard: 0 };
+  Object.entries(combinedWrongCounts).forEach(([qId, cnt]) => {
+    const q = byId.get(qId);
+    if (!q || !cnt) return;
+    const fKey = q.focus || q.skill || 'other';
+    focusCounts[fKey] = (focusCounts[fKey] || 0) + cnt;
+    const dKey = (q.difficulty === 'easy' || q.difficulty === 'hard') ? q.difficulty : 'medium';
+    diffCounts[dKey] += cnt;
+  });
+
+  const topFocuses = Object.entries(focusCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([key, count]) => ({ key, label: FOCUS_LABELS[key] || SKILLS[key] || key, count }));
+
+  const totalDiffMiss = diffCounts.easy + diffCounts.medium + diffCounts.hard;
+  let diffProfileLabel = '失点データ収集中';
+  if (totalDiffMiss > 0) {
+    const easyShare = diffCounts.easy / totalDiffMiss;
+    const hardShare = diffCounts.hard / totalDiffMiss;
+    if (easyShare >= 0.35) diffProfileLabel = '基礎取りこぼし型';
+    else if (hardShare >= 0.45) diffProfileLabel = '難問攻略フェーズ';
+    else diffProfileLabel = '標準問題・定着フェーズ';
+  }
+
+  // Weakness Recovery Rate
+  const totalWeak = weakList.length;
+  const graduatedWeak = weakList.filter(r => r.active === false).length;
+  const activeWeak = totalWeak - graduatedWeak;
+  const recoveryPct = totalWeak > 0 ? Math.round((graduatedWeak / totalWeak) * 100) : null;
+
+  // L/R Balance
+  const lAcc = lTotal > 0 ? Math.round((lCorrect / lTotal) * 100) : null;
+  const rAcc = rTotal > 0 ? Math.round((rCorrect / rTotal) * 100) : null;
+
+  return {
+    benchScore, benchPct, totalQuestions, totalCorrect, avgSec,
+    axes, parts, bottleneck, lAcc, rAcc, lTotal, rTotal,
+    topFocuses, diffCounts, totalDiffMiss, diffProfileLabel,
+    totalWeak, graduatedWeak, activeWeak, recoveryPct
+  };
+}
+
+function renderSelfAnalysis(history, targetScore) {
+  const emptyEl = $('sa-empty-state');
+  const contentEl = $('sa-content');
+  if (!emptyEl || !contentEl) return;
+
+  if (!history || !history.length) {
+    emptyEl.hidden = false;
+    contentEl.hidden = true;
+    return;
+  }
+
+  const weakMap = getWeakRecords();
+  const vocabMap = readStored(STORAGE_KEYS.vocab, {}) || {};
+  const sa = computeSelfAnalysis(history, weakMap, vocabMap, targetScore);
+
+  emptyEl.hidden = true;
+  contentEl.hidden = false;
+
+  if ($('sa-sample-meta')) {
+    $('sa-sample-meta').textContent = `累計 ${sa.totalQuestions}問 · 全体正答率 ${pct(sa.totalCorrect, sa.totalQuestions)}%`;
+  }
+
+  // 1. 5-Axis Radar + List
+  const radarAxes = sa.axes.filter(a => a.pct != null).map(a => ({ label: a.label, pct: a.pct }));
+  renderRadarBox('sa-radar-box', radarAxes, '累計5軸パラメータ（0〜100）');
+
+  if ($('sa-axis-list')) {
+    $('sa-axis-list').innerHTML = sa.axes.map(a => {
+      const cls = a.pct == null ? '' : (a.pct < sa.benchPct - 8 ? 'is-weak' : (a.pct >= sa.benchPct ? 'is-strong' : ''));
+      const valText = a.pct != null ? `${a.pct}` : '—';
+      return `<div class="sa-axis-row">` +
+        `<span class="sa-axis-label">${escapeHtml(a.label)}</span>` +
+        `<span class="sa-axis-right"><span class="sa-axis-note">${escapeHtml(a.note)}</span>` +
+        `<span class="sa-axis-val ${cls}">${valText}${a.pct != null ? '<small style="font-size:11px;font-weight:600;color:var(--ink-muted)">/100</small>' : ''}</span></span>` +
+        `</div>`;
+    }).join('');
+  }
+
+  // L/R Balance
+  if ($('sa-lr-balance') && $('sa-lr-sub')) {
+    if (sa.lAcc != null && sa.rAcc != null) {
+      const diff = sa.lAcc - sa.rAcc;
+      if (Math.abs(diff) <= 6) {
+        $('sa-lr-balance').textContent = `バランス良好（L ${sa.lAcc}% / R ${sa.rAcc}%）`;
+        $('sa-lr-sub').textContent = 'L・Rの差が小さく安定しています。目標ラインに届いていないPartから優先的に底上げしましょう。';
+      } else if (diff > 6) {
+        $('sa-lr-balance').textContent = `Listening 優位（+ ${diff}%）`;
+        $('sa-lr-sub').textContent = `L ${sa.lAcc}% / R ${sa.rAcc}%。Readingの底上げがスコア全体の最も大きな伸びしろです。`;
+      } else {
+        $('sa-lr-balance').textContent = `Reading 優位（+ ${Math.abs(diff)}%）`;
+        $('sa-lr-sub').textContent = `L ${sa.lAcc}% / R ${sa.rAcc}%。Listeningの聞き取り強化がスコア全体の最も大きな伸びしろです。`;
+      }
+    } else if (sa.lAcc != null) {
+      $('sa-lr-balance').textContent = `Listening ${sa.lAcc}%（Reading 未受験）`;
+      $('sa-lr-sub').textContent = 'クイック総合診断またはReading診断を受けるとL/Rバランスを比較できます。';
+    } else if (sa.rAcc != null) {
+      $('sa-lr-balance').textContent = `Reading ${sa.rAcc}%（Listening 未受験）`;
+      $('sa-lr-sub').textContent = 'クイック総合診断またはListening診断を受けるとL/Rバランスを比較できます。';
+    } else {
+      $('sa-lr-balance').textContent = 'データ収集中';
+      $('sa-lr-sub').textContent = '総合診断を受けるとL/Rバランスが表示されます。';
+    }
+  }
+
+  // Answer Speed
+  if ($('sa-pace-readout') && $('sa-pace-sub')) {
+    if (sa.avgSec != null) {
+      $('sa-pace-readout').textContent = `平均 ${sa.avgSec}秒 / 問`;
+      if (sa.avgSec <= 35) {
+        $('sa-pace-sub').textContent = 'TOEIC本番ペース（目安36秒/問）をクリア。正確性を高めるフェーズです。';
+      } else if (sa.avgSec <= 50) {
+        $('sa-pace-sub').textContent = '標準ペースです。Part 5を20秒以内で解けると後半の長文に余裕が生まれます。';
+      } else {
+        $('sa-pace-sub').textContent = '本番では時間が不足しやすいペースです。Part 5「1問20秒」タイムアタックで速度を鍛えましょう。';
+      }
+    } else {
+      $('sa-pace-readout').textContent = '未計測';
+      $('sa-pace-sub').textContent = '診断を完了すると解答スピードが自動計測されます。';
+    }
+  }
+
+  // 2. Part 1-7 Gap Bars
+  if ($('sa-part-bench-label')) {
+    $('sa-part-bench-label').textContent = `目標 ${sa.benchScore}点 基準ライン：${sa.benchPct}%`;
+  }
+  if ($('sa-part-bars')) {
+    $('sa-part-bars').innerHTML = sa.parts.map(p => {
+      if (p.total === 0) {
+        return `<div class="sa-part-row">` +
+          `<div class="sa-part-top"><span class="sa-part-name">Part ${p.part}<small>${escapeHtml(p.name)}</small></span>` +
+          `<span class="sa-part-meta"><span class="sa-gap-tag is-none">未受験</span></span></div>` +
+          `<div class="sa-part-track"><i class="sa-part-fill" style="width:0%"></i><span class="sa-part-bench" style="left:${sa.benchPct}%" title="基準 ${sa.benchPct}%"></span></div>` +
+          `</div>`;
+      }
+      const isShort = p.gap < 0;
+      const tagCls = isShort ? 'is-short' : 'is-ok';
+      const tagText = isShort ? `あと ${p.gap}%` : '基準クリア';
+      const fillCls = isShort ? 'is-short' : 'is-ok';
+      return `<div class="sa-part-row">` +
+        `<div class="sa-part-top"><span class="sa-part-name">Part ${p.part}<small>${escapeHtml(p.name)}</small></span>` +
+        `<span class="sa-part-meta"><span>${p.acc}% (${p.correct}/${p.total})</span><span class="sa-gap-tag ${tagCls}">${tagText}</span></span></div>` +
+        `<div class="sa-part-track"><i class="sa-part-fill ${fillCls}" style="width:${p.acc}%"></i><span class="sa-part-bench" style="left:${sa.benchPct}%" title="基準 ${sa.benchPct}%"></span></div>` +
+        `</div>`;
+    }).join('');
+  }
+
+  // 3. Loss Pattern TOP 3 + Difficulty + Recovery
+  if ($('sa-diff-type')) $('sa-diff-type').textContent = sa.diffProfileLabel;
+  if ($('sa-focus-top3')) {
+    if (sa.topFocuses.length) {
+      $('sa-focus-top3').innerHTML = sa.topFocuses.map((f, i) =>
+        `<div class="sa-focus-item">` +
+        `<span class="sa-focus-left"><span class="sa-focus-rank">${i + 1}</span><span class="sa-focus-name">${escapeHtml(f.label)}</span></span>` +
+        `<span class="sa-focus-cnt">${f.count}回失点</span>` +
+        `</div>`
+      ).join('');
+    } else {
+      $('sa-focus-top3').innerHTML = `<p class="sa-kpi-s">現在、目立つ失点パターンはありません。引き続き演習して精度を保ちましょう。</p>`;
+    }
+  }
+
+  if ($('sa-diff-profile')) {
+    if (sa.totalDiffMiss > 0) {
+      const ePct = Math.round((sa.diffCounts.easy / sa.totalDiffMiss) * 100);
+      const mPct = Math.round((sa.diffCounts.medium / sa.totalDiffMiss) * 100);
+      const hPct = Math.max(0, 100 - ePct - mPct);
+      $('sa-diff-profile').innerHTML =
+        `<div class="sa-diff-row"><span>基礎問題（easy）の失点</span><b>${sa.diffCounts.easy}回 (${ePct}%)</b></div>` +
+        `<div class="sa-diff-row"><span>標準問題（medium）の失点</span><b>${sa.diffCounts.medium}回 (${mPct}%)</b></div>` +
+        `<div class="sa-diff-row"><span>応用問題（hard）の失点</span><b>${sa.diffCounts.hard}回 (${hPct}%)</b></div>`;
+    } else {
+      $('sa-diff-profile').innerHTML = `<div class="sa-diff-row"><span>失点記録なし</span><b>全問正解ペース</b></div>`;
+    }
+  }
+
+  if ($('sa-recovery-rate') && $('sa-recovery-fill') && $('sa-recovery-sub')) {
+    if (sa.totalWeak > 0) {
+      $('sa-recovery-rate').textContent = `${sa.recoveryPct}%`;
+      $('sa-recovery-fill').style.width = `${sa.recoveryPct}%`;
+      $('sa-recovery-sub').textContent = `卒業 ${sa.graduatedWeak}問 / 累計弱点 ${sa.totalWeak}問（残り要復習 ${sa.activeWeak}問）`;
+    } else {
+      $('sa-recovery-rate').textContent = '100%';
+      $('sa-recovery-fill').style.width = '100%';
+      $('sa-recovery-sub').textContent = '現在、要復習の弱点問題はありません。';
+    }
+  }
+
+  // 4. 1-Tap Prescription CTA
+  const rxBtn = $('btn-sa-rx');
+  if (rxBtn && $('sa-rx-kicker') && $('sa-rx-title') && $('sa-rx-sub')) {
+    if (sa.bottleneck && sa.bottleneck.gap < 0) {
+      const bp = sa.bottleneck;
+      rxBtn.dataset.rxType = 'part';
+      rxBtn.dataset.rxPart = String(bp.part);
+      $('sa-rx-kicker').textContent = '最優先ボトルネック';
+      $('sa-rx-title').textContent = `Part ${bp.part}（${bp.name}）を集中対策する`;
+      $('sa-rx-sub').textContent = `累計正答率 ${bp.acc}%（目標基準 ${sa.benchPct}% まであと ${bp.gap}%）。このパートを底上げするとスコアが最も伸びます。`;
+      rxBtn.textContent = `Part ${bp.part} を今すぐ練習する →`;
+    } else if (sa.activeWeak > 0) {
+      rxBtn.dataset.rxType = 'weak';
+      rxBtn.dataset.rxPart = '';
+      $('sa-rx-kicker').textContent = '弱点リカバリー';
+      $('sa-rx-title').textContent = `要復習の ${sa.activeWeak}問 を卒業させる`;
+      $('sa-rx-sub').textContent = '過去に間違えた問題を2回連続で正解すると弱点リストから卒業します。';
+      rxBtn.textContent = '苦手問題を復習する →';
+    } else if (sa.bottleneck) {
+      const bp = sa.bottleneck;
+      rxBtn.dataset.rxType = 'part';
+      rxBtn.dataset.rxPart = String(bp.part);
+      $('sa-rx-kicker').textContent = 'さらなるスコアアップ';
+      $('sa-rx-title').textContent = `Part ${bp.part}（${bp.name}）の精度をさらに高める`;
+      $('sa-rx-sub').textContent = `受験済みパートはすべて基準（${sa.benchPct}%）をクリア中。目標スコアを1段階上げるのもおすすめです。`;
+      rxBtn.textContent = `Part ${bp.part} をもう1セット練習する →`;
+    }
+  }
+}
+
 function renderHistory() {
   const history = getHistory();
   const weak = activeWeakRecords();
@@ -7016,7 +7596,10 @@ function renderHistory() {
     if ($('h-best-sub')) $('h-best-sub').textContent = '—';
   }
 
-  // 2. Goal Card
+  // 2. Self-Analysis Dashboard
+  renderSelfAnalysis(history, target);
+
+  // 3. Goal Card
   if ($('h-goal-badge')) $('h-goal-badge').textContent = goalInfo.badge;
   if ($('h-goal-caption')) $('h-goal-caption').textContent = goalInfo.caption;
   if ($('h-goal-value')) $('h-goal-value').textContent = goalInfo.value;
@@ -7105,12 +7688,14 @@ function launchWeakPartFromResults(partNum) {
   startListeningPractice(p);
 }
 
-function openHistory(returnScreen) {
+function openHistory(returnScreen, updateRoute = true) {
   state.historyReturn = (typeof returnScreen === 'string') ? returnScreen : 'home';
+  if (state.historyReturn === 'home' && updateRoute) setRoute('#analytics');
   $('btn-history-back').textContent =
     state.historyReturn === 'home' ? '← ホームに戻る' : '← 診断結果に戻る';
   renderHistory();
   showScreen('history');
+  window.scrollTo(0, 0);
 }
 
 function selectWeakQuestions(limit = 20) {
@@ -9484,9 +10069,25 @@ $('btn-article-home').addEventListener('click', () => { clearContentRoute(); sho
 $('btn-share-article').addEventListener('click', shareCurrentArticle);
 $('btn-history-back').addEventListener('click', () => {
   const back = state.historyReturn || 'home';
-  if (back === 'home') refreshHomeLearning();
+  if (back === 'home') {
+    clearContentRoute();
+    refreshHomeLearning();
+  }
   showScreen(back);
 });
+if ($('btn-sa-start-diag')) {
+  $('btn-sa-start-diag').addEventListener('click', () => startDiagnosticDirect(startQuickCombined));
+}
+if ($('btn-sa-rx')) {
+  $('btn-sa-rx').addEventListener('click', () => {
+    const btn = $('btn-sa-rx');
+    if (btn.dataset.rxType === 'weak') {
+      startWeakPractice();
+    } else if (btn.dataset.rxPart) {
+      startListeningPractice(Number(btn.dataset.rxPart));
+    }
+  });
+}
 $('btn-weak-home-back').addEventListener('click', () => { refreshHomeLearning(); showScreen('home'); });
 $('btn-weak-finish').addEventListener('click', () => { refreshHomeLearning(); showScreen('home'); });
 $('btn-weak-again').addEventListener('click', startWeakPractice);
