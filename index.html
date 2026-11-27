@@ -1203,29 +1203,35 @@
   }
   @media (max-width: 760px) {
     .hero-owls__spark { display: none; }
-    .hero-owls { margin-top: 26px; width: min(96%, 560px); }
+    .hero-owls { margin-top: 40px; width: min(90%, 440px); padding: 0 6px; }
   }
   @media (max-width: 720px) {
     .hero-flow {
-      grid-template-columns: 1fr; gap: 8px; margin-top: 26px;
+      grid-template-columns: 1fr; gap: 14px; margin-top: 40px;
     }
-    .hero-flow-node { padding: 13px 18px 13px 14px; }
-    .hero-flow-line { margin: 0 auto; transform: rotate(90deg); }
+    .hero-flow-node { padding: 16px 20px 16px 16px; gap: 14px; }
+    .hero-flow-copy b { font-size: 13.5px; }
+    .hero-flow-copy small { margin-top: 4px; font-size: 11.5px; }
+    .hero-flow-line { margin: 2px auto; transform: rotate(90deg); }
   }
   @media (max-width: 680px) {
     .brand-nav { gap: 6px; }
     .brand-nav a { display: none; }
-    .brandbar { width: calc(100% - 28px); padding: 9px 11px 9px 18px; gap: 8px; }
+    .brandbar { width: calc(100% - 32px); padding: 9px 11px 9px 18px; gap: 8px; }
     .brand-auth { padding: 8px 13px; font-size: 12.5px; max-width: 118px; }
     .brand-cta { padding: 9px 14px; font-size: 12.5px; }
-    .yoom-hero-box { padding: 26px 22px 22px; min-height: 0; gap: 22px; border-radius: 26px; }
-    .hero-prompt-preview { font-size: 15px; }
-    .hero-mode-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .hero-chip { justify-content: center; padding: 11px 10px; font-size: 12.5px; }
+    .hero-yoom { padding: 56px 26px 96px; }
+    .hero-arena { margin-top: 40px; }
+    .hero-prompt-label { margin-bottom: 18px; }
+    .yoom-hero-box { padding: 30px 24px 26px; min-height: 0; gap: 26px; border-radius: 28px; }
+    .hero-prompt-preview { font-size: 15px; gap: 8px 14px; }
+    .hero-mode-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hero-chip { justify-content: center; padding: 12px 10px; font-size: 12.5px; }
+    .hero-box-foot { padding-top: 22px; }
     .hero-box-meta { display: none; }
     .hero-box-actions { width: 100%; justify-content: stretch; }
-    .hero-send-btn { width: 100%; height: 50px; font-size: 14.5px; }
-    .home-deck { border-radius: 38px 38px 0 0; margin-top: -18px; }
+    .hero-send-btn { width: 100%; height: 52px; font-size: 15px; }
+    .home-deck { border-radius: 38px 38px 0 0; margin-top: -12px; }
   }
   @media (max-width: 400px) {
     .wordmark { font-size: 18px; }
@@ -2630,32 +2636,39 @@
 
   /* ---------- 1. Auto-Save Resume Banner ---------- */
   .resume-banner {
-    margin-top: 14px; padding: 18px 22px;
+    margin-top: 24px; padding: 24px 26px;
     border-radius: var(--radius-card-lg);
     background: linear-gradient(135deg, #e8f3ff 0%, #f1eaff 100%);
     box-shadow: var(--shadow-card);
-    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    display: flex; align-items: center; justify-content: space-between; gap: 18px 20px; flex-wrap: wrap;
   }
-  .resume-banner__left { display: flex; align-items: center; gap: 14px; min-width: 0; flex: 1; }
+  .resume-banner__left { display: flex; align-items: center; gap: 16px; flex: 1 1 260px; min-width: 0; }
+  .resume-banner__left > div { flex: 1; min-width: 0; }
   .resume-banner__owl { width: auto; height: 52px; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 6px 12px rgba(36,41,47,0.12)); }
   .resume-banner__kicker {
     display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
-    color: var(--ink-blue); background: var(--surface-canvas); padding: 3px 10px; border-radius: var(--radius-pill);
+    color: var(--ink-blue); background: var(--surface-canvas); padding: 4px 11px; border-radius: var(--radius-pill);
   }
-  .resume-banner__title { margin-top: 4px; font-size: 15.5px; font-weight: 700; color: var(--ink-primary); }
-  .resume-banner__sub { margin-top: 2px; font-size: 12.5px; color: var(--ink-secondary); }
-  .resume-banner__actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .resume-banner__title { margin-top: 6px; font-size: 15.5px; font-weight: 700; line-height: 1.45; color: var(--ink-primary); }
+  .resume-banner__sub { margin-top: 3px; font-size: 12.5px; line-height: 1.55; color: var(--ink-secondary); }
+  .resume-banner__actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
   .resume-banner__btn {
-    padding: 10px 20px; border: 0; border-radius: var(--radius-pill);
-    background: var(--pop-blue); color: #ffffff; font-size: 13.5px; font-weight: 700;
+    padding: 11px 22px; border: 0; border-radius: var(--radius-pill);
+    background: var(--pop-blue); color: #ffffff; font-size: 13.5px; font-weight: 700; white-space: nowrap;
     box-shadow: var(--shadow-btn); transition: transform 0.15s var(--ease-ui), opacity 0.15s ease;
   }
   .resume-banner__btn:hover { transform: translateY(-1px); opacity: 0.94; }
   .resume-banner__discard {
-    padding: 8px 13px; border: 0; border-radius: var(--radius-pill);
-    background: rgba(255,255,255,0.75); color: var(--ink-secondary); font-size: 12px; font-weight: 700;
+    padding: 10px 15px; border: 0; border-radius: var(--radius-pill);
+    background: rgba(255,255,255,0.82); color: var(--ink-secondary); font-size: 12.5px; font-weight: 700; white-space: nowrap;
   }
   .resume-banner__discard:hover { background: #ffffff; color: var(--ink-primary); }
+  @media (max-width: 640px) {
+    .resume-banner { flex-direction: column; align-items: stretch; padding: 24px 22px; gap: 18px; }
+    .resume-banner__left { flex: none; width: 100%; align-items: flex-start; gap: 14px; }
+    .resume-banner__actions { width: 100%; }
+    .resume-banner__btn { flex: 1; text-align: center; }
+  }
 
   /* ---------- 2. Audio Replay & Speed Chips ---------- */
   .rv-audio-bar {
@@ -3409,7 +3422,6 @@
       <div class="showcase-head">
         <p class="showcase-kicker">DIAGNOSIS REPORT</p>
         <h2>診断すると、<br>スコアと弱点がすぐわかる。</h2>
-        <p class="showcase-sub">テスト終了後、予想スコア・苦手分野・次の対策がひとつの画面にまとまります。</p>
 
         <div class="report-tabs" role="tablist" aria-label="診断レポートのプレビュー切替">
           <button type="button" class="report-tab is-active" role="tab" aria-selected="true" data-report-tab="score">スコア予測</button>
@@ -3483,19 +3495,38 @@
     <section class="practice-home" aria-labelledby="practice-title">
       <div class="practice-gateway">
         <div class="practice-gateway__copy">
-          <p class="practice-eyebrow">PRACTICE · PART 1–7 &amp; DRILLS</p>
+          <p class="practice-eyebrow">PRACTICE · PART 1–7 &amp; TOPIC DRILLS</p>
           <h2 id="practice-title">Part別に練習する</h2>
-          <p class="practice-intro">伸ばしたいパートや弱点テーマを選んで、自分のペースで演習できます。全問に日本語訳とポイント解説つき。</p>
           <div class="practice-gateway__pills" aria-hidden="true">
-            <span class="practice-gateway__pill">🎧 Part 1–4 音声つき</span>
-            <span class="practice-gateway__pill">📖 Part 5–7 長文・文法</span>
-            <span class="practice-gateway__pill">⚡ 20秒タイムアタック</span>
-            <span class="practice-gateway__pill">🎯 弱点テーマ特訓</span>
+            <span class="practice-gateway__pill">Part 1–4 音声つき</span>
+            <span class="practice-gateway__pill">Part 5–7 長文・文法</span>
+            <span class="practice-gateway__pill">弱点テーマ別特訓</span>
           </div>
           <button type="button" class="practice-gateway__cta" id="btn-open-practice-select">パートを選んで練習する →</button>
         </div>
         <img class="practice-gateway__owl" src="img/owl-blue.png" alt="" width="229" height="320" loading="lazy" decoding="async">
       </div>
+
+      <div class="promo-pair-grid" style="margin-top:24px">
+        <div class="sprint-promo">
+          <div>
+            <span class="sprint-promo__kicker">SPEED TIME ATTACK · 全10問</span>
+            <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック</p>
+            <p class="sprint-promo__sub">正答率×解答速度でS〜Cランク判定</p>
+          </div>
+          <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
+        </div>
+
+        <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
+          <div>
+            <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">CLOZE DICTATION GYM · 全10問</span>
+            <p class="sprint-promo__title">Listening「穴埋めディクテーション」</p>
+            <p class="sprint-promo__sub">音の連結・弱形を聞き取る耳トレ</p>
+          </div>
+          <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
+        </div>
+      </div>
+
       <nav class="seo-entry-links" aria-label="診断ガイドと練習問題"><a href="/toeic-score-predictor/">スコア予測の仕組み →</a><a href="/toeic-free-test/">無料診断の受け方 →</a><a href="/toeic-part5/">Part 5 練習問題 →</a></nav>
     </section>
 
@@ -3503,7 +3534,6 @@
       <div class="learning-head">
         <div>
           <h2 id="learning-title">学習を続ける</h2>
-          <p id="home-learning-note">診断すると、苦手問題と成長記録がここに蓄積されます。</p>
         </div>
       </div>
 
@@ -3526,7 +3556,7 @@
       <div class="home-growth-card" id="home-growth-card">
         <div class="home-growth-top">
           <span class="streak-pill" id="home-streak-pill">
-            <span id="home-streak-text">🔥 今日から連続学習スタート</span>
+            <span id="home-streak-text">今日から連続学習スタート</span>
             <span class="streak-pill__done" id="home-streak-done" hidden>今日達成 ✓</span>
           </span>
           <button type="button" class="goal-toggle-btn" id="btn-home-goal-toggle" aria-expanded="false">目標スコアを設定</button>
@@ -3550,9 +3580,9 @@
         <!-- Exam Date Countdown & Reverse Study Phase Strip -->
         <div class="exam-strip" id="home-exam-strip">
           <div class="exam-strip__row">
-            <span class="exam-badge" id="home-exam-badge">📅 次の受験日：未設定</span>
+            <span class="exam-badge" id="home-exam-badge">次の受験日：未設定</span>
             <div class="exam-actions-inline">
-              <button type="button" class="exam-mini-btn" id="btn-exam-cal" hidden>📆 学習予定をカレンダー登録</button>
+              <button type="button" class="exam-mini-btn" id="btn-exam-cal" hidden>学習予定をカレンダー登録</button>
               <button type="button" class="exam-mini-btn" id="btn-exam-toggle">受験日を設定</button>
             </div>
           </div>
@@ -3584,7 +3614,7 @@
         </button>
         <button class="learning-card" id="btn-bookmarks-home" disabled>
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-          <span><span class="k">保存した問題（🔖）</span><span class="d" id="home-bookmarks-count">テスト中の「迷った」を保存</span></span>
+          <span><span class="k">保存した問題</span><span class="d" id="home-bookmarks-count">テスト中の「迷った」を保存</span></span>
           <span class="arrow" aria-hidden="true">›</span>
         </button>
         <button class="learning-card" id="btn-history-home">
@@ -3607,7 +3637,7 @@
       <!-- 12 Owl Achievement Badges (Clean Collapsible Accordion) -->
       <details class="badges-card" id="achievements-card" aria-labelledby="ach-title">
         <summary class="badges-summary">
-          <span class="daily-kicker" id="ach-title">🦉 フクロウ称号コレクション</span>
+          <span class="daily-kicker" id="ach-title">フクロウ称号コレクション</span>
           <span class="badges-summary__right"><span id="ach-count-text">0 / 12 獲得</span><span class="badges-summary__chev" aria-hidden="true">▾</span></span>
         </summary>
         <div class="badges-grid" id="ach-badges-grid"></div>
@@ -3633,7 +3663,6 @@
       <div class="learning-head">
         <div>
           <h2 id="micro-title">スキマ1分トレーニング</h2>
-          <p>通学・休憩中の30秒〜1分で、今日の1問と頻出英単語をサクッと鍛えられます。</p>
         </div>
       </div>
 
@@ -3663,7 +3692,7 @@
         <!-- Lexicon 100 TOEIC Vocabulary Speed Flashcards -->
         <div class="vocab-card" id="vocab-card" aria-labelledby="vocab-card-label">
           <div class="vocab-head">
-            <span class="vocab-kicker" id="vocab-card-label">⚡ Lexicon スピード単語帳 · 頻出100語</span>
+            <span class="vocab-kicker" id="vocab-card-label">Lexicon スピード単語帳 · 頻出100語</span>
             <span class="vocab-stat" id="vocab-stat-text">習得 0 / 100語</span>
           </div>
           <div class="vocab-bands" role="group" aria-label="単語レベルを選択">
@@ -3677,7 +3706,7 @@
           <div class="vocab-stage" id="vocab-stage" role="button" tabindex="0" aria-label="タップして意味を表示">
             <div class="vocab-stage__top">
               <span id="vocab-card-meta">500点帯 · 1 / 100</span>
-              <button type="button" class="vocab-audio-mini" id="btn-vocab-speak">🔊 発音</button>
+              <button type="button" class="vocab-audio-mini" id="btn-vocab-speak">発音</button>
             </div>
             <div>
               <span class="vocab-word" id="vocab-word">confirm</span>
@@ -3694,8 +3723,7 @@
             <button type="button" class="vocab-act vocab-act--review" id="btn-vocab-review">要復習に入れる ★</button>
             <button type="button" class="vocab-act vocab-act--ok" id="btn-vocab-master">覚えた ✓</button>
           </div>
-          <div class="vocab-foot">
-            <span class="small" style="margin:0">フレーズ単位でPart 5・7の速度アップ</span>
+          <div class="vocab-foot" style="justify-content:flex-end">
             <a href="/toeic-vocab/">全100語・赤シートへ →</a>
           </div>
         </div>
@@ -3843,9 +3871,8 @@
     <button class="sub-back" id="btn-practice-select-back" type="button">← ホームに戻る</button>
     <div class="mascot-page-head practice-select-head">
       <div class="mascot-page-head__copy">
-        <p class="practice-eyebrow">PART PRACTICE &amp; SPECIAL DRILLS</p>
+        <p class="practice-eyebrow">PART PRACTICE &amp; TOPIC DRILLS</p>
         <h1 id="practice-select-title" tabindex="-1">どのパートを練習しますか？</h1>
-        <p>伸ばしたいパートや特訓モードを選んで、自分のペースで演習できます。回答後に全問の日本語訳と解説を確認しましょう。</p>
       </div>
       <img class="mascot-page-head__img" src="img/owl-amber.png" alt="" width="284" height="320" decoding="async">
     </div>
@@ -3865,29 +3892,9 @@
     </div>
 
     <div class="special-drills">
-      <div class="promo-pair-grid">
-        <div class="sprint-promo">
-          <div>
-            <span class="sprint-promo__kicker">⚡ SPEED TIME ATTACK · 全10問</span>
-            <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック</p>
-            <p class="sprint-promo__sub">本番でPart 7に55分残すためのスピード特訓。正答率×解答速度でS〜Cランク判定！</p>
-          </div>
-          <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
-        </div>
-
-        <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
-          <div>
-            <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">🎧 CLOZE DICTATION GYM · 全10問</span>
-            <p class="sprint-promo__title">Listening「穴埋めディクテーション」</p>
-            <p class="sprint-promo__sub">音の連結・弱形・語尾の -ed を聞き取る耳トレ。タップ選択＆タイピング両対応！</p>
-          </div>
-          <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
-        </div>
-      </div>
-
       <div class="pinpoint-box">
         <div class="pinpoint-box__head">
-          <span class="pinpoint-box__title">🎯 弱点テーマ別ピンポイント特訓</span>
+          <span class="pinpoint-box__title">弱点テーマ別ピンポイント特訓</span>
           <span class="pinpoint-box__sub">苦手な出題パターンだけを連続演習</span>
         </div>
         <div class="pinpoint-chips" role="group" aria-label="テーマ別ピンポイント特訓">
@@ -3938,7 +3945,7 @@
 <section id="sprint-results" class="screen" aria-labelledby="sprint-res-title"><div class="wrap lp-wrap">
 <div class="mascot-page-head">
   <div class="mascot-page-head__copy">
-    <p class="qual-kicker">⚡ PART 5 TIME ATTACK</p>
+    <p class="qual-kicker">PART 5 TIME ATTACK</p>
     <h1 id="sprint-res-title" tabindex="-1">タイムアタック結果</h1>
     <p class="qual-note" id="sprint-res-note">1問20秒のスピード特訓結果です。</p>
   </div>
@@ -3955,8 +3962,8 @@
 </div>
 <div class="vs-card" id="sprint-vs-card" hidden></div>
 <div class="lp-actions" style="margin-top:18px">
-  <button class="btn" id="btn-sprint-again" type="button">もう1セット挑戦する ⚡</button>
-  <button class="challenge-btn" id="btn-sprint-challenge" type="button" style="margin-top:0">⚔️ 同じ10問で友達と勝負（対戦URLを発行）</button>
+  <button class="btn" id="btn-sprint-again" type="button">もう1セット挑戦する</button>
+  <button class="challenge-btn" id="btn-sprint-challenge" type="button" style="margin-top:0">同じ10問で友達と勝負（対戦URLを発行）</button>
   <p class="share-status" id="sprint-challenge-status" role="status"></p>
   <button class="qual-secondary" id="btn-sprint-x" type="button">結果をXでシェア</button>
   <button class="qual-secondary lp-to-select" type="button">別のパート・特訓を選ぶ</button>
@@ -3969,12 +3976,12 @@
 <section id="dictation" class="screen" aria-labelledby="dict-title">
   <div class="wrap lp-wrap">
     <div class="test-meta" style="margin-bottom:14px">
-      <button class="test-home lp-to-select" type="button">← パート選択へ</button>
+      <button class="test-home lp-home" type="button">← ホーム</button>
       <span class="count" id="dict-count">1 / 10問</span>
     </div>
     <div class="mascot-page-head">
       <div class="mascot-page-head__copy">
-        <p class="qual-kicker">🎧 CLOZE DICTATION GYM</p>
+        <p class="qual-kicker">CLOZE DICTATION GYM</p>
         <h1 id="dict-title" tabindex="-1">穴埋めディクテーション</h1>
         <p class="qual-note">音声を聞いて、空欄に入る2〜3語をタップまたは入力してください。</p>
       </div>
@@ -4010,7 +4017,7 @@
       <h2 style="margin-top:8px;font-size:24px" id="dict-done-score">8 / 10問 クリア！</h2>
       <p style="margin-top:8px;font-size:14px;color:var(--ink-secondary)">音の連結や弱形を意識すると、Part 2・3・4の聞き取り精度が一段上がります。</p>
       <div class="lp-actions" style="margin-top:18px">
-        <button type="button" class="btn" id="btn-dict-retry">もう1セット練習する 🎧</button>
+        <button type="button" class="btn" id="btn-dict-retry">もう1セット練習する</button>
         <button type="button" class="qual-secondary lp-to-select">別のパート・特訓を選ぶ</button>
         <button type="button" class="qual-secondary lp-home">ホームへ戻る</button>
       </div>
@@ -4028,7 +4035,7 @@
       </div>
       <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" id="progress"><i></i></div>
       <div class="sprint-bar-wrap" id="sprint-bar-wrap" hidden>
-        <div class="sprint-bar-top"><span>⚡ 残り時間（20秒制限）</span><span id="sprint-sec-left">20.0s</span></div>
+        <div class="sprint-bar-top"><span>残り時間（20秒制限）</span><span id="sprint-sec-left">20.0s</span></div>
         <div class="sprint-bar-track"><i class="sprint-bar-fill" id="sprint-bar-fill"></i></div>
       </div>
     </div>
@@ -4057,7 +4064,7 @@
 
     <div class="flag-row">
       <span class="part-tag" id="part-tag"></span>
-      <button type="button" class="flag-btn" id="btn-flag-q" aria-pressed="false">🔖 迷った・保存</button>
+      <button type="button" class="flag-btn" id="btn-flag-q" aria-pressed="false">迷った・保存</button>
     </div>
     <div class="passage" id="passage" hidden></div>
     <p class="q-text" id="q-text"></p>
@@ -4142,7 +4149,7 @@
       <p class="percentile-challenge">友達は何％？ 同じモードで比べてみよう。</p>
       <div class="vs-card" id="res-vs-card" hidden></div>
       <button class="btn percentile-share" id="r-percentile-share" type="button">結果をシェアする ↗</button>
-      <button class="challenge-btn" id="btn-r-challenge" type="button">⚔️ 同じ20問で友達に挑戦状を送る（対戦リンク）</button>
+      <button class="challenge-btn" id="btn-r-challenge" type="button">同じ20問で友達に挑戦状を送る（対戦リンク）</button>
       <button class="btn percentile-share x-share-btn" id="r-x-share" type="button">Xでポストする</button>
       <p class="percentile-caption" id="r-percentile-status" role="status"></p>
       <details><summary>比較対象と算出方法</summary><p>日本のTOEIC L&amp;R公開テストについて、IIBC公式掲載の20,269人の分布と比較しています（2026年9月26日参照）。全年度・全受験者・大学受験生に限定した順位ではありません。</p><p>予想スコアが属する公式スコア区分の下限以上の割合を使用します。区分内の細かな順位は推定しません。診断スコア自体も非公式の目安であり、本番での順位を保証しません。</p><a href="https://www.iibc-global.org/toeic/official_data.html" target="_blank" rel="noopener noreferrer">出典：IIBC 平均スコア・スコア分布</a></details>
@@ -4168,7 +4175,7 @@
       </div>
       <div class="meaning">
         <div class="row"><span class="mark mark--strong" aria-hidden="true"></span><div><p class="k">得意分野</p><p class="v" id="r-strong">—</p><p class="d" id="r-strong-d"></p></div></div>
-        <div class="row"><span class="mark mark--weak" aria-hidden="true"></span><div><p class="k">苦手分野</p><p class="v" id="r-weak">—</p><p class="d" id="r-weak-d"></p><button type="button" class="inline-drill-btn" id="btn-r-weak-skill">🎯 この苦手テーマだけ10問特訓する →</button></div></div>
+        <div class="row"><span class="mark mark--weak" aria-hidden="true"></span><div><p class="k">苦手分野</p><p class="v" id="r-weak">—</p><p class="d" id="r-weak-d"></p><button type="button" class="inline-drill-btn" id="btn-r-weak-skill">この苦手テーマだけ10問特訓する →</button></div></div>
         <div class="row"><span class="mark mark--priority" aria-hidden="true"></span><div><p class="k">優先して対策すべき分野</p><p class="v" id="r-priority">—</p><p class="d" id="r-priority-d"></p></div></div>
       </div>
     </div>
@@ -4276,7 +4283,7 @@
       <p class="percentile-challenge">友達は何％？ 同じモードで比べてみよう。</p>
       <div class="vs-card" id="audio-vs-card" hidden></div>
       <button class="btn percentile-share" id="audio-percentile-share" type="button">結果をシェアする ↗</button>
-      <button class="challenge-btn" id="btn-audio-challenge" type="button">⚔️ 同じ問題セットで友達に挑戦状を送る（対戦リンク）</button>
+      <button class="challenge-btn" id="btn-audio-challenge" type="button">同じ問題セットで友達に挑戦状を送る（対戦リンク）</button>
       <button class="btn percentile-share x-share-btn" id="audio-x-share" type="button">Xでポストする</button>
       <p class="percentile-caption" id="audio-percentile-status" role="status"></p>
       <details><summary>比較対象と算出方法</summary><p>日本のTOEIC L&amp;R公開テストについて、IIBC公式掲載の20,269人の分布と比較しています（2026年9月26日参照）。全年度・全受験者・大学受験生に限定した順位ではありません。</p><p>予想スコアが属する公式スコア区分の下限以上の割合を使用します。区分内の細かな順位は推定しません。診断スコア自体も非公式の目安であり、本番での順位を保証しません。</p><a href="https://www.iibc-global.org/toeic/official_data.html" target="_blank" rel="noopener noreferrer">出典：IIBC 平均スコア・スコア分布</a></details>
@@ -4299,7 +4306,7 @@
         <h2>この結果からわかること</h2>
       </div>
       <div class="listen-insight"><p class="k">Listeningの得意分野</p><p class="v" id="listen-strong">—</p><p class="d" id="listen-strong-d"></p></div>
-      <div class="listen-insight"><p class="k">優先して対策</p><p class="v" id="listen-weak">—</p><p class="d" id="listen-weak-d"></p><button type="button" class="inline-drill-btn" id="btn-listen-weak-skill">🎯 この弱点スキルを集中練習する →</button></div>
+      <div class="listen-insight"><p class="k">優先して対策</p><p class="v" id="listen-weak">—</p><p class="d" id="listen-weak-d"></p><button type="button" class="inline-drill-btn" id="btn-listen-weak-skill">この弱点スキルを集中練習する →</button></div>
     </div>
 
     <div class="audio-results-actions reveal">
@@ -4494,7 +4501,7 @@
     <div class="rv-qmeta">
       <span class="rv-qno" id="rv-qno"></span>
       <span class="part-tag" id="rv-part" style="margin-top:0"></span>
-      <button type="button" class="flag-btn" id="btn-rv-flag" aria-pressed="false" style="margin-left:auto">🔖 ブックマーク保存</button>
+      <button type="button" class="flag-btn" id="btn-rv-flag" aria-pressed="false" style="margin-left:auto">ブックマーク保存</button>
     </div>
 
     <div class="rv-audio-bar" id="rv-audio-bar" hidden>
@@ -5747,7 +5754,7 @@ function updateGoalCoachCard(prefix, ctx) {
     const gap = goal990 - ctx.score;
     const tag = provisional ? '（次の目安 · 下で変更可）' : '';
     if (gap <= 0) {
-      headlineEl.textContent = `🎉 目標 ${goal990}点ラインに到達しています！`;
+      headlineEl.textContent = `目標 ${goal990}点ラインに到達しています！`;
       adviceEl.innerHTML = `今回の予測は <strong>${ctx.score}点</strong>（目標比 +${Math.abs(gap)}点）。定着させるため <strong>${weakLabel}</strong> の取りこぼしを減らし、1つ上の目標にも挑戦してみましょう。`;
     } else {
       const needQs = Math.max(1, Math.ceil((gap / 950) * Math.max(ctx.total || 20, 1)));
@@ -5760,7 +5767,7 @@ function updateGoalCoachCard(prefix, ctx) {
     const gap = secGoal - ctx.score;
     const tag = provisional ? '（仮目標）' : '';
     if (gap <= 0) {
-      headlineEl.textContent = `🎉 目標 ${goal990}点ペース（${ctx.sectionLabel}目安 ${secGoal}点）に到達！`;
+      headlineEl.textContent = `目標 ${goal990}点ペース（${ctx.sectionLabel}目安 ${secGoal}点）に到達！`;
       adviceEl.innerHTML = `今回の${escapeHtml(ctx.sectionLabel)}予測は <strong>${ctx.score}/495点</strong> です。もう一方のセクションも含めた「クイック総合診断」で990点満点の現在地を確認しましょう。`;
     } else {
       const needQs = Math.max(1, Math.ceil((gap / 475) * Math.max(ctx.total || 20, 1)));
@@ -6740,7 +6747,7 @@ function computeGoalProgress(history, targetScore) {
       return {
         hasGoal: true,
         badge: `目標 ${targetScore}点 · 達成`,
-        caption: `🎉 目標 ${targetScore}点クリア！（総合ベスト ${bestCombined}点）`,
+        caption: `目標 ${targetScore}点クリア！（総合ベスト ${bestCombined}点）`,
         value: '達成 ✓',
         fillPct: 100
       };
@@ -6796,9 +6803,6 @@ function refreshHomeLearning() {
   $('home-history-note').textContent = history.length
     ? `診断${history.length}回 · 最新 ${history[0].score}/${history[0].maxScore || 495}`
     : 'まだ診断履歴はありません';
-  $('home-learning-note').textContent = history.length
-    ? '前回までの結果を使って、次に必要な学習へ進めます。'
-    : '診断すると、苦手問題と成長記録がここに蓄積されます。';
 
   // Home Streak & Goal Strip
   if ($('home-streak-pill')) {
@@ -6806,8 +6810,8 @@ function refreshHomeLearning() {
   }
   if ($('home-streak-text')) {
     $('home-streak-text').textContent = streak.streak > 0
-      ? `🔥 ${streak.streak}日連続学習中`
-      : (streak.totalDays > 0 ? `🔥 累計${streak.totalDays}日学習 · 今日から再開` : '🔥 今日から連続学習スタート');
+      ? `${streak.streak}日連続学習中`
+      : (streak.totalDays > 0 ? `累計${streak.totalDays}日学習 · 今日から再開` : '今日から連続学習スタート');
   }
   if ($('home-streak-done')) {
     $('home-streak-done').hidden = !streak.studiedToday;
@@ -6975,7 +6979,7 @@ function renderHistory() {
   const goalInfo = computeGoalProgress(history, target);
 
   // 1. 4-Card Summary
-  if ($('h-streak')) $('h-streak').textContent = `🔥 ${streak.streak}日`;
+  if ($('h-streak')) $('h-streak').textContent = `${streak.streak}日`;
   if ($('h-streak-sub')) $('h-streak-sub').textContent = streak.studiedToday ? `今日達成 ✓ · 累計${streak.totalDays}日` : `累計 ${streak.totalDays}日`;
 
   if ($('h-count')) $('h-count').textContent = `${history.length}回`;
@@ -7933,7 +7937,7 @@ function renderAudioResults(listeningResult, listeningAnalysis, readingResult, r
   $('listen-weak-d').textContent = `${LISTENING_ADVICE[weak.key] || '聞き取れなかった箇所の音と意味を結び直しましょう。'} 正答率${pct(weak.correct, weak.total)}%です。`;
   if ($('btn-listen-weak-skill')) {
     $('btn-listen-weak-skill').dataset.skillKey = weak.key;
-    $('btn-listen-weak-skill').textContent = `🎯「${weak.name}」を集中練習する →`;
+    $('btn-listen-weak-skill').textContent = `「${weak.name}」を集中練習する →`;
   }
   const reviewableCount = buildReviewItems().length;
   $('btn-audio-review').hidden = reviewableCount === 0;
@@ -8372,7 +8376,7 @@ function renderResults(result, analysis, totalSeconds) {
   $('r-weak-d').textContent = `正答率${pct(analysis.weakest.correct, analysis.weakest.total)}%（${analysis.weakest.total}問中${analysis.weakest.correct}問）。ここを伸ばすとスコアが最も上がりやすい分野です。`;
   if ($('btn-r-weak-skill')) {
     $('btn-r-weak-skill').dataset.skillKey = analysis.weakest.key;
-    $('btn-r-weak-skill').textContent = `🎯「${analysis.weakest.name}」だけ10問特訓する →`;
+    $('btn-r-weak-skill').textContent = `「${analysis.weakest.name}」だけ10問特訓する →`;
   }
   // Recommendation: recomputed from this session's score and weakest skill.
   renderRecommendationCard(
@@ -8893,7 +8897,7 @@ function renderReviewItem() {
   $('rv-count').textContent = `${state.reviewIndex + 1} / ${items.length}問`;
   $('rv-qno').textContent = `Q${item.position}`;
   $('rv-part').innerHTML = `Part ${q.part} <small>· ${PART_NAMES[q.part]}</small>` +
-    (item.flagged && chosen === q.answer ? ' <small style="color:var(--ink-amber)">· 🔖 迷った正解</small>' : '');
+    (item.flagged && chosen === q.answer ? ' <small style="color:var(--ink-amber)">· 迷った正解</small>' : '');
   if (typeof syncReviewFlagButton === 'function') syncReviewFlagButton(q);
   if ($('rv-audio-bar')) $('rv-audio-bar').hidden = questionSection(q) !== 'listening';
   if (typeof renderShadowingGym === 'function') renderShadowingGym('rv-shadow-gym', q);
@@ -9439,11 +9443,17 @@ $('btn-start').addEventListener('click', () => showScreen('mode-select'));
   const showcaseCta = $('btn-showcase-start');
   if (showcaseCta) showcaseCta.addEventListener('click', () => showScreen('mode-select'));
 })();
+function startDiagnosticDirect(startFn) {
+  const saved = readStored(QUALIFICATION_KEY, null);
+  diagnosticQualificationProfile = (saved && Array.isArray(saved.qualifications) && saved.qualifications.length) ? saved : null;
+  startFn();
+}
+
 $('btn-mode-back').addEventListener('click', () => showScreen('home'));
-$('btn-mode-quick').addEventListener('click', () => openQualificationEntry(startQuickCombinedDiagnostic));
-$('btn-mode-reading').addEventListener('click', () => openQualificationEntry(startReadingDiagnostic));
-$('btn-mode-listening').addEventListener('click', () => openQualificationEntry(startListeningDiagnostic));
-$('btn-mode-combined').addEventListener('click', () => openQualificationEntry(startCombinedDiagnostic));
+$('btn-mode-quick').addEventListener('click', () => startDiagnosticDirect(startQuickCombinedDiagnostic));
+$('btn-mode-reading').addEventListener('click', () => startDiagnosticDirect(startReadingDiagnostic));
+$('btn-mode-listening').addEventListener('click', () => startDiagnosticDirect(startListeningDiagnostic));
+$('btn-mode-combined').addEventListener('click', () => startDiagnosticDirect(startCombinedDiagnostic));
 $('btn-audio').addEventListener('click', speakCurrentAudio);
 $('btn-audio-skip').addEventListener('click', skipCurrentQuestionForDevelopment);
 $('btn-start-reading-section').addEventListener('click', () => {
@@ -9857,7 +9867,7 @@ function updateScoreDelta(elId, currentScore, modeKey, maxScore) {
   el.classList.remove('is-up', 'is-best');
   if (currentScore > prevBest) {
     el.classList.add('is-best');
-    el.textContent = `🏆 自己ベスト更新！（前回比 ${diff >= 0 ? '+' + diff : diff}点）`;
+    el.textContent = `自己ベスト更新！（前回比 ${diff >= 0 ? '+' + diff : diff}点）`;
   } else if (diff > 0) {
     el.classList.add('is-up');
     el.textContent = `↑ 前回より +${diff}点アップ（前回 ${prevScore}点）`;
@@ -10060,10 +10070,10 @@ function handleInitialDeepLink() {
   }
   if (mode === 'dictation' && typeof startDictationGym === 'function') { startDictationGym(); return true; }
   if (mode === 'sprint') { startPart5Sprint(); return true; }
-  if (mode === 'quick') { openQualificationEntry(startQuickCombinedDiagnostic); return true; }
-  if (mode === 'reading') { openQualificationEntry(startReadingDiagnostic); return true; }
-  if (mode === 'listening') { openQualificationEntry(startListeningDiagnostic); return true; }
-  if (mode === 'combined') { openQualificationEntry(startCombinedDiagnostic); return true; }
+  if (mode === 'quick') { startDiagnosticDirect(startQuickCombinedDiagnostic); return true; }
+  if (mode === 'reading') { startDiagnosticDirect(startReadingDiagnostic); return true; }
+  if (mode === 'listening') { startDiagnosticDirect(startListeningDiagnostic); return true; }
+  if (mode === 'combined') { startDiagnosticDirect(startCombinedDiagnostic); return true; }
   if (view === 'paraphrase') {
     window.location.href = '/toeic-paraphrase/#pp-drill';
     return true;
@@ -10159,7 +10169,7 @@ function refreshExamCountdown() {
   badge.classList.remove('is-set', 'is-soon');
 
   if (!dateKey) {
-    badge.textContent = '📅 次の受験日：未設定';
+    badge.textContent = '次の受験日：未設定';
     toggleBtn.textContent = '受験日を設定';
     advice.hidden = true;
     if (calBtn) calBtn.hidden = true;
@@ -10171,27 +10181,27 @@ function refreshExamCountdown() {
   if (calBtn) calBtn.hidden = diff < 0;
 
   if (diff < 0) {
-    badge.textContent = `📅 受験日（${dateKey}）経過`;
+    badge.textContent = `受験日（${dateKey}）経過`;
     advice.textContent = '受験おつかれさまでした！次の目標試験日を設定すると逆算プランが切り替わります。';
     advice.hidden = false;
   } else if (diff === 0) {
     badge.classList.add('is-soon');
-    badge.textContent = '🔥 本日がTOEIC受験日です！';
+    badge.textContent = '本日がTOEIC受験日です！';
     advice.textContent = '新しいことは詰め込まず、Part 6終了＝残り55分の時計ルールだけ意識して力を出し切りましょう！';
     advice.hidden = false;
   } else if (diff <= 7) {
     badge.classList.add('is-soon');
-    badge.textContent = `⚡ 試験日まで あと ${diff}日（${dateKey}）`;
+    badge.textContent = `試験日まで あと ${diff}日（${dateKey}）`;
     advice.textContent = '直前仕上げ期：新規教材は増やさず「苦手問題の卒業」と「Part 5 20秒タイムアタック」で取りこぼしをゼロにしましょう。';
     advice.hidden = false;
   } else if (diff <= 30) {
     badge.classList.add('is-set');
-    badge.textContent = `🎯 試験日まで あと ${diff}日（${dateKey}）`;
+    badge.textContent = `試験日まで あと ${diff}日（${dateKey}）`;
     advice.textContent = '弱点集中期：診断で出た最弱点テーマの「ピンポイント10問特訓」を回し、週1回クイック診断で伸びを確認しましょう。';
     advice.hidden = false;
   } else {
     badge.classList.add('is-set');
-    badge.textContent = `📅 試験日まで あと ${diff}日（${dateKey}）`;
+    badge.textContent = `試験日まで あと ${diff}日（${dateKey}）`;
     advice.textContent = '基礎養成期：毎日の「今日の1問」＋「スピード単語帳10語」で連続学習ストリークを伸ばすのが最短ルートです。';
     advice.hidden = false;
   }
@@ -10445,7 +10455,7 @@ function startSprintQuestionClock() {
 
 function renderSprintCurrentQuestion() {
   renderDiagnosticQuestion();
-  $('part-tag').innerHTML = '⚡ Part 5 タイムアタック <small>· 1問20秒制限</small>';
+  $('part-tag').innerHTML = 'Part 5 タイムアタック <small>· 1問20秒制限</small>';
   startSprintQuestionClock();
 }
 
@@ -10531,7 +10541,7 @@ function finishSprint() {
   $('sprint-all-review').innerHTML = state.questions.map((q, i) => {
     const r = state.responses[i];
     const ok = r.choice === q.answer;
-    const statusLabel = r.timedOut ? '⏰ 時間切れ' : (ok ? '正解 ✓' : '不正解');
+    const statusLabel = r.timedOut ? '時間切れ' : (ok ? '正解 ✓' : '不正解');
     return `<details class="lp-review"><summary>${i + 1}問目 · ${statusLabel}（${r.seconds.toFixed(1)}秒）</summary>` +
       practiceReviewHtml(q, i) + `</details>`;
   }).join('');
@@ -10543,7 +10553,7 @@ function finishSprint() {
 function shareSprintOnX() {
   if (!lastSprintShareSummary) return;
   const s = lastSprintShareSummary;
-  const txt = `LexSophia「Part 5 1問20秒タイムアタック」で【${s.rank}ランク】獲得！⚡\n正解 ${s.correct}/${s.total}問 · 平均 ${s.avgSec}秒/問\n#LexSophia #TOEIC`;
+  const txt = `LexSophia「Part 5 1問20秒タイムアタック」で【${s.rank}ランク】獲得！\n正解 ${s.correct}/${s.total}問 · 平均 ${s.avgSec}秒/問\n#LexSophia #TOEIC`;
   const url = 'https://mylexsophia.com/?mode=sprint';
   window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(txt) + '&url=' + encodeURIComponent(url), '_blank', 'noopener,width=600,height=540');
 }
@@ -10565,7 +10575,7 @@ function resetShadowingLoopState() {
   shadowLoopTimer = null;
   document.querySelectorAll('.sg-btn.is-active').forEach(b => {
     b.classList.remove('is-active');
-    if (b.dataset.sgKind === 'loop') b.textContent = '🔁 ループ';
+    if (b.dataset.sgKind === 'loop') b.textContent = 'ループ';
     else b.textContent = '▶ 再生';
   });
 }
@@ -10669,14 +10679,14 @@ function renderShadowingGym(containerId, q) {
       `</div>` +
       `<div class="shadow-line__btns">` +
       `<button type="button" class="sg-btn" data-sg-kind="once" data-sg-idx="${idx}" data-sg-clip="${escapeHtml(clipSrc)}">▶ 再生</button>` +
-      `<button type="button" class="sg-btn" data-sg-kind="loop" data-sg-idx="${idx}" data-sg-clip="${escapeHtml(clipSrc)}">🔁 ループ</button>` +
+      `<button type="button" class="sg-btn" data-sg-kind="loop" data-sg-idx="${idx}" data-sg-clip="${escapeHtml(clipSrc)}">ループ</button>` +
       `</div></div>`;
   }).join('');
 
   box.innerHTML =
     `<div class="shadow-gym" data-mask="both">` +
     `<div class="shadow-gym__head">` +
-    `<span class="shadow-gym__title">🎧 1文リピート・シャドーイング練習</span>` +
+    `<span class="shadow-gym__title">1文リピート・シャドーイング練習</span>` +
     `<div class="shadow-masks" role="group" aria-label="字幕表示切替">` +
     `<button type="button" class="shadow-mask-btn is-active" data-sg-mask="both">英文＋和訳</button>` +
     `<button type="button" class="shadow-mask-btn" data-sg-mask="en">英文のみ</button>` +
@@ -10720,7 +10730,7 @@ function printCurrentDiagnosticReport() {
 if ($('btn-r-print')) $('btn-r-print').addEventListener('click', printCurrentDiagnosticReport);
 if ($('btn-audio-print')) $('btn-audio-print').addEventListener('click', printCurrentDiagnosticReport);
 
-/* ---------- 12. Question Flagging (🔖 迷った・保存) & Saved Bookmarks ---------- */
+/* ---------- 12. Question Flagging (迷った・保存) & Saved Bookmarks ---------- */
 
 const VALID_QUESTION_IDS = new Set(ALL_QUESTION_BANK.map(q => q.id));
 const ALL_Q_INDEX_BY_ID = new Map(ALL_QUESTION_BANK.map((q, idx) => [q.id, idx]));
@@ -10754,7 +10764,7 @@ function syncTestFlagButton(q) {
     (state.flaggedInSession && state.flaggedInSession.has(item.id)) || savedSet.has(item.id)
   );
   btn.setAttribute('aria-pressed', String(flagged));
-  btn.textContent = flagged ? '🔖 保存済み ✓' : '🔖 迷った・保存';
+  btn.textContent = flagged ? '保存済み ✓' : '迷った・保存';
 }
 
 function toggleTestQuestionFlag() {
@@ -10782,7 +10792,7 @@ function syncReviewFlagButton(q) {
   if (!btn || !q) return;
   const saved = new Set(getBookmarkIds()).has(q.id);
   btn.setAttribute('aria-pressed', String(saved));
-  btn.textContent = saved ? '🔖 保存済み ✓' : '🔖 保存する';
+  btn.textContent = saved ? '保存済み ✓' : '保存する';
 }
 
 function toggleReviewQuestionFlag() {
@@ -10959,7 +10969,7 @@ async function shareFriendChallenge(source) {
   if (navigator.share && window.matchMedia && window.matchMedia('(pointer: coarse)').matches) {
     try {
       await navigator.share({
-        title: 'LexSophia フレンド対戦状 ⚔️',
+        title: 'LexSophia フレンド対戦状',
         text: `まったく同じ問題セットで勝負しよう！ ${label}`,
         url
       });
@@ -10978,17 +10988,17 @@ function renderSprintChallengeVs(myCorrect, total, myAvgSec) {
   }
   const chAvg = ch.sec / Math.max(1, ch.questions.length);
   let resClass = 'is-draw';
-  let resText = '🤝 DRAW · 完全同点！';
+  let resText = 'DRAW · 完全同点！';
   if (myCorrect > ch.score || (myCorrect === ch.score && myAvgSec < chAvg - 0.05)) {
     resClass = 'is-win';
-    resText = '🏆 YOU WIN! · 挑戦者に勝利！';
+    resText = 'YOU WIN! · 挑戦者に勝利！';
   } else if (myCorrect < ch.score || (myCorrect === ch.score && myAvgSec > chAvg + 0.05)) {
     resClass = 'is-lose';
-    resText = '🔥 CHALLENGER WINS · あと一歩！';
+    resText = 'CHALLENGER WINS · あと一歩！';
   }
   card.innerHTML =
     `<div class="vs-card__head">` +
-    `<span class="vs-card__kicker">⚔️ FRIEND CHALLENGE VS</span>` +
+    `<span class="vs-card__kicker">FRIEND CHALLENGE VS</span>` +
     `<span class="vs-card__res ${resClass}">${resText}</span>` +
     `</div>` +
     `<div class="vs-grid">` +
@@ -11009,17 +11019,17 @@ function renderDiagnosticChallengeVs(cardId, myScore, maxScore, myTotalSec) {
     return;
   }
   let resClass = 'is-draw';
-  let resText = '🤝 DRAW · 同スコア！';
+  let resText = 'DRAW · 同スコア！';
   if (myScore > ch.score || (myScore === ch.score && myTotalSec < ch.sec - 2)) {
     resClass = 'is-win';
-    resText = '🏆 YOU WIN! · 挑戦者に勝利！';
+    resText = 'YOU WIN! · 挑戦者に勝利！';
   } else if (myScore < ch.score || (myScore === ch.score && myTotalSec > ch.sec + 2)) {
     resClass = 'is-lose';
-    resText = '🔥 CHALLENGER WINS · 再挑戦しよう！';
+    resText = 'CHALLENGER WINS · 再挑戦しよう！';
   }
   card.innerHTML =
     `<div class="vs-card__head">` +
-    `<span class="vs-card__kicker">⚔️ FRIEND CHALLENGE VS</span>` +
+    `<span class="vs-card__kicker">FRIEND CHALLENGE VS</span>` +
     `<span class="vs-card__res ${resClass}">${resText}</span>` +
     `</div>` +
     `<div class="vs-grid">` +
@@ -11181,7 +11191,7 @@ function submitDictationAnswer(rawAnswer, clickedChip = null) {
     ? `<span style="color:var(--ink-mint)">✓ 正解！ 「${escapeHtml(item.answer)}」を正確に聞き取れました</span>`
     : `<span style="color:#b42318">正解は「${escapeHtml(item.answer)}」</span>`;
   $('dict-fb-ja').textContent = `和訳：${item.ja}`;
-  $('dict-fb-tip').textContent = `💡 聞き取りのコツ：${item.tip}`;
+  $('dict-fb-tip').textContent = `聞き取りのコツ：${item.tip}`;
   $('btn-dict-next').textContent = dictIndex + 1 >= dictSet.length ? '結果を見る →' : '次の問題へ →';
   $('dict-fb').hidden = false;
 }
@@ -11305,7 +11315,7 @@ function renderAchievementBadges() {
     { id: 'sprint_play', owl: 'img/owl-blue.png', name: '20秒スプリンター', cond: 'Part 5タイムアタック完走', unlocked: Boolean(bp.sprintCompleted) },
     { id: 'sprint_sa', owl: 'img/owl-amber.png', name: '電光石火 A/S', cond: 'タイムアタックA・S獲得', unlocked: bp.sprintBestRank === 'A' || bp.sprintBestRank === 'S' },
     { id: 'dict_clear', owl: 'img/owl-blue.png', name: '音の解明者', cond: 'ディクテーション10問完走', unlocked: Boolean(bp.dictationCompleted) },
-    { id: 'bookmark_use', owl: 'img/owl-violet.png', name: '弱点コレクター', cond: '🔖保存または苦手を卒業', unlocked: bookmarkCnt >= 1 || graduatedCnt >= 1 },
+    { id: 'bookmark_use', owl: 'img/owl-violet.png', name: '弱点コレクター', cond: '問題保存または苦手を卒業', unlocked: bookmarkCnt >= 1 || graduatedCnt >= 1 },
     { id: 'score_700', owl: 'img/owl-pink.png', name: '700点ブレイカー', cond: '総合700+ / 単科350+達成', unlocked: hasScoreAtLeast(700, 350) },
     { id: 'score_860', owl: 'img/owl-violet.png', name: 'Sophia Aランク', cond: '総合860+ / 単科430+達成', unlocked: hasScoreAtLeast(860, 430) }
   ];
