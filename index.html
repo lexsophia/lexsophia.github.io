@@ -556,13 +556,13 @@
     background: var(--surface-canvas);
     border-radius: 56px 56px 0 0;
     box-shadow: 0 -10px 32px rgba(24, 24, 27, 0.04), var(--shadow-ring-subtle);
-    padding: clamp(56px, 7vw, 96px) clamp(22px, 5vw, 56px) clamp(76px, 9vw, 116px);
+    padding: clamp(48px, 6vw, 80px) clamp(22px, 5vw, 56px) clamp(40px, 5vw, 56px);
   }
 
   /* Vivid Violet "All in One" Banner + Original LexSophia 4-Step TOEIC Matrix */
   .allinone-banner {
     position: relative; overflow: hidden;
-    max-width: 1120px; margin: 0 auto clamp(72px, 8.5vw, 112px);
+    max-width: 1120px; margin: 0 auto;
     padding: clamp(36px, 5vw, 60px) clamp(24px, 5vw, 60px);
     border-radius: var(--radius-bento);
     background-color: var(--pop-violet);
@@ -2442,7 +2442,7 @@
   @media (max-width: 480px) { .percentile-card { padding: 28px 22px; } .percentile-share { width: 100%; } .percentile-challenge { font-size: 13px; } }
 
   /* Practice entry: Home Gateway Card + Dedicated #practice-select Screen */
-  .practice-home { margin-top: clamp(56px, 7vw, 88px); padding-top: 0; border-top: 0; }
+  .practice-home { margin-top: clamp(12px, 2vw, 20px); padding-top: 0; border-top: 0; }
   .practice-gateway {
     position: relative; overflow: hidden;
     padding: clamp(28px, 4vw, 40px) clamp(24px, 4vw, 44px);
@@ -2537,7 +2537,7 @@
   }
   .practice-card:hover .practice-soon { background: var(--ink-primary); color: var(--ink-inverse); }
   @media (max-width: 680px) {
-    .practice-home { margin-top: 52px; }
+    .practice-home { margin-top: 8px; }
     .practice-groups { grid-template-columns: 1fr; gap: 22px; }
     .practice-group { padding: 24px 20px; border-radius: 28px; }
     .practice-card { gap: 11px; padding: 15px 16px; border-radius: 22px; }
