@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/seo-assets/style.css">
-<link rel="stylesheet" href="/assets/lexsophia-shell.css">
+<link rel="stylesheet" href="/assets/lexsophia-shell.css?v=4">
 <link rel="stylesheet" href="/teap/assets/teap.css">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LexSophia">
@@ -66,23 +66,23 @@
         </p>
         <div class="lx-mode-chips" role="group" aria-label="TEAP演習モードを選択">
           <button type="button" class="lx-chip is-active" aria-pressed="true"
-            data-lx-mode="r-quick"
+            data-lx-mode="r-quick" data-dot="mint"
             data-title="Reading クイック診断"
-            data-meta="全6パート×2問（12問）· 約15分で弱点特定"
+            data-meta="全6パート×2問（12問）· 約15分"
             data-href="/teap/quick-test/"
             data-cta="Reading診断を始める">
-            <span class="lx-chip__dot" aria-hidden="true"></span>Reading 12問診断
+            <span class="lx-chip__dot" aria-hidden="true"></span>Reading 診断
           </button>
           <button type="button" class="lx-chip" aria-pressed="false"
-            data-lx-mode="l-quick"
+            data-lx-mode="l-quick" data-dot="blue"
             data-title="Listening クイック診断"
-            data-meta="全5パート網羅（12問）· 約8分 · 図表選択つき"
+            data-meta="全5パート網羅（12問）· 約8分"
             data-href="/teap/listening/?mode=quick"
             data-cta="Listening診断を始める">
-            <span class="lx-chip__dot" aria-hidden="true"></span>Listening 12問診断
+            <span class="lx-chip__dot" aria-hidden="true"></span>Listening 診断
           </button>
           <button type="button" class="lx-chip" aria-pressed="false"
-            data-lx-mode="r-exam"
+            data-lx-mode="r-exam" data-dot="violet"
             data-title="Reading 60問フル模試"
             data-meta="公式構成準拠 · 70分タイマー付き"
             data-href="/teap/reading/?mode=exam"
@@ -90,9 +90,9 @@
             <span class="lx-chip__dot" aria-hidden="true"></span>Reading 60問
           </button>
           <button type="button" class="lx-chip" aria-pressed="false"
-            data-lx-mode="l-study"
+            data-lx-mode="l-study" data-dot="amber"
             data-title="Listening 50問演習"
-            data-meta="Part 1A〜2B · 音声合成＋和訳・引っ掛け解説"
+            data-meta="Part 1A〜2B · 音声＋和訳・解説つき"
             data-href="/teap/listening/?mode=study"
             data-cta="Listening 50問を始める">
             <span class="lx-chip__dot" aria-hidden="true"></span>Listening 50問
@@ -107,119 +107,121 @@
         </div>
       </div>
     </div>
+
+    <div class="lx-hero-owls" aria-hidden="true">
+      <img src="/img/lexsophia-owls-hero.png" alt="" width="1080" height="426" decoding="async">
+    </div>
   </section>
 </div>
 
 <main class="lx-deck">
   <div class="lx-deck__inner">
     <section id="teap-skills" class="section" style="margin-top:0">
-      <h2>TEAP 4技能 対策メニュー</h2>
+      <h2>4技能メニュー</h2>
       <div class="teap-skill-grid">
         <article class="teap-skill-card">
           <div>
-            <div class="teap-skill-card__head"><span class="teap-pill is-mint">公開中 · 独自60問</span><span class="teap-part-meta">公式：60問・70分</span></div>
-            <h3>Reading（リーディング）</h3>
-            <p>Part 1（語彙20問）・2A（図表5問）・2B（掲示5問）・2C（短文10問）・3A（長文穴埋め8問）・3B（長文詳細12問）の全6パートを試験モード・学習モードで演習可能。</p>
+            <div class="teap-skill-card__head"><span class="teap-pill is-mint">公開中 · 60問</span><span class="teap-part-meta">70分</span></div>
+            <div class="lx-skill-title-row">
+              <span class="lx-skill-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H19"/></svg></span>
+              <h3>Reading</h3>
+            </div>
+            <p style="margin-top:10px">Part 1〜3Bの全6パート。試験・学習・クイック診断に対応。</p>
           </div>
           <div class="teap-card-actions">
-            <a class="btn" href="/teap/reading/">60問模試・学習を始める →</a>
-            <a class="btn alt" href="/teap/quick-test/">12問クイック診断</a>
+            <a class="btn" href="/teap/reading/?mode=exam">60問模試 →</a>
+            <a class="btn alt" href="/teap/quick-test/">12問診断</a>
           </div>
         </article>
         <article class="teap-skill-card">
           <div>
-            <div class="teap-skill-card__head"><span class="teap-pill is-mint">公開中 · 独自50問</span><span class="teap-part-meta">公式：50問・約50分</span></div>
-            <h3>Listening（リスニング）</h3>
-            <p>Part 1A（10問）・1B（10問）・1C（図表選択5問）・2A（9問）・2B（図表付き講義含む16問）の全5パートを音声合成・即時解説・本番1回再生モードで演習可能。</p>
+            <div class="teap-skill-card__head"><span class="teap-pill is-mint">公開中 · 50問</span><span class="teap-part-meta">約50分</span></div>
+            <div class="lx-skill-title-row">
+              <span class="lx-skill-ic is-blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="7" rx="2"/><rect x="17" y="13" width="4" height="7" rx="2"/></svg></span>
+              <h3>Listening</h3>
+            </div>
+            <p style="margin-top:10px">Part 1A〜2B（図表選択・講義含む）。音声再生＆即時解説つき。</p>
           </div>
           <div class="teap-card-actions">
-            <a class="btn" href="/teap/listening/">50問模試・学習を始める →</a>
-            <a class="btn alt" href="/teap/listening/?mode=quick">12問クイック診断</a>
+            <a class="btn" href="/teap/listening/?mode=study">50問演習 →</a>
+            <a class="btn alt" href="/teap/listening/?mode=quick">12問診断</a>
           </div>
         </article>
         <article class="teap-skill-card is-soon">
           <div>
-            <div class="teap-skill-card__head"><span class="teap-pill">準備中</span><span class="teap-part-meta">公式：2課題・70分</span></div>
-            <h3>Writing（ライティング）</h3>
-            <p>Task A（約70語要約）およびTask B（複数資料・図表統合の約200語論述）の独自課題・解答例・自己評価チェックリストを準備中です。</p>
+            <div class="teap-skill-card__head"><span class="teap-pill">Coming Soon</span><span class="teap-part-meta">2課題 · 70分</span></div>
+            <div class="lx-skill-title-row">
+              <span class="lx-skill-ic is-muted" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+              <h3>Writing</h3>
+            </div>
+            <p style="margin-top:10px">Task A（要約）・Task B（資料統合エッセイ）を準備中。</p>
           </div>
-          <div class="teap-card-actions"><a class="btn alt" href="/teap/format/">課題形式を確認する →</a></div>
+          <div class="teap-card-actions"><a class="btn alt" href="/teap/format/">形式を見る →</a></div>
         </article>
         <article class="teap-skill-card is-soon">
           <div>
-            <div class="teap-skill-card__head"><span class="teap-pill">準備中</span><span class="teap-part-meta">公式：4パート・約10分</span></div>
-            <h3>Speaking（スピーキング）</h3>
-            <p>Part 1〜4の独自質問セット・解答例・自己チェック機能を準備中です（AI面接機能はバックエンド整備後に別途対応予定）。</p>
+            <div class="teap-skill-card__head"><span class="teap-pill">Coming Soon</span><span class="teap-part-meta">4パート · 約10分</span></div>
+            <div class="lx-skill-title-row">
+              <span class="lx-skill-ic is-muted" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v5"/><path d="M8 22h8"/></svg></span>
+              <h3>Speaking</h3>
+            </div>
+            <p style="margin-top:10px">Part 1〜4の想定質問・解答例・自己チェックを準備中。</p>
           </div>
-          <div class="teap-card-actions"><a class="btn alt" href="/teap/format/">パート構成を確認する →</a></div>
+          <div class="teap-card-actions"><a class="btn alt" href="/teap/format/">形式を見る →</a></div>
         </article>
       </div>
     </section>
 
     <section id="teap-parts" class="section">
-      <h2>Reading パート別ガイド ＆ 演習</h2>
+      <h2>Reading パート別演習</h2>
       <div class="teap-part-grid">
-        <article class="teap-part-card"><div><span class="teap-part-meta">20問 · 推奨7分</span><h3>Part 1：学術語彙・語法</h3><p>大学レベルの語彙・熟語・コロケーションを文脈から4択で判定。</p></div><a class="btn alt" href="/teap/reading/part-1/">対策と演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">5問 · 推奨7分</span><h3>Part 2A：図表・グラフ読解</h3><p>棒・折れ線グラフや表から傾向・比較・割合を正確に読み取る。</p></div><a class="btn alt" href="/teap/reading/part-2a/">対策と演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">5問 · 推奨8分</span><h3>Part 2B：大学掲示・メール</h3><p>履修登録・図書館・寮・奨学金などの条件・例外・締切を確認。</p></div><a class="btn alt" href="/teap/reading/part-2b/">対策と演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">10問 · 推奨15分</span><h3>Part 2C：短文学術読解</h3><p>80〜160語程度の学術英文で主旨・詳細・推論・言い換えを問う。</p></div><a class="btn alt" href="/teap/reading/part-2c/">対策と演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">8問 · 推奨8分</span><h3>Part 3A：長文の論理・穴埋め</h3><p>2長文×4問。接続表現・因果・指示語・語彙を論理展開から選ぶ。</p></div><a class="btn alt" href="/teap/reading/part-3a/">対策と演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">12問 · 推奨25分</span><h3>Part 3B：長文・図表の詳細理解</h3><p>2長文×6問。本文と付属図表を照合し詳細・推論・言い換えを解く。</p></div><a class="btn alt" href="/teap/reading/part-3b/">対策と演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">20問 · 7分</span><h3>Part 1：語彙・語法</h3><p>文脈から学術語彙・コロケーションを判定。</p></div><a class="btn alt" href="/teap/reading/part-1/">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">5問 · 7分</span><h3>Part 2A：図表読解</h3><p>グラフ・表の傾向や割合を読み取る。</p></div><a class="btn alt" href="/teap/reading/part-2a/">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">5問 · 8分</span><h3>Part 2B：掲示・メール</h3><p>大学告知の条件・期限・例外を確認。</p></div><a class="btn alt" href="/teap/reading/part-2b/">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">10問 · 15分</span><h3>Part 2C：短文読解</h3><p>学術短文の主旨・詳細・言い換え。</p></div><a class="btn alt" href="/teap/reading/part-2c/">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">8問 · 8分</span><h3>Part 3A：長文穴埋め</h3><p>論理展開と接続表現から空欄を補充。</p></div><a class="btn alt" href="/teap/reading/part-3a/">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">12問 · 25分</span><h3>Part 3B：長文総合</h3><p>長文と図表を照合して詳細・推論を解く。</p></div><a class="btn alt" href="/teap/reading/part-3b/">演習 →</a></article>
       </div>
     </section>
 
-    <div class="teap-notice-box">
-      <strong>通常版TEAPとTEAP CBTの区別：</strong>本セクションは紙筆・対面型の<strong>通常版TEAP</strong>を対象としています。コンピュータ受験型のTEAP CBTとは問題構成や出題形式が異なるため、違いは<a href="/teap/vs-cbt/">通常版TEAPとTEAP CBTの違い</a>でご確認ください。
-    </div>
-
-    <section class="section">
-      <h2>よくある質問</h2>
-      <details><summary>LexSophiaのTEAP問題は公式の過去問ですか？</summary><p>いいえ。日本英語検定協会が公開している問題構成・見本問題を参考に、LexSophiaが完全オリジナルで作成した非公式の対策問題です。公式見本問題は公式ページへのリンクからご確認ください。</p></details>
-      <details><summary>Readingの正答率からTEAP公式スコア（100点満点）は換算できますか？</summary><p>TEAP公式スコアは単純比例ではないため、独自問題の正答率を公式100点満点に直結して表示することはしていません。現在のバージョンでは正答数・正答率・パート別成績をもとに弱点パートを特定できます。</p></details>
+    <section id="teap-listening-parts" class="section">
+      <h2>Listening パート別演習</h2>
+      <div class="teap-part-grid">
+        <article class="teap-part-card"><div><span class="teap-part-meta">10問</span><h3>Part 1A：短い会話</h3><p>予定変更・条件付き承諾・次の行動を聞き取る。</p></div><a class="btn alt" href="/teap/listening/?part=1A">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">10問</span><h3>Part 1B：短い英文</h3><p>短い説明・ミニ講義の主旨と根拠を捉える。</p></div><a class="btn alt" href="/teap/listening/?part=1B">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">5問</span><h3>Part 1C：図表選択</h3><p>音声の数量・増減と一致するグラフを選ぶ。</p></div><a class="btn alt" href="/teap/listening/?part=1C">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">9問（3素材）</span><h3>Part 2A：長い会話</h3><p>質問を先読みし、相談内容と合意事項を追う。</p></div><a class="btn alt" href="/teap/listening/?part=2A">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">16問（4素材）</span><h3>Part 2B：長い講義</h3><p>図表付き講義を含む学術トークの論理を追う。</p></div><a class="btn alt" href="/teap/listening/?part=2B">演習 →</a></article>
+        <article class="teap-part-card"><div><span class="teap-part-meta">50問 · 1回再生</span><h3>本番フル模試</h3><p>全5パートを通して1回再生の本番形式で挑戦。</p></div><a class="btn alt" href="/teap/listening/?mode=exam">模試 →</a></article>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>参考資料・公式情報リンク</h2>
-      <ul>
-        <li><a href="https://www.eiken.or.jp/teap/construct/" target="_blank" rel="noopener noreferrer">日本英語検定協会：TEAP テストの構成・見本問題</a></li>
-        <li><a href="https://www.eiken.or.jp/teap/construct/model_ans.html" target="_blank" rel="noopener noreferrer">日本英語検定協会：TEAP 見本問題・解答例</a></li>
-        <li><a href="https://www.eiken.or.jp/teap/schedule/" target="_blank" rel="noopener noreferrer">日本英語検定協会：TEAP 受験案内・日程</a></li>
-        <li><a href="https://www.eiken.or.jp/teap/faq.html" target="_blank" rel="noopener noreferrer">日本英語検定協会：TEAP よくある質問（FAQ）</a></li>
-      </ul>
-    </section>
-
-    <nav class="seo-cluster" aria-label="TEAP対策コンテンツ一覧">
-      <p class="seo-cluster__title">LexSophia TEAP対策ライブラリ（通常版TEAP）</p>
-      <div class="seo-cluster__groups">
-        <div class="seo-cluster__group">
-          <h3>TEAP 基本ガイド・診断</h3>
-          <ul class="seo-cluster__links">
-            <li><a href="/teap/">TEAP 対策トップ</a></li>
-            <li><a href="/teap/reading/">TEAP Reading フル模試（60問・70分）</a></li>
-            <li><a href="/teap/listening/">TEAP Listening フル模試（50問・約50分）</a></li>
-            <li><a href="/teap/quick-test/">TEAP Reading クイック診断（12問）</a></li>
-            <li><a href="/teap/format/">TEAP 試験形式・問題数・時間配分</a></li>
-            <li><a href="/teap/past-papers/">TEAP 過去問・公式見本問題の案内</a></li>
+    <nav class="lx-hub-links" aria-label="TEAP対策コンテンツ一覧">
+      <p class="lx-hub-links__title">TEAP ガイド・関連リンク</p>
+      <div class="lx-hub-links__grid">
+        <div class="lx-hub-links__col">
+          <h3>診断・模試</h3>
+          <ul>
+            <li><a href="/teap/quick-test/">Reading 12問クイック診断</a></li>
+            <li><a href="/teap/listening/?mode=quick">Listening 12問クイック診断</a></li>
+            <li><a href="/teap/reading/">Reading 60問フル模試</a></li>
+            <li><a href="/teap/listening/">Listening 50問演習</a></li>
+          </ul>
+        </div>
+        <div class="lx-hub-links__col">
+          <h3>試験ガイド</h3>
+          <ul>
+            <li><a href="/teap/format/">試験形式・時間配分</a></li>
             <li><a href="/teap/vs-cbt/">通常版TEAPとTEAP CBTの違い</a></li>
+            <li><a href="/teap/past-papers/">公式見本問題・過去問の案内</a></li>
           </ul>
         </div>
-        <div class="seo-cluster__group">
-          <h3>Reading パート別対策（全60問）</h3>
-          <ul class="seo-cluster__links">
-            <li><a href="/teap/reading/part-1/">Part 1：学術語彙・語法（20問）</a></li>
-            <li><a href="/teap/reading/part-2a/">Part 2A：図表・グラフ読解（5問）</a></li>
-            <li><a href="/teap/reading/part-2b/">Part 2B：大学掲示・メール読解（5問）</a></li>
-            <li><a href="/teap/reading/part-2c/">Part 2C：短文学術読解（10問）</a></li>
-            <li><a href="/teap/reading/part-3a/">Part 3A：長文の論理・穴埋め（8問）</a></li>
-            <li><a href="/teap/reading/part-3b/">Part 3B：長文・図表の詳細理解（12問）</a></li>
-          </ul>
-        </div>
-        <div class="seo-cluster__group">
-          <h3>LexSophia 関連サービス</h3>
-          <ul class="seo-cluster__links">
-            <li><a href="/">TOEIC 無料スコア診断・練習トップ</a></li>
-            <li><a href="/#analytics">TOEIC 自己分析・学習カルテ</a></li>
-            <li><a href="/books/">TOEIC おすすめ参考書ガイド</a></li>
+        <div class="lx-hub-links__col">
+          <h3>LexSophia</h3>
+          <ul>
+            <li><a href="/">TOEIC 無料スコア診断</a></li>
+            <li><a href="/#analytics">TOEIC 自己分析</a></li>
+            <li><a href="/books/">参考書ガイド</a></li>
           </ul>
         </div>
       </div>
@@ -227,10 +229,15 @@
   </div>
 </main>
 
-<footer>
-  <p>制作・運営：LexSophia編集部 ｜ 更新日：2026年11月28日</p>
-  <p>TEAPは公益財団法人日本英語検定協会および上智大学が共同開発した英語試験です。本ページおよび収録問題はLexSophiaが独自に作成した非公式の学習コンテンツであり、公式団体の承認・公認を受けたものではありません。</p>
-  <a href="/teap/">TEAP対策トップへ</a> ｜ <a href="/">LexSophia ホームへ</a>
+<footer class="lx-hub-footer">
+  <p class="lx-hub-footer__brand">LexSophia<span>Lexicon × Sophia</span></p>
+  <p class="lx-hub-footer__note">TEAPは公益財団法人日本英語検定協会および上智大学が共同開発した英語試験です。本ページおよび収録問題はLexSophiaが独自に作成した非公式の学習コンテンツであり、公式団体の承認・公認を受けたものではありません。</p>
+  <div class="lx-hub-footer__nav">
+    <a href="/">TOEICトップ</a>
+    <a href="/teap/">TEAPトップ</a>
+    <a href="/privacy/">プライバシーポリシー・利用規約</a>
+  </div>
+  <p class="lx-hub-footer__copy">© 2026 LexSophia</p>
 </footer>
 
 <script src="/assets/lexsophia-shell.js" defer></script>

@@ -367,7 +367,7 @@
       rootEl.innerHTML =
         '<div class="lx-test-head">' +
           '<div class="lx-test-meta">' +
-            '<button type="button" class="lx-test-back" id="btn-teap-quit">← メニュー</button>' +
+            '<button type="button" class="lx-test-back" id="btn-teap-quit">← ホーム</button>' +
             '<span class="lx-test-count">' + (state.idx + 1) + ' / ' + state.questions.length + '問</span>' +
             '<span class="lx-test-timer' + ((state.mode === 'exam' || state.mode === 'quick') && state.remainSec <= 300 ? ' is-warn' : '') + '" id="teap-timer-val">' + esc(timerText) + '</span>' +
           '</div>' +
@@ -451,8 +451,7 @@
       if (submitBtn) submitBtn.addEventListener('click', openSubmitConfirm);
       rootEl.querySelector('#btn-teap-quit').addEventListener('click', () => {
         stopTimer();
-        state.view = 'launcher';
-        render();
+        window.location.href = '/teap/';
       });
       rootEl.querySelector('#btn-teap-modal-cancel').addEventListener('click', () => {
         rootEl.querySelector('#teap-confirm-modal').hidden = true;
@@ -513,48 +512,77 @@
       const reviewHtml = state.questions.map((q, i) => {
         const chosen = state.answers[q.id];
         const ok = chosen === q.correctIndex;
-        return '<details style="padding:10px 14px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;">' +
-          '<summary style="cursor:pointer;font-size:13.5px;font-weight:700;color:' + (ok ? '#047857' : '#b45309') + ';">' +
-            'Q' + (i + 1) + ' [Part ' + esc(q.part) + '] ' + (ok ? '正解' : (chosen === undefined ? '未回答' : '不正解')) + ' — ' + esc(q.question.slice(0, 72)) + (q.question.length > 72 ? '...' : '') +
+        return '<details class="lx-review-card">' +
+          '<summary>' +
+            '<span class="teap-pill ' + (ok ? 'is-mint' : 'is-amber') + '">' + (ok ? '正解' : (chosen === undefined ? '未回答' : '復習')) + '</span>' +
+            '<span><strong>Q' + (i + 1) + '</strong> [Part ' + esc(q.part) + '] ' + esc(q.question.slice(0, 64)) + (q.question.length > 64 ? '…' : '') + '</span>' +
           '</summary>' +
-          '<div style="margin-top:8px;font-size:13px;line-height:1.65;color:#334155;">' +
-            '<p style="margin:0 0 4px;"><b>正解：</b>(' + (q.correctIndex + 1) + ') ' + esc(q.options[q.correctIndex]) +
+          '<div class="lx-review-body">' +
+            '<p><b>正解：</b>(' + (q.correctIndex + 1) + ') ' + esc(q.options[q.correctIndex]) +
               (chosen !== undefined && !ok ? ' ／ <b>あなたの解答：</b>(' + (chosen + 1) + ') ' + esc(q.options[chosen]) : '') + '</p>' +
-            '<p style="margin:0 0 4px;"><b>解説：</b>' + esc(q.explanationJa) + '</p>' +
-            '<p style="margin:0 0 4px;"><b>和訳：</b>' + esc(q.translationJa) + '</p>' +
-            (q.evidence ? '<p style="margin:0;"><b>根拠：</b>' + esc(q.evidence) + '</p>' : '') +
+            '<p><b>解説：</b>' + esc(q.explanationJa) + '</p>' +
+            '<p><b>和訳：</b>' + esc(q.translationJa) + '</p>' +
+            (q.evidence ? '<p><b>根拠：</b>' + esc(q.evidence) + '</p>' : '') +
           '</div>' +
         '</details>';
       }).join('');
 
+      const circum = 603.2;
+      const offset = (circum * (1 - acc / 100)).toFixed(1);
+
       rootEl.innerHTML =
         '<div>' +
-          '<div class="teap-pill-row" style="margin:0 0 10px;">' +
-            '<span class="teap-pill is-blue">採点完了</span>' +
-            '<span class="teap-pill">' + esc(state.title) + '</span>' +
+          '<div class="lx-test-head">' +
+            '<div class="lx-test-meta">' +
+              '<button type="button" class="lx-test-back" id="btn-teap-res-home">← ホーム</button>' +
+              '<span class="lx-test-count">採点結果</span>' +
+              '<span class="lx-test-timer">' + fmtTime(state.elapsedSec) + '</span>' +
+            '</div>' +
           '</div>' +
-          '<div class="teap-res-kpis">' +
-            '<div class="teap-res-kpi"><p class="k">正答数</p><p class="v">' + correct + ' / ' + state.questions.length + '</p></div>' +
-            '<div class="teap-res-kpi"><p class="k">正答率</p><p class="v">' + acc + '%</p></div>' +
-            '<div class="teap-res-kpi"><p class="k">回答済 / 未回答</p><p class="v">' + answered + ' / ' + (state.questions.length - answered) + '</p></div>' +
-            '<div class="teap-res-kpi"><p class="k">所要時間</p><p class="v">' + fmtTime(state.elapsedSec) + '</p></div>' +
+          '<div class="lx-res-head">' +
+            '<div class="lx-res-head__copy">' +
+              '<h1>Reading 診断結果</h1>' +
+              '<p>正答率とパート別バランスの分析結果です。</p>' +
+            '</div>' +
+            '<img class="lx-res-head__owl" src="/img/owl-pink.png" alt="" width="236" height="320" decoding="async">' +
           '</div>' +
-          (weakest ? '<div class="teap-notice-box" style="background:#eef6ff;border-color:#bfdbfe;"><strong>最優先の強化パート：' + esc(weakest.name) + '（' + esc(weakest.label) + ' · 正答率 ' + weakest.acc + '%）</strong><br><a href="' + esc(weakest.slug) + '">' + esc(weakest.name) + ' の攻略ガイドと演習を見る →</a></div>' : '') +
-          '<div class="teap-res-parts">' + partsHtml + '</div>' +
-          '<div class="teap-notice-box"><strong>スコア表示について：</strong>TEAP公式スコア（各技能100点満点）は統計的処理により算出され正答率と単純比例しないため、本ツールでは独自問題の正答数・正答率・パート別成績をそのまま表示しています。' + (state.mode === 'quick' ? ' また、クイック診断（12問）はLexSophia独自の短縮版であり、60問フル模試と同等の精度を示すものではありません。' : '') + '</div>' +
-          '<div class="teap-card-actions" style="margin:16px 0;">' +
-            (wrongQs.length ? '<button type="button" class="btn" id="btn-teap-retry-wrong">間違えた ' + wrongQs.length + '問 だけ再挑戦する →</button>' : '') +
-            '<button type="button" class="btn alt" id="btn-teap-again">モード選択に戻る</button>' +
+          '<div class="lx-score-card">' +
+            '<p class="lx-score-card__label">TEAP Reading 正答率</p>' +
+            '<div class="lx-gauge" role="img" aria-label="正答率 ' + acc + '%">' +
+              '<svg viewBox="0 0 240 240" aria-hidden="true">' +
+                '<circle class="lx-gauge__track" cx="120" cy="120" r="96"></circle>' +
+                '<circle class="lx-gauge__fill" cx="120" cy="120" r="96" stroke-dasharray="' + circum + '" stroke-dashoffset="' + offset + '"></circle>' +
+              '</svg>' +
+              '<div class="lx-gauge__center">' +
+                '<p class="lx-gauge__val">' + acc + '<small>%</small></p>' +
+                '<p class="lx-gauge__sub">' + correct + ' / ' + state.questions.length + ' 問正解</p>' +
+              '</div>' +
+            '</div>' +
+            '<div class="lx-stat-grid">' +
+              '<div class="lx-stat-tile"><p class="k">正答数</p><p class="v">' + correct + ' / ' + state.questions.length + '</p></div>' +
+              '<div class="lx-stat-tile"><p class="k">回答済</p><p class="v">' + answered + '問</p></div>' +
+              '<div class="lx-stat-tile"><p class="k">最優先パート</p><p class="v">' + (weakest ? esc(weakest.name) : '—') + '</p></div>' +
+              '<div class="lx-stat-tile"><p class="k">所要時間</p><p class="v">' + fmtTime(state.elapsedSec) + '</p></div>' +
+            '</div>' +
           '</div>' +
-          '<h3 style="font-size:16px;margin:18px 0 10px;">全問の解答・和訳・解説一覧</h3>' +
-          '<div style="display:grid;gap:8px;">' + reviewHtml + '</div>' +
+          (weakest ? '<div class="lx-weak-banner"><span>最優先の強化パート：<strong>' + esc(weakest.name) + '（' + esc(weakest.label) + ' · ' + weakest.acc + '%）</strong></span><a href="' + esc(weakest.slug) + '">パート別演習へ →</a></div>' : '') +
+          '<div class="lx-res-card">' +
+            '<h2>パート別正答率</h2>' +
+            '<div class="teap-res-parts" style="margin:0">' + partsHtml + '</div>' +
+          '</div>' +
+          '<div class="lx-res-actions' + (wrongQs.length ? ' is-two' : '') + '">' +
+            (wrongQs.length ? '<button type="button" class="lx-foot-next" id="btn-teap-retry-wrong">間違えた ' + wrongQs.length + '問 を復習する</button>' : '') +
+            '<button type="button" class="lx-foot-prev" id="btn-teap-again">TEAPホームへ戻る</button>' +
+          '</div>' +
+          '<h2 style="font-size:17px;margin:28px 0 12px;">全問の解答・和訳・解説</h2>' +
+          '<div style="display:grid;gap:10px;">' + reviewHtml + '</div>' +
         '</div>';
 
       const retryBtn = rootEl.querySelector('#btn-teap-retry-wrong');
-      if (retryBtn) retryBtn.addEventListener('click', () => startSession('study', null, wrongQs));
+      if (retryBtn) retryBtn.addEventListener('click', () => { window.scrollTo(0, 0); startSession('study', null, wrongQs); });
+      rootEl.querySelector('#btn-teap-res-home').addEventListener('click', () => { window.location.href = '/teap/'; });
       rootEl.querySelector('#btn-teap-again').addEventListener('click', () => {
-        state.view = 'launcher';
-        render();
+        window.location.href = '/teap/';
       });
     }
 
