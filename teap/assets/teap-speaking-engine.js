@@ -9,18 +9,47 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  function speakPrompts(prompts, onEnd) {
-    if (!('speechSynthesis' in window)) { if (onEnd) onEnd(); return; }
+  var currentPromptAudio = null;
+  var speakSession = 0;
+
+  function stopPromptAudio() {
+    speakSession++;
+    if (currentPromptAudio) {
+      try { currentPromptAudio.pause(); } catch (_) {}
+      currentPromptAudio = null;
+    }
+  }
+
+  function speakWithTTS(text, done) {
+    if (!('speechSynthesis' in window)) { done(); return; }
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = 0.96;
+    u.onend = function () { done(); };
+    u.onerror = function () { done(); };
+    window.speechSynthesis.speak(u);
+  }
+
+  function speakPrompts(prompts, audios, onEnd) {
+    if (typeof audios === 'function') { onEnd = audios; audios = null; }
     try { window.speechSynthesis.cancel(); } catch (_) {}
+    const session = ++speakSession;
     let idx = 0;
     function next() {
+      if (session !== speakSession) return;
       if (idx >= prompts.length) { if (onEnd) onEnd(); return; }
-      const u = new SpeechSynthesisUtterance(prompts[idx]);
-      u.lang = 'en-US';
-      u.rate = 0.96;
-      u.onend = function () { idx++; setTimeout(next, 450); };
-      u.onerror = function () { if (onEnd) onEnd(); };
-      window.speechSynthesis.speak(u);
+      const advance = function () { idx++; setTimeout(next, 450); };
+      const src = audios && audios[idx];
+      if (src) {
+        const a = new Audio(src);
+        currentPromptAudio = a;
+        a.onended = function () { if (currentPromptAudio === a) currentPromptAudio = null; advance(); };
+        a.onerror = function () { if (currentPromptAudio === a) currentPromptAudio = null; if (session === speakSession) speakWithTTS(prompts[idx], advance); };
+        const pr = a.play();
+        if (pr && pr.catch) pr.catch(function () { if (currentPromptAudio === a) { currentPromptAudio = null; if (session === speakSession) speakWithTTS(prompts[idx], advance); } });
+      } else {
+        speakWithTTS(prompts[idx], advance);
+      }
     }
     next();
   }
@@ -53,6 +82,7 @@
 
     function stopSpeech() {
       state.speaking = false;
+      stopPromptAudio();
       if ('speechSynthesis' in window) { try { window.speechSynthesis.cancel(); } catch (_) {} }
     }
 
@@ -134,7 +164,7 @@
         '<div class="teap-launcher">',
         '  <div>',
         '    <h2 style="margin:0 0 6px;font-size:20px">模擬面接セットを選択（Part 1〜4）</h2>',
-        '    <p style="margin:0;font-size:13.5px;color:#475569">面接官の音声読み上げ・準備/発話タイマー・ブラウザ録音聴き返しで、Part 1〜4を通して実践練習できます。</p>',
+        '    <p style="margin:0;font-size:13.5px;color:#475569">面接官の録音音声・準備/発話タイマー・ブラウザ録音聴き返しで、Part 1〜4を通して実践練習できます。</p>',
         '  </div>',
         '  <div class="teap-skill-grid" style="margin:0">',
         bank.map(function (s) {
@@ -238,18 +268,13 @@
       ].join('\n');
 
       root.querySelector('#btn-ts-home').addEventListener('click', function () {
-        const goHome = function () { stopTimer(); stopSpeech(); stopRecording(); window.location.href = '/teap/'; };
-        if (state.partIdx > 0 && window.LexSophiaShell && window.LexSophiaShell.confirmExit) {
-          window.LexSophiaShell.confirmExit(goHome);
-        } else {
-          goHome();
-        }
+        stopTimer(); stopSpeech(); stopRecording(); window.location.href = '/teap/';
       });
       root.querySelector('#btn-ts-play').addEventListener('click', function () {
         if (state.speaking) { stopSpeech(); render(); }
         else {
           state.speaking = true; render();
-          speakPrompts(p.prompts, function () { state.speaking = false; render(); });
+          speakPrompts(p.prompts, p.promptAudio, function () { state.speaking = false; render(); });
         }
       });
       const prepBtn = root.querySelector('#btn-ts-prep');

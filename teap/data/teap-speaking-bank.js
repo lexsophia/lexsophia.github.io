@@ -217,3 +217,25 @@ window.TEAP_SPEAKING_BANK = [
     ]
   }
 ];
+
+// Recorded interviewer audio paths (added 2026-11-28; recorded MP3 first, TTS fallback in engine)
+(function () {
+  var paths = {
+    'S-SET-1': [
+      ['/teap/audio/spk-s1-p1-1.mp3', '/teap/audio/spk-s1-p1-2.mp3', '/teap/audio/spk-s1-p1-3.mp3'],
+      ['/teap/audio/spk-s1-p2-1.mp3'],
+      ['/teap/audio/spk-s1-p3-1.mp3'],
+      ['/teap/audio/spk-s1-p4-1.mp3', '/teap/audio/spk-s1-p4-2.mp3', '/teap/audio/spk-s1-p4-3.mp3']
+    ],
+    'S-SET-2': [
+      ['/teap/audio/spk-s2-p1-1.mp3', '/teap/audio/spk-s2-p1-2.mp3', '/teap/audio/spk-s2-p1-3.mp3'],
+      ['/teap/audio/spk-s2-p2-1.mp3'],
+      ['/teap/audio/spk-s2-p3-1.mp3'],
+      ['/teap/audio/spk-s2-p4-1.mp3', '/teap/audio/spk-s2-p4-2.mp3', '/teap/audio/spk-s2-p4-3.mp3']
+    ]
+  };
+  (window.TEAP_SPEAKING_BANK || []).forEach(function (s) {
+    var byPart = paths[s.setId] || [];
+    s.parts.forEach(function (p, i) { if (byPart[i]) p.promptAudio = byPart[i]; });
+  });
+})();
