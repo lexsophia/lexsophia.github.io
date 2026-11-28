@@ -16,580 +16,1341 @@ window.TEAP_LISTENING_CONFIG = {
 };
 
 window.TEAP_LISTENING_P1 = [
-  /* ================= Part 1A: Short Conversations (Q1 - Q10) ================= */
   {
-    id: 'L-1A-01', num: 1, part: '1A',
-    situation: 'A student is talking to a professor about a seminar presentation.',
-    turns: [
-      { speaker: 'W', text: 'Professor Grant, I was scheduled to give my presentation this Thursday, but I just found out I have a lab exam at the same time.' },
-      { speaker: 'M', text: 'I see. We could move you to next Tuesday, though that slot is usually reserved for group projects.' },
-      { speaker: 'W', text: 'Would Friday afternoon during office hours work instead? Or is it better to present in front of the class?' },
-      { speaker: 'M', text: 'Presenting to the whole class is required for credit. Let me swap you with Kenji—he actually asked to go earlier this week anyway.' }
-    ],
-    question: 'What will the professor most likely do next?',
-    options: [
-      'Arrange for the student to switch presentation dates with a classmate.',
-      'Allow the student to present privately during Friday office hours.',
-      'Assign the student to join a group project next Tuesday.',
-      'Ask the lab instructor to reschedule the Thursday exam.'
-    ],
-    answer: 0,
-    jaScript: '女：グラント先生、今週木曜日に発表の予定だったのですが、同じ時間に実験の試験が入ってしまいました。\n男：なるほど。来週火曜に移すこともできますが、その枠は普段グループ発表用なんです。\n女：代わりに金曜午後のオフィスアワーではだめですか？それともクラスの前で発表すべきですか？\n男：単位にはクラス全体への発表が必須です。ケンジと順番を入れ替えましょう。彼もちょうど今週早めに発表したいと言っていましたから。',
-    evidence: 'Let me swap you with Kenji—he actually asked to go earlier this week anyway.',
-    explanation: '教授は最後に「ケンジと発表枠を入れ替える（swap）」と決めています。swap → switch presentation dates with a classmate の言い換えが正解です。',
-    trapType: '時系列型・却下案型（火曜案・金曜オフィスアワー案はいずれも採用されていない）'
-  },
-  {
-    id: 'L-1A-02', num: 2, part: '1A',
-    situation: 'Two students are discussing a library study room reservation.',
-    turns: [
-      { speaker: 'M', text: 'Did you book Room 4B for our economics review session tonight?' },
-      { speaker: 'W', text: 'I tried, but all the fourth-floor rooms were taken. The librarian offered us a media booth on the second floor instead.' },
-      { speaker: 'M', text: 'Does it have a whiteboard? We need to draw supply-and-demand graphs.' },
-      { speaker: 'W', text: 'No whiteboard, just a large monitor we can connect a laptop to. That should actually be cleaner if we use your tablet to sketch the graphs.' }
-    ],
-    question: 'How do the students plan to show their graphs during the session?',
-    options: [
-      'By borrowing a portable whiteboard from the librarian.',
-      'By displaying sketches from a tablet on a room monitor.',
-      'By waiting until Room 4B becomes available later tonight.',
-      'By printing handouts on the fourth floor before meeting.'
-    ],
-    answer: 1,
-    jaScript: '男：今夜の経済学の復習会用に4B室を予約してくれた？\n女：試したけど4階は全部埋まってた。代わりに司書さんが2階のメディアブースを案内してくれたよ。\n男：ホワイトボードはある？需要と供給のグラフを描きたいんだけど。\n女：ホワイトボードはないけど、PCを繋げる大きいモニターがあるの。あなたのタブレットでグラフを描けばその方が見やすいよ。',
-    evidence: 'just a large monitor we can connect a laptop to. That should actually be cleaner if we use your tablet to sketch the graphs.',
-    explanation: 'ホワイトボードの代わりにタブレットで描いて大画面モニターに映す計画です。',
-    trapType: '語句一致型（whiteboard や Room 4B は音声に出るが、利用できない）'
-  },
-  {
-    id: 'L-1A-03', num: 3, part: '1A',
-    situation: 'A student is speaking with an academic advisor about course registration.',
-    turns: [
-      { speaker: 'W', text: 'I want to enroll in Intermediate Statistics, but the online portal keeps blocking my registration.' },
-      { speaker: 'M', text: 'Have you completed Calculus 1? The system automatically checks for that prerequisite.' },
-      { speaker: 'W', text: 'I took an equivalent course at a summer program abroad, and the math department already approved the transfer credit.' },
-      { speaker: 'M', text: 'Ah, transfer approvals do not always sync immediately. Bring the signed approval slip to the registrar desk, and they can override the block today.' }
-    ],
-    question: 'What does the advisor tell the student to do?',
-    options: [
-      'Enroll in Calculus 1 before taking Intermediate Statistics.',
-      'Contact the summer program abroad for an official transcript.',
-      'Submit her signed credit approval at the registrar office.',
-      'Wait for the online portal to update automatically next week.'
-    ],
-    answer: 2,
-    jaScript: '女：中級統計学を履修したいのですが、オンラインポータルで登録がブロックされます。\n男：微分積分1は履修済みですか？システムが自動で前提科目をチェックするんです。\n女：海外のサマープログラムで相当科目を取って、数学科から単位認定の承認をもらっています。\n男：ああ、認定承認はすぐ同期されないことがあります。署名済みの承認書を教務窓口に持っていけば、今日中にブロックを解除してもらえますよ。',
-    evidence: 'Bring the signed approval slip to the registrar desk, and they can override the block today.',
-    explanation: '「署名済みの承認書を教務窓口（registrar desk）へ提出する」が具体的な次の行動です。',
-    trapType: '条件混同型（前提科目はすでに認定済みなので再度履修する必要はない）'
-  },
-  {
-    id: 'L-1A-04', num: 4, part: '1A',
-    situation: 'Two classmates are talking about a volunteer survey project.',
-    turns: [
-      { speaker: 'M', text: 'We only have thirty responses to our campus dining survey so far, and Professor Ito wanted at least eighty.' },
-      { speaker: 'W', text: 'Posting the link on the student forum did not get much attention. What if we hand out paper questionnaires outside the cafeteria?' },
-      { speaker: 'M', text: 'Typing up paper answers later would take forever. Let us print QR codes on small flyers and stand near the cafeteria exit at lunchtime.' },
-      { speaker: 'W', text: 'Good idea—people can scan it while waiting for the bus, and the data goes straight into our spreadsheet.' }
-    ],
-    question: 'Why does the man reject using paper questionnaires?',
-    options: [
-      'Printing paper forms is too expensive for the club budget.',
-      'Students are not allowed to distribute paper near the cafeteria.',
-      'Entering the collected responses manually would take too much time.',
-      'Professor Ito requires all survey data to come from the student forum.'
-    ],
-    answer: 2,
-    jaScript: '男：学食アンケートの回答がまだ30件しか集まっていないんだ。伊藤先生は最低80件ほしいって言ってたのに。\n女：学生フォーラムにリンクを貼ってもあまり反応なかったね。学食の前で紙のアンケートを配るのはどう？\n男：紙の回答をあとで打ち込むのはすごく時間がかかるよ。小さいチラシにQRコードを印刷して、昼休みに学食の出口付近に立とう。\n女：いいね、バスを待ちながらスキャンしてもらえるし、データもそのままスプレッドシートに入るね。',
-    evidence: 'Typing up paper answers later would take forever.',
-    explanation: 'take forever（途方もなく時間がかかる）が take too much time に言い換えられています。',
-    trapType: '根拠不足型（予算や配布禁止のルールは言及されていない）'
-  },
-  {
-    id: 'L-1A-05', num: 5, part: '1A',
-    situation: 'A student is asking a campus bookstore clerk about a textbook.',
-    turns: [
-      { speaker: 'W', text: 'Excuse me, do you have any used copies of Principles of Urban Geography left?' },
-      { speaker: 'M', text: 'We sold the last used copy this morning. We still have new ones, or you can rent a digital version for the semester.' },
-      { speaker: 'W', text: 'The professor allows open-book exams, but only printed books are permitted in the exam hall.' },
-      { speaker: 'M', text: 'In that case, you will need a physical copy. If you are not in a rush, another shipment of used copies arrives on Wednesday.' }
-    ],
-    question: 'Why does the student avoid the digital textbook?',
-    options: [
-      'It costs more than buying a new printed edition.',
-      'Electronic devices cannot be used during the course exams.',
-      'The digital edition is missing several updated maps.',
-      'Her laptop is currently being repaired at the campus center.'
-    ],
-    answer: 1,
-    jaScript: '女：すみません、『都市地理学の原理』の中古本はまだ残っていますか？\n男：最後の中古本は今朝売れてしまいました。新品はまだありますし、今学期だけデジタル版をレンタルすることもできます。\n女：先生の試験は持ち込み可なのですが、試験会場で認められているのは紙の本だけなんです。\n男：それなら紙の本が必要ですね。お急ぎでなければ、水曜日に中古本が再入荷しますよ。',
-    evidence: 'The professor allows open-book exams, but only printed books are permitted in the exam hall.',
-    explanation: '試験会場では紙の本のみ許可（only printed books are permitted）＝電子機器・デジタル版は試験で使えない、という意味の言い換えです。',
-    trapType: '根拠不足型（価格差や地図の欠落は述べられていない）'
-  },
-  {
-    id: 'L-1A-06', num: 6, part: '1A',
-    situation: 'Two students are organizing a film screening for an international club.',
-    turns: [
-      { speaker: 'M', text: 'The auditorium projector is fixed, so we are all set for Friday night, right?' },
-      { speaker: 'W', text: 'Almost. We got permission to screen the documentary, provided we do not charge admission at the door.' },
-      { speaker: 'M', text: 'Oh, I was hoping to sell five-dollar tickets to cover the cost of snacks.' },
-      { speaker: 'W', text: 'We can still put out a voluntary donation jar for refreshments—the distributor said that is completely fine.' }
-    ],
-    question: 'What condition did the film distributor set for the screening?',
-    options: [
-      'The club must not require attendees to pay an entrance fee.',
-      'No food or drinks may be served inside the auditorium.',
-      'Tickets must be priced at five dollars or less.',
-      'The screening must be moved to a smaller classroom.'
-    ],
-    answer: 0,
-    jaScript: '男：講堂のプロジェクターが直ったから、金曜夜の準備は万端だよね？\n女：ほぼね。入口で入場料を取らないことを条件に、ドキュメンタリーの上映許可が下りたよ。\n男：ええ、軽食代をまかなうために5ドルのチケットを売ろうと思ってたのに。\n女：軽食用の任意の募金箱を置くのはOKだって配給元が言ってたから、それにしよう。',
-    evidence: 'provided we do not charge admission at the door.',
-    explanation: 'provided（〜を条件として）で示された条件は「入場料を取らないこと（do not charge admission）」です。',
-    trapType: '対象混同型（5ドルは男性の当初案であり、配給元の条件ではない）'
-  },
-  {
-    id: 'L-1A-07', num: 7, part: '1A',
-    situation: 'A student is talking to a lab supervisor about an experiment.',
-    turns: [
-      { speaker: 'W', text: 'Dr. Sato, my water samples from the east pond showed much higher acidity than last month. Should I repeat the test immediately?' },
-      { speaker: 'M', text: 'Before collecting new samples, check whether the pH meter was calibrated this morning. A freshman group used it yesterday and might have reset it.' },
-      { speaker: 'W', text: 'Good point. I assumed it was already calibrated when I turned it on.' },
-      { speaker: 'M', text: 'Test it with the neutral buffer solution first. If the reading is still off, then we will resample the pond.' }
-    ],
-    question: 'What does Dr. Sato advise the student to check first?',
-    options: [
-      'Whether the pond water was collected at the right depth.',
-      'Whether the measuring instrument is properly calibrated.',
-      'Whether last month’s records were entered incorrectly.',
-      'Whether the freshman group took the wrong sample bottles.'
-    ],
-    answer: 1,
-    jaScript: '女：佐藤先生、東の池の水サンプルが先月よりかなり高い酸性度を示しました。すぐ実験をやり直すべきでしょうか？\n男：新しいサンプルを採る前に、今朝pH計が較正されていたか確認してください。昨日1年生のグループが使ってリセットしたかもしれません。\n女：なるほど。電源を入れたとき較正済みだと思い込んでいました。\n男：まず中性の緩衝液で試してみて、それでも数値がおかしければ池で再採取しましょう。',
-    evidence: 'Before collecting new samples, check whether the pH meter was calibrated this morning.',
-    explanation: 'pH meter → measuring instrument の言い換え。再採取の前に計測器の較正確認を指示しています。',
-    trapType: '時系列型（再採取は「確認後にもおかしければ」行う次のステップ）'
-  },
-  {
-    id: 'L-1A-08', num: 8, part: '1A',
-    situation: 'Two students are talking about applying for a campus research grant.',
-    turns: [
-      { speaker: 'M', text: 'Are you still submitting your proposal for the undergraduate research grant by Monday?' },
-      { speaker: 'W', text: 'I finished the budget sheet, and my faculty sponsor already wrote the recommendation letter. I am just trimming two pages from the literature review.' },
-      { speaker: 'M', text: 'I thought there was no strict page limit this year.' },
-      { speaker: 'W', text: 'The total proposal can be up to ten pages, including references, and mine is currently twelve.' }
-    ],
-    question: 'What is the woman currently working on?',
-    options: [
-      'Asking a professor to write a recommendation letter.',
-      'Calculating the expenses for her budget sheet.',
-      'Shortening a section of her written proposal.',
-      'Searching for additional references to reach ten pages.'
-    ],
-    answer: 2,
-    jaScript: '男：月曜締切の学部生研究助成金の申請書、まだ出す予定？\n女：予算表は終わって、指導教員の推薦状ももう書いてもらったの。今は先行研究レビューを2ページ削っているところ。\n男：今年は厳しいページ制限はないと思ってたよ。\n女：参考文献込みで最大10ページまでなんだけど、今12ページあって。',
-    evidence: 'I am just trimming two pages from the literature review.',
-    explanation: 'trimming two pages（2ページ削る）＝ shortening a section of her written proposal。予算表と推薦状は完了済みです。',
-    trapType: '時系列型（完了済みの作業と現在進行中の作業を混同させる）'
-  },
-  {
-    id: 'L-1A-09', num: 9, part: '1A',
-    situation: 'A student is calling the university housing office.',
-    turns: [
-      { speaker: 'M', text: 'Housing Office, how can I help you?' },
-      { speaker: 'W', text: 'Hi, I am living in Maple Hall and I need to stay on campus for five extra days after finals to finish an internship.' },
-      { speaker: 'M', text: 'Maple Hall closes for maintenance on the sixteenth, so you cannot stay in your current room. However, we keep Oak Hall open for late departures.' },
-      { speaker: 'W', text: 'That works. Do I need to pay a separate fee to move over there?' },
-      { speaker: 'M', text: 'Since it is for an approved university internship, the daily fee is waived—just submit the extension form by Friday.' }
-    ],
-    question: 'What is true about the student’s extended stay?',
-    options: [
-      'She will move temporarily to a different dormitory without extra charge.',
-      'She can remain in Maple Hall if she submits a form by Friday.',
-      'She must pay a daily maintenance fee to stay in Oak Hall.',
-      'Her internship supervisor must call the housing office directly.'
-    ],
-    answer: 0,
-    jaScript: '男：学生寮オフィスです。ご用件は？\n女：メープル寮に住んでいるのですが、期末試験後にインターンのため5日間追加で滞在したいです。\n男：メープル寮は16日に点検で閉まるため今の部屋には残れませんが、オーク寮を延長滞在用に開けています。\n女：それで大丈夫です。そちらに移るのに別料金はかかりますか？\n男：大学公認のインターンなので日額料金は免除されます。金曜までに延長届を出してください。',
-    evidence: 'we keep Oak Hall open for late departures... the daily fee is waived',
-    explanation: 'waived（免除される）→ without extra charge、Oak Hall へ移動 → move temporarily to a different dormitory の言い換えです。',
-    trapType: '条件混同型（メープル寮には残れない／料金は免除される）'
-  },
-  {
-    id: 'L-1A-10', num: 10, part: '1A',
-    situation: 'Two students are discussing a guest lecture they attended.',
-    turns: [
-      { speaker: 'W', text: 'What did you think of the architect’s talk on sustainable housing?' },
-      { speaker: 'M', text: 'Her case studies from northern Europe were fascinating, though I wish she had spent less time on basic climate definitions.' },
-      { speaker: 'W', text: 'True, most of us already covered that in Intro to Environmental Studies. Still, the Q&A at the end made up for it.' },
-      { speaker: 'M', text: 'Definitely—hearing how she negotiated building codes with city officials was the most practical part.' }
-    ],
-    question: 'What do both speakers agree about the lecture?',
-    options: [
-      'The European case studies were too technical for beginners.',
-      'The speaker spent too much time explaining introductory concepts.',
-      'The Q&A session was cut short due to a scheduling error.',
-      'The architect should have included more slides on building codes.'
-    ],
-    answer: 1,
-    jaScript: '女：持続可能な住宅についての建築家の講演、どうだった？\n男：北欧の事例研究は面白かったけど、基本的な気候の定義にもう少し時間を減らしてくれたらよかったな。\n女：確かに、環境学入門でほとんどやった内容だったね。でも最後の質疑応答で十分挽回してたよ。\n男：間違いないね。市役所と建築基準をどう交渉したか聞けたのが一番実践的だった。',
-    evidence: 'I wish she had spent less time on basic climate definitions. / True, most of us already covered that',
-    explanation: '2人が一致して挙げている不満点は「基礎的な概念の説明に時間をかけすぎたこと」です。',
-    trapType: '対象混同型・意味反転型（北欧事例や質疑応答は高評価だった）'
-  },
-
-  /* ================= Part 1B: Short Monologues (Q11 - Q20) ================= */
-  {
-    id: 'L-1B-11', num: 11, part: '1B',
-    situation: 'Listen to a short talk in a biology class.',
-    turns: [
-      { speaker: 'M', text: 'Many people assume that deep-sea hydrothermal vents are newly formed ecosystems because scientists only discovered them in 1977. In reality, geological evidence indicates that these mineral-rich chimneys have existed for billions of years, long before sunlight-based forests appeared on land. What changed in the late twentieth century was not the ocean floor itself, but our ability to send submersibles deep enough to observe it.' }
-    ],
-    question: 'What is the main point of the speaker’s remark?',
-    options: [
-      'Hydrothermal vents were created by underwater volcanic activity in 1977.',
-      'Deep-sea vent ecosystems are far older than their recent discovery suggests.',
-      'Land forests developed earlier than most marine ecosystems.',
-      'Modern submersibles can no longer withstand deep-sea mineral pressure.'
-    ],
-    answer: 1,
-    jaScript: '深海の熱水噴出孔は1977年に発見されたばかりなので、最近できた生態系だと思われがちです。しかし実際には、地質学的証拠から、これらは何十億年も前から存在し、陸上に森林が現れるよりずっと古いことが示されています。20世紀後半に変わったのは海底そのものではなく、深海まで潜水艇を送って観察できる人類の能力なのです。',
-    evidence: 'these mineral-rich chimneys have existed for billions of years... What changed... was our ability to send submersibles',
-    explanation: '「最近発見されたこと」と「最近誕生したこと」の混同を正す話です（PDFの誤答類型に対応）。',
-    trapType: '時系列・混同型（発見時期と誕生時期を取り違えさせる）'
-  },
-  {
-    id: 'L-1B-12', num: 12, part: '1B',
-    situation: 'Listen to an announcement from a university library director.',
-    turns: [
-      { speaker: 'W', text: 'Starting next Monday, the main library will introduce a quiet-zone trial on the third floor. Students may still bring covered water bottles, and laptops are welcome as long as notification sounds are muted. However, group discussions and voice calls will be limited to the first and second floors. After four weeks, we will review student feedback before deciding whether to make the policy permanent.' }
-    ],
-    question: 'What is allowed on the third floor during the trial?',
-    options: [
-      'Holding quiet group meetings in small corners.',
-      'Using silent laptops while drinking from a sealed bottle.',
-      'Making brief phone calls near the stairwell.',
-      'Eating hot meals at individual study desks.'
-    ],
-    answer: 1,
-    jaScript: '来週月曜から中央図書館3階でクワイエットゾーンの試行を始めます。蓋付きの水筒の持ち込みは引き続き可能で、通知音を消していればノートPCも利用できます。ただしグループ議論や音声通話は1・2階に限定されます。4週間後に学生の意見を確認し、恒久化するか判断します。',
-    evidence: 'bring covered water bottles, and laptops are welcome as long as notification sounds are muted.',
-    explanation: 'covered water bottles → sealed bottle、notification sounds are muted → silent laptops の言い換えです。',
-    trapType: '条件混同型（グループ議論・通話は1・2階限定）'
-  },
-  {
-    id: 'L-1B-13', num: 13, part: '1B',
-    situation: 'Listen to a short lecture in a psychology seminar.',
-    turns: [
-      { speaker: 'M', text: 'When students study for an exam, rereading highlighted notes often feels productive because the material looks familiar. Cognitive psychologists call this the illusion of competence. By contrast, closing the book and trying to recall key ideas from memory feels harder in the moment, yet experiments consistently show it leads to stronger retention a week later.' }
-    ],
-    question: 'Why do students often overestimate the effectiveness of rereading notes?',
-    options: [
-      'Highlighting forces them to write longer summaries.',
-      'Recognizing familiar text creates a false sense of mastery.',
-      'Rereading takes less time than attending review lectures.',
-      'Experiments show rereading works best for long-term retention.'
-    ],
-    answer: 1,
-    jaScript: '試験勉強でマーカーを引いたノートを読み返すと、内容に見覚えがあるため捗っている気分になります。認知心理学ではこれを「能力の錯覚」と呼びます。対照的に本を閉じて記憶から思い出す練習はその場では大変ですが、1週間後の定着率が高いことが実験で一貫して示されています。',
-    evidence: 'feels productive because the material looks familiar. Cognitive psychologists call this the illusion of competence.',
-    explanation: 'looks familiar → Recognizing familiar text、illusion of competence → false sense of mastery の言い換えです。',
-    trapType: '因果逆転・意味反転型（定着率が高いのは想起練習の方）'
-  },
-  {
-    id: 'L-1B-14', num: 14, part: '1B',
-    situation: 'Listen to a short talk in an environmental science course.',
-    turns: [
-      { speaker: 'W', text: 'Urban tree-planting campaigns are widely praised for cooling city streets, yet planting a single species across an entire district carries a serious risk. If a disease or insect pest targets that particular tree, the city can lose most of its shade canopy within a few seasons. For that reason, urban planners now recommend mixing multiple native species even if maintenance becomes slightly more complex.' }
-    ],
-    question: 'Why do urban planners prefer planting several different tree species?',
-    options: [
-      'Mixed species require less watering and simpler maintenance.',
-      'A single species cannot lower street temperatures effectively.',
-      'Diversity protects the city from losing most trees to one pest or disease.',
-      'Native trees grow faster than imported trees in narrow streets.'
-    ],
-    answer: 2,
-    jaScript: '都市の植樹運動は街路を冷やす効果が高く評価されていますが、地区全体に単一樹種だけを植えることには深刻なリスクがあります。その樹種を狙う病気や害虫が発生すると、数シーズンで日陰の大半を失いかねないからです。そのため都市計画家は、管理が多少複雑になっても複数の在来種を混ぜることを推奨しています。',
-    evidence: 'If a disease or insect pest targets that particular tree, the city can lose most of its shade canopy',
-    explanation: '単一樹種だと病害虫で一斉に失うリスクがあるため、多様性を確保する（Diversity protects...）のが理由です。',
-    trapType: '意味反転型（管理は「多少複雑になる」と述べているのに「簡単になる」としている）'
-  },
-  {
-    id: 'L-1B-15', num: 15, part: '1B',
-    situation: 'Listen to a short explanation in an economics class.',
-    turns: [
-      { speaker: 'M', text: 'In many cities, adding an extra lane to a congested highway reduces travel times for only a few months. Soon after traffic starts moving faster, drivers who previously took trains or avoided rush hour decide to drive instead. Economists refer to this pattern as induced demand: expanding road capacity often generates enough new traffic to restore the original congestion.' }
-    ],
-    question: 'What does the term "induced demand" explain in this talk?',
-    options: [
-      'Why train fares rise whenever highways are repaired.',
-      'Why widening roads rarely eliminates traffic jams for long.',
-      'Why commuters prefer public transit during rush hour.',
-      'Why highway construction slows down local economic growth.'
-    ],
-    answer: 1,
-    jaScript: '多くの都市で渋滞する高速道路に車線を増設しても、所要時間が短縮されるのは数か月だけです。流れが良くなると、それまで電車を使っていた人やラッシュを避けていた人が車で移動し始めるからです。経済学者はこれを「誘発需要」と呼びます。道路容量を増やすと新たな交通量が生まれ、元の渋滞に戻ってしまうことが多いのです。',
-    evidence: 'expanding road capacity often generates enough new traffic to restore the original congestion.',
-    explanation: '道路拡張が新たな需要を呼び込み、結果的に渋滞解消が長続きしない現象の説明です。',
-    trapType: '根拠不足型（運賃上昇や経済成長の鈍化は述べられていない）'
-  },
-  {
-    id: 'L-1B-16', num: 16, part: '1B',
-    situation: 'Listen to a short talk in an art history class.',
-    turns: [
-      { speaker: 'W', text: 'Visitors to museums often admire ancient Greek marble statues for their pure white surfaces. However, microscopic pigment analysis has revealed that most of these sculptures were originally painted in vivid reds, blues, and gold. Centuries of burial, weather, and early restoration scrubbing wore the colors away, leading later generations to mistake bare marble for the artists’ original aesthetic.' }
-    ],
-    question: 'What have microscopic studies shown about ancient Greek marble statues?',
-    options: [
-      'Artists intentionally left them unpainted to highlight the stone.',
-      'They were originally decorated with bright colors that faded over time.',
-      'Modern museums added pigments to protect the marble from weather.',
-      'Only bronze statues were painted during the classical period.'
-    ],
-    answer: 1,
-    jaScript: '美術館の来館者は古代ギリシャの大理石彫刻の純白の表面を称賛することが多いですが、顕微鏡による顔料分析で、本来は鮮やかな赤・青・金で彩色されていたことが判明しました。何世紀もの埋没や風化、初期の修復洗浄で色が落ち、後世の人が素の大理石を本来の美意識と誤解したのです。',
-    evidence: 'most of these sculptures were originally painted in vivid reds, blues, and gold.',
-    explanation: 'vivid reds, blues, and gold → bright colors、wore the colors away → faded over time の言い換えです。',
-    trapType: '意味反転型（意図的に無彩色だったというのは「後世の誤解」の方）'
-  },
-  {
-    id: 'L-1B-17', num: 17, part: '1B',
-    situation: 'Listen to a brief update from a campus career center counselor.',
-    turns: [
-      { speaker: 'M', text: 'A quick reminder for juniors planning to attend Friday’s career fair: employers will not be accepting printed resumes at their booths this year. Instead, every booth has a digital check-in tablet linked to your student profile. Make sure your updated PDF resume is uploaded to the career portal by Thursday at five p.m., because the system locks profiles overnight before the event.' }
-    ],
-    question: 'What must students do before Thursday at 5 p.m.?',
-    options: [
-      'Print at least ten copies of their resume at the career center.',
-      'Reserve individual interview slots at each employer booth.',
-      'Upload their latest resume file to the online career portal.',
-      'Pick up a check-in tablet from the career counselor’s office.'
-    ],
-    answer: 2,
-    jaScript: '金曜のキャリアフェアに参加する3年生へお知らせです。今年、企業ブースでは紙の履歴書を受け付けません。代わりに各ブースに学生プロフィールと連動したデジタル受付タブレットが置かれます。イベント前夜にシステムがロックされるため、木曜午後5時までに最新のPDF履歴書をキャリアポータルにアップロードしてください。',
-    evidence: 'Make sure your updated PDF resume is uploaded to the career portal by Thursday at five p.m.',
-    explanation: '木曜17時までに最新履歴書PDFをポータルへアップロードすることが必須手続きです。',
-    trapType: '語句一致型（printed resumes は「受け付けない」対象）'
-  },
-  {
-    id: 'L-1B-18', num: 18, part: '1B',
-    situation: 'Listen to a short talk in a linguistics class.',
-    turns: [
-      { speaker: 'W', text: 'People sometimes worry that texting abbreviations and emojis are ruining young people’s formal writing skills. Yet several university studies have found little evidence of a decline. In fact, students who frequently switch between casual messaging and academic essays often show strong awareness of audience—they know which tone fits a friend and which fits a professor.' }
-    ],
-    question: 'What do the university studies mentioned by the speaker suggest?',
-    options: [
-      'Texting abbreviations frequently appear in college entrance essays.',
-      'Frequent texters can still distinguish casual language from formal writing.',
-      'Professors are beginning to accept emojis in informal assignments.',
-      'Students who avoid social media score highest on grammar tests.'
-    ],
-    answer: 1,
-    jaScript: 'メッセージの略語や絵文字が若者のフォーマルな文章力を損ねているという懸念がありますが、複数の大学研究では低下の証拠はほとんど見つかっていません。むしろカジュアルな連絡と学術エッセイを使い分ける学生は、相手に応じた文体の意識が高いことが多いのです。',
-    evidence: 'show strong awareness of audience—they know which tone fits a friend and which fits a professor.',
-    explanation: '「相手に応じた文体（カジュアル vs フォーマル）を使い分けられる」が研究の示唆です。',
-    trapType: '過度の一般化・根拠不足型（教授が絵文字を容認しているとは言っていない）'
-  },
-  {
-    id: 'L-1B-19', num: 19, part: '1B',
-    situation: 'Listen to a short explanation in a marine science course.',
-    turns: [
-      { speaker: 'M', text: 'Coral bleaching does not mean a coral reef is immediately dead. Corals rely on tiny algae living inside their tissues for both color and most of their energy. When ocean temperatures stay unusually warm, the corals expel those algae and turn white. If water temperatures return to normal quickly enough, the algae can come back and the reef can recover; only prolonged heat causes permanent mortality.' }
-    ],
-    question: 'Under what condition can a bleached coral reef recover?',
-    options: [
-      'If the ocean cools back to normal temperatures before too long.',
-      'If the coral replaces its algae with mineral nutrients from sand.',
-      'If warm currents carry new coral species into the area.',
-      'If fishermen stop anchoring boats near the bleached reef.'
-    ],
-    answer: 0,
-    jaScript: 'サンゴの白化は、サンゴ礁が即座に死滅したことを意味しません。サンゴは体内の微細な藻類から色とエネルギーの大半を得ています。海水温が異常に高い状態が続くと藻類を放出して白くなります。水温が十分早く通常に戻れば藻類が戻って回復できますが、高温が長引くと永久的な死滅を招きます。',
-    evidence: 'If water temperatures return to normal quickly enough, the algae can come back and the reef can recover',
-    explanation: '水温が十分早く通常に戻れば回復可能、という条件を正確に問う問題です。',
-    trapType: '根拠不足型（砂の栄養や漁船の錨は言及なし）'
-  },
-  {
-    id: 'L-1B-20', num: 20, part: '1B',
-    situation: 'Listen to a short talk in a nutrition seminar.',
-    turns: [
-      { speaker: 'W', text: 'Labeling a snack "low-fat" does not automatically make it a healthier choice. When food manufacturers remove fat from packaged cookies or yogurt, the product often tastes bland, so they frequently add extra sugar or refined starch to restore flavor and texture. As a result, a low-fat item can contain nearly the same number of calories as the regular version.' }
-    ],
-    question: 'Why might a low-fat snack have almost as many calories as a regular one?',
-    options: [
-      'Low-fat snacks are usually sold in much larger portion sizes.',
-      'Producers often add sugar or starch to compensate for lost flavor.',
-      'Natural ingredients contain more calories than artificial flavors.',
-      'Removing fat slows down how quickly the body digests food.'
-    ],
-    answer: 1,
-    jaScript: '「低脂肪」と表示されたスナックが自動的に健康的とは限りません。メーカーがクッキーやヨーグルトから脂肪を除くと味が薄くなるため、風味や食感を補うために砂糖や精製デンプンを追加することが多いのです。その結果、低脂肪製品でも通常版とほぼ同じカロリーになることがあります。',
-    evidence: 'they frequently add extra sugar or refined starch to restore flavor and texture.',
-    explanation: '風味・食感を補うために砂糖やデンプンを加えることが高カロリーの原因です。',
-    trapType: '根拠不足型（ポーションサイズや消化速度は言及なし）'
-  },
-
-  /* ================= Part 1C: Visual / Chart Selection (Q21 - Q25) ================= */
-  {
-    id: 'L-1C-21', num: 21, part: '1C',
-    situation: 'Listen to a report on how university students commute to campus. Choose the chart that matches the description.',
-    turns: [
-      { speaker: 'M', text: 'A campus transit survey asked students about their primary way of commuting. Train was the most common choice at forty percent. Bicycle came second, at half as much as train. Walking was slightly higher than bus, at twenty-five percent, leaving bus with the remaining share of fifteen percent.' }
-    ],
-    question: 'Which chart best represents the survey results?',
-    chartOptions: [
+    "id": "L-1A-01",
+    "num": 1,
+    "part": "1A",
+    "situation": "Two students are talking about a summer internship application.",
+    "turns": [
       {
-        type: 'bar', title: 'Chart A', unit: '%', max: 50,
-        items: [{ label: 'Train', value: 40 }, { label: 'Bike', value: 20 }, { label: 'Walk', value: 25 }, { label: 'Bus', value: 15 }]
+        "speaker": "M",
+        "text": "Hey, did you finish your application for the summer internship at the publishing company?",
+        "audio": "/teap/audio/l-1a-01-t1.mp3"
       },
       {
-        type: 'bar', title: 'Chart B', unit: '%', max: 50,
-        items: [{ label: 'Train', value: 40 }, { label: 'Bike', value: 25 }, { label: 'Walk', value: 20 }, { label: 'Bus', value: 15 }]
+        "speaker": "W",
+        "text": "Almost. I wrote my statement of purpose, but I still need to get a recommendation letter from Professor Lane.",
+        "audio": "/teap/audio/l-1a-01-t2.mp3"
       },
       {
-        type: 'bar', title: 'Chart C', unit: '%', max: 50,
-        items: [{ label: 'Train', value: 40 }, { label: 'Bike', value: 20 }, { label: 'Walk', value: 15 }, { label: 'Bus', value: 25 }]
+        "speaker": "M",
+        "text": "You had better hurry. I heard the deadline was moved up to this Friday.",
+        "audio": "/teap/audio/l-1a-01-t3.mp3"
       },
       {
-        type: 'bar', title: 'Chart D', unit: '%', max: 50,
-        items: [{ label: 'Train', value: 45 }, { label: 'Bike', value: 20 }, { label: 'Walk', value: 20 }, { label: 'Bus', value: 15 }]
+        "speaker": "W",
+        "text": "This Friday? The company website said the end of the month. Are you sure?",
+        "audio": "/teap/audio/l-1a-01-t4.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "The company sent an email yesterday. They changed it because they received a lot more applications than they expected this year.",
+        "audio": "/teap/audio/l-1a-01-t5.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Then I will email Professor Lane right after lunch and ask her to write it today.",
+        "audio": "/teap/audio/l-1a-01-t6.mp3"
       }
     ],
-    options: ['Chart A', 'Chart B', 'Chart C', 'Chart D'],
-    answer: 0,
-    jaScript: '大学の通学調査で主な通学手段を尋ねました。電車が最多で40%。自転車は2番目に紹介され、電車の半分（20%）でした。徒歩はバスよりやや高く25%で、残りの15%がバスでした。',
-    evidence: 'Train 40%, Bicycle half as much (20%), Walking 25%, Bus remaining share (15%).',
-    explanation: 'half as much（半分）でBike=20%、Walk=25%、Bus=15%となるChart Aが正解です。',
-    trapType: '数量型・対象混同型（BikeとWalk、WalkとBusの数値を入れ替えた誤答）'
+    "question": "When must the woman submit her internship application?",
+    "options": [
+      "At the end of this month",
+      "By the end of this week",
+      "On the first Monday of next month",
+      "Two weeks from today"
+    ],
+    "answer": 1,
+    "audioQuestion": "/teap/audio/l-1a-01-q.mp3",
+    "jaScript": "男：ねえ、出版社での夏のインターンシップの応募は終わった？\n女：ほぼね。志望理由書は書いたけど、まだレーン教授の推薦状が必要なの。\n男：急いだほうがいいよ。締め切りが今週の金曜日に早まったって聞いたよ。\n女：今週の金曜日？会社のウェブサイトには月末って書いてあったけど。本当？\n男：会社が昨日メールを送ってきたんだ。予想より応募が多かったから変更したらしいよ。\n女：じゃあ、昼食のあとすぐにレーン教授にメールして、今日お願いするわ。",
+    "evidence": "the deadline was moved up to this Friday",
+    "explanation": "会社からのメールで締め切りが月末から今週の金曜日に前倒しされたので、正解は「今週末まで」です。ウェブサイトに書かれた「月末」は古い情報で、それを選ぶのが罠です。",
+    "trapType": "古い情報の提示"
   },
   {
-    id: 'L-1C-22', num: 22, part: '1C',
-    situation: 'Listen to a librarian describe annual e-book downloads from 2021 to 2024. Choose the matching graph.',
-    turns: [
-      { speaker: 'W', text: 'Library e-book downloads started at twelve thousand in 2021 and climbed steadily to eighteen thousand in 2022. In 2023, downloads dipped slightly to sixteen thousand when more students returned to reading printed reserves. However, in 2024 they rebounded sharply, reaching a four-year peak of twenty-four thousand.' }
-    ],
-    question: 'Which line graph matches the trend in e-book downloads?',
-    chartOptions: [
+    "id": "L-1A-02",
+    "num": 2,
+    "part": "1A",
+    "situation": "A student is talking with a staff member at the campus gym.",
+    "turns": [
       {
-        type: 'line', title: 'Graph A (×1,000)', max: 30,
-        labels: ['21', '22', '23', '24'], values: [12, 18, 20, 24]
+        "speaker": "W",
+        "text": "Excuse me, is this where I sign up for the gym orientation?",
+        "audio": "/teap/audio/l-1a-02-t1.mp3"
       },
       {
-        type: 'line', title: 'Graph B (×1,000)', max: 30,
-        labels: ['21', '22', '23', '24'], values: [12, 18, 16, 24]
+        "speaker": "M",
+        "text": "Yes. New members have to complete one session before they can use the weight room.",
+        "audio": "/teap/audio/l-1a-02-t2.mp3"
       },
       {
-        type: 'line', title: 'Graph C (×1,000)', max: 30,
-        labels: ['21', '22', '23', '24'], values: [12, 16, 18, 24]
+        "speaker": "W",
+        "text": "I see. I just joined this week. Are there any sessions still available this coming weekend?",
+        "audio": "/teap/audio/l-1a-02-t3.mp3"
       },
       {
-        type: 'line', title: 'Graph D (×1,000)', max: 30,
-        labels: ['21', '22', '23', '24'], values: [12, 18, 16, 19]
+        "speaker": "M",
+        "text": "Saturday is fully booked, but there is a spot open on Sunday at ten.",
+        "audio": "/teap/audio/l-1a-02-t4.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Sunday works for me. Do I need to bring anything special?",
+        "audio": "/teap/audio/l-1a-02-t5.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Just your student ID and indoor shoes. We provide towels and a locker key, and the pool is included in your membership too.",
+        "audio": "/teap/audio/l-1a-02-t6.mp3"
       }
     ],
-    options: ['Graph A', 'Graph B', 'Graph C', 'Graph D'],
-    answer: 1,
-    jaScript: '図書館の電子書籍ダウンロード数は2021年に12,000件から始まり、2022年に18,000件へ着実に増加しました。2023年は紙の指定図書利用が増えたため16,000件へわずかに減少しましたが、2024年に急回復して4年間で最高の24,000件に達しました。',
-    evidence: '12,000 (2021) → 18,000 (2022) → dipped slightly to 16,000 (2023) → peak of 24,000 (2024).',
-    explanation: '2023年に一度16へ微減してから2024年に24へ急上昇する Graph B が一致します。',
-    trapType: '推移反転型（2023年だけ増加させたGraph A、2022と2023を逆転させたGraph C）'
+    "question": "What will the woman probably do on Sunday morning?",
+    "options": [
+      "Use the weight room for the first time",
+      "Go swimming in the gym pool",
+      "Attend an introductory session for new members",
+      "Book a session for the following Saturday"
+    ],
+    "answer": 2,
+    "audioQuestion": "/teap/audio/l-1a-02-q.mp3",
+    "jaScript": "女：すみません、ジムのオリエンテーションの申し込みはここですか？\n男：はい。新規会員はウェイトルームを使う前に1回セッションを受ける必要があります。\n女：そうなんですね。今週入会したばかりです。今週末に空いているセッションはありますか？\n男：土曜日は満員ですが、日曜日の10時に空きがあります。\n女：日曜日で大丈夫です。何か持っていくものはありますか？\n男：学生証と室内シューズだけで大丈夫です。タオルはこちらで用意しますし、プールも会員料金に含まれています。",
+    "evidence": "there is a spot open on Sunday at ten",
+    "explanation": "日曜10時のオリエンテーションに空きがあり、女性は「日曜日で大丈夫」と答えたので、新規会員向けセッションに参加すると分かります。ウェイトルームはセッション受講後でないと使えず、土曜日は満員なので他の選択肢は誤りです。",
+    "trapType": "条件を満たしていない選択肢の提示"
   },
   {
-    id: 'L-1C-23', num: 23, part: '1C',
-    situation: 'Listen to a club treasurer explain how the annual budget is divided across four categories.',
-    turns: [
-      { speaker: 'M', text: 'Our debate club spent half of its annual budget on travel to tournaments. Equipment took up twenty percent, while guest workshops accounted for slightly less than equipment, at fifteen percent. The remaining share—also fifteen percent—went to printing and publicity.' }
-    ],
-    question: 'Which chart accurately shows the club budget breakdown?',
-    chartOptions: [
+    "id": "L-1A-03",
+    "num": 3,
+    "part": "1A",
+    "situation": "A student is asking a friend for advice about something he has lost.",
+    "turns": [
       {
-        type: 'bar', title: 'Chart A', unit: '%', max: 60,
-        items: [{ label: 'Travel', value: 50 }, { label: 'Equip', value: 20 }, { label: 'Work', value: 15 }, { label: 'Print', value: 15 }]
+        "speaker": "M",
+        "text": "I cannot find my student ID anywhere. I think I left it in the cafeteria.",
+        "audio": "/teap/audio/l-1a-03-t1.mp3"
       },
       {
-        type: 'bar', title: 'Chart B', unit: '%', max: 60,
-        items: [{ label: 'Travel', value: 50 }, { label: 'Equip', value: 15 }, { label: 'Work', value: 20 }, { label: 'Print', value: 15 }]
+        "speaker": "W",
+        "text": "Did you check with the lost and found office? They collect lost items every evening.",
+        "audio": "/teap/audio/l-1a-03-t2.mp3"
       },
       {
-        type: 'bar', title: 'Chart C', unit: '%', max: 60,
-        items: [{ label: 'Travel', value: 45 }, { label: 'Equip', value: 20 }, { label: 'Work', value: 20 }, { label: 'Print', value: 15 }]
+        "speaker": "M",
+        "text": "I did, this morning. It was not there. Without the card, I cannot even get into the library.",
+        "audio": "/teap/audio/l-1a-03-t3.mp3"
       },
       {
-        type: 'bar', title: 'Chart D', unit: '%', max: 60,
-        items: [{ label: 'Travel', value: 50 }, { label: 'Equip', value: 25 }, { label: 'Work', value: 15 }, { label: 'Print', value: 10 }]
+        "speaker": "W",
+        "text": "Then you should report it at the student services desk. They can block the card and issue a temporary one.",
+        "audio": "/teap/audio/l-1a-03-t4.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "A temporary card would really help. I have an exam on Thursday, and I need the card to enter the room.",
+        "audio": "/teap/audio/l-1a-03-t5.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "The desk is on the first floor of the administration building. It closes at five, so you should go soon.",
+        "audio": "/teap/audio/l-1a-03-t6.mp3"
       }
     ],
-    options: ['Chart A', 'Chart B', 'Chart C', 'Chart D'],
-    answer: 0,
-    jaScript: 'ディベート部は年間予算の半分（50%）を大会遠征費に充てました。備品は20%、ゲストワークショップは備品よりやや少ない15%でした。残りの15%が印刷・広報費です。',
-    evidence: 'half (50%) travel, 20% equipment, slightly less (15%) workshops, remaining share (15%) printing.',
-    explanation: '50 / 20 / 15 / 15 の比率を示す Chart A が正解です。',
-    trapType: '対象混同型・数量型（EquipとWorkの入れ替え、合計調整による数値改変）'
+    "question": "What is the man's problem?",
+    "options": [
+      "He has lost the card he needs to enter campus facilities",
+      "He missed the deadline to register for an exam",
+      "He cannot find the administration building",
+      "He was charged for a card he never received"
+    ],
+    "answer": 0,
+    "audioQuestion": "/teap/audio/l-1a-03-q.mp3",
+    "jaScript": "男：学生証がどこにも見つからないんだ。食堂に置き忘れたと思う。\n女：遺失物取扱所には確認した？毎晩、落とし物が集められるのよ。\n男：今朝確認したけど、なかったんだ。カードがないと図書館にすら入れない。\n女：じゃあ学生サービスデスクに届け出たほうがいいわ。カードを停止して、仮のカードを発行してもらえるよ。\n男：仮のカードがあれば助かるよ。木曜日に試験があって、入室にカードが必要なんだ。\n女：デスクは管理棟の1階にあるよ。5時に閉まるから、早めに行ったほうがいいわ。",
+    "evidence": "I cannot find my student ID anywhere",
+    "explanation": "男性の問題は学生証を紛失したことです。試験は木曜日にあるものの、申し込み締め切りを逃したわけではなく、カードがないと試験室に入れないことが困りごとの本質です。",
+    "trapType": "付随情報の混同"
   },
   {
-    id: 'L-1C-24', num: 24, part: '1C',
-    situation: 'Listen to a short weather summary showing average monthly rainfall in millimeters.',
-    turns: [
-      { speaker: 'W', text: 'In this coastal town, rainfall drops from eighty millimeters in May to sixty millimeters in June. July is the driest of the four months at just thirty millimeters. Then, late-summer storms push August rainfall back up to ninety millimeters, making it the wettest month in the period.' }
-    ],
-    question: 'Which graph corresponds to the rainfall summary?',
-    chartOptions: [
+    "id": "L-1A-04",
+    "num": 4,
+    "part": "1A",
+    "situation": "Two students are dividing up the work for a group project.",
+    "turns": [
       {
-        type: 'line', title: 'Graph A (mm)', max: 100,
-        labels: ['May', 'Jun', 'Jul', 'Aug'], values: [80, 60, 40, 70]
+        "speaker": "W",
+        "text": "Okay, let us decide who does what for our group marketing project presentation.",
+        "audio": "/teap/audio/l-1a-04-t1.mp3"
       },
       {
-        type: 'line', title: 'Graph B (mm)', max: 100,
-        labels: ['May', 'Jun', 'Jul', 'Aug'], values: [80, 30, 60, 90]
+        "speaker": "M",
+        "text": "I can collect the survey data. I am pretty good with spreadsheets and charts.",
+        "audio": "/teap/audio/l-1a-04-t2.mp3"
       },
       {
-        type: 'line', title: 'Graph C (mm)', max: 100,
-        labels: ['May', 'Jun', 'Jul', 'Aug'], values: [80, 60, 30, 90]
+        "speaker": "W",
+        "text": "Great. Then I will design the slides, and Ken can write the introduction.",
+        "audio": "/teap/audio/l-1a-04-t3.mp3"
       },
       {
-        type: 'line', title: 'Graph D (mm)', max: 100,
-        labels: ['May', 'Jun', 'Jul', 'Aug'], values: [90, 60, 30, 80]
+        "speaker": "M",
+        "text": "Actually, Ken said he would rather do the data analysis. He took a statistics course just last term and got a good grade.",
+        "audio": "/teap/audio/l-1a-04-t4.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Fine. Then I will write the introduction myself, and keep the slides as my job too.",
+        "audio": "/teap/audio/l-1a-04-t5.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "That works. I will handle the survey data and write the conclusion at the end.",
+        "audio": "/teap/audio/l-1a-04-t6.mp3"
       }
     ],
-    options: ['Graph A', 'Graph B', 'Graph C', 'Graph D'],
-    answer: 2,
-    jaScript: 'この沿岸の町では降水量が5月の80mmから6月の60mmへ減少します。7月は4か月で最も少なくわずか30mmです。その後、晩夏の嵐で8月は90mmまで跳ね上がり、期間中で最も降水量が多い月になります。',
-    evidence: 'May 80 → June 60 → July 30 (driest) → August 90 (wettest).',
-    explanation: '7月が最低(30)、8月が最高(90)となる Graph C が正解です。',
-    trapType: '時系列・対象混同型（5月と8月を入れ替えたGraph D、6月と7月を入れ替えたGraph B）'
+    "question": "Who will design the presentation slides?",
+    "options": [
+      "Ken",
+      "The man",
+      "Both the man and the woman",
+      "The woman"
+    ],
+    "answer": 3,
+    "audioQuestion": "/teap/audio/l-1a-04-q.mp3",
+    "jaScript": "女：さて、マーケティングのグループプロジェクトの発表で、誰が何を担当するか決めましょう。\n男：僕はアンケートデータの収集ができるよ。表計算は得意なんだ。\n女：いいわね。じゃあ私はスライドをデザインして、ケンは序論を書く、でどう？\n男：実はケンはデータ分析のほうがいいって言ってたよ。前学期に統計の授業を取ったから。\n女：わかった。じゃあ序論は私が書いて、スライドも引き続き私の担当にするわ。\n男：それでいこう。僕はアンケートと最後の結論を担当するよ。",
+    "evidence": "I will design the slides",
+    "explanation": "女性は最初にスライドのデザインを自分の担当とし、ケンの担当変更後も「スライドは引き続き私の担当」と確認しています。ケンは序論ではなくデータ分析に変わった点が罠です。",
+    "trapType": "担当者の取り違え"
   },
   {
-    id: 'L-1C-25', num: 25, part: '1C',
-    situation: 'Listen to a comparison of enrollment numbers in four language courses this semester.',
-    turns: [
-      { speaker: 'M', text: 'Among our four introductory language electives, Spanish has the largest enrollment with sixty students. French has two-thirds as many students as Spanish, at forty. German is slightly higher than Italian—thirty students took German, while Italian enrolled twenty-five.' }
-    ],
-    question: 'Which chart matches the course enrollment figures?',
-    chartOptions: [
+    "id": "L-1A-05",
+    "num": 5,
+    "part": "1A",
+    "situation": "Two students who work at the same cafe are talking about their shifts.",
+    "turns": [
       {
-        type: 'bar', title: 'Chart A', unit: '', max: 70,
-        items: [{ label: 'Span', value: 60 }, { label: 'Fren', value: 45 }, { label: 'Germ', value: 30 }, { label: 'Ital', value: 25 }]
+        "speaker": "M",
+        "text": "Hey, Yuki, could you take my Saturday shift at the cafe this week?",
+        "audio": "/teap/audio/l-1a-05-t1.mp3"
       },
       {
-        type: 'bar', title: 'Chart B', unit: '', max: 70,
-        items: [{ label: 'Span', value: 60 }, { label: 'Fren', value: 40 }, { label: 'Germ', value: 25 }, { label: 'Ital', value: 30 }]
+        "speaker": "W",
+        "text": "This Saturday? I have a family dinner that evening. What time is your shift?",
+        "audio": "/teap/audio/l-1a-05-t2.mp3"
       },
       {
-        type: 'bar', title: 'Chart C', unit: '', max: 70,
-        items: [{ label: 'Span', value: 50 }, { label: 'Fren', value: 40 }, { label: 'Germ', value: 30 }, { label: 'Ital', value: 25 }]
+        "speaker": "M",
+        "text": "From two to six. I have to attend my younger sister's piano recital.",
+        "audio": "/teap/audio/l-1a-05-t3.mp3"
       },
       {
-        type: 'bar', title: 'Chart D', unit: '', max: 70,
-        items: [{ label: 'Span', value: 60 }, { label: 'Fren', value: 40 }, { label: 'Germ', value: 30 }, { label: 'Ital', value: 25 }]
+        "speaker": "W",
+        "text": "Two to six is fine, because my dinner starts at seven thirty. But could you cover my Sunday morning shift in return?",
+        "audio": "/teap/audio/l-1a-05-t4.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Sunday morning? I usually go jogging then, but that is a fair trade. Deal.",
+        "audio": "/teap/audio/l-1a-05-t5.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Great. I will tell the manager about the swap when I see her tonight.",
+        "audio": "/teap/audio/l-1a-05-t6.mp3"
       }
     ],
-    options: ['Chart A', 'Chart B', 'Chart C', 'Chart D'],
-    answer: 3,
-    jaScript: '入門語学選択4科目のうち、スペイン語が最多で60名です。フランス語はその3分の2にあたる40名。ドイツ語はイタリア語よりやや多く30名で、イタリア語は25名でした。',
-    evidence: 'Spanish 60, French two-thirds (40), German 30, Italian 25.',
-    explanation: '60 / 40 / 30 / 25 の Chart D が完全一致します。',
-    trapType: '数量型・対象混同型（GermanとItalianの逆転、Frenchの数値ズレ）'
+    "question": "What will the man probably do on Sunday morning?",
+    "options": [
+      "Go jogging in the park as usual",
+      "Work the woman's shift at the cafe",
+      "Attend his sister's piano recital",
+      "Have dinner with the woman's family"
+    ],
+    "answer": 1,
+    "audioQuestion": "/teap/audio/l-1a-05-q.mp3",
+    "jaScript": "男：ねえユキ、今週、僕の土曜日のカフェのシフト代わってくれない？\n女：今週の土曜日？その夜は家族と夕食の予定があるの。シフトは何時から何時？\n男：2時から6時だよ。妹のピアノの発表会に行かなきゃいけなくて。\n女：2時から6時なら大丈夫、夕食は7時半からだから。その代わり、私の日曜朝のシフトを代わってくれる？\n男：日曜の朝？いつもはジョギングしてるけど、それは公平な交換だね。いいよ。\n女：よかった。今夜マネージャーに会ったら交換のことを伝えておくね。",
+    "evidence": "Sunday morning? I usually go jogging then, but that is a fair trade.",
+    "explanation": "交換の条件として、男性は女性の日曜朝のシフトを代わることに同意しました。ジョギングは普段の習慣として述べられただけで、その日曜の朝はカフェで働くことになります。",
+    "trapType": "普段の習慣との混同"
+  },
+  {
+    "id": "L-1A-06",
+    "num": 6,
+    "part": "1A",
+    "situation": "Two students living in a dormitory are talking about the laundry facilities.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "The laundry room on our floor is always packed on weekends, especially in the evening.",
+        "audio": "/teap/audio/l-1a-06-t1.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "I know. Yesterday I waited forty minutes just for a free machine, and two were out of order.",
+        "audio": "/teap/audio/l-1a-06-t2.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Someone told me the machines in the basement of Building C are usually empty in the morning.",
+        "audio": "/teap/audio/l-1a-06-t3.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Really? I thought that laundry room was only for graduate students.",
+        "audio": "/teap/audio/l-1a-06-t4.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "That changed this semester. It is open to everyone now, and it costs the same.",
+        "audio": "/teap/audio/l-1a-06-t5.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Then I will try it tonight. Carrying my laundry all the way down three floors still beats waiting around here.",
+        "audio": "/teap/audio/l-1a-06-t6.mp3"
+      }
+    ],
+    "question": "What do we learn about the laundry room in Building C?",
+    "options": [
+      "It charges higher fees than other laundry rooms",
+      "It is reserved for graduate students",
+      "It became available to all students this semester",
+      "It is usually crowded on weekends"
+    ],
+    "answer": 2,
+    "audioQuestion": "/teap/audio/l-1a-06-q.mp3",
+    "jaScript": "女：私たちのフロアの洗濯室、週末はいつも混んでるよね。\n男：ほんと。昨日は空きの洗濯機を40分も待ったし、2台は故障してたし。\n女：C棟の地下の洗濯機はいつも空いてるって誰かが言ってたよ。\n男：本当？あの洗濯室は大学院生専用だと思ってた。\n女：今学期から変わったの。今は全員使えて、料金も同じよ。\n男：じゃあ今夜試してみるよ。洗濯物を3階分運ぶほうが、待つよりましだ。",
+    "evidence": "That changed this semester. It is open to everyone now",
+    "explanation": "C棟の洗濯室は以前は大学院生専用でしたが、今学期から全学生に開放され、料金も他の洗濯室と同じです。「大学院生専用」は変更前の古いルールなので誤りです。",
+    "trapType": "規則変更前の情報"
+  },
+  {
+    "id": "L-1A-07",
+    "num": 7,
+    "part": "1A",
+    "situation": "A student is asking a friend for advice about contacting a professor.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "I am thinking of emailing Professor Ortiz to ask for an extension on the history essay, which is due this Thursday.",
+        "audio": "/teap/audio/l-1a-07-t1.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Why do you need more time?",
+        "audio": "/teap/audio/l-1a-07-t2.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "My grandmother is in the hospital, and I have been visiting her at the hospital every day after classes.",
+        "audio": "/teap/audio/l-1a-07-t3.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "That is a fair reason. Just be honest and explain the situation briefly and politely in the email.",
+        "audio": "/teap/audio/l-1a-07-t4.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Should I attach what I have written so far, to show I have started?",
+        "audio": "/teap/audio/l-1a-07-t5.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Yes, and suggest a new date yourself, maybe next Monday. Professors usually prefer a concrete proposal like that.",
+        "audio": "/teap/audio/l-1a-07-t6.mp3"
+      }
+    ],
+    "question": "What does the woman suggest the man do?",
+    "options": [
+      "Propose a specific new deadline in his message",
+      "Visit the professor's office instead of writing",
+      "Ask a classmate to explain his situation",
+      "Submit the essay late without asking first"
+    ],
+    "answer": 0,
+    "audioQuestion": "/teap/audio/l-1a-07-q.mp3",
+    "jaScript": "男：歴史のエッセイの締め切り延長をお願いするために、オルティス教授にメールしようと思ってるんだ。締め切りは今週の木曜日なんだけど。\n女：どうして時間が必要なの？\n男：祖母が入院していて、授業のあと毎日お見舞いに行っているんだ。\n女：それは正当な理由ね。メールでは正直に、状況を簡潔に説明すればいいよ。\n男：ここまで書いた分を添付したほうがいいかな？始めてはいるって示すために。\n女：うん、それと新しい日付を自分から提案して。来週の月曜日とかね。教授は具体的な提案を好むよ。",
+    "evidence": "suggest a new date yourself, maybe next Monday",
+    "explanation": "女性の助言は、メールの中で新しい提出日を自分から具体的に提案することです。研究室を訪ねる、友人に説明してもらう、無断で遅れて出すといった方法は会話に出てきません。",
+    "trapType": "言及されていない手段の提示"
+  },
+  {
+    "id": "L-1A-08",
+    "num": 8,
+    "part": "1A",
+    "situation": "A club member is talking with a student at a recruitment booth on campus.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "Hi! Have you ever tried rowing? Our club is looking for new members this spring.",
+        "audio": "/teap/audio/l-1a-08-t1.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Rowing? I have seen the boats on the river, but I have no experience at all.",
+        "audio": "/teap/audio/l-1a-08-t2.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "That is fine. Most of our members started as complete beginners when they joined, so no experience is needed.",
+        "audio": "/teap/audio/l-1a-08-t3.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "When do you usually practice?",
+        "audio": "/teap/audio/l-1a-08-t4.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Tuesday and Thursday mornings at six, before classes. We also have a trial session this Saturday.",
+        "audio": "/teap/audio/l-1a-08-t5.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Six in the morning is early, but the trial sounds fun. I will write my name on the sign-up list.",
+        "audio": "/teap/audio/l-1a-08-t6.mp3"
+      }
+    ],
+    "question": "When does the rowing club hold its regular practice?",
+    "options": [
+      "On Saturday mornings",
+      "On weekday evenings after classes",
+      "Early on Sunday and Wednesday mornings",
+      "Early on Tuesday and Thursday mornings"
+    ],
+    "answer": 3,
+    "audioQuestion": "/teap/audio/l-1a-08-q.mp3",
+    "jaScript": "女：こんにちは！ボート競技をやったことはありますか？私たちのクラブはこの春、新入部員を募集しています。\n男：ボート？川でボートは見たことがあるけど、経験はまったくありません。\n女：大丈夫ですよ。部員のほとんどが入部時は完全な初心者だったので、経験は必要ありません。\n男：普段はいつ練習しているんですか？\n女：火曜日と木曜日の朝6時、授業の前です。今週の土曜日には体験セッションもありますよ。\n男：朝6時は早いですね。でも体験は楽しそうです。参加者リストに名前を書いておきます。",
+    "evidence": "Tuesday and Thursday mornings at six, before classes",
+    "explanation": "通常の練習は火曜日と木曜日の朝6時です。土曜日は体験セッションの日で、通常練習ではないため「土曜の朝」は誤りです。",
+    "trapType": "体験会と通常練習の混同"
+  },
+  {
+    "id": "L-1A-09",
+    "num": 9,
+    "part": "1A",
+    "situation": "A student is talking with a staff member at the campus copy center.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "Excuse me, my print card stopped working. The machine says I have no credits left.",
+        "audio": "/teap/audio/l-1a-09-t1.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Let me check your account. You have used all five hundred pages for this semester.",
+        "audio": "/teap/audio/l-1a-09-t2.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Already? It is only October. Can I buy additional credits here?",
+        "audio": "/teap/audio/l-1a-09-t3.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Yes, in blocks of one hundred pages. But the library also offers free scanning, if that helps.",
+        "audio": "/teap/audio/l-1a-09-t4.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "I need paper copies for my thesis advisor. She does not accept digital files at all.",
+        "audio": "/teap/audio/l-1a-09-t5.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Then buy just one block for now. You can always add more later if you run out again.",
+        "audio": "/teap/audio/l-1a-09-t6.mp3"
+      }
+    ],
+    "question": "Why did the man's print card stop working?",
+    "options": [
+      "The copy machines were out of order",
+      "He had printed the maximum number of pages allowed for the term",
+      "His card had expired at the end of last month",
+      "The library had closed his account"
+    ],
+    "answer": 1,
+    "audioQuestion": "/teap/audio/l-1a-09-q.mp3",
+    "jaScript": "男：すみません、プリントカードが使えなくなりました。残りクレジットがないと表示されるんです。\n女：アカウントを確認しますね。今学期分の500ページをすべて使い切っています。\n男：もうですか？まだ10月なのに。ここでクレジットを追加購入できますか？\n女：はい、100ページ単位で買えます。ただ、図書館では無料スキャンもできますよ。\n男：論文の指導教員に紙のコピーが必要なんです。デジタルファイルは受け付けてもらえなくて。\n女：では今は1ブロックだけ買ってください。足りなくなったら後で追加できます。",
+    "evidence": "You have used all five hundred pages for this semester",
+    "explanation": "カードが止まったのは、今学期の上限である500ページを使い切ったためです。100ページは追加購入の単位であって上限ではないので、数字を取り違えると誤答します。",
+    "trapType": "数字の取り違え"
+  },
+  {
+    "id": "L-1A-10",
+    "num": 10,
+    "part": "1A",
+    "situation": "Two students are talking about an information session for an exchange program.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "Are you going to the information session about the exchange program in Spain?",
+        "audio": "/teap/audio/l-1a-10-t1.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "I was planning to, but it is at the same time as my economics lecture.",
+        "audio": "/teap/audio/l-1a-10-t2.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "The study abroad office said they will post all the slides online afterward for students who miss it.",
+        "audio": "/teap/audio/l-1a-10-t3.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "That helps, but I wanted to ask about the language requirement in person.",
+        "audio": "/teap/audio/l-1a-10-t4.mp3"
+      },
+      {
+        "speaker": "W",
+        "text": "Then book a one-on-one advising appointment instead. I did that last month, and it was really useful.",
+        "audio": "/teap/audio/l-1a-10-t5.mp3"
+      },
+      {
+        "speaker": "M",
+        "text": "Good idea. The application does not open until January, so there is really no rush to decide.",
+        "audio": "/teap/audio/l-1a-10-t6.mp3"
+      }
+    ],
+    "question": "Why will the man miss the information session?",
+    "options": [
+      "He has already attended a similar session",
+      "He prefers to read the slides online",
+      "It takes place during one of his classes",
+      "The application period has already ended"
+    ],
+    "answer": 2,
+    "audioQuestion": "/teap/audio/l-1a-10-q.mp3",
+    "jaScript": "女：スペインへの交換留学プログラムの説明会に行く？\n男：行くつもりだったけど、経済学の講義と同じ時間なんだ。\n女：留学オフィスが、後でスライドをオンラインに載せるって言ってたよ。\n男：それは助かるけど、語学要件について直接聞きたかったんだ。\n女：じゃあ代わりに個別の相談予約を取ったら？私は先月そうしたけど、すごく役に立ったよ。\n男：いい考えだね。応募開始は1月だから、決めるのを急ぐ必要はないし。",
+    "evidence": "it is at the same time as my economics lecture",
+    "explanation": "男性が説明会に行けないのは、経済学の講義と時間が重なっているためです。スライドが後で公開されるのは欠席への代替情報であって、行かない理由ではありません。",
+    "trapType": "理由と代替案の混同"
+  },
+  {
+    "id": "L-1B-11",
+    "num": 11,
+    "part": "1B",
+    "situation": "Listen to an announcement at a planetarium show.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "Good evening, and welcome to the Astronomy Club's monthly planetarium show. Tonight's program is called 'Moons of the Outer Planets,' and it focuses on the icy moons that orbit Jupiter and Saturn. During the show, you will see images of Europa, a moon that may hide an ocean beneath its frozen surface, and Enceladus, which sprays water vapor into space through cracks near its south pole. After the main presentation, club members will set up two telescopes on the roof terrace, weather permitting, so visitors can observe Saturn's rings directly. Because seating inside the dome is limited to sixty people, we ask latecomers to wait in the lobby until the second showing begins at eight thirty.",
+        "audio": "/teap/audio/l-1b-11-t1.mp3"
+      }
+    ],
+    "question": "What are visitors who arrive late asked to do?",
+    "options": [
+      "Take photographs from the roof terrace",
+      "Observe Saturn's rings through a telescope",
+      "Wait in the lobby for the second showing",
+      "Return for the show next month"
+    ],
+    "answer": 2,
+    "audioQuestion": "/teap/audio/l-1b-11-q.mp3",
+    "jaScript": "男：こんばんは。天文学クラブの月例プラネタリウムショーへようこそ。今夜のプログラムは「外惑星の衛星」と題し、木星と土星の周りを回る氷の衛星に焦点を当てます。ショーでは、凍った表面の下に海が隠れているかもしれない衛星エウロパと、南極付近の割れ目から水蒸気を宇宙へ噴き出すエンケラドスの映像をご覧いただきます。メインの上映の後、天候が許せば、クラブのメンバーが屋上テラスに望遠鏡を2台設置し、土星の環を直接観察していただけます。ドーム内の座席は60席限りですので、遅れて来られた方には、午後8時30分に始まる2回目の上映までロビーでお待ちいただくようお願いしています。",
+    "evidence": "we ask latecomers to wait in the lobby until the second showing begins at eight thirty",
+    "explanation": "ドーム内の座席は60席に限られるため、遅れた人は午後8時30分からの2回目の上映までロビーで待つよう求められています。望遠鏡で土星の環を見るのは上映後の活動であり、遅刻者への指示ではありません。",
+    "trapType": "細部のすり替え"
+  },
+  {
+    "id": "L-1B-12",
+    "num": 12,
+    "part": "1B",
+    "situation": "Listen to a teacher giving instructions for a field trip.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "Before we leave for the coast on Saturday, let me go over a few important points about our geology field trip. We will meet at the east gate at seven in the morning, and the bus will leave exactly fifteen minutes later, so please do not be late. At the site, we will examine layers of sandstone and shale along the cliff path and collect small rock samples for next week's laboratory session. Everyone must wear sturdy shoes, because the path can be slippery after rain, and the department will provide helmets and gloves. Please note that swimming is not allowed at this beach, even during the lunch break, as the currents there are strong and dangerous.",
+        "audio": "/teap/audio/l-1b-12-t1.mp3"
+      }
+    ],
+    "question": "Why must students wear sturdy shoes?",
+    "options": [
+      "The path may become slippery after rain",
+      "They will climb a steep cliff face",
+      "Helmets and gloves will not be provided",
+      "They will collect samples in the sea"
+    ],
+    "answer": 0,
+    "audioQuestion": "/teap/audio/l-1b-12-q.mp3",
+    "jaScript": "女：土曜日に海岸へ出発する前に、地質学の野外実習についていくつか大切な点を確認します。午前7時に東門に集合してください。バスはその15分後に正確に出発しますので、遅れないでください。現地では、崖沿いの小道で砂岩と頁岩の層を観察し、来週の実験の授業のために小さな岩石標本を採取します。小道は雨の後だと滑りやすくなることがあるので、全員が丈夫な靴を履いてください。ヘルメットと手袋は学科が用意します。なお、この海岸では昼休みの間でも泳ぐことはできません。潮の流れが強くて危険だからです。",
+    "evidence": "the path can be slippery after rain",
+    "explanation": "小道は雨の後で滑りやすくなることがあるため、丈夫な靴を履くよう指示されています。ヘルメットと手袋は学科が用意すると明言されており、海で標本を集めるとも言っていません。",
+    "trapType": "言及されていない内容"
+  },
+  {
+    "id": "L-1B-13",
+    "num": 13,
+    "part": "1B",
+    "situation": "Listen to a talk about cognitive science.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "Many students believe they can study effectively while checking messages and watching videos, but research in cognitive science tells a different story. In one experiment, participants who switched rapidly between two tasks took about forty percent longer to finish both than participants who completed one task at a time. The reason is that the brain needs a moment to refocus each time attention shifts, and these small delays quickly add up. Interestingly, the people who multitasked the most were often the most confident about their performance, even though their test scores were the lowest. So the practical lesson is simple: when accuracy matters, do one thing at a time, and silence your phone.",
+        "audio": "/teap/audio/l-1b-13-t1.mp3"
+      }
+    ],
+    "question": "What can be inferred about the people who multitasked the most?",
+    "options": [
+      "They finished both tasks more quickly than others",
+      "They were confident about results that were actually poor",
+      "They avoided checking their phones during the experiment",
+      "They scored highest when accuracy was required"
+    ],
+    "answer": 1,
+    "audioQuestion": "/teap/audio/l-1b-13-q.mp3",
+    "jaScript": "男：多くの学生は、メッセージを確認したり動画を見たりしながらでも効果的に勉強できると信じていますが、認知科学の研究は違う結果を示しています。ある実験では、2つの課題をすばやく切り替えながら行った参加者は、1つずつ順番に終えた参加者よりも、両方を終えるのに約40パーセント長く時間がかかりました。その理由は、注意が移るたびに脳が再び集中するのに少し時間が必要で、こうした小さな遅れがすぐに積み重なるからです。興味深いことに、最もマルチタスクをしていた人たちは、テストの点数が最も低かったにもかかわらず、自分の出来について最も自信を持っていることが多かったのです。ですから実践的な教訓は単純です。正確さが大切なときは、一度に1つのことに取り組み、電話をマナーモードにしておきましょう。",
+    "evidence": "the people who multitasked the most were often the most confident about their performance, even though their test scores were the lowest",
+    "explanation": "最もマルチタスクをしていた人たちは、テストの点数が最も低かったにもかかわらず、自分の出来に最も自信を持っていました。つまり、実際の成績が悪いのに自分の力を過大評価していたと推測できます。",
+    "trapType": "本文と逆の内容"
+  },
+  {
+    "id": "L-1B-14",
+    "num": 14,
+    "part": "1B",
+    "situation": "Listen to an announcement from a campus health center.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "This is an announcement from the Campus Health Center. Free influenza vaccinations will be offered to all registered students from Monday, November tenth, through Friday, November fourteenth, between nine in the morning and four in the afternoon. No appointment is necessary, but you must bring your student ID card, as vaccinations cannot be given without it. This year, the vaccinations will take place in the gymnasium rather than in the Health Center itself, because a record number of students is expected. If you have a fever on the day, please postpone your visit until you feel better. Students with an allergy to eggs should speak to a nurse before receiving the vaccination, since the vaccine is produced using eggs.",
+        "audio": "/teap/audio/l-1b-14-t1.mp3"
+      }
+    ],
+    "question": "What must students bring in order to receive the vaccination?",
+    "options": [
+      "An appointment confirmation",
+      "A letter from a nurse",
+      "Proof of a normal temperature",
+      "Their student ID card"
+    ],
+    "answer": 3,
+    "audioQuestion": "/teap/audio/l-1b-14-q.mp3",
+    "jaScript": "女：キャンパス保健センターからのお知らせです。無料のインフルエンザ予防接種を、登録している全学生を対象に、11月10日月曜日から11月14日金曜日まで、午前9時から午後4時の間に実施します。予約は必要ありませんが、学生証を必ず持ってきてください。学生証がないと接種を受けられません。今年は、記録的な数の学生が来ると予想されるため、接種は保健センターではなく体育館で行います。当日に熱がある場合は、体調が良くなるまで来訪を延期してください。卵アレルギーのある学生は、ワクチンが卵を使って作られているので、接種を受ける前に看護師に相談してください。",
+    "evidence": "you must bring your student ID card",
+    "explanation": "予約は不要ですが、学生証を持参しなければ接種は受けられません。本文で持参が必須とされているのは学生証だけです。",
+    "trapType": "細部のすり替え"
+  },
+  {
+    "id": "L-1B-15",
+    "num": 15,
+    "part": "1B",
+    "situation": "Listen to a professor introducing a course.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "Welcome to Introduction to Data Science. This course is designed for students with no previous programming experience, and its goal is to teach you how to work with real data from the first week. In the first half of the semester, you will learn to clean and organize messy data sets, such as sales records and weather observations. In the second half, we move on to creating charts and simple models that can predict trends. Assessment is based on three group projects and a final presentation; there is no written examination. All classes are held in the computer laboratory, so you do not need to bring your own laptop, although you may if you prefer.",
+        "audio": "/teap/audio/l-1b-15-t1.mp3"
+      }
+    ],
+    "question": "How will students be assessed in this course?",
+    "options": [
+      "By three group projects and a final presentation",
+      "By a written examination at the end of the course",
+      "By weekly tests of programming skills",
+      "By an individual research paper"
+    ],
+    "answer": 0,
+    "audioQuestion": "/teap/audio/l-1b-15-q.mp3",
+    "jaScript": "男：「データサイエンス入門」へようこそ。この授業はプログラミングの経験がない学生のために設計されており、最初の週から実際のデータを扱う方法を学ぶことを目標としています。学期の前半では、売上記録や気象観測のような、整理されていないデータセットをきれいに整える方法を学びます。後半では、グラフの作成や、傾向を予測できる単純なモデルの構築へ進みます。成績評価は3つのグループプロジェクトと最終プレゼンテーションに基づいて行われ、筆記試験はありません。授業はすべてコンピューター室で行われるので、自分のノートパソコンを持ってくる必要はありませんが、希望すれば持ってきても構いません。",
+    "evidence": "Assessment is based on three group projects and a final presentation",
+    "explanation": "成績評価は3つのグループプロジェクトと最終プレゼンテーションに基づいており、筆記試験はないと明言されています。",
+    "trapType": "本文と逆の内容"
+  },
+  {
+    "id": "L-1B-16",
+    "num": 16,
+    "part": "1B",
+    "situation": "Listen to a talk about an archaeological excavation.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "Last spring, our archaeology team began excavating a field just outside the city, where farmers had reported finding fragments of old pottery. Within the first month, we uncovered the stone foundations of a large building, which we first believed to be a warehouse. However, the discovery of a row of cooking hearths and hundreds of animal bones changed our interpretation: the building was most likely a communal dining hall where workers gathered for meals roughly eight hundred years ago. This season, we are carefully mapping a smaller structure nearby, which may have stored grain. Every item is photographed and recorded before it is removed, so that future researchers can reconstruct exactly where each object was found.",
+        "audio": "/teap/audio/l-1b-16-t1.mp3"
+      }
+    ],
+    "question": "Why did the team change its interpretation of the large building?",
+    "options": [
+      "Farmers found fragments of pottery in the field",
+      "A nearby structure may have stored grain",
+      "Hearths and animal bones were found in the building",
+      "Photographs revealed where objects had been placed"
+    ],
+    "answer": 2,
+    "audioQuestion": "/teap/audio/l-1b-16-q.mp3",
+    "jaScript": "女：昨年の春、私たちの考古学チームは、農家の人々が古い陶器の破片を見つけたと報告していた市街地のすぐ外にある畑の発掘を始めました。最初の1か月のうちに、私たちは大きな建物の石の基礎を掘り出しました。当初は倉庫だと考えていました。しかし、調理用のかまどが一列に並んでいることと、何百もの動物の骨が発見されたことで、私たちの解釈は変わりました。その建物は、およそ800年前に労働者たちが食事のために集まった共同の食堂だった可能性が最も高いのです。今シーズンは、穀物を保管していたかもしれない近くの小さな建物を慎重に測量しています。すべての出土品は、取り上げる前に写真を撮り記録されます。将来の研究者が、それぞれの物がどこで見つかったのかを正確に再現できるようにするためです。",
+    "evidence": "the discovery of a row of cooking hearths and hundreds of animal bones changed our interpretation",
+    "explanation": "当初は倉庫と考えられていましたが、調理用のかまどが一列に並んでいることと大量の動物の骨が見つかったことで、共同の食堂だったという解釈に変わりました。陶器の破片は発掘のきっかけであり、解釈が変わった理由ではありません。",
+    "trapType": "理由の取り違え"
+  },
+  {
+    "id": "L-1B-17",
+    "num": 17,
+    "part": "1B",
+    "situation": "Listen to a talk about a university's energy project.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "Good morning. I would like to update you on the university's renewable energy project. Over the summer, solar panels were installed on the roofs of five campus buildings, including the library and the sports center. These panels now supply about twenty percent of the electricity used on campus during daylight hours. The project was funded partly by the national government and partly by donations from graduates. Our next step is to install a battery system that can store energy produced on sunny days for use in the evening. According to our engineers' estimates, this battery system should reduce the university's electricity bills by a further ten percent and provide emergency power during blackouts.",
+        "audio": "/teap/audio/l-1b-17-t1.mp3"
+      }
+    ],
+    "question": "What is the purpose of the planned battery system?",
+    "options": [
+      "To supply twenty percent of the campus electricity",
+      "To store energy for use in the evening",
+      "To replace the panels on five buildings",
+      "To raise donations from graduates"
+    ],
+    "answer": 1,
+    "audioQuestion": "/teap/audio/l-1b-17-q.mp3",
+    "jaScript": "男：おはようございます。大学の再生可能エネルギープロジェクトについてご報告します。夏の間に、図書館とスポーツセンターを含むキャンパス内の5つの建物の屋上にソーラーパネルが設置されました。これらのパネルは現在、日中の時間帯にキャンパスで使われる電力の約20パーセントを供給しています。このプロジェクトは、一部は国の資金で、一部は卒業生からの寄付でまかなわれました。次のステップは、晴れた日に発電したエネルギーを蓄えて夕方に使えるようにするバッテリーシステムを設置することです。技術者の見積もりによると、このバッテリーシステムにより大学の電気料金がさらに10パーセント削減され、停電時には非常用電源も供給できるはずです。",
+    "evidence": "install a battery system that can store energy produced on sunny days for use in the evening",
+    "explanation": "バッテリーシステムの目的は、晴れた日に発電したエネルギーを蓄えて夕方に使うことです。電力の約20パーセントを供給しているのはソーラーパネルの方であり、対象を取り違えないよう注意が必要です。",
+    "trapType": "細部のすり替え"
+  },
+  {
+    "id": "L-1B-18",
+    "num": 18,
+    "part": "1B",
+    "situation": "Listen to an announcement about music auditions.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "The University Music Ensemble is pleased to announce auditions for the spring season. Auditions will be held on Saturday, January eighteenth, in Room 204 of the Arts Building, starting at ten in the morning. This year, we are especially looking for students who play the viola and the French horn, as several of our senior members in those sections will graduate in March. Applicants should prepare a short piece of their own choice, lasting no more than three minutes, and be ready to play a few scales. You do not need to be a music major to audition; last year, about half of our members came from other departments, including engineering and economics. Sign-up sheets are posted outside the music office.",
+        "audio": "/teap/audio/l-1b-18-t1.mp3"
+      }
+    ],
+    "question": "Why does the ensemble especially need viola and French horn players?",
+    "options": [
+      "Because the auditions take place in January",
+      "Because half of the members are from other departments",
+      "Because a new section is being created",
+      "Because senior members of those sections will graduate"
+    ],
+    "answer": 3,
+    "audioQuestion": "/teap/audio/l-1b-18-q.mp3",
+    "jaScript": "女：大学音楽アンサンブルは、春シーズンのオーディションについてお知らせします。オーディションは1月18日土曜日、午前10時から芸術棟204号室で行われます。今年は、ヴィオラとフレンチホルンのセクションの上級生メンバー数名が3月に卒業するため、これらの楽器を演奏できる学生を特に探しています。志願者は、3分以内の自分で選んだ短い曲を準備し、音階もいくつか演奏できるようにしておいてください。オーディションを受けるのに音楽専攻である必要はありません。昨年は、メンバーの約半数が工学や経済学を含む他の学部から来ていました。申し込み用紙は音楽事務室の外に掲示されています。",
+    "evidence": "several of our senior members in those sections will graduate in March",
+    "explanation": "ヴィオラとフレンチホルンのセクションでは上級生メンバー数名が3月に卒業するため、その穴を埋める学生を特に募集しています。他学部出身者が半数という情報は、募集理由とは関係ありません。",
+    "trapType": "理由の取り違え"
+  },
+  {
+    "id": "L-1B-19",
+    "num": 19,
+    "part": "1B",
+    "situation": "Listen to an announcement about a study abroad fair.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "Good afternoon, everyone. The annual Study Abroad Fair will take place next Wednesday in the Student Union Hall from one to five in the afternoon. Representatives from twenty partner universities in eight countries will be available to answer questions about their programs, tuition fees, and accommodation. In addition, students who studied abroad last year will give short talks about their experiences, including how they chose their courses and managed their budgets. If you are thinking of applying for the exchange program next year, we strongly recommend that you attend, because the application deadline is earlier than usual this year: all documents must be submitted by the end of November. Application forms will be available at the fair.",
+        "audio": "/teap/audio/l-1b-19-t1.mp3"
+      }
+    ],
+    "question": "Why does the speaker strongly recommend attending the fair?",
+    "options": [
+      "Because the application deadline is earlier than in other years",
+      "Because twenty universities will attend",
+      "Because application forms are available only at the fair",
+      "Because former students will talk about budgets"
+    ],
+    "answer": 0,
+    "audioQuestion": "/teap/audio/l-1b-19-q.mp3",
+    "jaScript": "男：こんにちは、皆さん。毎年恒例の留学フェアが来週の水曜日、午後1時から5時まで学生会館ホールで開催されます。8か国20の提携大学の担当者が、プログラム、授業料、住居について質問に答えます。さらに、昨年留学した学生たちが、授業の選び方や予算の管理の仕方など、自分の経験について短い講演を行います。来年の交換留学プログラムへの応募を考えている方には、ぜひ参加することを強くおすすめします。今年は申請の締め切りが例年より早いからです。すべての書類は11月末までに提出しなければなりません。申請用紙はフェアで入手できます。",
+    "evidence": "the application deadline is earlier than usual this year",
+    "explanation": "強く参加を勧める理由は、今年は申請の締め切りが例年より早く、11月末までに書類を提出しなければならないからです。申請用紙がフェアでのみ入手できるとは言っておらず、そこが誤答の仕掛けです。",
+    "trapType": "部分情報への飛びつき"
+  },
+  {
+    "id": "L-1B-20",
+    "num": 20,
+    "part": "1B",
+    "situation": "Listen to a talk at a laboratory open house.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "Welcome to the Robotics Laboratory's open house. Our lab works on robots that can assist people in everyday settings, and today you will see three of our current projects. The first is a small robot designed to carry shopping bags for elderly customers in supermarkets. The second is a robot arm that helps hospital staff move heavy equipment safely. Our newest project, which we will demonstrate at two o'clock, is a robot that can guide visitors around museums by answering simple questions in three languages. Please feel free to take photographs during the demonstrations, but we ask you not to touch the robots, as their sensors are extremely sensitive and can be damaged easily.",
+        "audio": "/teap/audio/l-1b-20-t1.mp3"
+      }
+    ],
+    "question": "Why are visitors asked not to touch the robots?",
+    "options": [
+      "Because the robots are still being programmed",
+      "Because visitors must not take photographs",
+      "Because their sensors are easily damaged",
+      "Because the newest robot speaks three languages"
+    ],
+    "answer": 2,
+    "audioQuestion": "/teap/audio/l-1b-20-q.mp3",
+    "jaScript": "女：ロボティクス研究室のオープンハウスへようこそ。私たちの研究室は、日常の場面で人々を助けられるロボットの研究をしており、今日は現在進めている3つのプロジェクトをご覧いただきます。1つ目は、スーパーマーケットで高齢のお客様のために買い物袋を運ぶよう設計された小型ロボットです。2つ目は、病院のスタッフが重い機器を安全に運ぶのを助けるロボットアームです。午後2時に実演する最新のプロジェクトは、3つの言語で簡単な質問に答えながら博物館の来館者を案内できるロボットです。実演中は自由に写真を撮っていただいて構いませんが、ロボットには触らないでください。センサーが非常に敏感で、簡単に壊れてしまうからです。",
+    "evidence": "their sensors are extremely sensitive and can be damaged easily",
+    "explanation": "ロボットのセンサーは非常に敏感で簡単に壊れてしまうため、触らないよう求められています。写真撮影は自由だと明言されているので、その選択肢は本文と逆です。",
+    "trapType": "言及されていない理由"
+  },
+  {
+    "id": "L-1C-21",
+    "num": 21,
+    "part": "1C",
+    "situation": "Listen to a student reporting the results of a survey in the campus cafeteria. Choose the chart that matches the description.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "We asked two hundred students in the campus cafeteria which lunch dish they liked best. Curry rice was the clear favorite, chosen by forty percent of the students. Noodle dishes came second, at thirty percent. Pasta was picked by twenty percent, which is exactly twice the share of the salad bowl, the least popular choice, at ten percent. So, although pasta and noodles are both popular, curry rice remains number one by a wide margin in this year's survey.",
+        "audio": "/teap/audio/l-1c-21-t1.mp3"
+      }
+    ],
+    "question": "Which chart best represents the survey results?",
+    "chartOptions": [
+      {
+        "type": "bar",
+        "title": "Chart A",
+        "unit": "%",
+        "max": 50,
+        "items": [
+          {
+            "label": "Curry Rice",
+            "value": 40
+          },
+          {
+            "label": "Noodles",
+            "value": 30
+          },
+          {
+            "label": "Pasta",
+            "value": 20
+          },
+          {
+            "label": "Salad Bowl",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart B",
+        "unit": "%",
+        "max": 50,
+        "items": [
+          {
+            "label": "Curry Rice",
+            "value": 40
+          },
+          {
+            "label": "Noodles",
+            "value": 20
+          },
+          {
+            "label": "Pasta",
+            "value": 30
+          },
+          {
+            "label": "Salad Bowl",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart C",
+        "unit": "%",
+        "max": 50,
+        "items": [
+          {
+            "label": "Curry Rice",
+            "value": 30
+          },
+          {
+            "label": "Noodles",
+            "value": 40
+          },
+          {
+            "label": "Pasta",
+            "value": 20
+          },
+          {
+            "label": "Salad Bowl",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart D",
+        "unit": "%",
+        "max": 50,
+        "items": [
+          {
+            "label": "Curry Rice",
+            "value": 40
+          },
+          {
+            "label": "Noodles",
+            "value": 30
+          },
+          {
+            "label": "Pasta",
+            "value": 10
+          },
+          {
+            "label": "Salad Bowl",
+            "value": 20
+          }
+        ]
+      }
+    ],
+    "options": [
+      "Chart A",
+      "Chart B",
+      "Chart C",
+      "Chart D"
+    ],
+    "answer": 0,
+    "jaScript": "女：キャンパスの食堂で、学生200人に一番好きなランチメニューを聞きました。カレーライスが圧倒的人気で、40パーセントの学生に選ばれました。麺類が2番目で30パーセントでした。パスタは20パーセントで、これは最も人気のなかったサラダボウルの10パーセントのちょうど2倍です。パスタも麺類も人気ですが、今年の調査でもカレーライスが大きく差をつけて1位です。",
+    "evidence": "Curry rice was the clear favorite, chosen by forty percent of the students. Noodle dishes came second, at thirty percent. Pasta was picked by twenty percent, which is exactly twice the share of the salad bowl, the least popular choice, at ten percent.",
+    "explanation": "本文の数値はカレーライス40％、麺類30％、パスタ20％、サラダボウル10％（合計100％）。パスタはサラダボウルの「ちょうど2倍」という関係も20対10で一致します。Chart Aだけが4項目すべて一致します。Bは麺類とパスタ、Cはカレーライスと麺類、Dはパスタとサラダボウルの数値が入れ替わっています。",
+    "trapType": "項目間の数値入れ替え"
+  },
+  {
+    "id": "L-1C-22",
+    "num": 22,
+    "part": "1C",
+    "situation": "Listen to a librarian describing how the library seats were used during one day. Choose the chart that matches the description.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "Let me explain how the library seats were used yesterday. At nine in the morning, only twenty-five percent of the seats were taken. By noon, the figure had risen to sixty percent, as many students came in between classes. In the afternoon, at three o'clock, usage dropped to forty-five percent. Then, in the evening, it climbed sharply, and at six o'clock eighty percent of the seats were occupied, the busiest time of the whole day.",
+        "audio": "/teap/audio/l-1c-22-t1.mp3"
+      }
+    ],
+    "question": "Which chart best represents the seat usage?",
+    "chartOptions": [
+      {
+        "type": "line",
+        "title": "Chart A",
+        "unit": "%",
+        "max": 100,
+        "labels": [
+          "9 AM",
+          "12 PM",
+          "3 PM",
+          "6 PM"
+        ],
+        "values": [
+          60,
+          25,
+          45,
+          80
+        ]
+      },
+      {
+        "type": "line",
+        "title": "Chart B",
+        "unit": "%",
+        "max": 100,
+        "labels": [
+          "9 AM",
+          "12 PM",
+          "3 PM",
+          "6 PM"
+        ],
+        "values": [
+          25,
+          45,
+          60,
+          80
+        ]
+      },
+      {
+        "type": "line",
+        "title": "Chart C",
+        "unit": "%",
+        "max": 100,
+        "labels": [
+          "9 AM",
+          "12 PM",
+          "3 PM",
+          "6 PM"
+        ],
+        "values": [
+          25,
+          60,
+          45,
+          80
+        ]
+      },
+      {
+        "type": "line",
+        "title": "Chart D",
+        "unit": "%",
+        "max": 100,
+        "labels": [
+          "9 AM",
+          "12 PM",
+          "3 PM",
+          "6 PM"
+        ],
+        "values": [
+          25,
+          60,
+          80,
+          45
+        ]
+      }
+    ],
+    "options": [
+      "Chart A",
+      "Chart B",
+      "Chart C",
+      "Chart D"
+    ],
+    "answer": 2,
+    "jaScript": "男：昨日の図書館の座席利用状況を説明します。午前9時には、座席の25パーセントしか使われていませんでした。正午には、授業の合間に多くの学生が来たため、60パーセントまで上がりました。午後3時には利用率は45パーセントに下がりました。その後夕方に急増し、6時には座席の80パーセントが埋まり、1日で最も混雑した時間帯となりました。",
+    "evidence": "At nine in the morning, only twenty-five percent of the seats were taken. By noon, the figure had risen to sixty percent",
+    "explanation": "本文の推移は9時25％→12時60％→15時45％→18時80％です。Chart Cだけがこの順序と数値に一致します。Aは9時と12時、Bは12時と15時、Dは15時と18時の数値が入れ替わっており、特にDは「夕方が最も混雑した」という記述とも矛盾します。",
+    "trapType": "時系列の前後入れ替え"
+  },
+  {
+    "id": "L-1C-23",
+    "num": 23,
+    "part": "1C",
+    "situation": "Listen to a student presenting survey results about part-time jobs. Choose the chart that matches the description.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "Our survey looked at how many students in each year have a part-time job. Among first-year students, thirty percent work part-time. The figure rises to forty-five percent for second-year students. More than half of the third-year students, fifty-five percent, have a job. The highest rate is among fourth-year students, at seventy percent. As students move up through the years, they become more likely to work, and the rate more than doubles between the first and fourth years.",
+        "audio": "/teap/audio/l-1c-23-t1.mp3"
+      }
+    ],
+    "question": "Which chart best represents the percentage of students with part-time jobs?",
+    "chartOptions": [
+      {
+        "type": "bar",
+        "title": "Chart A",
+        "unit": "%",
+        "max": 100,
+        "items": [
+          {
+            "label": "1st Year",
+            "value": 45
+          },
+          {
+            "label": "2nd Year",
+            "value": 30
+          },
+          {
+            "label": "3rd Year",
+            "value": 55
+          },
+          {
+            "label": "4th Year",
+            "value": 70
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart B",
+        "unit": "%",
+        "max": 100,
+        "items": [
+          {
+            "label": "1st Year",
+            "value": 30
+          },
+          {
+            "label": "2nd Year",
+            "value": 45
+          },
+          {
+            "label": "3rd Year",
+            "value": 55
+          },
+          {
+            "label": "4th Year",
+            "value": 70
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart C",
+        "unit": "%",
+        "max": 100,
+        "items": [
+          {
+            "label": "1st Year",
+            "value": 30
+          },
+          {
+            "label": "2nd Year",
+            "value": 45
+          },
+          {
+            "label": "3rd Year",
+            "value": 70
+          },
+          {
+            "label": "4th Year",
+            "value": 55
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart D",
+        "unit": "%",
+        "max": 100,
+        "items": [
+          {
+            "label": "1st Year",
+            "value": 30
+          },
+          {
+            "label": "2nd Year",
+            "value": 55
+          },
+          {
+            "label": "3rd Year",
+            "value": 45
+          },
+          {
+            "label": "4th Year",
+            "value": 70
+          }
+        ]
+      }
+    ],
+    "options": [
+      "Chart A",
+      "Chart B",
+      "Chart C",
+      "Chart D"
+    ],
+    "answer": 1,
+    "jaScript": "女：私たちの調査では、学年ごとにアルバイトをしている学生の割合を調べました。1年生では30パーセントがアルバイトをしています。2年生では45パーセントに上がります。3年生では半数を超える55パーセントが仕事を持っています。最も高いのは4年生で70パーセントです。学年が上がるにつれて働く学生は増え、割合は1年生から4年生の間で2倍以上になります。",
+    "evidence": "Among first-year students, thirty percent work part-time. The figure rises to forty-five percent for second-year students. More than half of the third-year students, fifty-five percent, have a job. The highest rate is among fourth-year students, at seventy percent.",
+    "explanation": "本文の数値は1年30％、2年45％、3年55％、4年70％で、学年ごとに単調に増えています（各学年の学生に対する割合なので合計100にはなりません）。Chart Bだけが一致します。Aは1年と2年、Cは3年と4年、Dは2年と3年の数値が入れ替わっており、Cは「4年が最も高い」という記述とも合いません。",
+    "trapType": "隣接学年の数値入れ替え"
+  },
+  {
+    "id": "L-1C-24",
+    "num": 24,
+    "part": "1C",
+    "situation": "Listen to an announcement about the number of passengers on the campus shuttle bus. Choose the chart that matches the description.",
+    "turns": [
+      {
+        "speaker": "M",
+        "text": "Here are the numbers for the campus shuttle bus this term. In April, the shuttle carried one thousand two hundred passengers. The number rose to one thousand five hundred in May. In June, it fell slightly to one thousand three hundred fifty, probably because of the rainy season. Then in July, ridership jumped to one thousand eight hundred, the highest figure of the four months, as many students used the shuttle during the exam period.",
+        "audio": "/teap/audio/l-1c-24-t1.mp3"
+      }
+    ],
+    "question": "Which chart best represents the number of shuttle passengers?",
+    "chartOptions": [
+      {
+        "type": "line",
+        "title": "Chart A",
+        "unit": "riders",
+        "max": 2000,
+        "labels": [
+          "Apr",
+          "May",
+          "Jun",
+          "Jul"
+        ],
+        "values": [
+          1500,
+          1200,
+          1350,
+          1800
+        ]
+      },
+      {
+        "type": "line",
+        "title": "Chart B",
+        "unit": "riders",
+        "max": 2000,
+        "labels": [
+          "Apr",
+          "May",
+          "Jun",
+          "Jul"
+        ],
+        "values": [
+          1200,
+          1350,
+          1500,
+          1800
+        ]
+      },
+      {
+        "type": "line",
+        "title": "Chart C",
+        "unit": "riders",
+        "max": 2000,
+        "labels": [
+          "Apr",
+          "May",
+          "Jun",
+          "Jul"
+        ],
+        "values": [
+          1200,
+          1500,
+          1800,
+          1350
+        ]
+      },
+      {
+        "type": "line",
+        "title": "Chart D",
+        "unit": "riders",
+        "max": 2000,
+        "labels": [
+          "Apr",
+          "May",
+          "Jun",
+          "Jul"
+        ],
+        "values": [
+          1200,
+          1500,
+          1350,
+          1800
+        ]
+      }
+    ],
+    "options": [
+      "Chart A",
+      "Chart B",
+      "Chart C",
+      "Chart D"
+    ],
+    "answer": 3,
+    "jaScript": "男：今学期のキャンパスシャトルバスの利用者数をお知らせします。4月は1,200人でした。5月には1,500人に増えました。6月は梅雨の影響か、1,350人に少し減りました。そして7月には1,800人に急増し、試験期間中に多くの学生が利用したため、4か月間で最も多い数となりました。",
+    "evidence": "In April, the shuttle carried one thousand two hundred passengers. The number rose to one thousand five hundred in May. In June, it fell slightly to one thousand three hundred fifty",
+    "explanation": "本文の推移は4月1,200人→5月1,500人→6月1,350人→7月1,800人で、6月に一度下がってから7月に最高値になります。Chart Dだけが一致します。Aは4月と5月、Bは5月と6月、Cは6月と7月の数値が入れ替わっており、Bは「6月に下がった」、Cは「7月が最高」という記述と矛盾します。",
+    "trapType": "増減の方向の取り違え"
+  },
+  {
+    "id": "L-1C-25",
+    "num": 25,
+    "part": "1C",
+    "situation": "Listen to a student reporting the results of a survey about study apps. Choose the chart that matches the description.",
+    "turns": [
+      {
+        "speaker": "W",
+        "text": "We surveyed students this spring about which study app they use most often. The vocabulary app came first, used most by thirty-five percent of students. The dictionary app was close behind at thirty percent. The flashcard app was chosen by twenty percent. Finally, the study planner app was the least used, at fifteen percent. Together, the vocabulary and dictionary apps account for nearly two-thirds of all the answers in this spring's survey.",
+        "audio": "/teap/audio/l-1c-25-t1.mp3"
+      }
+    ],
+    "question": "Which chart best represents the survey results?",
+    "chartOptions": [
+      {
+        "type": "bar",
+        "title": "Chart A",
+        "unit": "%",
+        "max": 50,
+        "items": [
+          {
+            "label": "Vocabulary",
+            "value": 35
+          },
+          {
+            "label": "Dictionary",
+            "value": 30
+          },
+          {
+            "label": "Flashcards",
+            "value": 20
+          },
+          {
+            "label": "Planner",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart B",
+        "unit": "%",
+        "max": 50,
+        "items": [
+          {
+            "label": "Vocabulary",
+            "value": 30
+          },
+          {
+            "label": "Dictionary",
+            "value": 35
+          },
+          {
+            "label": "Flashcards",
+            "value": 20
+          },
+          {
+            "label": "Planner",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart C",
+        "unit": "%",
+        "max": 50,
+        "items": [
+          {
+            "label": "Vocabulary",
+            "value": 35
+          },
+          {
+            "label": "Dictionary",
+            "value": 30
+          },
+          {
+            "label": "Flashcards",
+            "value": 15
+          },
+          {
+            "label": "Planner",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Chart D",
+        "unit": "%",
+        "max": 50,
+        "items": [
+          {
+            "label": "Vocabulary",
+            "value": 35
+          },
+          {
+            "label": "Dictionary",
+            "value": 20
+          },
+          {
+            "label": "Flashcards",
+            "value": 30
+          },
+          {
+            "label": "Planner",
+            "value": 15
+          }
+        ]
+      }
+    ],
+    "options": [
+      "Chart A",
+      "Chart B",
+      "Chart C",
+      "Chart D"
+    ],
+    "answer": 0,
+    "jaScript": "女：この春、学生に最もよく使う学習アプリについて調査しました。単語アプリが1位で、35パーセントの学生が最もよく使っています。辞書アプリが30パーセントで僅差の2位でした。フラッシュカードアプリは20パーセントに選ばれました。最後に、学習プランナーアプリが最も少なく15パーセントでした。単語アプリと辞書アプリを合わせると、回答全体のほぼ3分の2を占めます。",
+    "evidence": "The vocabulary app came first, used most by thirty-five percent of students. The dictionary app was close behind at thirty percent. The flashcard app was chosen by twenty percent. Finally, the study planner app was the least used, at fifteen percent.",
+    "explanation": "本文の数値は単語35％、辞書30％、フラッシュカード20％、プランナー15％（合計100％）。上位2つの合計65％は「ほぼ3分の2」とも一致します。Chart Aだけが一致します。Bは単語と辞書、Cはフラッシュカードとプランナー、Dは辞書とフラッシュカードの数値が入れ替わっており、CとDは順位の記述とも合いません。",
+    "trapType": "僅差の順位入れ替え"
   }
 ];
