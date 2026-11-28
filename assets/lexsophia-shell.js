@@ -168,9 +168,89 @@
     });
   }
 
+  let exitDialogEl = null;
+  let exitConfirmCb = null;
+
+  function ensureExitDialog() {
+    if (exitDialogEl) return exitDialogEl;
+    const dlg = document.createElement('div');
+    dlg.className = 'lx-exit-dialog';
+    dlg.hidden = true;
+    dlg.innerHTML = [
+      '<div class="lx-exit-card" role="dialog" aria-modal="true" aria-labelledby="lx-exit-title">',
+      '  <h2 id="lx-exit-title">演習を中断してホームに戻りますか？</h2>',
+      '  <p>現在の解答の進行状況は破棄されます。そのまま続けることもできます。</p>',
+      '  <div class="lx-exit-actions">',
+      '    <button type="button" class="lx-foot-next" id="lx-exit-stay">演習を続ける</button>',
+      '    <button type="button" class="lx-foot-prev" id="lx-exit-go">ホームへ戻る</button>',
+      '  </div>',
+      '</div>'
+    ].join('\n');
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.closest('#lx-exit-stay')) {
+        dlg.hidden = true;
+        exitConfirmCb = null;
+      } else if (e.target.closest('#lx-exit-go')) {
+        dlg.hidden = true;
+        const cb = exitConfirmCb;
+        exitConfirmCb = null;
+        if (typeof cb === 'function') cb();
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !dlg.hidden) {
+        dlg.hidden = true;
+        exitConfirmCb = null;
+      }
+    });
+    document.body.appendChild(dlg);
+    exitDialogEl = dlg;
+    return exitDialogEl;
+  }
+
+  function confirmExit(onConfirm) {
+    const dlg = ensureExitDialog();
+    exitConfirmCb = onConfirm;
+    dlg.hidden = false;
+    const stayBtn = dlg.querySelector('#lx-exit-stay');
+    if (stayBtn) stayBtn.focus();
+  }
+
+  function mountFeedbackFab() {
+    // Only mount on non-TOEIC pages (TOEIC index.html already has #fb-fab)
+    if (document.getElementById('fb-fab')) return;
+    if (!document.body || !document.body.classList.contains('lx-hub-body')) return;
+    const fab = document.createElement('button');
+    fab.type = 'button';
+    fab.className = 'lx-fb-fab';
+    fab.setAttribute('aria-haspopup', 'dialog');
+    fab.innerHTML = '<span>ご意見・不具合報告</span>';
+    fab.addEventListener('click', function () {
+      const backdrop = ensureModal();
+      const badge = backdrop.querySelector('#lx-soon-badge');
+      badge.textContent = 'LexSophia · フィードバック';
+      badge.style.background = '#e3f9f2';
+      badge.style.color = '#007a5a';
+      backdrop.querySelector('#lx-soon-title').textContent = 'ご意見・不具合をお聞かせください';
+      backdrop.querySelector('#lx-soon-desc').textContent = '誤植の報告や「こういう機能・問題がほしい」といった要望は、トップページのフィードバックフォームから匿名で送信できます。';
+      backdrop.querySelector('#lx-soon-list').innerHTML = [
+        '<li>問題文・解説の誤字や音声の不具合報告</li>',
+        '<li>追加してほしいパート・試験（英検 / IELTS）のリクエスト</li>',
+        '<li>スマホ・PCでの表示崩れのご報告</li>'
+      ].join('');
+      backdrop.hidden = false;
+    });
+    document.body.appendChild(fab);
+  }
+
+  window.LexSophiaShell = {
+    confirmExit: confirmExit
+  };
+
   function init() {
     mountExamBars();
     initCommandBoxes();
+    mountFeedbackFab();
   }
 
   if (document.readyState === 'loading') {

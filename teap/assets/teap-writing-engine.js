@@ -225,7 +225,12 @@
       updateMetrics();
 
       root.querySelector('#btn-tw-home').addEventListener('click', function () {
-        stopTimer(); window.location.href = '/teap/';
+        const goHome = function () { stopTimer(); window.location.href = '/teap/'; };
+        if (state.draft.trim().length > 0 && window.LexSophiaShell && window.LexSophiaShell.confirmExit) {
+          window.LexSophiaShell.confirmExit(goHome);
+        } else {
+          goHome();
+        }
       });
       root.querySelector('#btn-tw-finish').addEventListener('click', function () {
         stopTimer();

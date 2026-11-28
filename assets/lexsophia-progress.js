@@ -165,6 +165,12 @@
     };
   }
 
+  function getWeakIds(exam, skill) {
+    const data = load();
+    const key = exam + ':' + skill;
+    return Array.isArray(data.weakItems[key]) ? data.weakItems[key].slice() : [];
+  }
+
   function exportPayload() {
     return load();
   }
@@ -184,12 +190,21 @@
       ? (skillNames[sum.latest.skill] || sum.latest.skill) + ' ' + sum.latest.acc + '%'
       : (sum.draftCount ? 'Writing 下書き保存中' : '—');
 
+    const weakR = getWeakIds(exam, 'reading').length;
+    const weakL = getWeakIds(exam, 'listening').length;
+    let weakBtnHtml = '';
+    if (exam === 'teap' && (weakR > 0 || weakL > 0)) {
+      const targetHref = weakR >= weakL ? '/teap/reading/?mode=weak' : '/teap/listening/?mode=weak';
+      const targetLabel = weakR >= weakL ? ('Reading 苦手' + weakR + '問を復習 →') : ('Listening 苦手' + weakL + '問を復習 →');
+      weakBtnHtml = '<a class="lx-progress-strip__cta" href="' + targetHref + '">' + targetLabel + '</a>';
+    }
+
     mount.hidden = false;
     mount.innerHTML = [
       '<div class="lx-progress-strip">',
       '  <div class="lx-progress-strip__head">',
       '    <span class="lx-progress-strip__title">あなたの学習記録（ブラウザ自動保存）</span>',
-      '    <span class="lx-progress-strip__note">次回も続きから再開できます</span>',
+      weakBtnHtml || '    <span class="lx-progress-strip__note">次回も続きから再開できます</span>',
       '  </div>',
       '  <div class="lx-progress-strip__kpis">',
       '    <div class="lx-progress-kpi"><span class="k">連続学習</span><strong class="v">' + sum.streak + '日</strong></div>',
@@ -206,6 +221,7 @@
     saveDraft: saveDraft,
     loadDraft: loadDraft,
     clearDraft: clearDraft,
+    getWeakIds: getWeakIds,
     getExamSummary: getExamSummary,
     exportPayload: exportPayload
   };

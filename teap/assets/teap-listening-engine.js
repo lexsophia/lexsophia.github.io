@@ -294,12 +294,14 @@
       }, 1000);
     }
 
-    function startSession(mode, partFilter) {
+    function startSession(mode, partFilter, customUnits) {
       SpeechPlayer.stop();
       clearCountdown();
       state.mode = mode;
       state.partFilter = partFilter || null;
-      if (mode === 'quick') {
+      if (Array.isArray(customUnits) && customUnits.length) {
+        state.units = customUnits.slice();
+      } else if (mode === 'quick') {
         state.units = buildQuickUnits(allUnits);
       } else if (partFilter) {
         state.units = allUnits.filter(function (u) { return u.part === partFilter; });
@@ -578,7 +580,12 @@
         });
       });
       root.querySelector('#btn-tl-exit').addEventListener('click', function () {
-        SpeechPlayer.stop(); clearCountdown(); window.location.href = '/teap/';
+        const goHome = function () { SpeechPlayer.stop(); clearCountdown(); window.location.href = '/teap/'; };
+        if (Object.keys(state.answers).length > 0 && window.LexSophiaShell && window.LexSophiaShell.confirmExit) {
+          window.LexSophiaShell.confirmExit(goHome);
+        } else {
+          goHome();
+        }
       });
       const prevBtn = root.querySelector('#btn-tl-prev');
       if (prevBtn) prevBtn.addEventListener('click', function () {
@@ -638,6 +645,16 @@
         });
       }
 
+      const wrongCount = reviewItems.filter(function (x) { return !x.ok; }).length;
+      const wrongUnitMap = {};
+      const wrongUnits = [];
+      reviewItems.forEach(function (x) {
+        if (!x.ok && !wrongUnitMap[x.unit.unitId]) {
+          wrongUnitMap[x.unit.unitId] = true;
+          wrongUnits.push(x.unit);
+        }
+      });
+
       const circum = 603.2;
       const offset = (circum * (1 - acc / 100)).toFixed(1);
 
@@ -689,8 +706,9 @@
         }).join(''),
         '  </div>',
         '</div>',
-        '<div class="lx-res-actions">',
-        '  <button type="button" class="lx-foot-next" id="btn-tl-retry">TEAPホームへ戻る</button>',
+        '<div class="lx-res-actions' + (wrongCount ? ' is-two' : '') + '">',
+        wrongCount ? '  <button type="button" class="lx-foot-next" id="btn-tl-retry-wrong">間違えた ' + wrongCount + '問 を復習する</button>' : '',
+        '  <button type="button" class="' + (wrongCount ? 'lx-foot-prev' : 'lx-foot-next') + '" id="btn-tl-retry">TEAPホームへ戻る</button>',
         '</div>',
         '<h2 style="margin:28px 0 12px;font-size:17px">全問の解答・根拠・和訳</h2>',
         '<div style="display:grid;gap:10px">',
@@ -710,6 +728,13 @@
         '</div>'
       ].join('\n');
 
+      const retryWrongBtn = root.querySelector('#btn-tl-retry-wrong');
+      if (retryWrongBtn) {
+        retryWrongBtn.addEventListener('click', function () {
+          window.scrollTo(0, 0);
+          startSession('study', null, wrongUnits);
+        });
+      }
       root.querySelector('#btn-tl-res-home').addEventListener('click', function () {
         window.location.href = '/teap/';
       });
@@ -745,11 +770,18 @@
       }
     });
 
-    // Auto-start via URL parameters (?mode=quick|study|exam&part=1A)
+    // Auto-start via URL parameters (?mode=quick|study|exam|weak&part=1A)
     const params = new URLSearchParams(window.location.search);
     const qMode = params.get('mode');
     const qPart = params.get('part');
-    if (qMode === 'quick' || qMode === 'study' || qMode === 'exam') {
+    if (qMode === 'weak' && window.LexSophiaProgress) {
+      const weakIds = new Set(window.LexSophiaProgress.getWeakIds('teap', 'listening'));
+      const weakUnits = allUnits.filter(function (u) {
+        return u.questions.some(function (q) { return weakIds.has(q.id); });
+      });
+      if (weakUnits.length) startSession('study', null, weakUnits);
+      else render();
+    } else if (qMode === 'quick' || qMode === 'study' || qMode === 'exam') {
       startSession(qMode, qPart);
     } else if (qPart) {
       startSession('study', qPart);

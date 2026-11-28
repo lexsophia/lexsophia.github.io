@@ -660,7 +660,7 @@
 .lx-deck {
   position: relative;
   z-index: 5;
-  background: var(--lx-subtle);
+  background: var(--lx-canvas);
   border-radius: 56px 56px 0 0;
   margin-top: -24px;
   box-shadow: 0 -10px 32px rgba(24, 24, 27, 0.04), var(--lx-ring-subtle);
@@ -1863,3 +1863,443 @@ body.lx-focus-mode .teap-app.is-wide-stim {
   color: var(--lx-ink);
   font-variant-numeric: tabular-nums;
 }
+
+/* ============================================================
+   All-in-One Bento Showcase, Eyebrows, Promo Pair & Exit Dialog
+   (Matched with TOEIC home mid/lower sections)
+   ============================================================ */
+.lx-eyebrow {
+  margin: 0 0 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--exam-ink);
+}
+.lx-sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.lx-sec-head h2 {
+  margin: 0 !important;
+  font-size: clamp(22px, 3.2vw, 30px) !important;
+  letter-spacing: -0.035em;
+}
+.lx-sec-head__owl {
+  flex: 0 0 58px;
+  width: 58px;
+  height: auto;
+  display: block;
+}
+
+/* All in One TEAP Prep Bento Banner */
+.lx-aio-banner {
+  margin-bottom: 44px;
+  padding: clamp(28px, 4vw, 44px);
+  border-radius: 36px;
+  background: linear-gradient(135deg, #007a5a 0%, #00a87e 52%, #0e7490 100%);
+  color: #ffffff;
+  box-shadow: 0 16px 38px rgba(0, 122, 90, 0.18);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+}
+@media (min-width: 860px) {
+  .lx-aio-banner { grid-template-columns: 0.92fr 1.08fr; gap: 36px; }
+}
+.lx-aio-title {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #ffffff !important;
+}
+.lx-aio-desc {
+  margin: 14px 0 0;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+}
+.lx-aio-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.lx-aio-card {
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--lx-ink);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 8px;
+}
+.lx-aio-card__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lx-aio-step {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+.lx-aio-step.s-mint { background: var(--lx-mint-tint); color: var(--lx-mint-ink); }
+.lx-aio-step.s-blue { background: var(--lx-blue-tint); color: var(--lx-blue-ink); }
+.lx-aio-step.s-violet { background: var(--lx-violet-tint); color: var(--lx-violet-ink); }
+.lx-aio-step.s-amber { background: var(--lx-amber-tint); color: var(--lx-amber-ink); }
+.lx-aio-card__name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--lx-ink);
+}
+.lx-aio-card__val {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--lx-ink);
+  line-height: 1.1;
+}
+.lx-aio-card__val small {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lx-ink-3);
+  margin-left: 4px;
+}
+.lx-aio-card__bar {
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--lx-hero);
+  overflow: hidden;
+}
+.lx-aio-card__bar i {
+  display: block;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--exam-accent);
+}
+
+/* 2-Column Gradient Promo Pair (matched with TOEIC .promo-pair-grid) */
+.lx-promo-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+@media (min-width: 720px) {
+  .lx-promo-pair { grid-template-columns: 1fr 1fr; }
+}
+.lx-promo-card {
+  padding: 26px 26px 24px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #1b2430 0%, #005b46 100%);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(24, 24, 27, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  transition: transform 0.2s var(--lx-ease), box-shadow 0.2s ease;
+}
+.lx-promo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(24, 24, 27, 0.16);
+}
+.lx-promo-card.is-blue {
+  background: linear-gradient(135deg, #0058b8 0%, #182848 100%);
+}
+.lx-promo-kicker {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.lx-promo-title {
+  margin: 10px 0 4px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+.lx-promo-sub {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.lx-promo-btn {
+  align-self: flex-start;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: var(--lx-ink) !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s var(--lx-ease);
+}
+.lx-promo-btn:hover { transform: translateY(-1px); }
+
+/* Frosted Exit Confirmation Dialog (1:1 with TOEIC .exit-dialog) */
+.lx-exit-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 220;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  background: rgba(36, 41, 47, 0.44);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.lx-exit-dialog[hidden] { display: none !important; }
+.lx-exit-card {
+  width: min(100%, 420px);
+  padding: 28px 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #ffffff;
+  box-shadow: 20px 24px 64px rgba(0, 0, 0, 0.16), var(--lx-ring);
+  font-family: var(--lx-font);
+}
+.lx-exit-card h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  color: var(--lx-ink);
+}
+.lx-exit-card p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--lx-ink-2);
+}
+.lx-exit-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+/* Floating Feedback Button (matched with TOEIC .fb-fab) */
+.lx-fb-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--lx-ink);
+  font-family: var(--lx-font);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(24, 24, 27, 0.12), var(--lx-ring-subtle);
+  transition: transform 0.18s var(--lx-ease), box-shadow 0.18s ease;
+}
+.lx-fb-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(24, 24, 27, 0.16), var(--lx-ring);
+}
+body.lx-focus-mode .lx-fb-fab {
+  display: none !important;
+}
+
+/* ============================================================
+   Compact Tabbed Part-Drill Gateway & 1-Min Micro Vocab Widget
+   ============================================================ */
+.lx-progress-strip__cta {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: var(--exam-tint);
+  color: var(--exam-ink) !important;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 0.15s var(--lx-ease);
+}
+.lx-progress-strip__cta:hover { transform: translateY(-1px); }
+
+.lx-drill-gateway {
+  padding: 26px 26px 24px;
+  border-radius: 32px;
+  background: var(--lx-subtle);
+  box-shadow: var(--lx-ring-subtle);
+  display: grid;
+  gap: 18px;
+}
+.lx-drill-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.lx-drill-tabs {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 9999px;
+  background: var(--lx-canvas);
+  box-shadow: var(--lx-ring-subtle);
+  gap: 4px;
+}
+.lx-drill-tab {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--lx-ink-2);
+  font-family: var(--lx-font);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.lx-drill-tab.is-active {
+  background: var(--lx-ink);
+  color: #ffffff;
+}
+.lx-drill-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.lx-drill-grid[hidden] {
+  display: none !important;
+}
+@media (min-width: 640px) {
+  .lx-drill-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .lx-drill-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.lx-drill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 18px;
+  border-radius: 20px;
+  background: var(--lx-canvas);
+  box-shadow: var(--lx-shadow-card);
+  text-decoration: none !important;
+  color: var(--lx-ink) !important;
+  transition: transform 0.16s var(--lx-ease), box-shadow 0.16s ease;
+}
+.lx-drill-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(24, 24, 27, 0.09), var(--lx-ring-subtle);
+}
+.lx-drill-item__meta {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--exam-ink);
+}
+.lx-drill-item__title {
+  display: block;
+  margin-top: 2px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--lx-ink);
+}
+.lx-drill-item__arrow {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--lx-subtle);
+  color: var(--lx-ink-2);
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+.lx-drill-item:hover .lx-drill-item__arrow {
+  background: var(--exam-tint);
+  color: var(--exam-ink);
+}
+
+/* 1-Min Micro Vocab Widget (matched with TOEIC home-micro) */
+.lx-micro-card {
+  padding: 26px 28px;
+  border-radius: 30px;
+  background: var(--lx-canvas);
+  box-shadow: var(--lx-shadow-card);
+  display: grid;
+  gap: 16px;
+}
+.lx-micro-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.lx-micro-q {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.65;
+  color: var(--lx-ink);
+}
+.lx-micro-opts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (min-width: 640px) {
+  .lx-micro-opts { grid-template-columns: repeat(4, 1fr); }
+}
+.lx-micro-opt {
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1.5px solid var(--lx-line);
+  background: var(--lx-subtle);
+  color: var(--lx-ink);
+  font-family: var(--lx-font);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.14s ease, background-color 0.14s ease, transform 0.14s var(--lx-ease);
+}
+.lx-micro-opt:hover:not(:disabled) {
+  border-color: var(--exam-accent);
+  background: var(--exam-tint);
+  transform: translateY(-1px);
+}
+.lx-micro-opt.is-ok { border-color: #059669; background: #ecfdf5; color: #065f46; }
+.lx-micro-opt.is-ng { border-color: #d97706; background: #fffbeb; color: #92400e; }
+.lx-micro-fb {
+  padding: 13px 16px;
+  border-radius: 16px;
+  background: var(--lx-subtle);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--lx-ink-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.lx-micro-fb b { color: var(--lx-ink); }

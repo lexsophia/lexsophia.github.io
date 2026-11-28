@@ -238,7 +238,12 @@
       ].join('\n');
 
       root.querySelector('#btn-ts-home').addEventListener('click', function () {
-        stopTimer(); stopSpeech(); stopRecording(); window.location.href = '/teap/';
+        const goHome = function () { stopTimer(); stopSpeech(); stopRecording(); window.location.href = '/teap/'; };
+        if (state.partIdx > 0 && window.LexSophiaShell && window.LexSophiaShell.confirmExit) {
+          window.LexSophiaShell.confirmExit(goHome);
+        } else {
+          goHome();
+        }
       });
       root.querySelector('#btn-ts-play').addEventListener('click', function () {
         if (state.speaking) { stopSpeech(); render(); }

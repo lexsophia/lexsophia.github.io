@@ -450,8 +450,12 @@
       const submitBtn = rootEl.querySelector('#btn-teap-submit');
       if (submitBtn) submitBtn.addEventListener('click', openSubmitConfirm);
       rootEl.querySelector('#btn-teap-quit').addEventListener('click', () => {
-        stopTimer();
-        window.location.href = '/teap/';
+        const goHome = () => { stopTimer(); window.location.href = '/teap/'; };
+        if (Object.keys(state.answers).length > 0 && window.LexSophiaShell && window.LexSophiaShell.confirmExit) {
+          window.LexSophiaShell.confirmExit(goHome);
+        } else {
+          goHome();
+        }
       });
       rootEl.querySelector('#btn-teap-modal-cancel').addEventListener('click', () => {
         rootEl.querySelector('#teap-confirm-modal').hidden = true;
@@ -629,7 +633,15 @@
     const params = new URLSearchParams(location.search);
     const qMode = params.get('mode') || config.autoMode || null;
     const qPart = params.get('part') || config.autoPart || null;
-    if (qMode || qPart) {
+    if (qMode === 'weak' && window.LexSophiaProgress) {
+      const weakIds = new Set(window.LexSophiaProgress.getWeakIds('teap', 'reading'));
+      const weakQs = TEAP_READING_QUESTIONS.filter(q => weakIds.has(q.id));
+      if (weakQs.length) {
+        startSession('study', null, weakQs);
+      } else {
+        render();
+      }
+    } else if (qMode || qPart) {
       startSession(qMode || 'study', qPart);
     } else {
       render();

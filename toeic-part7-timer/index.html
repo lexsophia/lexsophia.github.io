@@ -40,9 +40,18 @@
 .tm-badge.is-warn{background:#fef3c7;color:#b45309}
 .tm-summary{margin-top:16px;padding:16px 18px;border-radius:16px;background:#eef6ff;font-size:14px;line-height:1.7;color:#1e293b}
 </style>
+<link rel="stylesheet" href="/assets/lexsophia-shell.css?v=11">
 </head>
-<body>
+<body data-exam="toeic">
 <header class="site-header"><div class="site-header__inner"><a class="brand" href="/">Lex<span>Sophia</span></a><nav aria-label="サイトナビ"><a href="/#analytics">自己分析</a><a href="/practice/">練習問題</a><a href="/books/">参考書</a><a class="cta" href="/?mode=quick">無料診断</a></nav></div></header>
+<div class="lx-exam-bar lx-exam-bar--subpage" data-lx-exam-bar>
+  <nav class="lx-exam-pills" aria-label="試験を切り替え">
+    <a class="lx-exam-pill is-active" data-pill="toeic" href="/" aria-current="page"><span class="lx-exam-pill__dot" aria-hidden="true"></span>TOEIC</a>
+    <a class="lx-exam-pill" data-pill="teap" href="/teap/"><span class="lx-exam-pill__dot" aria-hidden="true"></span>TEAP</a>
+    <button type="button" class="lx-exam-pill is-soon" data-pill="eiken"><span class="lx-exam-pill__dot" aria-hidden="true"></span>英検<span class="lx-soon-tag">Soon</span></button>
+    <button type="button" class="lx-exam-pill is-soon" data-pill="ielts"><span class="lx-exam-pill__dot" aria-hidden="true"></span>IELTS<span class="lx-soon-tag">Soon</span></button>
+  </nav>
+</div>
 <main class="container">
 <nav class="breadcrumb" aria-label="パンくずリスト"><a href="/">ホーム</a><span>›</span><span>TOEIC Part 7 時間配分チェッカー</span></nav>
 <h1>TOEIC Part 7 時間配分チェッカー</h1>
@@ -172,5 +181,6 @@
   update();
 })();
 </script>
+<script src="/assets/lexsophia-shell.js?v=2" defer></script>
 </body>
 </html>

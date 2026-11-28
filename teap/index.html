@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/seo-assets/style.css">
-<link rel="stylesheet" href="/assets/lexsophia-shell.css?v=9">
+<link rel="stylesheet" href="/assets/lexsophia-shell.css?v=12">
 <link rel="stylesheet" href="/teap/assets/teap.css">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LexSophia">
@@ -159,8 +159,44 @@
 <main class="lx-deck">
   <div class="lx-deck__inner">
     <div data-lx-progress-banner="teap" hidden></div>
+
+    <div class="lx-aio-banner" aria-labelledby="teap-aio-title">
+      <div>
+        <h2 id="teap-aio-title" class="lx-aio-title">All in One<br>TEAP Prep</h2>
+        <p class="lx-aio-desc">Reading 60問・Listening 50問・Writing・Speaking の4技能すべてをひとつに。弱点パートの特定から復習までブラウザだけで完結します。</p>
+      </div>
+      <div class="lx-aio-matrix" aria-hidden="true">
+        <div class="lx-aio-card">
+          <div class="lx-aio-card__head"><span class="lx-aio-step s-mint">01</span><span class="lx-aio-card__name">Reading</span></div>
+          <div class="lx-aio-card__val">60<small>問 · 6パート</small></div>
+          <div class="lx-aio-card__bar"><i style="width:100%"></i></div>
+        </div>
+        <div class="lx-aio-card">
+          <div class="lx-aio-card__head"><span class="lx-aio-step s-blue">02</span><span class="lx-aio-card__name">Listening</span></div>
+          <div class="lx-aio-card__val">50<small>問 · 音声つき</small></div>
+          <div class="lx-aio-card__bar"><i style="width:100%;background:#0176f0"></i></div>
+        </div>
+        <div class="lx-aio-card">
+          <div class="lx-aio-card__head"><span class="lx-aio-step s-violet">03</span><span class="lx-aio-card__name">Writing</span></div>
+          <div class="lx-aio-card__val">Task A/B<small>語数・丸写し判定</small></div>
+          <div class="lx-aio-card__bar"><i style="width:100%;background:#7d3bff"></i></div>
+        </div>
+        <div class="lx-aio-card">
+          <div class="lx-aio-card__head"><span class="lx-aio-step s-amber">04</span><span class="lx-aio-card__name">Speaking</span></div>
+          <div class="lx-aio-card__val">Part 1–4<small>録音・タイマー</small></div>
+          <div class="lx-aio-card__bar"><i style="width:100%;background:#d99300"></i></div>
+        </div>
+      </div>
+    </div>
+
     <section id="teap-skills" class="section" style="margin-top:0">
-      <h2>4技能メニュー</h2>
+      <div class="lx-sec-head">
+        <div>
+          <p class="lx-eyebrow">4 SKILLS · ALL-IN-ONE</p>
+          <h2>4技能メニュー</h2>
+        </div>
+        <img class="lx-sec-head__owl" src="/img/owl-blue.png" alt="" width="229" height="320" loading="lazy" decoding="async">
+      </div>
       <div class="teap-skill-grid">
         <article class="teap-skill-card">
           <div>
@@ -219,30 +255,69 @@
           </div>
         </article>
       </div>
+
+      <div class="lx-promo-pair">
+        <div class="lx-promo-card">
+          <div>
+            <span class="lx-promo-kicker">QUICK READING · 12問（約15分）</span>
+            <p class="lx-promo-title">Reading 12問クイック診断</p>
+            <p class="lx-promo-sub">全6パート×2問で弱点パートをすぐ特定</p>
+          </div>
+          <a class="lx-promo-btn" href="/teap/quick-test/">診断を始める →</a>
+        </div>
+        <div class="lx-promo-card is-blue">
+          <div>
+            <span class="lx-promo-kicker">QUICK LISTENING · 12問（約8分）</span>
+            <p class="lx-promo-title">Listening 12問クイック診断</p>
+            <p class="lx-promo-sub">会話・図表選択・講義の全5パートを短時間で確認</p>
+          </div>
+          <a class="lx-promo-btn" href="/teap/listening/?mode=quick">診断を始める →</a>
+        </div>
+      </div>
     </section>
 
     <section id="teap-parts" class="section">
-      <h2>Reading パート別演習</h2>
-      <div class="teap-part-grid">
-        <article class="teap-part-card"><div><span class="teap-part-meta">20問 · 7分</span><h3>Part 1：語彙・語法</h3><p>文脈から学術語彙・コロケーションを判定。</p></div><a class="btn alt" href="/teap/reading/part-1/">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">5問 · 7分</span><h3>Part 2A：図表読解</h3><p>グラフ・表の傾向や割合を読み取る。</p></div><a class="btn alt" href="/teap/reading/part-2a/">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">5問 · 8分</span><h3>Part 2B：掲示・メール</h3><p>大学告知の条件・期限・例外を確認。</p></div><a class="btn alt" href="/teap/reading/part-2b/">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">10問 · 15分</span><h3>Part 2C：短文読解</h3><p>学術短文の主旨・詳細・言い換え。</p></div><a class="btn alt" href="/teap/reading/part-2c/">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">8問 · 8分</span><h3>Part 3A：長文穴埋め</h3><p>論理展開と接続表現から空欄を補充。</p></div><a class="btn alt" href="/teap/reading/part-3a/">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">12問 · 25分</span><h3>Part 3B：長文総合</h3><p>長文と図表を照合して詳細・推論を解く。</p></div><a class="btn alt" href="/teap/reading/part-3b/">演習 →</a></article>
+      <div class="lx-drill-gateway">
+        <div class="lx-drill-top">
+          <div>
+            <p class="lx-eyebrow">PART DRILLS · READING &amp; LISTENING</p>
+            <h2 style="margin:0;font-size:clamp(22px,3vw,28px)">パート別に練習する</h2>
+          </div>
+          <div class="lx-drill-tabs" role="tablist" aria-label="技能を切り替え">
+            <button type="button" class="lx-drill-tab is-active" role="tab" aria-selected="true" data-drill-tab="reading">Reading（6パート）</button>
+            <button type="button" class="lx-drill-tab" role="tab" aria-selected="false" data-drill-tab="listening">Listening（5パート）</button>
+          </div>
+        </div>
+
+        <div class="lx-drill-grid" data-drill-panel="reading">
+          <a class="lx-drill-item" href="/teap/reading/part-1/"><div><span class="lx-drill-item__meta">Part 1 · 20問</span><span class="lx-drill-item__title">学術語彙・語法</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/reading/part-2a/"><div><span class="lx-drill-item__meta">Part 2A · 5問</span><span class="lx-drill-item__title">図表・グラフ読解</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/reading/part-2b/"><div><span class="lx-drill-item__meta">Part 2B · 5問</span><span class="lx-drill-item__title">大学掲示・メール</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/reading/part-2c/"><div><span class="lx-drill-item__meta">Part 2C · 10問</span><span class="lx-drill-item__title">短文学術読解</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/reading/part-3a/"><div><span class="lx-drill-item__meta">Part 3A · 8問</span><span class="lx-drill-item__title">長文の論理・穴埋め</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/reading/part-3b/"><div><span class="lx-drill-item__meta">Part 3B · 12問</span><span class="lx-drill-item__title">長文・図表の詳細理解</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="lx-drill-grid" data-drill-panel="listening" hidden>
+          <a class="lx-drill-item" href="/teap/listening/?part=1A"><div><span class="lx-drill-item__meta">Part 1A · 10問</span><span class="lx-drill-item__title">短い会話</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/listening/?part=1B"><div><span class="lx-drill-item__meta">Part 1B · 10問</span><span class="lx-drill-item__title">短い英文・ミニ講義</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/listening/?part=1C"><div><span class="lx-drill-item__meta">Part 1C · 5問</span><span class="lx-drill-item__title">図表選択（グラフ照合）</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/listening/?part=2A"><div><span class="lx-drill-item__meta">Part 2A · 9問</span><span class="lx-drill-item__title">長い会話（3素材）</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/listening/?part=2B"><div><span class="lx-drill-item__meta">Part 2B · 16問</span><span class="lx-drill-item__title">長い講義・図表対応</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+          <a class="lx-drill-item" href="/teap/listening/?mode=exam"><div><span class="lx-drill-item__meta">ALL · 50問（1回再生）</span><span class="lx-drill-item__title">本番フル模試に挑戦</span></div><span class="lx-drill-item__arrow" aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
 
-    <section id="teap-listening-parts" class="section">
-      <h2>Listening パート別演習</h2>
-      <div class="teap-part-grid">
-        <article class="teap-part-card"><div><span class="teap-part-meta">10問</span><h3>Part 1A：短い会話</h3><p>予定変更・条件付き承諾・次の行動を聞き取る。</p></div><a class="btn alt" href="/teap/listening/?part=1A">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">10問</span><h3>Part 1B：短い英文</h3><p>短い説明・ミニ講義の主旨と根拠を捉える。</p></div><a class="btn alt" href="/teap/listening/?part=1B">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">5問</span><h3>Part 1C：図表選択</h3><p>音声の数量・増減と一致するグラフを選ぶ。</p></div><a class="btn alt" href="/teap/listening/?part=1C">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">9問（3素材）</span><h3>Part 2A：長い会話</h3><p>質問を先読みし、相談内容と合意事項を追う。</p></div><a class="btn alt" href="/teap/listening/?part=2A">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">16問（4素材）</span><h3>Part 2B：長い講義</h3><p>図表付き講義を含む学術トークの論理を追う。</p></div><a class="btn alt" href="/teap/listening/?part=2B">演習 →</a></article>
-        <article class="teap-part-card"><div><span class="teap-part-meta">50問 · 1回再生</span><h3>本番フル模試</h3><p>全5パートを通して1回再生の本番形式で挑戦。</p></div><a class="btn alt" href="/teap/listening/?mode=exam">模試 →</a></article>
+    <section id="teap-micro" class="section" aria-labelledby="teap-micro-title">
+      <div class="lx-sec-head">
+        <div>
+          <p class="lx-eyebrow">1-MIN WARMUP · ACADEMIC VOCAB</p>
+          <h2 id="teap-micro-title">スキマ1分トレーニング</h2>
+        </div>
+        <img class="lx-sec-head__owl" src="/img/owl-pink.png" alt="" width="236" height="320" loading="lazy" decoding="async">
       </div>
+      <div class="lx-micro-card" id="teap-micro-box"></div>
     </section>
 
     <nav class="lx-hub-links" aria-label="TEAP対策コンテンツ一覧">
@@ -292,6 +367,58 @@
 </footer>
 
 <script src="/assets/lexsophia-progress.js"></script>
-<script src="/assets/lexsophia-shell.js" defer></script>
+<script src="/assets/lexsophia-shell.js?v=2" defer></script>
+<script>
+(function () {
+  document.querySelectorAll('[data-drill-tab]').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = tab.getAttribute('data-drill-tab');
+      document.querySelectorAll('[data-drill-tab]').forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', String(on));
+      });
+      document.querySelectorAll('[data-drill-panel]').forEach(function (p) {
+        p.hidden = p.getAttribute('data-drill-panel') !== target;
+      });
+    });
+  });
+
+  var MICRO = [
+    { q: 'The research team conducted three trials to ( ) the accuracy of the climate model.', opts: ['verify', 'postpone', 'occupy', 'imitate'], ans: 0, exp: 'verify the accuracy（精度を検証する）はTEAP頻出の学術コロケーションです。' },
+    { q: 'Urban planners must ( ) the environmental impact before approving new highways.', opts: ['assess', 'distribute', 'hesitate', 'abolish'], ans: 0, exp: 'assess the impact（影響を評価する）が文脈に最も自然です。' },
+    { q: 'The findings helped scientists ( ) a new theory about deep-sea ecosystems.', opts: ['develop', 'prevent', 'delay', 'borrow'], ans: 0, exp: 'develop a theory（理論を構築・発展させる）の定番表現です。' },
+    { q: 'Students who actively recall material tend to ( ) information more effectively.', opts: ['retain', 'cancel', 'divide', 'expose'], ans: 0, exp: 'retain information（情報を記憶・保持する）は心理学・教育分野で頻出です。' },
+    { q: 'The committee decided to ( ) the seminar until next Friday due to the storm.', opts: ['postpone', 'enforce', 'reveal', 'attain'], ans: 0, exp: 'postpone（延期する）は hold it at a later date の言い換えでもよく出ます。' }
+  ];
+  var idx = 0;
+  var box = document.getElementById('teap-micro-box');
+  function renderMicro(chosen) {
+    if (!box) return;
+    var item = MICRO[idx];
+    var done = typeof chosen === 'number';
+    box.innerHTML =
+      '<div class="lx-micro-top"><span class="teap-pill is-mint">Part 1 · 学術語彙（' + (idx + 1) + ' / ' + MICRO.length + '）</span><span style="font-size:12px;color:#8c959f;font-weight:600">1タップで即解説</span></div>' +
+      '<p class="lx-micro-q">' + item.q + '</p>' +
+      '<div class="lx-micro-opts">' +
+      item.opts.map(function (o, i) {
+        var c = 'lx-micro-opt';
+        if (done) {
+          if (i === item.ans) c += ' is-ok';
+          else if (i === chosen) c += ' is-ng';
+        }
+        return '<button type="button" class="' + c + '" data-mo="' + i + '"' + (done ? ' disabled' : '') + '>' + o + '</button>';
+      }).join('') +
+      '</div>' +
+      (done ? '<div class="lx-micro-fb"><span><b>' + (chosen === item.ans ? '◎ 正解！' : '✕ 正解は ' + item.opts[item.ans]) + '</b> — ' + item.exp + '</span><button type="button" class="lx-tool-pill" id="btn-micro-next">次の1問 →</button></div>' : '');
+    box.querySelectorAll('[data-mo]').forEach(function (b) {
+      b.addEventListener('click', function () { renderMicro(parseInt(b.getAttribute('data-mo'), 10)); });
+    });
+    var nb = box.querySelector('#btn-micro-next');
+    if (nb) nb.addEventListener('click', function () { idx = (idx + 1) % MICRO.length; renderMicro(null); });
+  }
+  renderMicro(null);
+})();
+</script>
 </body>
 </html>
