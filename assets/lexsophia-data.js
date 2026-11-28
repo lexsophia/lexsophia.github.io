@@ -3318,7 +3318,1266 @@ const LISTENING_AUDIO = {
     segments: [{ role: "narrator", text: "Hello, Ms. Patel. This is Aaron from Northline Office Supply. I'm calling about your order of twelve office chairs. The chairs were expected this Thursday, but a warehouse computer problem has delayed the shipment until Monday. If you need seating before then, we can provide six temporary chairs for pickup at our store on Friday. Please call me by four o'clock today if you'd like that option." }],
     jaSegments: ["Patelさん、Northline Office SupplyのAaronです。ご注文のオフィスチェア12脚についてお電話しています。木曜日に到着予定でしたが、倉庫のコンピューター障害により月曜日まで遅れます。それまでに椅子が必要でしたら、金曜日に店舗で仮の椅子6脚をお受け取りいただけます。ご希望の場合は本日4時までにお電話ください。"]
   }
-,"lx-p3-set08":{segments:[{"role": "speakerA", "text": "Hi, Tom. Do you have a minute? The slides for this afternoon's presentation won't open on my computer."}, {"role": "speakerB", "text": "That's strange. Did you try restarting it?"}, {"role": "speakerA", "text": "Twice. I just get an error message every time."}, {"role": "speakerB", "text": "The file might be damaged. Do you have a copy saved anywhere else?"}, {"role": "speakerA", "text": "I saved one on the shared drive last night, but it's the version from before I added the sales figures."}, {"role": "speakerB", "text": "That's fine. The figures are in the report I e-mailed you this morning, so you can copy them from there."}, {"role": "speakerA", "text": "Good idea. But the client meeting starts at two, and it's already one thirty."}, {"role": "speakerB", "text": "Then let's use the computer in the meeting room instead of yours. I'll set it up while you update the slides."}, {"role": "speakerA", "text": "Thanks. Could you also print a few copies of the report, just in case?"}, {"role": "speakerB", "text": "Sure. I'll do that right after I finish setting up the computer."}],jaSegments:["こんにちは、Tom。少し時間ありますか。午後のプレゼンのスライドが私のパソコンで開けないんです。", "それは変ですね。再起動は試しましたか。", "2回しました。毎回エラーメッセージが出ます。", "ファイルが壊れているのかもしれません。ほかにコピーは保存していますか。", "昨夜、共有ドライブに保存しましたが、売上数字を入れる前のバージョンなんです。", "大丈夫ですよ。数字は今朝メールで送ったレポートに入っているので、そこからコピーできます。", "いい考えですね。でも顧客との会議は2時からで、もう1時半です。", "では、あなたのパソコンではなく会議室のパソコンを使いましょう。あなたがスライドを更新している間に、私がセットアップします。", "ありがとう。念のため、レポートも何部か印刷してもらえますか。", "いいですよ。パソコンのセットアップが終わったらすぐに印刷します。"]},"lx-p3-set09":{segments:[{"role": "speakerA", "text": "Hello. I'd like to book a flight to Chicago for next Tuesday. I need to arrive before noon for a conference."}, {"role": "speakerB", "text": "Let me check. There's a flight that leaves at seven ten and arrives at ten forty-five, or a cheaper one at nine thirty that gets in at one fifteen."}, {"role": "speakerA", "text": "The cheaper one is too late. I'll take the seven ten flight."}, {"role": "speakerB", "text": "Certainly. Would you like a window seat or an aisle seat?"}, {"role": "speakerA", "text": "An aisle seat, please. And is a meal included on that flight?"}, {"role": "speakerB", "text": "Yes, breakfast is served on morning flights. Will you be checking any luggage?"}, {"role": "speakerA", "text": "Just one suitcase. Oh, and I may need to change my return date. Is that possible?"}, {"role": "speakerB", "text": "Yes. But please note that changes made less than a week before departure cost fifty dollars."}, {"role": "speakerA", "text": "That's fine. I'll book the return for Friday for now, and I'll let you know if it changes."}],jaSegments:["こんにちは。来週の火曜日にシカゴ行きの飛行機を予約したいんです。会議があるので、正午前に到着しなければなりません。", "お調べします。7時10分発で10時45分に着く便と、安いですが9時30分発で1時15分着の便があります。", "安い方は遅すぎます。7時10分の便にします。", "かしこまりました。窓側と通路側、どちらの席がよろしいですか。", "通路側をお願いします。それと、その便は食事付きですか。", "はい、午前の便では朝食が出ます。お預けの荷物はありますか。", "スーツケース1つだけです。あと、帰りの日付を変更するかもしれません。可能ですか。", "はい。ただし、出発の1週間前を切ってからの変更には50ドルかかりますのでご注意ください。", "大丈夫です。とりあえず帰りは金曜日で予約して、変わるようなら連絡します。"]},"lx-p3-set10":{segments:[{"role": "speakerA", "text": "Hi, Rachel. How are the preparations going for Monday's orientation for the new employees?"}, {"role": "speakerB", "text": "Almost done. Twelve people are starting, so I reserved the large training room."}, {"role": "speakerA", "text": "Good. Have the welcome packages been printed yet?"}, {"role": "speakerB", "text": "The printing company delivered them this morning. But we're short of name badges — only ten arrived."}, {"role": "speakerA", "text": "I'll call the company today and ask them to send the missing two by Friday."}, {"role": "speakerB", "text": "Thanks. Also, the president would like to give a short welcome speech at nine."}, {"role": "speakerA", "text": "Then we should start registration at eight thirty instead of nine."}, {"role": "speakerB", "text": "Right. I'll update the schedule and e-mail it to all the presenters this afternoon."}, {"role": "speakerA", "text": "Perfect. And what about lunch? Did you order it from the usual place?"}, {"role": "speakerB", "text": "Yes, but this time I asked them to add two vegetarian meals."}],jaSegments:["やあ、Rachel。月曜の新入社員向けオリエンテーションの準備はどうですか。", "ほぼ終わりました。12人入社するので、大きい研修室を予約しました。", "よかった。歓迎パッケージはもう印刷できましたか。", "印刷会社が今朝届けてくれました。でも名札が足りません。10個しか届いていないんです。", "今日会社に電話して、不足分の2個を金曜までに送るよう頼みます。", "ありがとうございます。それと、社長が9時に短い歓迎の挨拶をしたいそうです。", "では、受付は9時ではなく8時半に始めましょう。", "そうですね。今日の午後に日程を更新して、発表者全員にメールします。", "完璧だね。それと昼食は？いつものところに頼んだ？", "はい。ただ今回は、ベジタリアン向けの食事を2食追加してもらいました。"]},"lx-p3-set11":{segments:[{"role": "speakerA", "text": "Hello, this is Anna Reed in room 512. I'm calling about my reservation."}, {"role": "speakerB", "text": "Good evening, Ms. Reed. How can I help you?"}, {"role": "speakerA", "text": "My meeting tomorrow has been moved to the afternoon, so I'd like to check out later than planned. Is a late checkout possible?"}, {"role": "speakerB", "text": "Checkout is normally at eleven, but we can extend it to two o'clock for an additional twenty dollars."}, {"role": "speakerA", "text": "Two o'clock would be perfect. Could you add that to my bill?"}, {"role": "speakerB", "text": "Certainly. Would you like anything else?"}, {"role": "speakerA", "text": "Yes — my room faces the street, and it was quite noisy last night. Is there a quieter room available for tonight?"}, {"role": "speakerB", "text": "Let me check. We have a room on the sixth floor facing the garden. I can move you there right away."}, {"role": "speakerA", "text": "That would be wonderful. Thank you."}, {"role": "speakerB", "text": "You're welcome. A staff member will come to help you with your luggage in ten minutes."}],jaSegments:["こんにちは、512号室の Anna Reed です。予約の件でお電話しました。", "こんばんは、Reed様。どのようなご用件でしょうか。", "明日の会議が午後に変更になったので、予定より遅くチェックアウトしたいのですが、レイトチェックアウトは可能ですか。", "通常チェックアウトは11時ですが、追加料金20ドルで2時まで延長できます。", "2時なら完璧です。料金に加えておいてもらえますか。", "かしこまりました。ほかにご要望はありますか。", "はい。私の部屋は通りに面していて、昨夜はかなりうるさかったんです。今夜、もっと静かな部屋は空いていますか。", "お調べします。6階に庭に面した部屋があります。すぐにお移りいただけます。", "それは助かります。ありがとうございます。", "どういたしまして。10分後にスタッフがお荷物のお手伝いに伺います。"]},"lx-p3-set12":{segments:[{"role": "speakerA", "text": "Hi, Yuki. Are we all set for the trade show this weekend?"}, {"role": "speakerB", "text": "Almost. The display panels arrived this morning, but the product samples haven't come yet."}, {"role": "speakerA", "text": "They were supposed to be delivered yesterday. Did you call the shipping company?"}, {"role": "speakerB", "text": "Yes. They said the truck broke down, but the samples will arrive tomorrow morning by ten."}, {"role": "speakerA", "text": "That's cutting it close. The show opens at nine on Saturday."}, {"role": "speakerB", "text": "The samples get here on Friday, so we'll have all afternoon to set up the booth."}, {"role": "speakerA", "text": "Good. What about the brochures? Do we have enough?"}, {"role": "speakerB", "text": "We have three hundred, but last year we gave out almost five hundred. I'll order two hundred more today."}, {"role": "speakerA", "text": "Please do. And let's meet at the venue at eight on Saturday to do a final check."}, {"role": "speakerB", "text": "Agreed. I'll bring the sign-up sheets for visitors who want a catalog."}],jaSegments:["こんにちは、Yuki。今週末の展示会の準備は全部整いましたか。", "ほぼ整いました。展示パネルは今朝届きましたが、商品サンプルがまだ来ていません。", "昨日届くはずでしたよね。配送会社には電話しましたか。", "はい。トラックが故障したそうですが、サンプルは明日の朝10時までに届くそうです。", "かなりギリギリですね。展示会は土曜の9時に始まりますよ。", "サンプルは金曜に着くので、午後いっぱいブースの設営ができます。", "よかった。パンフレットはどうですか。足りますか。", "300部ありますが、昨年はほぼ500部配りました。今日200部追加で注文します。", "お願いします。それと、土曜は8時に会場で集合して最終確認をしましょう。", "承知しました。カタログを希望する来場者向けの申込書を持っていきます。"]},"lx-p3-set13":{segments:[{"role": "speakerA", "text": "Excuse me. I bought this coffee maker here last week, but it stopped working this morning."}, {"role": "speakerB", "text": "I'm sorry to hear that. Do you have the receipt with you?"}, {"role": "speakerA", "text": "Yes, here it is. I'd like a refund if possible."}, {"role": "speakerB", "text": "Our policy allows an exchange within thirty days, but refunds are only given if the item is unopened."}, {"role": "speakerA", "text": "I see. Then I'll exchange it for the same model. Do you have one in stock?"}, {"role": "speakerB", "text": "We do. Let me get one from the back. Would you like me to test it here before you take it home?"}, {"role": "speakerA", "text": "Yes, please. I don't want the same problem again."}, {"role": "speakerB", "text": "Of course. And if the new one has any issues within ninety days, we'll repair it free of charge."}, {"role": "speakerA", "text": "That's reassuring. How long does a repair usually take?"}, {"role": "speakerB", "text": "About a week. We'll call you when it's ready."}],jaSegments:["すみません。このコーヒーメーカーを先週ここで買ったのですが、今朝動かなくなってしまいました。", "それは申し訳ありません。レシートはお持ちですか。", "はい、これです。できれば返金してほしいのですが。", "当店のポリシーでは30日以内の交換は可能ですが、返金は未開封の商品に限ります。", "そうですか。では同じモデルと交換します。在庫はありますか。", "あります。裏から持ってきますね。お持ち帰りの前に、ここで動作確認をしましょうか。", "はい、お願いします。同じ問題は繰り返したくないので。", "もちろんです。それと、新しい方に90日以内に問題があれば、無料で修理します。", "それは安心です。修理には通常どれくらいかかりますか。", "1週間ほどです。できあがったらお電話します。"]},"lx-p4-set09":{segments:[{"role": "speakerA", "text": "Attention, passengers traveling on SkyAir Flight 208 to Denver. Due to a change in aircraft, this flight will now depart from Gate 14 instead of Gate 9."}, {"role": "speakerA", "text": "Boarding will begin at 3:40 P.M., twenty minutes later than originally scheduled."}, {"role": "speakerA", "text": "Passengers who need assistance or who are traveling with young children are asked to contact a SkyAir staff member at the information desk."}, {"role": "speakerA", "text": "We apologize for the change and thank you for your understanding."}],jaSegments:["デンバー行き SkyAir 208便をご利用のお客様にご案内します。機材変更のため、この便の出発ゲートは9番から14番に変更となりました。", "搭乗開始は当初の予定より20分遅れて、午後3時40分となります。", "お手伝いが必要なお客様、および小さなお子様をお連れのお客様は、案内デスクの SkyAir スタッフまでお声がけください。", "変更によりご迷惑をおかけしますが、ご理解のほどよろしくお願いいたします。"]},"lx-p4-set10":{segments:[{"role": "speakerA", "text": "Hello, Mr. Carter. This is Lisa from Northside Auto Repair, calling about your car. The repairs are now complete, and your car is ready for pickup."}, {"role": "speakerA", "text": "The total cost is 420 dollars, which is less than our original estimate of 500 dollars, because the brake parts did not need to be replaced."}, {"role": "speakerA", "text": "You can pick up your car anytime before six o'clock today, or tomorrow between eight and five."}, {"role": "speakerA", "text": "Please bring your repair receipt when you come. Thank you."}],jaSegments:["こんにちは、Carterさん。Northside Auto Repair の Lisa です。お車の修理が完了し、お引き取りいただけるようになりました。", "料金は合計420ドルで、当初の見積もり500ドルより安くなりました。ブレーキ部品を交換する必要がなかったためです。", "お引き取りは本日6時まで、または明日8時から5時の間にお願いします。", "お越しの際は修理の領収書をお持ちください。ありがとうございました。"]}};
+,"lx-p3-set08":{segments:[{"role": "speakerA", "text": "Hi, Tom. Do you have a minute? The slides for this afternoon's presentation won't open on my computer."}, {"role": "speakerB", "text": "That's strange. Did you try restarting it?"}, {"role": "speakerA", "text": "Twice. I just get an error message every time."}, {"role": "speakerB", "text": "The file might be damaged. Do you have a copy saved anywhere else?"}, {"role": "speakerA", "text": "I saved one on the shared drive last night, but it's the version from before I added the sales figures."}, {"role": "speakerB", "text": "That's fine. The figures are in the report I e-mailed you this morning, so you can copy them from there."}, {"role": "speakerA", "text": "Good idea. But the client meeting starts at two, and it's already one thirty."}, {"role": "speakerB", "text": "Then let's use the computer in the meeting room instead of yours. I'll set it up while you update the slides."}, {"role": "speakerA", "text": "Thanks. Could you also print a few copies of the report, just in case?"}, {"role": "speakerB", "text": "Sure. I'll do that right after I finish setting up the computer."}],jaSegments:["こんにちは、Tom。少し時間ありますか。午後のプレゼンのスライドが私のパソコンで開けないんです。", "それは変ですね。再起動は試しましたか。", "2回しました。毎回エラーメッセージが出ます。", "ファイルが壊れているのかもしれません。ほかにコピーは保存していますか。", "昨夜、共有ドライブに保存しましたが、売上数字を入れる前のバージョンなんです。", "大丈夫ですよ。数字は今朝メールで送ったレポートに入っているので、そこからコピーできます。", "いい考えですね。でも顧客との会議は2時からで、もう1時半です。", "では、あなたのパソコンではなく会議室のパソコンを使いましょう。あなたがスライドを更新している間に、私がセットアップします。", "ありがとう。念のため、レポートも何部か印刷してもらえますか。", "いいですよ。パソコンのセットアップが終わったらすぐに印刷します。"]},"lx-p3-set09":{segments:[{"role": "speakerA", "text": "Hello. I'd like to book a flight to Chicago for next Tuesday. I need to arrive before noon for a conference."}, {"role": "speakerB", "text": "Let me check. There's a flight that leaves at seven ten and arrives at ten forty-five, or a cheaper one at nine thirty that gets in at one fifteen."}, {"role": "speakerA", "text": "The cheaper one is too late. I'll take the seven ten flight."}, {"role": "speakerB", "text": "Certainly. Would you like a window seat or an aisle seat?"}, {"role": "speakerA", "text": "An aisle seat, please. And is a meal included on that flight?"}, {"role": "speakerB", "text": "Yes, breakfast is served on morning flights. Will you be checking any luggage?"}, {"role": "speakerA", "text": "Just one suitcase. Oh, and I may need to change my return date. Is that possible?"}, {"role": "speakerB", "text": "Yes. But please note that changes made less than a week before departure cost fifty dollars."}, {"role": "speakerA", "text": "That's fine. I'll book the return for Friday for now, and I'll let you know if it changes."}],jaSegments:["こんにちは。来週の火曜日にシカゴ行きの飛行機を予約したいんです。会議があるので、正午前に到着しなければなりません。", "お調べします。7時10分発で10時45分に着く便と、安いですが9時30分発で1時15分着の便があります。", "安い方は遅すぎます。7時10分の便にします。", "かしこまりました。窓側と通路側、どちらの席がよろしいですか。", "通路側をお願いします。それと、その便は食事付きですか。", "はい、午前の便では朝食が出ます。お預けの荷物はありますか。", "スーツケース1つだけです。あと、帰りの日付を変更するかもしれません。可能ですか。", "はい。ただし、出発の1週間前を切ってからの変更には50ドルかかりますのでご注意ください。", "大丈夫です。とりあえず帰りは金曜日で予約して、変わるようなら連絡します。"]},"lx-p3-set10":{segments:[{"role": "speakerA", "text": "Hi, Rachel. How are the preparations going for Monday's orientation for the new employees?"}, {"role": "speakerB", "text": "Almost done. Twelve people are starting, so I reserved the large training room."}, {"role": "speakerA", "text": "Good. Have the welcome packages been printed yet?"}, {"role": "speakerB", "text": "The printing company delivered them this morning. But we're short of name badges — only ten arrived."}, {"role": "speakerA", "text": "I'll call the company today and ask them to send the missing two by Friday."}, {"role": "speakerB", "text": "Thanks. Also, the president would like to give a short welcome speech at nine."}, {"role": "speakerA", "text": "Then we should start registration at eight thirty instead of nine."}, {"role": "speakerB", "text": "Right. I'll update the schedule and e-mail it to all the presenters this afternoon."}, {"role": "speakerA", "text": "Perfect. And what about lunch? Did you order it from the usual place?"}, {"role": "speakerB", "text": "Yes, but this time I asked them to add two vegetarian meals."}],jaSegments:["やあ、Rachel。月曜の新入社員向けオリエンテーションの準備はどうですか。", "ほぼ終わりました。12人入社するので、大きい研修室を予約しました。", "よかった。歓迎パッケージはもう印刷できましたか。", "印刷会社が今朝届けてくれました。でも名札が足りません。10個しか届いていないんです。", "今日会社に電話して、不足分の2個を金曜までに送るよう頼みます。", "ありがとうございます。それと、社長が9時に短い歓迎の挨拶をしたいそうです。", "では、受付は9時ではなく8時半に始めましょう。", "そうですね。今日の午後に日程を更新して、発表者全員にメールします。", "完璧だね。それと昼食は？いつものところに頼んだ？", "はい。ただ今回は、ベジタリアン向けの食事を2食追加してもらいました。"]},"lx-p3-set11":{segments:[{"role": "speakerA", "text": "Hello, this is Anna Reed in room 512. I'm calling about my reservation."}, {"role": "speakerB", "text": "Good evening, Ms. Reed. How can I help you?"}, {"role": "speakerA", "text": "My meeting tomorrow has been moved to the afternoon, so I'd like to check out later than planned. Is a late checkout possible?"}, {"role": "speakerB", "text": "Checkout is normally at eleven, but we can extend it to two o'clock for an additional twenty dollars."}, {"role": "speakerA", "text": "Two o'clock would be perfect. Could you add that to my bill?"}, {"role": "speakerB", "text": "Certainly. Would you like anything else?"}, {"role": "speakerA", "text": "Yes — my room faces the street, and it was quite noisy last night. Is there a quieter room available for tonight?"}, {"role": "speakerB", "text": "Let me check. We have a room on the sixth floor facing the garden. I can move you there right away."}, {"role": "speakerA", "text": "That would be wonderful. Thank you."}, {"role": "speakerB", "text": "You're welcome. A staff member will come to help you with your luggage in ten minutes."}],jaSegments:["こんにちは、512号室の Anna Reed です。予約の件でお電話しました。", "こんばんは、Reed様。どのようなご用件でしょうか。", "明日の会議が午後に変更になったので、予定より遅くチェックアウトしたいのですが、レイトチェックアウトは可能ですか。", "通常チェックアウトは11時ですが、追加料金20ドルで2時まで延長できます。", "2時なら完璧です。料金に加えておいてもらえますか。", "かしこまりました。ほかにご要望はありますか。", "はい。私の部屋は通りに面していて、昨夜はかなりうるさかったんです。今夜、もっと静かな部屋は空いていますか。", "お調べします。6階に庭に面した部屋があります。すぐにお移りいただけます。", "それは助かります。ありがとうございます。", "どういたしまして。10分後にスタッフがお荷物のお手伝いに伺います。"]},"lx-p3-set12":{segments:[{"role": "speakerA", "text": "Hi, Yuki. Are we all set for the trade show this weekend?"}, {"role": "speakerB", "text": "Almost. The display panels arrived this morning, but the product samples haven't come yet."}, {"role": "speakerA", "text": "They were supposed to be delivered yesterday. Did you call the shipping company?"}, {"role": "speakerB", "text": "Yes. They said the truck broke down, but the samples will arrive tomorrow morning by ten."}, {"role": "speakerA", "text": "That's cutting it close. The show opens at nine on Saturday."}, {"role": "speakerB", "text": "The samples get here on Friday, so we'll have all afternoon to set up the booth."}, {"role": "speakerA", "text": "Good. What about the brochures? Do we have enough?"}, {"role": "speakerB", "text": "We have three hundred, but last year we gave out almost five hundred. I'll order two hundred more today."}, {"role": "speakerA", "text": "Please do. And let's meet at the venue at eight on Saturday to do a final check."}, {"role": "speakerB", "text": "Agreed. I'll bring the sign-up sheets for visitors who want a catalog."}],jaSegments:["こんにちは、Yuki。今週末の展示会の準備は全部整いましたか。", "ほぼ整いました。展示パネルは今朝届きましたが、商品サンプルがまだ来ていません。", "昨日届くはずでしたよね。配送会社には電話しましたか。", "はい。トラックが故障したそうですが、サンプルは明日の朝10時までに届くそうです。", "かなりギリギリですね。展示会は土曜の9時に始まりますよ。", "サンプルは金曜に着くので、午後いっぱいブースの設営ができます。", "よかった。パンフレットはどうですか。足りますか。", "300部ありますが、昨年はほぼ500部配りました。今日200部追加で注文します。", "お願いします。それと、土曜は8時に会場で集合して最終確認をしましょう。", "承知しました。カタログを希望する来場者向けの申込書を持っていきます。"]},"lx-p3-set13":{segments:[{"role": "speakerA", "text": "Excuse me. I bought this coffee maker here last week, but it stopped working this morning."}, {"role": "speakerB", "text": "I'm sorry to hear that. Do you have the receipt with you?"}, {"role": "speakerA", "text": "Yes, here it is. I'd like a refund if possible."}, {"role": "speakerB", "text": "Our policy allows an exchange within thirty days, but refunds are only given if the item is unopened."}, {"role": "speakerA", "text": "I see. Then I'll exchange it for the same model. Do you have one in stock?"}, {"role": "speakerB", "text": "We do. Let me get one from the back. Would you like me to test it here before you take it home?"}, {"role": "speakerA", "text": "Yes, please. I don't want the same problem again."}, {"role": "speakerB", "text": "Of course. And if the new one has any issues within ninety days, we'll repair it free of charge."}, {"role": "speakerA", "text": "That's reassuring. How long does a repair usually take?"}, {"role": "speakerB", "text": "About a week. We'll call you when it's ready."}],jaSegments:["すみません。このコーヒーメーカーを先週ここで買ったのですが、今朝動かなくなってしまいました。", "それは申し訳ありません。レシートはお持ちですか。", "はい、これです。できれば返金してほしいのですが。", "当店のポリシーでは30日以内の交換は可能ですが、返金は未開封の商品に限ります。", "そうですか。では同じモデルと交換します。在庫はありますか。", "あります。裏から持ってきますね。お持ち帰りの前に、ここで動作確認をしましょうか。", "はい、お願いします。同じ問題は繰り返したくないので。", "もちろんです。それと、新しい方に90日以内に問題があれば、無料で修理します。", "それは安心です。修理には通常どれくらいかかりますか。", "1週間ほどです。できあがったらお電話します。"]},"lx-p4-set09":{segments:[{"role": "speakerA", "text": "Attention, passengers traveling on SkyAir Flight 208 to Denver. Due to a change in aircraft, this flight will now depart from Gate 14 instead of Gate 9."}, {"role": "speakerA", "text": "Boarding will begin at 3:40 P.M., twenty minutes later than originally scheduled."}, {"role": "speakerA", "text": "Passengers who need assistance or who are traveling with young children are asked to contact a SkyAir staff member at the information desk."}, {"role": "speakerA", "text": "We apologize for the change and thank you for your understanding."}],jaSegments:["デンバー行き SkyAir 208便をご利用のお客様にご案内します。機材変更のため、この便の出発ゲートは9番から14番に変更となりました。", "搭乗開始は当初の予定より20分遅れて、午後3時40分となります。", "お手伝いが必要なお客様、および小さなお子様をお連れのお客様は、案内デスクの SkyAir スタッフまでお声がけください。", "変更によりご迷惑をおかけしますが、ご理解のほどよろしくお願いいたします。"]},"lx-p4-set10":{segments:[{"role": "speakerA", "text": "Hello, Mr. Carter. This is Lisa from Northside Auto Repair, calling about your car. The repairs are now complete, and your car is ready for pickup."}, {"role": "speakerA", "text": "The total cost is 420 dollars, which is less than our original estimate of 500 dollars, because the brake parts did not need to be replaced."}, {"role": "speakerA", "text": "You can pick up your car anytime before six o'clock today, or tomorrow between eight and five."}, {"role": "speakerA", "text": "Please bring your repair receipt when you come. Thank you."}],jaSegments:["こんにちは、Carterさん。Northside Auto Repair の Lisa です。お車の修理が完了し、お引き取りいただけるようになりました。", "料金は合計420ドルで、当初の見積もり500ドルより安くなりました。ブレーキ部品を交換する必要がなかったためです。", "お引き取りは本日6時まで、または明日8時から5時の間にお願いします。", "お越しの際は修理の領収書をお持ちください。ありがとうございました。"]},
+"lx-p2-26": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "When does the training session start tomorrow?"
+    }
+  ],
+  "jaSegments": [
+    "明日の研修セッションは何時に始まりますか。"
+  ]
+},
+"lx-p2-27": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Have you sent the invoice to the client yet?"
+    }
+  ],
+  "jaSegments": [
+    "請求書はもうクライアントに送りましたか。"
+  ]
+},
+"lx-p2-28": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Where can I find the nearest pharmacy?"
+    }
+  ],
+  "jaSegments": [
+    "一番近い薬局はどこにありますか。"
+  ]
+},
+"lx-p2-29": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Could you review this contract before Friday?"
+    }
+  ],
+  "jaSegments": [
+    "金曜日までにこの契約書を確認していただけますか。"
+  ]
+},
+"lx-p2-30": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Would you like your receipt by email or in print?"
+    }
+  ],
+  "jaSegments": [
+    "領収書はメールと印刷のどちらがいいですか。"
+  ]
+},
+"lx-p2-31": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Who is in charge of the new marketing project?"
+    }
+  ],
+  "jaSegments": [
+    "新しいマーケティングプロジェクトの担当者は誰ですか。"
+  ]
+},
+"lx-p2-32": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Why don't we take a break and continue after lunch?"
+    }
+  ],
+  "jaSegments": [
+    "休憩して、昼食の後に続けませんか。"
+  ]
+},
+"lx-p2-33": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "The printer on the third floor is out of order again."
+    }
+  ],
+  "jaSegments": [
+    "3階のプリンターがまた故障しています。"
+  ]
+},
+"lx-p2-34": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "How long will the renovation of the lobby take?"
+    }
+  ],
+  "jaSegments": [
+    "ロビーの改装にはどのくらいかかりますか。"
+  ]
+},
+"lx-p2-35": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Is this seat taken?"
+    }
+  ],
+  "jaSegments": [
+    "この席は誰か座っていますか。"
+  ]
+},
+"lx-p2-36": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Why was the flight to Chicago delayed?"
+    }
+  ],
+  "jaSegments": [
+    "シカゴ行きの便はなぜ遅れたのですか。"
+  ]
+},
+"lx-p2-37": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Could you possibly reschedule my appointment to next Tuesday?"
+    }
+  ],
+  "jaSegments": [
+    "私の予約を来週の火曜日に変更していただけますか。"
+  ]
+},
+"lx-p2-38": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "How many people have registered for the workshop?"
+    }
+  ],
+  "jaSegments": [
+    "ワークショップには何人が登録していますか。"
+  ]
+},
+"lx-p2-39": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "What did the manager say about the budget cuts?"
+    }
+  ],
+  "jaSegments": [
+    "予算削減についてマネージャーは何と言いましたか。"
+  ]
+},
+"lx-p2-40": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "How about ordering lunch for the whole team today?"
+    }
+  ],
+  "jaSegments": [
+    "今日はチーム全員分の昼食を注文しませんか。"
+  ]
+},
+"lx-p2-41": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Do you know if the library is open on Sundays?"
+    }
+  ],
+  "jaSegments": [
+    "図書館は日曜日も開いているか知っていますか。"
+  ]
+},
+"lx-p2-42": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "How often does the shuttle bus run between the two offices?"
+    }
+  ],
+  "jaSegments": [
+    "2つのオフィス間のシャトルバスはどのくらいの頻度で運行していますか。"
+  ]
+},
+"lx-p2-43": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "I've been feeling much better since I started jogging in the morning."
+    }
+  ],
+  "jaSegments": [
+    "朝ジョギングを始めてから、ずっと体調がいいんです。"
+  ]
+},
+"lx-p2-44": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "How much does it cost to rent a bicycle for a day?"
+    }
+  ],
+  "jaSegments": [
+    "自転車を1日借りるといくらかかりますか。"
+  ]
+},
+"lx-p2-45": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Should we hold the seminar online or at the community center?"
+    }
+  ],
+  "jaSegments": [
+    "セミナーはオンラインとコミュニティセンターのどちらで開催すべきですか。"
+  ]
+},
+"lx-p2-46": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Would you mind opening the window for a moment?"
+    }
+  ],
+  "jaSegments": [
+    "少し窓を開けていただけますか。"
+  ]
+},
+"lx-p2-47": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "When is the deadline for submitting the expense reports?"
+    }
+  ],
+  "jaSegments": [
+    "経費報告書の提出期限はいつですか。"
+  ]
+},
+"lx-p2-48": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Weren't you supposed to meet the supplier this morning?"
+    }
+  ],
+  "jaSegments": [
+    "今朝、仕入先と会う予定ではありませんでしたか。"
+  ]
+},
+"lx-p2-49": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Our sales rose by ten percent compared to last quarter."
+    }
+  ],
+  "jaSegments": [
+    "私たちの売上は前四半期と比べて10パーセント増えました。"
+  ]
+},
+"lx-p2-50": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "How do I get to the city museum from here?"
+    }
+  ],
+  "jaSegments": [
+    "ここから市立博物館へはどうやって行けばいいですか。"
+  ]
+},
+"lx-p3-set14": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Hi, this is Dana from the marketing department. I would like to place an order for office supplies."
+    },
+    {
+      "role": "speakerB",
+      "text": "Sure, Dana. What do you need this time?"
+    },
+    {
+      "role": "speakerA",
+      "text": "We need 20 boxes of pens and 15 reams of printer paper."
+    },
+    {
+      "role": "speakerB",
+      "text": "Got it. Anything else?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Actually, two other teams asked to add their pens to our order. Could we increase the pens to 35 boxes?"
+    },
+    {
+      "role": "speakerB",
+      "text": "No problem. The pens are four dollars per box, so that is 140 dollars for the pens."
+    },
+    {
+      "role": "speakerA",
+      "text": "And the paper is six dollars per ream, right? Then the total should be 230 dollars."
+    },
+    {
+      "role": "speakerB",
+      "text": "That is correct. I can have everything delivered to your office by Thursday afternoon."
+    },
+    {
+      "role": "speakerA",
+      "text": "Perfect. Please send the invoice to our department by e-mail."
+    }
+  ],
+  "jaSegments": [
+    "こんにちは、マーケティング部のダナです。オフィス用品を注文したいのですが。",
+    "もちろんです、ダナさん。今回はご注文は何ですか？",
+    "ペン20箱と、プリンター用紙15包が必要です。",
+    "承知しました。他にはありますか？",
+    "実は、他の2チームからもペンを一緒に追加してほしいと頼まれまして。ペンを35箱に増やせますか？",
+    "問題ありません。ペンは1箱4ドルですので、ペンの分は140ドルになります。",
+    "それと、用紙は1包6ドルですよね？では合計は230ドルになるはずです。",
+    "その通りです。すべて木曜日の午後までにあなたのオフィスへお届けできます。",
+    "完璧です。請求書は私たちの部署にメールで送ってください。"
+  ]
+},
+"lx-p3-set15": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Hi, Mark. Are we all set for tomorrow's client meeting?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Almost. I booked the large conference room, but it only seats eight people."
+    },
+    {
+      "role": "speakerA",
+      "text": "How many people are coming now?"
+    },
+    {
+      "role": "speakerB",
+      "text": "The client just added two more people, so there will be ten of us in total."
+    },
+    {
+      "role": "speakerA",
+      "text": "Then let us move to the bigger room on the fifth floor. It seats twelve."
+    },
+    {
+      "role": "speakerB",
+      "text": "Good idea. Also, the client asked to start at 10:30 instead of 10:00."
+    },
+    {
+      "role": "speakerA",
+      "text": "Fine. I will update the calendar invitation and print ten copies of the sales report."
+    },
+    {
+      "role": "speakerB",
+      "text": "Thanks. I will prepare the projector and order coffee for ten."
+    },
+    {
+      "role": "speakerA",
+      "text": "Great, then we are ready."
+    }
+  ],
+  "jaSegments": [
+    "こんにちは、マーク。明日の顧客との会議の準備はできていますか？",
+    "ほぼできています。大会議室を予約しましたが、あそこは8人しか座れません。",
+    "今は何人来ることになっていますか？",
+    "顧客が先ほど2名追加したので、合計で10人になります。",
+    "では、5階の大きな部屋に移りましょう。あそこは12人座れます。",
+    "いい考えですね。それから、顧客から10時ではなく10時半に始めたいと要望がありました。",
+    "わかりました。カレンダーの招待を更新して、売上レポートを10部印刷します。",
+    "ありがとうございます。私はプロジェクターを準備して、10人分のコーヒーを注文します。",
+    "いいですね、それで準備完了です。"
+  ]
+},
+"lx-p3-set16": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Hello, I would like to arrange my business trip to Chicago next week."
+    },
+    {
+      "role": "speakerB",
+      "text": "Certainly. When are you planning to travel?"
+    },
+    {
+      "role": "speakerA",
+      "text": "I will fly out on Tuesday morning, May 12, and I was going to return on Thursday."
+    },
+    {
+      "role": "speakerB",
+      "text": "There is a flight at 8:15 on Tuesday morning. For the return, would you prefer Thursday evening or Friday morning?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Actually, a meeting was added on Thursday afternoon, so I will return on Friday morning instead."
+    },
+    {
+      "role": "speakerB",
+      "text": "Then you will need the hotel for three nights: Tuesday, Wednesday, and Thursday."
+    },
+    {
+      "role": "speakerA",
+      "text": "Right. Please book a hotel near the client's office, with breakfast included."
+    },
+    {
+      "role": "speakerB",
+      "text": "The Lakeview Hotel is available at 150 dollars per night. Shall I book it?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Yes, please. And could you e-mail me the itinerary when it is ready?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Of course. I will send it this afternoon."
+    }
+  ],
+  "jaSegments": [
+    "こんにちは、来週のシカゴへの出張の手配をお願いしたいのですが。",
+    "承知しました。いつご旅行の予定ですか？",
+    "5月12日、火曜日の朝に出発して、木曜日に戻るつもりでした。",
+    "火曜日の朝8時15分の便があります。お帰りは木曜日の夕方と金曜日の朝、どちらがよろしいですか？",
+    "実は、木曜日の午後に会議が追加されたので、金曜日の朝に戻ることにします。",
+    "では、ホテルは火曜、水曜、木曜の3泊必要ですね。",
+    "そうです。顧客のオフィスの近くのホテルで、朝食付きのものを予約してください。",
+    "レイクビューホテルが1泊150ドルで空いています。予約しましょうか？",
+    "はい、お願いします。それと、準備ができたら旅程表をメールで送ってもらえますか？",
+    "もちろんです。今日の午後にお送りします。"
+  ]
+},
+"lx-p3-set17": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Good evening, Mario's Restaurant. How may I help you?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Hi, I have a reservation for tonight at 7:00 under the name Tanaka."
+    },
+    {
+      "role": "speakerA",
+      "text": "Yes, Mr. Tanaka, a table for four. How can I help you?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Two more friends are joining us, so we will be six people. Can we change to a bigger table?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Certainly. We have a table for six available at 7:30. Would that work for you?"
+    },
+    {
+      "role": "speakerB",
+      "text": "7:30 is fine. Also, one of our guests is vegetarian. Do you have vegetarian dishes?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Yes, we have several pasta and salad options."
+    },
+    {
+      "role": "speakerB",
+      "text": "Great, thank you. We will see you at 7:30."
+    }
+  ],
+  "jaSegments": [
+    "こんばんは、レストラン「マリオズ」です。どのようなご用件でしょうか？",
+    "こんにちは、今夜7時にタナカの名前で予約をしています。",
+    "はい、タナカ様、4名様のお席ですね。どのようなご用件でしょうか？",
+    "友人が2人追加で来ることになり、6人になります。大きなテーブルに変更できますか？",
+    "承知しました。6名様のお席が7時半に空いております。それでよろしいですか？",
+    "7時半で大丈夫です。それと、私たちのうち1人がベジタリアンなのですが、ベジタリアン向けの料理はありますか？",
+    "はい、パスタやサラダのメニューがいくつかございます。",
+    "よかったです、ありがとうございます。では7時半に伺います。"
+  ]
+},
+"lx-p3-set18": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Good morning, City Medical Center. How may I help you?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Hello, this is Robert Green. I have an appointment with Dr. Sato tomorrow at 9:15, but I would like to reschedule it."
+    },
+    {
+      "role": "speakerA",
+      "text": "Let me check. Dr. Sato has an opening this Friday at 10:45, or next Monday at 8:30."
+    },
+    {
+      "role": "speakerB",
+      "text": "Friday at 10:45 works better for me."
+    },
+    {
+      "role": "speakerA",
+      "text": "All right. Your new appointment is Friday, June 5, at 10:45."
+    },
+    {
+      "role": "speakerB",
+      "text": "Thank you. Should I bring anything with me?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Please bring your insurance card and a list of any medicine you are currently taking."
+    },
+    {
+      "role": "speakerB",
+      "text": "I see. Last time I waited about 30 minutes. Should I arrive early?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Arriving 15 minutes early will help us check you in smoothly."
+    }
+  ],
+  "jaSegments": [
+    "おはようございます、シティ医療センターです。どのようなご用件でしょうか？",
+    "こんにちは、ロバート・グリーンです。明日9時15分に佐藤医師の予約がありますが、日時を変更したいのです。",
+    "確認いたします。佐藤医師は今週金曜日の10時45分、または来週月曜日の8時半に空きがあります。",
+    "金曜日の10時45分の方が都合がいいです。",
+    "承知しました。新しいご予約は6月5日金曜日、10時45分です。",
+    "ありがとうございます。何か持っていくものはありますか？",
+    "保険証と、現在服用している薬のリストをお持ちください。",
+    "わかりました。前回は30分ほど待ちました。早めに着いた方がいいですか？",
+    "15分前に到着していただけると、受付がスムーズに進みます。"
+  ]
+},
+"lx-p3-set19": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Hello, Sunshine Moving Company. How can I help you?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Hi, I am moving to a new apartment on June 20, and I would like an estimate."
+    },
+    {
+      "role": "speakerA",
+      "text": "Sure. How many rooms does your current apartment have?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Two bedrooms and a living room. I have about 30 boxes, plus a sofa and a dining table."
+    },
+    {
+      "role": "speakerA",
+      "text": "For that amount, our medium truck should be enough. The basic fee is 400 dollars."
+    },
+    {
+      "role": "speakerB",
+      "text": "I also have a piano. Does that cost extra?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Yes, moving a piano costs an additional 120 dollars, and we will send one extra worker."
+    },
+    {
+      "role": "speakerB",
+      "text": "OK. And my new place is on the third floor without an elevator."
+    },
+    {
+      "role": "speakerA",
+      "text": "That adds 50 dollars for the stairs. So your total estimate is 570 dollars."
+    },
+    {
+      "role": "speakerB",
+      "text": "That sounds reasonable. Please book us for the morning of June 20."
+    }
+  ],
+  "jaSegments": [
+    "こんにちは、サンシャイン引越し会社です。どのようなご用件でしょうか？",
+    "こんにちは、6月20日に新しいアパートへ引っ越すので、見積もりをお願いしたいのですが。",
+    "承知しました。今のお住まいは何部屋ですか？",
+    "寝室が2つとリビングがあります。段ボールが約30箱と、ソファとダイニングテーブルがあります。",
+    "その量でしたら、中型トラックで十分です。基本料金は400ドルです。",
+    "ピアノもあるのですが、追加料金がかかりますか？",
+    "はい、ピアノの運搬は追加で120ドルかかります。また、作業員を1名追加で派遣します。",
+    "わかりました。それと、新居はエレベーターのない3階です。",
+    "その場合は階段料金として50ドルが追加になります。したがって、見積もり総額は570ドルです。",
+    "妥当な金額ですね。6月20日の午前で予約をお願いします。"
+  ]
+},
+"lx-p3-set20": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Welcome to FitLife Gym. Are you interested in joining us?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Yes. Could you tell me about your membership plans?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Our basic plan is 40 dollars a month, and the premium plan is 65 dollars a month with access to the pool and classes."
+    },
+    {
+      "role": "speakerB",
+      "text": "I will take the basic plan. Is there a joining fee?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Normally it is 50 dollars, but this month we are waiving it for new members."
+    },
+    {
+      "role": "speakerB",
+      "text": "Great. If I pay for six months in advance, is there a discount?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Yes, you get one month free, so you would pay 200 dollars for six months."
+    },
+    {
+      "role": "speakerB",
+      "text": "That is a good deal. I will pay for six months today."
+    },
+    {
+      "role": "speakerA",
+      "text": "Wonderful. Let me prepare your membership card. Please fill out this form."
+    }
+  ],
+  "jaSegments": [
+    "フィットライフジムへようこそ。入会をお考えですか？",
+    "はい。会員プランについて教えてもらえますか？",
+    "ベーシックプランは月額40ドル、プレミアムプランは月額65ドルで、プールとクラスが利用できます。",
+    "ベーシックプランにします。入会金はありますか？",
+    "通常は50ドルですが、今月は新規会員の方には無料になっています。",
+    "よかったです。6か月分を前払いすると、割引はありますか？",
+    "はい、1か月分が無料になりますので、6か月で200ドルのお支払いになります。",
+    "それはいいですね。今日6か月分を支払います。",
+    "ありがとうございます。会員カードを準備しますね。この用紙にご記入ください。"
+  ]
+},
+"lx-p3-set21": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Hello, this is Speedy Auto Repair calling about your car."
+    },
+    {
+      "role": "speakerB",
+      "text": "Hi, did you find the problem?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Yes. Your brake pads are worn out and need to be replaced."
+    },
+    {
+      "role": "speakerB",
+      "text": "How much will the repair cost?"
+    },
+    {
+      "role": "speakerA",
+      "text": "The parts are 180 dollars and labor is 90 dollars, so the total is 270 dollars."
+    },
+    {
+      "role": "speakerB",
+      "text": "OK, please go ahead with the repair."
+    },
+    {
+      "role": "speakerA",
+      "text": "It will take about three hours, so your car should be ready by 4:00."
+    },
+    {
+      "role": "speakerB",
+      "text": "I have a meeting until 5:30, so I will pick it up tomorrow morning instead."
+    },
+    {
+      "role": "speakerA",
+      "text": "No problem. We will keep it in our garage overnight at no extra charge."
+    },
+    {
+      "role": "speakerB",
+      "text": "Thank you. Please call me if you find anything else."
+    }
+  ],
+  "jaSegments": [
+    "こんにちは、スピーディ自動車修理工場です。お車の件でお電話しました。",
+    "こんにちは、問題は見つかりましたか？",
+    "はい。ブレーキパッドがすり減っていて、交換が必要です。",
+    "修理にはいくらかかりますか？",
+    "部品代が180ドル、工賃が90ドルで、合計270ドルです。",
+    "わかりました、そのまま修理を進めてください。",
+    "約3時間かかりますので、4時にはお車の準備ができるはずです。",
+    "5時半まで会議があるので、代わりに明日の朝に取りに来ます。",
+    "問題ありません。追加料金なしで、一晩当社のガレージでお預かりします。",
+    "ありがとうございます。他に何か見つかったら電話してください。"
+  ]
+},
+"lx-p3-set22": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Good evening. Welcome to the Grand Hotel. How may I help you?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Hello, I have a reservation under the name Kim. I am checking in."
+    },
+    {
+      "role": "speakerA",
+      "text": "Welcome, Ms. Kim. You booked a single room for two nights."
+    },
+    {
+      "role": "speakerB",
+      "text": "Actually, my colleague is joining me tomorrow. Can I change to a twin room?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Certainly. A twin room is available on the sixth floor for an extra 30 dollars per night."
+    },
+    {
+      "role": "speakerB",
+      "text": "That is fine. Also, we would like to stay one more night, so three nights in total."
+    },
+    {
+      "role": "speakerA",
+      "text": "Let me update your reservation: a twin room for three nights, checking out on Sunday."
+    },
+    {
+      "role": "speakerB",
+      "text": "Thank you. Is breakfast included?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Yes, breakfast is served from 6:30 to 10:00 in the restaurant on the first floor."
+    }
+  ],
+  "jaSegments": [
+    "こんばんは。グランドホテルへようこそ。どのようなご用件でしょうか？",
+    "こんにちは、キムの名前で予約しています。チェックインをお願いします。",
+    "ようこそ、キム様。シングルルームを2泊でご予約いただいています。",
+    "実は、明日同僚が合流します。ツインルームに変更できますか？",
+    "承知しました。6階のツインルームが、1泊につき追加30ドルで空いております。",
+    "それで大丈夫です。それから、もう1泊延ばして、合計3泊にしたいのですが。",
+    "ご予約を更新します。ツインルームで3泊、日曜日にチェックアウトですね。",
+    "ありがとうございます。朝食は含まれていますか？",
+    "はい、朝食は1階のレストランで6時半から10時まで提供しています。"
+  ]
+},
+"lx-p3-set23": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "How is the website renewal project going, Ken?"
+    },
+    {
+      "role": "speakerB",
+      "text": "We have finished seven of the ten tasks so far."
+    },
+    {
+      "role": "speakerA",
+      "text": "That is good progress. Which tasks are left?"
+    },
+    {
+      "role": "speakerB",
+      "text": "The payment page, the mobile design, and the final testing."
+    },
+    {
+      "role": "speakerA",
+      "text": "The client asked us to launch one week earlier, on May 15. Can we make it?"
+    },
+    {
+      "role": "speakerB",
+      "text": "It will be tight, but if we assign one more person to testing, I think we can."
+    },
+    {
+      "role": "speakerA",
+      "text": "Then I will ask Ms. Ito to join the team from Monday."
+    },
+    {
+      "role": "speakerB",
+      "text": "Great. I will update the schedule and share it with everyone today."
+    }
+  ],
+  "jaSegments": [
+    "ケン、ウェブサイトリニューアルのプロジェクトはどう進んでいますか？",
+    "これまでに10件のタスクのうち7件が終わりました。",
+    "順調ですね。残っているタスクはどれですか？",
+    "決済ページ、モバイルデザイン、それに最終テストです。",
+    "クライアントから、公開を1週間早めて5月15日にしてほしいと要望がありました。間に合いますか？",
+    "厳しいですが、テストにもう1人担当を増やせば、可能だと思います。",
+    "では、月曜日から伊藤さんにチームに入ってもらうよう頼みます。",
+    "いいですね。今日中にスケジュールを更新して、全員に共有します。"
+  ]
+},
+"lx-p3-set24": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "We are planning a farewell party for Mr. Garcia, who is transferring to the Madrid office."
+    },
+    {
+      "role": "speakerB",
+      "text": "That is a nice idea. When should we hold it?"
+    },
+    {
+      "role": "speakerA",
+      "text": "His last day is Friday the 28th, so let us do it on Thursday evening."
+    },
+    {
+      "role": "speakerB",
+      "text": "How many people do you think will come?"
+    },
+    {
+      "role": "speakerA",
+      "text": "I sent invitations to 15 people, and 12 have confirmed so far."
+    },
+    {
+      "role": "speakerB",
+      "text": "If we set the budget at 30 dollars per person, we should reserve for at least 12 people."
+    },
+    {
+      "role": "speakerA",
+      "text": "Let us book the Italian restaurant near the station. They have a private room."
+    },
+    {
+      "role": "speakerB",
+      "text": "Good. I will make the reservation and order a cake."
+    },
+    {
+      "role": "speakerA",
+      "text": "And I will prepare a card that everyone can sign."
+    }
+  ],
+  "jaSegments": [
+    "マドリードのオフィスへ転勤するガルシアさんの送別会を計画しています。",
+    "それはいいですね。いつ開催しましょうか？",
+    "彼の最終日は28日の金曜日なので、木曜日の夜にしましょう。",
+    "何人くらい来ると思いますか？",
+    "15人に招待状を送って、今のところ12人から参加の返事が来ています。",
+    "予算を1人30ドルにするなら、少なくとも12人分を予約すべきですね。",
+    "駅の近くのイタリアンレストランを予約しましょう。個室がありますよ。",
+    "いいですね。私が予約をして、ケーキを注文します。",
+    "私は、全員がサインできるカードを用意します。"
+  ]
+},
+"lx-p3-set25": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Hi, Yuki. Do you have a minute? I need to ask you about this Saturday's shift."
+    },
+    {
+      "role": "speakerB",
+      "text": "Sure. I am scheduled to work from 9 to 5 on Saturday, right?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Yes, but I have a family event that day. Could we swap shifts?"
+    },
+    {
+      "role": "speakerB",
+      "text": "What shift do you have on Sunday?"
+    },
+    {
+      "role": "speakerA",
+      "text": "I am working Sunday from 11 to 7. If you take my Sunday shift, I will take your Saturday one."
+    },
+    {
+      "role": "speakerB",
+      "text": "Let me check my plans. Actually, that works for me."
+    },
+    {
+      "role": "speakerA",
+      "text": "Thank you so much. So we both still work eight hours; only the days change."
+    },
+    {
+      "role": "speakerB",
+      "text": "Right. But we need the manager's approval before Friday."
+    },
+    {
+      "role": "speakerA",
+      "text": "I will talk to Mr. Chen this afternoon and fill out the shift change form."
+    },
+    {
+      "role": "speakerB",
+      "text": "OK. Let me know once it is approved."
+    }
+  ],
+  "jaSegments": [
+    "こんにちは、ユキ。少し時間ある？今週土曜日のシフトについて聞きたいんだけど。",
+    "いいよ。私は土曜日、9時から5時の勤務だよね？",
+    "うん、でもその日は家族の用事があるんだ。シフトを交換できないかな？",
+    "あなたは日曜日はどんなシフトなの？",
+    "日曜日は11時から7時まで働くことになっている。僕の日曜のシフトを代わってもらえれば、君の土曜のシフトを代わるよ。",
+    "予定を確認するね。……実は、それで大丈夫だよ。",
+    "本当にありがとう。お互い8時間勤務のままで、曜日が変わるだけだね。",
+    "そうだね。でも、金曜日までにマネージャーの承認が必要だよ。",
+    "今日の午後にチェンさんに話して、シフト変更届を出すよ。",
+    "わかった。承認されたら教えてね。"
+  ]
+},
+"lx-p3-set26": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Hello, ShopEasy customer service. How may I help you?"
+    },
+    {
+      "role": "speakerB",
+      "text": "Hi, I ordered three shirts online last week, but one of them is the wrong size."
+    },
+    {
+      "role": "speakerA",
+      "text": "I am sorry about that. Could I have your order number, please?"
+    },
+    {
+      "role": "speakerB",
+      "text": "It is SE-4521. The shirts were 30 dollars each, and I would like to exchange the medium one for a large."
+    },
+    {
+      "role": "speakerA",
+      "text": "I see. We can send you a large one, and you can return the medium with free shipping."
+    },
+    {
+      "role": "speakerB",
+      "text": "How long will the replacement take?"
+    },
+    {
+      "role": "speakerA",
+      "text": "It should arrive within five business days, by next Tuesday."
+    },
+    {
+      "role": "speakerB",
+      "text": "OK. Also, I was charged a five-dollar delivery fee, but orders over 80 dollars were supposed to be free."
+    },
+    {
+      "role": "speakerA",
+      "text": "You are right. Your total was 90 dollars, so I will refund the five-dollar delivery fee to your card."
+    }
+  ],
+  "jaSegments": [
+    "こんにちは、ショップイージーのカスタマーサービスです。どのようなご用件でしょうか？",
+    "こんにちは、先週オンラインでシャツを3枚注文したのですが、1枚のサイズが違っていました。",
+    "申し訳ございません。注文番号を教えていただけますか？",
+    "SE-4521です。シャツは1枚30ドルでした。MサイズをLサイズに交換したいのですが。",
+    "承知しました。Lサイズをお送りしますので、Mサイズは送料無料でご返送ください。",
+    "交換品はどのくらいで届きますか？",
+    "5営業日以内、来週火曜日までには届くはずです。",
+    "わかりました。それと、配送料5ドルが請求されていたのですが、80ドル以上の注文は送料無料のはずです。",
+    "おっしゃる通りです。合計は90ドルでしたので、配送料5ドルをカードに返金いたします。"
+  ]
+},
+"lx-p4-set11": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Hello, Mr. Delgado. This is Rachel Kim from Brightpath Accounting. I'm calling about the documents you dropped off on Tuesday morning."
+    },
+    {
+      "role": "speakerA",
+      "text": "Our team has finished reviewing your tax forms, and everything looks in order except for one item: the receipt for the office equipment you purchased in March is missing."
+    },
+    {
+      "role": "speakerA",
+      "text": "Could you please send us a copy by Friday, April 18?"
+    },
+    {
+      "role": "speakerA",
+      "text": "Also, I'd like to schedule a short meeting next week to go over the final figures before we submit them. The meeting should take no more than thirty minutes, and I'm available on Monday afternoon or Wednesday morning."
+    },
+    {
+      "role": "speakerA",
+      "text": "Please call me back at 555-0142 to confirm a time. Thank you, and I look forward to speaking with you soon."
+    }
+  ],
+  "jaSegments": [
+    "デルガドさん、こんにちは。ブライトパス会計事務所のレイチェル・キムです。火曜日の朝にお持ちいただいた書類の件でお電話しています。",
+    "税務書類の確認は終わりましたが、1点だけ不足があります。3月にご購入されたオフィス機器の領収書が見当たりません。",
+    "4月18日（金）までにコピーをお送りいただけますか。",
+    "また、提出前に最終的な数字を確認するため、来週短い打ち合わせを設定したいと思います。30分以内で終わる予定で、私は月曜の午後か水曜の午前が空いています。",
+    "お時間の確認のため、555-0142まで折り返しお電話ください。ありがとうございます。お話しできるのを楽しみにしています。"
+  ]
+},
+"lx-p4-set12": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Attention, shoppers, and welcome to the grand opening of Greenfield Home and Garden, located at 418 Willow Street."
+    },
+    {
+      "role": "speakerB",
+      "text": "To celebrate our opening weekend, every item in the store is discounted by twenty percent all weekend long, and the first fifty customers today will receive a free potted herb plant."
+    },
+    {
+      "role": "speakerB",
+      "text": "Our gardening experts will hold free workshops on Saturday and Sunday at eleven and two, covering topics such as soil preparation and indoor plant care."
+    },
+    {
+      "role": "speakerB",
+      "text": "The store also features a café on the second floor, where you can enjoy locally roasted coffee while you browse our catalog."
+    },
+    {
+      "role": "speakerB",
+      "text": "We are open from nine in the morning until nine in the evening, seven days a week. Thank you for joining us, and happy gardening!"
+    }
+  ],
+  "jaSegments": [
+    "お客様にお知らせいたします。ウィロー通り418番地にオープンしたグリーンフィールド・ホーム＆ガーデンのグランドオープンへようこそ。",
+    "オープン記念の週末として、店内の全商品が週末を通して2割引となり、本日先着50名のお客様にはハーブの鉢植えを無料でプレゼントいたします。",
+    "園芸の専門家による無料ワークショップを土曜日と日曜日の11時と2時に開催し、土づくりや室内植物の手入れなどを取り上げます。",
+    "2階にはカフェもあり、カタログをご覧になりながら地元で焙煎したコーヒーをお楽しみいただけます。",
+    "営業時間は週7日、午前9時から午後9時までです。ご来店ありがとうございます。どうぞガーデニングをお楽しみください。"
+  ]
+},
+"lx-p4-set13": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Good morning, and here is your weather forecast for the Riverdale area for Friday, October 3."
+    },
+    {
+      "role": "speakerA",
+      "text": "The morning will start out cloudy with temperatures around twelve degrees, but skies should clear by midday, and the afternoon high will reach nineteen degrees, so dress in layers if you head out early."
+    },
+    {
+      "role": "speakerA",
+      "text": "Winds from the northwest will be moderate, at about twenty kilometers per hour, so it may feel cooler along the coast."
+    },
+    {
+      "role": "speakerA",
+      "text": "Looking ahead to the weekend, a band of rain is expected to move in late Saturday night, bringing heavy showers through Sunday morning."
+    },
+    {
+      "role": "speakerA",
+      "text": "If you're planning outdoor activities, Saturday daytime is your best bet. Temperatures will drop again on Monday, with overnight lows near four degrees. Stay tuned for the extended forecast after the break."
+    }
+  ],
+  "jaSegments": [
+    "おはようございます。10月3日金曜日、リバーデール地域の天気予報です。",
+    "朝は曇りで気温は12度前後ですが、昼までには晴れて、午後の最高気温は19度まで上がるでしょう。朝早く出かける方は重ね着をしてください。",
+    "北西の風が時速約20キロとやや強く、海岸沿いでは涼しく感じられるでしょう。",
+    "週末を見ると、土曜の夜遅くに雨の帯が近づき、日曜の朝まで強い雨が降る見込みです。",
+    "屋外の予定がある方は、土曜の日中が最適です。月曜は再び気温が下がり、夜間の最低気温は4度近くになるでしょう。この後、詳しい予報をお伝えします。"
+  ]
+},
+"lx-p4-set14": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Good morning. It's 7:45, and time for your morning traffic update on Highway 9 and the downtown area."
+    },
+    {
+      "role": "speakerB",
+      "text": "First, an accident near the Elm Street exit has blocked the two left lanes of Highway 9 heading south, and traffic is backed up for about three kilometers."
+    },
+    {
+      "role": "speakerB",
+      "text": "Crews expect to clear the scene by nine o'clock, but until then, drivers are advised to use Route 12 as an alternate."
+    },
+    {
+      "role": "speakerB",
+      "text": "In the downtown area, construction on Fifth Avenue continues, and the street will remain closed between Oak and Pine until Friday. Side streets in the area are also congested."
+    },
+    {
+      "role": "speakerB",
+      "text": "Bus routes 14 and 22 are being detoured via Third Avenue, so please allow extra time for your commute this morning. We'll have another update in twenty minutes."
+    }
+  ],
+  "jaSegments": [
+    "おはようございます。7時45分、ハイウェイ9号線とダウンタウン周辺の朝の交通情報です。",
+    "まず、エルム通りの出口付近で事故があり、南行きハイウェイ9号線の左側2車線が塞がれ、約3キロの渋滞が発生しています。",
+    "作業員は9時までに現場を処理できる見込みですが、それまでは迂回路として12号線のご利用をお勧めします。",
+    "ダウンタウンでは5番通りの工事が続いており、オーク通りからパイン通りの間は金曜日まで通行止めです。周辺の裏通りも混雑しています。",
+    "14番と22番のバス路線は3番通りへ迂回運行していますので、今朝の通勤には余裕を持ってお出かけください。次の情報は20分後にお伝えします。"
+  ]
+},
+"lx-p4-set15": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Welcome, everyone, to the Harborview Lighthouse tour. My name is Daniel, and I'll be your guide for the next ninety minutes."
+    },
+    {
+      "role": "speakerA",
+      "text": "This lighthouse was built in 1874 and guided ships safely into the harbor for over a hundred years before it was retired in 1985."
+    },
+    {
+      "role": "speakerA",
+      "text": "We'll begin in the keeper's house, where you'll see how the lighthouse keepers and their families lived, and then we'll climb the 120 steps to the top."
+    },
+    {
+      "role": "speakerA",
+      "text": "Please note that photography is welcome everywhere except inside the museum room, where the flash can damage the old photographs."
+    },
+    {
+      "role": "speakerA",
+      "text": "After the climb, we'll have about twenty minutes in the gift shop before the bus leaves at half past three. Please stay with the group, and feel free to ask me questions at any time."
+    }
+  ],
+  "jaSegments": [
+    "皆さん、ハーバービュー灯台ツアーへようこそ。ガイドのダニエルです。これから90分間ご案内します。",
+    "この灯台は1874年に建てられ、1985年に役目を終えるまで、100年以上にわたり船を安全に港へ導いてきました。",
+    "まず灯台守の家を見学し、灯台守とその家族の暮らしぶりをご覧いただきます。その後、120段の階段を上って頂上へ向かいます。",
+    "写真撮影はどこでも可能ですが、資料室の中だけはご遠慮ください。フラッシュで古い写真が傷むおそれがあります。",
+    "上った後は、バスが3時半に出発するまでギフトショップで約20分お過ごしいただけます。グループから離れず、質問はいつでもどうぞ。"
+  ]
+},
+"lx-p4-set16": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Introducing the VitaBlend Go, the portable blender that fits in your gym bag and blends a fresh smoothie in just thirty seconds."
+    },
+    {
+      "role": "speakerB",
+      "text": "Its rechargeable battery lasts for up to fifteen blends on a single charge, and it recharges fully in under two hours with the included USB cable."
+    },
+    {
+      "role": "speakerB",
+      "text": "The VitaBlend Go is made from durable, BPA-free materials, and every part except the base can go right into the dishwasher, so cleanup takes less than a minute."
+    },
+    {
+      "role": "speakerB",
+      "text": "For a limited time, order through our website and receive a second blending cup free, plus free shipping on all orders over forty dollars."
+    },
+    {
+      "role": "speakerB",
+      "text": "The VitaBlend Go is available in four colors and comes with a two-year warranty. Visit vitablendgo dot com today and start blending anywhere."
+    }
+  ],
+  "jaSegments": [
+    "新登場、バイタブレンド・ゴー。ジムバッグに入るポータブルブレンダーで、新鮮なスムージーがわずか30秒で作れます。",
+    "充電式バッテリーは1回の充電で最大15回使用でき、付属のUSBケーブルで2時間以内にフル充電できます。",
+    "耐久性のあるBPAフリー素材を使用し、本体ベース以外のパーツはすべて食洗機で洗えるので、お手入れは1分もかかりません。",
+    "期間限定で、ウェブサイトからご注文いただくと、ブレンドカップをもう1つ無料でプレゼント。さらに40ドル以上のご注文は送料無料です。",
+    "バイタブレンド・ゴーは4色展開で、2年間の保証付きです。今すぐ vitablendgo.com にアクセスして、どこでもブレンドを始めましょう。"
+  ]
+},
+"lx-p4-set17": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Good morning, everyone, and thank you for coming to our quarterly planning meeting. I'm Sarah Nguyen, head of the marketing department."
+    },
+    {
+      "role": "speakerA",
+      "text": "Before we begin, please make sure you've signed the attendance sheet by the door, and help yourselves to coffee and pastries at the back."
+    },
+    {
+      "role": "speakerA",
+      "text": "Today, we'll first review the results of the spring campaign, which exceeded our sales target by twelve percent. Congratulations to everyone who contributed to that success."
+    },
+    {
+      "role": "speakerA",
+      "text": "After that, Mr. Ortiz from the design team will present the new packaging proposal, and we'll vote on it before lunch."
+    },
+    {
+      "role": "speakerA",
+      "text": "Finally, a reminder that the meeting will end at noon today, as the room is booked for another group at twelve thirty, so please help us stay on schedule. Let's get started."
+    }
+  ],
+  "jaSegments": [
+    "皆さん、おはようございます。四半期計画会議にお集まりいただきありがとうございます。マーケティング部長のサラ・グエンです。",
+    "始める前に、ドアのそばの出席表にご記名ください。後方にはコーヒーとペストリーを用意していますので、ご自由にどうぞ。",
+    "本日はまず、売上目標を12パーセント上回った春のキャンペーンの結果を振り返ります。貢献してくださった皆さん、おめでとうございます。",
+    "その後、デザインチームのオルティスさんが新しいパッケージの提案を発表し、昼食前に投票を行います。",
+    "最後にお知らせですが、この部屋は12時半から別のグループが予約しているため、会議は正午に終了します。予定通りに進められるようご協力ください。それでは始めましょう。"
+  ]
+},
+"lx-p4-set18": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Good evening. This is WMRK News at six. I'm Tom Beckett with this evening's top stories."
+    },
+    {
+      "role": "speakerB",
+      "text": "The city council voted last night to approve funding for a new community library in the Eastside district, ending two years of debate, much to the relief of local residents."
+    },
+    {
+      "role": "speakerB",
+      "text": "Construction is scheduled to begin in March and is expected to take about eighteen months, creating roughly two hundred local jobs."
+    },
+    {
+      "role": "speakerB",
+      "text": "In other news, the regional soccer team, the Harbor City Mariners, defeated the league leaders two to one on Saturday, moving into second place in the standings."
+    },
+    {
+      "role": "speakerB",
+      "text": "And finally, the annual River Festival will return next month, with organizers expecting more than fifty thousand visitors over the three-day event. That's the news; stay tuned for sports after the break."
+    }
+  ],
+  "jaSegments": [
+    "こんばんは。WMRKニュース、6時の時間です。今夜の主なニュースをトム・ベケットがお伝えします。",
+    "市議会は昨夜、イーストサイド地区に新しい地域図書館を建設するための予算を承認し、2年にわたる議論に決着がつきました。地元住民は安堵しています。",
+    "工事は3月に始まり、約18か月かかる見込みで、およそ200人の地元雇用が生まれるとされています。",
+    "その他のニュースです。地域のサッカーチーム、ハーバーシティ・マリナーズが土曜日、リーグ首位のチームを2対1で破り、順位を2位に上げました。",
+    "最後に、恒例のリバーフェスティバルが来月戻ってきます。主催者は3日間のイベントに5万人以上の来場を見込んでいます。以上ニュースでした。この後はスポーツをお伝えします。"
+  ]
+},
+"lx-p4-set19": {
+  "segments": [
+    {
+      "role": "speakerA",
+      "text": "Good evening. Ladies and gentlemen, welcome to the fifteenth annual Bright Futures Charity Gala. I'm your host, Emily Carter."
+    },
+    {
+      "role": "speakerA",
+      "text": "Thank you all for being here tonight to support scholarships for local high school students. Last year, your generosity helped forty-two students begin their college studies."
+    },
+    {
+      "role": "speakerA",
+      "text": "In just a moment, dinner will be served, and during the main course, we'll hear from one of last year's scholarship recipients, Maya Chen."
+    },
+    {
+      "role": "speakerA",
+      "text": "After dinner, the silent auction will close at nine thirty, so please make sure your final bids are in before then. The auction tables are located along the left wall."
+    },
+    {
+      "role": "speakerA",
+      "text": "We'll finish the evening with a performance by the Westbrook Jazz Quartet, who have kindly donated their time tonight. Please sit back, relax, and enjoy the evening."
+    }
+  ],
+  "jaSegments": [
+    "皆様、こんばんは。第15回ブライト・フューチャーズ・チャリティーガラへようこそ。司会のエミリー・カーターです。",
+    "今夜は地元の高校生への奨学金を支援するためにご参加いただき、ありがとうございます。昨年の皆様のご厚意により、42人の生徒が大学進学を果たしました。",
+    "まもなく夕食が運ばれてまいります。メインコースの間には、昨年の奨学生の一人、マヤ・チェンさんのお話を伺います。",
+    "夕食後のサイレントオークションは9時半に締め切りますので、それまでに最終入札をお済ませください。オークションのテーブルは左側の壁沿いにあります。",
+    "夜の締めくくりには、今夜のために時間を寄付してくださったウェストブルック・ジャズ・カルテットの演奏をお楽しみいただきます。どうぞごゆっくりお過ごしください。"
+  ]
+},
+"lx-p4-set20": {
+  "segments": [
+    {
+      "role": "speakerB",
+      "text": "Welcome to the Central City Library. This recording provides information about our services and opening hours."
+    },
+    {
+      "role": "speakerB",
+      "text": "The library is open from nine in the morning to eight in the evening, Monday through Saturday, and from ten to five on Sundays."
+    },
+    {
+      "role": "speakerB",
+      "text": "Members may borrow up to ten books at a time for three weeks, and items can be renewed online or by phone unless another member has requested them."
+    },
+    {
+      "role": "speakerB",
+      "text": "Our computer lab on the third floor offers free Internet access, but printing costs ten cents per page, payable at the front desk."
+    },
+    {
+      "role": "speakerB",
+      "text": "Study rooms for groups of up to six people can be reserved up to one week in advance through our website. Thank you for visiting, and we hope you enjoy your time here."
+    }
+  ],
+  "jaSegments": [
+    "セントラルシティ図書館へようこそ。この録音では、当館のサービスと開館時間についてご案内します。",
+    "開館時間は月曜日から土曜日が午前9時から午後8時まで、日曜日が午前10時から午後5時までです。",
+    "会員は一度に最大10冊まで、3週間借りることができます。他の会員から予約が入っていない限り、オンラインまたは電話で延長も可能です。",
+    "3階のコンピュータ室ではインターネットを無料でご利用いただけますが、印刷は1ページ10セントで、受付でのお支払いとなります。",
+    "最大6名まで利用できる学習室は、ウェブサイトから1週間前まで予約できます。ご来館ありがとうございます。どうぞごゆっくりお過ごしください。"
+  ]
+}
+};
 
 
 /* Listening pool expansion: 40 original questions */
@@ -3367,7 +4626,1028 @@ const HQ_LISTENING_AUDIO = {
   "l4-04": { passage: ["audio/p4-set02-talk.mp3"], question: ["audio/p4-set02-q01.mp3"] },
   "l4-05": { passage: ["audio/p4-set02-talk.mp3"], question: ["audio/p4-set02-q02.mp3"] },
   "l4-06": { passage: ["audio/p4-set02-talk.mp3"], question: ["audio/p4-set02-q03.mp3"] }
-,"l3-22":{passage:["audio/p3-set08-line01.mp3", "audio/p3-set08-line02.mp3", "audio/p3-set08-line03.mp3", "audio/p3-set08-line04.mp3", "audio/p3-set08-line05.mp3", "audio/p3-set08-line06.mp3", "audio/p3-set08-line07.mp3", "audio/p3-set08-line08.mp3", "audio/p3-set08-line09.mp3", "audio/p3-set08-line10.mp3"],question:["audio/p3-set08-q01.mp3"]},"l3-23":{passage:["audio/p3-set08-line01.mp3", "audio/p3-set08-line02.mp3", "audio/p3-set08-line03.mp3", "audio/p3-set08-line04.mp3", "audio/p3-set08-line05.mp3", "audio/p3-set08-line06.mp3", "audio/p3-set08-line07.mp3", "audio/p3-set08-line08.mp3", "audio/p3-set08-line09.mp3", "audio/p3-set08-line10.mp3"],question:["audio/p3-set08-q02.mp3"]},"l3-24":{passage:["audio/p3-set08-line01.mp3", "audio/p3-set08-line02.mp3", "audio/p3-set08-line03.mp3", "audio/p3-set08-line04.mp3", "audio/p3-set08-line05.mp3", "audio/p3-set08-line06.mp3", "audio/p3-set08-line07.mp3", "audio/p3-set08-line08.mp3", "audio/p3-set08-line09.mp3", "audio/p3-set08-line10.mp3"],question:["audio/p3-set08-q03.mp3"]},"l3-25":{passage:["audio/p3-set09-line01.mp3", "audio/p3-set09-line02.mp3", "audio/p3-set09-line03.mp3", "audio/p3-set09-line04.mp3", "audio/p3-set09-line05.mp3", "audio/p3-set09-line06.mp3", "audio/p3-set09-line07.mp3", "audio/p3-set09-line08.mp3", "audio/p3-set09-line09.mp3"],question:["audio/p3-set09-q01.mp3"]},"l3-26":{passage:["audio/p3-set09-line01.mp3", "audio/p3-set09-line02.mp3", "audio/p3-set09-line03.mp3", "audio/p3-set09-line04.mp3", "audio/p3-set09-line05.mp3", "audio/p3-set09-line06.mp3", "audio/p3-set09-line07.mp3", "audio/p3-set09-line08.mp3", "audio/p3-set09-line09.mp3"],question:["audio/p3-set09-q02.mp3"]},"l3-27":{passage:["audio/p3-set09-line01.mp3", "audio/p3-set09-line02.mp3", "audio/p3-set09-line03.mp3", "audio/p3-set09-line04.mp3", "audio/p3-set09-line05.mp3", "audio/p3-set09-line06.mp3", "audio/p3-set09-line07.mp3", "audio/p3-set09-line08.mp3", "audio/p3-set09-line09.mp3"],question:["audio/p3-set09-q03.mp3"]},"l3-28":{passage:["audio/p3-set10-line01.mp3", "audio/p3-set10-line02.mp3", "audio/p3-set10-line03.mp3", "audio/p3-set10-line04.mp3", "audio/p3-set10-line05.mp3", "audio/p3-set10-line06.mp3", "audio/p3-set10-line07.mp3", "audio/p3-set10-line08.mp3", "audio/p3-set10-line09.mp3", "audio/p3-set10-line10.mp3"],question:["audio/p3-set10-q01.mp3"]},"l3-29":{passage:["audio/p3-set10-line01.mp3", "audio/p3-set10-line02.mp3", "audio/p3-set10-line03.mp3", "audio/p3-set10-line04.mp3", "audio/p3-set10-line05.mp3", "audio/p3-set10-line06.mp3", "audio/p3-set10-line07.mp3", "audio/p3-set10-line08.mp3", "audio/p3-set10-line09.mp3", "audio/p3-set10-line10.mp3"],question:["audio/p3-set10-q02.mp3"]},"l3-30":{passage:["audio/p3-set10-line01.mp3", "audio/p3-set10-line02.mp3", "audio/p3-set10-line03.mp3", "audio/p3-set10-line04.mp3", "audio/p3-set10-line05.mp3", "audio/p3-set10-line06.mp3", "audio/p3-set10-line07.mp3", "audio/p3-set10-line08.mp3", "audio/p3-set10-line09.mp3", "audio/p3-set10-line10.mp3"],question:["audio/p3-set10-q03.mp3"]},"l3-31":{passage:["audio/p3-set11-line01.mp3", "audio/p3-set11-line02.mp3", "audio/p3-set11-line03.mp3", "audio/p3-set11-line04.mp3", "audio/p3-set11-line05.mp3", "audio/p3-set11-line06.mp3", "audio/p3-set11-line07.mp3", "audio/p3-set11-line08.mp3", "audio/p3-set11-line09.mp3", "audio/p3-set11-line10.mp3"],question:["audio/p3-set11-q01.mp3"]},"l3-32":{passage:["audio/p3-set11-line01.mp3", "audio/p3-set11-line02.mp3", "audio/p3-set11-line03.mp3", "audio/p3-set11-line04.mp3", "audio/p3-set11-line05.mp3", "audio/p3-set11-line06.mp3", "audio/p3-set11-line07.mp3", "audio/p3-set11-line08.mp3", "audio/p3-set11-line09.mp3", "audio/p3-set11-line10.mp3"],question:["audio/p3-set11-q02.mp3"]},"l3-33":{passage:["audio/p3-set11-line01.mp3", "audio/p3-set11-line02.mp3", "audio/p3-set11-line03.mp3", "audio/p3-set11-line04.mp3", "audio/p3-set11-line05.mp3", "audio/p3-set11-line06.mp3", "audio/p3-set11-line07.mp3", "audio/p3-set11-line08.mp3", "audio/p3-set11-line09.mp3", "audio/p3-set11-line10.mp3"],question:["audio/p3-set11-q03.mp3"]},"l3-34":{passage:["audio/p3-set12-line01.mp3", "audio/p3-set12-line02.mp3", "audio/p3-set12-line03.mp3", "audio/p3-set12-line04.mp3", "audio/p3-set12-line05.mp3", "audio/p3-set12-line06.mp3", "audio/p3-set12-line07.mp3", "audio/p3-set12-line08.mp3", "audio/p3-set12-line09.mp3", "audio/p3-set12-line10.mp3"],question:["audio/p3-set12-q01.mp3"]},"l3-35":{passage:["audio/p3-set12-line01.mp3", "audio/p3-set12-line02.mp3", "audio/p3-set12-line03.mp3", "audio/p3-set12-line04.mp3", "audio/p3-set12-line05.mp3", "audio/p3-set12-line06.mp3", "audio/p3-set12-line07.mp3", "audio/p3-set12-line08.mp3", "audio/p3-set12-line09.mp3", "audio/p3-set12-line10.mp3"],question:["audio/p3-set12-q02.mp3"]},"l3-36":{passage:["audio/p3-set12-line01.mp3", "audio/p3-set12-line02.mp3", "audio/p3-set12-line03.mp3", "audio/p3-set12-line04.mp3", "audio/p3-set12-line05.mp3", "audio/p3-set12-line06.mp3", "audio/p3-set12-line07.mp3", "audio/p3-set12-line08.mp3", "audio/p3-set12-line09.mp3", "audio/p3-set12-line10.mp3"],question:["audio/p3-set12-q03.mp3"]},"l3-37":{passage:["audio/p3-set13-line01.mp3", "audio/p3-set13-line02.mp3", "audio/p3-set13-line03.mp3", "audio/p3-set13-line04.mp3", "audio/p3-set13-line05.mp3", "audio/p3-set13-line06.mp3", "audio/p3-set13-line07.mp3", "audio/p3-set13-line08.mp3", "audio/p3-set13-line09.mp3", "audio/p3-set13-line10.mp3"],question:["audio/p3-set13-q01.mp3"]},"l3-38":{passage:["audio/p3-set13-line01.mp3", "audio/p3-set13-line02.mp3", "audio/p3-set13-line03.mp3", "audio/p3-set13-line04.mp3", "audio/p3-set13-line05.mp3", "audio/p3-set13-line06.mp3", "audio/p3-set13-line07.mp3", "audio/p3-set13-line08.mp3", "audio/p3-set13-line09.mp3", "audio/p3-set13-line10.mp3"],question:["audio/p3-set13-q02.mp3"]},"l3-39":{passage:["audio/p3-set13-line01.mp3", "audio/p3-set13-line02.mp3", "audio/p3-set13-line03.mp3", "audio/p3-set13-line04.mp3", "audio/p3-set13-line05.mp3", "audio/p3-set13-line06.mp3", "audio/p3-set13-line07.mp3", "audio/p3-set13-line08.mp3", "audio/p3-set13-line09.mp3", "audio/p3-set13-line10.mp3"],question:["audio/p3-set13-q03.mp3"]},"l4-25":{passage:["audio/p4-set09-talk.mp3"],question:["audio/p4-set09-q01.mp3"]},"l4-26":{passage:["audio/p4-set09-talk.mp3"],question:["audio/p4-set09-q02.mp3"]},"l4-27":{passage:["audio/p4-set09-talk.mp3"],question:["audio/p4-set09-q03.mp3"]},"l4-28":{passage:["audio/p4-set10-talk.mp3"],question:["audio/p4-set10-q01.mp3"]},"l4-29":{passage:["audio/p4-set10-talk.mp3"],question:["audio/p4-set10-q02.mp3"]},"l4-30":{passage:["audio/p4-set10-talk.mp3"],question:["audio/p4-set10-q03.mp3"]}};
+,"l3-22":{passage:["audio/p3-set08-line01.mp3", "audio/p3-set08-line02.mp3", "audio/p3-set08-line03.mp3", "audio/p3-set08-line04.mp3", "audio/p3-set08-line05.mp3", "audio/p3-set08-line06.mp3", "audio/p3-set08-line07.mp3", "audio/p3-set08-line08.mp3", "audio/p3-set08-line09.mp3", "audio/p3-set08-line10.mp3"],question:["audio/p3-set08-q01.mp3"]},"l3-23":{passage:["audio/p3-set08-line01.mp3", "audio/p3-set08-line02.mp3", "audio/p3-set08-line03.mp3", "audio/p3-set08-line04.mp3", "audio/p3-set08-line05.mp3", "audio/p3-set08-line06.mp3", "audio/p3-set08-line07.mp3", "audio/p3-set08-line08.mp3", "audio/p3-set08-line09.mp3", "audio/p3-set08-line10.mp3"],question:["audio/p3-set08-q02.mp3"]},"l3-24":{passage:["audio/p3-set08-line01.mp3", "audio/p3-set08-line02.mp3", "audio/p3-set08-line03.mp3", "audio/p3-set08-line04.mp3", "audio/p3-set08-line05.mp3", "audio/p3-set08-line06.mp3", "audio/p3-set08-line07.mp3", "audio/p3-set08-line08.mp3", "audio/p3-set08-line09.mp3", "audio/p3-set08-line10.mp3"],question:["audio/p3-set08-q03.mp3"]},"l3-25":{passage:["audio/p3-set09-line01.mp3", "audio/p3-set09-line02.mp3", "audio/p3-set09-line03.mp3", "audio/p3-set09-line04.mp3", "audio/p3-set09-line05.mp3", "audio/p3-set09-line06.mp3", "audio/p3-set09-line07.mp3", "audio/p3-set09-line08.mp3", "audio/p3-set09-line09.mp3"],question:["audio/p3-set09-q01.mp3"]},"l3-26":{passage:["audio/p3-set09-line01.mp3", "audio/p3-set09-line02.mp3", "audio/p3-set09-line03.mp3", "audio/p3-set09-line04.mp3", "audio/p3-set09-line05.mp3", "audio/p3-set09-line06.mp3", "audio/p3-set09-line07.mp3", "audio/p3-set09-line08.mp3", "audio/p3-set09-line09.mp3"],question:["audio/p3-set09-q02.mp3"]},"l3-27":{passage:["audio/p3-set09-line01.mp3", "audio/p3-set09-line02.mp3", "audio/p3-set09-line03.mp3", "audio/p3-set09-line04.mp3", "audio/p3-set09-line05.mp3", "audio/p3-set09-line06.mp3", "audio/p3-set09-line07.mp3", "audio/p3-set09-line08.mp3", "audio/p3-set09-line09.mp3"],question:["audio/p3-set09-q03.mp3"]},"l3-28":{passage:["audio/p3-set10-line01.mp3", "audio/p3-set10-line02.mp3", "audio/p3-set10-line03.mp3", "audio/p3-set10-line04.mp3", "audio/p3-set10-line05.mp3", "audio/p3-set10-line06.mp3", "audio/p3-set10-line07.mp3", "audio/p3-set10-line08.mp3", "audio/p3-set10-line09.mp3", "audio/p3-set10-line10.mp3"],question:["audio/p3-set10-q01.mp3"]},"l3-29":{passage:["audio/p3-set10-line01.mp3", "audio/p3-set10-line02.mp3", "audio/p3-set10-line03.mp3", "audio/p3-set10-line04.mp3", "audio/p3-set10-line05.mp3", "audio/p3-set10-line06.mp3", "audio/p3-set10-line07.mp3", "audio/p3-set10-line08.mp3", "audio/p3-set10-line09.mp3", "audio/p3-set10-line10.mp3"],question:["audio/p3-set10-q02.mp3"]},"l3-30":{passage:["audio/p3-set10-line01.mp3", "audio/p3-set10-line02.mp3", "audio/p3-set10-line03.mp3", "audio/p3-set10-line04.mp3", "audio/p3-set10-line05.mp3", "audio/p3-set10-line06.mp3", "audio/p3-set10-line07.mp3", "audio/p3-set10-line08.mp3", "audio/p3-set10-line09.mp3", "audio/p3-set10-line10.mp3"],question:["audio/p3-set10-q03.mp3"]},"l3-31":{passage:["audio/p3-set11-line01.mp3", "audio/p3-set11-line02.mp3", "audio/p3-set11-line03.mp3", "audio/p3-set11-line04.mp3", "audio/p3-set11-line05.mp3", "audio/p3-set11-line06.mp3", "audio/p3-set11-line07.mp3", "audio/p3-set11-line08.mp3", "audio/p3-set11-line09.mp3", "audio/p3-set11-line10.mp3"],question:["audio/p3-set11-q01.mp3"]},"l3-32":{passage:["audio/p3-set11-line01.mp3", "audio/p3-set11-line02.mp3", "audio/p3-set11-line03.mp3", "audio/p3-set11-line04.mp3", "audio/p3-set11-line05.mp3", "audio/p3-set11-line06.mp3", "audio/p3-set11-line07.mp3", "audio/p3-set11-line08.mp3", "audio/p3-set11-line09.mp3", "audio/p3-set11-line10.mp3"],question:["audio/p3-set11-q02.mp3"]},"l3-33":{passage:["audio/p3-set11-line01.mp3", "audio/p3-set11-line02.mp3", "audio/p3-set11-line03.mp3", "audio/p3-set11-line04.mp3", "audio/p3-set11-line05.mp3", "audio/p3-set11-line06.mp3", "audio/p3-set11-line07.mp3", "audio/p3-set11-line08.mp3", "audio/p3-set11-line09.mp3", "audio/p3-set11-line10.mp3"],question:["audio/p3-set11-q03.mp3"]},"l3-34":{passage:["audio/p3-set12-line01.mp3", "audio/p3-set12-line02.mp3", "audio/p3-set12-line03.mp3", "audio/p3-set12-line04.mp3", "audio/p3-set12-line05.mp3", "audio/p3-set12-line06.mp3", "audio/p3-set12-line07.mp3", "audio/p3-set12-line08.mp3", "audio/p3-set12-line09.mp3", "audio/p3-set12-line10.mp3"],question:["audio/p3-set12-q01.mp3"]},"l3-35":{passage:["audio/p3-set12-line01.mp3", "audio/p3-set12-line02.mp3", "audio/p3-set12-line03.mp3", "audio/p3-set12-line04.mp3", "audio/p3-set12-line05.mp3", "audio/p3-set12-line06.mp3", "audio/p3-set12-line07.mp3", "audio/p3-set12-line08.mp3", "audio/p3-set12-line09.mp3", "audio/p3-set12-line10.mp3"],question:["audio/p3-set12-q02.mp3"]},"l3-36":{passage:["audio/p3-set12-line01.mp3", "audio/p3-set12-line02.mp3", "audio/p3-set12-line03.mp3", "audio/p3-set12-line04.mp3", "audio/p3-set12-line05.mp3", "audio/p3-set12-line06.mp3", "audio/p3-set12-line07.mp3", "audio/p3-set12-line08.mp3", "audio/p3-set12-line09.mp3", "audio/p3-set12-line10.mp3"],question:["audio/p3-set12-q03.mp3"]},"l3-37":{passage:["audio/p3-set13-line01.mp3", "audio/p3-set13-line02.mp3", "audio/p3-set13-line03.mp3", "audio/p3-set13-line04.mp3", "audio/p3-set13-line05.mp3", "audio/p3-set13-line06.mp3", "audio/p3-set13-line07.mp3", "audio/p3-set13-line08.mp3", "audio/p3-set13-line09.mp3", "audio/p3-set13-line10.mp3"],question:["audio/p3-set13-q01.mp3"]},"l3-38":{passage:["audio/p3-set13-line01.mp3", "audio/p3-set13-line02.mp3", "audio/p3-set13-line03.mp3", "audio/p3-set13-line04.mp3", "audio/p3-set13-line05.mp3", "audio/p3-set13-line06.mp3", "audio/p3-set13-line07.mp3", "audio/p3-set13-line08.mp3", "audio/p3-set13-line09.mp3", "audio/p3-set13-line10.mp3"],question:["audio/p3-set13-q02.mp3"]},"l3-39":{passage:["audio/p3-set13-line01.mp3", "audio/p3-set13-line02.mp3", "audio/p3-set13-line03.mp3", "audio/p3-set13-line04.mp3", "audio/p3-set13-line05.mp3", "audio/p3-set13-line06.mp3", "audio/p3-set13-line07.mp3", "audio/p3-set13-line08.mp3", "audio/p3-set13-line09.mp3", "audio/p3-set13-line10.mp3"],question:["audio/p3-set13-q03.mp3"]},"l4-25":{passage:["audio/p4-set09-talk.mp3"],question:["audio/p4-set09-q01.mp3"]},"l4-26":{passage:["audio/p4-set09-talk.mp3"],question:["audio/p4-set09-q02.mp3"]},"l4-27":{passage:["audio/p4-set09-talk.mp3"],question:["audio/p4-set09-q03.mp3"]},"l4-28":{passage:["audio/p4-set10-talk.mp3"],question:["audio/p4-set10-q01.mp3"]},"l4-29":{passage:["audio/p4-set10-talk.mp3"],question:["audio/p4-set10-q02.mp3"]},"l4-30":{passage:["audio/p4-set10-talk.mp3"],question:["audio/p4-set10-q03.mp3"]},
+"l2-26": {
+  "question": [
+    "audio/p2-26-question.mp3",
+    "audio/p2-26-answers.mp3"
+  ]
+},
+"l2-27": {
+  "question": [
+    "audio/p2-27-question.mp3",
+    "audio/p2-27-answers.mp3"
+  ]
+},
+"l2-28": {
+  "question": [
+    "audio/p2-28-question.mp3",
+    "audio/p2-28-answers.mp3"
+  ]
+},
+"l2-29": {
+  "question": [
+    "audio/p2-29-question.mp3",
+    "audio/p2-29-answers.mp3"
+  ]
+},
+"l2-30": {
+  "question": [
+    "audio/p2-30-question.mp3",
+    "audio/p2-30-answers.mp3"
+  ]
+},
+"l2-31": {
+  "question": [
+    "audio/p2-31-question.mp3",
+    "audio/p2-31-answers.mp3"
+  ]
+},
+"l2-32": {
+  "question": [
+    "audio/p2-32-question.mp3",
+    "audio/p2-32-answers.mp3"
+  ]
+},
+"l2-33": {
+  "question": [
+    "audio/p2-33-question.mp3",
+    "audio/p2-33-answers.mp3"
+  ]
+},
+"l2-34": {
+  "question": [
+    "audio/p2-34-question.mp3",
+    "audio/p2-34-answers.mp3"
+  ]
+},
+"l2-35": {
+  "question": [
+    "audio/p2-35-question.mp3",
+    "audio/p2-35-answers.mp3"
+  ]
+},
+"l2-36": {
+  "question": [
+    "audio/p2-36-question.mp3",
+    "audio/p2-36-answers.mp3"
+  ]
+},
+"l2-37": {
+  "question": [
+    "audio/p2-37-question.mp3",
+    "audio/p2-37-answers.mp3"
+  ]
+},
+"l2-38": {
+  "question": [
+    "audio/p2-38-question.mp3",
+    "audio/p2-38-answers.mp3"
+  ]
+},
+"l2-39": {
+  "question": [
+    "audio/p2-39-question.mp3",
+    "audio/p2-39-answers.mp3"
+  ]
+},
+"l2-40": {
+  "question": [
+    "audio/p2-40-question.mp3",
+    "audio/p2-40-answers.mp3"
+  ]
+},
+"l2-41": {
+  "question": [
+    "audio/p2-41-question.mp3",
+    "audio/p2-41-answers.mp3"
+  ]
+},
+"l2-42": {
+  "question": [
+    "audio/p2-42-question.mp3",
+    "audio/p2-42-answers.mp3"
+  ]
+},
+"l2-43": {
+  "question": [
+    "audio/p2-43-question.mp3",
+    "audio/p2-43-answers.mp3"
+  ]
+},
+"l2-44": {
+  "question": [
+    "audio/p2-44-question.mp3",
+    "audio/p2-44-answers.mp3"
+  ]
+},
+"l2-45": {
+  "question": [
+    "audio/p2-45-question.mp3",
+    "audio/p2-45-answers.mp3"
+  ]
+},
+"l2-46": {
+  "question": [
+    "audio/p2-46-question.mp3",
+    "audio/p2-46-answers.mp3"
+  ]
+},
+"l2-47": {
+  "question": [
+    "audio/p2-47-question.mp3",
+    "audio/p2-47-answers.mp3"
+  ]
+},
+"l2-48": {
+  "question": [
+    "audio/p2-48-question.mp3",
+    "audio/p2-48-answers.mp3"
+  ]
+},
+"l2-49": {
+  "question": [
+    "audio/p2-49-question.mp3",
+    "audio/p2-49-answers.mp3"
+  ]
+},
+"l2-50": {
+  "question": [
+    "audio/p2-50-question.mp3",
+    "audio/p2-50-answers.mp3"
+  ]
+},
+"l3-40": {
+  "passage": [
+    "audio/p3-set14-line01.mp3",
+    "audio/p3-set14-line02.mp3",
+    "audio/p3-set14-line03.mp3",
+    "audio/p3-set14-line04.mp3",
+    "audio/p3-set14-line05.mp3",
+    "audio/p3-set14-line06.mp3",
+    "audio/p3-set14-line07.mp3",
+    "audio/p3-set14-line08.mp3",
+    "audio/p3-set14-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set14-q01.mp3"
+  ]
+},
+"l3-41": {
+  "passage": [
+    "audio/p3-set14-line01.mp3",
+    "audio/p3-set14-line02.mp3",
+    "audio/p3-set14-line03.mp3",
+    "audio/p3-set14-line04.mp3",
+    "audio/p3-set14-line05.mp3",
+    "audio/p3-set14-line06.mp3",
+    "audio/p3-set14-line07.mp3",
+    "audio/p3-set14-line08.mp3",
+    "audio/p3-set14-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set14-q02.mp3"
+  ]
+},
+"l3-42": {
+  "passage": [
+    "audio/p3-set14-line01.mp3",
+    "audio/p3-set14-line02.mp3",
+    "audio/p3-set14-line03.mp3",
+    "audio/p3-set14-line04.mp3",
+    "audio/p3-set14-line05.mp3",
+    "audio/p3-set14-line06.mp3",
+    "audio/p3-set14-line07.mp3",
+    "audio/p3-set14-line08.mp3",
+    "audio/p3-set14-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set14-q03.mp3"
+  ]
+},
+"l3-43": {
+  "passage": [
+    "audio/p3-set15-line01.mp3",
+    "audio/p3-set15-line02.mp3",
+    "audio/p3-set15-line03.mp3",
+    "audio/p3-set15-line04.mp3",
+    "audio/p3-set15-line05.mp3",
+    "audio/p3-set15-line06.mp3",
+    "audio/p3-set15-line07.mp3",
+    "audio/p3-set15-line08.mp3",
+    "audio/p3-set15-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set15-q01.mp3"
+  ]
+},
+"l3-44": {
+  "passage": [
+    "audio/p3-set15-line01.mp3",
+    "audio/p3-set15-line02.mp3",
+    "audio/p3-set15-line03.mp3",
+    "audio/p3-set15-line04.mp3",
+    "audio/p3-set15-line05.mp3",
+    "audio/p3-set15-line06.mp3",
+    "audio/p3-set15-line07.mp3",
+    "audio/p3-set15-line08.mp3",
+    "audio/p3-set15-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set15-q02.mp3"
+  ]
+},
+"l3-45": {
+  "passage": [
+    "audio/p3-set15-line01.mp3",
+    "audio/p3-set15-line02.mp3",
+    "audio/p3-set15-line03.mp3",
+    "audio/p3-set15-line04.mp3",
+    "audio/p3-set15-line05.mp3",
+    "audio/p3-set15-line06.mp3",
+    "audio/p3-set15-line07.mp3",
+    "audio/p3-set15-line08.mp3",
+    "audio/p3-set15-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set15-q03.mp3"
+  ]
+},
+"l3-46": {
+  "passage": [
+    "audio/p3-set16-line01.mp3",
+    "audio/p3-set16-line02.mp3",
+    "audio/p3-set16-line03.mp3",
+    "audio/p3-set16-line04.mp3",
+    "audio/p3-set16-line05.mp3",
+    "audio/p3-set16-line06.mp3",
+    "audio/p3-set16-line07.mp3",
+    "audio/p3-set16-line08.mp3",
+    "audio/p3-set16-line09.mp3",
+    "audio/p3-set16-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set16-q01.mp3"
+  ]
+},
+"l3-47": {
+  "passage": [
+    "audio/p3-set16-line01.mp3",
+    "audio/p3-set16-line02.mp3",
+    "audio/p3-set16-line03.mp3",
+    "audio/p3-set16-line04.mp3",
+    "audio/p3-set16-line05.mp3",
+    "audio/p3-set16-line06.mp3",
+    "audio/p3-set16-line07.mp3",
+    "audio/p3-set16-line08.mp3",
+    "audio/p3-set16-line09.mp3",
+    "audio/p3-set16-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set16-q02.mp3"
+  ]
+},
+"l3-48": {
+  "passage": [
+    "audio/p3-set16-line01.mp3",
+    "audio/p3-set16-line02.mp3",
+    "audio/p3-set16-line03.mp3",
+    "audio/p3-set16-line04.mp3",
+    "audio/p3-set16-line05.mp3",
+    "audio/p3-set16-line06.mp3",
+    "audio/p3-set16-line07.mp3",
+    "audio/p3-set16-line08.mp3",
+    "audio/p3-set16-line09.mp3",
+    "audio/p3-set16-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set16-q03.mp3"
+  ]
+},
+"l3-49": {
+  "passage": [
+    "audio/p3-set17-line01.mp3",
+    "audio/p3-set17-line02.mp3",
+    "audio/p3-set17-line03.mp3",
+    "audio/p3-set17-line04.mp3",
+    "audio/p3-set17-line05.mp3",
+    "audio/p3-set17-line06.mp3",
+    "audio/p3-set17-line07.mp3",
+    "audio/p3-set17-line08.mp3"
+  ],
+  "question": [
+    "audio/p3-set17-q01.mp3"
+  ]
+},
+"l3-50": {
+  "passage": [
+    "audio/p3-set17-line01.mp3",
+    "audio/p3-set17-line02.mp3",
+    "audio/p3-set17-line03.mp3",
+    "audio/p3-set17-line04.mp3",
+    "audio/p3-set17-line05.mp3",
+    "audio/p3-set17-line06.mp3",
+    "audio/p3-set17-line07.mp3",
+    "audio/p3-set17-line08.mp3"
+  ],
+  "question": [
+    "audio/p3-set17-q02.mp3"
+  ]
+},
+"l3-51": {
+  "passage": [
+    "audio/p3-set17-line01.mp3",
+    "audio/p3-set17-line02.mp3",
+    "audio/p3-set17-line03.mp3",
+    "audio/p3-set17-line04.mp3",
+    "audio/p3-set17-line05.mp3",
+    "audio/p3-set17-line06.mp3",
+    "audio/p3-set17-line07.mp3",
+    "audio/p3-set17-line08.mp3"
+  ],
+  "question": [
+    "audio/p3-set17-q03.mp3"
+  ]
+},
+"l3-52": {
+  "passage": [
+    "audio/p3-set18-line01.mp3",
+    "audio/p3-set18-line02.mp3",
+    "audio/p3-set18-line03.mp3",
+    "audio/p3-set18-line04.mp3",
+    "audio/p3-set18-line05.mp3",
+    "audio/p3-set18-line06.mp3",
+    "audio/p3-set18-line07.mp3",
+    "audio/p3-set18-line08.mp3",
+    "audio/p3-set18-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set18-q01.mp3"
+  ]
+},
+"l3-53": {
+  "passage": [
+    "audio/p3-set18-line01.mp3",
+    "audio/p3-set18-line02.mp3",
+    "audio/p3-set18-line03.mp3",
+    "audio/p3-set18-line04.mp3",
+    "audio/p3-set18-line05.mp3",
+    "audio/p3-set18-line06.mp3",
+    "audio/p3-set18-line07.mp3",
+    "audio/p3-set18-line08.mp3",
+    "audio/p3-set18-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set18-q02.mp3"
+  ]
+},
+"l3-54": {
+  "passage": [
+    "audio/p3-set18-line01.mp3",
+    "audio/p3-set18-line02.mp3",
+    "audio/p3-set18-line03.mp3",
+    "audio/p3-set18-line04.mp3",
+    "audio/p3-set18-line05.mp3",
+    "audio/p3-set18-line06.mp3",
+    "audio/p3-set18-line07.mp3",
+    "audio/p3-set18-line08.mp3",
+    "audio/p3-set18-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set18-q03.mp3"
+  ]
+},
+"l3-55": {
+  "passage": [
+    "audio/p3-set19-line01.mp3",
+    "audio/p3-set19-line02.mp3",
+    "audio/p3-set19-line03.mp3",
+    "audio/p3-set19-line04.mp3",
+    "audio/p3-set19-line05.mp3",
+    "audio/p3-set19-line06.mp3",
+    "audio/p3-set19-line07.mp3",
+    "audio/p3-set19-line08.mp3",
+    "audio/p3-set19-line09.mp3",
+    "audio/p3-set19-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set19-q01.mp3"
+  ]
+},
+"l3-56": {
+  "passage": [
+    "audio/p3-set19-line01.mp3",
+    "audio/p3-set19-line02.mp3",
+    "audio/p3-set19-line03.mp3",
+    "audio/p3-set19-line04.mp3",
+    "audio/p3-set19-line05.mp3",
+    "audio/p3-set19-line06.mp3",
+    "audio/p3-set19-line07.mp3",
+    "audio/p3-set19-line08.mp3",
+    "audio/p3-set19-line09.mp3",
+    "audio/p3-set19-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set19-q02.mp3"
+  ]
+},
+"l3-57": {
+  "passage": [
+    "audio/p3-set19-line01.mp3",
+    "audio/p3-set19-line02.mp3",
+    "audio/p3-set19-line03.mp3",
+    "audio/p3-set19-line04.mp3",
+    "audio/p3-set19-line05.mp3",
+    "audio/p3-set19-line06.mp3",
+    "audio/p3-set19-line07.mp3",
+    "audio/p3-set19-line08.mp3",
+    "audio/p3-set19-line09.mp3",
+    "audio/p3-set19-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set19-q03.mp3"
+  ]
+},
+"l3-58": {
+  "passage": [
+    "audio/p3-set20-line01.mp3",
+    "audio/p3-set20-line02.mp3",
+    "audio/p3-set20-line03.mp3",
+    "audio/p3-set20-line04.mp3",
+    "audio/p3-set20-line05.mp3",
+    "audio/p3-set20-line06.mp3",
+    "audio/p3-set20-line07.mp3",
+    "audio/p3-set20-line08.mp3",
+    "audio/p3-set20-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set20-q01.mp3"
+  ]
+},
+"l3-59": {
+  "passage": [
+    "audio/p3-set20-line01.mp3",
+    "audio/p3-set20-line02.mp3",
+    "audio/p3-set20-line03.mp3",
+    "audio/p3-set20-line04.mp3",
+    "audio/p3-set20-line05.mp3",
+    "audio/p3-set20-line06.mp3",
+    "audio/p3-set20-line07.mp3",
+    "audio/p3-set20-line08.mp3",
+    "audio/p3-set20-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set20-q02.mp3"
+  ]
+},
+"l3-60": {
+  "passage": [
+    "audio/p3-set20-line01.mp3",
+    "audio/p3-set20-line02.mp3",
+    "audio/p3-set20-line03.mp3",
+    "audio/p3-set20-line04.mp3",
+    "audio/p3-set20-line05.mp3",
+    "audio/p3-set20-line06.mp3",
+    "audio/p3-set20-line07.mp3",
+    "audio/p3-set20-line08.mp3",
+    "audio/p3-set20-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set20-q03.mp3"
+  ]
+},
+"l3-61": {
+  "passage": [
+    "audio/p3-set21-line01.mp3",
+    "audio/p3-set21-line02.mp3",
+    "audio/p3-set21-line03.mp3",
+    "audio/p3-set21-line04.mp3",
+    "audio/p3-set21-line05.mp3",
+    "audio/p3-set21-line06.mp3",
+    "audio/p3-set21-line07.mp3",
+    "audio/p3-set21-line08.mp3",
+    "audio/p3-set21-line09.mp3",
+    "audio/p3-set21-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set21-q01.mp3"
+  ]
+},
+"l3-62": {
+  "passage": [
+    "audio/p3-set21-line01.mp3",
+    "audio/p3-set21-line02.mp3",
+    "audio/p3-set21-line03.mp3",
+    "audio/p3-set21-line04.mp3",
+    "audio/p3-set21-line05.mp3",
+    "audio/p3-set21-line06.mp3",
+    "audio/p3-set21-line07.mp3",
+    "audio/p3-set21-line08.mp3",
+    "audio/p3-set21-line09.mp3",
+    "audio/p3-set21-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set21-q02.mp3"
+  ]
+},
+"l3-63": {
+  "passage": [
+    "audio/p3-set21-line01.mp3",
+    "audio/p3-set21-line02.mp3",
+    "audio/p3-set21-line03.mp3",
+    "audio/p3-set21-line04.mp3",
+    "audio/p3-set21-line05.mp3",
+    "audio/p3-set21-line06.mp3",
+    "audio/p3-set21-line07.mp3",
+    "audio/p3-set21-line08.mp3",
+    "audio/p3-set21-line09.mp3",
+    "audio/p3-set21-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set21-q03.mp3"
+  ]
+},
+"l3-64": {
+  "passage": [
+    "audio/p3-set22-line01.mp3",
+    "audio/p3-set22-line02.mp3",
+    "audio/p3-set22-line03.mp3",
+    "audio/p3-set22-line04.mp3",
+    "audio/p3-set22-line05.mp3",
+    "audio/p3-set22-line06.mp3",
+    "audio/p3-set22-line07.mp3",
+    "audio/p3-set22-line08.mp3",
+    "audio/p3-set22-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set22-q01.mp3"
+  ]
+},
+"l3-65": {
+  "passage": [
+    "audio/p3-set22-line01.mp3",
+    "audio/p3-set22-line02.mp3",
+    "audio/p3-set22-line03.mp3",
+    "audio/p3-set22-line04.mp3",
+    "audio/p3-set22-line05.mp3",
+    "audio/p3-set22-line06.mp3",
+    "audio/p3-set22-line07.mp3",
+    "audio/p3-set22-line08.mp3",
+    "audio/p3-set22-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set22-q02.mp3"
+  ]
+},
+"l3-66": {
+  "passage": [
+    "audio/p3-set22-line01.mp3",
+    "audio/p3-set22-line02.mp3",
+    "audio/p3-set22-line03.mp3",
+    "audio/p3-set22-line04.mp3",
+    "audio/p3-set22-line05.mp3",
+    "audio/p3-set22-line06.mp3",
+    "audio/p3-set22-line07.mp3",
+    "audio/p3-set22-line08.mp3",
+    "audio/p3-set22-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set22-q03.mp3"
+  ]
+},
+"l3-67": {
+  "passage": [
+    "audio/p3-set23-line01.mp3",
+    "audio/p3-set23-line02.mp3",
+    "audio/p3-set23-line03.mp3",
+    "audio/p3-set23-line04.mp3",
+    "audio/p3-set23-line05.mp3",
+    "audio/p3-set23-line06.mp3",
+    "audio/p3-set23-line07.mp3",
+    "audio/p3-set23-line08.mp3"
+  ],
+  "question": [
+    "audio/p3-set23-q01.mp3"
+  ]
+},
+"l3-68": {
+  "passage": [
+    "audio/p3-set23-line01.mp3",
+    "audio/p3-set23-line02.mp3",
+    "audio/p3-set23-line03.mp3",
+    "audio/p3-set23-line04.mp3",
+    "audio/p3-set23-line05.mp3",
+    "audio/p3-set23-line06.mp3",
+    "audio/p3-set23-line07.mp3",
+    "audio/p3-set23-line08.mp3"
+  ],
+  "question": [
+    "audio/p3-set23-q02.mp3"
+  ]
+},
+"l3-69": {
+  "passage": [
+    "audio/p3-set23-line01.mp3",
+    "audio/p3-set23-line02.mp3",
+    "audio/p3-set23-line03.mp3",
+    "audio/p3-set23-line04.mp3",
+    "audio/p3-set23-line05.mp3",
+    "audio/p3-set23-line06.mp3",
+    "audio/p3-set23-line07.mp3",
+    "audio/p3-set23-line08.mp3"
+  ],
+  "question": [
+    "audio/p3-set23-q03.mp3"
+  ]
+},
+"l3-70": {
+  "passage": [
+    "audio/p3-set24-line01.mp3",
+    "audio/p3-set24-line02.mp3",
+    "audio/p3-set24-line03.mp3",
+    "audio/p3-set24-line04.mp3",
+    "audio/p3-set24-line05.mp3",
+    "audio/p3-set24-line06.mp3",
+    "audio/p3-set24-line07.mp3",
+    "audio/p3-set24-line08.mp3",
+    "audio/p3-set24-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set24-q01.mp3"
+  ]
+},
+"l3-71": {
+  "passage": [
+    "audio/p3-set24-line01.mp3",
+    "audio/p3-set24-line02.mp3",
+    "audio/p3-set24-line03.mp3",
+    "audio/p3-set24-line04.mp3",
+    "audio/p3-set24-line05.mp3",
+    "audio/p3-set24-line06.mp3",
+    "audio/p3-set24-line07.mp3",
+    "audio/p3-set24-line08.mp3",
+    "audio/p3-set24-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set24-q02.mp3"
+  ]
+},
+"l3-72": {
+  "passage": [
+    "audio/p3-set24-line01.mp3",
+    "audio/p3-set24-line02.mp3",
+    "audio/p3-set24-line03.mp3",
+    "audio/p3-set24-line04.mp3",
+    "audio/p3-set24-line05.mp3",
+    "audio/p3-set24-line06.mp3",
+    "audio/p3-set24-line07.mp3",
+    "audio/p3-set24-line08.mp3",
+    "audio/p3-set24-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set24-q03.mp3"
+  ]
+},
+"l3-73": {
+  "passage": [
+    "audio/p3-set25-line01.mp3",
+    "audio/p3-set25-line02.mp3",
+    "audio/p3-set25-line03.mp3",
+    "audio/p3-set25-line04.mp3",
+    "audio/p3-set25-line05.mp3",
+    "audio/p3-set25-line06.mp3",
+    "audio/p3-set25-line07.mp3",
+    "audio/p3-set25-line08.mp3",
+    "audio/p3-set25-line09.mp3",
+    "audio/p3-set25-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set25-q01.mp3"
+  ]
+},
+"l3-74": {
+  "passage": [
+    "audio/p3-set25-line01.mp3",
+    "audio/p3-set25-line02.mp3",
+    "audio/p3-set25-line03.mp3",
+    "audio/p3-set25-line04.mp3",
+    "audio/p3-set25-line05.mp3",
+    "audio/p3-set25-line06.mp3",
+    "audio/p3-set25-line07.mp3",
+    "audio/p3-set25-line08.mp3",
+    "audio/p3-set25-line09.mp3",
+    "audio/p3-set25-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set25-q02.mp3"
+  ]
+},
+"l3-75": {
+  "passage": [
+    "audio/p3-set25-line01.mp3",
+    "audio/p3-set25-line02.mp3",
+    "audio/p3-set25-line03.mp3",
+    "audio/p3-set25-line04.mp3",
+    "audio/p3-set25-line05.mp3",
+    "audio/p3-set25-line06.mp3",
+    "audio/p3-set25-line07.mp3",
+    "audio/p3-set25-line08.mp3",
+    "audio/p3-set25-line09.mp3",
+    "audio/p3-set25-line10.mp3"
+  ],
+  "question": [
+    "audio/p3-set25-q03.mp3"
+  ]
+},
+"l3-76": {
+  "passage": [
+    "audio/p3-set26-line01.mp3",
+    "audio/p3-set26-line02.mp3",
+    "audio/p3-set26-line03.mp3",
+    "audio/p3-set26-line04.mp3",
+    "audio/p3-set26-line05.mp3",
+    "audio/p3-set26-line06.mp3",
+    "audio/p3-set26-line07.mp3",
+    "audio/p3-set26-line08.mp3",
+    "audio/p3-set26-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set26-q01.mp3"
+  ]
+},
+"l3-77": {
+  "passage": [
+    "audio/p3-set26-line01.mp3",
+    "audio/p3-set26-line02.mp3",
+    "audio/p3-set26-line03.mp3",
+    "audio/p3-set26-line04.mp3",
+    "audio/p3-set26-line05.mp3",
+    "audio/p3-set26-line06.mp3",
+    "audio/p3-set26-line07.mp3",
+    "audio/p3-set26-line08.mp3",
+    "audio/p3-set26-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set26-q02.mp3"
+  ]
+},
+"l3-78": {
+  "passage": [
+    "audio/p3-set26-line01.mp3",
+    "audio/p3-set26-line02.mp3",
+    "audio/p3-set26-line03.mp3",
+    "audio/p3-set26-line04.mp3",
+    "audio/p3-set26-line05.mp3",
+    "audio/p3-set26-line06.mp3",
+    "audio/p3-set26-line07.mp3",
+    "audio/p3-set26-line08.mp3",
+    "audio/p3-set26-line09.mp3"
+  ],
+  "question": [
+    "audio/p3-set26-q03.mp3"
+  ]
+},
+"l4-31": {
+  "passage": [
+    "audio/p4-set11-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set11-q01.mp3"
+  ]
+},
+"l4-32": {
+  "passage": [
+    "audio/p4-set11-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set11-q02.mp3"
+  ]
+},
+"l4-33": {
+  "passage": [
+    "audio/p4-set11-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set11-q03.mp3"
+  ]
+},
+"l4-34": {
+  "passage": [
+    "audio/p4-set12-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set12-q01.mp3"
+  ]
+},
+"l4-35": {
+  "passage": [
+    "audio/p4-set12-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set12-q02.mp3"
+  ]
+},
+"l4-36": {
+  "passage": [
+    "audio/p4-set12-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set12-q03.mp3"
+  ]
+},
+"l4-37": {
+  "passage": [
+    "audio/p4-set13-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set13-q01.mp3"
+  ]
+},
+"l4-38": {
+  "passage": [
+    "audio/p4-set13-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set13-q02.mp3"
+  ]
+},
+"l4-39": {
+  "passage": [
+    "audio/p4-set13-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set13-q03.mp3"
+  ]
+},
+"l4-40": {
+  "passage": [
+    "audio/p4-set14-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set14-q01.mp3"
+  ]
+},
+"l4-41": {
+  "passage": [
+    "audio/p4-set14-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set14-q02.mp3"
+  ]
+},
+"l4-42": {
+  "passage": [
+    "audio/p4-set14-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set14-q03.mp3"
+  ]
+},
+"l4-43": {
+  "passage": [
+    "audio/p4-set15-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set15-q01.mp3"
+  ]
+},
+"l4-44": {
+  "passage": [
+    "audio/p4-set15-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set15-q02.mp3"
+  ]
+},
+"l4-45": {
+  "passage": [
+    "audio/p4-set15-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set15-q03.mp3"
+  ]
+},
+"l4-46": {
+  "passage": [
+    "audio/p4-set16-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set16-q01.mp3"
+  ]
+},
+"l4-47": {
+  "passage": [
+    "audio/p4-set16-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set16-q02.mp3"
+  ]
+},
+"l4-48": {
+  "passage": [
+    "audio/p4-set16-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set16-q03.mp3"
+  ]
+},
+"l4-49": {
+  "passage": [
+    "audio/p4-set17-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set17-q01.mp3"
+  ]
+},
+"l4-50": {
+  "passage": [
+    "audio/p4-set17-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set17-q02.mp3"
+  ]
+},
+"l4-51": {
+  "passage": [
+    "audio/p4-set17-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set17-q03.mp3"
+  ]
+},
+"l4-52": {
+  "passage": [
+    "audio/p4-set18-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set18-q01.mp3"
+  ]
+},
+"l4-53": {
+  "passage": [
+    "audio/p4-set18-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set18-q02.mp3"
+  ]
+},
+"l4-54": {
+  "passage": [
+    "audio/p4-set18-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set18-q03.mp3"
+  ]
+},
+"l4-55": {
+  "passage": [
+    "audio/p4-set19-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set19-q01.mp3"
+  ]
+},
+"l4-56": {
+  "passage": [
+    "audio/p4-set19-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set19-q02.mp3"
+  ]
+},
+"l4-57": {
+  "passage": [
+    "audio/p4-set19-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set19-q03.mp3"
+  ]
+},
+"l4-58": {
+  "passage": [
+    "audio/p4-set20-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set20-q01.mp3"
+  ]
+},
+"l4-59": {
+  "passage": [
+    "audio/p4-set20-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set20-q02.mp3"
+  ]
+},
+"l4-60": {
+  "passage": [
+    "audio/p4-set20-talk.mp3"
+  ],
+  "question": [
+    "audio/p4-set20-q03.mp3"
+  ]
+}
+};
 
 
 /* High-quality files for the expanded listening pool */
@@ -3394,7 +5674,1606 @@ const LISTENING_BANK = [
   { id:"l4-04", section:"listening", part:4, audioId:"l4-delivery", skill:"talk", focus:"talk purpose", difficulty:"easy", text:"What is the purpose of the call?", choices:["To confirm a payment","To update a delivery schedule","To advertise a new chair","To request a customer review"], answer:1 },
   { id:"l4-05", section:"listening", part:4, audioId:"l4-delivery", skill:"talk", focus:"talk detail", difficulty:"medium", text:"When are the ordered chairs now expected?", choices:["Thursday","Friday","Monday","Tuesday"], answer:2 },
   { id:"l4-06", section:"listening", part:4, audioId:"l4-delivery", skill:"talk", focus:"talk detail", difficulty:"hard", text:"What option does the speaker offer?", choices:["A discount on the order","Free home delivery","Twelve different chairs","Six temporary chairs for pickup"], answer:3 }
-,{id:"l3-22",section:"listening",part:3,audioId:"lx-p3-set08",skill:"conversation",focus:"detail / problem",difficulty:"easy",text:"What problem does the woman have?",choices:["She cannot open her presentation file", "She lost the sales report", "The meeting room is not available", "Her e-mail program is not working"],answer:0},{id:"l3-23",section:"listening",part:3,audioId:"lx-p3-set08",skill:"conversation",focus:"detail",difficulty:"medium",text:"What does the man say about the sales figures?",choices:["They should be added after the meeting", "They can be copied from a report he sent", "The client will provide them", "They should be left out of the slides"],answer:1},{id:"l3-24",section:"listening",part:3,audioId:"lx-p3-set08",skill:"conversation",focus:"next action",difficulty:"medium",text:"What will the man most likely do next?",choices:["Print copies of the report", "Call the technical support team", "Set up the meeting room computer", "Restart the woman's computer"],answer:2},{id:"l3-25",section:"listening",part:3,audioId:"lx-p3-set09",skill:"conversation",focus:"detail / reason",difficulty:"medium",text:"Why does the woman choose the earlier flight?",choices:["It is less expensive", "She must arrive before noon", "It has a window seat available", "It includes breakfast"],answer:1},{id:"l3-26",section:"listening",part:3,audioId:"lx-p3-set09",skill:"conversation",focus:"detail",difficulty:"easy",text:"What does the woman request?",choices:["A window seat", "An extra suitcase", "An aisle seat", "A later return flight"],answer:2},{id:"l3-27",section:"listening",part:3,audioId:"lx-p3-set09",skill:"conversation",focus:"detail / future action",difficulty:"medium",text:"What does the woman say she will do?",choices:["Pay fifty dollars for a change", "Inform the man if her return date changes", "Book a hotel room in Chicago", "Cancel the Friday flight"],answer:1},{id:"l3-28",section:"listening",part:3,audioId:"lx-p3-set10",skill:"conversation",focus:"detail / number",difficulty:"easy",text:"How many new employees are starting on Monday?",choices:["Ten", "Twelve", "Two", "Nine"],answer:1},{id:"l3-29",section:"listening",part:3,audioId:"lx-p3-set10",skill:"conversation",focus:"detail / task",difficulty:"medium",text:"What does the man offer to do?",choices:["Reserve a larger training room", "Print the welcome packages", "Contact the printing company about the badges", "Give the welcome speech"],answer:2},{id:"l3-30",section:"listening",part:3,audioId:"lx-p3-set10",skill:"conversation",focus:"detail / future action",difficulty:"medium",text:"What will the woman do this afternoon?",choices:["Send the updated schedule to the presenters", "Order lunch for the group", "Meet with the president", "Register the new employees"],answer:0},{id:"l3-31",section:"listening",part:3,audioId:"lx-p3-set11",skill:"conversation",focus:"conversation purpose",difficulty:"easy",text:"Why does the woman call the hotel?",choices:["To make a new reservation", "To request changes to her stay", "To complain about a bill", "To ask about meeting rooms"],answer:1},{id:"l3-32",section:"listening",part:3,audioId:"lx-p3-set11",skill:"conversation",focus:"detail",difficulty:"medium",text:"What does the woman agree to pay extra for?",choices:["A garden-view room", "An extra night", "A later checkout time", "Transportation to the airport"],answer:2},{id:"l3-33",section:"listening",part:3,audioId:"lx-p3-set11",skill:"conversation",focus:"detail",difficulty:"medium",text:"What will happen in ten minutes?",choices:["The woman will check out of the hotel", "A staff member will help her move her luggage", "Her meeting will begin", "A taxi will arrive at the entrance"],answer:1},{id:"l3-34",section:"listening",part:3,audioId:"lx-p3-set12",skill:"conversation",focus:"detail",difficulty:"medium",text:"What problem occurred with the product samples?",choices:["They were sent to the wrong venue", "They were delayed because a truck broke down", "They arrived damaged", "They were never ordered"],answer:1},{id:"l3-35",section:"listening",part:3,audioId:"lx-p3-set12",skill:"conversation",focus:"detail / reason",difficulty:"medium",text:"Why will the woman order more brochures?",choices:["Some of the brochures are damaged", "The design of the brochure has changed", "Last year they gave out more than the current stock", "The show will last longer this year"],answer:2},{id:"l3-36",section:"listening",part:3,audioId:"lx-p3-set12",skill:"conversation",focus:"detail",difficulty:"easy",text:"When will the speakers meet on Saturday?",choices:["At eight o'clock", "At nine o'clock", "At ten o'clock", "In the afternoon"],answer:0},{id:"l3-37",section:"listening",part:3,audioId:"lx-p3-set13",skill:"conversation",focus:"detail",difficulty:"medium",text:"Why will the woman not receive a refund?",choices:["She does not have the receipt", "She bought the item more than a month ago", "Refunds are only given for unopened items", "The store no longer sells that model"],answer:2},{id:"l3-38",section:"listening",part:3,audioId:"lx-p3-set13",skill:"conversation",focus:"detail",difficulty:"medium",text:"What does the man offer to do at the store?",choices:["Repair the coffee maker", "Test the replacement before she takes it home", "Call her within a week", "Give her a store discount"],answer:1},{id:"l3-39",section:"listening",part:3,audioId:"lx-p3-set13",skill:"conversation",focus:"detail",difficulty:"easy",text:"How long does a repair usually take?",choices:["Thirty days", "Ninety days", "About a week", "One day"],answer:2},{id:"l4-25",section:"listening",part:4,audioId:"lx-p4-set09",skill:"talk",focus:"talk topic",difficulty:"easy",text:"What is the announcement mainly about?",choices:["A flight cancellation", "A change in a departure gate", "A new ticket price", "A lost item at the airport"],answer:1},{id:"l4-26",section:"listening",part:4,audioId:"lx-p4-set09",skill:"talk",focus:"detail",difficulty:"medium",text:"When will boarding begin?",choices:["At 3:40 P.M.", "At 3:20 P.M.", "At 4:14 P.M.", "At 9:40 P.M."],answer:0},{id:"l4-27",section:"listening",part:4,audioId:"lx-p4-set09",skill:"talk",focus:"detail",difficulty:"medium",text:"Who is asked to contact staff at the information desk?",choices:["Passengers traveling to Denver", "Passengers who need assistance or are traveling with young children", "Passengers carrying large luggage", "Passengers who missed their flight"],answer:1},{id:"l4-28",section:"listening",part:4,audioId:"lx-p4-set10",skill:"talk",focus:"talk purpose",difficulty:"easy",text:"Why is the speaker calling?",choices:["To schedule a repair appointment", "To say that a car is ready to be picked up", "To ask for payment in advance", "To recommend additional repairs"],answer:1},{id:"l4-29",section:"listening",part:4,audioId:"lx-p4-set10",skill:"talk",focus:"detail",difficulty:"medium",text:"Why is the total cost lower than the original estimate?",choices:["The shop applied a special discount", "Some parts did not need to be replaced", "The repair took less time than expected", "Part of the cost was paid in advance"],answer:1},{id:"l4-30",section:"listening",part:4,audioId:"lx-p4-set10",skill:"talk",focus:"detail",difficulty:"medium",text:"What is Mr. Carter asked to bring when he picks up the car?",choices:["His car keys", "His driver's license", "His repair receipt", "A credit card"],answer:2}];
+,{id:"l3-22",section:"listening",part:3,audioId:"lx-p3-set08",skill:"conversation",focus:"detail / problem",difficulty:"easy",text:"What problem does the woman have?",choices:["She cannot open her presentation file", "She lost the sales report", "The meeting room is not available", "Her e-mail program is not working"],answer:0},{id:"l3-23",section:"listening",part:3,audioId:"lx-p3-set08",skill:"conversation",focus:"detail",difficulty:"medium",text:"What does the man say about the sales figures?",choices:["They should be added after the meeting", "They can be copied from a report he sent", "The client will provide them", "They should be left out of the slides"],answer:1},{id:"l3-24",section:"listening",part:3,audioId:"lx-p3-set08",skill:"conversation",focus:"next action",difficulty:"medium",text:"What will the man most likely do next?",choices:["Print copies of the report", "Call the technical support team", "Set up the meeting room computer", "Restart the woman's computer"],answer:2},{id:"l3-25",section:"listening",part:3,audioId:"lx-p3-set09",skill:"conversation",focus:"detail / reason",difficulty:"medium",text:"Why does the woman choose the earlier flight?",choices:["It is less expensive", "She must arrive before noon", "It has a window seat available", "It includes breakfast"],answer:1},{id:"l3-26",section:"listening",part:3,audioId:"lx-p3-set09",skill:"conversation",focus:"detail",difficulty:"easy",text:"What does the woman request?",choices:["A window seat", "An extra suitcase", "An aisle seat", "A later return flight"],answer:2},{id:"l3-27",section:"listening",part:3,audioId:"lx-p3-set09",skill:"conversation",focus:"detail / future action",difficulty:"medium",text:"What does the woman say she will do?",choices:["Pay fifty dollars for a change", "Inform the man if her return date changes", "Book a hotel room in Chicago", "Cancel the Friday flight"],answer:1},{id:"l3-28",section:"listening",part:3,audioId:"lx-p3-set10",skill:"conversation",focus:"detail / number",difficulty:"easy",text:"How many new employees are starting on Monday?",choices:["Ten", "Twelve", "Two", "Nine"],answer:1},{id:"l3-29",section:"listening",part:3,audioId:"lx-p3-set10",skill:"conversation",focus:"detail / task",difficulty:"medium",text:"What does the man offer to do?",choices:["Reserve a larger training room", "Print the welcome packages", "Contact the printing company about the badges", "Give the welcome speech"],answer:2},{id:"l3-30",section:"listening",part:3,audioId:"lx-p3-set10",skill:"conversation",focus:"detail / future action",difficulty:"medium",text:"What will the woman do this afternoon?",choices:["Send the updated schedule to the presenters", "Order lunch for the group", "Meet with the president", "Register the new employees"],answer:0},{id:"l3-31",section:"listening",part:3,audioId:"lx-p3-set11",skill:"conversation",focus:"conversation purpose",difficulty:"easy",text:"Why does the woman call the hotel?",choices:["To make a new reservation", "To request changes to her stay", "To complain about a bill", "To ask about meeting rooms"],answer:1},{id:"l3-32",section:"listening",part:3,audioId:"lx-p3-set11",skill:"conversation",focus:"detail",difficulty:"medium",text:"What does the woman agree to pay extra for?",choices:["A garden-view room", "An extra night", "A later checkout time", "Transportation to the airport"],answer:2},{id:"l3-33",section:"listening",part:3,audioId:"lx-p3-set11",skill:"conversation",focus:"detail",difficulty:"medium",text:"What will happen in ten minutes?",choices:["The woman will check out of the hotel", "A staff member will help her move her luggage", "Her meeting will begin", "A taxi will arrive at the entrance"],answer:1},{id:"l3-34",section:"listening",part:3,audioId:"lx-p3-set12",skill:"conversation",focus:"detail",difficulty:"medium",text:"What problem occurred with the product samples?",choices:["They were sent to the wrong venue", "They were delayed because a truck broke down", "They arrived damaged", "They were never ordered"],answer:1},{id:"l3-35",section:"listening",part:3,audioId:"lx-p3-set12",skill:"conversation",focus:"detail / reason",difficulty:"medium",text:"Why will the woman order more brochures?",choices:["Some of the brochures are damaged", "The design of the brochure has changed", "Last year they gave out more than the current stock", "The show will last longer this year"],answer:2},{id:"l3-36",section:"listening",part:3,audioId:"lx-p3-set12",skill:"conversation",focus:"detail",difficulty:"easy",text:"When will the speakers meet on Saturday?",choices:["At eight o'clock", "At nine o'clock", "At ten o'clock", "In the afternoon"],answer:0},{id:"l3-37",section:"listening",part:3,audioId:"lx-p3-set13",skill:"conversation",focus:"detail",difficulty:"medium",text:"Why will the woman not receive a refund?",choices:["She does not have the receipt", "She bought the item more than a month ago", "Refunds are only given for unopened items", "The store no longer sells that model"],answer:2},{id:"l3-38",section:"listening",part:3,audioId:"lx-p3-set13",skill:"conversation",focus:"detail",difficulty:"medium",text:"What does the man offer to do at the store?",choices:["Repair the coffee maker", "Test the replacement before she takes it home", "Call her within a week", "Give her a store discount"],answer:1},{id:"l3-39",section:"listening",part:3,audioId:"lx-p3-set13",skill:"conversation",focus:"detail",difficulty:"easy",text:"How long does a repair usually take?",choices:["Thirty days", "Ninety days", "About a week", "One day"],answer:2},{id:"l4-25",section:"listening",part:4,audioId:"lx-p4-set09",skill:"talk",focus:"talk topic",difficulty:"easy",text:"What is the announcement mainly about?",choices:["A flight cancellation", "A change in a departure gate", "A new ticket price", "A lost item at the airport"],answer:1},{id:"l4-26",section:"listening",part:4,audioId:"lx-p4-set09",skill:"talk",focus:"detail",difficulty:"medium",text:"When will boarding begin?",choices:["At 3:40 P.M.", "At 3:20 P.M.", "At 4:14 P.M.", "At 9:40 P.M."],answer:0},{id:"l4-27",section:"listening",part:4,audioId:"lx-p4-set09",skill:"talk",focus:"detail",difficulty:"medium",text:"Who is asked to contact staff at the information desk?",choices:["Passengers traveling to Denver", "Passengers who need assistance or are traveling with young children", "Passengers carrying large luggage", "Passengers who missed their flight"],answer:1},{id:"l4-28",section:"listening",part:4,audioId:"lx-p4-set10",skill:"talk",focus:"talk purpose",difficulty:"easy",text:"Why is the speaker calling?",choices:["To schedule a repair appointment", "To say that a car is ready to be picked up", "To ask for payment in advance", "To recommend additional repairs"],answer:1},{id:"l4-29",section:"listening",part:4,audioId:"lx-p4-set10",skill:"talk",focus:"detail",difficulty:"medium",text:"Why is the total cost lower than the original estimate?",choices:["The shop applied a special discount", "Some parts did not need to be replaced", "The repair took less time than expected", "Part of the cost was paid in advance"],answer:1},{id:"l4-30",section:"listening",part:4,audioId:"lx-p4-set10",skill:"talk",focus:"detail",difficulty:"medium",text:"What is Mr. Carter asked to bring when he picks up the car?",choices:["His car keys", "His driver's license", "His repair receipt", "A credit card"],answer:2},
+{
+  "id": "l2-26",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-26",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "easy",
+  "text": "When does the training session start tomorrow?",
+  "choices": [
+    "At nine in the morning.",
+    "In the building across the street.",
+    "Yes, I plan to attend."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-27",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-27",
+  "skill": "response",
+  "focus": "yes-no question",
+  "difficulty": "easy",
+  "text": "Have you sent the invoice to the client yet?",
+  "choices": [
+    "It was issued last month.",
+    "Not yet, but I'll send it this afternoon.",
+    "The client is in Osaka."
+  ],
+  "answer": 1,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-28",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-28",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "easy",
+  "text": "Where can I find the nearest pharmacy?",
+  "choices": [
+    "It closes at eight tonight.",
+    "About five minutes by bus.",
+    "Just around the corner from the station."
+  ],
+  "answer": 2,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-29",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-29",
+  "skill": "response",
+  "focus": "request",
+  "difficulty": "medium",
+  "text": "Could you review this contract before Friday?",
+  "choices": [
+    "Certainly, I'll look it over tomorrow.",
+    "The contract is on your desk.",
+    "Yes, it was signed last week."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-30",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-30",
+  "skill": "response",
+  "focus": "choice question",
+  "difficulty": "medium",
+  "text": "Would you like your receipt by email or in print?",
+  "choices": [
+    "Yes, please send it.",
+    "By email, please.",
+    "The total is forty dollars."
+  ],
+  "answer": 1,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-31",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-31",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "easy",
+  "text": "Who is in charge of the new marketing project?",
+  "choices": [
+    "It starts next month.",
+    "At the head office.",
+    "Ms. Carter is leading it."
+  ],
+  "answer": 2,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-32",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-32",
+  "skill": "response",
+  "focus": "suggestion",
+  "difficulty": "medium",
+  "text": "Why don't we take a break and continue after lunch?",
+  "choices": [
+    "That sounds like a good idea.",
+    "Because the meeting is long.",
+    "I had lunch at noon."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-33",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-33",
+  "skill": "response",
+  "focus": "statement",
+  "difficulty": "medium",
+  "text": "The printer on the third floor is out of order again.",
+  "choices": [
+    "I printed the documents yesterday.",
+    "I'll call the repair service right away.",
+    "It was installed two years ago."
+  ],
+  "answer": 1,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-34",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-34",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "medium",
+  "text": "How long will the renovation of the lobby take?",
+  "choices": [
+    "It's on the ground floor.",
+    "The workers are very skilled.",
+    "About three weeks, I think."
+  ],
+  "answer": 2,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-35",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-35",
+  "skill": "response",
+  "focus": "yes-no question",
+  "difficulty": "easy",
+  "text": "Is this seat taken?",
+  "choices": [
+    "No, please go ahead and sit down.",
+    "The train leaves at six.",
+    "I took it yesterday."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-36",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-36",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "medium",
+  "text": "Why was the flight to Chicago delayed?",
+  "choices": [
+    "It lands at seven in the evening.",
+    "Because of heavy snow at the airport.",
+    "The ticket cost two hundred dollars."
+  ],
+  "answer": 1,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-37",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-37",
+  "skill": "response",
+  "focus": "request",
+  "difficulty": "hard",
+  "text": "Could you possibly reschedule my appointment to next Tuesday?",
+  "choices": [
+    "The appointment was last week.",
+    "Tuesday is my day off.",
+    "Let me check the calendar and confirm."
+  ],
+  "answer": 2,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-38",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-38",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "easy",
+  "text": "How many people have registered for the workshop?",
+  "choices": [
+    "Around thirty so far.",
+    "It will be held in the main hall.",
+    "Registration closes on Friday."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-39",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-39",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "medium",
+  "text": "What did the manager say about the budget cuts?",
+  "choices": [
+    "The budget is quite large.",
+    "She said they would be kept to a minimum.",
+    "At the meeting yesterday."
+  ],
+  "answer": 1,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-40",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-40",
+  "skill": "response",
+  "focus": "suggestion",
+  "difficulty": "medium",
+  "text": "How about ordering lunch for the whole team today?",
+  "choices": [
+    "I usually eat at my desk.",
+    "The restaurant opens at eleven.",
+    "Good idea, I'll collect everyone's orders."
+  ],
+  "answer": 2,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-41",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-41",
+  "skill": "response",
+  "focus": "yes-no question",
+  "difficulty": "medium",
+  "text": "Do you know if the library is open on Sundays?",
+  "choices": [
+    "Yes, it opens at ten on Sundays.",
+    "I returned the book last week.",
+    "The library is near the park."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-42",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-42",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "medium",
+  "text": "How often does the shuttle bus run between the two offices?",
+  "choices": [
+    "It takes about fifteen minutes.",
+    "Every twenty minutes.",
+    "The driver is very friendly."
+  ],
+  "answer": 1,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-43",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-43",
+  "skill": "response",
+  "focus": "statement",
+  "difficulty": "hard",
+  "text": "I've been feeling much better since I started jogging in the morning.",
+  "choices": [
+    "The park opens early.",
+    "Jogging shoes are on sale this week.",
+    "That's great to hear, keep it up."
+  ],
+  "answer": 2,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-44",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-44",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "easy",
+  "text": "How much does it cost to rent a bicycle for a day?",
+  "choices": [
+    "Fifteen dollars, including insurance.",
+    "You can return it by six.",
+    "The shop is next to the station."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-45",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-45",
+  "skill": "response",
+  "focus": "choice question",
+  "difficulty": "medium",
+  "text": "Should we hold the seminar online or at the community center?",
+  "choices": [
+    "The seminar is about marketing.",
+    "Online would reach more people.",
+    "It was held last spring."
+  ],
+  "answer": 1,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-46",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-46",
+  "skill": "response",
+  "focus": "request",
+  "difficulty": "medium",
+  "text": "Would you mind opening the window for a moment?",
+  "choices": [
+    "The window is quite large.",
+    "It might rain later.",
+    "Not at all, I'll open it now."
+  ],
+  "answer": 2,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-47",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-47",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "hard",
+  "text": "When is the deadline for submitting the expense reports?",
+  "choices": [
+    "The end of this month.",
+    "Please submit them to accounting.",
+    "They cover travel and meals."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-48",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-48",
+  "skill": "response",
+  "focus": "yes-no question",
+  "difficulty": "hard",
+  "text": "Weren't you supposed to meet the supplier this morning?",
+  "choices": [
+    "The supplier is from Taiwan.",
+    "Yes, but the meeting was postponed to Friday.",
+    "I bought the supplies yesterday."
+  ],
+  "answer": 1,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-49",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-49",
+  "skill": "response",
+  "focus": "statement",
+  "difficulty": "medium",
+  "text": "Our sales rose by ten percent compared to last quarter.",
+  "choices": [
+    "The quarter ends in March.",
+    "Sales reports are due on Monday.",
+    "That's impressive, the new strategy is working."
+  ],
+  "answer": 2,
+  "hideChoiceText": true
+},
+{
+  "id": "l2-50",
+  "section": "listening",
+  "part": 2,
+  "audioId": "lx-p2-50",
+  "skill": "response",
+  "focus": "wh-question",
+  "difficulty": "medium",
+  "text": "How do I get to the city museum from here?",
+  "choices": [
+    "Take the subway to Central Station and walk five minutes.",
+    "The museum is closed on Mondays.",
+    "It was built fifty years ago."
+  ],
+  "answer": 0,
+  "hideChoiceText": true
+},
+{
+  "id": "l3-40",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set14",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why does the woman call the man?",
+  "choices": [
+    "To place an order for office supplies",
+    "To ask about a delayed delivery",
+    "To complain about a broken printer",
+    "To request a refund for paper"
+  ],
+  "answer": 0
+},
+{
+  "id": "l3-41",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set14",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "How many boxes of pens will be ordered in total?",
+  "choices": [
+    "20 boxes",
+    "25 boxes",
+    "30 boxes",
+    "35 boxes"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-42",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set14",
+  "skill": "conversation",
+  "focus": "next action",
+  "difficulty": "easy",
+  "text": "What will the man do next?",
+  "choices": [
+    "Deliver the supplies on Friday morning",
+    "Send an invoice by e-mail",
+    "Call the other two teams",
+    "Order a new printer"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-43",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set15",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "What are the speakers preparing for?",
+  "choices": [
+    "A client meeting",
+    "A job interview",
+    "A company party",
+    "A training session"
+  ],
+  "answer": 0
+},
+{
+  "id": "l3-44",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set15",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "What time will the meeting start?",
+  "choices": [
+    "9:30",
+    "11:00",
+    "10:00",
+    "10:30"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-45",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set15",
+  "skill": "conversation",
+  "focus": "inference",
+  "difficulty": "medium",
+  "text": "Why do the speakers decide to use the room on the fifth floor?",
+  "choices": [
+    "The client asked for a quieter room",
+    "The projector in the first room is broken",
+    "They expect more attendees than the first room can hold",
+    "The fifth floor has a better view"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-46",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set16",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why does the woman contact the man?",
+  "choices": [
+    "To book a vacation package",
+    "To arrange a business trip",
+    "To cancel a flight to Chicago",
+    "To change a hotel room"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-47",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set16",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "hard",
+  "text": "How many nights will the woman stay at the hotel?",
+  "choices": [
+    "Two nights",
+    "Four nights",
+    "Three nights",
+    "One night"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-48",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set16",
+  "skill": "conversation",
+  "focus": "next action",
+  "difficulty": "easy",
+  "text": "What will the man do this afternoon?",
+  "choices": [
+    "Send the itinerary by e-mail",
+    "Meet the client in Chicago",
+    "Pick up the plane tickets",
+    "Reserve a rental car"
+  ],
+  "answer": 0
+},
+{
+  "id": "l3-49",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set17",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why does the man call the restaurant?",
+  "choices": [
+    "To order takeout food",
+    "To make a new reservation",
+    "To ask about menu prices",
+    "To change his reservation"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-50",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set17",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "How many people will have dinner at the restaurant?",
+  "choices": [
+    "Four people",
+    "Five people",
+    "Six people",
+    "Seven people"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-51",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set17",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What does the man ask about at the end of the conversation?",
+  "choices": [
+    "A birthday cake",
+    "Vegetarian dishes",
+    "The wine list",
+    "A parking space"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-52",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set18",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why does the man call the medical center?",
+  "choices": [
+    "To get his test results",
+    "To make a payment",
+    "To find a new doctor",
+    "To reschedule an appointment"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-53",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set18",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "When is the man's new appointment?",
+  "choices": [
+    "Monday at 8:30",
+    "Tomorrow at 9:15",
+    "Friday at 9:15",
+    "Friday at 10:45"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-54",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set18",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "What is the man asked to bring to his appointment?",
+  "choices": [
+    "His passport and insurance card",
+    "His insurance card and a list of his medicine",
+    "A referral letter from another doctor",
+    "His previous X-rays"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-55",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set19",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why does the woman call the moving company?",
+  "choices": [
+    "To rent a truck",
+    "To report a damaged sofa",
+    "To change her moving date",
+    "To ask for a moving estimate"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-56",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set19",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "hard",
+  "text": "What is the total estimate for the move?",
+  "choices": [
+    "$450",
+    "$520",
+    "$570",
+    "$620"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-57",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set19",
+  "skill": "conversation",
+  "focus": "inference",
+  "difficulty": "medium",
+  "text": "Why will the company send one extra worker?",
+  "choices": [
+    "The new apartment has no elevator",
+    "The woman has a piano",
+    "The sofa is very heavy",
+    "The new apartment is far away"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-58",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set20",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "What does the woman want to do?",
+  "choices": [
+    "Join a gym",
+    "Cancel her membership",
+    "Book a swimming class",
+    "Rent exercise equipment"
+  ],
+  "answer": 0
+},
+{
+  "id": "l3-59",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set20",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "hard",
+  "text": "How much will the woman pay today?",
+  "choices": [
+    "$240",
+    "$290",
+    "$150",
+    "$200"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-60",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set20",
+  "skill": "conversation",
+  "focus": "next action",
+  "difficulty": "easy",
+  "text": "What will the woman probably do next?",
+  "choices": [
+    "Tour the pool area",
+    "Take a fitness test",
+    "Fill out a form",
+    "Meet a personal trainer"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-61",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set21",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "medium",
+  "text": "Why is the man calling the woman?",
+  "choices": [
+    "To sell her a car",
+    "To report the results of a car inspection",
+    "To remind her about an oil change",
+    "To ask for directions to her house"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-62",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set21",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "How much is the labor charge for the repair?",
+  "choices": [
+    "$90",
+    "$180",
+    "$270",
+    "$360"
+  ],
+  "answer": 0
+},
+{
+  "id": "l3-63",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set21",
+  "skill": "conversation",
+  "focus": "inference",
+  "difficulty": "medium",
+  "text": "When will the woman pick up her car?",
+  "choices": [
+    "At 4:00 today",
+    "At 5:30 today",
+    "Tomorrow morning",
+    "Next week"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-64",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set22",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "What is the woman doing?",
+  "choices": [
+    "Booking a room by phone",
+    "Checking in to a hotel",
+    "Asking about room prices",
+    "Complaining about noise"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-65",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set22",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "How many nights will the woman stay at the hotel in total?",
+  "choices": [
+    "One night",
+    "Two nights",
+    "Three nights",
+    "Four nights"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-66",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set22",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What does the woman ask about at the end of the conversation?",
+  "choices": [
+    "Breakfast",
+    "A wake-up call",
+    "The Wi-Fi password",
+    "A late checkout"
+  ],
+  "answer": 0
+},
+{
+  "id": "l3-67",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set23",
+  "skill": "conversation",
+  "focus": "gist",
+  "difficulty": "easy",
+  "text": "What are the speakers mainly discussing?",
+  "choices": [
+    "The progress of a project",
+    "A hiring decision",
+    "A budget cut",
+    "A client complaint"
+  ],
+  "answer": 0
+},
+{
+  "id": "l3-68",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set23",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "How many tasks are still unfinished?",
+  "choices": [
+    "Seven",
+    "Ten",
+    "Two",
+    "Three"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-69",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set23",
+  "skill": "conversation",
+  "focus": "next action",
+  "difficulty": "medium",
+  "text": "What will the woman do to meet the earlier launch date?",
+  "choices": [
+    "Cancel the final testing",
+    "Work overtime every day",
+    "Ask another employee to join the team",
+    "Ask the client to change the date again"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-70",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set24",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why are the speakers planning a party?",
+  "choices": [
+    "To celebrate a promotion",
+    "To say goodbye to a colleague",
+    "To welcome a new manager",
+    "To mark the company's anniversary"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-71",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set24",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "How many people have confirmed that they will come to the party?",
+  "choices": [
+    "15",
+    "10",
+    "28",
+    "12"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-72",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set24",
+  "skill": "conversation",
+  "focus": "next action",
+  "difficulty": "easy",
+  "text": "What will the man do?",
+  "choices": [
+    "Buy a farewell gift",
+    "Make a reservation and order a cake",
+    "Send out the invitations",
+    "Prepare a card for everyone to sign"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-73",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set25",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why does the man talk to the woman?",
+  "choices": [
+    "To ask her to swap work shifts",
+    "To invite her to a family event",
+    "To complain about the manager",
+    "To offer her a promotion"
+  ],
+  "answer": 0
+},
+{
+  "id": "l3-74",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set25",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "What are the woman's original Saturday work hours?",
+  "choices": [
+    "11 to 7",
+    "9 to 7",
+    "11 to 5",
+    "9 to 5"
+  ],
+  "answer": 3
+},
+{
+  "id": "l3-75",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set25",
+  "skill": "conversation",
+  "focus": "inference",
+  "difficulty": "medium",
+  "text": "What must happen before the shift swap becomes final?",
+  "choices": [
+    "A new employee must be hired",
+    "They must both work on Saturday",
+    "The manager must approve the change",
+    "The store must close early"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-76",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set26",
+  "skill": "conversation",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why does the woman call customer service?",
+  "choices": [
+    "To place a new order",
+    "To report a problem with her order",
+    "To ask about a sale",
+    "To change her home address"
+  ],
+  "answer": 1
+},
+{
+  "id": "l3-77",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set26",
+  "skill": "conversation",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What size shirt does the woman want instead?",
+  "choices": [
+    "Small",
+    "Medium",
+    "Large",
+    "Extra large"
+  ],
+  "answer": 2
+},
+{
+  "id": "l3-78",
+  "section": "listening",
+  "part": 3,
+  "audioId": "lx-p3-set26",
+  "skill": "conversation",
+  "focus": "inference",
+  "difficulty": "hard",
+  "text": "Why will the woman receive a $5 refund?",
+  "choices": [
+    "The shirts were on sale",
+    "She returned all three shirts",
+    "Her order total qualified for free delivery",
+    "The delivery was late"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-31",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set11",
+  "skill": "talk",
+  "focus": "purpose",
+  "difficulty": "medium",
+  "text": "Why is the speaker calling?",
+  "choices": [
+    "To request a missing document",
+    "To reschedule a tax appointment",
+    "To offer a new accounting service",
+    "To report an error in a tax form"
+  ],
+  "answer": 0
+},
+{
+  "id": "l4-32",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set11",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What is missing from the listener's documents?",
+  "choices": [
+    "A signature on a contract",
+    "A receipt for office equipment",
+    "A bank statement",
+    "A completed application form"
+  ],
+  "answer": 1
+},
+{
+  "id": "l4-33",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set11",
+  "skill": "talk",
+  "focus": "next action",
+  "difficulty": "medium",
+  "text": "What does the speaker ask the listener to do?",
+  "choices": [
+    "Visit the office on Tuesday",
+    "Pay a fee by Friday",
+    "Send a document and call back to arrange a meeting",
+    "Review the final figures online"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-34",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set12",
+  "skill": "talk",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "What is the announcement mainly about?",
+  "choices": [
+    "A change in store hours",
+    "The opening of a new store",
+    "A workshop registration deadline",
+    "A sale at another location"
+  ],
+  "answer": 1
+},
+{
+  "id": "l4-35",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set12",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What will the first fifty customers receive?",
+  "choices": [
+    "A gardening book",
+    "A bag of soil",
+    "A coffee voucher",
+    "A potted herb plant"
+  ],
+  "answer": 3
+},
+{
+  "id": "l4-36",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set12",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "When will the gardening workshops be held?",
+  "choices": [
+    "At eleven and two on Saturday and Sunday",
+    "Only on Saturday morning",
+    "Every weekday evening",
+    "Once a month"
+  ],
+  "answer": 0
+},
+{
+  "id": "l4-37",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set13",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What will the weather be like on Friday afternoon?",
+  "choices": [
+    "Rainy and cold",
+    "Clear and warmer",
+    "Windy with snow",
+    "Foggy all day"
+  ],
+  "answer": 1
+},
+{
+  "id": "l4-38",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set13",
+  "skill": "talk",
+  "focus": "inference",
+  "difficulty": "hard",
+  "text": "What does the speaker suggest about Saturday?",
+  "choices": [
+    "Rain will begin early in the morning",
+    "Monday will be warmer than Friday",
+    "Saturday daytime is the best time for outdoor activities",
+    "Winds will be stronger on Sunday"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-39",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set13",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "What is expected on Monday?",
+  "choices": [
+    "Temperatures will fall, with cold overnight lows",
+    "Heavy rain will continue all day",
+    "Skies will clear by midday",
+    "Winds will reach forty kilometers per hour"
+  ],
+  "answer": 0
+},
+{
+  "id": "l4-40",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set14",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "Why is traffic backed up on Highway 9?",
+  "choices": [
+    "Flooding near an exit",
+    "An accident that blocked two lanes",
+    "A stalled bus",
+    "Road construction"
+  ],
+  "answer": 1
+},
+{
+  "id": "l4-41",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set14",
+  "skill": "talk",
+  "focus": "suggestion",
+  "difficulty": "medium",
+  "text": "What are drivers advised to do?",
+  "choices": [
+    "Leave home earlier than usual",
+    "Avoid Fifth Avenue entirely",
+    "Follow the detour on Third Avenue",
+    "Use Route 12 instead of Highway 9"
+  ],
+  "answer": 3
+},
+{
+  "id": "l4-42",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set14",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "What is said about bus routes 14 and 22?",
+  "choices": [
+    "They are running every twenty minutes",
+    "They have added extra stops downtown",
+    "They are being detoured via Third Avenue",
+    "They are operating on a holiday schedule"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-43",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set15",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "hard",
+  "text": "What happened in 1985?",
+  "choices": [
+    "A new keeper's house was added",
+    "The tower was painted white",
+    "The first guided tour was held",
+    "The lighthouse was retired from service"
+  ],
+  "answer": 3
+},
+{
+  "id": "l4-44",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set15",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "Where is photography NOT allowed?",
+  "choices": [
+    "In the museum room",
+    "In the keeper's house",
+    "On the tour bus",
+    "In the gift shop"
+  ],
+  "answer": 0
+},
+{
+  "id": "l4-45",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set15",
+  "skill": "talk",
+  "focus": "next action",
+  "difficulty": "medium",
+  "text": "What will the group do after climbing the lighthouse?",
+  "choices": [
+    "Board the bus immediately",
+    "Visit the keeper's house again",
+    "Spend about twenty minutes in the gift shop",
+    "Climb the tower a second time"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-46",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set16",
+  "skill": "talk",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "What is the talk mainly about?",
+  "choices": [
+    "Introducing a new portable blender",
+    "Announcing a discount at a retail store",
+    "Describing a cookbook for smoothies",
+    "Hiring product testers"
+  ],
+  "answer": 0
+},
+{
+  "id": "l4-47",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set16",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "How many blends can the product make on a single charge?",
+  "choices": [
+    "About five blends",
+    "Up to ten blends",
+    "Up to fifteen blends",
+    "An unlimited number"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-48",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set16",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "What special offer is mentioned?",
+  "choices": [
+    "A two-year warranty extension",
+    "Twenty percent off the first order",
+    "A free gym membership",
+    "A free second blending cup with online orders"
+  ],
+  "answer": 3
+},
+{
+  "id": "l4-49",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set17",
+  "skill": "talk",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "Why have the listeners gathered?",
+  "choices": [
+    "To attend a training session",
+    "To celebrate a retirement",
+    "To take part in a quarterly planning meeting",
+    "To interview job candidates"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-50",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set17",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What will Mr. Ortiz do at the meeting?",
+  "choices": [
+    "Present the new packaging proposal",
+    "Announce the sales results",
+    "Lead a team-building exercise",
+    "Introduce a new employee"
+  ],
+  "answer": 0
+},
+{
+  "id": "l4-51",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set17",
+  "skill": "talk",
+  "focus": "inference",
+  "difficulty": "hard",
+  "text": "Why will the meeting end at noon?",
+  "choices": [
+    "The team expects to finish its agenda early",
+    "Lunch will be served at noon",
+    "The presenter must leave early",
+    "Another group has reserved the room"
+  ],
+  "answer": 3
+},
+{
+  "id": "l4-52",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set18",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What did the city council approve?",
+  "choices": [
+    "A new sports stadium",
+    "Funding for a community library",
+    "A tax increase",
+    "A road construction project"
+  ],
+  "answer": 1
+},
+{
+  "id": "l4-53",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set18",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "How long is the library construction expected to take?",
+  "choices": [
+    "Six months",
+    "Two years",
+    "Three years",
+    "About eighteen months"
+  ],
+  "answer": 3
+},
+{
+  "id": "l4-54",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set18",
+  "skill": "talk",
+  "focus": "inference",
+  "difficulty": "medium",
+  "text": "What does the report suggest about the Harbor City Mariners?",
+  "choices": [
+    "They are in first place in the league",
+    "They lost to the league leaders",
+    "They improved their position in the standings",
+    "They will not play next month"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-55",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set19",
+  "skill": "talk",
+  "focus": "purpose",
+  "difficulty": "easy",
+  "text": "What is the purpose of the event?",
+  "choices": [
+    "To raise money for student scholarships",
+    "To celebrate a company's anniversary",
+    "To launch a new product",
+    "To honor retiring teachers"
+  ],
+  "answer": 0
+},
+{
+  "id": "l4-56",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set19",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "When will the silent auction close?",
+  "choices": [
+    "At eight o'clock",
+    "During the main course",
+    "At nine thirty",
+    "After the jazz performance"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-57",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set19",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "hard",
+  "text": "What will happen during the main course?",
+  "choices": [
+    "The auction winners will be announced",
+    "A former scholarship recipient will give a speech",
+    "The jazz quartet will perform",
+    "Dessert will be served"
+  ],
+  "answer": 1
+},
+{
+  "id": "l4-58",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set20",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "How many books may members borrow at one time?",
+  "choices": [
+    "Up to five books",
+    "Up to ten books",
+    "Up to fifteen books",
+    "An unlimited number"
+  ],
+  "answer": 1
+},
+{
+  "id": "l4-59",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set20",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "easy",
+  "text": "What does printing cost?",
+  "choices": [
+    "It is free for members",
+    "Five cents per page",
+    "Ten cents per page",
+    "One dollar per document"
+  ],
+  "answer": 2
+},
+{
+  "id": "l4-60",
+  "section": "listening",
+  "part": 4,
+  "audioId": "lx-p4-set20",
+  "skill": "talk",
+  "focus": "detail",
+  "difficulty": "medium",
+  "text": "How can study rooms be reserved?",
+  "choices": [
+    "At the third-floor computer lab",
+    "Only by library staff members",
+    "By phone at least two days ahead",
+    "Through the website up to one week in advance"
+  ],
+  "answer": 3
+}
+];
 
 
 /* Add the expanded pool while retaining the original 20 questions. */
@@ -3421,7 +7300,829 @@ const LISTENING_TRANSLATIONS = {
   "l4-04": { text:"この電話の目的は何ですか。", choices:["支払いを確認するため","配送予定を知らせるため","新しい椅子を宣伝するため","顧客レビューを依頼するため"] },
   "l4-05": { text:"注文した椅子は現在いつ到着予定ですか。", choices:["木曜日","金曜日","月曜日","火曜日"] },
   "l4-06": { text:"話し手はどんな選択肢を提案していますか。", choices:["注文の割引","無料の自宅配送","別の椅子12脚","店舗で受け取る仮の椅子6脚"] }
-,"l3-22":{text:"女性はどのような問題を抱えていますか。",choices:["プレゼンのファイルが開けない", "売上レポートを紛失した", "会議室が使えない", "メールソフトが動かない"]},"l3-23":{text:"男性は売上数字について何と言っていますか。",choices:["会議の後に追加すべきだ", "彼が送ったレポートからコピーできる", "顧客が提供してくれる", "スライドから外すべきだ"]},"l3-24":{text:"男性は次に何をする可能性が最も高いですか。",choices:["レポートを印刷する", "技術サポートに電話する", "会議室のパソコンをセットアップする", "女性のパソコンを再起動する"]},"l3-25":{text:"女性はなぜ早い方の便を選んだのですか。",choices:["安いから", "正午前に到着しなければならないから", "窓側の席があるから", "朝食が付いているから"]},"l3-26":{text:"女性は何を希望しましたか。",choices:["窓側の席", "追加のスーツケース", "通路側の席", "遅い帰りの便"]},"l3-27":{text:"女性は何をすると言っていますか。",choices:["変更料として50ドル払うこと", "帰りの日付が変わったら男性に知らせること", "シカゴのホテルを予約すること", "金曜の便をキャンセルすること"]},"l3-28":{text:"月曜に入社する新入社員は何人ですか。",choices:["10人", "12人", "2人", "9人"]},"l3-29":{text:"男性は何をすると申し出ましたか。",choices:["もっと大きい研修室を予約すること", "歓迎パッケージを印刷すること", "名札について印刷会社に連絡すること", "歓迎の挨拶をすること"]},"l3-30":{text:"女性は今日の午後に何をしますか。",choices:["更新した日程を発表者にメールすること", "グループの昼食を注文すること", "社長と面会すること", "新入社員の受付をすること"]},"l3-31":{text:"女性はなぜホテルに電話しましたか。",choices:["新しい予約をするため", "滞在内容の変更をお願いするため", "請求書について苦情を言うため", "会議室について尋ねるため"]},"l3-32":{text:"女性は何に対して追加料金を払うことに同意しましたか。",choices:["庭が見える部屋", "追加の1泊", "遅いチェックアウト時間", "空港までの送迎"]},"l3-33":{text:"10分後に何が起こりますか。",choices:["女性がホテルをチェックアウトする", "スタッフが荷物の移動を手伝いに来る", "彼女の会議が始まる", "タクシーが入口に到着する"]},"l3-34":{text:"商品サンプルに何の問題が起きましたか。",choices:["間違った会場に送られた", "トラックの故障で遅れた", "破損して届いた", "そもそも注文されていなかった"]},"l3-35":{text:"女性はなぜパンフレットを追加注文するのですか。",choices:["パンフレットの一部が破損しているから", "パンフレットのデザインが変わったから", "昨年は現在の在庫より多く配ったから", "今年は展示会の期間が長いから"]},"l3-36":{text:"2人は土曜日の何時に集合しますか。",choices:["8時", "9時", "10時", "午後"]},"l3-37":{text:"女性が返金を受けられないのはなぜですか。",choices:["レシートを持っていないから", "購入から1か月以上経っているから", "返金は未開封の商品に限るから", "店がそのモデルをもう売っていないから"]},"l3-38":{text:"男性は店で何をすると申し出ましたか。",choices:["コーヒーメーカーを修理すること", "交換品を持ち帰る前に動作確認すること", "1週間以内に電話すること", "店の割引をすること"]},"l3-39":{text:"修理には通常どれくらいかかりますか。",choices:["30日", "90日", "約1週間", "1日"]},"l4-25":{text:"このアナウンスは主に何についてですか。",choices:["フライトの欠航", "出発ゲートの変更", "新しいチケット価格", "空港での忘れ物"]},"l4-26":{text:"搭乗はいつ始まりますか。",choices:["午後3時40分", "午後3時20分", "午後4時14分", "午後9時40分"]},"l4-27":{text:"案内デスクのスタッフに声をかけるよう求められているのは誰ですか。",choices:["デンバーへ旅行する乗客", "手助けが必要な乗客や小さな子ども連れの乗客", "大きな荷物を持つ乗客", "フライトに乗り遅れた乗客"]},"l4-28":{text:"話し手はなぜ電話していますか。",choices:["修理の予約を取るため", "車の引き取りができることを知らせるため", "前払いを求めるため", "追加の修理を勧めるため"]},"l4-29":{text:"合計料金が当初の見積もりより安いのはなぜですか。",choices:["店が特別割引を適用したから", "交換しなくてよい部品があったから", "修理が予想より短時間で済んだから", "費用の一部が前払いされていたから"]},"l4-30":{text:"Carter氏は車を引き取る際に何を持ってくるよう求められていますか。",choices:["車の鍵", "運転免許証", "修理の領収書", "クレジットカード"]}};
+,"l3-22":{text:"女性はどのような問題を抱えていますか。",choices:["プレゼンのファイルが開けない", "売上レポートを紛失した", "会議室が使えない", "メールソフトが動かない"]},"l3-23":{text:"男性は売上数字について何と言っていますか。",choices:["会議の後に追加すべきだ", "彼が送ったレポートからコピーできる", "顧客が提供してくれる", "スライドから外すべきだ"]},"l3-24":{text:"男性は次に何をする可能性が最も高いですか。",choices:["レポートを印刷する", "技術サポートに電話する", "会議室のパソコンをセットアップする", "女性のパソコンを再起動する"]},"l3-25":{text:"女性はなぜ早い方の便を選んだのですか。",choices:["安いから", "正午前に到着しなければならないから", "窓側の席があるから", "朝食が付いているから"]},"l3-26":{text:"女性は何を希望しましたか。",choices:["窓側の席", "追加のスーツケース", "通路側の席", "遅い帰りの便"]},"l3-27":{text:"女性は何をすると言っていますか。",choices:["変更料として50ドル払うこと", "帰りの日付が変わったら男性に知らせること", "シカゴのホテルを予約すること", "金曜の便をキャンセルすること"]},"l3-28":{text:"月曜に入社する新入社員は何人ですか。",choices:["10人", "12人", "2人", "9人"]},"l3-29":{text:"男性は何をすると申し出ましたか。",choices:["もっと大きい研修室を予約すること", "歓迎パッケージを印刷すること", "名札について印刷会社に連絡すること", "歓迎の挨拶をすること"]},"l3-30":{text:"女性は今日の午後に何をしますか。",choices:["更新した日程を発表者にメールすること", "グループの昼食を注文すること", "社長と面会すること", "新入社員の受付をすること"]},"l3-31":{text:"女性はなぜホテルに電話しましたか。",choices:["新しい予約をするため", "滞在内容の変更をお願いするため", "請求書について苦情を言うため", "会議室について尋ねるため"]},"l3-32":{text:"女性は何に対して追加料金を払うことに同意しましたか。",choices:["庭が見える部屋", "追加の1泊", "遅いチェックアウト時間", "空港までの送迎"]},"l3-33":{text:"10分後に何が起こりますか。",choices:["女性がホテルをチェックアウトする", "スタッフが荷物の移動を手伝いに来る", "彼女の会議が始まる", "タクシーが入口に到着する"]},"l3-34":{text:"商品サンプルに何の問題が起きましたか。",choices:["間違った会場に送られた", "トラックの故障で遅れた", "破損して届いた", "そもそも注文されていなかった"]},"l3-35":{text:"女性はなぜパンフレットを追加注文するのですか。",choices:["パンフレットの一部が破損しているから", "パンフレットのデザインが変わったから", "昨年は現在の在庫より多く配ったから", "今年は展示会の期間が長いから"]},"l3-36":{text:"2人は土曜日の何時に集合しますか。",choices:["8時", "9時", "10時", "午後"]},"l3-37":{text:"女性が返金を受けられないのはなぜですか。",choices:["レシートを持っていないから", "購入から1か月以上経っているから", "返金は未開封の商品に限るから", "店がそのモデルをもう売っていないから"]},"l3-38":{text:"男性は店で何をすると申し出ましたか。",choices:["コーヒーメーカーを修理すること", "交換品を持ち帰る前に動作確認すること", "1週間以内に電話すること", "店の割引をすること"]},"l3-39":{text:"修理には通常どれくらいかかりますか。",choices:["30日", "90日", "約1週間", "1日"]},"l4-25":{text:"このアナウンスは主に何についてですか。",choices:["フライトの欠航", "出発ゲートの変更", "新しいチケット価格", "空港での忘れ物"]},"l4-26":{text:"搭乗はいつ始まりますか。",choices:["午後3時40分", "午後3時20分", "午後4時14分", "午後9時40分"]},"l4-27":{text:"案内デスクのスタッフに声をかけるよう求められているのは誰ですか。",choices:["デンバーへ旅行する乗客", "手助けが必要な乗客や小さな子ども連れの乗客", "大きな荷物を持つ乗客", "フライトに乗り遅れた乗客"]},"l4-28":{text:"話し手はなぜ電話していますか。",choices:["修理の予約を取るため", "車の引き取りができることを知らせるため", "前払いを求めるため", "追加の修理を勧めるため"]},"l4-29":{text:"合計料金が当初の見積もりより安いのはなぜですか。",choices:["店が特別割引を適用したから", "交換しなくてよい部品があったから", "修理が予想より短時間で済んだから", "費用の一部が前払いされていたから"]},"l4-30":{text:"Carter氏は車を引き取る際に何を持ってくるよう求められていますか。",choices:["車の鍵", "運転免許証", "修理の領収書", "クレジットカード"]},
+"l2-26": {
+  "text": "明日の研修セッションは何時に始まりますか。",
+  "choices": [
+    "午前9時です。",
+    "通りの向かいのビルでです。",
+    "はい、参加する予定です。"
+  ]
+},
+"l2-27": {
+  "text": "請求書はもうクライアントに送りましたか。",
+  "choices": [
+    "先月発行されました。",
+    "まだですが、今日の午後に送ります。",
+    "クライアントは大阪にいます。"
+  ]
+},
+"l2-28": {
+  "text": "一番近い薬局はどこにありますか。",
+  "choices": [
+    "今夜8時に閉まります。",
+    "バスで約5分です。",
+    "駅の角を曲がったところにあります。"
+  ]
+},
+"l2-29": {
+  "text": "金曜日までにこの契約書を確認していただけますか。",
+  "choices": [
+    "もちろんです、明日目を通します。",
+    "契約書はあなたの机の上にあります。",
+    "はい、先週署名されました。"
+  ]
+},
+"l2-30": {
+  "text": "領収書はメールと印刷のどちらがいいですか。",
+  "choices": [
+    "はい、送ってください。",
+    "メールでお願いします。",
+    "合計は40ドルです。"
+  ]
+},
+"l2-31": {
+  "text": "新しいマーケティングプロジェクトの担当者は誰ですか。",
+  "choices": [
+    "来月始まります。",
+    "本社でです。",
+    "カーターさんが担当しています。"
+  ]
+},
+"l2-32": {
+  "text": "休憩して、昼食の後に続けませんか。",
+  "choices": [
+    "それはいい考えですね。",
+    "会議が長いからです。",
+    "私は正午に昼食を食べました。"
+  ]
+},
+"l2-33": {
+  "text": "3階のプリンターがまた故障しています。",
+  "choices": [
+    "昨日書類を印刷しました。",
+    "すぐに修理業者に電話します。",
+    "2年前に設置されました。"
+  ]
+},
+"l2-34": {
+  "text": "ロビーの改装にはどのくらいかかりますか。",
+  "choices": [
+    "1階にあります。",
+    "作業員はとても熟練しています。",
+    "3週間くらいだと思います。"
+  ]
+},
+"l2-35": {
+  "text": "この席は誰か座っていますか。",
+  "choices": [
+    "いいえ、どうぞ座ってください。",
+    "電車は6時に出発します。",
+    "昨日それを取りました。"
+  ]
+},
+"l2-36": {
+  "text": "シカゴ行きの便はなぜ遅れたのですか。",
+  "choices": [
+    "午後7時に着陸します。",
+    "空港の大雪のためです。",
+    "チケットは200ドルでした。"
+  ]
+},
+"l2-37": {
+  "text": "私の予約を来週の火曜日に変更していただけますか。",
+  "choices": [
+    "その予約は先週でした。",
+    "火曜日は私の休みです。",
+    "カレンダーを確認して確定しますね。"
+  ]
+},
+"l2-38": {
+  "text": "ワークショップには何人が登録していますか。",
+  "choices": [
+    "今のところ約30人です。",
+    "メインホールで開催されます。",
+    "登録は金曜日に締め切られます。"
+  ]
+},
+"l2-39": {
+  "text": "予算削減についてマネージャーは何と言いましたか。",
+  "choices": [
+    "予算はかなり大きいです。",
+    "削減は最小限に抑えると言っていました。",
+    "昨日の会議でです。"
+  ]
+},
+"l2-40": {
+  "text": "今日はチーム全員分の昼食を注文しませんか。",
+  "choices": [
+    "私はたいてい自分の机で食べます。",
+    "レストランは11時に開きます。",
+    "いいですね、全員の注文をまとめます。"
+  ]
+},
+"l2-41": {
+  "text": "図書館は日曜日も開いているか知っていますか。",
+  "choices": [
+    "はい、日曜日は10時に開きます。",
+    "先週本を返しました。",
+    "図書館は公園の近くにあります。"
+  ]
+},
+"l2-42": {
+  "text": "2つのオフィス間のシャトルバスはどのくらいの頻度で運行していますか。",
+  "choices": [
+    "約15分かかります。",
+    "20分ごとです。",
+    "運転手はとても親切です。"
+  ]
+},
+"l2-43": {
+  "text": "朝ジョギングを始めてから、ずっと体調がいいんです。",
+  "choices": [
+    "公園は早く開きます。",
+    "ジョギングシューズが今週セール中です。",
+    "それはよかったですね、その調子で続けてください。"
+  ]
+},
+"l2-44": {
+  "text": "自転車を1日借りるといくらかかりますか。",
+  "choices": [
+    "保険込みで15ドルです。",
+    "6時までに返せます。",
+    "店は駅の隣にあります。"
+  ]
+},
+"l2-45": {
+  "text": "セミナーはオンラインとコミュニティセンターのどちらで開催すべきですか。",
+  "choices": [
+    "セミナーはマーケティングについてです。",
+    "オンラインの方が多くの人に届きます。",
+    "昨年の春に開催されました。"
+  ]
+},
+"l2-46": {
+  "text": "少し窓を開けていただけますか。",
+  "choices": [
+    "窓はかなり大きいです。",
+    "後で雨が降るかもしれません。",
+    "もちろんです、今開けます。"
+  ]
+},
+"l2-47": {
+  "text": "経費報告書の提出期限はいつですか。",
+  "choices": [
+    "今月末です。",
+    "経理部に提出してください。",
+    "旅費と食費が対象です。"
+  ]
+},
+"l2-48": {
+  "text": "今朝、仕入先と会う予定ではありませんでしたか。",
+  "choices": [
+    "仕入先は台湾から来ています。",
+    "はい、でも会議は金曜日に延期されました。",
+    "昨日備品を買いました。"
+  ]
+},
+"l2-49": {
+  "text": "私たちの売上は前四半期と比べて10パーセント増えました。",
+  "choices": [
+    "四半期は3月に終わります。",
+    "営業報告書は月曜日が期限です。",
+    "それは素晴らしいですね、新しい戦略が効いています。"
+  ]
+},
+"l2-50": {
+  "text": "ここから市立博物館へはどうやって行けばいいですか。",
+  "choices": [
+    "地下鉄で中央駅まで行き、歩いて5分です。",
+    "博物館は月曜日が休館です。",
+    "50年前に建てられました。"
+  ]
+},
+"l3-40": {
+  "text": "女性はなぜ男性に電話をしていますか？",
+  "choices": [
+    "オフィス用品を注文するため",
+    "遅れている配送について尋ねるため",
+    "壊れたプリンターについて苦情を言うため",
+    "用紙の返金を求めるため"
+  ]
+},
+"l3-41": {
+  "text": "ペンは合計で何箱注文されますか？",
+  "choices": [
+    "20箱",
+    "25箱",
+    "30箱",
+    "35箱"
+  ]
+},
+"l3-42": {
+  "text": "男性は次に何をしますか？",
+  "choices": [
+    "金曜日の朝に用品を届ける",
+    "請求書をメールで送る",
+    "他の2チームに電話する",
+    "新しいプリンターを注文する"
+  ]
+},
+"l3-43": {
+  "text": "話し手たちは何の準備をしていますか？",
+  "choices": [
+    "顧客との会議",
+    "就職面接",
+    "会社のパーティー",
+    "研修会"
+  ]
+},
+"l3-44": {
+  "text": "会議は何時に始まりますか？",
+  "choices": [
+    "9時半",
+    "11時",
+    "10時",
+    "10時半"
+  ]
+},
+"l3-45": {
+  "text": "話し手たちはなぜ5階の部屋を使うことにしましたか？",
+  "choices": [
+    "顧客が静かな部屋を希望したため",
+    "最初の部屋のプロジェクターが壊れているため",
+    "最初の部屋では全員が座れないほど出席者が多いため",
+    "5階からの眺めが良いため"
+  ]
+},
+"l3-46": {
+  "text": "女性はなぜ男性に連絡していますか？",
+  "choices": [
+    "休暇パッケージを予約するため",
+    "出張の手配をするため",
+    "シカゴ行きの便をキャンセルするため",
+    "ホテルの部屋を変更するため"
+  ]
+},
+"l3-47": {
+  "text": "女性はホテルに何泊しますか？",
+  "choices": [
+    "2泊",
+    "4泊",
+    "3泊",
+    "1泊"
+  ]
+},
+"l3-48": {
+  "text": "男性は今日の午後に何をしますか？",
+  "choices": [
+    "旅程表をメールで送る",
+    "シカゴで顧客と会う",
+    "航空券を受け取りに行く",
+    "レンタカーを予約する"
+  ]
+},
+"l3-49": {
+  "text": "男性はなぜレストランに電話をしていますか？",
+  "choices": [
+    "テイクアウトを注文するため",
+    "新規の予約をするため",
+    "メニューの価格を尋ねるため",
+    "予約を変更するため"
+  ]
+},
+"l3-50": {
+  "text": "レストランで食事をするのは何人ですか？",
+  "choices": [
+    "4人",
+    "5人",
+    "6人",
+    "7人"
+  ]
+},
+"l3-51": {
+  "text": "男性は会話の最後に何について尋ねていますか？",
+  "choices": [
+    "誕生日ケーキ",
+    "ベジタリアン向けの料理",
+    "ワインリスト",
+    "駐車場"
+  ]
+},
+"l3-52": {
+  "text": "男性はなぜ医療センターに電話をしていますか？",
+  "choices": [
+    "検査結果を受け取るため",
+    "支払いをするため",
+    "新しい医師を探すため",
+    "予約の日時を変更するため"
+  ]
+},
+"l3-53": {
+  "text": "男性の新しい予約はいつですか？",
+  "choices": [
+    "月曜日の8時半",
+    "明日の9時15分",
+    "金曜日の9時15分",
+    "金曜日の10時45分"
+  ]
+},
+"l3-54": {
+  "text": "男性は予約の際に何を持ってくるよう頼まれましたか？",
+  "choices": [
+    "パスポートと保険証",
+    "保険証と服用中の薬のリスト",
+    "別の医師からの紹介状",
+    "以前のレントゲン写真"
+  ]
+},
+"l3-55": {
+  "text": "女性はなぜ引越し会社に電話をしていますか？",
+  "choices": [
+    "トラックを借りるため",
+    "破損したソファについて報告するため",
+    "引越し日を変更するため",
+    "引越しの見積もりを依頼するため"
+  ]
+},
+"l3-56": {
+  "text": "引越しの見積もり総額はいくらですか？",
+  "choices": [
+    "450ドル",
+    "520ドル",
+    "570ドル",
+    "620ドル"
+  ]
+},
+"l3-57": {
+  "text": "会社が作業員を1名追加で派遣するのはなぜですか？",
+  "choices": [
+    "新しいアパートにエレベーターがないため",
+    "女性がピアノを持っているため",
+    "ソファがとても重いため",
+    "新しいアパートが遠いため"
+  ]
+},
+"l3-58": {
+  "text": "女性は何をしたいと思っていますか？",
+  "choices": [
+    "ジムに入会する",
+    "会員登録を解約する",
+    "水泳クラスを予約する",
+    "運動器具を借りる"
+  ]
+},
+"l3-59": {
+  "text": "女性は今日いくら支払いますか？",
+  "choices": [
+    "240ドル",
+    "290ドル",
+    "150ドル",
+    "200ドル"
+  ]
+},
+"l3-60": {
+  "text": "女性は次におそらく何をしますか？",
+  "choices": [
+    "プールエリアを見学する",
+    "体力測定を受ける",
+    "申込用紙に記入する",
+    "パーソナルトレーナーと会う"
+  ]
+},
+"l3-61": {
+  "text": "男性はなぜ女性に電話をしていますか？",
+  "choices": [
+    "車を売るため",
+    "車の点検結果を伝えるため",
+    "オイル交換の時期を知らせるため",
+    "彼女の家への道を尋ねるため"
+  ]
+},
+"l3-62": {
+  "text": "修理の工賃はいくらですか？",
+  "choices": [
+    "90ドル",
+    "180ドル",
+    "270ドル",
+    "360ドル"
+  ]
+},
+"l3-63": {
+  "text": "女性はいつ車を取りに来ますか？",
+  "choices": [
+    "今日の4時",
+    "今日の5時半",
+    "明日の朝",
+    "来週"
+  ]
+},
+"l3-64": {
+  "text": "女性は何をしていますか？",
+  "choices": [
+    "電話で部屋を予約している",
+    "ホテルにチェックインしている",
+    "部屋の料金を尋ねている",
+    "騒音について苦情を言っている"
+  ]
+},
+"l3-65": {
+  "text": "女性は合計でホテルに何泊しますか？",
+  "choices": [
+    "1泊",
+    "2泊",
+    "3泊",
+    "4泊"
+  ]
+},
+"l3-66": {
+  "text": "女性は会話の最後に何について尋ねていますか？",
+  "choices": [
+    "朝食",
+    "モーニングコール",
+    "Wi-Fiのパスワード",
+    "レイトチェックアウト"
+  ]
+},
+"l3-67": {
+  "text": "話し手たちは主に何について話していますか？",
+  "choices": [
+    "プロジェクトの進捗",
+    "採用の決定",
+    "予算の削減",
+    "顧客からの苦情"
+  ]
+},
+"l3-68": {
+  "text": "まだ終わっていないタスクはいくつありますか？",
+  "choices": [
+    "7つ",
+    "10",
+    "2つ",
+    "3つ"
+  ]
+},
+"l3-69": {
+  "text": "女性は、早まった公開日に間に合わせるために何をしますか？",
+  "choices": [
+    "最終テストを中止する",
+    "毎日残業する",
+    "別の社員にチームへ加わるよう頼む",
+    "クライアントに日程を再度変更するよう頼む"
+  ]
+},
+"l3-70": {
+  "text": "話し手たちはなぜパーティーを計画していますか？",
+  "choices": [
+    "昇進を祝うため",
+    "同僚に別れを告げるため",
+    "新しいマネージャーを歓迎するため",
+    "会社の創立記念を祝うため"
+  ]
+},
+"l3-71": {
+  "text": "パーティーに参加すると返事をしたのは何人ですか？",
+  "choices": [
+    "15人",
+    "10人",
+    "28人",
+    "12人"
+  ]
+},
+"l3-72": {
+  "text": "男性は何をしますか？",
+  "choices": [
+    "送別ギフトを買う",
+    "予約をしてケーキを注文する",
+    "招待状を送る",
+    "全員がサインするカードを用意する"
+  ]
+},
+"l3-73": {
+  "text": "男性はなぜ女性に話しかけていますか？",
+  "choices": [
+    "勤務シフトの交換を頼むため",
+    "家族のイベントに招待するため",
+    "マネージャーについて不満を言うため",
+    "昇進を申し出るため"
+  ]
+},
+"l3-74": {
+  "text": "女性の当初の土曜日の勤務時間はどうなっていますか？",
+  "choices": [
+    "11時から7時",
+    "9時から7時",
+    "11時から5時",
+    "9時から5時"
+  ]
+},
+"l3-75": {
+  "text": "シフト交換が正式に決まる前に、何がなければなりませんか？",
+  "choices": [
+    "新しい従業員を雇うこと",
+    "2人とも土曜日に勤務すること",
+    "マネージャーが変更を承認すること",
+    "店を早めに閉めること"
+  ]
+},
+"l3-76": {
+  "text": "女性はなぜカスタマーサービスに電話をしていますか？",
+  "choices": [
+    "新規の注文をするため",
+    "注文の問題について連絡するため",
+    "セールについて尋ねるため",
+    "自宅の住所を変更するため"
+  ]
+},
+"l3-77": {
+  "text": "女性は代わりにどのサイズのシャツを希望していますか？",
+  "choices": [
+    "Sサイズ",
+    "Mサイズ",
+    "Lサイズ",
+    "XLサイズ"
+  ]
+},
+"l3-78": {
+  "text": "女性が5ドルの返金を受けるのはなぜですか？",
+  "choices": [
+    "シャツがセール中だったため",
+    "シャツ3枚すべてを返品したため",
+    "注文合計額が送料無料の条件を満たしていたため",
+    "配送が遅れたため"
+  ]
+},
+"l4-31": {
+  "text": "話し手はなぜ電話をかけていますか。",
+  "choices": [
+    "不足している書類を依頼するため",
+    "税務の面談の日時を変更するため",
+    "新しい会計サービスを提案するため",
+    "税務書類の誤りを報告するため"
+  ]
+},
+"l4-32": {
+  "text": "聞き手の書類で不足しているものは何ですか。",
+  "choices": [
+    "契約書の署名",
+    "オフィス機器の領収書",
+    "銀行の取引明細書",
+    "記入済みの申請書"
+  ]
+},
+"l4-33": {
+  "text": "話し手は聞き手に何をするよう頼んでいますか。",
+  "choices": [
+    "火曜日に事務所を訪れること",
+    "金曜日までに料金を支払うこと",
+    "書類を送り、打ち合わせの調整のため折り返し電話すること",
+    "最終的な数字をオンラインで確認すること"
+  ]
+},
+"l4-34": {
+  "text": "このアナウンスの主な内容は何ですか。",
+  "choices": [
+    "店舗の営業時間の変更",
+    "新しい店舗のオープン",
+    "ワークショップの申込締切",
+    "別の店舗でのセール"
+  ]
+},
+"l4-35": {
+  "text": "先着50名の来店客は何を受け取りますか。",
+  "choices": [
+    "園芸の本",
+    "土の袋",
+    "コーヒーの無料券",
+    "ハーブの鉢植え"
+  ]
+},
+"l4-36": {
+  "text": "園芸ワークショップはいつ開催されますか。",
+  "choices": [
+    "土曜日と日曜日の11時と2時",
+    "土曜日の午前中のみ",
+    "平日の毎夕方",
+    "月に一度"
+  ]
+},
+"l4-37": {
+  "text": "金曜日の午後の天気はどうなりますか。",
+  "choices": [
+    "雨で寒くなる",
+    "晴れて暖かくなる",
+    "雪を伴う強風になる",
+    "一日中霧が出る"
+  ]
+},
+"l4-38": {
+  "text": "話し手は土曜日について何を示唆していますか。",
+  "choices": [
+    "朝早くから雨が降り始める",
+    "月曜日は金曜日より暖かくなる",
+    "土曜の日中が屋外活動に最適である",
+    "日曜日は風が強くなる"
+  ]
+},
+"l4-39": {
+  "text": "月曜日はどうなる見込みですか。",
+  "choices": [
+    "気温が下がり、夜間は冷え込む",
+    "大雨が一日中続く",
+    "昼までに晴れる",
+    "風速が時速40キロに達する"
+  ]
+},
+"l4-40": {
+  "text": "ハイウェイ9号線で渋滞が発生しているのはなぜですか。",
+  "choices": [
+    "出口付近の浸水",
+    "2車線を塞いだ事故",
+    "故障したバス",
+    "道路工事"
+  ]
+},
+"l4-41": {
+  "text": "ドライバーには何が勧められていますか。",
+  "choices": [
+    "いつもより早く家を出ること",
+    "5番通りを完全に避けること",
+    "3番通りの迂回路に従うこと",
+    "ハイウェイ9号線の代わりに12号線を使うこと"
+  ]
+},
+"l4-42": {
+  "text": "14番と22番のバス路線について何が述べられていますか。",
+  "choices": [
+    "20分間隔で運行している",
+    "ダウンタウンに停留所が増えた",
+    "3番通りへ迂回運行している",
+    "休日のダイヤで運行している"
+  ]
+},
+"l4-43": {
+  "text": "1985年に何が起きましたか。",
+  "choices": [
+    "新しい灯台守の家が増築された",
+    "塔が白く塗られた",
+    "初めてのガイドツアーが行われた",
+    "灯台が役目を終えた"
+  ]
+},
+"l4-44": {
+  "text": "写真撮影が許可されていない場所はどこですか。",
+  "choices": [
+    "資料室の中",
+    "灯台守の家",
+    "ツアーバスの中",
+    "ギフトショップ"
+  ]
+},
+"l4-45": {
+  "text": "灯台を上った後、グループは何をしますか。",
+  "choices": [
+    "すぐにバスに乗る",
+    "もう一度灯台守の家を訪れる",
+    "ギフトショップで約20分過ごす",
+    "もう一度塔を上る"
+  ]
+},
+"l4-46": {
+  "text": "このトークの主な内容は何ですか。",
+  "choices": [
+    "新しいポータブルブレンダーの紹介",
+    "小売店のセールの告知",
+    "スムージーのレシピ本の説明",
+    "製品テスターの募集"
+  ]
+},
+"l4-47": {
+  "text": "この製品は1回の充電で何回ブレンドできますか。",
+  "choices": [
+    "約5回",
+    "最大10回",
+    "最大15回",
+    "無制限"
+  ]
+},
+"l4-48": {
+  "text": "言及されている特別オファーは何ですか。",
+  "choices": [
+    "2年間の保証延長",
+    "初回注文の2割引",
+    "ジムの無料会員権",
+    "オンライン注文で2つ目のブレンドカップが無料"
+  ]
+},
+"l4-49": {
+  "text": "聞き手たちはなぜ集まっていますか。",
+  "choices": [
+    "研修を受けるため",
+    "退職を祝うため",
+    "四半期計画会議に参加するため",
+    "求職者の面接をするため"
+  ]
+},
+"l4-50": {
+  "text": "オルティスさんは会議で何をしますか。",
+  "choices": [
+    "新しいパッケージの提案を発表する",
+    "売上結果を発表する",
+    "チームビルディングの活動を進行する",
+    "新入社員を紹介する"
+  ]
+},
+"l4-51": {
+  "text": "会議はなぜ正午に終わりますか。",
+  "choices": [
+    "チームが議題を早く終える見込みだから",
+    "正午に昼食が出されるから",
+    "発表者が早く帰らなければならないから",
+    "別のグループが部屋を予約しているから"
+  ]
+},
+"l4-52": {
+  "text": "市議会は何を承認しましたか。",
+  "choices": [
+    "新しいスポーツスタジアム",
+    "地域図書館への予算",
+    "増税",
+    "道路工事の計画"
+  ]
+},
+"l4-53": {
+  "text": "図書館の工事はどのくらいかかる見込みですか。",
+  "choices": [
+    "6か月",
+    "2年",
+    "3年",
+    "約18か月"
+  ]
+},
+"l4-54": {
+  "text": "報道はハーバーシティ・マリナーズについて何を示唆していますか。",
+  "choices": [
+    "リーグで1位である",
+    "リーグ首位のチームに敗れた",
+    "順位を上げた",
+    "来月は試合をしない"
+  ]
+},
+"l4-55": {
+  "text": "このイベントの目的は何ですか。",
+  "choices": [
+    "学生の奨学金のための資金を集めること",
+    "会社の記念日を祝うこと",
+    "新製品を発表すること",
+    "退職する教師を称えること"
+  ]
+},
+"l4-56": {
+  "text": "サイレントオークションはいつ締め切られますか。",
+  "choices": [
+    "8時",
+    "メインコースの間",
+    "9時半",
+    "ジャズの演奏の後"
+  ]
+},
+"l4-57": {
+  "text": "メインコースの間に何が起きますか。",
+  "choices": [
+    "オークションの落札者が発表される",
+    "昨年の奨学生がスピーチをする",
+    "ジャズカルテットが演奏する",
+    "デザートが出される"
+  ]
+},
+"l4-58": {
+  "text": "会員は一度に何冊まで借りられますか。",
+  "choices": [
+    "最大5冊",
+    "最大10冊",
+    "最大15冊",
+    "無制限"
+  ]
+},
+"l4-59": {
+  "text": "印刷の料金はいくらですか。",
+  "choices": [
+    "会員は無料",
+    "1ページ5セント",
+    "1ページ10セント",
+    "1部1ドル"
+  ]
+},
+"l4-60": {
+  "text": "学習室はどのように予約できますか。",
+  "choices": [
+    "3階のコンピュータ室で",
+    "図書館の職員を通してのみ",
+    "少なくとも2日前までに電話で",
+    "1週間前までにウェブサイトから"
+  ]
+}
+};
 
 const LISTENING_EXPLANATIONS = {
   "l1-01":"写真では女性が書類を青いフォルダーへ入れているため、Bが一致します。", "l1-02":"男性は脚立に乗って照明の電球を交換しているため、Cが一致します。",
@@ -3434,7 +8135,102 @@ const LISTENING_EXPLANATIONS = {
   "l4-01":"冒頭で Flight 286 to Vancouver と案内されています。", "l4-02":"departure gate has changed from Gate 12 to Gate 18 と明記されています。",
   "l4-03":"追加の safety inspection が搭乗遅延の理由です。", "l4-04":"注文した椅子の到着が遅れることを知らせる電話です。",
   "l4-05":"delayed the shipment until Monday と明記されています。", "l4-06":"金曜日に店舗で temporary chairs を6脚受け取れると提案しています。"
-,"l3-22":"The slides ... won't open on my computer. 女性のトラブルはプレゼン用ファイルが開けないこと。会議室やメールについて困っているとは言っていない。","l3-23":"The figures are in the report I e-mailed you this morning, so you can copy them from there. 売上数字は今朝送ったレポートからコピーできると男性が言っている。","l3-24":"I'll set it up while you update the slides. / I'll do that right after I finish setting up the computer. 印刷はセットアップの後なので、次にやるのは会議室PCのセットアップ。","l3-25":"I need to arrive before noon for a conference. / The cheaper one is too late. 安い便は到着が午後になるため、正午前に着く早い便を選んだ。","l3-26":"An aisle seat, please. 女性が希望したのは通路側の席。スーツケースは預ける荷物の話で、追加ではない。","l3-27":"I'll book the return for Friday for now, and I'll let you know if it changes. 帰りの日付が変われば知らせると言っている。50ドルはまだ払っていない。","l3-28":"Twelve people are starting. 入社するのは12人。10は届いた名札の数、2は不足分。","l3-29":"I'll call the company today and ask them to send the missing two by Friday. 男性は名札の不足分について印刷会社へ連絡すると申し出た。挨拶をするのは社長。","l3-30":"I'll update the schedule and e-mail it to all the presenters this afternoon. 女性は午後に更新した日程を発表者全員へメールする。昼食は注文済み。","l3-31":"I'd like to check out later than planned など、滞在中の変更（遅いチェックアウトと部屋の移動）を依頼する電話。苦情ではなく依頼。","l3-32":"we can extend it to two o'clock for an additional twenty dollars / Two o'clock would be perfect. 追加料金20ドルはチェックアウト延長の分。部屋の移動に料金の話は出ていない。","l3-33":"A staff member will come to help you with your luggage in ten minutes. と明示されている。","l3-34":"They said the truck broke down. 遅延の原因は配送トラックの故障。","l3-35":"We have three hundred, but last year we gave out almost five hundred. 在庫300部では昨年の実績に足りないため追加注文する。","l3-36":"let's meet at the venue at eight on Saturday と合意している。9時は展示会の開始時刻。","l3-37":"refunds are only given if the item is unopened. 使用済みのため返金不可で、交換になった。レシートは持っている。","l3-38":"Would you like me to test it here before you take it home? と動作確認を申し出ている。","l3-39":"About a week. 30日は交換期限、90日は無料修理の対象期間。","l4-25":"this flight will now depart from Gate 14 instead of Gate 9 と、ゲート変更の案内が中心。","l4-26":"Boarding will begin at 3:40 P.M. と明示されている。","l4-27":"Passengers who need assistance or who are traveling with young children are asked to contact ... とある。","l4-28":"The repairs are now complete, and your car is ready for pickup. 修理完了と引き取り可能の連絡。","l4-29":"because the brake parts did not need to be replaced と理由が明示されている。","l4-30":"Please bring your repair receipt when you come. とある。"};
+,"l3-22":"The slides ... won't open on my computer. 女性のトラブルはプレゼン用ファイルが開けないこと。会議室やメールについて困っているとは言っていない。","l3-23":"The figures are in the report I e-mailed you this morning, so you can copy them from there. 売上数字は今朝送ったレポートからコピーできると男性が言っている。","l3-24":"I'll set it up while you update the slides. / I'll do that right after I finish setting up the computer. 印刷はセットアップの後なので、次にやるのは会議室PCのセットアップ。","l3-25":"I need to arrive before noon for a conference. / The cheaper one is too late. 安い便は到着が午後になるため、正午前に着く早い便を選んだ。","l3-26":"An aisle seat, please. 女性が希望したのは通路側の席。スーツケースは預ける荷物の話で、追加ではない。","l3-27":"I'll book the return for Friday for now, and I'll let you know if it changes. 帰りの日付が変われば知らせると言っている。50ドルはまだ払っていない。","l3-28":"Twelve people are starting. 入社するのは12人。10は届いた名札の数、2は不足分。","l3-29":"I'll call the company today and ask them to send the missing two by Friday. 男性は名札の不足分について印刷会社へ連絡すると申し出た。挨拶をするのは社長。","l3-30":"I'll update the schedule and e-mail it to all the presenters this afternoon. 女性は午後に更新した日程を発表者全員へメールする。昼食は注文済み。","l3-31":"I'd like to check out later than planned など、滞在中の変更（遅いチェックアウトと部屋の移動）を依頼する電話。苦情ではなく依頼。","l3-32":"we can extend it to two o'clock for an additional twenty dollars / Two o'clock would be perfect. 追加料金20ドルはチェックアウト延長の分。部屋の移動に料金の話は出ていない。","l3-33":"A staff member will come to help you with your luggage in ten minutes. と明示されている。","l3-34":"They said the truck broke down. 遅延の原因は配送トラックの故障。","l3-35":"We have three hundred, but last year we gave out almost five hundred. 在庫300部では昨年の実績に足りないため追加注文する。","l3-36":"let's meet at the venue at eight on Saturday と合意している。9時は展示会の開始時刻。","l3-37":"refunds are only given if the item is unopened. 使用済みのため返金不可で、交換になった。レシートは持っている。","l3-38":"Would you like me to test it here before you take it home? と動作確認を申し出ている。","l3-39":"About a week. 30日は交換期限、90日は無料修理の対象期間。","l4-25":"this flight will now depart from Gate 14 instead of Gate 9 と、ゲート変更の案内が中心。","l4-26":"Boarding will begin at 3:40 P.M. と明示されている。","l4-27":"Passengers who need assistance or who are traveling with young children are asked to contact ... とある。","l4-28":"The repairs are now complete, and your car is ready for pickup. 修理完了と引き取り可能の連絡。","l4-29":"because the brake parts did not need to be replaced と理由が明示されている。","l4-30":"Please bring your repair receipt when you come. とある。",
+"l2-26": "開始時刻を尋ねるWhenの質問には、時刻で答える応答が適切です。",
+"l2-27": "送信済みかどうかを尋ねる質問には、まだでこれから送ると答えるのが自然です。",
+"l2-28": "場所を尋ねるWhereの質問には、具体的な場所を示す応答が適切です。",
+"l2-29": "確認の依頼には、承諾して実行時期を示す応答が適切です。",
+"l2-30": "二者択一の質問には、どちらか一方を選んで答えるのが適切です。",
+"l2-31": "人を尋ねるWhoの質問には、担当者の名前で答える応答が適切です。",
+"l2-32": "Why don't weの提案には、賛成する応答が自然です。",
+"l2-33": "故障の報告には、修理を手配するなど対処を示す応答が適切です。",
+"l2-34": "期間を尋ねるHow longの質問には、期間の長さで答える応答が適切です。",
+"l2-35": "席が使用中かどうかを尋ねる質問には、空いていることを伝える応答が適切です。",
+"l2-36": "理由を尋ねるWhyの質問には、原因を示す応答が適切です。",
+"l2-37": "日程変更の依頼には、カレンダーを確認して対応する旨を伝える応答が適切です。",
+"l2-38": "人数を尋ねるHow manyの質問には、数で答える応答が適切です。",
+"l2-39": "発言内容を尋ねる質問には、その内容を伝える応答が適切です。",
+"l2-40": "注文の提案には、賛成して具体的な行動を示す応答が自然です。",
+"l2-41": "開いているかどうかを尋ねる間接的な質問には、開館情報を答えるのが適切です。",
+"l2-42": "頻度を尋ねるHow oftenの質問には、運行間隔で答える応答が適切です。",
+"l2-43": "体調が良くなったという報告には、共感して励ます応答が自然です。",
+"l2-44": "金額を尋ねるHow muchの質問には、値段で答える応答が適切です。",
+"l2-45": "開催方法の選択を尋ねる質問には、一方を選んで答えるのが適切です。",
+"l2-46": "Would you mindの依頼には、Not at allで承諾を表す応答が適切です。",
+"l2-47": "期限を尋ねるWhenの質問には、時期で答える応答が適切です。",
+"l2-48": "否定疑問文には、予定があったことを認め、変更を説明する応答が適切です。",
+"l2-49": "売上が伸びたという報告には、成果を評価する応答が自然です。",
+"l2-50": "行き方を尋ねるHowの質問には、交通手段と道順で答える応答が適切です。",
+"l3-40": "女性は冒頭で「I would like to place an order for office supplies（オフィス用品を注文したい）」と述べており、電話の目的は用品の注文である。",
+"l3-41": "最初はペン20箱だったが、他の2チームの分が加わり「increase the pens to 35 boxes（ペンを35箱に増やす）」と変更されたため、合計は35箱である。",
+"l3-42": "女性が最後に「Please send the invoice to our department by e-mail（請求書をメールで送ってください）」と頼んでいるため、男性の次の行動は請求書のメール送信である。",
+"l3-43": "冒頭の「Are we all set for tomorrow's client meeting?（明日の顧客との会議の準備は？）」から、2人が準備しているのは顧客との会議である。",
+"l3-44": "顧客の要望で「start at 10:30 instead of 10:00（10時ではなく10時半に開始）」と変更されたため、開始時刻は10時半である。",
+"l3-45": "最初の部屋は8人しか座れないのに対し出席者は10人になるため、「move to the bigger room on the fifth floor（5階の大きな部屋に移る）」と決めている。",
+"l3-46": "女性は「I would like to arrange my business trip to Chicago（シカゴへの出張の手配をお願いしたい）」と述べており、連絡の目的は出張手配である。",
+"l3-47": "帰りが木曜から金曜朝に変更され、男性が「you will need the hotel for three nights: Tuesday, Wednesday, and Thursday（火・水・木の3泊必要）」と確認している。",
+"l3-48": "男性は最後に旅程表について「I will send it this afternoon（今日の午後に送ります）」と述べている。",
+"l3-49": "男性は今夜7時の予約を持っており、人数とテーブルの変更を求めているため、電話の目的は既存の予約の変更である。",
+"l3-50": "予約は4名だったが「Two more friends are joining us, so we will be six people（友人2人が加わり6人になる）」と変更された。",
+"l3-51": "男性は最後に「one of our guests is vegetarian. Do you have vegetarian dishes?（ベジタリアンの客がいる。ベジタリアン料理はあるか）」と尋ねている。",
+"l3-52": "男性は「I have an appointment ... but I would like to reschedule it（予約があるが日時を変更したい）」と述べており、目的は予約の変更である。",
+"l3-53": "男性は提示された候補から「Friday at 10:45 works better for me」と選び、受付も「Your new appointment is Friday, June 5, at 10:45」と確認している。",
+"l3-54": "受付は「Please bring your insurance card and a list of any medicine you are currently taking（保険証と服用中の薬のリストを持ってきてください）」と伝えている。",
+"l3-55": "女性は「I am moving to a new apartment on June 20, and I would like an estimate（6月20日に引っ越すので見積もりがほしい）」と述べている。",
+"l3-56": "基本料金400ドルに、ピアノの運搬120ドルと階段料金50ドルが加わり、「your total estimate is 570 dollars（見積もり総額は570ドル）」と示されている。",
+"l3-57": "ピアノについて男性が「moving a piano costs an additional 120 dollars, and we will send one extra worker（ピアノの運搬は追加120ドルで、作業員を1名追加する）」と説明している。階段は追加作業員の理由ではない。",
+"l3-58": "女性は「Could you tell me about your membership plans?（会員プランを教えて）」と尋ねており、ジムへの入会を検討している。",
+"l3-59": "ベーシックプランは月40ドルで、6か月前払いでは1か月分が無料になるため「you would pay 200 dollars for six months（6か月で200ドル）」となる。40×5=200ドルである。",
+"l3-60": "スタッフが最後に「Please fill out this form（この用紙に記入してください）」と渡しているため、次に女性がするのは申込用紙への記入である。",
+"l3-61": "男性は「this is Speedy Auto Repair calling about your car（お車の件でお電話しました）」と切り出し、点検で見つかった問題を伝えている。",
+"l3-62": "男性は「The parts are 180 dollars and labor is 90 dollars（部品代180ドル、工賃90ドル）」と内訳を述べており、工賃は90ドルである。270ドルは合計額である。",
+"l3-63": "修理は4時に終わる予定だが、女性は会議が5時半まであるため「I will pick it up tomorrow morning instead（代わりに明日の朝に取りに来る）」と述べている。",
+"l3-64": "女性は「I have a reservation under the name Kim. I am checking in（キムの名前で予約しています。チェックインをお願いします）」と述べており、ホテルにチェックインしている場面である。",
+"l3-65": "当初は2泊だったが「we would like to stay one more night, so three nights in total（もう1泊延ばして合計3泊）」と変更され、受付も3泊で更新している。",
+"l3-66": "女性は最後に「Is breakfast included?（朝食は含まれていますか）」と尋ねている。",
+"l3-67": "2人はウェブサイトリニューアルプロジェクトのタスクの進み具合と公開日について話しており、主題はプロジェクトの進捗である。",
+"l3-68": "「We have finished seven of the ten tasks（10件中7件が終了）」とあるため、未完了のタスクは10−7=3つである。",
+"l3-69": "女性は「I will ask Ms. Ito to join the team from Monday（月曜から伊藤さんにチームに入ってもらう）」と述べており、人員を増やして早まった公開日に間に合わせようとしている。",
+"l3-70": "冒頭で「We are planning a farewell party for Mr. Garcia（ガルシアさんの送別会を計画している）」と述べられている。送別会は同僚への別れの会である。",
+"l3-71": "「I sent invitations to 15 people, and 12 have confirmed so far（15人に招待状を送り、12人が参加を確定済み）」とあるため、参加確定は12人である。15人は招待した人数である。",
+"l3-72": "男性は「I will make the reservation and order a cake（私が予約をしてケーキを注文する）」と述べている。カードの用意は女性の担当である。",
+"l3-73": "男性は家族の用事を理由に「Could we swap shifts?（シフトを交換できないか）」と切り出しており、目的はシフト交換の依頼である。",
+"l3-74": "女性は「I am scheduled to work from 9 to 5 on Saturday（土曜日は9時から5時の勤務）」と確認しており、これが当初の土曜シフトである。11時から7時は男性の日曜シフトである。",
+"l3-75": "女性が「we need the manager's approval before Friday（金曜日までにマネージャーの承認が必要）」と述べているため、交換の確定にはマネージャーの承認が必要である。",
+"l3-76": "女性は「I ordered three shirts online last week, but one of them is the wrong size（先週シャツを3枚注文したが、1枚のサイズが違っていた）」と述べており、注文の問題の連絡である。",
+"l3-77": "女性は「I would like to exchange the medium one for a large（MサイズをLサイズに交換したい）」と述べている。",
+"l3-78": "シャツは1枚30ドル×3枚で合計90ドルとなり、80ドル以上の注文は送料無料のはずだったため、請求された配送料5ドルが返金される。",
+"l4-31": "冒頭で \"I'm calling about the documents you dropped off\" と述べ、不足している \"the receipt for the office equipment\" の送付を依頼しているため、電話の目的は不足書類の依頼です。",
+"l4-32": "\"everything looks in order except for one item: the receipt for the office equipment you purchased in March is missing\" と明言されているため、不足しているのはオフィス機器の領収書です。",
+"l4-33": "\"Could you please send us a copy by Friday\" と書類の送付を頼み、\"Please call me back ... to confirm a time\" と打ち合わせ調整のための折り返し電話も求めています。",
+"l4-34": "冒頭の \"welcome to the grand opening of Greenfield Home and Garden\" が示す通り、新店舗のオープンを知らせるアナウンスです。",
+"l4-35": "\"the first fifty customers today will receive a free potted herb plant\" と述べられているため、先着50名が受け取るのはハーブの鉢植えです。",
+"l4-36": "\"free workshops on Saturday and Sunday at eleven and two\" と案内されているため、開催は土曜と日曜の11時と2時です。",
+"l4-37": "\"skies should clear by midday, and the afternoon high will reach nineteen degrees\" とあるため、金曜の午後は晴れて暖かくなります。",
+"l4-38": "\"If you're planning outdoor activities, Saturday daytime is your best bet\" と述べ、雨は \"late Saturday night\" からとしているため、屋外活動は土曜の日中が最適だと示唆しています。",
+"l4-39": "\"Temperatures will drop again on Monday, with overnight lows near four degrees\" と予報されているため、月曜は気温が下がり、夜間は冷え込みます。",
+"l4-40": "\"an accident near the Elm Street exit has blocked the two left lanes\" と報じられているため、渋滞の原因は事故です。",
+"l4-41": "\"drivers are advised to use Route 12 as an alternate\" と明言されているため、勧められているのは12号線の利用です。3番通りへの迂回はバス路線についての話です。",
+"l4-42": "\"Bus routes 14 and 22 are being detoured via Third Avenue\" と述べられているため、両路線は3番通りへ迂回運行しています。",
+"l4-43": "灯台は船を導いた後 \"it was retired in 1985\" と説明されており、1985年は役目を終えた年です。建設されたのは1874年です。",
+"l4-44": "\"photography is welcome everywhere except inside the museum room\" と注意されているため、撮影が許可されていないのは資料室です。",
+"l4-45": "\"After the climb, we'll have about twenty minutes in the gift shop\" と案内されているため、上った後はギフトショップで過ごします。",
+"l4-46": "冒頭の \"Introducing the VitaBlend Go, the portable blender\" が示す通り、新製品のポータブルブレンダーを紹介する広告です。",
+"l4-47": "\"lasts for up to fifteen blends on a single charge\" と述べられているため、1回の充電で最大15回ブレンドできます。",
+"l4-48": "\"order through our website and receive a second blending cup free\" が期間限定の特別オファーです。2年間の保証は通常の保証内容であり、オファーではありません。",
+"l4-49": "冒頭で \"thank you for coming to our quarterly planning meeting\" と述べているため、集まりの目的は四半期計画会議への参加です。",
+"l4-50": "\"Mr. Ortiz from the design team will present the new packaging proposal\" と明言されているため、彼の役割は新しいパッケージ提案の発表です。",
+"l4-51": "\"the meeting will end at noon today, as the room is booked for another group at twelve thirty\" と理由が述べられているため、正午に終わるのは別のグループの予約があるからです。",
+"l4-52": "\"voted last night to approve funding for a new community library\" と報じられているため、承認されたのは地域図書館への予算です。",
+"l4-53": "工事は \"expected to take about eighteen months\" と述べられているため、約18か月です。2年間は予算をめぐる議論が続いた期間です。",
+"l4-54": "マリナーズは首位チームを破って \"moving into second place in the standings\" とあるため、順位を上げたことが分かります。1位になったわけではありません。",
+"l4-55": "\"to support scholarships for local high school students\" と述べられているため、イベントの目的は学生の奨学金のための資金集めです。",
+"l4-56": "\"the silent auction will close at nine thirty\" と案内されているため、締め切りは9時半です。",
+"l4-57": "\"during the main course, we'll hear from one of last year's scholarship recipients\" と述べられているため、メインコースの間に昨年の奨学生がスピーチをします。",
+"l4-58": "\"Members may borrow up to ten books at a time\" と案内されているため、一度に借りられるのは最大10冊です。",
+"l4-59": "\"printing costs ten cents per page\" と明言されているため、印刷は1ページ10セントです。",
+"l4-60": "学習室は \"can be reserved up to one week in advance through our website\" と案内されているため、予約は1週間前までにウェブサイトから行います。"
+};
 
 Object.assign(LISTENING_TRANSLATIONS, {"l1-03":{"text":"写真に一致する文を選んでください。","choices":["作業員が箱をトラックに積んでいる。","作業員がクリップボード上の書類を確認している。","作業員が台車を出入り口に押している。","作業員が荷物にラベルを取り付けている。"]},"l1-04":{"text":"写真に一致する文を選んでください。","choices":["椅子が出入り口の脇に積み重ねられている。","テーブルの上でパラソルが開かれているところだ。","入り口の近くで歩道が掃かれているところだ。","屋外のテーブルの周りに椅子が配置されている。"]},"l1-05":{"text":"写真に一致する文を選んでください。","choices":["女性が壁の絵の位置を調整している。","女性が床の敷物を巻いている。","女性が部屋を横切ってはしごを運んでいる。","女性がテーブルの表面を拭いている。"]},"l1-06":{"text":"写真に一致する文を選んでください。","choices":["乗客がボートに乗り込んでいる。","通路が建設資材で覆われている。","数隻のボートが桟橋に沿って係留されている。","桟橋に沿って手すりが取り付けられているところだ。"]},"l1-07":{"text":"写真に一致する文を選んでください。","choices":["彼女は電話に応対しています。","彼女はノートパソコンで入力しています。","彼女は新聞を読んでいます。","彼女はノートに書いています。"]},"l1-08":{"text":"写真に一致する文を選んでください。","choices":["彼は段ボール箱を運んでいます。","彼はフォークリフトを運転しています。","彼は荷物を開けています。","彼はトラックに箱を積み込んでいます。"]},"l1-09":{"text":"写真に一致する文を選んでください。","choices":["女性は男性に書類を渡しています。","2人は握手しています。","男性は女性を席に案内しています。","人々が列に並んで待っています。"]},"l1-10":{"text":"写真に一致する文を選んでください。","choices":["彼は窓を掃除しています。","彼は壁に絵を掛けています。","彼はローラーで壁を塗っています。","彼ははしごを修理しています。"]},"l1-11":{"text":"写真に一致する文を選んでください。","choices":["彼女は自転車に乗っています。","彼女はバス停で待っています。","彼女は徒歩で通りを渡っています。","彼女はタクシーから降りています。"]},"l1-12":{"text":"写真に一致する文を選んでください。","choices":["男性がホワイトボードに書いています。","聴衆が部屋を出ています。","女性がホワイトボードのグラフを指さしています。","テーブルの周りの椅子は空いています。"]},"l2-07":{"text":"最も適切な応答を選んでください。","choices":["駐車場はほぼ満車です。","私のものは来週金曜日に期限が切れます。","ビルの管理者に聞いてみてください。"]},"l2-08":{"text":"最も適切な応答を選んでください。","choices":["2時まで手が離せません。","レストランは角にあります。","はい、条件は同じです。"]},"l2-09":{"text":"最も適切な応答を選んでください。","choices":["青い布のほうが柔らかいです。","今朝、遅延の通知を送ってきました。","点線のところに署名してください。"]},"l2-10":{"text":"最も適切な応答を選んでください。","choices":["隣の部屋を開けましょう。","市外局番は用紙にあります。","私たちは見積もりを待ちました。"]},"l2-11":{"text":"最も適切な応答を選んでください。","choices":["旧モデルに合います。","受付の机の後ろです。","およそ6か月ごとです。"]},"l2-12":{"text":"最も適切な応答を選んでください。","choices":["表紙には会社のロゴが入っています。","この電話が終わったら。","先週それを注文しました。"]},"l2-13":{"text":"最も適切な応答を選んでください。","choices":["床は昨日磨かれました。","まだダウンロードしていません。","別のデザイナーを雇う予定です。"]},"l2-14":{"text":"最も適切な応答を選んでください。","choices":["20分くらいだと思います。","実演には大勢が参加しました。","彼女は今週ずっと展示会に行っています。"]},"l2-15":{"text":"最も適切な応答を選んでください。","choices":["通常配送でも間に合いますよ。","予算会議は上の階でした。","はい、荷物を中に持ってきました。"]},"l2-16":{"text":"最も適切な応答を選んでください。","choices":["今年はもっと広い地域です。","会議室は予約されています。","ビデオ通話でだけです。"]},"l2-17":{"text":"最も適切な応答を選んでください。","choices":["研修センターです。","水曜日の正午です。","新入社員向けの講習です。"]},"l2-18":{"text":"最も適切な応答を選んでください。","choices":["以前の同僚が広告を転送してくれました。","その仕事は11月に始まります。","窓の近くの机です。"]},"l2-19":{"text":"新しいソフトウェアはいつインストールされますか。","choices":["もう対応済みです。","金曜日の午後までです。","会議室です。"]},"l2-20":{"text":"今は誰が事務用品の発注を担当していますか。","choices":["先月から田中さんが担当しています。","2階です。","毎週月曜日の朝です。"]},"l2-21":{"text":"なぜ会議は延期されたのですか。","choices":["3時です。","マーケティング部長です。","部長が本日不在だからです。"]},"l2-22":{"text":"レポートはメールで送りますか、それとも印刷したものがよいですか。","choices":["はい、お願いします。","明日の朝までです。","メールで大丈夫です、ありがとう。"]},"l2-23":{"text":"昨日、経費報告書を提出しませんでしたか。","choices":["はい、長い報告書です。","まだです。領収書を集めているところです。","財務部へです。"]},"l2-24":{"text":"3階のプリンターがまた故障しています。","choices":["20部あれば十分でしょう。","月曜日からそこにあります。","すぐに修理業者に電話します。"]},"l2-25":{"text":"セミナーには何人が申し込んでいますか。","choices":["今のところ40人近くです。","9時開始です。","メインホールです。"]},"l3-07":{"text":"女性はどんな問題を報告していますか。","choices":["支払いが処理されていない。","部数が減らされている。","地図に古い情報が載っている。","荷物が間違った建物に送られた。"]},"l3-08":{"text":"男性はなぜ「まだ本印刷は始めていません」と言っていますか。","choices":["まだ修正できると女性を安心させるため。","支払いを求める理由を説明するため。","印刷部数を減らすよう提案するため。","機器の修理が必要だと警告するため。"]},"l3-09":{"text":"女性は3時までに何をしなければなりませんか。","choices":["印刷されたガイドを受け取る。","支払いの領収書を送る。","配送先住所を確認する。","修正された校正刷りを承認する。"]},"l3-10":{"text":"話し手たちは何を準備していますか。","choices":["採用面接。","自転車のイベント。","建物の点検。","製品の発送。"]},"l3-11":{"text":"Danielはなぜ受付を担当できませんか。","choices":["案内表示を確認しなければならないから。","施設管理者と会うから。","自転車ツアーを引率するから。","機器を配達するから。"]},"l3-12":{"text":"場所を確認した後、Priyaは何をするよう頼まれていますか。","choices":["講習の担当者に連絡する。","ボランティアを追加募集する。","天気予報を確認する。","最初の自転車ツアーを引率する。"]},"l3-13":{"text":"女性はなぜ標準区画を勧めませんか。","choices":["台車が付いていないから。","予算を超えるから。","展示会用のケースが入らないから。","現在空きがないから。"]},"l3-14":{"text":"図表を見てください。男性が支払う月額料金はいくらですか。","choices":["90ドル。","150ドル。","190ドル。","230ドル。"]},"l3-15":{"text":"女性は男性に何をするよう頼んでいますか。","choices":["保管ケースの寸法を測る。","オンラインフォームを記入する。","すぐに手付金を払う。","別の場所で台車を受け取る。"]},"l3-16":{"text":"話し手たちはおそらくどこで働いていますか。","choices":["博物館。","車両修理工場。","小学校。","バスターミナル。"]},"l3-17":{"text":"女性の「慌ただしく感じてほしくない」という発言は何を意味しますか。","choices":["団体にもっと早く来てほしい。","一般向けツアーが人気すぎると思っている。","講習が中止されると予想している。","見学に使える時間を心配している。"]},"l3-18":{"text":"講習の準備をする前に、男性は何をしますか。","choices":["学校の先生に電話する。","教育担当チームに知らせる。","展示室で来館者を案内する。","代わりのバスを手配する。"]},"l3-19":{"text":"女性はなぜ男性に電話をしましたか。","choices":["研修の会場変更について相談するため","ケータリングの注文をキャンセルするため","営業会議に招待するため","研修の講師を依頼するため"]},"l3-20":{"text":"男性は何をすることに同意しましたか。","choices":["もっと広い会議室を予約すること","ケータリング会社に連絡すること","名札を準備すること","軽食の注文を減らすこと"]},"l3-21":{"text":"研修の参加者は現在何人見込まれていますか。","choices":["28人","30人","31人","33人"]},"l4-07":{"text":"話し手はなぜ電話していますか。","choices":["修理の承認を求めるため。","注文品の準備ができたと知らせるため。","未払い代金を顧客に知らせるため。","集荷サービスを宣伝するため。"]},"l4-08":{"text":"顧客はなぜ横の入り口を使う必要がありますか。","choices":["防犯機器を試験しているから。","正面のドアを交換しているから。","配達物が歩道をふさいでいるから。","正面入り口の外で工事をするから。"]},"l4-09":{"text":"顧客は何を持参するよう求められていますか。","choices":["引換票。","交換用フック。","支払い用カード。","カーテンの写真。"]},"l4-10":{"text":"あるセッションについてどんな変更が発表されていますか。","choices":["時間が短くなる。","開始時刻が早くなる。","講演者が遠隔で参加する。","入場料が値下げされる。"]},"l4-11":{"text":"図表を見てください。メディア室で行われるセッションは何時に始まりますか。","choices":["午後2時。","午後1時。","午後3時。","午後4時。"]},"l4-12":{"text":"話し手は名札について何と言っていますか。","choices":["2階で受け取れる。","レセプションに入場できる。","今後のイベントの割引が付いている。","変更後の会場が書かれている。"]},"l4-13":{"text":"一部の顧客は何に不満を述べていますか。","choices":["用品を返品できなかった。","誤った価格を請求された。","開店前に外で待たなければならなかった。","ある売り場で接客を受けられなかった。"]},"l4-14":{"text":"話し手はなぜ「全員に遅くまで残ってもらう必要はありません」と言っていますか。","choices":["夜間営業の終了を発表するため。","早く出勤した従業員を批判するため。","一部の勤務時間だけを調整すると説明するため。","追加勤務を勧めるため。"]},"l4-15":{"text":"聞き手は今日何をするよう求められていますか。","choices":["顧客アンケートに答える。","勤務予定の重複を報告する。","用品を別の売り場へ移す。","研修に申し込む。"]},"l4-16":{"text":"この案内に最も関心を持ちそうなのは誰ですか。","choices":["食品事業を始めたい人。","飲食店向けの機器を売る事業主。","賃貸物件を探す建設業者。","ツアーガイドの仕事を探す人。"]},"l4-17":{"text":"初めての利用者は調理枠の予約前に何をしなければなりませんか。","choices":["包装のアドバイザーと会う。","設備を購入する。","利用説明会に参加する。","事業の賞を受賞する。"]},"l4-18":{"text":"聞き手がウェブサイトを利用するよう勧められているのはなぜですか。","choices":["価格設定のガイドをダウンロードするため。","アドバイザーの仕事に応募するため。","入場料を払うため。","見学ツアーの参加枠を確保するため。"]},"l4-19":{"text":"このアナウンスの主な目的は何ですか。","choices":["新しい研修プラットフォームを紹介すること","スケジュールの変更を伝えること","新しいマネージャーを紹介すること","オフィス移転を説明すること"]},"l4-20":{"text":"全従業員が今月末までにしなければならないことは何ですか。","choices":["パスワードを変更すること","安全コースを修了すること","マネージャーと面談すること","進捗レポートを提出すること"]},"l4-21":{"text":"ログインできない場合、従業員は何をするよう求められていますか。","choices":["翌日に再試行すること","研修コーディネーターにメールすること","ITヘルプデスクに連絡すること","新しいアカウントを作成すること"]},"l4-22":{"text":"何が宣伝されていますか。","choices":["フィットネスセンターの会員キャンペーン","スポーツ用品のセール","初心者向けスイミングレッスン","健康食品の定期購入"]},"l4-23":{"text":"今月入会すると、新規会員が支払わなくてよいものは何ですか。","choices":["月会費","入会金","ロッカー使用料","グループクラスの参加費"]},"l4-24":{"text":"今週、聞き手に勧められていることは何ですか。","choices":["電話でパーソナルトレーナーを予約すること","友人にセンターを勧めること","無料ツアーと体験トレーニングのためにセンターを訪れること","年間契約に申し込むこと"]}});
 Object.assign(LISTENING_EXPLANATIONS, {"l1-03":"写真制作要件：両足を床につけた作業員が片手にクリップボードを持ち、もう片方の指で書類を指して見下ろす。 クリップボードの紙を見下ろして確認する姿勢が一致する。","l1-04":"写真制作要件：人物のいないカフェのテラスに、テーブル3台と、その周りの独立した椅子。開いたパラソルは静止。 have been arrangedは配置された結果の状態を描写できる。","l1-05":"写真制作要件：立った女性が壁に掛かった額縁の両側に手を添えて水平に直している。 壁にある額縁の両側を持って位置を整える動作が一致する。","l1-06":"写真制作要件：無人の港で複数の小型ボートが桟橋と平行に並び、係留ロープが見える。 tied alongside a dockは桟橋の横にロープで固定された状態を表す。","l1-07":"写真では女性が机に向かい、ノートパソコンのキーボードに手を置いているため、「ノートパソコンで入力している」が正解です。電話に出ている様子や新聞を読んでいる様子はありません。","l1-08":"写真では男性が大きな段ボール箱を両手で抱えて運んでいるため、「段ボール箱を運んでいる」が正解です。フォークリフトやトラックは写っていません。","l1-09":"写真ではスーツ姿の女性と男性が向かい合って握手しているため、「2人は握手している」が正解です。書類の受け渡しはしていません。","l1-10":"写真では男性がローラーで壁にペンキを塗っているため、「ローラーで壁を塗っている」が正解です。はしごは置かれているだけで、修理はしていません。窓は養生シートで覆われています。","l1-11":"写真では女性が街中で自転車に乗っているため、「自転車に乗っている」が正解です。バス停で待っているわけでも、徒歩で渡っているわけでもありません。","l1-12":"写真では女性がホワイトボードのグラフを指さしながら同僚に説明しているため、「ホワイトボードのグラフを指さしている」が正解です。椅子には同僚が座っています。","l2-07":"Who should I speak toは相談相手を尋ねる。Try＋人で問い合わせ先を勧められる。 building managerが相談相手に当たり、Tryはここでは「尋ねてみる」の意味。","l2-08":"二択に対して今は対応できない理由を返し、午後の時間帯を示唆している。 tied upは「忙しくて動けない」。二択を繰り返さず、対応可能な時間を間接的に伝える。","l2-09":"予定を確認する否定疑問に、遅延通知という新情報を返している。 当初の予定に変更があったと分かるため自然な応答。否定疑問でもYes/Noは必須ではない。","l2-10":"混雑という状況の指摘に、利用スペースを増やす提案で応じている。 質問文でなくても、状況を受けた解決策が最も自然な応答になる。","l2-11":"How oftenは頻度。every six monthsが交換間隔を示す。 every＋期間が反復の頻度を直接示す。","l2-12":"cover the front deskは受付業務を代わること。電話終了後ならできると応じる。 Once節だけでも「終わったら代われる」という省略された返答として自然。","l2-13":"文書の所在確認に対し、まだ取得していないことを説明している。 所在を直接言わず、手元にない理由を返す。floor planは間取り図。","l2-14":"Why notは提案。Lenaが不在という事情で、その提案が難しいことを伝える。 候補者が今週不在なので、依頼しにくいと間接的に示す。","l2-15":"速達料金の高さを受けて、通常配送でも期限に間に合うと代案を示す。 急ぐ必要がないなら通常配送を選べるという実用的な応答。","l2-16":"会った経験の確認に、対面ではなくビデオ通話だったと補足している。 Onlyが面識の範囲を限定する。付加疑問にもYes/Noを省略して応じられる。","l2-17":"Whenとcloseから、申し込み終了の日時を問うている。 曜日と時刻が申し込みの締め切りを示している。","l2-18":"find out aboutは「〜について知る」。情報を得た経路が答えになる。 同僚から転送されたという経路がHowに対応する。","l2-19":"When は時を尋ねるため、期限を示す By Friday afternoon が対応します。In the conference room は場所の答えです。","l2-20":"Who は人を尋ねるため、担当者を示す Mr. Tanaka took over が直接答えています。","l2-21":"Why への理由として Because で始まるCが対応します。Aは時刻、Bは人の答えです。","l2-22":"or を使った選択疑問文には Yes/No で答えず、選択肢の一方（E-mail）を選んで答えるCが自然です。","l2-23":"否定疑問文への応答。まだ提出していないので Not yet で始まるBが事実に合います。","l2-24":"故障の報告への応答として、対処を示す I'll call the repair service が自然です。","l2-25":"How many は数を尋ねるため、人数を示す Almost forty が対応します。","l3-07":"The map still shows the old entrance. old entranceをoutdated informationと言い換えている。","l3-08":"We haven't started the print run yet. Approve the corrected proof by three, and we can keep the original delivery date. 未印刷なので修正を反映でき、承認が間に合えば予定どおり納品できるという文脈。","l3-09":"Approve the corrected proof by three. corrected proofとrevised proofが対応し、by threeが期限。","l3-10":"the cycling club / the repair workshop / the first bike ride クラブ、修理講習、自転車ツアーという複数の情報が自転車イベントを示す。","l3-11":"D: I'm leading the first bike ride at nine. 男性話者DがDaniel。leading a bike rideをguiding a bicycle rideと言い換える。","l3-12":"Priya, once you've confirmed the space, please email the workshop leader. emailをcontactと言い換える。場所の確認後という条件が一致する。","l3-13":"The standard unit would usually be suitable, but none will be available until next month. 通常は適するが来月まで空かない、という理由が明示されている。","l3-14":"large unit at its listed rate → 料金表のLarge行 $190 会話で選ぶLargeと、図表の190ドルを結びつける。","l3-15":"To reserve it, complete the online form. complete a formをfill out a formと言い換える。","l3-16":"fossil workshop / ground-floor galleries / public tour 化石の講習、展示室、一般向けツアーが博物館という場所を示す。","l3-17":"The teacher said they have to leave at two. I don't want them to feel rushed. 2時に出発する制約を受けて、1時開始で十分な時間があるかを懸念している。","l3-18":"I'll speak to them before I set up. / the education team themは直前のeducation team。男性は設営前にそのチームに話すと答える。","l3-19":"Room 4B has been double-booked. 電話の目的は、研修室のダブルブッキングに伴う会場変更の相談。ケータリングへの連絡は男性への依頼事項であり、電話の目的そのものではない。","l3-20":"Could you let the catering company know about the change? / Sure, I'll call them this morning. 男性はケータリング会社への連絡を引き受けた。名札の準備は女性の担当で、注文の減量はしないと決まった。","l3-21":"We're expecting about thirty participants. / Two people from the Osaka office can't attend. / We've added three people from the Nagoya branch. 約30人から2人減って3人増えるため、合計は31人。","l4-07":"Your curtains are ready for collection. カーテンを受け取れると知らせる電話。","l4-08":"resurfacing work starts outside our main entrance tomorrow resurfacingは舗装のやり直し。正面入り口の外での工事に対応する。","l4-09":"Just bring the collection slip we gave you. 受け取りに必要なものとしてcollection slipを明示している。","l4-10":"we'll connect with her by video at the scheduled time ビデオで接続することをparticipate remotelyと言い換えている。","l4-11":"Practical Data Security → 図表の2:00 P.M.。時刻は予定どおりで場所だけ変更。 移動するPractical Data Securityを特定し、図表の開始時刻2時を読む。","l4-12":"it also gives you access to the networking reception gives you access toをallow entry toと言い換える。","l4-13":"couldn't find anyone to help them in the outdoor equipment section help themをobtain assistanceと言い換えている。","l4-14":"Instead ... one person from each section will begin an hour later ... without increasing anyone's weekly hours. 全員ではなく各売り場1人の出勤時間をずらす、という説明への導入。","l4-15":"tell me today if it clashes with a class or another commitment 授業などとclashする場合に今日中に伝える、をreport scheduling conflictsと言い換える。","l4-16":"turning your baking hobby into a business / small food businesses 冒頭の趣味から事業へという呼びかけと、小規模食品事業向けという説明が一致する。","l4-17":"first-time users must attend a kitchen orientation before reserving a cooking session mustとbeforeから予約前の必須条件と分かる。","l4-18":"places on the guided tours are limited, so reserve yours through the centre's website 見学ツアーの定員が限られるため、サイトで予約するよう勧める。","l4-19":"the launch of SkillPath, our new online training platform と冒頭で開始を告知しており、アナウンスの主目的は新しい研修プラットフォームの紹介です。","l4-20":"one course is mandatory for all staff / everyone must finish it by the end of this month とあり、月末までの必須事項は安全研修コースの修了です。進捗レポートを受け取るのはマネージャー側です。","l4-21":"If you have any trouble logging in, please contact the IT help desk と明示されています。","l4-22":"a special offer for new members とあり、フィットネスセンターの新規会員キャンペーンの広告です。","l4-23":"we'll waive the enrollment fee とあり、無料になるのは入会金です。waive は「（料金などを）免除する」という意味です。","l4-24":"Come in for a free tour and a trial workout any day this week と呼びかけています。"});
