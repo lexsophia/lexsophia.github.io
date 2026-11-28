@@ -130,7 +130,132 @@ const PASSAGES = {
   p7_apartment: {     part: 7, type: "advertisement",     header: "Sunnyvale Apartments — Now Leasing",     body: "Sunnyvale Apartments is now leasing one- and two-bedroom units for occupancy starting December 1. Monthly rent starts at $950 for a one-bedroom unit and $1,300 for a two-bedroom unit, including water and parking.\n\nAll units feature a modern kitchen, in-unit laundry facilities, and access to a shared fitness center. A community room can be reserved free of charge by residents for private events.\n\nAn open house will be held on Saturday, November 14, from 10:00 A.M. to 4:00 P.M. Visitors can tour model units and speak with the leasing staff. Applications submitted during the open house will have the $50 application fee waived."   },
   p7_deadline: {     part: 7, type: "email",     header: "From: Ken Watanabe, Project Manager\nTo: Project Team\nSubject: Change to the Atlas Project Deadline\nDate: November 2",     body: "Hi everyone,\n\nI'm writing to let you know that the client has agreed to extend the deadline for the Atlas project by one week. Our final report is now due on November 20 instead of November 13.\n\nBecause of this change, the review meeting scheduled for this Friday will be moved to next Tuesday at 10:00 A.M. Please use the extra time to check your sections carefully rather than rushing to finish.\n\nIf the new deadline causes any problems with your other assignments, please let me know by Wednesday so we can adjust workloads.\n\nBest regards,\nKen Watanabe"   },
   p7_hiring: {     part: 7, type: "double passage",     sections: [       { header: "Job Posting: Bilingual Customer Support Representative — NovaTel Communications", body: "NovaTel Communications is seeking a customer support representative for its international help desk. Applicants must have at least three years of customer service experience and be able to communicate fluently in English and Spanish. The position involves answering customer inquiries by phone and e-mail in both languages. Working hours are Monday to Friday, 9:00 A.M. to 5:00 P.M. Interested candidates should apply online by November 25." },       { header: "From: Lucia Fernandez\nTo: NovaTel Hiring Team\nSubject: Application for Customer Support Representative\nDate: November 5", body: "Dear Hiring Team,\n\nI would like to apply for the customer support representative position. For the past four years, I have worked at a hotel front desk, where I assisted guests from many countries. I grew up in Mexico and speak Spanish at home, and I use English at work every day.\n\nI am available to start in early December and would welcome the opportunity to discuss my application in an interview.\n\nSincerely,\nLucia Fernandez" }     ]   },
-  p7_market: {     part: 7, type: "article",     header: "Hillcrest Farmers Market Marks Ten Years",     body: "The Hillcrest Farmers Market celebrated its tenth anniversary on Saturday, with more than forty local vendors and an estimated 3,000 visitors attending the special event. What began in 2016 as a small weekend market with eight stalls has grown into one of the city's most popular weekly attractions.\n\nOrganizers announced on Saturday that, starting next spring, the market will also open on Wednesday evenings at a second location in the Riverside district, in response to requests from residents who cannot visit on weekends.\n\nThe market is known for its fresh produce, baked goods, and handmade crafts. Admission is free, and parking is available at the community center next to the market site."   }};
+  p7_market: {     part: 7, type: "article",     header: "Hillcrest Farmers Market Marks Ten Years",     body: "The Hillcrest Farmers Market celebrated its tenth anniversary on Saturday, with more than forty local vendors and an estimated 3,000 visitors attending the special event. What began in 2016 as a small weekend market with eight stalls has grown into one of the city's most popular weekly attractions.\n\nOrganizers announced on Saturday that, starting next spring, the market will also open on Wednesday evenings at a second location in the Riverside district, in response to requests from residents who cannot visit on weekends.\n\nThe market is known for its fresh produce, baked goods, and handmade crafts. Admission is free, and parking is available at the community center next to the market site."   },
+"p6_conference": {
+  "part": 6,
+  "type": "email",
+  "header": "To: Dr. Alan Reyes\nFrom: Sofia Marchetti, Program Coordinator\nSubject: Your session at the Regional Marketing Conference",
+  "body": "Dear Dr. Reyes,\n\nThank you for agreeing to speak at the Regional Marketing Conference on October 17. Your session [95] for 10:00 A.M. in Room 3 of the Harbor Convention Center, immediately after the opening address.\n\n[96] the venue has changed from last year, the overall schedule remains the same, and we expect about 200 people to attend your session. A technician will be available to assist you [97] the session, so please arrive at least twenty minutes early to check your slides and microphone.\n\nCould you send us a copy of your presentation slides by October 10? [98] If you need any additional equipment, please let me know by the same date.\n\nWe look forward to welcoming you.\n\nSincerely,\nSofia Marchetti"
+},
+"p7_office_move": {
+  "part": 7,
+  "type": "notice",
+  "header": "NOTICE TO ALL EMPLOYEES: OFFICE RELOCATION",
+  "body": "We are pleased to announce that Hartwell Financial Group will relocate its headquarters from 210 King Street to the Meridian Tower at 88 Harbor Avenue. The move will take place over the weekend of March 14–15, and normal operations will resume at the new location on Monday, March 16.\n\nTo help the moving company work efficiently, all employees are asked to remove every personal item from their desks by 5:00 P.M. on Friday, March 13. Boxes and labels will be distributed by the Facilities Department on March 9. Any items left behind after the deadline will be discarded.\n\nThe Meridian Tower is a five-minute walk from Central Station, and a company shuttle will also run between the station and the building every fifteen minutes during the morning and evening rush hours. Employee parking will be available in the underground garage for a monthly fee of $60.\n\nPlease direct any questions about the relocation to Ms. Dana Whitfield in the Facilities Department at extension 4421."
+},
+"p7_language_school": {
+  "part": 7,
+  "type": "advertisement",
+  "header": "BRIGHTPATH LANGUAGE SCHOOL — NEW TERM STARTS FEBRUARY 10",
+  "body": "Would you like to speak a new language with confidence? BrightPath Language School is now accepting registrations for the spring term. We offer courses in Spanish, French, Mandarin, and Korean for adult learners of all levels, from complete beginners to advanced speakers.\n\nOur most popular course, Evening Conversation, meets every Tuesday and Thursday from 7:00 P.M. to 8:30 P.M. To ensure that every student has plenty of speaking practice, each class is limited to eight students. For those who prefer to study during the day, Weekend Intensive classes are held on Saturdays from 9:00 A.M. to 1:00 P.M.\n\nTuition for the ten-week term is $420, plus a one-time enrollment fee of $30. Register by January 31 and receive a 15 percent discount on tuition. All course materials are included in the price.\n\nVisit our school at 512 Elm Street or register online at www.brightpathlanguage.example.com."
+},
+"p7_delivery_inquiry": {
+  "part": 7,
+  "type": "email",
+  "header": "To: customer.service@furnishpro.com / From: m.alvarez@brightline-events.com / Subject: Delivery of Order #88412",
+  "body": "Dear Customer Service Team,\n\nI am writing to ask about order #88412, which I placed on April 2 for twenty office chairs and five desks. When I placed the order, your Web site indicated that delivery would take five to seven business days. However, it is now April 16, and the items have still not arrived.\n\nThis is a serious problem for us because we are preparing for a company training event on April 24, and the furniture is needed for the event room. Could you please check the status of my order and let me know exactly when the delivery will take place? If the full order cannot be delivered by April 22, I would like to know whether a partial delivery of the chairs is possible.\n\nWhen you reply, I would appreciate it if you could confirm the delivery schedule in writing. I have attached a copy of my purchase receipt to this e-mail for your reference.\n\nThank you for your prompt attention to this matter.\n\nSincerely,\nMaria Alvarez\nOffice Manager, BrightLine Events"
+},
+"p7_cafe_opening": {
+  "part": 7,
+  "type": "article",
+  "header": "New Café Brings Fresh Bread to Maple Street",
+  "body": "Residents of the Maple Street neighborhood welcomed a new business on Saturday as Hoshino Bakery Café opened its doors at 14 Maple Street. More than one hundred customers visited on the first day, and by noon the café had sold out of its popular melon bread.\n\nThe café is owned by Kenji Hoshino, who spent twelve years working as a baker at several well-known hotels in the city before deciding to start his own business. \"I wanted to create a place where neighbors can relax and enjoy bread that is baked fresh every morning,\" Mr. Hoshino said.\n\nIn addition to bread and pastries, the café serves coffee made from beans roasted at the Tanaka Farm, located just outside the city. The menu also includes sandwiches and a daily soup made with seasonal vegetables.\n\nHoshino Bakery Café is open from 7:00 A.M. to 7:00 P.M. Tuesday through Sunday and is closed on Mondays. The café has seating for thirty customers, as well as a small terrace that will open in the spring."
+},
+"p7_museum_exhibition": {
+  "part": 7,
+  "type": "information",
+  "header": "SPECIAL EXHIBITION: \"Colors of the Sea — Maritime Art from the 19th Century\"",
+  "body": "The Riverdale Museum of Art is proud to present \"Colors of the Sea,\" a special exhibition featuring more than eighty paintings and drawings by European maritime artists of the nineteenth century. The exhibition will run from Saturday, October 4, through Sunday, December 21, in the museum's East Wing.\n\nAdmission to the special exhibition is 1,200 yen for adults and 600 yen for children aged 6 to 12. Children under 6 are admitted free of charge. Please note that on weekdays, adult tickets are discounted to 1,000 yen. Tickets may be purchased at the museum entrance or in advance through the museum's Web site.\n\nOn Saturdays and Sundays, visitors can join a free hands-on workshop in which they can try traditional watercolor techniques. Workshops begin at 11:00 A.M. and 2:00 P.M. and are limited to twenty participants each, on a first-come, first-served basis.\n\nThe museum is open from 9:30 A.M. to 5:30 P.M. and is closed on Mondays. Last admission is thirty minutes before closing."
+},
+"p7_driver_recruitment": {
+  "part": 7,
+  "type": "job posting",
+  "header": "NOW HIRING: DELIVERY DRIVERS — SwiftHaul Logistics Co.",
+  "body": "SwiftHaul Logistics Co. is seeking full-time delivery drivers to join our Osaka distribution center. Drivers will deliver packages to homes and businesses within the city using company vehicles and will typically complete 60 to 80 deliveries per day.\n\nRequirements:\n• A valid commercial driver's license (Class B or above)\n• At least two years of driving experience\n• The ability to lift packages weighing up to 25 kilograms\n• A clean driving record for the past three years\n\nWe offer a starting monthly salary of 290,000 yen, plus overtime pay and a transportation allowance. Shifts are five days per week, and drivers may choose either an early shift (6:00 A.M.–3:00 P.M.) or a late shift (1:00 P.M.–10:00 P.M.).\n\nNew drivers receive two weeks of paid training, during which they ride with an experienced driver to learn routes and delivery procedures. Uniforms and safety equipment are provided free of charge.\n\nTo apply, please send your resume to careers@swifthaul.example.co.jp by May 30. Selected applicants will be contacted for an interview within two weeks."
+},
+"p7_meeting_reschedule": {
+  "part": 7,
+  "type": "email",
+  "header": "Subject: Marketing Meeting Rescheduled to Friday, March 13",
+  "body": "Dear Team,\n\nI am writing to let you know that our weekly marketing meeting, originally scheduled for Thursday, March 12 at 10:00 a.m., has been moved to Friday, March 13 at 2:00 p.m. The change is necessary because Ms. Alvarez, our regional sales director, will be visiting the head office on Friday and would like to join the discussion.\n\nThe meeting will still be held in Conference Room B on the fourth floor, and it is expected to last about ninety minutes. Please bring the updated sales figures for February, as Ms. Alvarez will review the quarterly targets with us. If you have not yet submitted your monthly report, please send it to me by Wednesday afternoon so that I can prepare the summary documents.\n\nIf the new time conflicts with another appointment, please contact me as soon as possible so that we can make alternative arrangements.\n\nThank you for your understanding.\n\nBest regards,\nDaniel Kim\nMarketing Manager"
+},
+"p7_fare_revision": {
+  "part": 7,
+  "type": "notice",
+  "header": "Notice: Fare Changes Effective April 1",
+  "body": "City Transit Authority — Notice to Passengers\n\nThe City Transit Authority will revise fares on all bus and subway services beginning Wednesday, April 1. The changes are being made to cover rising fuel and maintenance costs.\n\nUnder the new rates, a standard one-way fare will increase from $2.50 to $2.75. A ten-trip ticket will cost $24.00, up from $22.50. The monthly pass will rise from $80.00 to $88.00.\n\nFares for seniors and students will remain unchanged, and children under six will continue to ride free when accompanied by an adult. Passengers who purchased a monthly pass before April 1 may continue to use it until it expires.\n\nNew fare charts will be posted at all stations by March 20. For details, visit www.citytransit.example or call the information line at 555-0147."
+},
+"p7_restaurant_review": {
+  "part": 7,
+  "type": "review",
+  "header": "The Olive Branch — ★★★★☆ (4 out of 5 stars)",
+  "body": "The Olive Branch, a Mediterranean restaurant that opened on Harbor Street last spring, has quickly become one of the most talked-about dining spots in the neighborhood.\n\nOn my visit last Saturday, the dining room was nearly full by seven o'clock, yet the staff remained calm and attentive. Our server explained the specials in detail and happily adjusted a dish for my companion, who cannot eat nuts.\n\nThe grilled sea bass, served with lemon and herbs, was excellent — fresh, light, and generously portioned. The lamb kebabs were flavorful, though slightly overcooked. For dessert, the baklava was crisp and not overly sweet.\n\nPrices are reasonable for the quality: most main courses cost between $18 and $26. My only complaint concerns parking; the small lot behind the restaurant fills up quickly, and street parking nearby is limited.\n\nOverall, The Olive Branch is well worth a visit. I recommend booking a table in advance, especially on weekends."
+},
+"p7_charity_walk": {
+  "part": 7,
+  "type": "article",
+  "header": "Record Turnout at Eighth Annual Walk for Hope",
+  "body": "More than 1,200 people gathered at Riverside Park on Sunday morning for the eighth annual Walk for Hope, a charity event held to raise money for the city's children's hospital.\n\nParticipants walked a five-kilometer course along the river, cheered on by local bands and volunteers handing out water. This year's event raised a record $54,000 through registration fees and donations, exceeding last year's total by $9,000.\n\n'We are grateful to everyone who took part,' said event organizer Maria Santos. 'The money will be used to buy new equipment for the hospital's children's ward and to fund its weekend play program.'\n\nLocal businesses also supported the event. Harbor Bakery provided free breakfast for the volunteers, and City Sports donated 200 T-shirts for the first walkers to register.\n\nThe ninth Walk for Hope is scheduled for next October, and registration will open in August through the hospital's website."
+},
+"p7_furniture_sale": {
+  "part": 7,
+  "type": "advertisement",
+  "header": "Comfort Living Furniture — Winter Clearance Sale",
+  "body": "Comfort Living Furniture is holding its biggest clearance sale of the year from January 16 to January 25 at our downtown store on Fifth Avenue.\n\nSave up to 40 percent on selected sofas, dining sets, and bedroom furniture. Our popular three-seat Haven sofa, originally priced at $1,500, is now available for $900. Dining tables are reduced by 25 percent, and all lamps and rugs are half price while supplies last.\n\nCustomers who spend $499 or more will receive free delivery within the city. In addition, anyone who opens a Comfort Living store card during the sale will receive an extra 10 percent off their first purchase.\n\nThe store will be open extended hours during the sale, from 9:00 a.m. to 9:00 p.m. daily. Visit us soon — once these items are gone, they will not be restocked."
+},
+"p7_airport_shuttle": {
+  "part": 7,
+  "type": "information",
+  "header": "Blue Line Shuttle: Airport Service Timetable and Information",
+  "body": "The Blue Line Shuttle provides direct service between Central Station and Westfield International Airport. The trip takes approximately 45 minutes, depending on traffic.\n\nBuses depart from Central Station every 30 minutes. The first bus leaves at 5:00 a.m., and the last bus leaves at 11:00 p.m. Buses also depart from the airport every 30 minutes, beginning at 6:00 a.m.\n\nA one-way ticket costs $12 for adults and $6 for children under 12. Tickets must be purchased in advance through our website or at the ticket machines at Central Station; drivers do not sell tickets and cannot accept cash.\n\nEach passenger may bring one large suitcase and one small carry-on bag free of charge. Additional bags cost $5 each. Passengers traveling with bicycles or other oversized items should contact us at least 24 hours in advance, as space is limited.\n\nPlease arrive at the stop at least 10 minutes before departure. Buses cannot wait for late passengers."
+},
+"p7_venue_booking": {
+  "part": 7,
+  "type": "double email",
+  "sections": [
+    {
+      "header": "E-mail from Dana Whitfield to Kenji Mori — February 10",
+      "body": "Dear Mr. Mori,\nI am writing to reserve a room at Sakura Hall for a one-day training seminar for our staff. We would like to hold the event on Friday, March 13, from 9:00 A.M. to 5:00 P.M., and we expect about 60 employees to attend. We will need a projector and screen for presentations, and we would also like to arrange a buffet lunch for all participants.\nOur keynote speaker, Dr. Alan Reyes, will be joining us from overseas, and Friday is the only day he is available that week. Could you please let me know whether a suitable room is free on that date, and send me an estimate of the total cost?\nThank you.\nDana Whitfield\nBrightpath Consulting"
+    },
+    {
+      "header": "E-mail from Kenji Mori to Dana Whitfield — February 12",
+      "body": "Dear Ms. Whitfield,\nThank you for your inquiry. Unfortunately, both of our large rooms are already booked on Friday, March 13. However, Room A, which seats up to 120 people, is available on Saturday, March 14, and Friday, March 20.\nThe rental fee for Room A is ¥85,000 for a full day, and this includes the use of a projector and screen. Our buffet lunch is ¥1,800 per person. If you confirm a booking, we ask that you pay a deposit of 30 percent of the total cost within five business days.\nPlease let me know which date you prefer, and I will prepare a detailed estimate.\nKenji Mori\nSakura Hall"
+    }
+  ]
+},
+"p7_kyoto_tour": {
+  "part": 7,
+  "type": "double advertisement and email",
+  "sections": [
+    {
+      "header": "Advertisement — Highland Trails Travel",
+      "body": "Discover the colors of autumn with our Kyoto Autumn Leaves Tour! This three-day, two-night trip runs from November 21 to 23 and costs ¥68,000 per person. The price includes round-trip bus transportation from Kyoto Station, two nights at the Arashiyama Riverside Hotel, and breakfast each morning. Book by October 31 and receive a 10 percent early-booking discount. For an additional ¥4,000 per person, you can join a traditional tea ceremony led by a local tea master. The tour departs Kyoto Station at 8:30 A.M. on November 21, and a minimum of ten participants is required. Reserve your seats today!"
+    },
+    {
+      "header": "E-mail from Paul Andersen to Highland Trails Travel — October 28",
+      "body": "Dear Highland Trails staff,\nI saw your advertisement for the Kyoto Autumn Leaves Tour and would like to book two seats, for myself and my wife, for the November 21 departure. Since I am writing before the end of October, I understand that the early-booking discount will apply. Please add the tea ceremony for both of us as well.\nBefore I send my payment, I have one question: my wife does not eat meat, so could you tell me whether vegetarian meals can be arranged at the hotel? Also, please confirm the total amount I should pay.\nThank you.\nPaul Andersen"
+    }
+  ]
+},
+"p7_training_program": {
+  "part": 7,
+  "type": "triple",
+  "sections": [
+    {
+      "header": "Notice from the Human Resources Department — March 10",
+      "body": "The Human Resources Department is pleased to announce this year's Spring Skills Training Program. Four workshops will be offered in April: Excel Basics, Presentation Skills, Project Management, and Data Analysis. Each employee may enroll in a maximum of two workshops, and enrollment must be completed through the company portal by Friday, March 28. All workshops were originally scheduled to be held in Seminar Room B; however, please check the final schedule below, as some rooms have been changed. Employees who complete a workshop will receive a certificate of completion. Department managers have been asked to adjust work schedules so that interested staff can attend."
+    },
+    {
+      "header": "E-mail from Ryo Nakamura to the Human Resources Department — March 20",
+      "body": "Dear HR team,\nI have enrolled in two workshops through the portal: Project Management and Data Analysis. I am writing because my supervisor has scheduled a meeting with an important client on the afternoon of April 15, and I am worried that it may overlap with one of my workshops. Could you tell me whether I will still be able to attend the full session?\nAlso, if there are still seats available, I would like to join Excel Basics as well. Please let me know if that is possible.\nThank you.\nRyo Nakamura\nSales Department"
+    },
+    {
+      "header": "Spring Skills Training Program — Final Schedule (updated March 24)",
+      "body": "Excel Basics — Wednesday, April 8, 9:30 A.M.–12:30 P.M., Room 301, Instructor: Ms. Ito\nPresentation Skills — Friday, April 10, 1:00 P.M.–4:00 P.M., Room 301, Instructor: Mr. Grant\nProject Management — Wednesday, April 15, 9:30 A.M.–4:30 P.M., Room 402, Instructor: Ms. Park\nData Analysis — Friday, April 17, 9:30 A.M.–4:30 P.M., Room 402, Instructor: Mr. Osei\nNote: All rooms were changed from Seminar Room B on March 24.\nEnrollment is through the company portal only, and the deadline is March 28. Please arrive at least ten minutes before the start of each session and bring your employee ID card. Questions should be directed to the Human Resources Department at extension 2140."
+    }
+  ]
+}
+};
 
 /* =====================================================================
    QUESTION BANK — 100 items
@@ -460,6 +585,891 @@ const QUESTION_BANK = [
 ,   { id: "p7-45", part: 7, passageId: "p7_bakery", focus: "main purpose", skill: "reading", difficulty: "easy",     text: "What is the article mainly about?",     choices: ["The expansion of a bakery business", "A new type of bread developed by a bakery", "A change in the ownership of a bakery chain", "The history of farmers markets in Portland"], answer: 0 },   { id: "p7-46", part: 7, passageId: "p7_bakery", focus: "detail", skill: "reading", difficulty: "medium",     text: "According to the article, what will the new locations offer that the existing shops do not?",     choices: ["Baking courses", "Free samples of new products", "Online ordering", "Extended opening hours"], answer: 0 },   { id: "p7-47", part: 7, passageId: "p7_bakery", focus: "detail", skill: "reading", difficulty: "medium",     text: "What is indicated about Maria Chen?",     choices: ["She opened the first shop in Austin.", "She plans to retire at the end of this year.", "She began by selling bread at a farmers market.", "She previously worked for a supermarket chain."], answer: 2 },   { id: "p7-48", part: 7, passageId: "p7_delivery", focus: "purpose", skill: "reading", difficulty: "easy",     text: "What is the purpose of the first e-mail?",     choices: ["To request a change to a delivery schedule", "To complain about damaged furniture", "To order new furniture for a showroom", "To cancel a delivery contract"], answer: 0 },   { id: "p7-49", part: 7, passageId: "p7_delivery", focus: "detail", skill: "reading", difficulty: "medium",     text: "According to the second e-mail, what should Mr. Osei do by October 28?",     choices: ["Confirm the new schedule to avoid an extra charge", "Pay an additional delivery fee", "Complete the showroom renovation", "Choose a morning delivery slot"], answer: 0 },   { id: "p7-50", part: 7, passageId: "p7_delivery", focus: "cross-passage inference", skill: "reading", difficulty: "hard",     text: "What is suggested about Friday deliveries?",     choices: ["Afternoon deliveries may arrive later than planned.", "They cost more than Saturday deliveries.", "They are unavailable during the renovation.", "They require two drivers for each delivery."], answer: 0 }
 ,   { id: "p6-35", part: 6, passageId: "p6_workshop", blank: 91, focus: "grammar / pronoun", skill: "grammar", difficulty: "medium",     text: "Choose the best answer for blank (91).",     choices: ["their", "they", "themselves", "them"], answer: 1 },   { id: "p6-36", part: 6, passageId: "p6_workshop", blank: 92, focus: "sentence insertion", skill: "reading", difficulty: "hard",     text: "Choose the best sentence for blank (92).",     choices: ["Participants should bring their own cameras because only a few can be borrowed from the center.", "The center also offers swimming lessons for children on weekends.", "Ms. Grant has exhibited her photographs in three countries.", "Last year's workshop was canceled because of bad weather."], answer: 0 },   { id: "p6-37", part: 6, passageId: "p6_workshop", blank: 93, focus: "vocabulary / preposition", skill: "vocabulary", difficulty: "medium",     text: "Choose the best answer for blank (93).",     choices: ["during", "since", "until", "by"], answer: 3 },   { id: "p6-38", part: 6, passageId: "p6_workshop", blank: 94, focus: "word form", skill: "grammar", difficulty: "medium",     text: "Choose the best answer for blank (94).",     choices: ["participant", "participation", "participate", "participated"], answer: 1 },   { id: "p7-51", part: 7, passageId: "p7_marathon", focus: "purpose", skill: "reading", difficulty: "easy",     text: "What is the main purpose of the notice?",     choices: ["To inform residents about road closures during an event", "To recruit volunteers for a marathon", "To announce the results of a race", "To sell tickets for a sporting event"], answer: 0 },   { id: "p7-52", part: 7, passageId: "p7_marathon", focus: "detail", skill: "reading", difficulty: "medium",     text: "According to the notice, what should drivers do on October 18?",     choices: ["Contact the event office for a parking permit", "Use the East Bypass instead of the closed roads", "Take bus routes 4 and 9", "Park in the garage on Fifth Street"], answer: 1 },   { id: "p7-53", part: 7, passageId: "p7_marathon", focus: "detail", skill: "reading", difficulty: "medium",     text: "Who is advised to contact the event office by October 12?",     choices: ["Bus drivers on routes 4 and 9", "Residents along the route who need to travel on Sunday morning", "Runners who have not yet registered", "Visitors arriving from outside the city"], answer: 1 },   { id: "p7-54", part: 7, passageId: "p7_course", focus: "detail", skill: "reading", difficulty: "easy",     text: "According to the course description, what must students bring?",     choices: ["Their own ingredients", "Their own aprons", "A notebook", "The course fee in cash"], answer: 1 },   { id: "p7-55", part: 7, passageId: "p7_course", focus: "purpose", skill: "reading", difficulty: "easy",     text: "Why does Ms. Ross write to the studio?",     choices: ["To ask whether a course fits her schedule and dietary needs", "To register for the Baking Basics course", "To request a refund for a course", "To apply for a teaching position"], answer: 0 },   { id: "p7-56", part: 7, passageId: "p7_course", focus: "cross-passage inference", skill: "reading", difficulty: "hard",     text: "Which course is Ms. Ross able to take?",     choices: ["The Baking Basics course", "The World Cuisine course", "Both courses", "Neither course"], answer: 1 }
 ,   { id: "p7-57", part: 7, passageId: "p7_apartment", focus: "purpose", skill: "reading", difficulty: "easy",     text: "What is the purpose of the advertisement?",     choices: ["To advertise apartments available for rent", "To announce a rent increase", "To recruit leasing staff", "To describe rules for current residents"], answer: 0 },   { id: "p7-58", part: 7, passageId: "p7_apartment", focus: "detail", skill: "reading", difficulty: "medium",     text: "What is included in the monthly rent?",     choices: ["Electricity and Internet service", "Water and parking", "Fitness center access for guests", "Furniture for the units"], answer: 1 },   { id: "p7-59", part: 7, passageId: "p7_apartment", focus: "detail", skill: "reading", difficulty: "medium",     text: "What is offered to people who apply during the open house?",     choices: ["A reduced first month's rent", "A free parking space", "The application fee will be waived", "A tour of the fitness center"], answer: 2 },   { id: "p7-60", part: 7, passageId: "p7_deadline", focus: "purpose", skill: "reading", difficulty: "easy",     text: "Why did Mr. Watanabe write the e-mail?",     choices: ["To announce a change to a project deadline", "To ask the client for an extension", "To cancel a team meeting", "To assign new projects to the team"], answer: 0 },   { id: "p7-61", part: 7, passageId: "p7_deadline", focus: "detail", skill: "reading", difficulty: "medium",     text: "When will the review meeting be held?",     choices: ["This Friday", "Next Tuesday at 10:00 A.M.", "November 20", "Wednesday morning"], answer: 1 },   { id: "p7-62", part: 7, passageId: "p7_deadline", focus: "detail", skill: "reading", difficulty: "medium",     text: "What are team members asked to do by Wednesday?",     choices: ["Submit the final report", "Finish checking their sections", "Inform the manager of any schedule problems", "Meet with the client"], answer: 2 },   { id: "p7-63", part: 7, passageId: "p7_hiring", focus: "detail", skill: "reading", difficulty: "medium",     text: "What is required of applicants for the position?",     choices: ["A degree in communications", "At least three years of customer service experience", "Experience working at a hotel", "Availability to work on weekends"], answer: 1 },   { id: "p7-64", part: 7, passageId: "p7_hiring", focus: "purpose", skill: "reading", difficulty: "easy",     text: "Why did Ms. Fernandez write the e-mail?",     choices: ["To apply for a position", "To ask about working hours", "To request an interview in Spanish", "To complain about a phone service"], answer: 0 },   { id: "p7-65", part: 7, passageId: "p7_hiring", focus: "cross-passage inference", skill: "reading", difficulty: "hard",     text: "Which requirement in the posting does Ms. Fernandez clearly meet?",     choices: ["She has a university degree", "She has more customer service experience than required", "She has a technical support certificate", "She is available to start immediately"], answer: 1 },   { id: "p7-66", part: 7, passageId: "p7_market", focus: "main idea", skill: "reading", difficulty: "easy",     text: "What is the article mainly about?",     choices: ["The anniversary and expansion of a farmers market", "The history of farming in Hillcrest", "A competition among market vendors", "New parking rules at a community center"], answer: 0 },   { id: "p7-67", part: 7, passageId: "p7_market", focus: "detail", skill: "reading", difficulty: "medium",     text: "How many vendors took part in the anniversary event?",     choices: ["Eight", "More than forty", "About three thousand", "Ten"], answer: 1 },   { id: "p7-68", part: 7, passageId: "p7_market", focus: "detail", skill: "reading", difficulty: "medium",     text: "What change will take place next spring?",     choices: ["The market will move to the Riverside district", "Admission will no longer be free", "The market will also open on Wednesday evenings at another location", "The market will be held indoors"], answer: 2 }
+,
+{
+  "id": "p6-39",
+  "part": 6,
+  "passageId": "p6_conference",
+  "blank": 95,
+  "text": "Choose the best answer for blank (95).",
+  "choices": [
+    "schedules",
+    "is scheduled",
+    "schedule",
+    "scheduling"
+  ],
+  "answer": 1,
+  "skill": "grammar",
+  "focus": "verb form",
+  "difficulty": "easy"
+},
+{
+  "id": "p6-40",
+  "part": 6,
+  "passageId": "p6_conference",
+  "blank": 96,
+  "text": "Choose the best answer for blank (96).",
+  "choices": [
+    "Despite",
+    "Because of",
+    "Although",
+    "Unless"
+  ],
+  "answer": 2,
+  "skill": "grammar",
+  "focus": "connector",
+  "difficulty": "medium"
+},
+{
+  "id": "p6-41",
+  "part": 6,
+  "passageId": "p6_conference",
+  "blank": 97,
+  "text": "Choose the best answer for blank (97).",
+  "choices": [
+    "among",
+    "between",
+    "within",
+    "during"
+  ],
+  "answer": 3,
+  "skill": "vocabulary",
+  "focus": "preposition",
+  "difficulty": "medium"
+},
+{
+  "id": "p6-42",
+  "part": 6,
+  "passageId": "p6_conference",
+  "blank": 98,
+  "text": "Choose the best answer for blank (98).",
+  "choices": [
+    "The conference dinner will be held at a restaurant near the venue.",
+    "Slides received after that date cannot be included in the printed program.",
+    "Registration fees are refundable until the end of this month.",
+    "Last year's conference attracted more than three hundred participants."
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "sentence insertion",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-72",
+  "part": 7,
+  "passageId": "p7_office_move",
+  "text": "What is the main purpose of the notice?",
+  "choices": [
+    "To announce a change in the company's office location",
+    "To introduce new employees to the staff",
+    "To explain the company's holiday schedule",
+    "To request volunteers for a cleaning day"
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-73",
+  "part": 7,
+  "passageId": "p7_office_move",
+  "text": "What are employees asked to do by Friday, March 13?",
+  "choices": [
+    "Reserve a parking space in the new building",
+    "Attend an orientation session on the fifth floor",
+    "Remove all personal items from their desks",
+    "Update their contact information online"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-74",
+  "part": 7,
+  "passageId": "p7_office_move",
+  "text": "What can be inferred about the new office?",
+  "choices": [
+    "It is smaller than the current office.",
+    "It can be reached by public transportation.",
+    "It will open later than originally planned.",
+    "It does not have space for client meetings."
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "inference",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-75",
+  "part": 7,
+  "passageId": "p7_language_school",
+  "text": "What is being advertised?",
+  "choices": [
+    "Private tutoring for high school students",
+    "Translation services for businesses",
+    "Language courses for adults",
+    "Study-abroad programs in Europe"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-76",
+  "part": 7,
+  "passageId": "p7_language_school",
+  "text": "What is true about the evening conversation class?",
+  "choices": [
+    "It is limited to eight students.",
+    "It requires an advanced test score.",
+    "It is held on Saturday mornings.",
+    "It costs more than the other classes."
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-77",
+  "part": 7,
+  "passageId": "p7_language_school",
+  "text": "What will happen if a student registers by January 31?",
+  "choices": [
+    "The student will receive a free textbook.",
+    "The enrollment fee will be waived.",
+    "The student can attend a trial lesson.",
+    "The tuition will be reduced by 15 percent."
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-78",
+  "part": 7,
+  "passageId": "p7_delivery_inquiry",
+  "text": "Why did Ms. Alvarez write the e-mail?",
+  "choices": [
+    "To place a new order for office chairs",
+    "To ask about an order that has not arrived",
+    "To request a refund for a damaged product",
+    "To change the items in a recent order"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-79",
+  "part": 7,
+  "passageId": "p7_delivery_inquiry",
+  "text": "What does Ms. Alvarez say about the delivery date?",
+  "choices": [
+    "It was changed without her knowledge.",
+    "It falls after her company's event.",
+    "It was confirmed by a sales representative.",
+    "It is later than the date she was originally given."
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-80",
+  "part": 7,
+  "passageId": "p7_delivery_inquiry",
+  "text": "What has Ms. Alvarez included with her e-mail?",
+  "choices": [
+    "A photograph of the event room",
+    "A copy of her purchase receipt",
+    "A list of alternative products",
+    "A map showing her office location"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-81",
+  "part": 7,
+  "passageId": "p7_cafe_opening",
+  "text": "What is the article mainly about?",
+  "choices": [
+    "The history of a popular bakery chain",
+    "Renovation plans for a train station",
+    "A competition for local coffee roasters",
+    "The opening of a new café in a neighborhood"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-82",
+  "part": 7,
+  "passageId": "p7_cafe_opening",
+  "text": "According to the article, what is special about Hoshino Bakery Café?",
+  "choices": [
+    "It stays open twenty-four hours a day.",
+    "It sells bread made at a famous hotel.",
+    "It uses beans roasted at a nearby farm.",
+    "It offers free drinks to first-time visitors."
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-83",
+  "part": 7,
+  "passageId": "p7_cafe_opening",
+  "text": "What can be inferred about Mr. Hoshino?",
+  "choices": [
+    "He previously worked as a baker.",
+    "He plans to open a second location soon.",
+    "He learned baking while living abroad.",
+    "He inherited the café from his parents."
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "inference",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-84",
+  "part": 7,
+  "passageId": "p7_museum_exhibition",
+  "text": "What is the purpose of the notice?",
+  "choices": [
+    "To recruit volunteers for a museum",
+    "To explain changes to membership fees",
+    "To describe recent museum renovations",
+    "To announce a special exhibition"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-85",
+  "part": 7,
+  "passageId": "p7_museum_exhibition",
+  "text": "What is NOT mentioned about the exhibition?",
+  "choices": [
+    "The dates it will run",
+    "The price of admission for children",
+    "The name of the exhibition curator",
+    "A workshop offered on weekends"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "negative",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-86",
+  "part": 7,
+  "passageId": "p7_museum_exhibition",
+  "text": "How much would two adults and one child pay to enter the exhibition on a weekday?",
+  "choices": [
+    "2,400 yen",
+    "2,600 yen",
+    "3,000 yen",
+    "3,300 yen"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-87",
+  "part": 7,
+  "passageId": "p7_driver_recruitment",
+  "text": "What kind of position is being advertised?",
+  "choices": [
+    "Warehouse supervisor",
+    "Vehicle mechanic",
+    "Delivery driver",
+    "Customer service representative"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-88",
+  "part": 7,
+  "passageId": "p7_driver_recruitment",
+  "text": "Which of the following is a requirement for the position?",
+  "choices": [
+    "Experience working in a warehouse",
+    "A commercial driver's license",
+    "Availability to work on weekends only",
+    "A degree in logistics management"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-89",
+  "part": 7,
+  "passageId": "p7_driver_recruitment",
+  "text": "What does the company offer to new drivers during their first month?",
+  "choices": [
+    "A company vehicle for personal use",
+    "A uniform allowance of 10,000 yen",
+    "Paid training with an experienced driver",
+    "A guaranteed bonus of 50,000 yen"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-90",
+  "part": 7,
+  "passageId": "p7_meeting_reschedule",
+  "text": "Why was this e-mail sent?",
+  "choices": [
+    "To announce a change to a meeting schedule",
+    "To introduce a new regional director",
+    "To request monthly sales reports",
+    "To reserve a conference room"
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-91",
+  "part": 7,
+  "passageId": "p7_meeting_reschedule",
+  "text": "When will the meeting now take place?",
+  "choices": [
+    "Thursday, March 12 at 10:00 a.m.",
+    "Friday, March 13 at 10:00 a.m.",
+    "Friday, March 13 at 2:00 p.m.",
+    "Wednesday, March 11 in the afternoon"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-92",
+  "part": 7,
+  "passageId": "p7_meeting_reschedule",
+  "text": "What are the recipients asked to bring to the meeting?",
+  "choices": [
+    "Their appointment calendars",
+    "A summary of the quarterly targets",
+    "Their monthly reports",
+    "The updated February sales figures"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-93",
+  "part": 7,
+  "passageId": "p7_fare_revision",
+  "text": "When will the new fares take effect?",
+  "choices": [
+    "March 20",
+    "April 1",
+    "Immediately",
+    "When current passes expire"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-94",
+  "part": 7,
+  "passageId": "p7_fare_revision",
+  "text": "How much will a passenger save on each trip by using a ten-trip ticket instead of paying the standard one-way fare?",
+  "choices": [
+    "$0.25",
+    "$1.50",
+    "$0.15",
+    "$0.35"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "calculation",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-95",
+  "part": 7,
+  "passageId": "p7_fare_revision",
+  "text": "Which of the following will NOT change under the new fares?",
+  "choices": [
+    "Fares for senior citizens",
+    "The price of a ten-trip ticket",
+    "The cost of a monthly pass",
+    "The standard one-way fare"
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "negative",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-96",
+  "part": 7,
+  "passageId": "p7_restaurant_review",
+  "text": "What did the reviewer say about the grilled sea bass?",
+  "choices": [
+    "It was slightly overcooked.",
+    "It was too expensive.",
+    "It was fresh and excellent.",
+    "It was served without herbs."
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-97",
+  "part": 7,
+  "passageId": "p7_restaurant_review",
+  "text": "What can be inferred about The Olive Branch?",
+  "choices": [
+    "It does not take reservations.",
+    "It has become popular since it opened.",
+    "It is busiest at lunchtime.",
+    "It mainly serves seafood."
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "inference",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-98",
+  "part": 7,
+  "passageId": "p7_restaurant_review",
+  "text": "Which of the following is NOT true according to the review?",
+  "choices": [
+    "The restaurant opened last spring.",
+    "Most main courses cost between $18 and $26.",
+    "The dining room was nearly full by seven o'clock.",
+    "The baklava was overly sweet."
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "negative",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-99",
+  "part": 7,
+  "passageId": "p7_charity_walk",
+  "text": "How many people participated in the Walk for Hope?",
+  "choices": [
+    "More than 1,200",
+    "Exactly 200",
+    "About 900",
+    "More than 5,000"
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-100",
+  "part": 7,
+  "passageId": "p7_charity_walk",
+  "text": "How much money did the event raise last year?",
+  "choices": [
+    "$9,000",
+    "$40,500",
+    "$45,000",
+    "$63,000"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "calculation",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-101",
+  "part": 7,
+  "passageId": "p7_charity_walk",
+  "text": "According to the article, the money raised will be used to",
+  "choices": [
+    "build a new children's hospital",
+    "pay for next year's event",
+    "provide breakfast for volunteers",
+    "buy equipment and support a play program"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-102",
+  "part": 7,
+  "passageId": "p7_furniture_sale",
+  "text": "When does the clearance sale end?",
+  "choices": [
+    "January 16",
+    "January 25",
+    "February 1",
+    "When all items are sold"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-103",
+  "part": 7,
+  "passageId": "p7_furniture_sale",
+  "text": "A customer buys the Haven sofa at its sale price and opens a store card to receive the additional discount. How much does the customer pay for the sofa?",
+  "choices": [
+    "$810",
+    "$900",
+    "$990",
+    "$1,350"
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "calculation",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-104",
+  "part": 7,
+  "passageId": "p7_furniture_sale",
+  "text": "What does Comfort Living offer free of charge?",
+  "choices": [
+    "A store card",
+    "Gift wrapping for all purchases",
+    "Delivery for orders of $499 or more",
+    "Furniture assembly"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-105",
+  "part": 7,
+  "passageId": "p7_airport_shuttle",
+  "text": "A passenger needs to arrive at the airport by 9:30 a.m. What is the latest shuttle the passenger can take from Central Station?",
+  "choices": [
+    "8:00 a.m.",
+    "8:30 a.m.",
+    "9:00 a.m.",
+    "9:45 a.m."
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "calculation",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-106",
+  "part": 7,
+  "passageId": "p7_airport_shuttle",
+  "text": "How much is a one-way ticket for a child under 12?",
+  "choices": [
+    "$5",
+    "$6",
+    "$12",
+    "Free of charge"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-107",
+  "part": 7,
+  "passageId": "p7_airport_shuttle",
+  "text": "Which of the following is NOT true about the shuttle service?",
+  "choices": [
+    "Buses leave Central Station every 30 minutes.",
+    "The trip takes about 45 minutes.",
+    "Tickets can be bought from the driver.",
+    "One large suitcase is carried free of charge."
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "negative",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-108",
+  "part": 7,
+  "passageId": "p7_venue_booking",
+  "text": "What is the purpose of Ms. Whitfield's e-mail?",
+  "choices": [
+    "To apply for a job at Sakura Hall",
+    "To ask about reserving a room for a company event",
+    "To confirm the menu for a buffet lunch",
+    "To invite Dr. Reyes to speak at a seminar"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-109",
+  "part": 7,
+  "passageId": "p7_venue_booking",
+  "text": "How many people does Ms. Whitfield expect to attend the seminar?",
+  "choices": [
+    "30",
+    "85",
+    "60",
+    "120"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-110",
+  "part": 7,
+  "passageId": "p7_venue_booking",
+  "text": "Which date will Ms. Whitfield most likely choose for the seminar?",
+  "choices": [
+    "Saturday, March 14",
+    "Friday, March 13",
+    "Saturday, March 21",
+    "Friday, March 20"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "cross-reference",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-111",
+  "part": 7,
+  "passageId": "p7_venue_booking",
+  "text": "If Ms. Whitfield books Room A and orders the buffet lunch for all 60 participants, what will the total cost be?",
+  "choices": [
+    "¥193,000",
+    "¥108,000",
+    "¥85,000",
+    "¥175,000"
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "cross-reference",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-112",
+  "part": 7,
+  "passageId": "p7_venue_booking",
+  "text": "What is NOT mentioned in Mr. Mori's reply?",
+  "choices": [
+    "The capacity of Room A",
+    "A discount for weekday bookings",
+    "The deadline for paying a deposit",
+    "The price of the buffet lunch"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "negative",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-113",
+  "part": 7,
+  "passageId": "p7_kyoto_tour",
+  "text": "What is the main purpose of the advertisement?",
+  "choices": [
+    "To recruit tour guides for the autumn season",
+    "To announce a discount on hotel rooms in Kyoto",
+    "To promote a guided trip to see autumn leaves",
+    "To explain how to book a tea ceremony"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-114",
+  "part": 7,
+  "passageId": "p7_kyoto_tour",
+  "text": "What is included in the tour price?",
+  "choices": [
+    "Breakfast each morning",
+    "Lunch and dinner each day",
+    "A traditional tea ceremony",
+    "Train tickets to Kyoto Station"
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-115",
+  "part": 7,
+  "passageId": "p7_kyoto_tour",
+  "text": "Why does Mr. Andersen believe he qualifies for the early-booking discount?",
+  "choices": [
+    "He is a returning customer of the company",
+    "He is booking seats for two people",
+    "He works for a travel magazine",
+    "He is making his booking before the October deadline"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "cross-reference",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-116",
+  "part": 7,
+  "passageId": "p7_kyoto_tour",
+  "text": "How much should Mr. Andersen pay in total?",
+  "choices": [
+    "¥136,400",
+    "¥130,400",
+    "¥122,400",
+    "¥144,000"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "cross-reference",
+  "difficulty": "hard"
+},
+{
+  "id": "p7-117",
+  "part": 7,
+  "passageId": "p7_kyoto_tour",
+  "text": "What can be inferred from Mr. Andersen's question about meals?",
+  "choices": [
+    "He wants to change hotels",
+    "He has already paid for the tour",
+    "The advertisement does not say whether vegetarian meals are available",
+    "His wife will not join the tea ceremony"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "inference",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-118",
+  "part": 7,
+  "passageId": "p7_training_program",
+  "text": "What is the purpose of the notice?",
+  "choices": [
+    "To announce a series of training workshops for employees",
+    "To introduce new employees to the company",
+    "To explain changes to the company portal",
+    "To ask managers to evaluate their staff"
+  ],
+  "answer": 0,
+  "skill": "reading",
+  "focus": "purpose",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-119",
+  "part": 7,
+  "passageId": "p7_training_program",
+  "text": "By what date must employees enroll in the workshops?",
+  "choices": [
+    "March 10",
+    "March 20",
+    "March 24",
+    "March 28"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "detail",
+  "difficulty": "easy"
+},
+{
+  "id": "p7-120",
+  "part": 7,
+  "passageId": "p7_training_program",
+  "text": "In which room will the Data Analysis workshop be held?",
+  "choices": [
+    "Seminar Room B",
+    "Room 402",
+    "Room 301",
+    "Room 204"
+  ],
+  "answer": 1,
+  "skill": "reading",
+  "focus": "cross-reference",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-121",
+  "part": 7,
+  "passageId": "p7_training_program",
+  "text": "Will Mr. Nakamura be able to join Excel Basics in addition to the two workshops he has already chosen?",
+  "choices": [
+    "Yes, because seats are still available",
+    "Yes, if his supervisor approves it",
+    "No, because employees may take no more than two workshops",
+    "No, because enrollment closed on March 20"
+  ],
+  "answer": 2,
+  "skill": "reading",
+  "focus": "cross-reference",
+  "difficulty": "medium"
+},
+{
+  "id": "p7-122",
+  "part": 7,
+  "passageId": "p7_training_program",
+  "text": "What problem does Mr. Nakamura have with the Project Management workshop?",
+  "choices": [
+    "He has not yet enrolled in it",
+    "It is held in a room that is too small",
+    "Its instructor has not been decided",
+    "It runs at the same time as his client meeting"
+  ],
+  "answer": 3,
+  "skill": "reading",
+  "focus": "inference",
+  "difficulty": "hard"
+}
 ];
 
 /* =====================================================================
@@ -1358,7 +2368,503 @@ const QUESTION_TRANSLATIONS = {
     ],
     explanation: ''
   },   "p7-45": {     text: "この記事の主な内容は何ですか。",     choices: ["ベーカリー事業の拡大", "新しい種類のパンの紹介", "ベーカリーの経営者の交代", "ファーマーズマーケットの歴史"],     explanation: ''   },   "p7-46": {     text: "記事によると、新店舗が既存店にないものとして提供するのは何ですか。",     choices: ["製パン講座", "無料の試食", "オンライン注文", "延長営業"],     explanation: ''   },   "p7-47": {     text: "Maria Chen について示されていることは何ですか。",     choices: ["オースティンに最初の店を開いた", "今年引退する予定である", "ファーマーズマーケットでパンを売ることから始めた", "以前はスーパーマーケットチェーンで働いていた"],     explanation: ''   },   "p7-48": {     text: "最初のメールの目的は何ですか。",     choices: ["配送スケジュールの変更を依頼すること", "破損した家具について苦情を言うこと", "ショールーム用の新しい家具を注文すること", "配送契約を解約すること"],     explanation: ''   },   "p7-49": {     text: "2通目のメールによると、Osei氏は10月28日までに何をしなければなりませんか。",     choices: ["追加料金なしで変更できるよう、新しいスケジュールを確認すること", "追加料金を支払うこと", "ショールームを改装すること", "午前の配送枠を選ぶこと"],     explanation: ''   },   "p7-50": {     text: "金曜日の配送について示唆されていることは何ですか。",     choices: ["午後の配送は通常より遅れる場合がある", "土曜日の配送より料金が高い", "改装期間中は利用できない", "運転手が2人必要である"],     explanation: ''   }
-,   "p6-35": {     text: "空欄(91)に最も適した語句を選んでください。",     choices: ["彼らの", "彼らは", "彼ら自身を", "彼らを"],     explanation: ''   },   "p6-36": {     text: "空欄(92)に最も適した文を選んでください。",     choices: ["センターから借りられるカメラは数台しかないため、参加者は自分のカメラを持参してください。", "センターでは週末に子ども向けの水泳レッスンも開いています。", "Grant氏は3か国で写真を展示したことがあります。", "昨年のワークショップは悪天候のため中止されました。"],     explanation: ''   },   "p6-37": {     text: "空欄(93)に最も適した語句を選んでください。",     choices: ["〜の間", "〜以来", "〜まで（ずっと）", "〜までに"],     explanation: ''   },   "p6-38": {     text: "空欄(94)に最も適した語句を選んでください。",     choices: ["参加者", "参加（すること）", "参加する", "参加した"],     explanation: ''   },   "p7-51": {     text: "この通知の主な目的は何ですか。",     choices: ["イベント中の通行止めについて住民に知らせること", "マラソンのボランティアを募集すること", "レースの結果を発表すること", "スポーツイベントのチケットを販売すること"],     explanation: ''   },   "p7-52": {     text: "通知によると、10月18日にドライバーは何をすべきですか。",     choices: ["駐車許可証についてイベント事務所に連絡する", "通行止めの道路の代わりに East Bypass を使う", "バスの4番と9番路線を利用する", "Fifth Street の駐車場に駐車する"],     explanation: ''   },   "p7-53": {     text: "10月12日までにイベント事務所へ連絡するよう勧められているのは誰ですか。",     choices: ["4番と9番路線のバス運転手", "コース沿いに住み、日曜の朝に移動が必要な住民", "まだ登録していないランナー", "市外から来る来訪者"],     explanation: ''   },   "p7-54": {     text: "コース案内によると、受講者が持参しなければならないものは何ですか。",     choices: ["自分の材料", "自分のエプロン", "ノート", "現金での受講料"],     explanation: ''   },   "p7-55": {     text: "Ross氏がスタジオに書いたのはなぜですか。",     choices: ["自分の日程と食事の事情にコースが合うか尋ねるため", "Baking Basics コースに申し込むため", "コースの返金を求めるため", "講師の仕事に応募するため"],     explanation: ''   },   "p7-56": {     text: "Ross氏が参加できるコースはどれですか。",     choices: ["Baking Basics コース", "World Cuisine コース", "両方のコース", "どちらのコースも参加できない"],     explanation: ''   },   "p7-57": {     text: "この広告の目的は何ですか。",     choices: ["賃貸可能なアパートを紹介すること", "家賃の値上げを告知すること", "賃貸スタッフを募集すること", "現入居者向けのルールを説明すること"],     explanation: ''   },   "p7-58": {     text: "毎月の家賃に含まれているのは何ですか。",     choices: ["電気代とインターネット代", "水道代と駐車場代", "ゲストのフィットネスセンター利用", "部屋の家具"],     explanation: ''   },   "p7-59": {     text: "内見会当日に申し込んだ人に提供されるものは何ですか。",     choices: ["初月の家賃の割引", "無料の駐車スペース", "申込手数料の免除", "フィットネスセンターの見学"],     explanation: ''   },   "p7-60": {     text: "Watanabe氏がメールを書いたのはなぜですか。",     choices: ["プロジェクトの期限変更を知らせるため", "クライアントに延長を依頼するため", "チーム会議を中止するため", "チームに新しいプロジェクトを割り当てるため"],     explanation: ''   },   "p7-61": {     text: "レビュー会議はいつ開かれますか。",     choices: ["今週の金曜日", "来週火曜日の午前10時", "11月20日", "水曜日の午前中"],     explanation: ''   },   "p7-62": {     text: "チームメンバーは水曜までに何をするよう求められていますか。",     choices: ["最終レポートを提出すること", "自分の担当部分の確認を終えること", "日程上の問題があればマネージャーに知らせること", "クライアントと面会すること"],     explanation: ''   },   "p7-63": {     text: "この職の応募者に求められる条件は何ですか。",     choices: ["コミュニケーション学の学位", "少なくとも3年のカスタマーサービス経験", "ホテルでの勤務経験", "週末勤務が可能であること"],     explanation: ''   },   "p7-64": {     text: "Fernandez氏がメールを書いたのはなぜですか。",     choices: ["職に応募するため", "勤務時間について尋ねるため", "スペイン語での面接を希望するため", "電話サービスについて苦情を言うため"],     explanation: ''   },   "p7-65": {     text: "求人に挙げられた条件のうち、Fernandez氏が明確に満たしているものはどれですか。",     choices: ["大学の学位を持っている", "求められる以上のカスタマーサービス経験がある", "技術サポートの資格を持っている", "すぐに勤務を開始できる"],     explanation: ''   },   "p7-66": {     text: "この記事の主題は何ですか。",     choices: ["ファーマーズマーケットの周年と拡大", "Hillcrest の農業の歴史", "市場の出店者同士の競争", "コミュニティセンターの新しい駐車ルール"],     explanation: ''   },   "p7-67": {     text: "周年イベントに参加した出店者はいくつですか。",     choices: ["8つ", "40を超える数", "約3,000", "10"],     explanation: ''   },   "p7-68": {     text: "来春に起こる変化は何ですか。",     choices: ["市場が Riverside 地区へ移転する", "入場が無料でなくなる", "市場が別の場所で水曜の夜にも開かれる", "市場が屋内で開催される"],     explanation: ''   }};
+,   "p6-35": {     text: "空欄(91)に最も適した語句を選んでください。",     choices: ["彼らの", "彼らは", "彼ら自身を", "彼らを"],     explanation: ''   },   "p6-36": {     text: "空欄(92)に最も適した文を選んでください。",     choices: ["センターから借りられるカメラは数台しかないため、参加者は自分のカメラを持参してください。", "センターでは週末に子ども向けの水泳レッスンも開いています。", "Grant氏は3か国で写真を展示したことがあります。", "昨年のワークショップは悪天候のため中止されました。"],     explanation: ''   },   "p6-37": {     text: "空欄(93)に最も適した語句を選んでください。",     choices: ["〜の間", "〜以来", "〜まで（ずっと）", "〜までに"],     explanation: ''   },   "p6-38": {     text: "空欄(94)に最も適した語句を選んでください。",     choices: ["参加者", "参加（すること）", "参加する", "参加した"],     explanation: ''   },   "p7-51": {     text: "この通知の主な目的は何ですか。",     choices: ["イベント中の通行止めについて住民に知らせること", "マラソンのボランティアを募集すること", "レースの結果を発表すること", "スポーツイベントのチケットを販売すること"],     explanation: ''   },   "p7-52": {     text: "通知によると、10月18日にドライバーは何をすべきですか。",     choices: ["駐車許可証についてイベント事務所に連絡する", "通行止めの道路の代わりに East Bypass を使う", "バスの4番と9番路線を利用する", "Fifth Street の駐車場に駐車する"],     explanation: ''   },   "p7-53": {     text: "10月12日までにイベント事務所へ連絡するよう勧められているのは誰ですか。",     choices: ["4番と9番路線のバス運転手", "コース沿いに住み、日曜の朝に移動が必要な住民", "まだ登録していないランナー", "市外から来る来訪者"],     explanation: ''   },   "p7-54": {     text: "コース案内によると、受講者が持参しなければならないものは何ですか。",     choices: ["自分の材料", "自分のエプロン", "ノート", "現金での受講料"],     explanation: ''   },   "p7-55": {     text: "Ross氏がスタジオに書いたのはなぜですか。",     choices: ["自分の日程と食事の事情にコースが合うか尋ねるため", "Baking Basics コースに申し込むため", "コースの返金を求めるため", "講師の仕事に応募するため"],     explanation: ''   },   "p7-56": {     text: "Ross氏が参加できるコースはどれですか。",     choices: ["Baking Basics コース", "World Cuisine コース", "両方のコース", "どちらのコースも参加できない"],     explanation: ''   },   "p7-57": {     text: "この広告の目的は何ですか。",     choices: ["賃貸可能なアパートを紹介すること", "家賃の値上げを告知すること", "賃貸スタッフを募集すること", "現入居者向けのルールを説明すること"],     explanation: ''   },   "p7-58": {     text: "毎月の家賃に含まれているのは何ですか。",     choices: ["電気代とインターネット代", "水道代と駐車場代", "ゲストのフィットネスセンター利用", "部屋の家具"],     explanation: ''   },   "p7-59": {     text: "内見会当日に申し込んだ人に提供されるものは何ですか。",     choices: ["初月の家賃の割引", "無料の駐車スペース", "申込手数料の免除", "フィットネスセンターの見学"],     explanation: ''   },   "p7-60": {     text: "Watanabe氏がメールを書いたのはなぜですか。",     choices: ["プロジェクトの期限変更を知らせるため", "クライアントに延長を依頼するため", "チーム会議を中止するため", "チームに新しいプロジェクトを割り当てるため"],     explanation: ''   },   "p7-61": {     text: "レビュー会議はいつ開かれますか。",     choices: ["今週の金曜日", "来週火曜日の午前10時", "11月20日", "水曜日の午前中"],     explanation: ''   },   "p7-62": {     text: "チームメンバーは水曜までに何をするよう求められていますか。",     choices: ["最終レポートを提出すること", "自分の担当部分の確認を終えること", "日程上の問題があればマネージャーに知らせること", "クライアントと面会すること"],     explanation: ''   },   "p7-63": {     text: "この職の応募者に求められる条件は何ですか。",     choices: ["コミュニケーション学の学位", "少なくとも3年のカスタマーサービス経験", "ホテルでの勤務経験", "週末勤務が可能であること"],     explanation: ''   },   "p7-64": {     text: "Fernandez氏がメールを書いたのはなぜですか。",     choices: ["職に応募するため", "勤務時間について尋ねるため", "スペイン語での面接を希望するため", "電話サービスについて苦情を言うため"],     explanation: ''   },   "p7-65": {     text: "求人に挙げられた条件のうち、Fernandez氏が明確に満たしているものはどれですか。",     choices: ["大学の学位を持っている", "求められる以上のカスタマーサービス経験がある", "技術サポートの資格を持っている", "すぐに勤務を開始できる"],     explanation: ''   },   "p7-66": {     text: "この記事の主題は何ですか。",     choices: ["ファーマーズマーケットの周年と拡大", "Hillcrest の農業の歴史", "市場の出店者同士の競争", "コミュニティセンターの新しい駐車ルール"],     explanation: ''   },   "p7-67": {     text: "周年イベントに参加した出店者はいくつですか。",     choices: ["8つ", "40を超える数", "約3,000", "10"],     explanation: ''   },   "p7-68": {     text: "来春に起こる変化は何ですか。",     choices: ["市場が Riverside 地区へ移転する", "入場が無料でなくなる", "市場が別の場所で水曜の夜にも開かれる", "市場が屋内で開催される"],     explanation: ''   },
+"p6-39": {
+  "text": "空欄 (95) に入る最適な答えを選んでください。",
+  "choices": [
+    "予定する",
+    "予定されている",
+    "予定",
+    "予定すること"
+  ]
+},
+"p6-40": {
+  "text": "空欄 (96) に入る最適な答えを選んでください。",
+  "choices": [
+    "〜にもかかわらず（名詞用）",
+    "〜のために（名詞用）",
+    "〜だけれども",
+    "〜しない限り"
+  ]
+},
+"p6-41": {
+  "text": "空欄 (97) に入る最適な答えを選んでください。",
+  "choices": [
+    "〜の間（3つ以上）",
+    "〜の間（2つ）",
+    "〜以内に",
+    "〜の間（期間）"
+  ]
+},
+"p6-42": {
+  "text": "空欄 (98) に入る最適な答えを選んでください。",
+  "choices": [
+    "カンファレンスの夕食会は会場近くのレストランで開かれます。",
+    "その日を過ぎて届いたスライドは、印刷プログラムに掲載できません。",
+    "登録料は今月末まで返金可能です。",
+    "昨年のカンファレンスには300人以上の参加者が集まりました。"
+  ]
+},
+"p7-72": {
+  "text": "この通知の主な目的は何ですか。",
+  "choices": [
+    "会社のオフィス移転を発表すること",
+    "新入社員をスタッフに紹介すること",
+    "会社の休日スケジュールを説明すること",
+    "清掃日のボランティアを募集すること"
+  ]
+},
+"p7-73": {
+  "text": "従業員は3月13日（金）までに何をするよう求められていますか。",
+  "choices": [
+    "新しいビルの駐車スペースを予約すること",
+    "5階でのオリエンテーションに出席すること",
+    "机から私物をすべて片づけること",
+    "オンラインで連絡先情報を更新すること"
+  ]
+},
+"p7-74": {
+  "text": "新しいオフィスについて推測できることは何ですか。",
+  "choices": [
+    "現在のオフィスより狭い",
+    "公共交通機関で通うことができる",
+    "当初の予定より遅れて開業する",
+    "顧客との会議用のスペースがない"
+  ]
+},
+"p7-75": {
+  "text": "何が宣伝されていますか。",
+  "choices": [
+    "高校生向けの個別指導",
+    "企業向けの翻訳サービス",
+    "大人向けの語学講座",
+    "ヨーロッパへの留学プログラム"
+  ]
+},
+"p7-76": {
+  "text": "夜間の会話クラスについて正しいものはどれですか。",
+  "choices": [
+    "定員は8名に限られている",
+    "上級レベルのテストスコアが必要である",
+    "土曜日の午前中に開催される",
+    "他のクラスより料金が高い"
+  ]
+},
+"p7-77": {
+  "text": "受講生が1月31日までに申し込むとどうなりますか。",
+  "choices": [
+    "無料のテキストがもらえる",
+    "入学金が免除される",
+    "体験レッスンを受けることができる",
+    "授業料が15パーセント割引になる"
+  ]
+},
+"p7-78": {
+  "text": "アルバレスさんがこのメールを書いた理由は何ですか。",
+  "choices": [
+    "オフィスチェアを新規に注文するため",
+    "届いていない注文について尋ねるため",
+    "破損した商品の返金を求めるため",
+    "最近の注文の商品を変更するため"
+  ]
+},
+"p7-79": {
+  "text": "配送日について、アルバレスさんは何と言っていますか。",
+  "choices": [
+    "知らないうちに変更されていた",
+    "彼女の会社のイベントの後になる",
+    "営業担当者によって確認されていた",
+    "当初伝えられた日付より遅れている"
+  ]
+},
+"p7-80": {
+  "text": "アルバレスさんはメールに何を添付しましたか。",
+  "choices": [
+    "イベント会場の写真",
+    "購入時の領収書のコピー",
+    "代替商品のリスト",
+    "彼女のオフィスの場所を示す地図"
+  ]
+},
+"p7-81": {
+  "text": "この記事は主に何について書かれていますか。",
+  "choices": [
+    "人気ベーカリーチェーンの歴史",
+    "駅の改修計画",
+    "地元のコーヒー焙煎業者のコンテスト",
+    "ある地域における新しいカフェの開店"
+  ]
+},
+"p7-82": {
+  "text": "記事によると、ホシノ・ベーカリー・カフェの特徴は何ですか。",
+  "choices": [
+    "24時間営業している",
+    "有名ホテルで作られたパンを販売している",
+    "近郊の農園で焙煎された豆を使っている",
+    "初めての来店客に無料ドリンクを提供している"
+  ]
+},
+"p7-83": {
+  "text": "星野さんについて推測できることは何ですか。",
+  "choices": [
+    "以前パン職人として働いていた",
+    "近いうちに2号店を開く予定である",
+    "海外在住中にパン作りを学んだ",
+    "両親からカフェを受け継いだ"
+  ]
+},
+"p7-84": {
+  "text": "この案内の目的は何ですか。",
+  "choices": [
+    "美術館のボランティアを募集すること",
+    "会員料金の変更を説明すること",
+    "美術館の最近の改修について説明すること",
+    "特別展を告知すること"
+  ]
+},
+"p7-85": {
+  "text": "この特別展について言及されていないものはどれですか。",
+  "choices": [
+    "開催される日程",
+    "子どもの入場料",
+    "展示のキュレーター（学芸員）の名前",
+    "週末に提供されるワークショップ"
+  ]
+},
+"p7-86": {
+  "text": "大人2名と子ども1名が平日にこの特別展に入場すると、合計いくらになりますか。",
+  "choices": [
+    "2,400円",
+    "2,600円",
+    "3,000円",
+    "3,300円"
+  ]
+},
+"p7-87": {
+  "text": "どのような職種が募集されていますか。",
+  "choices": [
+    "倉庫管理者",
+    "自動車整備士",
+    "配送ドライバー",
+    "カスタマーサービス担当者"
+  ]
+},
+"p7-88": {
+  "text": "この職種の応募要件はどれですか。",
+  "choices": [
+    "倉庫での勤務経験",
+    "商用運転免許",
+    "週末のみ勤務可能であること",
+    "物流管理の学位"
+  ]
+},
+"p7-89": {
+  "text": "この会社は新しいドライバーに対して最初の1か月間何を提供しますか。",
+  "choices": [
+    "私的使用が可能な社用車",
+    "10,000円の制服手当",
+    "経験豊富なドライバーによる有給研修",
+    "50,000円の保証ボーナス"
+  ]
+},
+"p7-90": {
+  "text": "このメールが送られた目的は何ですか。",
+  "choices": [
+    "会議のスケジュールの変更を知らせるため",
+    "新しい地域部長を紹介するため",
+    "月次売上報告書の提出を求めるため",
+    "会議室を予約するため"
+  ]
+},
+"p7-91": {
+  "text": "会議は変更後、いつ開催されますか。",
+  "choices": [
+    "3月12日（木）午前10時",
+    "3月13日（金）午前10時",
+    "3月13日（金）午後2時",
+    "3月11日（水）の午後"
+  ]
+},
+"p7-92": {
+  "text": "受信者は会議に何を持参するよう求められていますか。",
+  "choices": [
+    "自分の予定表",
+    "四半期目標の概要",
+    "月次報告書",
+    "2月の最新の売上数字"
+  ]
+},
+"p7-93": {
+  "text": "新しい運賃はいつから適用されますか。",
+  "choices": [
+    "3月20日",
+    "4月1日",
+    "直ちに",
+    "現在の定期券の期限が切れたとき"
+  ]
+},
+"p7-94": {
+  "text": "10回券を使うと、通常の片道運賃を払う場合と比べて、1回あたりいくら節約できますか。",
+  "choices": [
+    "0.25ドル",
+    "1.50ドル",
+    "0.15ドル",
+    "0.35ドル"
+  ]
+},
+"p7-95": {
+  "text": "新しい運賃でも変更されないのはどれですか。",
+  "choices": [
+    "高齢者の運賃",
+    "10回券の価格",
+    "1か月定期券の価格",
+    "通常の片道運賃"
+  ]
+},
+"p7-96": {
+  "text": "レビュアーはスズキのグリルについてどう述べていますか。",
+  "choices": [
+    "少し火が通り過ぎていた",
+    "高すぎた",
+    "新鮮で絶品だった",
+    "ハーブなしで提供された"
+  ]
+},
+"p7-97": {
+  "text": "ジ・オリーブ・ブランチについて推測できることは何ですか。",
+  "choices": [
+    "予約は受け付けていない",
+    "オープン以来人気が出ている",
+    "最も混むのは昼食時である",
+    "主に魚介類を提供している"
+  ]
+},
+"p7-98": {
+  "text": "レビューによれば、正しくないのはどれですか。",
+  "choices": [
+    "レストランは昨年の春にオープンした",
+    "メインコースのほとんどは18ドルから26ドルである",
+    "午後7時には店内はほぼ満席だった",
+    "バクラヴァは甘すぎた"
+  ]
+},
+"p7-99": {
+  "text": "ウォーク・フォー・ホープには何人が参加しましたか。",
+  "choices": [
+    "1,200人以上",
+    "ちょうど200人",
+    "約900人",
+    "5,000人以上"
+  ]
+},
+"p7-100": {
+  "text": "昨年のイベントではいくら集まりましたか。",
+  "choices": [
+    "9,000ドル",
+    "40,500ドル",
+    "45,000ドル",
+    "63,000ドル"
+  ]
+},
+"p7-101": {
+  "text": "記事によれば、集まったお金は何に使われますか。",
+  "choices": [
+    "新しい子ども病院を建設する",
+    "来年のイベントの費用をまかなう",
+    "ボランティアに朝食を提供する",
+    "機器を購入し、遊びプログラムを支援する"
+  ]
+},
+"p7-102": {
+  "text": "クリアランスセールはいつ終わりますか。",
+  "choices": [
+    "1月16日",
+    "1月25日",
+    "2月1日",
+    "全商品が売り切れたとき"
+  ]
+},
+"p7-103": {
+  "text": "ある客がセール価格でヘイブンソファを買い、追加割引を受けるためにストアカードを新規で作った。この客がソファに支払う金額はいくらですか。",
+  "choices": [
+    "810ドル",
+    "900ドル",
+    "990ドル",
+    "1,350ドル"
+  ]
+},
+"p7-104": {
+  "text": "コンフォート・リビングが無料で提供するのはどれですか。",
+  "choices": [
+    "ストアカード",
+    "全購入品のギフト包装",
+    "499ドル以上の注文の配送",
+    "家具の組み立て"
+  ]
+},
+"p7-105": {
+  "text": "乗客は午前9時30分までに空港に到着しなければなりません。中央駅から乗れる最も遅いシャトルはどれですか。",
+  "choices": [
+    "午前8時",
+    "午前8時30分",
+    "午前9時",
+    "午前9時45分"
+  ]
+},
+"p7-106": {
+  "text": "12歳未満の子どもの片道料金はいくらですか。",
+  "choices": [
+    "5ドル",
+    "6ドル",
+    "12ドル",
+    "無料"
+  ]
+},
+"p7-107": {
+  "text": "シャトルサービスについて、正しくないのはどれですか。",
+  "choices": [
+    "バスは中央駅を30分ごとに出発する",
+    "所要時間は約45分である",
+    "チケットは運転手から買える",
+    "大きなスーツケース1個は無料で持ち込める"
+  ]
+},
+"p7-108": {
+  "text": "Whitfieldさんがメールを送った目的は何ですか。",
+  "choices": [
+    "Sakura Hallに就職を申し込むこと",
+    "会社のイベントのために部屋を予約できるか問い合わせること",
+    "ビュッフェランチのメニューを確定すること",
+    "Reyes博士をセミナーの講演に招待すること"
+  ]
+},
+"p7-109": {
+  "text": "Whitfieldさんは、セミナーに何人の参加を見込んでいますか。",
+  "choices": [
+    "30人",
+    "85人",
+    "60人",
+    "120人"
+  ]
+},
+"p7-110": {
+  "text": "Whitfieldさんがセミナーの日程として最も選びそうなのはどれですか。",
+  "choices": [
+    "3月14日（土）",
+    "3月13日（金）",
+    "3月21日（土）",
+    "3月20日（金）"
+  ]
+},
+"p7-111": {
+  "text": "WhitfieldさんがRoom Aを予約し、参加者60人全員分のビュッフェランチを注文した場合、総額はいくらになりますか。",
+  "choices": [
+    "193,000円",
+    "108,000円",
+    "85,000円",
+    "175,000円"
+  ]
+},
+"p7-112": {
+  "text": "Moriさんの返信に言及されていないのはどれですか。",
+  "choices": [
+    "Room Aの収容人数",
+    "平日予約の割引",
+    "デポジットの支払期限",
+    "ビュッフェランチの料金"
+  ]
+},
+"p7-113": {
+  "text": "この広告の主な目的は何ですか。",
+  "choices": [
+    "秋シーズンのツアーガイドを募集すること",
+    "京都のホテルの割引を告知すること",
+    "紅葉を見るガイド付き旅行を宣伝すること",
+    "茶道体験の予約方法を説明すること"
+  ]
+},
+"p7-114": {
+  "text": "ツアー料金に含まれているのはどれですか。",
+  "choices": [
+    "毎朝の朝食",
+    "毎日の昼食と夕食",
+    "伝統的な茶道体験",
+    "京都駅までの電車チケット"
+  ]
+},
+"p7-115": {
+  "text": "Andersenさんが早期予約割引の対象になると考えている理由はどれですか。",
+  "choices": [
+    "同社のリピーターだから",
+    "2人分を予約するから",
+    "旅行雑誌で働いているから",
+    "10月の締切前に予約するから"
+  ]
+},
+"p7-116": {
+  "text": "Andersenさんが支払うべき総額はいくらですか。",
+  "choices": [
+    "136,400円",
+    "130,400円",
+    "122,400円",
+    "144,000円"
+  ]
+},
+"p7-117": {
+  "text": "Andersenさんの食事に関する質問から推測できることはどれですか。",
+  "choices": [
+    "ホテルを変更したいと思っている",
+    "すでにツアー代金を支払った",
+    "広告にはベジタリアン食が用意できるかどうか書かれていない",
+    "彼の妻は茶道体験に参加しない"
+  ]
+},
+"p7-118": {
+  "text": "この通知の目的は何ですか。",
+  "choices": [
+    "社員向けの研修ワークショップの開催を告知すること",
+    "新入社員を会社に紹介すること",
+    "社内ポータルの変更点を説明すること",
+    "管理職に部下の評価を求めること"
+  ]
+},
+"p7-119": {
+  "text": "社員はいつまでにワークショップに申し込まなければなりませんか。",
+  "choices": [
+    "3月10日",
+    "3月20日",
+    "3月24日",
+    "3月28日"
+  ]
+},
+"p7-120": {
+  "text": "Data Analysisのワークショップはどの部屋で開催されますか。",
+  "choices": [
+    "Seminar Room B",
+    "402号室",
+    "301号室",
+    "204号室"
+  ]
+},
+"p7-121": {
+  "text": "Nakamuraさんは、すでに選んだ2つのワークショップに加えてExcel Basicsにも参加できますか。",
+  "choices": [
+    "はい、まだ席が空いているから",
+    "はい、上司が承認すれば可能である",
+    "いいえ、社員は2つまでしか受講できないから",
+    "いいえ、申込は3月20日に締め切られたから"
+  ]
+},
+"p7-122": {
+  "text": "Project Managementのワークショップについて、Nakamuraさんが抱えている問題はどれですか。",
+  "choices": [
+    "まだ申し込んでいない",
+    "開催される部屋が狭すぎる",
+    "講師がまだ決まっていない",
+    "彼の顧客との会議と時間が重なっている"
+  ]
+}
+};
 
 const PASSAGE_TRANSLATIONS = {
   p6_relocation: {
@@ -1449,7 +2955,152 @@ const PASSAGE_TRANSLATIONS = {
   p7_apartment: {     sections: [       { header: "Sunnyvale Apartments — 入居者募集中",         body: "Sunnyvale Apartments では、12月1日から入居可能な1ベッドルームおよび2ベッドルームの物件を募集しています。家賃は1ベッドルームが月950ドルから、2ベッドルームが月1,300ドルからで、水道代と駐車場代が含まれています。\n\n全戸にモダンなキッチンと室内洗濯設備を備え、共用フィットネスセンターも利用できます。コミュニティルームは、住民の方がプライベートイベントのために無料で予約できます。\n\n11月14日（土）午前10時から午後4時まで、内見会を開催します。モデルルームの見学や、賃貸スタッフへの相談が可能です。内見会当日に申し込んだ方は、50ドルの申込手数料が免除されます。" }     ]   },
   p7_deadline: {     sections: [       { header: "差出人: Ken Watanabe、プロジェクトマネージャー\n宛先: プロジェクトチーム\n件名: Atlas プロジェクトの期限変更について\n日付: 11月2日",         body: "皆さん\n\nAtlas プロジェクトの期限を1週間延長することに、クライアントが同意してくれたことをお知らせします。最終レポートの提出期限は11月13日から11月20日に変更されました。\n\nこの変更に伴い、今週金曜日に予定されていたレビュー会議は、来週火曜日の午前10時に移ります。急いで終わらせようとせず、余った時間を使って自分の担当部分をしっかり確認してください。\n\n新しい期限によって他の業務に支障が出る場合は、水曜までに知らせてください。業務量を調整します。\n\nよろしくお願いいたします。\nKen Watanabe" }     ]   },
   p7_hiring: {     sections: [       { header: "求人：バイリンガル・カスタマーサポート担当 — NovaTel Communications",         body: "NovaTel Communications では、国際ヘルプデスクのカスタマーサポート担当を募集しています。応募者は、カスタマーサービスの経験が少なくとも3年あり、英語とスペイン語の両方で流暢にコミュニケーションできることが条件です。業務は、両言語での電話およびメールによる顧客対応です。勤務時間は月曜から金曜の午前9時から午後5時まで。希望者は11月25日までにオンラインで応募してください。" },       { header: "差出人: Lucia Fernandez\n宛先: NovaTel 採用チーム\n件名: カスタマーサポート職への応募\n日付: 11月5日",         body: "採用チームの皆様\n\nカスタマーサポート担当の職に応募いたします。私は過去4年間、ホテルのフロントデスクで働き、多くの国のゲストの対応をしてきました。メキシコで育ち、家庭ではスペイン語を話し、仕事では毎日英語を使っています。\n\n12月初めから勤務可能です。面接で私の応募についてお話しする機会をいただければ幸いです。\n\n敬具\nLucia Fernandez" }     ]   },
-  p7_market: {     sections: [       { header: "Hillcrest Farmers Market、10周年を迎える",         body: "Hillcrest Farmers Market は土曜日に10周年を祝い、地元の出店者40以上と推定3,000人の来場者が特別イベントに参加しました。2016年に8つの屋台から始まった小さな週末市場は、今では市で最も人気のある毎週の名物の一つに成長しました。\n\n主催者は土曜日、来春から、週末に来られない住民からの要望に応えて、Riverside 地区の第2会場で水曜の夜にも市場を開くと発表しました。\n\nこの市場は新鮮な農産物、焼き菓子、手作りの工芸品で知られています。入場は無料で、市場に隣接するコミュニティセンターに駐車場があります。" }     ]   }};
+  p7_market: {     sections: [       { header: "Hillcrest Farmers Market、10周年を迎える",         body: "Hillcrest Farmers Market は土曜日に10周年を祝い、地元の出店者40以上と推定3,000人の来場者が特別イベントに参加しました。2016年に8つの屋台から始まった小さな週末市場は、今では市で最も人気のある毎週の名物の一つに成長しました。\n\n主催者は土曜日、来春から、週末に来られない住民からの要望に応えて、Riverside 地区の第2会場で水曜の夜にも市場を開くと発表しました。\n\nこの市場は新鮮な農産物、焼き菓子、手作りの工芸品で知られています。入場は無料で、市場に隣接するコミュニティセンターに駐車場があります。" }     ]   },
+"p6_conference": {
+  "sections": [
+    {
+      "header": "宛先：Alan Reyes博士\n差出人：プログラムコーディネーター Sofia Marchetti\n件名：地域マーケティング会議でのあなたのセッションについて",
+      "body": "Reyes博士\n\n10月17日の地域マーケティング会議で講演を引き受けてくださりありがとうございます。あなたのセッションは、開会のあいさつの直後、ハーバーコンベンションセンターの3号室で午前10時に[95]。\n\n会場は昨年から変更になりました[96]、全体の日程は変わらず、あなたのセッションには約200人の参加が見込まれます。セッション[97]は技術スタッフがサポートしますので、スライドとマイクの確認のため、少なくとも20分前にはお越しください。\n\n10月10日までに発表スライドのコピーをお送りいただけますか。[98] 追加の機材が必要な場合は、同じ日までにご連絡ください。\n\nお迎えできるのを楽しみにしています。\n\n敬具\nSofia Marchetti"
+    }
+  ]
+},
+"p7_office_move": {
+  "sections": [
+    {
+      "header": "全従業員へのお知らせ：オフィス移転について",
+      "body": "ハートウェル・ファイナンシャル・グループは、本社をキングストリート210番地から、ハーバーアベニュー88番地のメリディアン・タワーへ移転することをお知らせいたします。移転は3月14日（土）から15日（日）の週末に行われ、通常業務は3月16日（月）より新所在地で再開されます。\n\n引っ越し業者が効率よく作業できるよう、全従業員は3月13日（金）午後5時までに、机から私物をすべて片づけるようお願いいたします。段ボール箱とラベルは、3月9日に総務部より配布されます。期限後に残された物品は廃棄されます。\n\nメリディアン・タワーは中央駅から徒歩5分で、朝夕のラッシュ時には駅とビルの間を15分間隔で会社のシャトルバスも運行します。従業員用駐車場は地下ガレージに月額60ドルで利用できます。\n\n移転に関するご質問は、総務部のデイナ・ウィットフィールド（内線4421）までお問い合わせください。"
+    }
+  ]
+},
+"p7_language_school": {
+  "sections": [
+    {
+      "header": "ブライトパス語学学校 — 新学期は2月10日開始",
+      "body": "自信を持って新しい言語を話せるようになりませんか。ブライトパス語学学校では、春学期の受講登録を受け付けています。完全な初心者から上級者まで、大人の学習者を対象に、スペイン語、フランス語、中国語、韓国語の講座を開講しています。\n\n最も人気のある講座「夜間会話」は、毎週火曜日と木曜日の午後7時から8時30分まで行われます。すべての受講生が十分に話す練習ができるよう、各クラスの定員は8名に限られています。日中に学びたい方には、土曜日の午前9時から午後1時までの「週末集中」クラスもあります。\n\n10週間コースの授業料は420ドルで、別途、入学金30ドルが1回のみかかります。1月31日までにお申し込みいただくと、授業料が15パーセント割引になります。教材費はすべて料金に含まれています。\n\nエルムストリート512番地の当校にお越しいただくか、www.brightpathlanguage.example.com からオンラインでお申し込みください。"
+    }
+  ]
+},
+"p7_delivery_inquiry": {
+  "sections": [
+    {
+      "header": "宛先：customer.service@furnishpro.com／差出人：m.alvarez@brightline-events.com／件名：注文 #88412 の配送について",
+      "body": "カスタマーサービスチーム 御中\n\n4月2日に注文した注文番号 #88412（オフィスチェア20脚と机5台）についてお問い合わせいたします。注文した際、貴社のウェブサイトには配送に5〜7営業日かかると表示されていました。しかし、現在は4月16日ですが、商品はまだ届いていません。\n\n4月24日に会社の研修イベントを予定しており、そのイベント会場にこの家具が必要なため、これは深刻な問題です。注文の状況を確認し、配送が正確にいつ行われるのか教えていただけますか。4月22日までに注文全体を配送できない場合は、椅子だけの部分配送が可能かどうかも知りたいと思います。\n\nご返信の際には、配送スケジュールを書面で確認していただけると幸いです。参考までに、購入時の領収書のコピーをこのメールに添付いたします。\n\n本件への迅速なご対応をよろしくお願いいたします。\n\n敬具\nマリア・アルバレス\nブライトライン・イベンツ オフィスマネージャー"
+    }
+  ]
+},
+"p7_cafe_opening": {
+  "sections": [
+    {
+      "header": "新しいカフェがメープルストリートに新鮮なパンを届ける",
+      "body": "メープルストリート地区の住民たちは、土曜日、ホシノ・ベーカリー・カフェがメープルストリート14番地に開店し、新しい店を歓迎しました。初日には100人を超える客が訪れ、正午までには人気のメロンパンが売り切れました。\n\nこのカフェのオーナーは星野健司さんで、自分の店を持つことを決める前、市内の有名ホテル数軒で12年間パン職人として働いていました。「近所の人たちがくつろいで、毎朝焼きたてのパンを楽しめる場所を作りたかったのです」と星野さんは語りました。\n\nパンやペストリーに加えて、このカフェでは、市外にある田中農園で焙煎された豆を使ったコーヒーを提供しています。メニューにはサンドイッチや、旬の野菜を使った日替わりスープもあります。\n\nホシノ・ベーカリー・カフェは、火曜日から日曜日の午前7時から午後7時まで営業し、月曜日は定休日です。店内には30席があり、春にオープン予定の小さなテラス席もあります。"
+    }
+  ]
+},
+"p7_museum_exhibition": {
+  "sections": [
+    {
+      "header": "特別展：「海の色彩 — 19世紀の海洋美術」",
+      "body": "リバーデール美術館は、19世紀ヨーロッパの海洋画家による絵画と素描80点以上を展示する特別展「海の色彩」を開催いたします。本展は10月4日（土）から12月21日（日）まで、美術館の東棟で開催されます。\n\n特別展の入場料は、大人1,200円、6歳から12歳の子ども600円です。6歳未満の子どもは無料です。なお、平日は大人料金が1,000円に割引されます。チケットは美術館の入口、または美術館のウェブサイトで事前に購入できます。\n\n土曜日と日曜日には、伝統的な水彩画の技法を体験できる無料のハンズオンワークショップに参加できます。ワークショップは午前11時と午後2時に始まり、各回先着20名までです。\n\n美術館は午前9時30分から午後5時30分まで開館し、月曜日は休館です。最終入場は閉館の30分前です。"
+    }
+  ]
+},
+"p7_driver_recruitment": {
+  "sections": [
+    {
+      "header": "急募：配送ドライバー — スウィフトホール・ロジスティクス株式会社",
+      "body": "スウィフトホール・ロジスティクス株式会社では、大阪配送センターで勤務する正社員の配送ドライバーを募集しています。ドライバーは社用車を使用して市内の家庭や事業所に荷物を配送し、通常1日に60〜80件の配送を行います。\n\n応募要件：\n• 有効な商用運転免許（クラスB以上）\n• 2年以上の運転経験\n• 25キログラムまでの荷物を持ち上げられること\n• 過去3年間、無事故・無違反の運転記録であること\n\n初任給は月給290,000円で、残業代と交通手当が加算されます。勤務は週5日で、早番（午前6時〜午後3時）か遅番（午後1時〜午後10時）のいずれかを選択できます。\n\n新しいドライバーには2週間の有給研修があり、その間、経験豊富なドライバーに同乗して配送ルートと手順を学びます。制服と安全装備は無料で支給されます。\n\n応募をご希望の方は、5月30日までに履歴書を careers@swifthaul.example.co.jp までお送りください。書類選考を通過した方には、2週間以内に面接のご連絡をいたします。"
+    }
+  ]
+},
+"p7_meeting_reschedule": {
+  "sections": [
+    {
+      "header": "件名：マーケティング会議を3月13日（金）に変更します",
+      "body": "チームの皆様へ\n\nお知らせいたします。毎週のマーケティング会議は、当初3月12日（木）午前10時に予定されていましたが、3月13日（金）午後2時に変更となりました。これは、地域営業部長のアルバレス氏が金曜日に本社を訪問し、会議に参加したいと希望しているためです。\n\n会議はこれまで通り4階の会議室Bで行われ、約90分の予定です。アルバレス氏が四半期目標について確認しますので、2月の最新の売上数字をお持ちください。月次報告書をまだ提出していない方は、水曜日の午後までに私までお送りください。概要資料を準備します。\n\n新しい時間が別の予定と重なる場合は、できるだけ早くご連絡ください。代替案を調整します。\n\nご理解ありがとうございます。\n\n敬具\nダニエル・キム\nマーケティング・マネージャー"
+    }
+  ]
+},
+"p7_fare_revision": {
+  "sections": [
+    {
+      "header": "お知らせ：4月1日より運賃を改定します",
+      "body": "市交通局 ― 乗客の皆様へのお知らせ\n\n市交通局は、4月1日（水）より、すべてのバスおよび地下鉄の運賃を改定します。この改定は、燃料費と維持費の上昇に対応するためのものです。\n\n新しい料金では、通常の片道運賃は2.50ドルから2.75ドルに値上がりします。10回券は22.50ドルから24.00ドルになります。1か月定期券は80.00ドルから88.00ドルに値上がりします。\n\n高齢者および学生の運賃は変更されず、6歳未満の子どもは大人の同伴があれば引き続き無料で乗車できます。4月1日より前に定期券を購入した乗客は、有効期限が切れるまでそのまま使用できます。\n\n新しい運賃表は3月20日までに全駅に掲示されます。詳細は www.citytransit.example をご覧いただくか、案内ダイヤル 555-0147 までお電話ください。"
+    }
+  ]
+},
+"p7_restaurant_review": {
+  "sections": [
+    {
+      "header": "ジ・オリーブ・ブランチ ― ★★★★☆（5つ星中4つ）",
+      "body": "昨年の春、ハーバー通りにオープンした地中海料理レストラン『ジ・オリーブ・ブランチ』は、早くも近隣で最も話題の飲食店の一つになりました。\n\n先週の土曜日に訪れたところ、午後7時には店内はほぼ満席でしたが、スタッフは落ち着いて丁寧に対応していました。サーバーは本日のおすすめを詳しく説明し、ナッツが食べられない私の同伴者のために、料理を快く調整してくれました。\n\nレモンとハーブを添えたスズキのグリルは絶品で、新鮮で軽く、量もたっぷりでした。ラムのケバブは風味豊かでしたが、少し火が通り過ぎていました。デザートのバクラヴァはパリッとしていて、甘すぎませんでした。\n\n価格は質に見合って手頃で、メインコースのほとんどは18ドルから26ドルです。唯一の不満は駐車場で、店の裏の小さな駐車場はすぐに満車になり、近くの路上駐車も限られています。\n\n全体として、ジ・オリーブ・ブランチは訪れる価値が十分にあります。特に週末は、事前に予約することをお勧めします。"
+    }
+  ]
+},
+"p7_charity_walk": {
+  "sections": [
+    {
+      "header": "第8回『ウォーク・フォー・ホープ』に過去最多の参加者",
+      "body": "日曜日の朝、市内の子ども病院のための資金を集めるチャリティーイベント、第8回『ウォーク・フォー・ホープ』に、リバーサイド公園に1,200人以上が集まりました。\n\n参加者は川沿いの5キロのコースを歩き、地元のバンドや、水を配るボランティアの応援を受けました。今年のイベントでは参加費と寄付で過去最高の54,000ドルが集まり、昨年の総額を9,000ドル上回りました。\n\n「参加してくださった皆さんに感謝します」と、主催者のマリア・サントス氏は語りました。「このお金は、病院の小児病棟の新しい機器の購入と、週末の遊びプログラムの資金に使われます。」\n\n地元企業もイベントを支援しました。ハーバー・ベーカリーはボランティアに無料の朝食を提供し、シティ・スポーツは最初に申し込んだ参加者のためにTシャツ200枚を寄付しました。\n\n第9回は来年10月に予定されており、申し込みは8月から病院のウェブサイトで始まります。"
+    }
+  ]
+},
+"p7_furniture_sale": {
+  "sections": [
+    {
+      "header": "コンフォート・リビング家具 ― 冬のクリアランスセール",
+      "body": "コンフォート・リビング家具は、1月16日から1月25日まで、五番街のダウンタウン店で今年最大のクリアランスセールを開催します。\n\n厳選されたソファ、ダイニングセット、寝室用家具が最大40％オフ。人気の3人掛け『ヘイブン』ソファは、通常価格1,500ドルが今なら900ドルです。ダイニングテーブルは25％オフ、ランプとラグはすべて在庫限り半額です。\n\n499ドル以上お買い上げのお客様には、市内への配送が無料になります。さらに、セール期間中にコンフォート・リビングのストアカードを新規でお作りいただくと、初回購入がさらに10％オフになります。\n\nセール期間中は営業時間を延長し、毎日午前9時から午後9時まで営業します。お早めにお越しください。在庫がなくなり次第終了し、再入荷はありません。"
+    }
+  ]
+},
+"p7_airport_shuttle": {
+  "sections": [
+    {
+      "header": "ブルーライン・シャトル：空港行き時刻表とご案内",
+      "body": "ブルーライン・シャトルは、中央駅とウェストフィールド国際空港の間を直行で結びます。所要時間は交通状況により約45分です。\n\nバスは中央駅を30分ごとに出発します。始発は午前5時、最終は午後11時です。空港からのバスも30分ごとに出発し、午前6時から始まります。\n\n片道料金は大人が12ドル、12歳未満の子どもが6ドルです。チケットは当社のウェブサイトか中央駅の券売機で事前に購入してください。運転手はチケットを販売しておらず、現金も扱えません。\n\n乗客は大きなスーツケース1個と小さな手荷物1個を無料で持ち込めます。追加の荷物は1個につき5ドルです。自転車などの大型の荷物をお持ちの方は、スペースに限りがあるため、少なくとも24時間前までにご連絡ください。\n\n出発の10分前までにはバス停にお越しください。バスは遅れた乗客を待つことはできません。"
+    }
+  ]
+},
+"p7_venue_booking": {
+  "sections": [
+    {
+      "header": "Dana WhitfieldからKenji Moriへのメール — 2月10日",
+      "body": "Mori様\n当社スタッフ向けの1日研修セミナーのため、Sakura Hallの部屋を予約したくご連絡いたします。3月13日（金）の午前9時から午後5時に開催したいと考えており、約60人の社員の参加を見込んでいます。発表用にプロジェクターとスクリーンが必要で、参加者全員分のビュッフェランチも手配したいと思っています。\n基調講演者のAlan Reyes博士は海外から来日し、その週は金曜日しか都合がつきません。その日程で適した部屋が空いているかどうかをお知らせいただき、総額の見積もりをお送りいただけますか。\nよろしくお願いいたします。\nDana Whitfield\nBrightpath Consulting"
+    },
+    {
+      "header": "Kenji MoriからDana Whitfieldへのメール — 2月12日",
+      "body": "Whitfield様\nお問い合わせありがとうございます。あいにく、3月13日（金）は当ホールの大きな部屋が両方ともすでに予約済みです。ただし、最大120名まで収容できるRoom Aは、3月14日（土）と3月20日（金）に空きがございます。\nRoom Aの利用料は1日85,000円で、プロジェクターとスクリーンの使用料も含まれています。ビュッフェランチはお一人様1,800円です。ご予約が確定しましたら、5営業日以内に総額の30％をデポジットとしてお支払いください。\nご希望の日程をお知らせいただければ、詳細な見積もりを作成いたします。\nKenji Mori\nSakura Hall"
+    }
+  ]
+},
+"p7_kyoto_tour": {
+  "sections": [
+    {
+      "header": "広告 — Highland Trails Travel",
+      "body": "当社の京都紅葉ツアーで秋の彩りを満喫しませんか。この3日間・2泊の旅は11月21日から23日までで、お一人様68,000円です。料金には京都駅からの往復バス送迎、嵐山リバーサイドホテルでの2泊、毎朝の朝食が含まれています。10月31日までにお申し込みいただくと、早期予約割引として10％オフになります。お一人様追加4,000円で、地元の茶道家が指導する伝統的な茶道体験にもご参加いただけます。ツアーは11月21日午前8時30分に京都駅を出発し、最少催行人数は10名です。今すぐお席をご予約ください。"
+    },
+    {
+      "header": "Paul AndersenからHighland Trails Travelへのメール — 10月28日",
+      "body": "Highland Trailsのご担当者様\n京都紅葉ツアーの広告を拝見し、11月21日出発分を、私と妻の2名分で予約したいと思います。10月末より前にご連絡していますので、早期予約割引が適用されると理解しています。茶道体験も2人分追加してください。\nお支払いの前に1つ質問があります。妻は肉を食べないのですが、ホテルでベジタリアン食を用意してもらうことは可能でしょうか。また、支払うべき総額もご確認いただけますか。\nよろしくお願いいたします。\nPaul Andersen"
+    }
+  ]
+},
+"p7_training_program": {
+  "sections": [
+    {
+      "header": "人事部からの通知 — 3月10日",
+      "body": "人事部は、今年度の春季スキル研修プログラムの開催をお知らせいたします。4月には、Excel Basics、Presentation Skills、Project Management、Data Analysisの4つのワークショップが開かれます。各社員が申し込めるのは最大2つまでで、申込は3月28日（金）までに社内ポータルで完了させてください。すべてのワークショップは当初Seminar Room Bで開催される予定でしたが、一部の部屋が変更されていますので、下記の最終日程表をご確認ください。ワークショップを修了した社員には修了証が授与されます。各部門の管理職には、希望する社員が参加できるよう業務日程の調整をお願いしています。"
+    },
+    {
+      "header": "Ryo Nakamuraから人事部へのメール — 3月20日",
+      "body": "人事部ご担当者様\nポータルを通じて、Project ManagementとData Analysisの2つのワークショップに申し込みました。ご連絡したのは、上司が4月15日の午後に重要な顧客との会議を設定したため、私のワークショップのどちらかと重なってしまうのではないかと心配しているからです。セッションの全時間に参加できるかどうか教えていただけますか。\nまた、まだ席に空きがあれば、Excel Basicsにも参加したいのですが、可能でしょうか。\nよろしくお願いいたします。\nRyo Nakamura\n営業部"
+    },
+    {
+      "header": "春季スキル研修プログラム — 最終日程表（3月24日更新）",
+      "body": "Excel Basics — 4月8日（水）午前9時30分〜午後12時30分、301号室、講師：Ito氏\nPresentation Skills — 4月10日（金）午後1時〜4時、301号室、講師：Grant氏\nProject Management — 4月15日（水）午前9時30分〜午後4時30分、402号室、講師：Park氏\nData Analysis — 4月17日（金）午前9時30分〜午後4時30分、402号室、講師：Osei氏\n注：すべての部屋は3月24日にSeminar Room Bから変更されました。\n申込は社内ポータルからのみ受け付け、締切は3月28日です。各セッションの開始10分前までにお越しのうえ、社員証をお持ちください。お問い合わせは人事部（内線2140）までお願いします。"
+    }
+  ]
+}
+};
 
 /* =====================================================================
    ANSWER EXPLANATIONS (review screen)
@@ -1559,7 +3210,63 @@ const QUESTION_EXPLANATIONS = {
   "p7-36": "9月10日までにオンライン登録した学生と卒業して間もない人は無料と案内されています。",
   "p7-37": "Ms. Park はクラブ会員に bring a printed résumé と直接伝えています。",
   "p7-38": "イベント案内の公式履歴書添削と、Park氏の会社による非公式な助言は別であり、同社は公式プログラムに参加していません。",   "p7-45": "冒頭で will open three new locations とあり、記事全体が店舗拡大の発表を伝えているため、ベーカリー事業の拡大が主題です。",   "p7-46": "Unlike the existing shops, the new locations will include small classroom spaces where customers can take baking courses と明示されています。",   "p7-47": "Founder and CEO Maria Chen started Golden Crust in 2011, selling loaves from a stall at a Portland farmers market とあります。オースティンは初の州外店舗であり、最初の店ではありません。",   "p7-48": "I am writing to request a change to our regular delivery arrangement と冒頭で述べ、土曜から金曜への変更を依頼しています。",   "p7-49": "If you confirm the new schedule by October 28, there will be no additional charge とあり、28日までの確認が追加料金なしの条件です。",   "p7-50": "2通目に、金曜の交通量のため deliveries scheduled after 2:00 P.M. sometimes arrive later than planned とあります。午前の枠は通常どおり利用可能です。"
-,   "p6-35": "主語の位置なので主格の they が必要です。their は所有格、them は目的格、themselves は再帰代名詞です。",   "p6-36": "直前が講師からのコメント、直後が登録の案内という流れの中で、持ち物に関する注意事項が最も自然につながります。他の選択肢は話題がずれています。",   "p6-37": "期限を表すのは by（〜までに）です。until は継続の終点を表すため、visit のような一時的な動作の期限には使えません。",   "p6-38": "your の後ろには名詞が必要です。participation は「参加」という名詞、participant は人を表す名詞で文意に合いません。",   "p7-51": "通知はマラソン当日の通行止め対象道路と時間帯を中心に伝えており、住民への周知が目的です。",   "p7-52": "Drivers who normally use these roads are advised to use the East Bypass instead とあります。駐車許可証が必要なのはコース沿いの住民です。",   "p7-53": "Residents who live along the marathon route and need to travel on Sunday morning should contact the event office by October 12 と明示されています。",   "p7-54": "Students must bring their own aprons とあります。材料費は受講料に含まれています。",   "p7-55": "メールでは、土曜午前は仕事で参加できないことと、ナッツアレルギーがあることを伝え、参加可能なコースについて尋ねています。",   "p7-56": "Ross氏は土曜午前に仕事があるため、土曜開催の Baking Basics には参加できません。日曜開催の World Cuisine が唯一参加可能なコースです。",   "p7-57": "Now leasing ... units とあり、賃貸物件の募集広告です。",   "p7-58": "including water and parking と明示されています。電気・インターネット・家具については記載がありません。",   "p7-59": "Applications submitted during the open house will have the $50 application fee waived とあります。",   "p7-60": "メールの主旨は、クライアントの同意で期限が1週間延びたことの通知です。延長を依頼するメールではありません。",   "p7-61": "the review meeting ... will be moved to next Tuesday at 10:00 A.M. とあります。11月20日はレポートの期限です。",   "p7-62": "If the new deadline causes any problems ..., please let me know by Wednesday とあります。担当部分の確認は期限を切られていません。",   "p7-63": "Applicants must have at least three years of customer service experience が条件です。ホテル経験や学位は条件ではありません。",   "p7-64": "I would like to apply for the customer support representative position と、応募のメールです。",   "p7-65": "求人は3年以上の経験を要求し、Fernandez氏はホテルのフロント（顧客対応）を4年経験しています。学位や資格の記載はありません。",   "p7-66": "記事は10周年のイベントと、来春からの第2会場・水曜夜間開催という拡大計画が中心です。",   "p7-67": "more than forty local vendors とあります。3,000は来場者数、8は2016年当初の屋台数です。",   "p7-68": "starting next spring, the market will also open on Wednesday evenings at a second location とあります。移転ではなく追加開催です。"};
+,   "p6-35": "主語の位置なので主格の they が必要です。their は所有格、them は目的格、themselves は再帰代名詞です。",   "p6-36": "直前が講師からのコメント、直後が登録の案内という流れの中で、持ち物に関する注意事項が最も自然につながります。他の選択肢は話題がずれています。",   "p6-37": "期限を表すのは by（〜までに）です。until は継続の終点を表すため、visit のような一時的な動作の期限には使えません。",   "p6-38": "your の後ろには名詞が必要です。participation は「参加」という名詞、participant は人を表す名詞で文意に合いません。",   "p7-51": "通知はマラソン当日の通行止め対象道路と時間帯を中心に伝えており、住民への周知が目的です。",   "p7-52": "Drivers who normally use these roads are advised to use the East Bypass instead とあります。駐車許可証が必要なのはコース沿いの住民です。",   "p7-53": "Residents who live along the marathon route and need to travel on Sunday morning should contact the event office by October 12 と明示されています。",   "p7-54": "Students must bring their own aprons とあります。材料費は受講料に含まれています。",   "p7-55": "メールでは、土曜午前は仕事で参加できないことと、ナッツアレルギーがあることを伝え、参加可能なコースについて尋ねています。",   "p7-56": "Ross氏は土曜午前に仕事があるため、土曜開催の Baking Basics には参加できません。日曜開催の World Cuisine が唯一参加可能なコースです。",   "p7-57": "Now leasing ... units とあり、賃貸物件の募集広告です。",   "p7-58": "including water and parking と明示されています。電気・インターネット・家具については記載がありません。",   "p7-59": "Applications submitted during the open house will have the $50 application fee waived とあります。",   "p7-60": "メールの主旨は、クライアントの同意で期限が1週間延びたことの通知です。延長を依頼するメールではありません。",   "p7-61": "the review meeting ... will be moved to next Tuesday at 10:00 A.M. とあります。11月20日はレポートの期限です。",   "p7-62": "If the new deadline causes any problems ..., please let me know by Wednesday とあります。担当部分の確認は期限を切られていません。",   "p7-63": "Applicants must have at least three years of customer service experience が条件です。ホテル経験や学位は条件ではありません。",   "p7-64": "I would like to apply for the customer support representative position と、応募のメールです。",   "p7-65": "求人は3年以上の経験を要求し、Fernandez氏はホテルのフロント（顧客対応）を4年経験しています。学位や資格の記載はありません。",   "p7-66": "記事は10周年のイベントと、来春からの第2会場・水曜夜間開催という拡大計画が中心です。",   "p7-67": "more than forty local vendors とあります。3,000は来場者数、8は2016年当初の屋台数です。",   "p7-68": "starting next spring, the market will also open on Wednesday evenings at a second location とあります。移転ではなく追加開催です。",
+"p6-39": "主語 Your session は「予定される」側なので受動態 is scheduled が正解。",
+"p6-40": "後ろが完全な文なので接続詞が必要。会場変更と日程不変は対比の関係で Although が正解（Despite / Because of は名詞句用）。",
+"p6-41": "「セッションの間ずっと」サポートするという意味で、期間を表す during が正解。",
+"p6-42": "直前が「10月10日までにスライドを送ってください」という文なので、その期限を過ぎた場合の扱いを述べる文が入る。",
+"p7-72": "通知の冒頭で本社移転（relocation）が発表されており、文書全体がその日程と準備についての案内であるため、目的はオフィス移転の発表である。",
+"p7-73": "本文に「all employees are asked to remove every personal item from their desks by 5:00 P.M. on Friday, March 13」と明記されている。",
+"p7-74": "新オフィスは中央駅から徒歩5分で、駅との間にシャトルバスも運行するとあるため、公共交通機関で通えることが推測できる。",
+"p7-75": "広告は語学学校の講座登録の案内で、対象は「adult learners（大人の学習者）」と明記されている。",
+"p7-76": "「each class is limited to eight students」と、夜間会話クラスの定員が8名に限られていることが明記されている。",
+"p7-77": "「Register by January 31 and receive a 15 percent discount on tuition」と、1月31日までの登録で授業料が15%割引になると明記されている。",
+"p7-78": "件名が「Delivery of Order #88412」で、本文でも届いていない注文の状況を尋ねているため、未着の注文についての問い合わせである。",
+"p7-79": "注文時は「5〜7営業日」で届くと表示されていたのに、4月2日の注文が4月16日になっても届いていないと述べており、当初の予定より遅れていることが分かる。",
+"p7-80": "本文の「I have attached a copy of my purchase receipt to this e-mail」と、購入時の領収書のコピーを添付したことが明記されている。",
+"p7-81": "記事はメープルストリートに開店したホシノ・ベーカリー・カフェの初日の様子を報じており、主題は新しいカフェの開店である。",
+"p7-82": "「coffee made from beans roasted at the Tanaka Farm, located just outside the city」と、近郊の農園で焙煎された豆を使うことが明記されている。",
+"p7-83": "星野さんは「spent twelve years working as a baker at several well-known hotels」とあり、以前パン職人として働いていたことが推測できる。",
+"p7-84": "案内は特別展「Colors of the Sea」の会期・料金・ワークショップを告知するもので、目的は特別展の発表である。",
+"p7-85": "会期、子どもの料金、週末のワークショップには言及があるが、キュレーター（学芸員）の名前は本文のどこにも出てこない。",
+"p7-86": "平日は大人料金が1,200円から1,000円に割引されるため、大人2名で2,000円、子ども（6〜12歳）は600円で、合計は2,600円になる。",
+"p7-87": "求人広告の見出しが「DELIVERY DRIVERS」の募集であり、職種は配送ドライバーである。",
+"p7-88": "Requirements の筆頭に「A valid commercial driver's license (Class B or above)」とあり、商用運転免許が必須要件である。",
+"p7-89": "「New drivers receive two weeks of paid training, during which they ride with an experienced driver」と、経験者同乗の有給研修が最初の期間に提供されることが明記されている。",
+"p7-90": "冒頭で、木曜日の会議が金曜日に変更されたことが明記されており、このメールの目的は日程変更の連絡である。",
+"p7-91": "本文に 'moved to Friday, March 13 at 2:00 p.m.' とあり、変更後の日時は3月13日（金）午後2時である。",
+"p7-92": "本文に 'Please bring the updated sales figures for February' とあり、持参するよう求められているのは2月の最新の売上数字である。",
+"p7-93": "冒頭に 'revise fares ... beginning Wednesday, April 1' とあり、新運賃の適用開始は4月1日である。",
+"p7-94": "10回券は24ドルなので1回あたり2.40ドル。通常の片道運賃2.75ドルとの差額は0.35ドルになる。",
+"p7-95": "本文に 'Fares for seniors and students will remain unchanged' とあり、高齢者（と学生）の運賃は変更されない。",
+"p7-96": "スズキのグリルは 'excellent — fresh, light' と評されており、新鮮で絶品だったと述べられている。",
+"p7-97": "本文に 'has quickly become one of the most talked-about dining spots' とあり、開店以来話題、すなわち人気が出ていると推測できる。",
+"p7-98": "バクラヴァについては 'not overly sweet'（甘すぎなかった）と書かれており、「甘すぎた」という選択肢が誤りである。",
+"p7-99": "冒頭に 'More than 1,200 people gathered' とあり、参加者は1,200人以上である。",
+"p7-100": "今年の総額は54,000ドルで、昨年を9,000ドル上回った。よって昨年は 54,000 − 9,000 ＝ 45,000ドルである。",
+"p7-101": "主催者の発言として 'buy new equipment ... and to fund its weekend play program' とあり、お金は機器の購入と遊びプログラムの資金に使われる。",
+"p7-102": "セール期間は 'from January 16 to January 25' とあり、終了日は1月25日である。",
+"p7-103": "ヘイブンソファのセール価格は900ドル。新規カードの追加10％オフを適用すると 900 × 0.9 ＝ 810ドルになる。",
+"p7-104": "本文に 'spend $499 or more will receive free delivery' とあり、499ドル以上の注文は配送が無料になる。",
+"p7-105": "所要時間は約45分なので、9時30分までに着くには8時45分までに出発する必要がある。30分間隔の便では、8時30分発（9時15分着）が最も遅い便である。",
+"p7-106": "本文に '$6 for children under 12' とあり、12歳未満の子どもの片道料金は6ドルである。",
+"p7-107": "本文に 'drivers do not sell tickets' と明記されており、チケットを運転手から買うことはできない。",
+"p7-108": "1通目でWhitfieldさんは、研修セミナーのためにSakura Hallの部屋を予約したいと述べ、日程の空き状況と見積もりを尋ねている。",
+"p7-109": "1通目に「約60人の社員が参加する見込み」と明記されている。",
+"p7-110": "1通目では講演者のReyes博士は金曜日しか都合がつかないとされ、2通目では3月13日（金）は満室で、空いているのは3月14日（土）と3月20日（金）とあるため、条件に合うのは3月20日である。",
+"p7-111": "2通目のRoom A料金85,000円と、1通目の参加者60人に2通目のランチ1人1,800円を掛けた108,000円を合計すると193,000円になる。",
+"p7-112": "2通目には収容人数（120人）、デポジットの期限（5営業日以内）、ランチ料金（1,800円）への言及があるが、平日割引については書かれていない。",
+"p7-113": "広告は京都紅葉ツアーの日程・料金・特典を挙げて、参加を呼びかける内容である。",
+"p7-114": "広告には、料金に往復バス送迎、ホテル2泊、毎朝の朝食が含まれるとある。茶道体験は追加料金が必要である。",
+"p7-115": "広告には10月31日までの予約で10％の早期予約割引とあり、Andersenさんのメールは10月28日付であるため、締切前の予約だと分かる。",
+"p7-116": "広告の料金68,000円×2人＝136,000円に早期割引10％を適用すると122,400円となり、メールで希望した茶道体験4,000円×2人＝8,000円を加えると130,400円になる。",
+"p7-117": "Andersenさんはメールでベジタリアン食の可否をわざわざ尋ねており、広告には食事の選択肢についての記載がないことが分かる。",
+"p7-118": "通知は人事部が、4月に開かれる4つの研修ワークショップとその申込方法を社員に知らせる内容である。",
+"p7-119": "通知に、申込は3月28日（金）までに社内ポータルで完了させることと明記されている。",
+"p7-120": "通知では全ワークショップがSeminar Room Bで開催される予定だったが、3月24日更新の最終日程表ではData Analysisは402号室に変更されている。",
+"p7-121": "通知に「各社員が申し込めるのは最大2つまで」とあり、メールによればNakamuraさんはすでに2つ申し込んでいるため、3つ目の追加はできない。",
+"p7-122": "メールでNakamuraさんは4月15日午後に顧客との会議があると述べており、日程表ではProject Managementが4月15日午前9時30分から午後4時30分に開催されるため、時間が重なっている。"
+};
 
 /* =====================================================================
    LISTENING MVP — original Part 1–4 questions
