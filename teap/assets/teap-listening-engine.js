@@ -624,6 +624,20 @@
         if (pct < weakestPct) { weakestPct = pct; weakestPart = p; }
       });
 
+      if (window.LexSophiaProgress) {
+        window.LexSophiaProgress.recordSession({
+          exam: 'teap',
+          skill: 'listening',
+          mode: state.mode,
+          correct: correct,
+          total: total,
+          acc: acc,
+          weakestPart: weakestPart,
+          wrongIds: reviewItems.filter(function (x) { return !x.ok; }).map(function (x) { return x.q.id; }),
+          correctIds: reviewItems.filter(function (x) { return x.ok; }).map(function (x) { return x.q.id; })
+        });
+      }
+
       const circum = 603.2;
       const offset = (circum * (1 - acc / 100)).toFixed(1);
 

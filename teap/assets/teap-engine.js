@@ -498,6 +498,21 @@
         });
 
       const weakest = partRows.length ? [...partRows].sort((a, b) => a.acc - b.acc)[0] : null;
+      if (window.LexSophiaProgress) {
+        const correctIds = state.questions.filter(q => state.answers[q.id] === q.correctIndex).map(q => q.id);
+        window.LexSophiaProgress.recordSession({
+          exam: 'teap',
+          skill: 'reading',
+          mode: state.mode,
+          title: state.title,
+          correct: correct,
+          total: state.questions.length,
+          acc: acc,
+          weakestPart: weakest ? weakest.id : null,
+          wrongIds: wrongQs.map(q => q.id),
+          correctIds: correctIds
+        });
+      }
 
       const partsHtml = partRows.map(p =>
         '<div class="teap-res-part-row">' +

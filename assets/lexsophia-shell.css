@@ -1806,3 +1806,60 @@ body.lx-focus-mode .teap-app.is-wide-stim {
 }
 .lx-skill-ic.is-violet { background: var(--lx-violet-tint); color: var(--lx-violet-ink); }
 .lx-skill-ic.is-amber { background: var(--lx-amber-tint); color: var(--lx-amber-ink); }
+
+/* ============================================================
+   Multi-Exam Local Progress Strip (shown when user has history)
+   ============================================================ */
+.lx-progress-strip {
+  margin-bottom: 28px;
+  padding: 20px 24px;
+  border-radius: 26px;
+  background: var(--lx-canvas);
+  box-shadow: var(--lx-shadow-card);
+  display: grid;
+  gap: 14px;
+}
+.lx-progress-strip__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.lx-progress-strip__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lx-ink);
+}
+.lx-progress-strip__note {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lx-ink-3);
+}
+.lx-progress-strip__kpis {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (min-width: 640px) {
+  .lx-progress-strip__kpis { grid-template-columns: repeat(4, 1fr); }
+}
+.lx-progress-kpi {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: var(--lx-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.lx-progress-kpi .k {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--lx-ink-3);
+}
+.lx-progress-kpi .v {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--lx-ink);
+  font-variant-numeric: tabular-nums;
+}
