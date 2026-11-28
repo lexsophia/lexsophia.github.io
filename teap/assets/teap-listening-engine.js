@@ -242,7 +242,7 @@
     const root = document.getElementById('teap-listening-app');
     if (!root) return;
 
-    const allUnits = buildAllUnits();
+    let allUnits = buildAllUnits();
     if (!allUnits.length) {
       root.innerHTML = '<p>問題データの読み込みに失敗しました。</p>';
       return;
@@ -263,6 +263,16 @@
       countdownSec: 0,
       statusText: ''
     };
+
+    const ORIGINAL_BANK = { p1: window.TEAP_LISTENING_P1, p2: window.TEAP_LISTENING_P2 };
+    function applySet(n) {
+      const sets = window.TEAP_LISTENING_SETS || {};
+      const s = sets[n];
+      window.TEAP_LISTENING_P1 = s ? s.p1 : ORIGINAL_BANK.p1;
+      window.TEAP_LISTENING_P2 = s ? s.p2 : ORIGINAL_BANK.p2;
+      state.setNo = n;
+      allUnits = buildAllUnits();
+    }
 
     function clearCountdown() {
       if (state.countdown) {
@@ -371,11 +381,20 @@
 
     function renderLauncher() {
       const cfg = window.TEAP_LISTENING_CONFIG;
+      const currentSet = state.setNo || 1;
+      const setChips = [1, 2, 3].map(function (n) {
+        const active = currentSet === n;
+        return '<button type="button" class="teap-part-chip" data-tl-set="' + n + '"' + (active ? ' style="background:#0f172a;color:#ffffff;border-color:#0f172a"' : '') + '>セット' + n + (active ? '（選択中）' : '') + '</button>';
+      }).join('');
       root.innerHTML = [
         '<div class="teap-launcher">',
         '  <div>',
         '    <h2 style="margin:0 0 6px;font-size:20px">演習モードを選択</h2>',
         '    <p style="margin:0;font-size:13.5px;color:#475569">公式構成（Part 1A〜2B・全50問）に沿った完全オリジナル問題です。録音音声で今すぐリスニング演習ができます。</p>',
+        '  </div>',
+        '  <div>',
+        '    <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#334155">問題セットを選択（各50問・録音音声）</p>',
+        '    <div class="teap-part-select-row">' + setChips + '</div>',
         '  </div>',
         '  <div class="teap-mode-grid">',
         '    <button type="button" class="teap-mode-btn" id="btn-tl-quick">',
@@ -407,6 +426,9 @@
       root.querySelector('#btn-tl-exam').addEventListener('click', function () { startSession('exam'); });
       root.querySelectorAll('[data-tl-part]').forEach(function (b) {
         b.addEventListener('click', function () { startSession('study', b.getAttribute('data-tl-part')); });
+      });
+      root.querySelectorAll('[data-tl-set]').forEach(function (b) {
+        b.addEventListener('click', function () { applySet(parseInt(b.getAttribute('data-tl-set'), 10)); renderLauncher(); });
       });
     }
 
