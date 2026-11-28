@@ -297,14 +297,14 @@
 
       let stimHtml = '';
       if (hasStim) {
-        stimHtml = '<div class="teap-stim-pane">' +
+        stimHtml = '<div class="teap-stim-pane lx-passage-card" style="margin-top:0">' +
           (stim ? '<h3 class="teap-stim-title">' + esc(stim.title) + '</h3><p class="teap-stim-body">' + formatStimBody(stim.body) + '</p>' : '') +
           (chart ? renderChartHtml(chart) : '') +
           '</div>';
       }
 
       const optsHtml = q.options.map((opt, i) => {
-        let cls = 'teap-opt';
+        let cls = 'lx-choice';
         if (isStudyRevealed) {
           if (i === q.correctIndex) cls += ' is-correct';
           else if (i === chosen) cls += ' is-wrong';
@@ -312,7 +312,7 @@
           cls += ' is-selected';
         }
         return '<button type="button" class="' + cls + '" data-opt-idx="' + i + '"' + (isStudyRevealed ? ' disabled' : '') + '>' +
-          '<span class="teap-opt__num">' + (i + 1) + '</span>' +
+          '<span class="lx-key">' + (i + 1) + '</span>' +
           '<span>' + esc(opt) + '</span>' +
           '</button>';
       }).join('');
@@ -323,8 +323,8 @@
         const distList = (q.distractorReasons || []).map((r, i) =>
           '<li><b>(' + (i + 1) + ')</b> ' + esc(r) + '</li>'
         ).join('');
-        fbHtml = '<div class="teap-fb" role="status">' +
-          '<p><b>' + (isOk ? '正解' : '不正解 — 正解は (' + (q.correctIndex + 1) + ')') + '</b> · レベル目安：' + esc(q.difficulty) + '（独自仮分類）</p>' +
+        fbHtml = '<div class="teap-fb" role="status" style="background:#fff;border:0;box-shadow:0 8px 20px rgba(24,24,27,0.06),0 0 1px rgba(24,24,27,0.18);border-radius:20px">' +
+          '<p><b>' + (isOk ? '◎ 正解' : '✕ 不正解 — 正解は (' + (q.correctIndex + 1) + ')') + '</b> · レベル目安：' + esc(q.difficulty) + '（独自仮分類）</p>' +
           '<p><b>解説：</b>' + esc(q.explanationJa) + '</p>' +
           '<p><b>和訳：</b>' + esc(q.translationJa) + '</p>' +
           (q.evidence ? '<div class="teap-fb__ev"><b>根拠箇所：</b>' + esc(q.evidence) + '</div>' : '') +
@@ -333,10 +333,10 @@
       }
 
       const paletteHtml = state.showPalette
-        ? '<div class="teap-palette" id="teap-palette">' +
+        ? '<div class="teap-palette" id="teap-palette" style="background:#fff;border:0;box-shadow:0 8px 20px rgba(24,24,27,0.06),0 0 1px rgba(24,24,27,0.18);border-radius:20px">' +
             '<div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px;font-weight:700;color:#475569;flex-wrap:wrap;gap:8px;">' +
               '<span>問題一覧（回答済 ' + answeredCount + ' / ' + state.questions.length + ' · 未回答 ' + (state.questions.length - answeredCount) + '）</span>' +
-              '<span>青＝回答済 / 黄＝フラグ</span>' +
+              '<button type="button" class="lx-tool-pill" id="btn-teap-submit">採点して提出</button>' +
             '</div>' +
             '<div class="teap-palette__grid">' +
               state.questions.map((item, i) => {
@@ -351,42 +351,54 @@
         : '';
 
       const mobileTabsHtml = hasStim
-        ? '<div class="teap-mobile-tabs" role="tablist" aria-label="本文と設問の切替">' +
+        ? '<div class="teap-mobile-tabs" role="tablist" aria-label="本文と設問の切替" style="background:transparent;top:98px">' +
             '<button type="button" class="teap-mobile-tab' + (state.mobileView === 'passage' ? ' is-active' : '') + '" data-mview="passage" role="tab">本文・図表を見る</button>' +
             '<button type="button" class="teap-mobile-tab' + (state.mobileView === 'question' ? ' is-active' : '') + '" data-mview="question" role="tab">設問に答える</button>' +
           '</div>'
         : '';
 
+      const partInfo = (TEAP_CONFIG.reading.parts || []).find(p => p.id === q.part);
+      const partLabel = 'Part ' + q.part + (partInfo ? ' · ' + partInfo.label : '');
+      const timerText = (state.mode === 'exam' || state.mode === 'quick')
+        ? fmtTime(state.remainSec)
+        : ('回答済 ' + answeredCount + '/' + state.questions.length);
+
+      rootEl.classList.toggle('is-wide-stim', hasStim);
       rootEl.innerHTML =
-        '<div class="teap-topbar">' +
-          '<div class="teap-topbar__left">' +
-            '<span class="teap-pill is-blue">Part ' + esc(q.part) + '</span>' +
-            '<span class="teap-pill">Q' + (state.idx + 1) + ' / ' + state.questions.length + '</span>' +
-            '<span class="teap-pill">' + (state.mode === 'study' ? '学習モード' : (state.mode === 'quick' ? 'クイック診断' : '試験モード')) + '</span>' +
+        '<div class="lx-test-head">' +
+          '<div class="lx-test-meta">' +
+            '<button type="button" class="lx-test-back" id="btn-teap-quit">← メニュー</button>' +
+            '<span class="lx-test-count">' + (state.idx + 1) + ' / ' + state.questions.length + '問</span>' +
+            '<span class="lx-test-timer' + ((state.mode === 'exam' || state.mode === 'quick') && state.remainSec <= 300 ? ' is-warn' : '') + '" id="teap-timer-val">' + esc(timerText) + '</span>' +
           '</div>' +
-          '<div class="teap-topbar__right">' +
-            ((state.mode === 'exam' || state.mode === 'quick') ? '<span class="teap-timer' + (state.remainSec <= 300 ? ' is-warn' : '') + '" id="teap-timer-val" aria-label="残り時間">' + fmtTime(state.remainSec) + '</span>' : '') +
-            '<button type="button" class="teap-ctrl-btn' + (isFlagged ? ' is-flagged' : '') + '" id="btn-teap-flag">' + (isFlagged ? 'フラグ済' : 'フラグ') + '</button>' +
-            '<button type="button" class="teap-ctrl-btn" id="btn-teap-palette">問題一覧 (' + answeredCount + '/' + state.questions.length + ')</button>' +
-            '<button type="button" class="teap-ctrl-btn is-primary" id="btn-teap-submit">採点・提出</button>' +
+          '<div class="lx-test-progress" aria-hidden="true"><i style="width:' + pct + '%"></i></div>' +
+        '</div>' +
+        '<div class="lx-flag-row">' +
+          '<span class="lx-part-tag">' + esc(partLabel) + '</span>' +
+          '<div class="lx-flag-actions">' +
+            '<button type="button" class="lx-flag-btn" id="btn-teap-palette">一覧 (' + answeredCount + '/' + state.questions.length + ')</button>' +
+            '<button type="button" class="lx-flag-btn' + (isFlagged ? ' is-flagged' : '') + '" id="btn-teap-flag">' + (isFlagged ? '保存済み' : '迷った・保存') + '</button>' +
           '</div>' +
         '</div>' +
-        '<div class="teap-progress-track" aria-hidden="true"><i class="teap-progress-fill" style="width:' + pct + '%"></i></div>' +
         paletteHtml +
         mobileTabsHtml +
-        '<div class="teap-workspace' + (hasStim ? ' has-stim' : '') + '" data-mobile-view="' + esc(state.mobileView) + '">' +
+        '<div class="teap-workspace' + (hasStim ? ' has-stim' : '') + '" style="margin-top:16px" data-mobile-view="' + esc(state.mobileView) + '">' +
           stimHtml +
           '<div class="teap-q-pane">' +
-            '<p class="teap-q-inst">' + esc(q.instruction) + '</p>' +
-            '<p class="teap-q-stem">' + esc(q.question) + '</p>' +
-            '<div class="teap-opts">' + optsHtml + '</div>' +
+            '<p class="lx-q-inst" style="margin-top:0">' + esc(q.instruction) + '</p>' +
+            '<p class="lx-q-stem">' + esc(q.question) + '</p>' +
+            '<div class="lx-choices">' + optsHtml + '</div>' +
             fbHtml +
           '</div>' +
         '</div>' +
-        '<div class="teap-foot">' +
-          '<button type="button" class="teap-ctrl-btn" id="btn-teap-prev"' + (state.idx === 0 ? ' disabled' : '') + '>← 前の問題</button>' +
-          '<button type="button" class="teap-ctrl-btn" id="btn-teap-quit">モード選択に戻る</button>' +
-          '<button type="button" class="teap-ctrl-btn is-primary" id="btn-teap-next">' + (state.idx === state.questions.length - 1 ? '採点結果を見る →' : '次の問題 →') + '</button>' +
+        '<div class="lx-test-foot">' +
+          '<div class="lx-test-foot__inner">' +
+            '<div class="lx-test-foot__row">' +
+              (state.idx > 0 ? '<button type="button" class="lx-foot-prev" id="btn-teap-prev">← 前へ</button>' : '') +
+              '<button type="button" class="lx-foot-next" id="btn-teap-next">' + (state.idx === state.questions.length - 1 ? '採点結果を見る' : '次へ') + '</button>' +
+            '</div>' +
+            '<p class="lx-kbd-hint" aria-hidden="true"><kbd>1</kbd>–<kbd>4</kbd> 選択 · <kbd>Enter</kbd> 次へ · <kbd>F</kbd> 保存</p>' +
+          '</div>' +
         '</div>' +
         '<div class="teap-modal-backdrop" id="teap-confirm-modal" hidden role="dialog" aria-modal="true" aria-labelledby="teap-modal-title">' +
           '<div class="teap-modal">' +
@@ -415,6 +427,7 @@
         btn.addEventListener('click', () => {
           state.idx = Number(btn.dataset.jumpIdx);
           state.showPalette = false;
+          window.scrollTo(0, 0);
           render();
         });
       });
@@ -426,14 +439,16 @@
         state.showPalette = !state.showPalette;
         render();
       });
-      rootEl.querySelector('#btn-teap-prev').addEventListener('click', () => {
-        if (state.idx > 0) { state.idx -= 1; render(); }
+      const prevBtn = rootEl.querySelector('#btn-teap-prev');
+      if (prevBtn) prevBtn.addEventListener('click', () => {
+        if (state.idx > 0) { state.idx -= 1; window.scrollTo(0, 0); render(); }
       });
       rootEl.querySelector('#btn-teap-next').addEventListener('click', () => {
-        if (state.idx < state.questions.length - 1) { state.idx += 1; render(); }
+        if (state.idx < state.questions.length - 1) { state.idx += 1; window.scrollTo(0, 0); render(); }
         else openSubmitConfirm();
       });
-      rootEl.querySelector('#btn-teap-submit').addEventListener('click', openSubmitConfirm);
+      const submitBtn = rootEl.querySelector('#btn-teap-submit');
+      if (submitBtn) submitBtn.addEventListener('click', openSubmitConfirm);
       rootEl.querySelector('#btn-teap-quit').addEventListener('click', () => {
         stopTimer();
         state.view = 'launcher';
@@ -544,10 +559,28 @@
     }
 
     function render() {
+      const isFocus = state.view === 'running' || state.view === 'results';
+      document.body.classList.toggle('lx-focus-mode', isFocus);
+      if (state.view !== 'running') rootEl.classList.remove('is-wide-stim');
       if (state.view === 'launcher') renderLauncher();
       else if (state.view === 'running') renderRunning();
       else renderResults();
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (state.view !== 'running') return;
+      if (e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+      if (/^[1-4]$/.test(e.key)) {
+        const btn = rootEl.querySelector('[data-opt-idx="' + (Number(e.key) - 1) + '"]');
+        if (btn && !btn.disabled) { e.preventDefault(); btn.click(); }
+      } else if (e.key === 'Enter') {
+        const nb = rootEl.querySelector('#btn-teap-next');
+        if (nb) { e.preventDefault(); nb.click(); }
+      } else if (e.key === 'f' || e.key === 'F') {
+        const fb = rootEl.querySelector('#btn-teap-flag');
+        if (fb) { e.preventDefault(); fb.click(); }
+      }
+    });
 
     // Auto-start if URL query or explicit page option specifies mode/part
     const params = new URLSearchParams(location.search);

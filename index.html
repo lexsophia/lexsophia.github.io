@@ -131,6 +131,7 @@
 <link rel="preload" as="image" href="img/lexsophia-owls-hero.png" fetchpriority="high">
 <link rel="preload" as="script" href="assets/lexsophia-data.js">
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/lexsophia-shell.css">
 <style>
   :root {
     /* === Yoom Design System: Neutrals (UIの土台：70〜85%) === */
@@ -3465,7 +3466,7 @@
   }
 </style>
 </head>
-<body>
+<body data-exam="toeic">
 
 <!-- ============================================================ -->
 <!-- HOME                                                          -->
@@ -3479,7 +3480,6 @@
         <a href="#practice">Part別練習</a>
         <a href="#analytics" class="brand-nav__keep">自己分析</a>
         <a href="#learning-title">学習メニュー</a>
-        <a href="/teap/">TEAP対策</a>
         <a href="#about-title">特徴</a>
         <button type="button" class="brand-auth" id="btn-auth-nav" aria-haspopup="dialog">
           <span class="brand-auth__dot" id="auth-nav-dot" hidden aria-hidden="true"></span>
@@ -3488,6 +3488,15 @@
         <button type="button" class="brand-cta" id="btn-start">無料診断</button>
       </nav>
     </header>
+
+    <div class="lx-exam-bar" data-lx-exam-bar>
+      <nav class="lx-exam-pills" aria-label="試験を切り替え">
+        <a class="lx-exam-pill is-active" data-pill="toeic" href="/" aria-current="page"><span class="lx-exam-pill__dot" aria-hidden="true"></span>TOEIC</a>
+        <a class="lx-exam-pill" data-pill="teap" href="/teap/"><span class="lx-exam-pill__dot" aria-hidden="true"></span>TEAP</a>
+        <button type="button" class="lx-exam-pill is-soon" data-pill="eiken"><span class="lx-exam-pill__dot" aria-hidden="true"></span>英検<span class="lx-soon-tag">Soon</span></button>
+        <button type="button" class="lx-exam-pill is-soon" data-pill="ielts"><span class="lx-exam-pill__dot" aria-hidden="true"></span>IELTS<span class="lx-soon-tag">Soon</span></button>
+      </nav>
+    </div>
 
     <div class="hero-yoom">
       <h1 id="home-title" class="hero-title rise">今の<span class="nb">TOEICスコア、</span>無料で予測。</h1>
@@ -12877,5 +12886,6 @@ const FEEDBACK_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxiEHd4hZIC8G
   }
 })();
 </script>
+<script src="/assets/lexsophia-shell.js" defer></script>
 </body>
 </html>

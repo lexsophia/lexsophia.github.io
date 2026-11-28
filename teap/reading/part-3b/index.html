@@ -11,6 +11,7 @@
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/seo-assets/style.css">
+<link rel="stylesheet" href="/assets/lexsophia-shell.css">
 <link rel="stylesheet" href="/teap/assets/teap.css">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LexSophia">
@@ -27,7 +28,7 @@
 <meta name="twitter:image" content="https://mylexsophia.com/ogp.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://mylexsophia.com/#organization", "name": "LexSophia", "alternateName": "レクソフィア", "url": "https://mylexsophia.com/", "logo": {"@type": "ImageObject", "url": "https://mylexsophia.com/icon-512.png", "width": 512, "height": 512}, "description": "TOEIC・TEAP形式の独自問題による無料演習・弱点分析を提供する非公式英語学習プラットフォーム。"}, {"@type": "WebSite", "@id": "https://mylexsophia.com/#website", "url": "https://mylexsophia.com/", "name": "LexSophia", "alternateName": "レクソフィア", "inLanguage": "ja", "publisher": {"@id": "https://mylexsophia.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://mylexsophia.com/"}, {"@type": "ListItem", "position": 2, "name": "TEAP対策", "item": "https://mylexsophia.com/teap/"}, {"@type": "ListItem", "position": 3, "name": "Reading", "item": "https://mylexsophia.com/teap/reading/"}, {"@type": "ListItem", "position": 4, "name": "Part 3B"}]}]}</script>
 </head>
-<body>
+<body data-exam="teap">
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="/">Lex<span>Sophia</span></a>
@@ -40,6 +41,14 @@
     </nav>
   </div>
 </header>
+<div class="lx-exam-bar lx-exam-bar--subpage" data-lx-exam-bar>
+  <nav class="lx-exam-pills" aria-label="試験を切り替え">
+    <a class="lx-exam-pill" data-pill="toeic" href="/"><span class="lx-exam-pill__dot" aria-hidden="true"></span>TOEIC</a>
+    <a class="lx-exam-pill is-active" data-pill="teap" href="/teap/" aria-current="page"><span class="lx-exam-pill__dot" aria-hidden="true"></span>TEAP</a>
+    <button type="button" class="lx-exam-pill is-soon" data-pill="eiken"><span class="lx-exam-pill__dot" aria-hidden="true"></span>英検<span class="lx-soon-tag">Soon</span></button>
+    <button type="button" class="lx-exam-pill is-soon" data-pill="ielts"><span class="lx-exam-pill__dot" aria-hidden="true"></span>IELTS<span class="lx-soon-tag">Soon</span></button>
+  </nav>
+</div>
 <main class="container">
 <nav class="breadcrumb" aria-label="パンくずリスト"><a href="/">ホーム</a><span>›</span><a href="/teap/">TEAP対策</a><span>›</span><a href="/teap/reading/">Reading</a><span>›</span><span>Part 3B</span></nav>
 <h1>TEAP Reading Part 3B（長文・図表の詳細理解 12問） 対策 ＆ 無料演習</h1>
@@ -116,7 +125,8 @@
   <a href="/teap/">TEAP対策トップへ</a> ｜ <a href="/">LexSophia ホームへ</a>
 </footer>
 <script src="/teap/data/teap-reading-bank.js"></script>
-<script src="/teap/assets/teap-engine.js"></script>
+<script src="/teap/assets/teap-engine.js?v=2"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){if(window.LexSophiaTeap){window.LexSophiaTeap.initReadingApp(document.getElementById("teap-reading-app"),{"autoMode": "study", "autoPart": "3B"});}});</script>
+<script src="/assets/lexsophia-shell.js" defer></script>
 </body>
 </html>

@@ -50,7 +50,7 @@
 }
 .teap-part-card h3 { font-size: 16px; margin: 0; color: #0f172a; }
 .teap-part-card p { font-size: 13px; color: #475569; line-height: 1.6; margin: 0; }
-.teap-part-meta { font-size: 12px; font-weight: 700; color: #0176f0; }
+.teap-part-meta { font-size: 12px; font-weight: 700; color: var(--exam-ink, #007a5a); }
 
 /* Interactive Reading App */
 .teap-app {
@@ -70,8 +70,8 @@
   transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
 }
 .teap-mode-btn:hover, .teap-mode-btn:focus-visible {
-  border-color: #0176f0; background: #eef6ff; transform: translateY(-1px);
-  outline: 2px solid #0176f0; outline-offset: 2px;
+  border-color: var(--exam-accent, #00a87e); background: var(--exam-tint, #e3f9f2); transform: translateY(-1px);
+  outline: 2px solid var(--exam-accent, #00a87e); outline-offset: 2px;
 }
 .teap-mode-btn strong { font-size: 15.5px; color: #0f172a; }
 .teap-mode-btn span { font-size: 12.5px; color: #475569; line-height: 1.5; }
@@ -81,8 +81,8 @@
   background: #fff; color: #0f172a; font-size: 13px; font-weight: 700; cursor: pointer;
 }
 .teap-part-chip:hover, .teap-part-chip:focus-visible {
-  border-color: #0176f0; background: #eef6ff; color: #0176f0;
-  outline: 2px solid #0176f0; outline-offset: 2px;
+  border-color: var(--exam-accent, #00a87e); background: var(--exam-tint, #e3f9f2); color: var(--exam-ink, #007a5a);
+  outline: 2px solid var(--exam-accent, #00a87e); outline-offset: 2px;
 }
 
 /* Runner Topbar */
@@ -103,16 +103,16 @@
   background: #fff; color: #0f172a; font-size: 12.5px; font-weight: 700; cursor: pointer;
 }
 .teap-ctrl-btn:hover, .teap-ctrl-btn:focus-visible {
-  border-color: #0176f0; color: #0176f0; outline: 2px solid #0176f0; outline-offset: 2px;
+  border-color: var(--exam-accent, #00a87e); color: var(--exam-ink, #007a5a); outline: 2px solid var(--exam-accent, #00a87e); outline-offset: 2px;
 }
 .teap-ctrl-btn.is-flagged { background: #fef3c7; border-color: #d97706; color: #92400e; }
-.teap-ctrl-btn.is-primary { background: #0176f0; border-color: #0176f0; color: #fff; }
+.teap-ctrl-btn.is-primary { background: var(--exam-accent, #00a87e); border-color: var(--exam-accent, #00a87e); color: #fff; }
 
 .teap-progress-track {
   height: 6px; border-radius: 999px; background: #e2e8f0; overflow: hidden; margin-bottom: 16px;
 }
 .teap-progress-fill {
-  display: block; height: 100%; background: #0176f0; transition: width 0.25s ease;
+  display: block; height: 100%; background: var(--exam-accent, #00a87e); transition: width 0.25s ease;
 }
 
 /* Mobile Split Tabs */
@@ -169,7 +169,7 @@
 .teap-table th { background: #f1f5f9; font-weight: 700; color: #0f172a; }
 
 /* Question Pane */
-.teap-q-inst { font-size: 12.5px; font-weight: 700; color: #0176f0; margin: 0 0 8px; }
+.teap-q-inst { font-size: 12.5px; font-weight: 700; color: var(--exam-ink, #007a5a); margin: 0 0 8px; }
 .teap-q-stem { font-size: 16px; font-weight: 700; line-height: 1.68; color: #0f172a; margin: 0 0 14px; }
 .teap-opts { display: grid; gap: 10px; }
 .teap-opt {
@@ -179,9 +179,9 @@
   cursor: pointer; transition: border-color 0.14s ease, background-color 0.14s ease;
 }
 .teap-opt:hover:not(:disabled), .teap-opt:focus-visible {
-  border-color: #0176f0; background: #f0f7ff; outline: 2px solid #0176f0; outline-offset: 2px;
+  border-color: var(--exam-accent, #00a87e); background: var(--exam-tint, #e3f9f2); outline: 2px solid var(--exam-accent, #00a87e); outline-offset: 2px;
 }
-.teap-opt.is-selected { border-color: #0176f0; background: #e8f2ff; }
+.teap-opt.is-selected { border-color: var(--exam-accent, #00a87e); background: var(--exam-tint, #e3f9f2); }
 .teap-opt.is-correct { border-color: #059669; background: #ecfdf5; color: #065f46; }
 .teap-opt.is-wrong { border-color: #d97706; background: #fffbeb; color: #92400e; }
 .teap-opt__num {
@@ -189,7 +189,7 @@
   display: inline-flex; align-items: center; justify-content: center;
   background: #f1f5f9; color: #334155; font-size: 12.5px; font-weight: 800;
 }
-.teap-opt.is-selected .teap-opt__num { background: #0176f0; color: #fff; }
+.teap-opt.is-selected .teap-opt__num { background: var(--exam-accent, #00a87e); color: #fff; }
 .teap-opt.is-correct .teap-opt__num { background: #059669; color: #fff; }
 .teap-opt.is-wrong .teap-opt__num { background: #d97706; color: #fff; }
 
@@ -222,8 +222,8 @@
   height: 34px; border-radius: 8px; border: 1.5px solid #cbd5e1;
   background: #fff; color: #334155; font-size: 12px; font-weight: 700; cursor: pointer;
 }
-.teap-pal-btn.is-current { border-color: #0176f0; box-shadow: 0 0 0 2px rgba(1, 118, 240, 0.25); }
-.teap-pal-btn.is-answered { background: #e0edff; border-color: #93c5fd; color: #1d4ed8; }
+.teap-pal-btn.is-current { border-color: var(--exam-accent, #00a87e); box-shadow: 0 0 0 2px rgba(0, 168, 126, 0.25); }
+.teap-pal-btn.is-answered { background: var(--exam-tint, #e3f9f2); border-color: var(--exam-accent, #00a87e); color: var(--exam-ink, #007a5a); }
 .teap-pal-btn.is-flagged { background: #fef3c7; border-color: #f59e0b; color: #92400e; }
 
 /* Results View */
@@ -245,7 +245,7 @@
   font-size: 13.5px; font-weight: 700; color: #0f172a;
 }
 .teap-res-bar { height: 8px; border-radius: 999px; background: #e2e8f0; overflow: hidden; }
-.teap-res-bar i { display: block; height: 100%; background: #0176f0; }
+.teap-res-bar i { display: block; height: 100%; background: var(--exam-accent, #00a87e); }
 
 /* Confirm Dialog */
 .teap-modal-backdrop {
@@ -260,3 +260,132 @@
 .teap-modal h3 { margin: 0; font-size: 18px; color: #0f172a; }
 .teap-modal p { margin: 0; font-size: 14px; color: #475569; line-height: 1.65; }
 .teap-modal__acts { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+
+/* ---------- TEAP Listening Audio & Chart Selection UI ---------- */
+.tl-situation {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  color: #334155;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+.tl-audio-box {
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: var(--exam-tint, #e3f9f2);
+  border: 1px solid rgba(0, 168, 126, 0.25);
+  display: grid;
+  gap: 10px;
+}
+.tl-audio-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tl-audio-status {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--exam-ink, #007a5a);
+}
+.tl-speed-group {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  gap: 2px;
+}
+.tl-speed-btn {
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tl-speed-btn.is-active {
+  background: var(--exam-accent, #00a87e);
+  color: #fff;
+}
+.tl-script-box {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #dbe2ea;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #1e293b;
+  display: grid;
+  gap: 6px;
+}
+.tl-script-box p { margin: 0; }
+.tl-q-block {
+  padding: 18px 0;
+  border-top: 1px solid #e6ebf0;
+}
+.tl-q-block:first-of-type { border-top: 0; padding-top: 4px; }
+.tl-chart-opt-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .tl-chart-opt-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.tl-chart-opt {
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1.5px solid #d0d7de;
+  background: #fff;
+  cursor: pointer;
+  display: grid;
+  gap: 8px;
+  transition: border-color 0.14s ease, background-color 0.14s ease, transform 0.14s ease;
+}
+.tl-chart-opt:hover {
+  border-color: var(--exam-accent, #00a87e);
+  background: var(--exam-tint, #e3f9f2);
+  transform: translateY(-1px);
+}
+.tl-chart-opt.is-selected { border-color: var(--exam-accent, #00a87e); background: var(--exam-tint, #e3f9f2); }
+.tl-chart-opt.is-correct { border-color: #059669; background: #ecfdf5; }
+.tl-chart-opt.is-wrong { border-color: #d97706; background: #fffbeb; }
+.tl-chart-opt__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: #0f172a;
+}
+.tl-chart-opt svg { width: 100%; height: auto; display: block; }
+.tl-review-item {
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  padding: 12px 14px;
+}
+.tl-review-item summary {
+  cursor: pointer;
+  font-size: 13.5px;
+  color: #0f172a;
+  line-height: 1.5;
+}
+.tl-review-body {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #334155;
+  display: grid;
+  gap: 6px;
+}
+.tl-review-body p { margin: 0; }
