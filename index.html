@@ -1919,16 +1919,39 @@
     background: var(--tint-blue-bg);
     display: flex; flex-direction: column; gap: 14px;
   }
+  .sa-rx-box > div { flex: 1 1 260px; min-width: 0; }
   @media (min-width: 620px) {
-    .sa-rx-box { flex-direction: row; align-items: center; justify-content: space-between; }
+    .sa-rx-box { flex-direction: row; align-items: center; justify-content: space-between; gap: 20px; }
   }
   .sa-rx-k { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: var(--pop-blue); }
   .sa-rx-t { margin-top: 4px; font-size: 15.5px; font-weight: 700; color: var(--ink-primary); line-height: 1.4; }
   .sa-rx-s { margin-top: 4px; font-size: 12.5px; color: var(--ink-secondary); line-height: 1.5; }
-  .sa-rx-btn { flex-shrink: 0; white-space: nowrap; }
+  .sa-rx-btn { width: auto; flex-shrink: 0; white-space: nowrap; min-height: 46px; padding: 10px 22px; font-size: 14px; }
+  #btn-sa-export-card, #btn-daily-q-more, #btn-sa-print-weak { width: auto; min-height: 42px; padding: 8px 18px; font-size: 13.5px; }
+  #btn-sa-start-diag { width: auto; min-width: 220px; }
+  @media (max-width: 619px) {
+    .sa-rx-btn { width: 100%; justify-content: center; }
+  }
   @media (max-width: 520px) {
     .sa-card { padding: 18px 16px; }
-    .sa-rx-btn { width: 100%; justify-content: center; }
+    #btn-sa-export-card, #btn-daily-q-more, #btn-sa-print-weak { width: 100%; }
+  }
+  .weekly-goal-wrap {
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line-subtle);
+    display: grid; gap: 8px;
+  }
+  .weekly-goal-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+    font-size: 12.5px; font-weight: 700; color: var(--ink-secondary);
+  }
+  .weekly-goal-chips { display: inline-flex; gap: 4px; }
+  .weekly-chip {
+    padding: 3px 9px; border: 1px solid var(--line-subtle); border-radius: var(--radius-pill);
+    background: var(--surface-canvas); color: var(--ink-secondary);
+    font-size: 11.5px; font-weight: 700; cursor: pointer;
+  }
+  .weekly-chip.is-active {
+    background: var(--ink-primary); color: var(--ink-inverse); border-color: var(--ink-primary);
   }
   .sa-part-row--btn {
     width: 100%; text-align: left; border: 0; cursor: pointer; font: inherit;
@@ -3627,8 +3650,48 @@
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="home-showcase">
+  <div class="wrap">
+    <section class="practice-home" aria-labelledby="practice-title">
+      <div class="practice-gateway">
+        <div class="practice-gateway__copy">
+          <p class="practice-eyebrow">PRACTICE · PART 1–7 &amp; TOPIC DRILLS</p>
+          <h2 id="practice-title">Part別に練習する</h2>
+          <div class="practice-gateway__pills" aria-hidden="true">
+            <span class="practice-gateway__pill">Part 1–4 音声つき</span>
+            <span class="practice-gateway__pill">Part 5–7 長文・文法</span>
+            <span class="practice-gateway__pill">弱点テーマ別特訓</span>
+          </div>
+          <button type="button" class="practice-gateway__cta" id="btn-open-practice-select">パートを選んで練習する →</button>
+        </div>
+        <img class="practice-gateway__owl" src="img/owl-blue.png" alt="" width="229" height="320" loading="lazy" decoding="async">
+      </div>
+
+      <div class="promo-pair-grid" style="margin-top:24px">
+        <div class="sprint-promo">
+          <div>
+            <span class="sprint-promo__kicker">SPEED TIME ATTACK · 全10問</span>
+            <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック</p>
+            <p class="sprint-promo__sub">正答率×解答速度でS〜Cランク判定</p>
+          </div>
+          <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
+        </div>
+
+        <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
+          <div>
+            <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">CLOZE DICTATION GYM · 全10問</span>
+            <p class="sprint-promo__title">Listening「穴埋めディクテーション」</p>
+            <p class="sprint-promo__sub">音の連結・弱形を聞き取る耳トレ</p>
+          </div>
+          <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
+        </div>
+      </div>
+
+      <nav class="seo-entry-links" aria-label="診断ガイドと練習問題"><a href="/toeic-score-predictor/">スコア予測の仕組み →</a><a href="/toeic-free-test/">無料診断の受け方 →</a><a href="/toeic-part5/">Part 5 練習問題 →</a></nav>
+    </section>
+
+    <div class="home-showcase" style="margin-top:clamp(56px,8vw,88px);margin-bottom:clamp(16px,3vw,32px);">
       <div class="showcase-head">
         <p class="showcase-kicker">DIAGNOSIS REPORT</p>
         <h2>診断すると、<br>スコアと弱点がすぐわかる。</h2>
@@ -3699,46 +3762,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <div class="wrap">
-    <section class="practice-home" aria-labelledby="practice-title">
-      <div class="practice-gateway">
-        <div class="practice-gateway__copy">
-          <p class="practice-eyebrow">PRACTICE · PART 1–7 &amp; TOPIC DRILLS</p>
-          <h2 id="practice-title">Part別に練習する</h2>
-          <div class="practice-gateway__pills" aria-hidden="true">
-            <span class="practice-gateway__pill">Part 1–4 音声つき</span>
-            <span class="practice-gateway__pill">Part 5–7 長文・文法</span>
-            <span class="practice-gateway__pill">弱点テーマ別特訓</span>
-          </div>
-          <button type="button" class="practice-gateway__cta" id="btn-open-practice-select">パートを選んで練習する →</button>
-        </div>
-        <img class="practice-gateway__owl" src="img/owl-blue.png" alt="" width="229" height="320" loading="lazy" decoding="async">
-      </div>
-
-      <div class="promo-pair-grid" style="margin-top:24px">
-        <div class="sprint-promo">
-          <div>
-            <span class="sprint-promo__kicker">SPEED TIME ATTACK · 全10問</span>
-            <p class="sprint-promo__title">Part 5「1問20秒」タイムアタック</p>
-            <p class="sprint-promo__sub">正答率×解答速度でS〜Cランク判定</p>
-          </div>
-          <button type="button" class="sprint-promo__btn" id="btn-start-sprint">タイムアタック開始 →</button>
-        </div>
-
-        <div class="sprint-promo" style="background:linear-gradient(135deg,#0058b8 0%,#182848 100%)">
-          <div>
-            <span class="sprint-promo__kicker" style="background:rgba(255,255,255,0.18);color:#ffffff">CLOZE DICTATION GYM · 全10問</span>
-            <p class="sprint-promo__title">Listening「穴埋めディクテーション」</p>
-            <p class="sprint-promo__sub">音の連結・弱形を聞き取る耳トレ</p>
-          </div>
-          <button type="button" class="sprint-promo__btn" id="btn-start-dictation" style="background:#ffffff;color:#0058b8">ディクテーション開始 →</button>
-        </div>
-      </div>
-
-      <nav class="seo-entry-links" aria-label="診断ガイドと練習問題"><a href="/toeic-score-predictor/">スコア予測の仕組み →</a><a href="/toeic-free-test/">無料診断の受け方 →</a><a href="/toeic-part5/">Part 5 練習問題 →</a></nav>
-    </section>
 
     <section class="home-learning" aria-labelledby="learning-title">
       <div class="learning-head">
@@ -3785,6 +3808,19 @@
             <b id="home-goal-value">—</b>
           </div>
           <div class="goal-bar" aria-hidden="true"><i id="home-goal-bar-fill"></i></div>
+        </div>
+
+        <!-- Weekly Question Quota Goal -->
+        <div class="weekly-goal-wrap" id="home-weekly-wrap">
+          <div class="weekly-goal-head">
+            <span id="home-weekly-label">今週の学習目標：0 / 30問</span>
+            <div class="weekly-goal-chips" role="group" aria-label="週間目標問題数">
+              <button type="button" class="weekly-chip" data-weekly-target="30">週30問</button>
+              <button type="button" class="weekly-chip" data-weekly-target="50">週50問</button>
+              <button type="button" class="weekly-chip" data-weekly-target="100">週100問</button>
+            </div>
+          </div>
+          <div class="goal-bar" aria-hidden="true"><i id="home-weekly-bar-fill"></i></div>
         </div>
 
         <!-- Exam Date Countdown & Reverse Study Phase Strip -->
@@ -4867,6 +4903,10 @@
               <p class="sa-rx-s" id="sa-rx-sub">—</p>
             </div>
             <button type="button" class="btn sa-rx-btn" id="btn-sa-rx">今すぐ対策を始める →</button>
+          </div>
+          <div style="margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+            <span class="sa-sub" id="sa-print-status">間違えた問題＋和訳・解説だけをA4見直しシートにまとめられます</span>
+            <button type="button" class="btn btn--ghost" id="btn-sa-print-weak">弱点シートを印刷 / PDF保存</button>
           </div>
         </div>
       </div>
@@ -7156,6 +7196,7 @@ function refreshHomeLearning() {
   if (typeof renderStudyHeatmap === 'function') renderStudyHeatmap();
   if (typeof renderAchievementBadges === 'function') renderAchievementBadges();
   if (typeof renderDailyOneQuestion === 'function') renderDailyOneQuestion();
+  if (typeof refreshWeeklyGoal === 'function') refreshWeeklyGoal(history);
 }
 
 function formatShortChartDate(iso) {
@@ -7924,6 +7965,7 @@ function renderDailyOneQuestion() {
       btn.addEventListener('click', () => {
         const idx = Number(btn.dataset.dqIdx);
         writeStored('lexsophia.dailyq.v1', { dateKey, qId: q.id, choice: idx, correct: idx === q.answer });
+        if (typeof addWeeklyExtraCount === 'function') addWeeklyExtraCount(1);
         recordStudyActivity();
         applyAnswerView(idx);
         // Update streak & heatmap smoothly without re-rendering opts
@@ -7932,9 +7974,129 @@ function renderDailyOneQuestion() {
         if ($('home-streak-text')) $('home-streak-text').textContent = `${streak.streak}日連続学習中`;
         if ($('home-streak-done')) $('home-streak-done').hidden = false;
         if (typeof renderStudyHeatmap === 'function') renderStudyHeatmap();
+        if (typeof refreshWeeklyGoal === 'function') refreshWeeklyGoal(getHistory());
       });
     });
   }
+}
+
+function getCurrentWeekMondayIso() {
+  const now = new Date();
+  const d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const day = d.getDay(); // 0=Sun..6=Sat
+  const diff = day === 0 ? -6 : 1 - day;
+  d.setDate(d.getDate() + diff);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function addWeeklyExtraCount(delta) {
+  const wk = getCurrentWeekMondayIso();
+  const saved = readStored('lexsophia.weeklyextra.v1', { wk, count: 0 }) || { wk, count: 0 };
+  const nextCount = (saved.wk === wk ? (Number(saved.count) || 0) : 0) + (Number(delta) || 0);
+  writeStored('lexsophia.weeklyextra.v1', { wk, count: nextCount });
+}
+
+function refreshWeeklyGoal(history) {
+  const labelEl = $('home-weekly-label');
+  const fillEl = $('home-weekly-bar-fill');
+  if (!labelEl || !fillEl) return;
+
+  const target = Number(readStored('lexsophia.weeklygoal.v1', 30)) || 30;
+  const wkIso = getCurrentWeekMondayIso();
+  const wkStart = new Date(wkIso + 'T00:00:00').getTime();
+
+  let solved = 0;
+  (history || []).forEach(item => {
+    if (!item || !item.takenAt) return;
+    const t = new Date(item.takenAt).getTime();
+    if (!Number.isNaN(t) && t >= wkStart) solved += Number(item.total) || 0;
+  });
+  const extra = readStored('lexsophia.weeklyextra.v1', null);
+  if (extra && extra.wk === wkIso) solved += Number(extra.count) || 0;
+
+  const rem = Math.max(0, target - solved);
+  const fillPct = clamp(Math.round((solved / target) * 100), 0, 100);
+  labelEl.textContent = rem === 0
+    ? `今週の学習目標クリア ✓（${solved} / ${target}問）`
+    : `今週の学習目標：${solved} / ${target}問（あと${rem}問）`;
+  fillEl.style.width = `${fillPct}%`;
+
+  document.querySelectorAll('[data-weekly-target]').forEach(btn => {
+    const isAct = Number(btn.dataset.weeklyTarget) === target;
+    btn.classList.toggle('is-active', isAct);
+    btn.setAttribute('aria-pressed', String(isAct));
+  });
+}
+
+function printWeakStudySheet() {
+  const statusEl = $('sa-print-status');
+  const byId = new Map(ALL_QUESTION_BANK.map(q => [q.id, q]));
+  let ids = activeWeakRecords().map(r => r.questionId);
+  if (!ids.length) {
+    const hist = getHistory();
+    const seen = new Set();
+    hist.forEach(item => {
+      (item.wrongIds || []).forEach(id => {
+        if (!seen.has(id)) { seen.add(id); ids.push(id); }
+      });
+    });
+  }
+  const items = ids.map(id => byId.get(id)).filter(Boolean).slice(0, 50);
+  if (!items.length) {
+    if (statusEl) statusEl.textContent = '現在、印刷対象の弱点問題はありません。診断後に利用できます。';
+    return;
+  }
+
+  const letters = ['A', 'B', 'C', 'D'];
+  const now = new Date();
+  const dateStr = `${now.getFullYear()}/${String(now.getMonth() + 1).padStart(2, '0')}/${String(now.getDate()).padStart(2, '0')}`;
+  const cardsHtml = items.map((q, idx) => {
+    const focus = FOCUS_LABELS[q.focus] || SKILLS[q.skill] || '';
+    const trObj = (typeof QUESTION_TRANSLATIONS !== 'undefined' && QUESTION_TRANSLATIONS[q.id])
+      || (typeof LISTENING_TRANSLATIONS !== 'undefined' && LISTENING_TRANSLATIONS[q.id])
+      || null;
+    const trText = trObj ? (typeof trObj === 'string' ? trObj : (trObj.text || trObj.prompt || '')) : '';
+    const exp = (typeof QUESTION_EXPLANATIONS !== 'undefined' && QUESTION_EXPLANATIONS[q.id])
+      || (typeof LISTENING_EXPLANATIONS !== 'undefined' && LISTENING_EXPLANATIONS[q.id])
+      || '';
+    const choicesHtml = (q.choices || []).map((c, i) =>
+      `<li${i === q.answer ? ' class="ans"' : ''}>(${letters[i]}) ${escapeHtml(c)}${i === q.answer ? '  [正解]' : ''}</li>`
+    ).join('');
+    return `<article class="q-card">` +
+      `<div class="q-meta"><b>Q${idx + 1} · Part ${q.part}（${escapeHtml(PART_NAMES[q.part] || '')}）</b><span>${escapeHtml(focus)}</span></div>` +
+      `<p class="q-text">${escapeHtml(q.text || q.prompt || '')}</p>` +
+      `<ul class="q-choices">${choicesHtml}</ul>` +
+      (trText ? `<p class="q-tr"><b>和訳：</b>${escapeHtml(trText)}</p>` : '') +
+      (exp ? `<p class="q-exp"><b>解説：</b>${escapeHtml(exp)}</p>` : '') +
+      `</article>`;
+  }).join('');
+
+  const html = `<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>LexSophia 弱点復習シート (${dateStr})</title><style>` +
+    `@page{size:A4;margin:14mm;}body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:#0f172a;line-height:1.6;margin:0;padding:18px;max-width:820px;margin:0 auto;}` +
+    `.head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #0f172a;padding-bottom:8px;margin-bottom:16px;}` +
+    `.head h1{font-size:18px;margin:0;}.head span{font-size:12px;color:#475569;}` +
+    `.q-card{border:1px solid #cbd5e1;border-radius:10px;padding:12px 14px;margin-bottom:12px;break-inside:avoid;}` +
+    `.q-meta{display:flex;justify-content:space-between;font-size:12px;color:#0176f0;margin-bottom:6px;}` +
+    `.q-text{font-size:13.5px;font-weight:700;margin:0 0 8px;}` +
+    `.q-choices{list-style:none;padding:0;margin:0 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;font-size:12.5px;}` +
+    `.q-choices li.ans{font-weight:700;color:#047857;}` +
+    `.q-tr,.q-exp{font-size:12px;color:#334155;margin:4px 0 0;}` +
+    `.no-print{margin-bottom:14px;padding:10px 14px;background:#eef6ff;border-radius:10px;display:flex;justify-content:space-between;align-items:center;font-size:13px;}` +
+    `.no-print button{padding:8px 16px;border:0;border-radius:999px;background:#0f172a;color:#fff;font-weight:700;cursor:pointer;}` +
+    `@media print{.no-print{display:none;}}</style></head><body>` +
+    `<div class="no-print"><span>ブラウザの印刷ダイアログから「PDFに保存」または印刷ができます。</span><button onclick="window.print()">印刷 / PDF保存</button></div>` +
+    `<div class="head"><h1>LexSophia 自分専用・弱点復習シート（全${items.length}問）</h1><span>作成日：${dateStr} · mylexsophia.com</span></div>` +
+    cardsHtml + `</body></html>`;
+
+  const w = window.open('', '_blank');
+  if (!w) {
+    if (statusEl) statusEl.textContent = 'ポップアップがブロックされました。ブラウザ設定で許可してください。';
+    return;
+  }
+  w.document.open();
+  w.document.write(html);
+  w.document.close();
+  if (statusEl) statusEl.textContent = `弱点復習シート（${items.length}問）を開きました ✓`;
 }
 
 function renderHistory() {
@@ -10467,6 +10629,17 @@ if ($('btn-sa-start-diag')) {
 if ($('btn-sa-export-card')) {
   $('btn-sa-export-card').addEventListener('click', exportSelfAnalysisCardPng);
 }
+if ($('btn-sa-print-weak')) {
+  $('btn-sa-print-weak').addEventListener('click', printWeakStudySheet);
+}
+document.querySelectorAll('[data-weekly-target]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const val = Number(btn.dataset.weeklyTarget);
+    if (!Number.isFinite(val)) return;
+    writeStored('lexsophia.weeklygoal.v1', val);
+    refreshWeeklyGoal(getHistory());
+  });
+});
 if ($('btn-daily-q-more')) {
   $('btn-daily-q-more').addEventListener('click', () => startListeningPractice(5));
 }
