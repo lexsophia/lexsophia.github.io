@@ -123,6 +123,7 @@
   const SpeechPlayer = {
     supported: typeof window !== 'undefined' && 'speechSynthesis' in window,
     playing: false,
+    currentAudio: null,
     queueTimer: null,
     rate: 1.0,
     voices: [],
@@ -148,6 +149,10 @@
 
     stop: function () {
       this.playing = false;
+      if (this.currentAudio) {
+        try { this.currentAudio.pause(); } catch (_) {}
+        this.currentAudio = null;
+      }
       if (this.queueTimer) {
         clearTimeout(this.queueTimer);
         this.queueTimer = null;
@@ -160,12 +165,33 @@
     playSequence: function (segments, onProgress, onDone) {
       const self = this;
       self.stop();
-      if (!self.supported) {
-        if (onDone) onDone(false);
-        return;
-      }
       self.playing = true;
       let idx = 0;
+
+      function advance() {
+        if (!self.playing) return;
+        const seg = segments[idx];
+        idx++;
+        self.queueTimer = setTimeout(next, (seg && seg.pauseMs) || 380);
+      }
+
+      function fail() {
+        if (!self.playing) return;
+        self.playing = false;
+        if (onDone) onDone(false);
+      }
+
+      function speakTTS(seg) {
+        const utter = new SpeechSynthesisUtterance(seg.text);
+        utter.lang = 'en-US';
+        utter.rate = self.rate;
+        utter.pitch = seg.speaker === 'W' ? 1.08 : 0.94;
+        const v = self.pickVoice(seg.speaker);
+        if (v) utter.voice = v;
+        utter.onend = function () { advance(); };
+        utter.onerror = function () { fail(); };
+        window.speechSynthesis.speak(utter);
+      }
 
       function next() {
         if (!self.playing) return;
@@ -176,28 +202,32 @@
         }
         const seg = segments[idx];
         if (onProgress) onProgress(idx, seg);
-        const utter = new SpeechSynthesisUtterance(seg.text);
-        utter.lang = 'en-US';
-        utter.rate = self.rate;
-        utter.pitch = seg.speaker === 'W' ? 1.08 : 0.94;
-        const v = self.pickVoice(seg.speaker);
-        if (v) utter.voice = v;
-
-        utter.onend = function () {
-          if (!self.playing) return;
-          idx++;
-          self.queueTimer = setTimeout(next, seg.pauseMs || 380);
-        };
-        utter.onerror = function () {
-          if (!self.playing) return;
-          self.playing = false;
-          if (onDone) onDone(false);
-        };
-        window.speechSynthesis.speak(utter);
+        if (seg.audio) {
+          const audio = new Audio(seg.audio);
+          self.currentAudio = audio;
+          try { audio.playbackRate = self.rate || 1; } catch (_) {}
+          audio.onended = function () {
+            if (self.currentAudio === audio) self.currentAudio = null;
+            advance();
+          };
+          audio.onerror = function () {
+            if (self.currentAudio === audio) self.currentAudio = null;
+            if (!self.playing) return;
+            if (self.supported) speakTTS(seg); else fail();
+          };
+          try {
+            const p = audio.play();
+            if (p && p.catch) p.catch(function () {});
+          } catch (_) {}
+          return;
+        }
+        if (!self.supported) { fail(); return; }
+        speakTTS(seg);
       }
 
       next();
     }
+
   };
 
   if (SpeechPlayer.supported) {
@@ -310,11 +340,11 @@
       SpeechPlayer.rate = state.rate;
       const segments = [];
       u.turns.forEach(function (t) {
-        segments.push({ speaker: t.speaker, text: t.text, label: t.speaker === 'W' ? 'Female' : 'Male', pauseMs: 360 });
+        segments.push({ speaker: t.speaker, text: t.text, label: t.speaker === 'W' ? 'Female' : 'Male', pauseMs: 360, audio: t.audio || null });
       });
       // For Part 1A & 1B, read the question right after the audio (matching real TEAP)
       if (!u.previewQuestion && u.questions[0]) {
-        segments.push({ speaker: 'M', text: 'Question. ' + u.questions[0].question, label: 'Question', pauseMs: 300 });
+        segments.push({ speaker: 'M', text: 'Question. ' + u.questions[0].question, label: 'Question', pauseMs: 300, audio: u.questions[0].audioQuestion || null });
       }
 
       state.playedUnits[u.unitId] = count + 1;
@@ -343,7 +373,7 @@
         '<div class="teap-launcher">',
         '  <div>',
         '    <h2 style="margin:0 0 6px;font-size:20px">演習モードを選択</h2>',
-        '    <p style="margin:0;font-size:13.5px;color:#475569">公式構成（Part 1A〜2B・全50問）に沿った完全オリジナル問題です。ブラウザの英語音声合成で今すぐリスニング演習ができます。</p>',
+        '    <p style="margin:0;font-size:13.5px;color:#475569">公式構成（Part 1A〜2B・全50問）に沿った完全オリジナル問題です。録音音声で今すぐリスニング演習ができます。</p>',
         '  </div>',
         '  <div class="teap-mode-grid">',
         '    <button type="button" class="teap-mode-btn" id="btn-tl-quick">',
